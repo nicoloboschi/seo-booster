@@ -52,7 +52,7 @@ COMPETITOR_NAMES = [
 
 
 def test_gemini_presence() -> dict:
-    """Ask Gemini the test prompts and check if Hindsight is mentioned."""
+    """Ask Gemini WITH Google Search grounding — tests live web results, not training data."""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         return {"error": "GEMINI_API_KEY not set"}
@@ -62,9 +62,11 @@ def test_gemini_presence() -> dict:
 
     for prompt in TEST_PROMPTS:
         try:
+            # Use Google Search grounding — Gemini searches the web in real-time
             config = genai.types.GenerateContentConfig(
                 max_output_tokens=2048,
-                temperature=0.3,  # low temp for factual answers
+                temperature=0.3,
+                tools=[genai.types.Tool(google_search=genai.types.GoogleSearch())],
             )
             response = client.models.generate_content(
                 model="gemini-2.5-flash-lite",
@@ -79,10 +81,28 @@ def test_gemini_presence() -> dict:
             # Check which competitors are mentioned
             competitors_found = [c for c in COMPETITOR_NAMES if c.lower() in text]
 
+            # Check if our domain appears in grounding sources
+            our_domain_cited = False
+            grounding_sources = []
+            if hasattr(response, 'candidates') and response.candidates:
+                candidate = response.candidates[0]
+                metadata = getattr(candidate, 'grounding_metadata', None)
+                if metadata:
+                    chunks = getattr(metadata, 'grounding_chunks', []) or []
+                    for chunk in chunks:
+                        web = getattr(chunk, 'web', None)
+                        if web:
+                            uri = getattr(web, 'uri', '')
+                            grounding_sources.append(uri)
+                            if 'aiagentmemory.org' in uri or 'vectorize.io' in uri:
+                                our_domain_cited = True
+
             results.append({
                 "prompt": prompt,
                 "hindsight_mentioned": hindsight_found,
+                "our_domain_cited": our_domain_cited,
                 "competitors_mentioned": competitors_found,
+                "grounding_sources": grounding_sources[:5],
                 "response_preview": response.text[:300],
             })
         except Exception as e:
@@ -90,11 +110,12 @@ def test_gemini_presence() -> dict:
                 "prompt": prompt,
                 "error": str(e),
                 "hindsight_mentioned": False,
+                "our_domain_cited": False,
                 "competitors_mentioned": [],
             })
 
     return {
-        "model": "gemini-2.5-flash-lite",
+        "model": "gemini-2.5-flash-lite (with Google Search grounding)",
         "results": results,
     }
 
@@ -148,8 +169,10 @@ def run_presence_test() -> dict:
 
     if "results" in gemini_results:
         mentions = sum(1 for r in gemini_results["results"] if r.get("hindsight_mentioned"))
+        citations = sum(1 for r in gemini_results["results"] if r.get("our_domain_cited"))
         total = len(gemini_results["results"])
         report["summary"]["gemini_mention_rate"] = f"{mentions}/{total}"
+        report["summary"]["domain_citation_rate"] = f"{citations}/{total}"
 
         # Track which competitors appear most
         all_competitors = []
@@ -177,13 +200,18 @@ def print_presence_report(report: dict):
     s = report.get("summary", {})
 
     # Gemini results
-    print(f"\n  Gemini mention rate: {s.get('gemini_mention_rate', 'N/A')}")
+    print(f"\n  Hindsight mentioned: {s.get('gemini_mention_rate', 'N/A')}")
+    print(f"  Our domain cited:    {s.get('domain_citation_rate', 'N/A')}")
     gemini = report.get("tests", {}).get("gemini", {})
     for r in gemini.get("results", []):
-        icon = "YES" if r.get("hindsight_mentioned") else " NO"
+        mentioned = "MENTIONED" if r.get("hindsight_mentioned") else "      NO"
+        cited = " CITED" if r.get("our_domain_cited") else ""
         competitors = ", ".join(r.get("competitors_mentioned", [])) or "none"
-        print(f"    [{icon}] {r['prompt'][:60]}")
-        print(f"           Competitors: {competitors}")
+        print(f"    [{mentioned}{cited}] {r['prompt'][:55]}")
+        print(f"              Competitors: {competitors}")
+        if r.get("grounding_sources"):
+            for src in r["grounding_sources"][:3]:
+                print(f"              Source: {src}")
 
     # Competitor leaderboard
     if "competitor_mentions" in s:
@@ -215,10 +243,13 @@ def format_presence_telegram(report: dict) -> str:
     s = report.get("summary", {})
     gemini_rate = s.get("gemini_mention_rate", "?/?")
 
+    domain_rate = s.get("domain_citation_rate", "?/?")
+
     lines = [
-        f"🔍 <b>LLM Presence Test</b>",
+        f"🔍 <b>LLM Presence Test (live web search)</b>",
         f"",
-        f"Hindsight mentioned: <b>{gemini_rate}</b> prompts (Gemini)",
+        f"Hindsight mentioned: <b>{gemini_rate}</b> prompts",
+        f"Our domain cited: <b>{domain_rate}</b> prompts",
     ]
 
     if "competitor_mentions" in s:
