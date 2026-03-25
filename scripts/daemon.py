@@ -202,7 +202,23 @@ def run_daemon():
                     print(f"  Presence test failed: {e}")
                 scheduler.mark_done("presence")
 
-            # 7. Deploy
+            # 7. Weekly SERP position check
+            if scheduler.is_due("serp", PRESENCE_INTERVAL_MINUTES):
+                try:
+                    from scripts.serp_tracker import (
+                        run_serp_check, print_serp_report,
+                        save_serp_history, format_serp_telegram,
+                    )
+                    from scripts.notify import send_telegram
+                    report = run_serp_check()
+                    print_serp_report(report)
+                    save_serp_history(report)
+                    send_telegram(format_serp_telegram(report))
+                except Exception as e:
+                    print(f"  SERP check failed: {e}")
+                scheduler.mark_done("serp")
+
+            # 8. Deploy
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
                 ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"\n[{ts}] Deploying...")
@@ -234,6 +250,7 @@ def _sleep_until_next(scheduler: Scheduler):
         ("optimize", OPTIMIZE_INTERVAL_MINUTES),
         ("health", HEALTH_INTERVAL_MINUTES),
         ("presence", PRESENCE_INTERVAL_MINUTES),
+        ("serp", PRESENCE_INTERVAL_MINUTES),
     ]
 
     next_tasks = []

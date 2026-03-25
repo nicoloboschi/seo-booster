@@ -95,6 +95,15 @@ def health():
 
 
 @cli.command()
+def serp():
+    """Check SERP positions for target keywords vs competitors."""
+    from scripts.serp_tracker import run_serp_check, print_serp_report, save_serp_history
+    report = run_serp_check()
+    print_serp_report(report)
+    save_serp_history(report)
+
+
+@cli.command()
 def presence():
     """Test if LLMs mention Hindsight when asked about AI memory."""
     from scripts.llm_presence import run_presence_test, print_presence_report, save_presence_history
