@@ -151,6 +151,10 @@ def run_daemon():
                     total = scheduler.get_counter("total_articles")
                     print(f"\n  Total articles: {total}")
 
+                    # Notify on Telegram
+                    from scripts.notify import send_telegram, format_generation_report
+                    send_telegram(format_generation_report(ARTICLES_PER_BATCH, total, 0))
+
                     # Periodic full audit
                     if total % AUDIT_EVERY_N_ARTICLES == 0:
                         print(f"\n  Milestone: {total} articles — running full audit")
@@ -175,9 +179,14 @@ def run_daemon():
                     print(f"  GSC optimization skipped: {e}")
                     scheduler.mark_done("optimize")
 
-            # 5. Daily health report
+            # 5. Daily health report + Telegram notification
             if scheduler.is_due("health", HEALTH_INTERVAL_MINUTES):
-                run_cli("health")
+                from scripts.health import run_health_check, print_health_report, save_health_history
+                from scripts.notify import send_telegram, format_health_report
+                report = run_health_check()
+                print_health_report(report)
+                save_health_history(report)
+                send_telegram(format_health_report(report))
                 scheduler.mark_done("health")
 
             # 6. Deploy
