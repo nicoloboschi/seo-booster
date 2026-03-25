@@ -1,3 +1,5 @@
+import json
+
 import click
 
 from scripts.scrape import scrape_sources
@@ -33,17 +35,21 @@ def generate(input_dir, output_dir, keywords, count, no_expand, dry_run):
 
 
 @cli.command()
-@click.option("--credentials", default="data/gsc-credentials.json", help="Google Search Console credentials")
-@click.option("--site-url", default="https://agentmemory.dev/", help="Site URL in Search Console")
+@click.option("--site-url", default="https://nicoloboschi.github.io/seo-booster/", help="Site URL in Search Console")
 @click.option("--days", default=28, help="Number of days to look back")
 @click.option("--output", default="data/seo-report.json", help="Output report file")
-def stats(credentials, site_url, days, output):
-    """Fetch SEO stats from Google Search Console and generate optimization report."""
-    data = fetch_seo_stats(credentials, site_url, days)
+def stats(site_url, days, output):
+    """Fetch SEO stats from Google Search Console (uses Application Default Credentials)."""
+    data = fetch_seo_stats(None, site_url, days)
     print_report(data)
     suggestions = suggest_optimizations(data)
     for s in suggestions:
         click.echo(f"  → {s}")
+    # Save report for optimize command
+    from pathlib import Path
+    Path(output).parent.mkdir(parents=True, exist_ok=True)
+    Path(output).write_text(json.dumps(data, indent=2))
+    click.echo(f"\n  Report saved to {output}")
 
 
 @cli.command()

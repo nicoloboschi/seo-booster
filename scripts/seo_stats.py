@@ -4,37 +4,21 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+import google.auth
 from googleapiclient.discovery import build
 
 
-SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
-
-
-def _get_gsc_service(credentials_path: str):
-    """Authenticate and return GSC service."""
-    creds = None
-    token_path = Path(credentials_path).parent / "gsc-token.json"
-
-    if token_path.exists():
-        creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
-
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
-            creds = flow.run_local_server(port=0)
-        token_path.write_text(creds.to_json())
-
+def _get_gsc_service():
+    """Authenticate using Application Default Credentials and return GSC service."""
+    creds, _ = google.auth.default(
+        scopes=["https://www.googleapis.com/auth/webmasters.readonly"]
+    )
     return build("searchconsole", "v1", credentials=creds)
 
 
 def fetch_seo_stats(credentials_path: str, site_url: str, days: int) -> dict:
     """Fetch performance data from Google Search Console."""
-    service = _get_gsc_service(credentials_path)
+    service = _get_gsc_service()
 
     end_date = datetime.now() - timedelta(days=3)  # GSC has ~3 day delay
     start_date = end_date - timedelta(days=days)
@@ -86,7 +70,6 @@ def fetch_seo_stats(credentials_path: str, site_url: str, days: int) -> dict:
 
 
 def _parse_rows(response: dict) -> list[dict]:
-    """Parse GSC API response rows."""
     rows = []
     for row in response.get("rows", []):
         rows.append({
@@ -100,7 +83,6 @@ def _parse_rows(response: dict) -> list[dict]:
 
 
 def _parse_page_query_rows(response: dict) -> list[dict]:
-    """Parse page+query combo rows."""
     rows = []
     for row in response.get("rows", []):
         rows.append({
@@ -116,34 +98,33 @@ def _parse_page_query_rows(response: dict) -> list[dict]:
 
 def print_report(data: dict):
     """Print a human-readable SEO report."""
-    print(f"\n📊 SEO Report ({data['period']['start']} → {data['period']['end']})")
+    print(f"\nSEO Report ({data['period']['start']} to {data['period']['end']})")
     print("=" * 60)
 
-    # Top pages by impressions
     pages = sorted(data["pages"], key=lambda x: x["impressions"], reverse=True)
-    print(f"\n🏆 Top Pages by Impressions:")
+    print(f"\nTop Pages by Impressions:")
     for p in pages[:10]:
         print(f"  {p['impressions']:>6} imp | {p['clicks']:>4} clicks | CTR {p['ctr']:>5}% | Pos {p['position']:>4} | {p['key']}")
 
-    # High impression, low CTR (optimization opportunities)
     low_ctr = [p for p in pages if p["impressions"] > 50 and p["ctr"] < 3.0]
     if low_ctr:
-        print(f"\n⚠️  High Impressions, Low CTR (title/description optimization needed):")
+        print(f"\nHigh Impressions, Low CTR (optimize title/description):")
         for p in low_ctr[:5]:
             print(f"  {p['impressions']:>6} imp | CTR {p['ctr']:>5}% | Pos {p['position']:>4} | {p['key']}")
 
-    # Position 5-20 (close to page 1 — content optimization)
     almost = [p for p in pages if 5 <= p["position"] <= 20]
     if almost:
-        print(f"\n🎯 Almost Page 1 (position 5-20, optimize content):")
+        print(f"\nAlmost Page 1 (position 5-20, strengthen content):")
         for p in almost[:5]:
             print(f"  Pos {p['position']:>4} | {p['impressions']:>6} imp | {p['key']}")
 
-    # Top queries
     queries = sorted(data["queries"], key=lambda x: x["impressions"], reverse=True)
-    print(f"\n🔍 Top Queries:")
+    print(f"\nTop Queries:")
     for q in queries[:10]:
         print(f"  {q['impressions']:>6} imp | {q['clicks']:>4} clicks | Pos {q['position']:>4} | {q['key']}")
+
+    if not pages and not queries:
+        print("\n  No data yet. Google needs a few days to start reporting after indexing.")
 
 
 def suggest_optimizations(data: dict) -> list[str]:
@@ -151,21 +132,18 @@ def suggest_optimizations(data: dict) -> list[str]:
     suggestions = []
     pages = data["pages"]
 
-    # High impressions, low CTR → rewrite title/description
     for p in pages:
         if p["impressions"] > 100 and p["ctr"] < 2.0:
             suggestions.append(
                 f"REWRITE TITLE/DESC: {p['key']} — {p['impressions']} impressions but only {p['ctr']}% CTR"
             )
 
-    # Position 4-15 → strengthen content to push to top 3
     for p in pages:
         if 4 <= p["position"] <= 15 and p["impressions"] > 50:
             suggestions.append(
-                f"STRENGTHEN CONTENT: {p['key']} — position {p['position']}, needs more depth/keywords to reach top 3"
+                f"STRENGTHEN CONTENT: {p['key']} — position {p['position']}, needs more depth to reach top 3"
             )
 
-    # Find queries with no dedicated page
     page_queries = data.get("page_queries", [])
     top_queries = {q["key"] for q in sorted(data["queries"], key=lambda x: x["impressions"], reverse=True)[:20]}
     covered_queries = set()
@@ -176,5 +154,8 @@ def suggest_optimizations(data: dict) -> list[str]:
     uncovered = top_queries - covered_queries
     for q in uncovered:
         suggestions.append(f"NEW ARTICLE NEEDED: No page ranks well for '{q}'")
+
+    if not suggestions:
+        suggestions.append("No actionable optimizations yet — need more data from Google.")
 
     return suggestions

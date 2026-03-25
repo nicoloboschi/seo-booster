@@ -161,12 +161,18 @@ def run_daemon():
                     scheduler.mark_done("research")
 
             # 4. Optimize (if GSC configured)
-            gsc_creds = PROJECT_DIR / "data" / "gsc-credentials.json"
-            if gsc_creds.exists() and scheduler.is_due("optimize", OPTIMIZE_INTERVAL_MINUTES):
-                if run_cli("stats"):
-                    run_cli("optimize")
+            if scheduler.is_due("optimize", OPTIMIZE_INTERVAL_MINUTES):
+                try:
+                    if run_cli("stats"):
+                        run_cli("optimize")
+                        scheduler.mark_done("optimize")
+                        changed = True
+                    else:
+                        # GSC not configured or no data yet, skip for now
+                        scheduler.mark_done("optimize")
+                except Exception as e:
+                    print(f"  GSC optimization skipped: {e}")
                     scheduler.mark_done("optimize")
-                    changed = True
 
             # 4. Deploy
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
