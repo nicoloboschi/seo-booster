@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   {{ partial "head-seo.html" . }}
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
 
   <header role="banner">
     <nav aria-label="Main navigation">
-      <a href="/" class="site-title">Agent Memory</a>
+      <a href="{{ "" | absURL }}" class="site-title">Agent Memory</a>
       <span class="site-tagline">AI Memory Systems Explained</span>
     </nav>
   </header>
@@ -20,9 +20,9 @@
 
   <footer role="contentinfo">
     <nav aria-label="Footer navigation">
-      <a href="/articles/">All Articles</a>
-      <a href="/tags/">Topics</a>
-      <a href="/sitemap.xml">Sitemap</a>
+      <a href="{{ "articles/" | absURL }}">All Articles</a>
+      <a href="{{ "tags/" | absURL }}">Topics</a>
+      <a href="{{ "sitemap.xml" | absURL }}">Sitemap</a>
     </nav>
     <p>&copy; {{ now.Year }} Agent Memory. Technical guides on AI memory systems.</p>
   </footer>
