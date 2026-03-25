@@ -3,8 +3,6 @@
 import json
 import os
 import subprocess
-import shutil
-import tempfile
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -71,7 +69,7 @@ def run_cli(*args) -> bool:
 
 
 def git_deploy() -> bool:
-    """Commit source changes, build Hugo, push built site to gh-pages."""
+    """Commit source changes to main, then deploy built site to gh-pages."""
 
     # Check for changes
     status = subprocess.run(["git", "status", "--porcelain", "content/", "data/"],
@@ -99,60 +97,16 @@ def git_deploy() -> bool:
         print("  Source push failed")
         return False
 
-    # Build Hugo
-    print("  Building Hugo...")
-    result = subprocess.run(["hugo", "--minify"], cwd=PROJECT_DIR, capture_output=True, text=True)
+    # Deploy to gh-pages via deploy script
+    deploy_script = PROJECT_DIR / "scripts" / "deploy.sh"
+    print("  Running deploy script...")
+    result = subprocess.run(["bash", str(deploy_script)], cwd=PROJECT_DIR)
     if result.returncode != 0:
-        print(f"  Hugo build failed: {result.stderr}")
+        print("  Deploy failed")
         return False
 
-    # Deploy to gh-pages
-    _deploy_gh_pages(PROJECT_DIR / "public")
     print("  Deployed to gh-pages.")
     return True
-
-
-def _deploy_gh_pages(public_dir: Path):
-    """Push public/ contents to gh-pages branch."""
-    remote = subprocess.run(["git", "remote", "get-url", "origin"],
-                            capture_output=True, text=True, cwd=PROJECT_DIR)
-    remote_url = remote.stdout.strip()
-
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp_path = Path(tmp)
-        deploy_dir = tmp_path / "deploy"
-
-        clone_result = subprocess.run(
-            ["git", "clone", "--branch", "gh-pages", "--single-branch", "--depth", "1",
-             remote_url, str(deploy_dir)],
-            capture_output=True, text=True,
-        )
-
-        if clone_result.returncode != 0:
-            deploy_dir.mkdir(parents=True, exist_ok=True)
-            subprocess.run(["git", "init"], cwd=deploy_dir)
-            subprocess.run(["git", "checkout", "--orphan", "gh-pages"], cwd=deploy_dir)
-            subprocess.run(["git", "remote", "add", "origin", remote_url], cwd=deploy_dir)
-        else:
-            for item in deploy_dir.iterdir():
-                if item.name == ".git":
-                    continue
-                if item.is_dir():
-                    shutil.rmtree(item)
-                else:
-                    item.unlink()
-
-        for item in public_dir.iterdir():
-            dest = deploy_dir / item.name
-            if item.is_dir():
-                shutil.copytree(item, dest)
-            else:
-                shutil.copy2(item, dest)
-
-        subprocess.run(["git", "add", "-A"], cwd=deploy_dir)
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-        subprocess.run(["git", "commit", "-m", f"Deploy {timestamp}"], cwd=deploy_dir)
-        subprocess.run(["git", "push", "-u", "origin", "gh-pages"], cwd=deploy_dir)
 
 
 def run_daemon():
