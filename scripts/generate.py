@@ -117,8 +117,9 @@ def _generate_text(client: genai.Client, prompt: str, system: str = "") -> str:
 
 
 def generate_articles(input_dir: str, output_dir: str, keywords_path: str, dry_run: bool,
-                      count: int = 10, auto_expand: bool = True):
-    """Generate 1 article per unique keyword. Skip keywords that already have an article."""
+                      count: int = 10, auto_expand: bool = False):
+    """Generate 1 article per unique keyword. Skip keywords that already have an article.
+    Keywords are manually curated — no auto-expansion."""
     input_path = Path(input_dir)
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)

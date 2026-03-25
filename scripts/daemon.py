@@ -16,11 +16,11 @@ SCRAPE_INTERVAL_MINUTES = 30
 GENERATE_INTERVAL_MINUTES = 120       # every 2h, generates a batch
 ARTICLES_PER_BATCH = 5                # 5 per batch × ~5 batches/day = ~10/day
 OPTIMIZE_INTERVAL_MINUTES = 60        # check GSC hourly
-RESEARCH_INTERVAL_MINUTES = 360       # keyword research every 6h
 DEPLOY_INTERVAL_MINUTES = 30          # deploy every 30 min
 HEALTH_INTERVAL_MINUTES = 60          # health report + Telegram every hour
-PRESENCE_INTERVAL_MINUTES = 360       # LLM presence + SERP check every 6h (uses ~20 Gemini calls each)
+PRESENCE_INTERVAL_MINUTES = 360       # LLM presence + SERP check every 6h
 AUDIT_EVERY_N_ARTICLES = 50           # full audit every 50 articles
+# NOTE: keyword research disabled — keywords are manually curated in data/keywords.yaml
 
 PROJECT_DIR = Path(__file__).parent.parent
 
@@ -157,12 +157,7 @@ def run_daemon():
                         print(f"\n  Milestone: {total} articles — running full audit")
                         run_cli("audit")
 
-            # 3. Keyword research — discover and validate new keywords
-            if scheduler.is_due("research", RESEARCH_INTERVAL_MINUTES):
-                if run_cli("research", "--add-opportunities"):
-                    scheduler.mark_done("research")
-
-            # 4. Optimize (if GSC configured)
+            # 3. Optimize (if GSC configured)
             if scheduler.is_due("optimize", OPTIMIZE_INTERVAL_MINUTES):
                 try:
                     if run_cli("stats"):
@@ -176,7 +171,7 @@ def run_daemon():
                     print(f"  GSC optimization skipped: {e}")
                     scheduler.mark_done("optimize")
 
-            # 5. Daily health report + Telegram notification
+            # 4. Hourly health report + Telegram notification
             if scheduler.is_due("health", HEALTH_INTERVAL_MINUTES):
                 from scripts.health import run_health_check, print_health_report, save_health_history
                 from scripts.notify import send_telegram, format_health_report
@@ -186,7 +181,7 @@ def run_daemon():
                 send_telegram(format_health_report(report))
                 scheduler.mark_done("health")
 
-            # 6. Weekly LLM presence test
+            # 5. LLM presence test
             if scheduler.is_due("presence", PRESENCE_INTERVAL_MINUTES):
                 try:
                     from scripts.llm_presence import (
@@ -202,7 +197,7 @@ def run_daemon():
                     print(f"  Presence test failed: {e}")
                 scheduler.mark_done("presence")
 
-            # 7. Weekly SERP position check
+            # 6. SERP position check
             if scheduler.is_due("serp", PRESENCE_INTERVAL_MINUTES):
                 try:
                     from scripts.serp_tracker import (
@@ -218,7 +213,7 @@ def run_daemon():
                     print(f"  SERP check failed: {e}")
                 scheduler.mark_done("serp")
 
-            # 8. Deploy
+            # 7. Deploy
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
                 ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"\n[{ts}] Deploying...")
@@ -245,7 +240,6 @@ def _sleep_until_next(scheduler: Scheduler):
     tasks = [
         ("scrape", SCRAPE_INTERVAL_MINUTES),
         ("generate", GENERATE_INTERVAL_MINUTES),
-        ("research", RESEARCH_INTERVAL_MINUTES),
         ("deploy", DEPLOY_INTERVAL_MINUTES),
         ("optimize", OPTIMIZE_INTERVAL_MINUTES),
         ("health", HEALTH_INTERVAL_MINUTES),
