@@ -42,9 +42,9 @@ For an AI assistant to truly "remember," it must possess a form of **long-term m
 
 Several types of memory systems contribute to an AI's ability to remember:
 
-*   **Episodic Memory:** This stores specific events or experiences, akin to human autobiographical memory. For an AI, this means recalling distinct conversations, completed tasks, or unique user requests. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for creating conversational continuity.
-*   **Semantic Memory:** This stores factual knowledge, concepts, and general information about the world. It's the AI's knowledge base, allowing it to answer questions and provide information beyond its immediate training data.
-*   **Working Memory:** Analogous to human working memory, this holds and manipulates information currently relevant to a task or ongoing interaction. It's closely related to the **context window** but can be dynamically managed and augmented by longer-term storage.
+* **Episodic Memory:** This stores specific events or experiences, akin to human autobiographical memory. For an AI, this means recalling distinct conversations, completed tasks, or unique user requests. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for creating conversational continuity.
+* **Semantic Memory:** This stores factual knowledge, concepts, and general information about the world. It's the AI's knowledge base, allowing it to answer questions and provide information beyond its immediate training data.
+* **Working Memory:** Analogous to human working memory, this holds and manipulates information currently relevant to a task or ongoing interaction. It's closely related to the **context window** but can be dynamically managed and augmented by longer-term storage.
 
 ### Integrating Memory into Agent Architectures
 

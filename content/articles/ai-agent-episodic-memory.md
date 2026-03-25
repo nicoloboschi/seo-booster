@@ -39,11 +39,11 @@ When an agent needs to make a decision or learn from the past, it queries this m
 
 The process of storing an episode involves serializing the relevant state information at a given point in time. This can include:
 
-*   **Agent's internal state:** Current beliefs, goals, or parameters.
-*   **Perceptual input:** Sensory data received from the environment.
-*   **Actions taken:** The specific outputs or commands executed by the agent.
-*   **Environmental feedback:** Any consequences or responses from the environment.
-*   **Timestamps:** Precise recording of when the event occurred.
+* **Agent's internal state:** Current beliefs, goals, or parameters.
+* **Perceptual input:** Sensory data received from the environment.
+* **Actions taken:** The specific outputs or commands executed by the agent.
+* **Environmental feedback:** Any consequences or responses from the environment.
+* **Timestamps:** Precise recording of when the event occurred.
 
 The format of stored episodes can vary. Simple logging mechanisms might store raw data, while more advanced systems might use structured data formats or even **vector embeddings** to represent episodes in a way that facilitates efficient retrieval and comparison. The choice of storage mechanism significantly impacts the speed and effectiveness of memory recall.
 
@@ -51,9 +51,9 @@ The format of stored episodes can vary. Simple logging mechanisms might store ra
 
 Retrieval from episodic memory is often context-dependent. An agent might search for past episodes that are similar to its current situation or that led to a specific desired outcome. This can involve:
 
-*   **Content-based retrieval:** Searching for episodes matching current perceptual input or internal state.
-*   **Temporal retrieval:** Accessing episodes that occurred before or after a specific event.
-*   **Similarity-based retrieval:** Using techniques like **vector similarity search** to find episodes that are semantically or contextually close to the current situation.
+* **Content-based retrieval:** Searching for episodes matching current perceptual input or internal state.
+* **Temporal retrieval:** Accessing episodes that occurred before or after a specific event.
+* **Similarity-based retrieval:** Using techniques like **vector similarity search** to find episodes that are semantically or contextually close to the current situation.
 
 Efficient retrieval is critical, especially for agents operating in complex environments with vast amounts of historical data. Techniques like those used in [open-source memory systems](/articles/open-source-memory-systems-compared/) aim to optimize this process.
 
@@ -91,7 +91,7 @@ For agents dealing with a vast amount of experiences, **hierarchical memory stru
 
 ### Integration with Other Memory Types
 
-Effective AI agents often utilize a combination of memory types. **Episodic memory in AI agents** complements **semantic memory AI agents**, which stores factual knowledge. By integrating specific past experiences with general world knowledge, agents can achieve a more holistic understanding and reasoning capability. The interplay between these memory systems is a key aspect of advanced [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
+Effective AI agents often use a combination of memory types. **Episodic memory in AI agents** complements **semantic memory AI agents**, which stores factual knowledge. By integrating specific past experiences with general world knowledge, agents can achieve a more holistic understanding and reasoning capability. The interplay between these memory systems is a key aspect of advanced [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
 
 ## Technical Implementation Considerations
 
@@ -99,15 +99,15 @@ The practical implementation of AI agent episodic memory involves several techni
 
 ### Data Structures and Storage
 
-*   **Databases:** Relational or NoSQL databases can store structured episode data.
-*   **Vector Databases:** For embedding-based retrieval, vector databases (e.g., Pinecone, Weaviate, ChromaDB) are essential. These allow for efficient similarity searches.
-*   **In-memory Buffers:** For high-speed access to recent episodes, especially in RL, in-memory structures like circular buffers are common.
+* **Databases:** Relational or NoSQL databases can store structured episode data.
+* **Vector Databases:** For embedding-based retrieval, vector databases (e.g., Pinecone, Weaviate, ChromaDB) are essential. These allow for efficient similarity searches.
+* **In-memory Buffers:** For high-speed access to recent episodes, especially in RL, in-memory structures like circular buffers are common.
 
 ### Retrieval Algorithms
 
-*   **Exact Match:** Simple retrieval based on specific query parameters.
-*   **k-Nearest Neighbors (k-NN):** Finding the 'k' most similar episodes based on vector embeddings.
-*   **Semantic Search:** Using large language models (LLMs) to understand the query and find semantically related episodes.
+* **Exact Match:** Simple retrieval based on specific query parameters.
+* **k-Nearest Neighbors (k-NN):** Finding the 'k' most similar episodes based on vector embeddings.
+* **Semantic Search:** Using large language models (LLMs) to understand the query and find semantically related episodes.
 
 The choice of **best AI memory systems** often depends on the specific application's requirements for speed, scale, and complexity of retrieval. Resources like [Vectorize.io's guide on best AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems) can provide valuable insights.
 
@@ -119,40 +119,40 @@ Here's a simplified Python example demonstrating a basic episodic memory structu
 import datetime
 
 class SimpleEpisodicMemory:
-    def __init__(self, capacity=100):
-        self.memory = []
-        self.capacity = capacity
+ def __init__(self, capacity=100):
+ self.memory = []
+ self.capacity = capacity
 
-    def add_episode(self, event_type, details):
-        """Adds a new episode to memory."""
-        timestamp = datetime.datetime.now()
-        episode = {
-            "timestamp": timestamp,
-            "event_type": event_type,
-            "details": details
-        }
-        if len(self.memory) >= self.capacity:
-            # Remove the oldest episode if capacity is reached
-            self.memory.pop(0)
-        self.memory.append(episode)
-        print(f"Added episode: {event_type} at {timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+ def add_episode(self, event_type, details):
+ """Adds a new episode to memory."""
+ timestamp = datetime.datetime.now()
+ episode = {
+ "timestamp": timestamp,
+ "event_type": event_type,
+ "details": details
+ }
+ if len(self.memory) >= self.capacity:
+ # Remove the oldest episode if capacity is reached
+ self.memory.pop(0)
+ self.memory.append(episode)
+ print(f"Added episode: {event_type} at {timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
 
-    def retrieve_episodes(self, event_type=None, time_range=None):
-        """Retrieves episodes based on type and/or time range."""
-        results = []
-        for episode in self.memory:
-            match_type = (event_type is None) or (episode["event_type"] == event_type)
-            match_time = True
-            if time_range:
-                start_time, end_time = time_range
-                if not (start_time <= episode["timestamp"] <= end_time):
-                    match_time = False
+ def retrieve_episodes(self, event_type=None, time_range=None):
+ """Retrieves episodes based on type and/or time range."""
+ results = []
+ for episode in self.memory:
+ match_type = (event_type is None) or (episode["event_type"] == event_type)
+ match_time = True
+ if time_range:
+ start_time, end_time = time_range
+ if not (start_time <= episode["timestamp"] <= end_time):
+ match_time = False
 
-            if match_type and match_time:
-                results.append(episode)
-        return results
+ if match_type and match_time:
+ results.append(episode)
+ return results
 
-    def __str__(self):
-        return f"Memory ({len(self.memory)}/{self.capacity} episodes)"
+ def __str__(self):
+ return f"Memory ({len(self.memory)}/{self.capacity} episodes)"
 
 ## 

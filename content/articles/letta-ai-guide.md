@@ -31,7 +31,7 @@ slug: letta-ai-guide
 ---
 
 
-**Leita AI**, formerly known as **MemGPT**, is an advanced system designed to equip Large Language Models (LLMs) with a persistent and expandable memory, effectively overcoming the limitations of fixed context windows. It allows AI agents to retain and recall information over extended interactions, enabling more coherent and contextually aware conversations and tasks. This is achieved through a sophisticated memory management architecture that goes beyond simple retrieval, allowing LLMs to access and utilize vast amounts of information dynamically. Understanding Leita AI is crucial for developing sophisticated **AI agents** capable of long-term interaction and complex task execution.
+**Leita AI**, formerly known as **MemGPT**, is an advanced system designed to equip Large Language Models (LLMs) with a persistent and expandable memory, effectively overcoming the limitations of fixed context windows. It allows AI agents to retain and recall information over extended interactions, enabling more coherent and contextually aware conversations and tasks. This is achieved through a sophisticated memory management architecture that goes beyond simple retrieval, allowing LLMs to access and use vast amounts of information dynamically. Understanding Leita AI is crucial for developing sophisticated **AI agents** capable of long-term interaction and complex task execution.
 
 ## Understanding Leita AI's Memory Architecture
 
@@ -45,9 +45,9 @@ In the Leita AI framework, the LLM acts as an agent that can perceive its enviro
 
 Leita AI differentiates itself by actively managing memory. It doesn't just store raw data; it processes and organizes it. This involves:
 
-*   **Short-Term Memory (Context Window):** The immediate information the LLM is actively processing. This is limited by the LLM's inherent context window size.
-*   **Long-Term Memory (External Database):** A persistent storage for all past interactions, facts, and learned information. This can be a vector database or a structured database.
-*   **Memory Management Functions:** Leita AI employs functions to save memories, retrieve relevant memories, and manage the overall memory space. This includes deciding what information is important enough to be saved and how it should be indexed for efficient retrieval.
+* **Short-Term Memory (Context Window):** The immediate information the LLM is actively processing. This is limited by the LLM's inherent context window size.
+* **Long-Term Memory (External Database):** A persistent storage for all past interactions, facts, and learned information. This can be a vector database or a structured database.
+* **Memory Management Functions:** Leita AI employs functions to save memories, retrieve relevant memories, and manage the overall memory space. This includes deciding what information is important enough to be saved and how it should be indexed for efficient retrieval.
 
 This architecture allows for more consistent and informed responses, as the agent can recall past decisions, user preferences, and domain-specific knowledge. This is a significant advancement over systems that rely solely on the LLM's fixed context. For a deeper understanding of memory types in AI agents, explore [AI agents' memory types](/articles/ai-agents-memory-types/).
 
@@ -77,9 +77,9 @@ Integrating Leita AI into an AI agent typically involves defining the agent's pe
 
 ### Core Components
 
-*   **LLM Interface:** Connecting to a chosen LLM (e.g., GPT-4, Claude).
-*   **Memory Backend:** Configuring the database for long-term storage.
-*   **Agent Logic:** Defining how the agent perceives its environment, processes memory, and decides on actions.
+* **LLM Interface:** Connecting to a chosen LLM (e.g., GPT-4, Claude).
+* **Memory Backend:** Configuring the database for long-term storage.
+* **Agent Logic:** Defining how the agent perceives its environment, processes memory, and decides on actions.
 
 A simplified conceptual example of how an agent might save a memory using a Leita-like approach in Python could look like this:
 
@@ -87,31 +87,31 @@ A simplified conceptual example of how an agent might save a memory using a Leit
 from datetime import datetime
 
 class AIAgent:
-    def __init__(self, llm, memory_backend):
-        self.llm = llm
-        self.memory_backend = memory_backend # e.g., a class managing vector DB operations
-        self.current_context = []
+ def __init__(self, llm, memory_backend):
+ self.llm = llm
+ self.memory_backend = memory_backend # e.g., a class managing vector DB operations
+ self.current_context = []
 
-    def process_input(self, user_input):
-        # Simulate retrieving relevant memories
-        relevant_memories = self.memory_backend.retrieve(user_input)
-        
-        # Update current context with retrieved memories and new input
-        self.current_context.extend(relevant_memories)
-        self.current_context.append({"role": "user", "content": user_input, "timestamp": datetime.now()})
-        
-        # Simulate LLM call with expanded context
-        response = self.llm.generate(self.current_context)
-        
-        # Save the interaction to memory
-        self.memory_backend.save(user_input, response, self.current_context)
-        
-        # Update current context with LLM's response
-        self.current_context.append({"role": "assistant", "content": response, "timestamp": datetime.now()})
-        
-        # In a real system, memory management would prune or consolidate context
-        # to stay within LLM's effective window.
-        
-        return response
+ def process_input(self, user_input):
+ # Simulate retrieving relevant memories
+ relevant_memories = self.memory_backend.retrieve(user_input)
+
+ # Update current context with retrieved memories and new input
+ self.current_context.extend(relevant_memories)
+ self.current_context.append({"role": "user", "content": user_input, "timestamp": datetime.now()})
+
+ # Simulate LLM call with expanded context
+ response = self.llm.generate(self.current_context)
+
+ # Save the interaction to memory
+ self.memory_backend.save(user_input, response, self.current_context)
+
+ # Update current context with LLM's response
+ self.current_context.append({"role": "assistant", "content": response, "timestamp": datetime.now()})
+
+ # In a real system, memory management would prune or consolidate context
+ # to stay within LLM's effective window.
+
+ return response
 
 ## 

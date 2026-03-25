@@ -73,9 +73,9 @@ The landscape of embedding models is constantly evolving, with new models and im
 
 The Sentence-Transformers library is a Python framework built on top of PyTorch and Hugging Face's Transformers, making it easy to train and use pre-trained sentence embedding models. It offers a vast collection of models fine-tuned for semantic similarity tasks.
 
-*   **`all-MiniLM-L6-v2`**: A popular, fast, and relatively small model that provides good performance for many general-purpose tasks. It's a great starting point for RAG due to its balance of speed and accuracy.
-*   **`all-mpnet-base-v2`**: A more powerful model that generally outperforms `all-MiniLM-L6-v2` in terms of semantic understanding, though it is larger and slower.
-*   **`multi-qa-mpnet-base-dot-v1`**: Specifically trained for question-answering and retrieval tasks, making it an excellent candidate for RAG.
+* **`all-MiniLM-L6-v2`**: A popular, fast, and relatively small model that provides good performance for many general-purpose tasks. It's a great starting point for RAG due to its balance of speed and accuracy.
+* **`all-mpnet-base-v2`**: A more powerful model that generally outperforms `all-MiniLM-L6-v2` in terms of semantic understanding, though it is larger and slower.
+* **`multi-qa-mpnet-base-dot-v1`**: Specifically trained for question-answering and retrieval tasks, making it an excellent candidate for RAG.
 
 ```python
 from sentence_transformers import SentenceTransformer
@@ -85,8 +85,8 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 ## Sentences to embed
 sentences = [
-    "This is a test sentence.",
-    "This is another example sentence."
+ "This is a test sentence.",
+ "This is another example sentence."
 ]
 
 ## Generate embeddings
@@ -100,8 +100,8 @@ print(embeddings.shape)
 
 OpenAI offers powerful embedding models accessible via their API. These models are known for their high quality and are a popular choice for many production RAG systems.
 
-*   **`text-embedding-ada-002`**: A widely used and cost-effective model from OpenAI. It offers strong performance across a variety of tasks and is easy to integrate.
-*   **`text-embedding-3-small` / `text-embedding-3-large`**: Newer models that offer improved performance and dimensionality reduction capabilities, allowing for smaller vector sizes without significant accuracy loss.
+* **`text-embedding-ada-002`**: A widely used and cost-effective model from OpenAI. It offers strong performance across a variety of tasks and is easy to integrate.
+* **`text-embedding-3-small` / `text-embedding-3-large`**: Newer models that offer improved performance and dimensionality reduction capabilities, allowing for smaller vector sizes without significant accuracy loss.
 
 ```python
 import openai
@@ -110,11 +110,11 @@ import openai
 ## or pass it directly: openai.api_key = "YOUR_API_KEY"
 
 response = openai.embeddings.create(
-    model="text-embedding-3-small",
-    input=[
-        "What are the benefits of using RAG?",
-        "How does an LLM work?"
-    ]
+ model="text-embedding-3-small",
+ input=[
+ "What are the benefits of using RAG?",
+ "How does an LLM work?"
+ ]
 )
 
 ## Access the embeddings
@@ -127,12 +127,12 @@ print(len(embeddings))
 
 Cohere provides powerful embedding models through their API, focusing on multilingual capabilities and strong performance for retrieval.
 
-*   **`embed-english-v3.0` / `embed-multilingual-v3.0`**: These models offer excellent performance for English and multilingual tasks, respectively. They support different retrieval modes (e.g., `search_query`, `search_document`) for optimized retrieval.
+* **`embed-english-v3.0` / `embed-multilingual-v3.0`**: These models offer excellent performance for English and multilingual tasks, respectively. They support different retrieval modes (e.g., `search_query`, `search_document`) for optimized retrieval.
 
 ### Other Notable Models
 
-*   **E5 models**: A family of models developed by Microsoft, known for their strong performance on various benchmarks, including retrieval tasks.
-*   **BGE (BAAI General Embedding)**: Models from Beijing Academy of Artificial Intelligence that have shown competitive results, especially in open-source leaderboards.
+* **E5 models**: A family of models developed by Microsoft, known for their strong performance on various benchmarks, including retrieval tasks.
+* **BGE (BAAI General Embedding)**: Models from Beijing Academy of Artificial Intelligence that have shown competitive results, especially in open-source leaderboards.
 
 ## Embedding Model Comparison and Trade-offs
 
