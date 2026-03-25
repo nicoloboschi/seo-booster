@@ -86,6 +86,15 @@ def validate(content_dir):
 
 
 @cli.command()
+def health():
+    """Run a full health check: site status, GSC data, content freshness."""
+    from scripts.health import run_health_check, print_health_report, save_health_history
+    report = run_health_check()
+    print_health_report(report)
+    save_health_history(report)
+
+
+@cli.command()
 @click.option("--content-dir", default="content/articles", help="Content directory")
 @click.option("--port", default=1313, help="Hugo server port")
 def audit(content_dir, port):

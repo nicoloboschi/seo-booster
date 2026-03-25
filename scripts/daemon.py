@@ -18,6 +18,7 @@ ARTICLES_PER_BATCH = 5                # 5 per batch × ~5 batches/day = ~10/day
 OPTIMIZE_INTERVAL_MINUTES = 60        # check GSC hourly
 RESEARCH_INTERVAL_MINUTES = 360       # keyword research every 6h
 DEPLOY_INTERVAL_MINUTES = 30          # deploy every 30 min
+HEALTH_INTERVAL_MINUTES = 1440        # health report daily
 AUDIT_EVERY_N_ARTICLES = 50           # full audit every 50 articles
 
 PROJECT_DIR = Path(__file__).parent.parent
@@ -174,7 +175,12 @@ def run_daemon():
                     print(f"  GSC optimization skipped: {e}")
                     scheduler.mark_done("optimize")
 
-            # 4. Deploy
+            # 5. Daily health report
+            if scheduler.is_due("health", HEALTH_INTERVAL_MINUTES):
+                run_cli("health")
+                scheduler.mark_done("health")
+
+            # 6. Deploy
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
                 ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"\n[{ts}] Deploying...")
@@ -204,6 +210,7 @@ def _sleep_until_next(scheduler: Scheduler):
         ("research", RESEARCH_INTERVAL_MINUTES),
         ("deploy", DEPLOY_INTERVAL_MINUTES),
         ("optimize", OPTIMIZE_INTERVAL_MINUTES),
+        ("health", HEALTH_INTERVAL_MINUTES),
     ]
 
     next_tasks = []
