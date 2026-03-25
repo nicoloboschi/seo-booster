@@ -50,4 +50,4 @@ twitterHandle = ""
 # Set your Google Analytics 4 measurement ID here
 # Create one at https://analytics.google.com → Admin → Create Property → Web stream
 [params.analytics]
-googleAnalyticsId = ""
+googleAnalyticsId = "G-FHD1L5VSDV"
