@@ -7,7 +7,7 @@
 <section class="featured">
   <h2>Latest Articles</h2>
   <div class="article-list">
-    {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
+    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
     <article>
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       <div class="meta">
@@ -18,7 +18,6 @@
     </article>
     {{ end }}
   </div>
-  <p class="view-all"><a href="/articles/">View all {{ len .Site.RegularPages }} articles →</a></p>
 </section>
 
 <section class="topics">

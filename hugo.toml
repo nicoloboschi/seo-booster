@@ -46,3 +46,8 @@ generateSocialCard = true
 [params.seo]
 defaultOgImage = "/og-default.png"
 twitterHandle = ""
+
+# Set your Google Analytics 4 measurement ID here
+# Create one at https://analytics.google.com → Admin → Create Property → Web stream
+[params.analytics]
+googleAnalyticsId = ""

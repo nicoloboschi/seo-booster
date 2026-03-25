@@ -53,7 +53,7 @@
   </nav>
 
   {{/* Related articles */}}
-  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
   {{ with $related }}
   <nav class="related" aria-label="Related articles">
     <h2>Related Articles</h2>
