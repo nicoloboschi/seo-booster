@@ -1,27 +1,68 @@
 {{ define "main" }}
-<article>
+<article itemscope itemtype="https://schema.org/Article">
   <header>
-    <h1>{{ .Title }}</h1>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-    {{ with .Params.tags }}
-    <div class="tags">
-      {{ range . }}<a href="{{ "tags/" | absURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a> {{ end }}
+    <h1 itemprop="headline">{{ .Title }}</h1>
+    <div class="meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.keywords }}
+      <span class="reading-time">{{ $.ReadingTime }} min read</span>
+      {{ end }}
     </div>
+    {{ with .Params.tags }}
+    <nav class="tags" aria-label="Article topics">
+      {{ range . }}<a href="{{ "tags/" | absURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a>{{ end }}
+    </nav>
+    {{ end }}
+    {{ with .Description }}
+    <p class="description" itemprop="description">{{ . }}</p>
     {{ end }}
   </header>
 
-  <div class="content">
+  <div class="content" itemprop="articleBody">
     {{ .Content }}
   </div>
 
-  {{/* Internal links — visible as "related reading" but blends in */}}
-  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{/* Table of contents for longer articles */}}
+  {{ if gt .WordCount 800 }}
+  {{ with .TableOfContents }}
+  <aside class="toc" aria-label="Table of contents">
+    <details>
+      <summary>Table of Contents</summary>
+      {{ . }}
+    </details>
+  </aside>
+  {{ end }}
+  {{ end }}
+
+  {{/* Breadcrumb for crawlers */}}
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/articles/"><span itemprop="name">Articles</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">{{ .Title }}</span>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </nav>
+
+  {{/* Related articles */}}
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
   {{ with $related }}
-  <nav class="related">
-    <h2>Related</h2>
+  <nav class="related" aria-label="Related articles">
+    <h2>Related Articles</h2>
     <ul>
       {{ range . }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="related-desc">{{ .Description | plainify | truncate 100 }}</span>
+      </li>
       {{ end }}
     </ul>
   </nav>

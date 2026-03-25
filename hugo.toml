@@ -5,6 +5,20 @@ title = 'Agent Memory — AI Memory Systems Explained'
 enableRobotsTXT = true
 pagination.pagerSize = 20
 
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+[related]
+includeNewer = true
+threshold = 80
+[[related.indices]]
+name = "tags"
+weight = 100
+[[related.indices]]
+name = "keywords"
+weight = 80
+
 [permalinks]
 articles = "/articles/:slug/"
 

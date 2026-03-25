@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>AI Memory Systems Explained</h1>
+  <p>Deep technical guides on memory for AI agents — episodic memory, semantic memory, RAG, embeddings, and retrieval. Written by engineers, for engineers.</p>
+</section>
+
+<section class="featured">
+  <h2>Latest Articles</h2>
+  <div class="article-list">
+    {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
+    <article>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <div class="meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span class="reading-time">{{ .ReadingTime }} min read</span>
+      </div>
+      <p>{{ .Description | default (.Summary | plainify | truncate 160) }}</p>
+    </article>
+    {{ end }}
+  </div>
+  <p class="view-all"><a href="/articles/">View all {{ len .Site.RegularPages }} articles →</a></p>
+</section>
+
+<section class="topics">
+  <h2>Topics</h2>
+  <nav class="topic-grid" aria-label="Article topics">
+    {{ range .Site.Taxonomies.tags }}
+    <a href="{{ .Page.Permalink }}" class="topic-link">
+      {{ .Page.Title }} <span class="count">({{ .Count }})</span>
+    </a>
+    {{ end }}
+  </nav>
+</section>
+{{ end }}
