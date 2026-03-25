@@ -239,22 +239,36 @@ def save_presence_history(report: dict):
 
 
 def format_presence_telegram(report: dict) -> str:
-    """Format presence report for Telegram."""
+    """Format verbose presence report for Telegram."""
     s = report.get("summary", {})
     gemini_rate = s.get("gemini_mention_rate", "?/?")
-
     domain_rate = s.get("domain_citation_rate", "?/?")
+    gemini = report.get("tests", {}).get("gemini", {})
 
     lines = [
         f"🔍 <b>LLM Presence Test (live web search)</b>",
         f"",
-        f"Hindsight mentioned: <b>{gemini_rate}</b> prompts",
-        f"Our domain cited: <b>{domain_rate}</b> prompts",
+        f"<b>Hindsight mentioned:</b> {gemini_rate} prompts",
+        f"<b>Our domain cited:</b> {domain_rate} prompts",
     ]
 
+    # Per-prompt results
+    lines.append(f"\n<b>Per prompt:</b>")
+    for r in gemini.get("results", []):
+        mentioned = "✅" if r.get("hindsight_mentioned") else "❌"
+        cited = " 📎" if r.get("our_domain_cited") else ""
+        prompt_short = r.get("prompt", "")[:50]
+        comps = r.get("competitors_mentioned", [])
+        comp_str = f" (vs {', '.join(comps)})" if comps else ""
+
+        lines.append(f"  {mentioned}{cited} {prompt_short}{comp_str}")
+
+    # Competitor leaderboard
     if "competitor_mentions" in s:
-        top = sorted(s["competitor_mentions"].items(), key=lambda x: -x[1])[:3]
-        comp_str = ", ".join(f"{n}({c})" for n, c in top)
-        lines.append(f"Top competitors: {comp_str}")
+        lines.append(f"\n<b>Competitor mentions:</b>")
+        total = len(gemini.get("results", []))
+        for name, count in sorted(s["competitor_mentions"].items(), key=lambda x: -x[1]):
+            bar = "█" * count + "░" * (total - count)
+            lines.append(f"  {name}: {bar} {count}/{total}")
 
     return "\n".join(lines)

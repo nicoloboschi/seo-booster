@@ -230,23 +230,53 @@ def save_serp_history(report: dict):
 
 
 def format_serp_telegram(report: dict) -> str:
-    """Format SERP report for Telegram."""
+    """Format verbose SERP report for Telegram."""
     s = report.get("summary", {})
+    results = report.get("results", [])
 
     lines = [
         f"📊 <b>SERP Position Tracker</b>",
         f"",
-        f"We rank: <b>{s.get('keywords_we_rank', 0)}/{s.get('keywords_tracked', 0)}</b> keywords",
-        f"Cited in search: <b>{s.get('keywords_in_sources', 0)}/{s.get('keywords_tracked', 0)}</b>",
+        f"<b>Our ranking:</b>",
+        f"  Keywords we rank for: <b>{s.get('keywords_we_rank', 0)}/{s.get('keywords_tracked', 0)}</b>",
+        f"  Cited as search source: <b>{s.get('keywords_in_sources', 0)}/{s.get('keywords_tracked', 0)}</b>",
     ]
 
     if s.get("our_avg_position"):
-        lines.append(f"Avg position: <b>#{s['our_avg_position']}</b>")
+        lines.append(f"  Avg position: <b>#{s['our_avg_position']}</b>")
 
+    # Per-keyword breakdown
+    lines.append(f"\n<b>Per keyword:</b>")
+    for r in results:
+        kw = r.get("keyword", "")
+        our_pos = r.get("our_position")
+        cited = r.get("our_in_sources", False)
+        comps = r.get("competitor_positions", {})
+
+        if our_pos:
+            status = f"#{our_pos}"
+            if cited:
+                status += " (cited)"
+        else:
+            status = "not ranking"
+
+        line = f"  • {kw}: <b>{status}</b>"
+
+        if comps:
+            comp_str = ", ".join(f"{n} #{p}" for n, p in sorted(comps.items(), key=lambda x: x[1]))
+            line += f"\n    vs: {comp_str}"
+
+        lines.append(line)
+
+    # Competitor leaderboard
     competitors = s.get("competitors", {})
     if competitors:
-        top = sorted(competitors.items(), key=lambda x: -x[1]["keywords_ranking"])[:3]
-        comp_lines = [f"{n}: {d['keywords_ranking']}kw avg#{d['avg_position']}" for n, d in top]
-        lines.append(f"\nTop competitors: {', '.join(comp_lines)}")
+        lines.append(f"\n<b>Competitor leaderboard:</b>")
+        sorted_comps = sorted(competitors.items(), key=lambda x: -x[1]["keywords_ranking"])
+        for name, data in sorted_comps:
+            kw_count = data["keywords_ranking"]
+            avg = data["avg_position"]
+            bar = "█" * kw_count + "░" * (s.get("keywords_tracked", 10) - kw_count)
+            lines.append(f"  {name}: {bar} {kw_count}/{s.get('keywords_tracked', '?')}kw, avg #{avg}")
 
     return "\n".join(lines)
