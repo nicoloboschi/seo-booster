@@ -104,6 +104,14 @@ def serp():
 
 
 @cli.command()
+@click.option("--keywords", default="data/keywords.yaml", help="Keywords config file")
+def rank(keywords):
+    """Rank all keywords by search volume + discover new opportunities."""
+    from scripts.keyword_rank import run_keyword_ranking
+    run_keyword_ranking(keywords)
+
+
+@cli.command()
 def presence():
     """Test if LLMs mention Hindsight when asked about AI memory."""
     from scripts.llm_presence import run_presence_test, print_presence_report, save_presence_history
