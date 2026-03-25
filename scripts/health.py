@@ -159,6 +159,27 @@ def run_health_check() -> dict:
         else:
             report["issues"].append(f"GSC check failed: {err[:100]}")
 
+    # 11. Google Analytics data
+    try:
+        from scripts.ga_stats import fetch_ga_report
+        ga = fetch_ga_report()
+        if "error" not in ga:
+            rt = ga.get("realtime", {})
+            d7 = ga.get("last_7_days", {})
+            if "error" not in rt:
+                report["stats"]["ga_active_users"] = rt.get("active_users", 0)
+                report["checks"]["ga_connected"] = True
+            if "error" not in d7:
+                o = d7.get("overall", {})
+                report["stats"]["ga_users_7d"] = o.get("users", 0)
+                report["stats"]["ga_pageviews_7d"] = o.get("pageviews", 0)
+                report["stats"]["ga_sessions_7d"] = o.get("sessions", 0)
+            report["ga_report"] = ga
+        else:
+            report["checks"]["ga_connected"] = False
+    except Exception as e:
+        report["checks"]["ga_connected"] = False
+
     return report
 
 

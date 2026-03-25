@@ -50,11 +50,24 @@ def format_health_report(report: dict) -> str:
         f"🗺 Sitemap: {s.get('sitemap_urls', '?')} URLs",
     ]
 
+    if "ga_active_users" in s:
+        lines.append(f"👥 GA live: <b>{s['ga_active_users']}</b> active users")
+    if "ga_users_7d" in s:
+        lines.append(f"📈 GA (7d): {s['ga_users_7d']} users, {s.get('ga_pageviews_7d', 0)} pageviews, {s.get('ga_sessions_7d', 0)} sessions")
+
     if "gsc_impressions_7d" in s:
         lines.append(f"📊 GSC (7d): {s['gsc_impressions_7d']} imp, {s['gsc_clicks_7d']} clicks")
 
     if "scraped_age_hours" in s:
         lines.append(f"📡 Scraped: {s.get('scraped_items', '?')} items ({s['scraped_age_hours']}h ago)")
+
+    # GA top pages if available
+    ga_report = report.get("ga_report", {})
+    top_pages = ga_report.get("last_7_days", {}).get("top_pages", [])
+    if top_pages:
+        lines.append(f"\n<b>Top pages (7d):</b>")
+        for p in top_pages[:5]:
+            lines.append(f"  • {p['path']} — {p['pageviews']} views")
 
     # Checks
     failed = [k for k, v in checks.items() if not v]

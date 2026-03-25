@@ -12,6 +12,7 @@ __pycache__/
 .env
 data/gsc-credentials.json
 data/gsc-token.json
+data/ga-service-account.json
 
 # Scraped data (regeneratable)
 data/scraped/
