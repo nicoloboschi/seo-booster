@@ -35,7 +35,7 @@ def generate(input_dir, output_dir, keywords, count, no_expand, dry_run):
 
 
 @cli.command()
-@click.option("--site-url", default="https://nicoloboschi.github.io/seo-booster/", help="Site URL in Search Console")
+@click.option("--site-url", default="https://aiagentmemory.org/", help="Site URL in Search Console")
 @click.option("--days", default=28, help="Number of days to look back")
 @click.option("--output", default="data/seo-report.json", help="Output report file")
 def stats(site_url, days, output):
