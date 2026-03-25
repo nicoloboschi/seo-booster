@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{/* Title — keep under 70 chars total */}}
+{{/* Title — keep under 60 chars for Google SERP display */}}
 {{ $siteShort := "Agent Memory" }}
 {{ $fullTitle := printf "%s | %s" .Title $siteShort }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt (len $fullTitle) 70 }}{{ .Title | truncate 67 }}{{ else }}{{ $fullTitle }}{{ end }}</title>
+{{ $titleLen := len $fullTitle }}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt $titleLen 60 }}{{ .Title | truncate 57 }}{{ else }}{{ $fullTitle }}{{ end }}</title>
 
 {{/* Meta Description */}}
 {{ $description := .Description | default .Summary | default .Site.Params.description }}
@@ -21,8 +22,6 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{ with .Params.og_image }}
 <meta property="og:image" content="{{ . | absURL }}">
-{{ else }}
-<meta property="og:image" content="{{ .Site.Params.seo.defaultOgImage | absURL }}">
 {{ end }}
 
 {{/* Twitter Card */}}
