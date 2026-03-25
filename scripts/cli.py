@@ -95,6 +95,15 @@ def health():
 
 
 @cli.command()
+def presence():
+    """Test if LLMs mention Hindsight when asked about AI memory."""
+    from scripts.llm_presence import run_presence_test, print_presence_report, save_presence_history
+    report = run_presence_test()
+    print_presence_report(report)
+    save_presence_history(report)
+
+
+@cli.command()
 @click.option("--content-dir", default="content/articles", help="Content directory")
 @click.option("--port", default=1313, help="Hugo server port")
 def audit(content_dir, port):

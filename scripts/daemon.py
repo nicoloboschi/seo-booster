@@ -19,6 +19,7 @@ OPTIMIZE_INTERVAL_MINUTES = 60        # check GSC hourly
 RESEARCH_INTERVAL_MINUTES = 360       # keyword research every 6h
 DEPLOY_INTERVAL_MINUTES = 30          # deploy every 30 min
 HEALTH_INTERVAL_MINUTES = 60          # health report + Telegram every hour
+PRESENCE_INTERVAL_MINUTES = 10080     # LLM presence test weekly
 AUDIT_EVERY_N_ARTICLES = 50           # full audit every 50 articles
 
 PROJECT_DIR = Path(__file__).parent.parent
@@ -185,7 +186,23 @@ def run_daemon():
                 send_telegram(format_health_report(report))
                 scheduler.mark_done("health")
 
-            # 6. Deploy
+            # 6. Weekly LLM presence test
+            if scheduler.is_due("presence", PRESENCE_INTERVAL_MINUTES):
+                try:
+                    from scripts.llm_presence import (
+                        run_presence_test, print_presence_report,
+                        save_presence_history, format_presence_telegram,
+                    )
+                    from scripts.notify import send_telegram
+                    report = run_presence_test()
+                    print_presence_report(report)
+                    save_presence_history(report)
+                    send_telegram(format_presence_telegram(report))
+                except Exception as e:
+                    print(f"  Presence test failed: {e}")
+                scheduler.mark_done("presence")
+
+            # 7. Deploy
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
                 ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"\n[{ts}] Deploying...")
@@ -216,6 +233,7 @@ def _sleep_until_next(scheduler: Scheduler):
         ("deploy", DEPLOY_INTERVAL_MINUTES),
         ("optimize", OPTIMIZE_INTERVAL_MINUTES),
         ("health", HEALTH_INTERVAL_MINUTES),
+        ("presence", PRESENCE_INTERVAL_MINUTES),
     ]
 
     next_tasks = []
