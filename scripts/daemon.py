@@ -19,7 +19,7 @@ OPTIMIZE_INTERVAL_MINUTES = 60        # check GSC hourly
 RESEARCH_INTERVAL_MINUTES = 360       # keyword research every 6h
 DEPLOY_INTERVAL_MINUTES = 30          # deploy every 30 min
 HEALTH_INTERVAL_MINUTES = 60          # health report + Telegram every hour
-PRESENCE_INTERVAL_MINUTES = 10080     # LLM presence test weekly
+PRESENCE_INTERVAL_MINUTES = 360       # LLM presence + SERP check every 6h (uses ~20 Gemini calls each)
 AUDIT_EVERY_N_ARTICLES = 50           # full audit every 50 articles
 
 PROJECT_DIR = Path(__file__).parent.parent
