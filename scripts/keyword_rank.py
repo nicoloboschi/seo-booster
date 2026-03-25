@@ -210,17 +210,76 @@ def run_keyword_ranking(keywords_path: str = "data/keywords.yaml"):
 
     # Discover opportunities
     print(f"\n{'NEW OPPORTUNITIES':=^70}")
-    opportunities = discover_opportunities(keyword_names)
+    raw_opportunities = discover_opportunities(keyword_names)
 
-    if opportunities:
-        print(f"\n  Found {len(opportunities)} potential keywords:\n")
-        for opp in opportunities[:40]:
-            print(f"    → {opp}")
-        if len(opportunities) > 40:
-            print(f"    ... and {len(opportunities) - 40} more")
-    else:
+    if not raw_opportunities:
         print("  No new opportunities found.")
+        print(f"\n{'='*70}\n")
+        return ranked, []
+
+    print(f"\n  Found {len(raw_opportunities)} raw candidates. Scoring top 50...\n")
+
+    # Quick-score: use direct autocomplete count as a fast proxy
+    # (full scoring is too slow for 2000+ keywords)
+    quick_scored = []
+    candidates = raw_opportunities[:200]  # Check top 200 alphabetically as sample
+    # Also include any that contain high-value terms
+    high_value = ["memory", "agent memory", "remember", "mem0", "zep", "letta",
+                  "hindsight", "rag", "long term memory", "persistent"]
+    for opp in raw_opportunities:
+        if any(hv in opp.lower() for hv in high_value) and opp not in candidates:
+            candidates.append(opp)
+
+    # Deduplicate
+    candidates = list(set(candidates))[:300]
+
+    for i, opp in enumerate(candidates):
+        suggestions = get_autocomplete(opp)
+        exact = opp.lower() in [s.lower() for s in suggestions]
+
+        # Quick score: exact match = 60, suggestions count * 5
+        score = 0
+        if exact:
+            score += 60
+        score += min(len(suggestions) * 5, 40)
+
+        quick_scored.append({
+            "keyword": opp,
+            "score": score,
+            "exact": exact,
+            "suggestions": len(suggestions),
+        })
+        time.sleep(0.15)
+
+        if (i + 1) % 50 == 0:
+            print(f"    Scored {i+1}/{len(candidates)}...")
+
+    # Sort by score
+    quick_scored.sort(key=lambda x: x["score"], reverse=True)
+
+    # Print top 50
+    print(f"\n  TOP OPPORTUNITIES (scored):\n")
+    for i, r in enumerate(quick_scored[:50], 1):
+        bar = "█" * (r["score"] // 5) + "░" * (20 - r["score"] // 5)
+        exact = "✓" if r["exact"] else " "
+        print(f"  {i:>3}. [{r['score']:>3}] {bar} {exact} {r['keyword']}")
+
+    # Group by topic
+    print(f"\n  BY TOPIC:")
+    topics = {
+        "Memory": [r for r in quick_scored if "memory" in r["keyword"].lower()],
+        "Agent": [r for r in quick_scored if "agent" in r["keyword"].lower() and "memory" not in r["keyword"].lower()],
+        "RAG": [r for r in quick_scored if "rag" in r["keyword"].lower()],
+        "Competitors": [r for r in quick_scored if any(c in r["keyword"].lower() for c in ["mem0", "zep", "letta", "memgpt", "cognee"])],
+        "Context/Embeddings": [r for r in quick_scored if any(c in r["keyword"].lower() for c in ["context", "embedding", "vector", "token"])],
+        "Agentic": [r for r in quick_scored if "agentic" in r["keyword"].lower()],
+    }
+    for topic, items in topics.items():
+        top_items = sorted(items, key=lambda x: x["score"], reverse=True)[:5]
+        if top_items:
+            top_str = ", ".join(f"{r['keyword']}({r['score']})" for r in top_items)
+            print(f"    {topic} ({len(items)} total): {top_str}")
 
     print(f"\n{'='*70}\n")
 
-    return ranked, opportunities
+    return ranked, quick_scored
