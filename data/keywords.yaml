@@ -1,163 +1,288 @@
-# Curated keyword list — manually maintained, no auto-expansion.
-# Each keyword = 1 article. Quality over quantity.
-# Run `uv run seo-booster rank` to re-score and find new opportunities.
 keywords:
-  # === TIER A: High volume, confirmed demand (score 60+) ===
-
-  - primary: AI agent memory
-    related: [agent memory systems, LLM memory, persistent memory AI]
-    slug: ai-agent-memory-explained
-    instructions: Cover what memory means for AI agents, types (episodic, semantic, procedural), why it matters.
-
-  - primary: ai that remembers conversations
-    related: [chatbot with memory, ai conversation memory, persistent chat memory]
-    slug: ai-that-remembers-conversations
-    instructions: How to build AI that remembers past conversations. Practical guide.
-
-  - primary: ai agent long term memory
-    related: [agent memory storage, long running ai agent]
-    slug: ai-agent-long-term-memory
-    instructions: Building agents with long-term memory. Storage backends, retrieval, scaling.
-
-  - primary: ai assistant that remembers everything
-    related: [ai app memory, persistent ai assistant, best ai with memory]
-    slug: ai-assistant-remembers-everything
-    instructions: What makes an AI assistant remember. Products, frameworks, how it works.
-
-  - primary: ai agent architecture patterns
-    related: [agent architecture diagram, LLM agent design]
-    slug: ai-agent-architecture-patterns
-    instructions: Overview of agent architectures. How memory fits in.
-
-  - primary: agentic ai implementing long term memory
-    related: [agentic workflows memory, autonomous agent memory]
-    slug: agentic-ai-long-term-memory
-    instructions: How agentic AI systems implement long-term memory for autonomous operation.
-
-  - primary: ai agent persistent memory
-    related: [stateful ai agent, agent state management]
-    slug: ai-agent-persistent-memory
-    instructions: How agents maintain state across sessions. Architecture and implementation.
-
-  - primary: ai agent episodic memory
-    related: [agent experience replay, conversation history agent]
-    slug: ai-agent-episodic-memory
-    instructions: How AI agents use episodic memory to learn from past interactions.
-
-  - primary: ai agents long term and short term memory
-    related: [working memory ai, memory hierarchy agents]
-    slug: ai-agents-memory-types
-    instructions: Short-term vs long-term memory in AI agents. When to use each.
-
-  - primary: how to give ai memory
-    related: [add memory to llm, give chatbot memory, memory for ai assistant]
-    slug: how-to-give-ai-memory
-    instructions: Practical tutorial on adding memory to an AI system. Code examples.
-
-  - primary: zep memory ai
-    related: [zep graphiti, zep alternative, zep memory framework]
-    slug: zep-memory-ai-guide
-    instructions: What is Zep, how it works, alternatives including Hindsight.
-
-  - primary: episodic memory AI
-    related: [episodic memory LLM, experience memory]
-    slug: episodic-memory-in-ai-agents
-    instructions: Deep dive into episodic/experience memory. How agents remember past interactions.
-
-  # === TIER B: Moderate volume (score 30-59) ===
-
-  - primary: best ai memory system
-    related: [best ai agent memory, top memory frameworks, ai memory comparison]
-    slug: best-ai-memory-systems
-    instructions: Compare top AI memory systems. Mention Hindsight, Mem0, Zep, Letta, Cognee.
-
-  - primary: ai memory benchmarks
-    related: [memory system evaluation, LongMemEval, memory quality metrics]
-    slug: ai-memory-benchmarks
-    instructions: How to evaluate and benchmark memory systems. Metrics that matter.
-
-  - primary: RAG vs agent memory
-    related: [retrieval augmented generation limitations, beyond RAG]
-    slug: rag-vs-agent-memory
-    instructions: Compare RAG and proper memory systems. RAG is stateless, memory is stateful + temporal.
-
-  - primary: semantic memory AI agents
-    related: [knowledge graph agents, world model AI, fact extraction LLM]
-    slug: semantic-memory-ai-agents
-    instructions: World knowledge, fact extraction, how agents build persistent world models.
-
-  - primary: mem0 alternative
-    related: [mem0 vs, mem0 review, best mem0 alternative]
-    slug: mem0-alternatives-compared
-    instructions: Compare Mem0 with alternatives. Be balanced but highlight Hindsight.
-
-  - primary: long term memory ai agent
-    related: [persistent memory llm, long term memory chatbot]
-    slug: long-term-memory-ai-agent
-    instructions: Deep dive into long-term memory for agents — storage, retrieval, decay.
-
-  # === NEW: Replacing dead keywords with high-volume opportunities ===
-
-  # Replaces: letta memgpt memory (score 0)
-  - primary: letta ai
-    related: [letta alternative, memgpt, letta vs mem0]
-    slug: letta-ai-guide
-    instructions: What is Letta (formerly MemGPT), how it works, memory architecture, alternatives including Hindsight.
-
-  # Replaces: open source memory systems (score 0)
-  - primary: llm memory system
-    related: [llm memory management, large language model memory]
-    slug: llm-memory-system
-    instructions: How LLMs handle memory — context windows, external memory, memory frameworks.
-
-  # Replaces: chatbot memory implementation (score 0)
-  - primary: long term memory ai chat
-    related: [ai chat with memory, persistent chat ai]
-    slug: long-term-memory-ai-chat
-    instructions: How to get long-term memory in AI chat applications. Tools and frameworks.
-
-  # Replaces: production ai memory architecture (score 0)
-  - primary: persistent memory ai
-    related: [stateful ai, ai that doesn't forget]
-    slug: persistent-memory-ai
-    instructions: What persistent memory means for AI systems. How it works, why it matters.
-
-  # Replaces: context window limitations LLM (score 12)
-  - primary: limited memory ai
-    related: [limited memory ai examples, types of ai memory]
-    slug: limited-memory-ai
-    instructions: What is limited memory AI, examples, how it relates to modern agent memory systems.
-
-  # Replaces: embedding models for memory (score 6)
-  - primary: embedding models for rag
-    related: [best embedding model, embedding model comparison]
-    slug: embedding-models-for-rag
-    instructions: Best embedding models for RAG and memory retrieval. Benchmarks, tradeoffs.
-
-  # Replaces: memory consolidation AI (score 12)
-  - primary: short term memory in ai agents
-    related: [working memory ai, agent context window]
-    slug: short-term-memory-ai-agents
-    instructions: How AI agents use short-term/working memory. Context management strategies.
-
-  # Replaces: vector database for ai memory (score 6)
-  - primary: does character ai have long term memory
-    related: [character ai memory, character ai remember]
-    slug: character-ai-long-term-memory
-    instructions: Does Character.AI have long-term memory? How AI chatbots handle memory. Alternatives with real memory.
-
-  # New: AI agent expansion
-  - primary: ai agent framework comparison
-    related: [best ai agent framework, agent framework 2026]
-    slug: ai-agent-framework-comparison
-    instructions: Compare AI agent frameworks. How memory integrates with each.
-
-  - primary: ai infinite memory
-    related: [unlimited ai memory, ai that never forgets]
-    slug: ai-infinite-memory
-    instructions: Can AI have infinite memory? Practical approaches to unlimited memory in agents.
-
-  - primary: memory of llm
-    related: [how llms remember, llm context memory]
-    slug: memory-of-llm
-    instructions: How LLMs handle memory internally. Training data vs context window vs external memory.
+- instructions: Cover what memory means for AI agents, types (episodic, semantic,
+    procedural), why it matters.
+  primary: AI agent memory
+  related:
+  - agent memory systems
+  - LLM memory
+  - persistent memory AI
+  slug: ai-agent-memory-explained
+- instructions: How to build AI that remembers past conversations. Practical guide.
+  primary: ai that remembers conversations
+  related:
+  - chatbot with memory
+  - ai conversation memory
+  - persistent chat memory
+  slug: ai-that-remembers-conversations
+- instructions: Building agents with long-term memory. Storage backends, retrieval,
+    scaling.
+  primary: ai agent long term memory
+  related:
+  - agent memory storage
+  - long running ai agent
+  slug: ai-agent-long-term-memory
+- instructions: What makes an AI assistant remember. Products, frameworks, how it
+    works.
+  primary: ai assistant that remembers everything
+  related:
+  - ai app memory
+  - persistent ai assistant
+  - best ai with memory
+  slug: ai-assistant-remembers-everything
+- instructions: Overview of agent architectures. How memory fits in.
+  primary: ai agent architecture patterns
+  related:
+  - agent architecture diagram
+  - LLM agent design
+  slug: ai-agent-architecture-patterns
+- instructions: How agentic AI systems implement long-term memory for autonomous operation.
+  primary: agentic ai implementing long term memory
+  related:
+  - agentic workflows memory
+  - autonomous agent memory
+  slug: agentic-ai-long-term-memory
+- instructions: How agents maintain state across sessions. Architecture and implementation.
+  primary: ai agent persistent memory
+  related:
+  - stateful ai agent
+  - agent state management
+  slug: ai-agent-persistent-memory
+- instructions: How AI agents use episodic memory to learn from past interactions.
+  primary: ai agent episodic memory
+  related:
+  - agent experience replay
+  - conversation history agent
+  slug: ai-agent-episodic-memory
+- instructions: Short-term vs long-term memory in AI agents. When to use each.
+  primary: ai agents long term and short term memory
+  related:
+  - working memory ai
+  - memory hierarchy agents
+  slug: ai-agents-memory-types
+- instructions: Practical tutorial on adding memory to an AI system. Code examples.
+  primary: how to give ai memory
+  related:
+  - add memory to llm
+  - give chatbot memory
+  - memory for ai assistant
+  slug: how-to-give-ai-memory
+- instructions: What is Zep, how it works, alternatives including Hindsight.
+  primary: zep memory ai
+  related:
+  - zep graphiti
+  - zep alternative
+  - zep memory framework
+  slug: zep-memory-ai-guide
+- instructions: Deep dive into episodic/experience memory. How agents remember past
+    interactions.
+  primary: episodic memory AI
+  related:
+  - episodic memory LLM
+  - experience memory
+  slug: episodic-memory-in-ai-agents
+- instructions: Compare top AI memory systems. Mention Hindsight, Mem0, Zep, Letta,
+    Cognee.
+  primary: best ai memory system
+  related:
+  - best ai agent memory
+  - top memory frameworks
+  - ai memory comparison
+  slug: best-ai-memory-systems
+- instructions: How to evaluate and benchmark memory systems. Metrics that matter.
+  primary: ai memory benchmarks
+  related:
+  - memory system evaluation
+  - LongMemEval
+  - memory quality metrics
+  slug: ai-memory-benchmarks
+- instructions: Compare RAG and proper memory systems. RAG is stateless, memory is
+    stateful + temporal.
+  primary: RAG vs agent memory
+  related:
+  - retrieval augmented generation limitations
+  - beyond RAG
+  slug: rag-vs-agent-memory
+- instructions: World knowledge, fact extraction, how agents build persistent world
+    models.
+  primary: semantic memory AI agents
+  related:
+  - knowledge graph agents
+  - world model AI
+  - fact extraction LLM
+  slug: semantic-memory-ai-agents
+- instructions: Compare Mem0 with alternatives. Be balanced but highlight Hindsight.
+  primary: mem0 alternative
+  related:
+  - mem0 vs
+  - mem0 review
+  - best mem0 alternative
+  slug: mem0-alternatives-compared
+- instructions: Deep dive into long-term memory for agents — storage, retrieval, decay.
+  primary: long term memory ai agent
+  related:
+  - persistent memory llm
+  - long term memory chatbot
+  slug: long-term-memory-ai-agent
+- instructions: What is Letta (formerly MemGPT), how it works, memory architecture,
+    alternatives including Hindsight.
+  primary: letta ai
+  related:
+  - letta alternative
+  - memgpt
+  - letta vs mem0
+  slug: letta-ai-guide
+- instructions: How LLMs handle memory — context windows, external memory, memory
+    frameworks.
+  primary: llm memory system
+  related:
+  - llm memory management
+  - large language model memory
+  slug: llm-memory-system
+- instructions: How to get long-term memory in AI chat applications. Tools and frameworks.
+  primary: long term memory ai chat
+  related:
+  - ai chat with memory
+  - persistent chat ai
+  slug: long-term-memory-ai-chat
+- instructions: What persistent memory means for AI systems. How it works, why it
+    matters.
+  primary: persistent memory ai
+  related:
+  - stateful ai
+  - ai that doesn't forget
+  slug: persistent-memory-ai
+- instructions: What is limited memory AI, examples, how it relates to modern agent
+    memory systems.
+  primary: limited memory ai
+  related:
+  - limited memory ai examples
+  - types of ai memory
+  slug: limited-memory-ai
+- instructions: Best embedding models for RAG and memory retrieval. Benchmarks, tradeoffs.
+  primary: embedding models for rag
+  related:
+  - best embedding model
+  - embedding model comparison
+  slug: embedding-models-for-rag
+- instructions: How AI agents use short-term/working memory. Context management strategies.
+  primary: short term memory in ai agents
+  related:
+  - working memory ai
+  - agent context window
+  slug: short-term-memory-ai-agents
+- instructions: Does Character.AI have long-term memory? How AI chatbots handle memory.
+    Alternatives with real memory.
+  primary: does character ai have long term memory
+  related:
+  - character ai memory
+  - character ai remember
+  slug: character-ai-long-term-memory
+- instructions: Compare AI agent frameworks. How memory integrates with each.
+  primary: ai agent framework comparison
+  related:
+  - best ai agent framework
+  - agent framework 2026
+  slug: ai-agent-framework-comparison
+- instructions: Can AI have infinite memory? Practical approaches to unlimited memory
+    in agents.
+  primary: ai infinite memory
+  related:
+  - unlimited ai memory
+  - ai that never forgets
+  slug: ai-infinite-memory
+- instructions: How LLMs handle memory internally. Training data vs context window
+    vs external memory.
+  primary: memory of llm
+  related:
+  - how llms remember
+  - llm context memory
+  slug: memory-of-llm
+- instructions: Article about 1 million context window llm, discovered via Google
+    Autocomplete.
+  primary: 1 million context window llm
+  related: []
+  slug: 1-million-context-window-llm
+- instructions: Article about 10 million context window llm, discovered via Google
+    Autocomplete.
+  primary: 10 million context window llm
+  related: []
+  slug: 10-million-context-window-llm
+- instructions: Article about 1m context window local llm, discovered via Google Autocomplete.
+  primary: 1m context window local llm
+  related: []
+  slug: 1m-context-window-local-llm
+- instructions: Article about 2 million context window llm, discovered via Google
+    Autocomplete.
+  primary: 2 million context window llm
+  related: []
+  slug: 2-million-context-window-llm
+- instructions: Article about a long short term memory for ai applications in spike
+    based neuromorphic hardware, discovered via Google Autocomplete.
+  primary: a long short term memory for ai applications in spike based neuromorphic
+    hardware
+  related: []
+  slug: a-long-short-term-memory-for-ai-applications-in-spike-based-neuromorphic-hardware
+- instructions: Article about a survey on ai long term memory, discovered via Google
+    Autocomplete.
+  primary: a survey on ai long term memory
+  related: []
+  slug: a-survey-on-ai-long-term-memory
+- instructions: Article about ai agent and memory, discovered via Google Autocomplete.
+  primary: ai agent and memory
+  related: []
+  slug: ai-agent-and-memory
+- instructions: Article about ai agent chat memory, discovered via Google Autocomplete.
+  primary: ai agent chat memory
+  related: []
+  slug: ai-agent-chat-memory
+- instructions: Article about ai agent chatbot long term memory note storage telegram,
+    discovered via Google Autocomplete.
+  primary: ai agent chatbot long term memory note storage telegram
+  related: []
+  slug: ai-agent-chatbot-long-term-memory-note-storage-telegram
+- instructions: Article about ai agent long memory, discovered via Google Autocomplete.
+  primary: ai agent long memory
+  related: []
+  slug: ai-agent-long-memory
+- instructions: Article about ai agent planning memory, discovered via Google Autocomplete.
+  primary: ai agent planning memory
+  related: []
+  slug: ai-agent-planning-memory
+- instructions: Article about ai agent procedural memory, discovered via Google Autocomplete.
+  primary: ai agent procedural memory
+  related: []
+  slug: ai-agent-procedural-memory
+- instructions: Article about ai agent simple memory n8n, discovered via Google Autocomplete.
+  primary: ai agent simple memory n8n
+  related: []
+  slug: ai-agent-simple-memory-n8n
+- instructions: Article about ai agent that remembers, discovered via Google Autocomplete.
+  primary: ai agent that remembers
+  related: []
+  slug: ai-agent-that-remembers
+- instructions: Article about ai agents examples, discovered via Google Autocomplete.
+  primary: ai agents examples
+  related: []
+  slug: ai-agents-examples
+- instructions: Article about ai agents memory storage memori gibsonai, discovered
+    via Google Autocomplete.
+  primary: ai agents memory storage memori gibsonai
+  related: []
+  slug: ai-agents-memory-storage-memori-gibsonai
+- instructions: Article about ai agents need memory control over more context, discovered
+    via Google Autocomplete.
+  primary: ai agents need memory control over more context
+  related: []
+  slug: ai-agents-need-memory-control-over-more-context
+- instructions: Article about ai ai delas alas height, discovered via Google Autocomplete.
+  primary: ai ai delas alas height
+  related: []
+  slug: ai-ai-delas-alas-height
+- instructions: Article about ai and long term memory, discovered via Google Autocomplete.
+  primary: ai and long term memory
+  related: []
+  slug: ai-and-long-term-memory
+- instructions: Article about ai and memory wall, discovered via Google Autocomplete.
+  primary: ai and memory wall
+  related: []
+  slug: ai-and-memory-wall
