@@ -18,7 +18,7 @@ ARTICLES_PER_BATCH = 5                # 5 per batch × ~5 batches/day = ~10/day
 OPTIMIZE_INTERVAL_MINUTES = 60        # check GSC hourly
 RESEARCH_INTERVAL_MINUTES = 360       # keyword research every 6h
 DEPLOY_INTERVAL_MINUTES = 30          # deploy every 30 min
-HEALTH_INTERVAL_MINUTES = 1440        # health report daily
+HEALTH_INTERVAL_MINUTES = 60          # health report + Telegram every hour
 AUDIT_EVERY_N_ARTICLES = 50           # full audit every 50 articles
 
 PROJECT_DIR = Path(__file__).parent.parent
@@ -150,10 +150,6 @@ def run_daemon():
 
                     total = scheduler.get_counter("total_articles")
                     print(f"\n  Total articles: {total}")
-
-                    # Notify on Telegram
-                    from scripts.notify import send_telegram, format_generation_report
-                    send_telegram(format_generation_report(ARTICLES_PER_BATCH, total, 0))
 
                     # Periodic full audit
                     if total % AUDIT_EVERY_N_ARTICLES == 0:
