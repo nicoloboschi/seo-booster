@@ -1,0 +1,31 @@
+# Content sources to scrape for article generation
+sources:
+  # Your existing Hindsight blog posts
+  - name: "nicoloboschi-blog"
+    type: local
+    path: "../blog/content/posts"
+    glob: "hindsight-*.md"
+
+  # AI/ML news feeds
+  - name: "arxiv-ai"
+    type: rss
+    url: "https://rss.arxiv.org/rss/cs.AI"
+
+  - name: "huggingface-blog"
+    type: rss
+    url: "https://huggingface.co/blog/feed.xml"
+
+  # Agent/memory related blogs
+  - name: "langchain-blog"
+    type: rss
+    url: "https://blog.langchain.dev/rss/"
+
+  - name: "llamaindex-blog"
+    type: rss
+    url: "https://www.llamaindex.ai/blog/rss.xml"
+
+  # Vectorize articles (AI memory comparisons)
+  - name: "vectorize-articles"
+    type: web
+    url: "https://vectorize.io/articles"
+    selector: "a[href*='/articles/']"

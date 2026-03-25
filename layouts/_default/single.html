@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ with .Params.tags }}
+    <div class="tags">
+      {{ range . }}<a href="{{ "tags/" | absURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a> {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="content">
+    {{ .Content }}
+  </div>
+
+  {{/* Internal links — visible as "related reading" but blends in */}}
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{ with $related }}
+  <nav class="related">
+    <h2>Related</h2>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

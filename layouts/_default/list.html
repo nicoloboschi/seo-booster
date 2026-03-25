@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title | default "Articles" }}</h1>
+{{ with .Content }}<div class="content">{{ . }}</div>{{ end }}
+
+<div class="article-list">
+  {{ range .Paginator.Pages }}
+  <article>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    <p>{{ .Summary | plainify | truncate 200 }}</p>
+  </article>
+  {{ end }}
+</div>
+
+{{ template "_internal/pagination.html" . }}
+{{ end }}

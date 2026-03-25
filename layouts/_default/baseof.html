@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head-seo.html" . }}
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <p>&copy; {{ now.Year }} Agent Memory</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Credentials (NEVER commit)
+.env
+data/gsc-credentials.json
+data/gsc-token.json
+
+# Scraped data (regeneratable)
+data/scraped/
+
+# Backups from optimization
+content/**/*.bak
+
+# OS
+.DS_Store

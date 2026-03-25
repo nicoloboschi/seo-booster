@@ -1,0 +1,102 @@
+{{/* SEO Meta Tags */}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{/* Title — keep under 70 chars total */}}
+{{ $siteShort := "Agent Memory" }}
+{{ $fullTitle := printf "%s | %s" .Title $siteShort }}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt (len $fullTitle) 70 }}{{ .Title | truncate 67 }}{{ else }}{{ $fullTitle }}{{ end }}</title>
+
+{{/* Meta Description */}}
+{{ $description := .Description | default .Summary | default .Site.Params.description }}
+<meta name="description" content="{{ $description | plainify | truncate 160 }}">
+
+{{/* Canonical URL */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $description | plainify | truncate 160 }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.og_image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ else }}
+<meta property="og:image" content="{{ .Site.Params.seo.defaultOgImage | absURL }}">
+{{ end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $description | plainify | truncate 160 }}">
+
+{{/* Article specific */}}
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
+{{ end }}
+
+{{/* JSON-LD Structured Data */}}
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $description | plainify | truncate 160 | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Agent Memory"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Agent Memory"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+  {{ with .Params.faq }}
+  ,"@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $q := . }}
+    {{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $q.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $q.answer | jsonify }}
+      }
+    }
+    {{ end }}
+  ]
+  {{ end }}
+}
+</script>
+{{ else if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }}
+}
+</script>
+{{ else }}
+{{/* List pages: sections, taxonomies, terms */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ .Title | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "description": {{ (.Description | default .Site.Params.description) | jsonify }}
+}
+</script>
+{{ end }}

@@ -1,0 +1,34 @@
+baseURL = 'https://agentmemory.dev/'
+languageCode = 'en-us'
+title = 'Agent Memory — AI Memory Systems Explained'
+
+enableRobotsTXT = true
+pagination.pagerSize = 20
+
+[permalinks]
+articles = "/articles/:slug/"
+
+[markup]
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+noClasses = false
+[markup.goldmark.renderer]
+unsafe = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
+
+[params]
+description = "Deep technical guides on AI memory systems, agent architectures, RAG, embeddings, and retrieval. Built by engineers, for engineers."
+dateFormat = "2006-01-02"
+generateSocialCard = true
+
+[params.seo]
+defaultOgImage = "/og-default.png"
+twitterHandle = ""
