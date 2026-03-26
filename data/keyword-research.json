@@ -844,28 +844,185 @@
       "matching_suggestions": [
         "ai and memory wall"
       ]
+    },
+    {
+      "keyword": "ai app that remembers everything",
+      "slug": "ai-app-that-remembers-everything",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai app that remembers everything"
+      ]
+    },
+    {
+      "keyword": "ai apps to talk to",
+      "slug": "ai-apps-to-talk-to",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai apps to talk to"
+      ]
+    },
+    {
+      "keyword": "ai chat best memory",
+      "slug": "ai-chat-best-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat best memory"
+      ]
+    },
+    {
+      "keyword": "ai chat bot memory",
+      "slug": "ai-chat-bot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat bot memory"
+      ]
+    },
+    {
+      "keyword": "ai chat good memory",
+      "slug": "ai-chat-good-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat good memory"
+      ]
+    },
+    {
+      "keyword": "ai chat infinite memory",
+      "slug": "ai-chat-infinite-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat infinite memory"
+      ]
+    },
+    {
+      "keyword": "ai chat long memory",
+      "slug": "ai-chat-long-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat long memory"
+      ]
+    },
+    {
+      "keyword": "ai chat memory",
+      "slug": "ai-chat-memory",
+      "autocomplete_matches": 35,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat memory",
+        "ai chat memory",
+        "ai chat memory reddit",
+        "best ai chat memory",
+        "character ai chat memory limit"
+      ]
+    },
+    {
+      "keyword": "ai chat memory reddit",
+      "slug": "ai-chat-memory-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat memory reddit"
+      ]
+    },
+    {
+      "keyword": "ai chat permanent memory",
+      "slug": "ai-chat-permanent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat permanent memory"
+      ]
+    },
+    {
+      "keyword": "ai chat that remembers everything",
+      "slug": "ai-chat-that-remembers-everything",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat that remembers everything",
+        "ai chat that remembers everything free",
+        "best ai chat that remembers everything"
+      ]
+    },
+    {
+      "keyword": "ai chat that remembers everything free",
+      "slug": "ai-chat-that-remembers-everything-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat that remembers everything free"
+      ]
+    },
+    {
+      "keyword": "ai chatbot best memory",
+      "slug": "ai-chatbot-best-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot best memory",
+        "ai chatbot best memory"
+      ]
+    },
+    {
+      "keyword": "ai chatbot for customer service",
+      "slug": "ai-chatbot-for-customer-service",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot for customer service"
+      ]
+    },
+    {
+      "keyword": "ai chatbot good memory",
+      "slug": "ai-chatbot-good-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot good memory",
+        "ai chatbot good memory"
+      ]
+    },
+    {
+      "keyword": "ai chatbot infinite memory",
+      "slug": "ai-chatbot-infinite-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot infinite memory",
+        "ai chatbot infinite memory"
+      ]
+    },
+    {
+      "keyword": "ai chatbot long memory",
+      "slug": "ai-chatbot-long-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot long memory",
+        "ai chatbot long memory"
+      ]
+    },
+    {
+      "keyword": "ai chatbot memory",
+      "slug": "ai-chatbot-memory",
+      "autocomplete_matches": 11,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot memory",
+        "ai chatbot memory reddit",
+        "best ai chatbot memory",
+        "crewai chatbot memory",
+        "gemini ai chatbot memory feature"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai app that remembers everything",
-    "ai apps to talk to",
-    "ai chat best memory",
-    "ai chat bot memory",
-    "ai chat good memory",
-    "ai chat infinite memory",
-    "ai chat long memory",
-    "ai chat memory",
-    "ai chat memory reddit",
-    "ai chat permanent memory",
-    "ai chat that remembers everything",
-    "ai chat that remembers everything free",
-    "ai chatbot best memory",
-    "ai chatbot for customer service",
-    "ai chatbot good memory",
-    "ai chatbot infinite memory",
-    "ai chatbot long memory",
-    "ai chatbot memory",
-    "ai chatbot memory reddit",
     "ai chatbot that remembers",
     "ai chatbot that remembers everything",
     "ai chatbot with best memory",
@@ -1058,14 +1215,11 @@
     "best ai assistant with memory",
     "best ai chat app with memory",
     "best ai chat for memory",
-    "best ai chat memory",
-    "best ai chat that remembers everything",
     "best ai chat with best memory",
     "best ai chat with good memory",
     "best ai chat with long memory",
     "best ai chat with long term memory",
     "best ai chatbot for memory",
-    "best ai chatbot memory",
     "best ai chatbot that remembers everything",
     "best ai chatbot with best memory",
     "best ai chatbot with good memory",
@@ -1133,7 +1287,6 @@
     "can you have good long term memory but bad short term memory",
     "candy ai long term memory",
     "central memory vs effector memory",
-    "character ai chat memory limit",
     "character ai memory extension",
     "character ai memory system",
     "character ai that remembers everything",
@@ -1159,7 +1312,6 @@
     "chatbots for customer service",
     "chatbots to talk to",
     "chronic memory issues",
-    "chub ai chat memory not working",
     "chub ai long term memory",
     "claude ai long term memory",
     "claude chatbot memory feature",
@@ -1194,7 +1346,6 @@
     "context window size in llm",
     "context window size llm comparison",
     "context window size of llm",
-    "crewai chatbot memory",
     "crewai long term memory",
     "crushon ai long term memory",
     "custom ai agent with memory",
@@ -1231,7 +1382,6 @@
     "flipped ai long term memory",
     "free ai that remembers",
     "free ai with long term memory",
-    "gemini ai chatbot memory feature",
     "gemini ai long term memory",
     "gemini chatbot memory",
     "github langchain ai memory agent",
@@ -1248,7 +1398,6 @@
     "highest context window llm free",
     "how ai remembers",
     "how are long term memories stored in the brain",
-    "how does ai chat memory work",
     "how does ai memory work",
     "how does chatbot memory work",
     "how does long term memory work in ai",
@@ -1293,11 +1442,9 @@
     "how to remember conversations",
     "how to remember conversations better",
     "how to remove ai memories on snapchat",
-    "how to reset meta ai chat memory",
     "how to see chatgpt memory",
     "how to turn ai memories off on snapchat",
     "how to turn on chatgpt memory",
-    "how to use janitor ai chat memory",
     "how to use janitor ai memory",
     "how to use long term memory janitor ai",
     "how to use memory",
@@ -1339,21 +1486,6 @@
     "jan ai long term memory",
     "janitor ai best chat memory",
     "janitor ai best memory",
-    "janitor ai chat memory auto summary",
-    "janitor ai chat memory bug",
-    "janitor ai chat memory commands",
-    "janitor ai chat memory doesn't work",
-    "janitor ai chat memory example",
-    "janitor ai chat memory feature",
-    "janitor ai chat memory format",
-    "janitor ai chat memory function",
-    "janitor ai chat memory guide",
-    "janitor ai chat memory guide reddit",
-    "janitor ai chat memory how to use",
-    "janitor ai chat memory limit",
-    "janitor ai chat memory not working",
-    "janitor ai chat memory ooc",
-    "janitor ai chat memory prompt",
     "janitor llm memory",
     "joyland ai long term memory",
     "kernel memory vector database",
@@ -1592,8 +1724,6 @@
     "memory system for ai agents",
     "memory system in ai",
     "memorydb vector database",
-    "meta ai chat memory feature",
-    "meta ai chatbot memory boost",
     "microsoft agent framework memory",
     "most advanced conversational ai",
     "most intelligent chatbot",
@@ -1633,15 +1763,6 @@
     "short term memory aids",
     "short term memory for ai agents",
     "short term vs long term memory in ai agents",
-    "spring ai chat memory advisor",
-    "spring ai chat memory database",
-    "spring ai chat memory example",
-    "spring ai chat memory jdbc",
-    "spring ai chat memory maven",
-    "spring ai chat memory mongodb",
-    "spring ai chat memory mysql",
-    "spring ai chat memory postgres",
-    "spring ai chat memory postgresql",
     "spring ai conversation memory",
     "top brain foods improve memory",
     "vector database ai memory",
@@ -1691,7 +1812,6 @@
     "what is conversation ai",
     "what is in memory vector database",
     "what is intelligent agent in artificial intelligence",
-    "what is janitor ai chat memory",
     "what is keep alive memory",
     "what is knowledge agent in artificial intelligence",
     "what is llm memory",
@@ -1792,9 +1912,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 49,
-    "validated": 42,
+    "total_keywords": 67,
+    "validated": 60,
     "low_volume": 7,
-    "new_opportunities_found": 943
+    "new_opportunities_found": 887
   }
 }
