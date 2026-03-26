@@ -663,29 +663,190 @@
       "matching_suggestions": [
         "memory of llm"
       ]
+    },
+    {
+      "keyword": "1 million context window llm",
+      "slug": "1-million-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "1 million context window llm"
+      ]
+    },
+    {
+      "keyword": "10 million context window llm",
+      "slug": "10-million-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "10 million context window llm"
+      ]
+    },
+    {
+      "keyword": "1m context window local llm",
+      "slug": "1m-context-window-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "1m context window local llm"
+      ]
+    },
+    {
+      "keyword": "2 million context window llm",
+      "slug": "2-million-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "2 million context window llm"
+      ]
+    },
+    {
+      "keyword": "a long short term memory for ai applications in spike based neuromorphic hardware",
+      "slug": "a-long-short-term-memory-for-ai-applications-in-spike-based-neuromorphic-hardware",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "a long short term memory for ai applications in spike based neuromorphic hardware"
+      ]
+    },
+    {
+      "keyword": "a survey on ai long term memory",
+      "slug": "a-survey-on-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "a survey on ai long term memory"
+      ]
+    },
+    {
+      "keyword": "ai agent and memory",
+      "slug": "ai-agent-and-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent and memory"
+      ]
+    },
+    {
+      "keyword": "ai agent chat memory",
+      "slug": "ai-agent-chat-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent chat memory",
+        "n8n ai agent chat memory"
+      ]
+    },
+    {
+      "keyword": "ai agent chatbot long term memory note storage telegram",
+      "slug": "ai-agent-chatbot-long-term-memory-note-storage-telegram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent chatbot long term memory note storage telegram"
+      ]
+    },
+    {
+      "keyword": "ai agent long memory",
+      "slug": "ai-agent-long-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent long memory"
+      ]
+    },
+    {
+      "keyword": "ai agent planning memory",
+      "slug": "ai-agent-planning-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent planning memory"
+      ]
+    },
+    {
+      "keyword": "ai agent procedural memory",
+      "slug": "ai-agent-procedural-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent procedural memory"
+      ]
+    },
+    {
+      "keyword": "ai agent simple memory n8n",
+      "slug": "ai-agent-simple-memory-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent simple memory n8n"
+      ]
+    },
+    {
+      "keyword": "ai agent that remembers",
+      "slug": "ai-agent-that-remembers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent that remembers"
+      ]
+    },
+    {
+      "keyword": "ai agents examples",
+      "slug": "ai-agents-examples",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agents examples"
+      ]
+    },
+    {
+      "keyword": "ai agents memory storage memori gibsonai",
+      "slug": "ai-agents-memory-storage-memori-gibsonai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agents memory storage memori gibsonai"
+      ]
+    },
+    {
+      "keyword": "ai agents need memory control over more context",
+      "slug": "ai-agents-need-memory-control-over-more-context",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agents need memory control over more context"
+      ]
+    },
+    {
+      "keyword": "ai ai delas alas height",
+      "slug": "ai-ai-delas-alas-height",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ai delas alas height"
+      ]
+    },
+    {
+      "keyword": "ai and long term memory",
+      "slug": "ai-and-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai and long term memory"
+      ]
+    },
+    {
+      "keyword": "ai and memory wall",
+      "slug": "ai-and-memory-wall",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai and memory wall"
+      ]
     }
   ],
   "new_opportunities": [
-    "1 million context window llm",
-    "10 million context window llm",
-    "1m context window local llm",
-    "2 million context window llm",
-    "a long short term memory for ai applications in spike based neuromorphic hardware",
-    "a survey on ai long term memory",
-    "ai agent and memory",
-    "ai agent chat memory",
-    "ai agent chatbot long term memory note storage telegram",
-    "ai agent long memory",
-    "ai agent planning memory",
-    "ai agent procedural memory",
-    "ai agent simple memory n8n",
-    "ai agent that remembers",
-    "ai agents examples",
-    "ai agents memory storage memori gibsonai",
-    "ai agents need memory control over more context",
-    "ai ai delas alas height",
-    "ai and long term memory",
-    "ai and memory wall",
     "ai app that remembers everything",
     "ai apps to talk to",
     "ai chat best memory",
@@ -1024,7 +1185,6 @@
     "context window llm paper",
     "context window llm ranking",
     "context window llm size",
-    "context window local llm",
     "context window management llm",
     "context window of an llm",
     "context window of different llm",
@@ -1437,7 +1597,6 @@
     "microsoft agent framework memory",
     "most advanced conversational ai",
     "most intelligent chatbot",
-    "n8n ai agent chat memory",
     "n8n ai agent clear memory",
     "n8n ai agent node memory",
     "n8n ai agent simple memory session id",
@@ -1633,9 +1792,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 29,
-    "validated": 22,
+    "total_keywords": 49,
+    "validated": 42,
     "low_volume": 7,
-    "new_opportunities_found": 965
+    "new_opportunities_found": 943
   }
 }
