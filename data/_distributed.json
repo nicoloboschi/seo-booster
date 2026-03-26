@@ -1,9 +1,21 @@
 {
   "1-million-context-window-llm": {
-    "platforms": {}
+    "platforms": {
+      "devto": {
+        "id": 3408196,
+        "url": "https://dev.to/aiagentmemory/1-million-context-window-llms-breaking-the-memory-barrier-1ebh",
+        "posted_at": "2026-03-26T10:49:22"
+      }
+    }
   },
   "10-million-context-window-llm": {
-    "platforms": {}
+    "platforms": {
+      "devto": {
+        "id": 3408197,
+        "url": "https://dev.to/aiagentmemory/10-million-context-window-llm-unlocking-unprecedented-ai-memory-5g89",
+        "posted_at": "2026-03-26T10:49:26"
+      }
+    }
   },
   "1m-context-window-local-llm": {
     "platforms": {}
