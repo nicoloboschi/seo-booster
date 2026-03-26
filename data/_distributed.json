@@ -1,0 +1,11 @@
+{
+  "1-million-context-window-llm": {
+    "platforms": {}
+  },
+  "10-million-context-window-llm": {
+    "platforms": {}
+  },
+  "1m-context-window-local-llm": {
+    "platforms": {}
+  }
+}
