@@ -779,5 +779,35 @@
     "generated_at": "2026-03-27T19:29:17.811031",
     "sources": [],
     "quality_score": 65
+  },
+  "ai-memory-demand": {
+    "keyword": "ai memory demand",
+    "generated_at": "2026-03-27T21:30:11.647775",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-design": {
+    "keyword": "ai memory design",
+    "generated_at": "2026-03-27T21:30:52.412994",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-developer": {
+    "keyword": "ai memory developer",
+    "generated_at": "2026-03-27T21:31:38.396801",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-developer-job": {
+    "keyword": "ai memory developer job",
+    "generated_at": "2026-03-27T21:32:17.994004",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-device": {
+    "keyword": "ai memory device",
+    "generated_at": "2026-03-27T21:33:08.305356",
+    "sources": [],
+    "quality_score": 65
   }
 }
