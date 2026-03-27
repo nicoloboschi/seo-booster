@@ -1326,29 +1326,195 @@
       "matching_suggestions": [
         "ai meeting summary"
       ]
+    },
+    {
+      "keyword": "ai memorial generator",
+      "slug": "ai-memorial-generator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memorial generator"
+      ]
+    },
+    {
+      "keyword": "ai memory agent",
+      "slug": "ai-memory-agent",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "github langchain ai memory agent",
+        "ai memory agent"
+      ]
+    },
+    {
+      "keyword": "ai memory aid",
+      "slug": "ai-memory-aid",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory aid"
+      ]
+    },
+    {
+      "keyword": "ai memory and context",
+      "slug": "ai-memory-and-context",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory and context"
+      ]
+    },
+    {
+      "keyword": "ai memory and storage etf",
+      "slug": "ai-memory-and-storage-etf",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory and storage etf"
+      ]
+    },
+    {
+      "keyword": "ai memory and storage stocks",
+      "slug": "ai-memory-and-storage-stocks",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory and storage stocks"
+      ]
+    },
+    {
+      "keyword": "ai memory api",
+      "slug": "ai-memory-api",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory api"
+      ]
+    },
+    {
+      "keyword": "ai memory app",
+      "slug": "ai-memory-app",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory app",
+        "best ai memory app",
+        "best ai memory app"
+      ]
+    },
+    {
+      "keyword": "ai memory architecture",
+      "slug": "ai-memory-architecture",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory architecture"
+      ]
+    },
+    {
+      "keyword": "ai memory assistant",
+      "slug": "ai-memory-assistant",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory assistant"
+      ]
+    },
+    {
+      "keyword": "ai memory bank",
+      "slug": "ai-memory-bank",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "vertex ai memory bank agent development",
+        "ai memory bank",
+        "what is ai memory bank"
+      ]
+    },
+    {
+      "keyword": "ai memory book",
+      "slug": "ai-memory-book",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory book"
+      ]
+    },
+    {
+      "keyword": "ai memory boost module",
+      "slug": "ai-memory-boost-module",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory boost module",
+        "ai memory boost module gigabyte"
+      ]
+    },
+    {
+      "keyword": "ai memory boost module gigabyte",
+      "slug": "ai-memory-boost-module-gigabyte",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory boost module gigabyte"
+      ]
+    },
+    {
+      "keyword": "ai memory bottleneck",
+      "slug": "ai-memory-bottleneck",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory bottleneck"
+      ]
+    },
+    {
+      "keyword": "ai memory box",
+      "slug": "ai-memory-box",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory box"
+      ]
+    },
+    {
+      "keyword": "ai memory breakthrough",
+      "slug": "ai-memory-breakthrough",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory breakthrough"
+      ]
+    },
+    {
+      "keyword": "ai memory bubble",
+      "slug": "ai-memory-bubble",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory bubble"
+      ]
+    },
+    {
+      "keyword": "ai memory card",
+      "slug": "ai-memory-card",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory card"
+      ]
+    },
+    {
+      "keyword": "ai memory chip companies",
+      "slug": "ai-memory-chip-companies",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip companies"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memorial generator",
-    "ai memory agent",
-    "ai memory aid",
-    "ai memory and context",
-    "ai memory and storage etf",
-    "ai memory and storage stocks",
-    "ai memory api",
-    "ai memory app",
-    "ai memory architecture",
-    "ai memory assistant",
-    "ai memory bank",
-    "ai memory book",
-    "ai memory boost module",
-    "ai memory boost module gigabyte",
-    "ai memory bottleneck",
-    "ai memory box",
-    "ai memory breakthrough",
-    "ai memory bubble",
-    "ai memory card",
-    "ai memory chip companies",
     "ai memory chip makers",
     "ai memory chip shortage",
     "ai memory chip stocks",
@@ -1504,7 +1670,6 @@
     "best ai girlfriend with long memory",
     "best ai image generator with memory",
     "best ai in terms of memory",
-    "best ai memory app",
     "best ai memory companies",
     "best ai memory etf",
     "best ai memory reddit",
@@ -1648,7 +1813,6 @@
     "free ai with long term memory",
     "gemini ai long term memory",
     "gemini chatbot memory",
-    "github langchain ai memory agent",
     "giving a long term memory",
     "golden memory ram review",
     "good memory ai chat",
@@ -2040,7 +2204,6 @@
     "vertex ai agent engine memory",
     "vertex ai agent engine memory bank",
     "vertex ai agent engine memory bank pricing",
-    "vertex ai memory bank agent development",
     "what ai remember previous conversations",
     "what ai remembers conversations",
     "what ai remembers the most",
@@ -2059,7 +2222,6 @@
     "what is ai limited memory",
     "what is ai memories honor",
     "what is ai memory",
-    "what is ai memory bank",
     "what is ai memory called",
     "what is ai memory wall",
     "what is an autonomous agent in artificial intelligence",
@@ -2175,9 +2337,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 99,
-    "validated": 92,
+    "total_keywords": 119,
+    "validated": 112,
     "low_volume": 7,
-    "new_opportunities_found": 844
+    "new_opportunities_found": 820
   }
 }

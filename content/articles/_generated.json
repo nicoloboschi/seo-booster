@@ -719,5 +719,35 @@
     "generated_at": "2026-03-27T15:16:56.701983",
     "sources": [],
     "quality_score": 65
+  },
+  "ai-memory-chip-companies": {
+    "keyword": "ai memory chip companies",
+    "generated_at": "2026-03-27T17:21:50.161376",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-chip-makers": {
+    "keyword": "ai memory chip makers",
+    "generated_at": "2026-03-27T17:22:30.978159",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-chip-shortage": {
+    "keyword": "ai memory chip shortage",
+    "generated_at": "2026-03-27T17:23:22.651560",
+    "sources": [],
+    "quality_score": 55
+  },
+  "ai-memory-chip-stocks": {
+    "keyword": "ai memory chip stocks",
+    "generated_at": "2026-03-27T17:24:09.192996",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-chips": {
+    "keyword": "ai memory chips",
+    "generated_at": "2026-03-27T17:24:56.590844",
+    "sources": [],
+    "quality_score": 65
   }
 }
