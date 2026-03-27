@@ -689,5 +689,35 @@
     "generated_at": "2026-03-27T13:12:34.913773",
     "sources": [],
     "quality_score": 65
+  },
+  "ai-memory-bottleneck": {
+    "keyword": "ai memory bottleneck",
+    "generated_at": "2026-03-27T15:13:58.676809",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-box": {
+    "keyword": "ai memory box",
+    "generated_at": "2026-03-27T15:14:41.564912",
+    "sources": [],
+    "quality_score": 75
+  },
+  "ai-memory-breakthrough": {
+    "keyword": "ai memory breakthrough",
+    "generated_at": "2026-03-27T15:15:34.202810",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-bubble": {
+    "keyword": "ai memory bubble",
+    "generated_at": "2026-03-27T15:16:04.716673",
+    "sources": [],
+    "quality_score": 75
+  },
+  "ai-memory-card": {
+    "keyword": "ai memory card",
+    "generated_at": "2026-03-27T15:16:56.701983",
+    "sources": [],
+    "quality_score": 65
   }
 }
