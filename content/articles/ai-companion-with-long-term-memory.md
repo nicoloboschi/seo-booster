@@ -13,7 +13,7 @@ faq:
   - question: "Can AI companions with long-term memory learn and adapt over time?"
     answer: "Yes, by storing and processing interaction history, AI companions can identify patterns in user behavior, preferences, and needs. This allows them to adapt their responses and actions, becoming more attuned to the individual user over time."
 slug: "ai-companion-with-long-term-memory"
-```
+---
 
 An **AI companion with long-term memory** is an AI system designed to retain and recall information from past interactions over extended periods, creating a continuous and personalized user experience. This enables deeper engagement by mimicking human recall of shared history and learned preferences, moving beyond ephemeral digital exchanges.
 
