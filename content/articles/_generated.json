@@ -665,5 +665,29 @@
     "generated_at": "2026-03-27T11:09:15.340833",
     "sources": [],
     "quality_score": 55
+  },
+  "ai-memory-bank": {
+    "keyword": "ai memory bank",
+    "generated_at": "2026-03-27T13:10:08.571903",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-book": {
+    "keyword": "ai memory book",
+    "generated_at": "2026-03-27T13:11:01.719792",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-boost-module": {
+    "keyword": "ai memory boost module",
+    "generated_at": "2026-03-27T13:11:45.319463",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-boost-module-gigabyte": {
+    "keyword": "ai memory boost module gigabyte",
+    "generated_at": "2026-03-27T13:12:34.913773",
+    "sources": [],
+    "quality_score": 65
   }
 }
