@@ -1176,25 +1176,159 @@
       "matching_suggestions": [
         "ai friend that remembers"
       ]
+    },
+    {
+      "keyword": "ai girlfriend long term memory",
+      "slug": "ai-girlfriend-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai girlfriend long term memory"
+      ]
+    },
+    {
+      "keyword": "ai girlfriend memory",
+      "slug": "ai-girlfriend-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai girlfriend memory",
+        "best ai girlfriend memory"
+      ]
+    },
+    {
+      "keyword": "ai girlfriend that remembers",
+      "slug": "ai-girlfriend-that-remembers",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai girlfriend that remembers",
+        "ai girlfriend that remembers everything"
+      ]
+    },
+    {
+      "keyword": "ai girlfriend that remembers everything",
+      "slug": "ai-girlfriend-that-remembers-everything",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai girlfriend that remembers everything"
+      ]
+    },
+    {
+      "keyword": "ai gpu memory",
+      "slug": "ai-gpu-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai gpu memory"
+      ]
+    },
+    {
+      "keyword": "ai has memory",
+      "slug": "ai-has-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai has memory"
+      ]
+    },
+    {
+      "keyword": "ai human memory",
+      "slug": "ai-human-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai human memory"
+      ]
+    },
+    {
+      "keyword": "ai image generator that remembers",
+      "slug": "ai-image-generator-that-remembers",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai image generator that remembers",
+        "ai image generator that remembers characters"
+      ]
+    },
+    {
+      "keyword": "ai image generator that remembers characters",
+      "slug": "ai-image-generator-that-remembers-characters",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai image generator that remembers characters"
+      ]
+    },
+    {
+      "keyword": "ai in memory",
+      "slug": "ai-in-memory",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai in memory",
+        "ai in memory care",
+        "ai in memory computing"
+      ]
+    },
+    {
+      "keyword": "ai in memory care",
+      "slug": "ai-in-memory-care",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai in memory care"
+      ]
+    },
+    {
+      "keyword": "ai in memory computing",
+      "slug": "ai-in-memory-computing",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai in memory computing"
+      ]
+    },
+    {
+      "keyword": "ai killing ram",
+      "slug": "ai-killing-ram",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai killing ram",
+        "ai killing ram prices"
+      ]
+    },
+    {
+      "keyword": "ai killing ram prices",
+      "slug": "ai-killing-ram-prices",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai killing ram prices"
+      ]
+    },
+    {
+      "keyword": "ai long term memory github",
+      "slug": "ai-long-term-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai long term memory github"
+      ]
+    },
+    {
+      "keyword": "ai meeting summary",
+      "slug": "ai-meeting-summary",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai meeting summary"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai girlfriend long term memory",
-    "ai girlfriend memory",
-    "ai girlfriend that remembers",
-    "ai girlfriend that remembers everything",
-    "ai gpu memory",
-    "ai has memory",
-    "ai human memory",
-    "ai image generator that remembers",
-    "ai image generator that remembers characters",
-    "ai in memory",
-    "ai in memory care",
-    "ai in memory computing",
-    "ai killing ram",
-    "ai killing ram prices",
-    "ai long term memory github",
-    "ai meeting summary",
     "ai memorial generator",
     "ai memory agent",
     "ai memory aid",
@@ -1365,7 +1499,6 @@
     "best ai companion memory",
     "best ai conversation app",
     "best ai for long term memory",
-    "best ai girlfriend memory",
     "best ai girlfriend with best memory",
     "best ai girlfriend with good memory",
     "best ai girlfriend with long memory",
@@ -2042,9 +2175,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 83,
-    "validated": 76,
+    "total_keywords": 99,
+    "validated": 92,
     "low_volume": 7,
-    "new_opportunities_found": 861
+    "new_opportunities_found": 844
   }
 }
