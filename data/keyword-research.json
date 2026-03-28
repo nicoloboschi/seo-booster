@@ -1871,29 +1871,192 @@
       "matching_suggestions": [
         "ai memory honor"
       ]
+    },
+    {
+      "keyword": "ai memory hug",
+      "slug": "ai-memory-hug",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory hug"
+      ]
+    },
+    {
+      "keyword": "ai memory is sold out",
+      "slug": "ai-memory-is-sold-out",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory is sold out"
+      ]
+    },
+    {
+      "keyword": "ai memory issues",
+      "slug": "ai-memory-issues",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory issues"
+      ]
+    },
+    {
+      "keyword": "ai memory journal",
+      "slug": "ai-memory-journal",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory journal"
+      ]
+    },
+    {
+      "keyword": "ai memory keeper",
+      "slug": "ai-memory-keeper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory keeper"
+      ]
+    },
+    {
+      "keyword": "ai memory lane",
+      "slug": "ai-memory-lane",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory lane"
+      ]
+    },
+    {
+      "keyword": "ai memory layer",
+      "slug": "ai-memory-layer",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory layer",
+        "ai memory layer github"
+      ]
+    },
+    {
+      "keyword": "ai memory layer github",
+      "slug": "ai-memory-layer-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory layer github"
+      ]
+    },
+    {
+      "keyword": "ai memory leak",
+      "slug": "ai-memory-leak",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory leak",
+        "ai memory leak detection"
+      ]
+    },
+    {
+      "keyword": "ai memory leak detection",
+      "slug": "ai-memory-leak-detection",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory leak detection"
+      ]
+    },
+    {
+      "keyword": "ai memory library",
+      "slug": "ai-memory-library",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory library"
+      ]
+    },
+    {
+      "keyword": "ai memory llm",
+      "slug": "ai-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory llm"
+      ]
+    },
+    {
+      "keyword": "ai memory long term",
+      "slug": "ai-memory-long-term",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory long term"
+      ]
+    },
+    {
+      "keyword": "ai memory loss",
+      "slug": "ai-memory-loss",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory loss"
+      ]
+    },
+    {
+      "keyword": "ai memory makers",
+      "slug": "ai-memory-makers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory makers"
+      ]
+    },
+    {
+      "keyword": "ai memory management",
+      "slug": "ai-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory management"
+      ]
+    },
+    {
+      "keyword": "ai memory manufacturers",
+      "slug": "ai-memory-manufacturers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory manufacturers"
+      ]
+    },
+    {
+      "keyword": "ai memory market",
+      "slug": "ai-memory-market",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory market",
+        "ai memory market share"
+      ]
+    },
+    {
+      "keyword": "ai memory market share",
+      "slug": "ai-memory-market-share",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory market share"
+      ]
+    },
+    {
+      "keyword": "ai memory matters",
+      "slug": "ai-memory-matters",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory matters"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory hug",
-    "ai memory is sold out",
-    "ai memory issues",
-    "ai memory journal",
-    "ai memory keeper",
-    "ai memory lane",
-    "ai memory layer",
-    "ai memory layer github",
-    "ai memory leak",
-    "ai memory leak detection",
-    "ai memory library",
-    "ai memory llm",
-    "ai memory long term",
-    "ai memory loss",
-    "ai memory makers",
-    "ai memory management",
-    "ai memory manufacturers",
-    "ai memory market",
-    "ai memory market share",
-    "ai memory matters",
     "ai memory mcp",
     "ai memory mcp server",
     "ai memory mem0",
@@ -2654,9 +2817,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 158,
-    "validated": 151,
+    "total_keywords": 178,
+    "validated": 171,
     "low_volume": 7,
-    "new_opportunities_found": 778
+    "new_opportunities_found": 758
   }
 }
