@@ -1687,29 +1687,193 @@
       "matching_suggestions": [
         "ai memory enhancer"
       ]
+    },
+    {
+      "keyword": "ai memory etf",
+      "slug": "ai-memory-etf",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory etf",
+        "best ai memory etf",
+        "best ai memory etf"
+      ]
+    },
+    {
+      "keyword": "ai memory explained",
+      "slug": "ai-memory-explained",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory explained"
+      ]
+    },
+    {
+      "keyword": "ai memory extension",
+      "slug": "ai-memory-extension",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory extension",
+        "character ai memory extension"
+      ]
+    },
+    {
+      "keyword": "ai memory file",
+      "slug": "ai-memory-file",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory file"
+      ]
+    },
+    {
+      "keyword": "ai memory forum",
+      "slug": "ai-memory-forum",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory forum"
+      ]
+    },
+    {
+      "keyword": "ai memory frameworks",
+      "slug": "ai-memory-frameworks",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory frameworks"
+      ]
+    },
+    {
+      "keyword": "ai memory full",
+      "slug": "ai-memory-full",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory full"
+      ]
+    },
+    {
+      "keyword": "ai memory function",
+      "slug": "ai-memory-function",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory function"
+      ]
+    },
+    {
+      "keyword": "ai memory game",
+      "slug": "ai-memory-game",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory game",
+        "ai memory game generator"
+      ]
+    },
+    {
+      "keyword": "ai memory game generator",
+      "slug": "ai-memory-game-generator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory game generator"
+      ]
+    },
+    {
+      "keyword": "ai memory gemini",
+      "slug": "ai-memory-gemini",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory gemini"
+      ]
+    },
+    {
+      "keyword": "ai memory github",
+      "slug": "ai-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory github"
+      ]
+    },
+    {
+      "keyword": "ai memory glasses",
+      "slug": "ai-memory-glasses",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory glasses"
+      ]
+    },
+    {
+      "keyword": "ai memory google",
+      "slug": "ai-memory-google",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory google"
+      ]
+    },
+    {
+      "keyword": "ai memory graph",
+      "slug": "ai-memory-graph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory graph"
+      ]
+    },
+    {
+      "keyword": "ai memory hardware",
+      "slug": "ai-memory-hardware",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory hardware"
+      ]
+    },
+    {
+      "keyword": "ai memory hbm",
+      "slug": "ai-memory-hbm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory hbm"
+      ]
+    },
+    {
+      "keyword": "ai memory helper",
+      "slug": "ai-memory-helper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory helper"
+      ]
+    },
+    {
+      "keyword": "ai memory hierarchy",
+      "slug": "ai-memory-hierarchy",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory hierarchy"
+      ]
+    },
+    {
+      "keyword": "ai memory honor",
+      "slug": "ai-memory-honor",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory honor"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory etf",
-    "ai memory explained",
-    "ai memory extension",
-    "ai memory file",
-    "ai memory forum",
-    "ai memory frameworks",
-    "ai memory full",
-    "ai memory function",
-    "ai memory game",
-    "ai memory game generator",
-    "ai memory gemini",
-    "ai memory github",
-    "ai memory glasses",
-    "ai memory google",
-    "ai memory graph",
-    "ai memory hardware",
-    "ai memory hbm",
-    "ai memory helper",
-    "ai memory hierarchy",
-    "ai memory honor",
     "ai memory hug",
     "ai memory is sold out",
     "ai memory issues",
@@ -1826,7 +1990,6 @@
     "best ai girlfriend with long memory",
     "best ai image generator with memory",
     "best ai in terms of memory",
-    "best ai memory etf",
     "best ai memory reddit",
     "best ai memory stick",
     "best ai memory stocks",
@@ -1872,7 +2035,6 @@
     "can you have good long term memory but bad short term memory",
     "candy ai long term memory",
     "central memory vs effector memory",
-    "character ai memory extension",
     "character ai memory system",
     "character ai that remembers everything",
     "chatbot ai memory",
@@ -2492,9 +2654,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 138,
-    "validated": 131,
+    "total_keywords": 158,
+    "validated": 151,
     "low_volume": 7,
-    "new_opportunities_found": 800
+    "new_opportunities_found": 778
   }
 }
