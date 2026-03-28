@@ -1512,28 +1512,184 @@
       "matching_suggestions": [
         "ai memory chip companies"
       ]
+    },
+    {
+      "keyword": "ai memory chip makers",
+      "slug": "ai-memory-chip-makers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip makers"
+      ]
+    },
+    {
+      "keyword": "ai memory chip shortage",
+      "slug": "ai-memory-chip-shortage",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip shortage"
+      ]
+    },
+    {
+      "keyword": "ai memory chip stocks",
+      "slug": "ai-memory-chip-stocks",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip stocks"
+      ]
+    },
+    {
+      "keyword": "ai memory chips",
+      "slug": "ai-memory-chips",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chips"
+      ]
+    },
+    {
+      "keyword": "ai memory cleaner",
+      "slug": "ai-memory-cleaner",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory cleaner"
+      ]
+    },
+    {
+      "keyword": "ai memory companies",
+      "slug": "ai-memory-companies",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory companies",
+        "best ai memory companies",
+        "best ai memory companies"
+      ]
+    },
+    {
+      "keyword": "ai memory cover",
+      "slug": "ai-memory-cover",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory cover"
+      ]
+    },
+    {
+      "keyword": "ai memory crisis",
+      "slug": "ai-memory-crisis",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory crisis"
+      ]
+    },
+    {
+      "keyword": "ai memory database",
+      "slug": "ai-memory-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory database"
+      ]
+    },
+    {
+      "keyword": "ai memory demand",
+      "slug": "ai-memory-demand",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory demand"
+      ]
+    },
+    {
+      "keyword": "ai memory design",
+      "slug": "ai-memory-design",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory design"
+      ]
+    },
+    {
+      "keyword": "ai memory developer",
+      "slug": "ai-memory-developer",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory developer",
+        "ai memory developer job"
+      ]
+    },
+    {
+      "keyword": "ai memory developer job",
+      "slug": "ai-memory-developer-job",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory developer job"
+      ]
+    },
+    {
+      "keyword": "ai memory device",
+      "slug": "ai-memory-device",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory device"
+      ]
+    },
+    {
+      "keyword": "ai memory drive",
+      "slug": "ai-memory-drive",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory drive"
+      ]
+    },
+    {
+      "keyword": "ai memory dump",
+      "slug": "ai-memory-dump",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory dump",
+        "ai memory dump analyzer"
+      ]
+    },
+    {
+      "keyword": "ai memory dump analyzer",
+      "slug": "ai-memory-dump-analyzer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory dump analyzer"
+      ]
+    },
+    {
+      "keyword": "ai memory engine",
+      "slug": "ai-memory-engine",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory engine"
+      ]
+    },
+    {
+      "keyword": "ai memory enhancer",
+      "slug": "ai-memory-enhancer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory enhancer"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory chip makers",
-    "ai memory chip shortage",
-    "ai memory chip stocks",
-    "ai memory chips",
-    "ai memory cleaner",
-    "ai memory companies",
-    "ai memory cover",
-    "ai memory crisis",
-    "ai memory database",
-    "ai memory demand",
-    "ai memory design",
-    "ai memory developer",
-    "ai memory developer job",
-    "ai memory device",
-    "ai memory drive",
-    "ai memory dump",
-    "ai memory dump analyzer",
-    "ai memory engine",
-    "ai memory enhancer",
     "ai memory etf",
     "ai memory explained",
     "ai memory extension",
@@ -1670,7 +1826,6 @@
     "best ai girlfriend with long memory",
     "best ai image generator with memory",
     "best ai in terms of memory",
-    "best ai memory companies",
     "best ai memory etf",
     "best ai memory reddit",
     "best ai memory stick",
@@ -2337,9 +2492,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 119,
-    "validated": 112,
+    "total_keywords": 138,
+    "validated": 131,
     "low_volume": 7,
-    "new_opportunities_found": 820
+    "new_opportunities_found": 800
   }
 }
