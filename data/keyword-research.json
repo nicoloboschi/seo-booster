@@ -2424,28 +2424,189 @@
         "ai ram ji photo 4k",
         "ai ram ji photo hd 4k"
       ]
+    },
+    {
+      "keyword": "ai ram ki photo",
+      "slug": "ai-ram-ki-photo",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram ki photo"
+      ]
+    },
+    {
+      "keyword": "ai ram kya hai",
+      "slug": "ai-ram-kya-hai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram kya hai"
+      ]
+    },
+    {
+      "keyword": "ai ram or vram",
+      "slug": "ai-ram-or-vram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram or vram"
+      ]
+    },
+    {
+      "keyword": "ai ram overclock",
+      "slug": "ai-ram-overclock",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram overclock"
+      ]
+    },
+    {
+      "keyword": "ai ram owner",
+      "slug": "ai-ram-owner",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram owner"
+      ]
+    },
+    {
+      "keyword": "ai remember app",
+      "slug": "ai-remember-app",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai remember app"
+      ]
+    },
+    {
+      "keyword": "ai remember me",
+      "slug": "ai-remember-me",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai remember me"
+      ]
+    },
+    {
+      "keyword": "ai systems examples",
+      "slug": "ai-systems-examples",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai systems examples"
+      ]
+    },
+    {
+      "keyword": "ai that actually remembers",
+      "slug": "ai-that-actually-remembers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that actually remembers"
+      ]
+    },
+    {
+      "keyword": "ai that can remember",
+      "slug": "ai-that-can-remember",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that can remember"
+      ]
+    },
+    {
+      "keyword": "ai that keeps memory",
+      "slug": "ai-that-keeps-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that keeps memory"
+      ]
+    },
+    {
+      "keyword": "ai that remembers everything",
+      "slug": "ai-that-remembers-everything",
+      "autocomplete_matches": 6,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers everything",
+        "ai that remembers everything reddit",
+        "an ai that remembers everything",
+        "best ai that remembers everything",
+        "character ai that remembers everything"
+      ]
+    },
+    {
+      "keyword": "ai that remembers everything reddit",
+      "slug": "ai-that-remembers-everything-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers everything reddit"
+      ]
+    },
+    {
+      "keyword": "ai that remembers past conversations",
+      "slug": "ai-that-remembers-past-conversations",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers past conversations",
+        "ai that remembers past conversations reddit"
+      ]
+    },
+    {
+      "keyword": "ai that remembers past conversations reddit",
+      "slug": "ai-that-remembers-past-conversations-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers past conversations reddit"
+      ]
+    },
+    {
+      "keyword": "ai that remembers you",
+      "slug": "ai-that-remembers-you",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers you"
+      ]
+    },
+    {
+      "keyword": "ai with memory feature",
+      "slug": "ai-with-memory-feature",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai with memory feature"
+      ]
+    },
+    {
+      "keyword": "an ai that remembers",
+      "slug": "an-ai-that-remembers",
+      "autocomplete_matches": 4,
+      "validated": true,
+      "matching_suggestions": [
+        "an ai that remembers",
+        "an ai that remembers everything",
+        "is there an ai that remembers conversations",
+        "is there an ai that remembers everything"
+      ]
+    },
+    {
+      "keyword": "an ai that remembers everything",
+      "slug": "an-ai-that-remembers-everything",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "an ai that remembers everything",
+        "is there an ai that remembers everything"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai ram ki photo",
-    "ai ram kya hai",
-    "ai ram or vram",
-    "ai ram overclock",
-    "ai ram owner",
-    "ai remember app",
-    "ai remember me",
-    "ai systems examples",
-    "ai that actually remembers",
-    "ai that can remember",
-    "ai that keeps memory",
-    "ai that remembers everything",
-    "ai that remembers everything reddit",
-    "ai that remembers past conversations",
-    "ai that remembers past conversations reddit",
-    "ai that remembers you",
-    "ai with memory feature",
-    "an ai that remembers",
-    "an ai that remembers everything",
     "anything llm context window",
     "average llm context window",
     "azure ai agent service memory",
@@ -2482,7 +2643,6 @@
     "best ai roleplay with best memory",
     "best ai roleplay with good memory",
     "best ai that remembers",
-    "best ai that remembers everything",
     "best ai with best memory",
     "best ai with good memory",
     "best ai with long memory",
@@ -2520,7 +2680,6 @@
     "candy ai long term memory",
     "central memory vs effector memory",
     "character ai memory system",
-    "character ai that remembers everything",
     "chatbot ai memory",
     "chatbot conversational memory",
     "chatbot for customer support",
@@ -2709,7 +2868,6 @@
     "is memory cloth real",
     "is there a limit to long term memory",
     "is there an ai i can talk to",
-    "is there an ai that remembers everything",
     "is zep memory free",
     "is zep memory open source",
     "jan ai long term memory",
@@ -3138,9 +3296,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 218,
-    "validated": 211,
+    "total_keywords": 237,
+    "validated": 230,
     "low_volume": 7,
-    "new_opportunities_found": 709
+    "new_opportunities_found": 687
   }
 }
