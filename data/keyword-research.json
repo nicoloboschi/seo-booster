@@ -2054,29 +2054,190 @@
       "matching_suggestions": [
         "ai memory matters"
       ]
+    },
+    {
+      "keyword": "ai memory mcp",
+      "slug": "ai-memory-mcp",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory mcp",
+        "ai memory mcp server"
+      ]
+    },
+    {
+      "keyword": "ai memory mcp server",
+      "slug": "ai-memory-mcp-server",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory mcp server"
+      ]
+    },
+    {
+      "keyword": "ai memory mem0",
+      "slug": "ai-memory-mem0",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory mem0"
+      ]
+    },
+    {
+      "keyword": "ai memory meme",
+      "slug": "ai-memory-meme",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory meme"
+      ]
+    },
+    {
+      "keyword": "ai memory n8n",
+      "slug": "ai-memory-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory n8n"
+      ]
+    },
+    {
+      "keyword": "ai memory name",
+      "slug": "ai-memory-name",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory name"
+      ]
+    },
+    {
+      "keyword": "ai memory necklace",
+      "slug": "ai-memory-necklace",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory necklace"
+      ]
+    },
+    {
+      "keyword": "ai memory needs",
+      "slug": "ai-memory-needs",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory needs"
+      ]
+    },
+    {
+      "keyword": "ai memory news",
+      "slug": "ai-memory-news",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory news"
+      ]
+    },
+    {
+      "keyword": "ai memory notes",
+      "slug": "ai-memory-notes",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory notes"
+      ]
+    },
+    {
+      "keyword": "ai memory open source",
+      "slug": "ai-memory-open-source",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory open source"
+      ]
+    },
+    {
+      "keyword": "ai memory openai",
+      "slug": "ai-memory-openai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory openai"
+      ]
+    },
+    {
+      "keyword": "ai memory optimization",
+      "slug": "ai-memory-optimization",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory optimization"
+      ]
+    },
+    {
+      "keyword": "ai memory overclock",
+      "slug": "ai-memory-overclock",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory overclock"
+      ]
+    },
+    {
+      "keyword": "ai memory paper",
+      "slug": "ai-memory-paper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory paper"
+      ]
+    },
+    {
+      "keyword": "ai memory pendant",
+      "slug": "ai-memory-pendant",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory pendant"
+      ]
+    },
+    {
+      "keyword": "ai memory penny stocks",
+      "slug": "ai-memory-penny-stocks",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory penny stocks"
+      ]
+    },
+    {
+      "keyword": "ai memory perfume korea",
+      "slug": "ai-memory-perfume-korea",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory perfume korea"
+      ]
+    },
+    {
+      "keyword": "ai memory photo",
+      "slug": "ai-memory-photo",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory photo"
+      ]
+    },
+    {
+      "keyword": "ai memory price spike",
+      "slug": "ai-memory-price-spike",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory price spike"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory mcp",
-    "ai memory mcp server",
-    "ai memory mem0",
-    "ai memory meme",
-    "ai memory n8n",
-    "ai memory name",
-    "ai memory necklace",
-    "ai memory needs",
-    "ai memory news",
-    "ai memory notes",
-    "ai memory open source",
-    "ai memory openai",
-    "ai memory optimization",
-    "ai memory overclock",
-    "ai memory paper",
-    "ai memory pendant",
-    "ai memory penny stocks",
-    "ai memory perfume korea",
-    "ai memory photo",
-    "ai memory price spike",
     "ai memory prices",
     "ai memory problem",
     "ai memory providers",
@@ -2817,9 +2978,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 178,
-    "validated": 171,
+    "total_keywords": 198,
+    "validated": 191,
     "low_volume": 7,
-    "new_opportunities_found": 758
+    "new_opportunities_found": 738
   }
 }
