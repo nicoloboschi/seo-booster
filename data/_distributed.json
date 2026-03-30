@@ -71,5 +71,86 @@
         "posted_at": "2026-03-27T09:07:12"
       }
     }
+  },
+  "ai-agent-and-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca2088e7cde8bfaed39039",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-and-memory-the-foundation-of-intelligent-recall",
+        "posted_at": "2026-03-30T09:04:40"
+      }
+    }
+  },
+  "ai-agent-chat-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca208caba5167df692346c",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-chat-memory-enabling-persistent-conversations-with-recall",
+        "posted_at": "2026-03-30T09:04:44"
+      }
+    }
+  },
+  "ai-agent-chatbot-long-term-memory-note-storage-telegram": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca209054af5c1b27b45701",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-chatbot-long-term-memory-note-storage-for-telegram",
+        "posted_at": "2026-03-30T09:04:48"
+      }
+    }
+  },
+  "ai-agent-episodic-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca2094aba5167df692346e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-episodic-memory-recalling-and-learning-from-experience",
+        "posted_at": "2026-03-30T09:04:52"
+      }
+    }
+  },
+  "ai-agent-framework-comparison": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca20989473cbc7b89cccae",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-framework-comparison-choosing-the-right-architecture-for-your-needs",
+        "posted_at": "2026-03-30T09:04:56"
+      }
+    }
+  },
+  "ai-agent-long-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca209bb3fe6eabb8921dbc",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-long-memory-architectures-and-techniques-for-persistent-recall",
+        "posted_at": "2026-03-30T09:05:00"
+      }
+    }
+  },
+  "ai-agent-long-term-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca209f54af5c1b27b45703",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-long-term-memory-architectures-storage-and-retrieval",
+        "posted_at": "2026-03-30T09:05:03"
+      }
+    }
+  },
+  "ai-agent-memory-explained": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca20a3aa552db3e55976a8",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-memory-explained-architectures-and-mechanisms-for-persistent-context",
+        "posted_at": "2026-03-30T09:05:07"
+      }
+    }
+  },
+  "ai-agent-persistent-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ca20a7aa552db3e55976ac",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-persistent-memory-enabling-stateful-agents",
+        "posted_at": "2026-03-30T09:05:11"
+      }
+    }
   }
 }
