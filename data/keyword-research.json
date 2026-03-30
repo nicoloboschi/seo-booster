@@ -911,7 +911,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 35,
+      "autocomplete_matches": 34,
       "validated": true,
       "matching_suggestions": [
         "best ai chat memory",
@@ -2971,28 +2971,186 @@
       "matching_suggestions": [
         "best ai with long term memory"
       ]
+    },
+    {
+      "keyword": "best ai with persistent memory",
+      "slug": "best-ai-with-persistent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai with persistent memory"
+      ]
+    },
+    {
+      "keyword": "best character ai memory",
+      "slug": "best-character-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best character ai memory"
+      ]
+    },
+    {
+      "keyword": "best chatbot for memory",
+      "slug": "best-chatbot-for-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best chatbot for memory"
+      ]
+    },
+    {
+      "keyword": "best chatbot memory",
+      "slug": "best-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best chatbot memory"
+      ]
+    },
+    {
+      "keyword": "best context window llm",
+      "slug": "best-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best context window llm"
+      ]
+    },
+    {
+      "keyword": "best database for ai memory",
+      "slug": "best-database-for-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best database for ai memory"
+      ]
+    },
+    {
+      "keyword": "best free ai with long term memory",
+      "slug": "best-free-ai-with-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best free ai with long term memory"
+      ]
+    },
+    {
+      "keyword": "best in memory vector database",
+      "slug": "best-in-memory-vector-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best in memory vector database"
+      ]
+    },
+    {
+      "keyword": "best llm memory",
+      "slug": "best-llm-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best llm memory",
+        "best llm memory system"
+      ]
+    },
+    {
+      "keyword": "best llm with large context window",
+      "slug": "best-llm-with-large-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best llm with large context window"
+      ]
+    },
+    {
+      "keyword": "best local llm with memory",
+      "slug": "best-local-llm-with-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best local llm with memory"
+      ]
+    },
+    {
+      "keyword": "best long context window llm",
+      "slug": "best-long-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best long context window llm"
+      ]
+    },
+    {
+      "keyword": "best long term memory ai",
+      "slug": "best-long-term-memory-ai",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "best long term memory ai chatbot",
+        "best long term memory ai",
+        "best long term memory ai chatbot"
+      ]
+    },
+    {
+      "keyword": "best low memory llm",
+      "slug": "best-low-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best low memory llm"
+      ]
+    },
+    {
+      "keyword": "best memory ai bot",
+      "slug": "best-memory-ai-bot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory ai bot"
+      ]
+    },
+    {
+      "keyword": "best memory ai chatbot",
+      "slug": "best-memory-ai-chatbot",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory ai chatbot",
+        "best memory ai chatbot",
+        "best memory ai chatbot reddit"
+      ]
+    },
+    {
+      "keyword": "best memory ai chatbot reddit",
+      "slug": "best-memory-ai-chatbot-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory ai chatbot reddit"
+      ]
+    },
+    {
+      "keyword": "best memory for ai agent n8n",
+      "slug": "best-memory-for-ai-agent-n8n",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory for ai agent n8n",
+        "best memory for ai agent n8n"
+      ]
+    },
+    {
+      "keyword": "best memory for ai agents",
+      "slug": "best-memory-for-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory for ai agents"
+      ]
     }
   ],
   "new_opportunities": [
-    "best ai with persistent memory",
-    "best character ai memory",
-    "best chatbot for memory",
-    "best chatbot memory",
-    "best context window llm",
-    "best database for ai memory",
-    "best free ai with long term memory",
-    "best in memory vector database",
-    "best llm memory",
-    "best llm with large context window",
-    "best local llm with memory",
-    "best long context window llm",
-    "best long term memory ai",
-    "best low memory llm",
-    "best memory ai bot",
-    "best memory ai chatbot",
-    "best memory ai chatbot reddit",
-    "best memory for ai agent n8n",
-    "best memory for ai agents",
     "big context window llm",
     "biggest context window llm",
     "biggest context window llm free",
@@ -3094,7 +3252,6 @@
     "flipped ai chat long term memory",
     "flipped ai long term memory",
     "free ai that remembers",
-    "free ai with long term memory",
     "gemini ai long term memory",
     "gemini chatbot memory",
     "giving a long term memory",
@@ -3423,8 +3580,6 @@
     "memory cache llm",
     "memory card vs ram",
     "memory chatbot langflow",
-    "memory for ai agent",
-    "memory for ai agent n8n",
     "memory for chatbot",
     "memory in ai agent n8n",
     "memory in chatbot",
@@ -3620,9 +3775,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 277,
-    "validated": 270,
+    "total_keywords": 296,
+    "validated": 289,
     "low_volume": 7,
-    "new_opportunities_found": 644
+    "new_opportunities_found": 622
   }
 }
