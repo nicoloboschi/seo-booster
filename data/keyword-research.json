@@ -2604,29 +2604,191 @@
         "an ai that remembers everything",
         "is there an ai that remembers everything"
       ]
+    },
+    {
+      "keyword": "anything llm context window",
+      "slug": "anything-llm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "anything llm context window"
+      ]
+    },
+    {
+      "keyword": "average llm context window",
+      "slug": "average-llm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "average llm context window"
+      ]
+    },
+    {
+      "keyword": "azure ai agent service memory",
+      "slug": "azure-ai-agent-service-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "azure ai agent service memory"
+      ]
+    },
+    {
+      "keyword": "azure ai foundry long term memory",
+      "slug": "azure-ai-foundry-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "azure ai foundry long term memory"
+      ]
+    },
+    {
+      "keyword": "backyard ai long term memory",
+      "slug": "backyard-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "backyard ai long term memory"
+      ]
+    },
+    {
+      "keyword": "best agent memory framework",
+      "slug": "best-agent-memory-framework",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best agent memory framework"
+      ]
+    },
+    {
+      "keyword": "best ai app for memory",
+      "slug": "best-ai-app-for-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai app for memory"
+      ]
+    },
+    {
+      "keyword": "best ai app with best memory",
+      "slug": "best-ai-app-with-best-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai app with best memory"
+      ]
+    },
+    {
+      "keyword": "best ai app with good memory",
+      "slug": "best-ai-app-with-good-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai app with good memory"
+      ]
+    },
+    {
+      "keyword": "best ai app with long memory",
+      "slug": "best-ai-app-with-long-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai app with long memory"
+      ]
+    },
+    {
+      "keyword": "best ai assistant with memory",
+      "slug": "best-ai-assistant-with-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai assistant with memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat app with memory",
+      "slug": "best-ai-chat-app-with-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat app with memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat for memory",
+      "slug": "best-ai-chat-for-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat for memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat with best memory",
+      "slug": "best-ai-chat-with-best-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat with best memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat with good memory",
+      "slug": "best-ai-chat-with-good-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat with good memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat with long memory",
+      "slug": "best-ai-chat-with-long-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat with long memory"
+      ]
+    },
+    {
+      "keyword": "best ai chat with long term memory",
+      "slug": "best-ai-chat-with-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat with long term memory"
+      ]
+    },
+    {
+      "keyword": "best ai chatbot for memory",
+      "slug": "best-ai-chatbot-for-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chatbot for memory",
+        "best ai chatbot for memory"
+      ]
+    },
+    {
+      "keyword": "best ai chatbot with good memory",
+      "slug": "best-ai-chatbot-with-good-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chatbot with good memory",
+        "best ai chatbot with good memory reddit"
+      ]
+    },
+    {
+      "keyword": "best ai chatbot with good memory reddit",
+      "slug": "best-ai-chatbot-with-good-memory-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chatbot with good memory reddit"
+      ]
     }
   ],
   "new_opportunities": [
-    "anything llm context window",
-    "average llm context window",
-    "azure ai agent service memory",
-    "azure ai foundry long term memory",
-    "backyard ai long term memory",
-    "best agent memory framework",
-    "best ai app for memory",
-    "best ai app with best memory",
-    "best ai app with good memory",
-    "best ai app with long memory",
-    "best ai assistant with memory",
-    "best ai chat app with memory",
-    "best ai chat for memory",
-    "best ai chat with best memory",
-    "best ai chat with good memory",
-    "best ai chat with long memory",
-    "best ai chat with long term memory",
-    "best ai chatbot for memory",
-    "best ai chatbot with good memory",
-    "best ai chatbot with good memory reddit",
     "best ai chatbot with long memory",
     "best ai companion memory",
     "best ai conversation app",
@@ -2692,8 +2854,6 @@
     "chatbot memory management",
     "chatbot memory reddit",
     "chatbot with best memory reddit",
-    "chatbot with good memory",
-    "chatbot with good memory reddit",
     "chatbot with long memory",
     "chatbot with longest memory",
     "chatbot with memory langgraph",
@@ -3296,9 +3456,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 237,
-    "validated": 230,
+    "total_keywords": 257,
+    "validated": 250,
     "low_volume": 7,
-    "new_opportunities_found": 687
+    "new_opportunities_found": 665
   }
 }
