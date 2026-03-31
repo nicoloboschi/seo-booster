@@ -911,7 +911,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 34,
+      "autocomplete_matches": 35,
       "validated": true,
       "matching_suggestions": [
         "best ai chat memory",
@@ -3148,29 +3148,190 @@
       "matching_suggestions": [
         "best memory for ai agents"
       ]
+    },
+    {
+      "keyword": "big context window llm",
+      "slug": "big-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "big context window llm"
+      ]
+    },
+    {
+      "keyword": "biggest context window llm",
+      "slug": "biggest-context-window-llm",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "biggest context window llm",
+        "biggest context window llm free"
+      ]
+    },
+    {
+      "keyword": "biggest context window llm free",
+      "slug": "biggest-context-window-llm-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "biggest context window llm free"
+      ]
+    },
+    {
+      "keyword": "biggest context window local llm",
+      "slug": "biggest-context-window-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "biggest context window local llm"
+      ]
+    },
+    {
+      "keyword": "bot in memory meadow",
+      "slug": "bot-in-memory-meadow",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "bot in memory meadow"
+      ]
+    },
+    {
+      "keyword": "bot memory janitor ai",
+      "slug": "bot-memory-janitor-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "bot memory janitor ai"
+      ]
+    },
+    {
+      "keyword": "bot memory meadow",
+      "slug": "bot-memory-meadow",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "bot memory meadow"
+      ]
+    },
+    {
+      "keyword": "building an ai agent with memory and adaptability",
+      "slug": "building-an-ai-agent-with-memory-and-adaptability",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "building an ai agent with memory and adaptability"
+      ]
+    },
+    {
+      "keyword": "building long term memory in agentic ai",
+      "slug": "building-long-term-memory-in-agentic-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "building long term memory in agentic ai"
+      ]
+    },
+    {
+      "keyword": "building smarter ai agents agentcore long term memory deep dive",
+      "slug": "building-smarter-ai-agents-agentcore-long-term-memory-deep-dive",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "building smarter ai agents agentcore long term memory deep dive"
+      ]
+    },
+    {
+      "keyword": "can you have good long term memory but bad short term memory",
+      "slug": "can-you-have-good-long-term-memory-but-bad-short-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "can you have good long term memory but bad short term memory"
+      ]
+    },
+    {
+      "keyword": "candy ai long term memory",
+      "slug": "candy-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "candy ai long term memory"
+      ]
+    },
+    {
+      "keyword": "central memory vs effector memory",
+      "slug": "central-memory-vs-effector-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "central memory vs effector memory"
+      ]
+    },
+    {
+      "keyword": "character ai memory system",
+      "slug": "character-ai-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "character ai memory system"
+      ]
+    },
+    {
+      "keyword": "chatbot ai memory",
+      "slug": "chatbot-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot ai memory"
+      ]
+    },
+    {
+      "keyword": "chatbot conversational memory",
+      "slug": "chatbot-conversational-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot conversational memory"
+      ]
+    },
+    {
+      "keyword": "chatbot for customer support",
+      "slug": "chatbot-for-customer-support",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot for customer support"
+      ]
+    },
+    {
+      "keyword": "chatbot improve memory",
+      "slug": "chatbot-improve-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot improve memory"
+      ]
+    },
+    {
+      "keyword": "chatbot is an example of",
+      "slug": "chatbot-is-an-example-of",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot is an example of"
+      ]
+    },
+    {
+      "keyword": "chatbot memory architecture",
+      "slug": "chatbot-memory-architecture",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot memory architecture"
+      ]
     }
   ],
   "new_opportunities": [
-    "big context window llm",
-    "biggest context window llm",
-    "biggest context window llm free",
-    "biggest context window local llm",
-    "bot in memory meadow",
-    "bot memory janitor ai",
-    "bot memory meadow",
-    "building an ai agent with memory and adaptability",
-    "building long term memory in agentic ai",
-    "building smarter ai agents agentcore long term memory deep dive",
-    "can you have good long term memory but bad short term memory",
-    "candy ai long term memory",
-    "central memory vs effector memory",
-    "character ai memory system",
-    "chatbot ai memory",
-    "chatbot conversational memory",
-    "chatbot for customer support",
-    "chatbot improve memory",
-    "chatbot is an example of",
-    "chatbot memory architecture",
     "chatbot memory github",
     "chatbot memory langchain",
     "chatbot memory loss",
@@ -3775,9 +3936,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 296,
-    "validated": 289,
+    "total_keywords": 316,
+    "validated": 309,
     "low_volume": 7,
-    "new_opportunities_found": 622
+    "new_opportunities_found": 602
   }
 }
