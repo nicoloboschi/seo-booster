@@ -1967,5 +1967,29 @@
     "generated_at": "2026-03-31T07:10:34.431623",
     "sources": [],
     "quality_score": 65
+  },
+  "chatbots-to-talk-to": {
+    "keyword": "chatbots to talk to",
+    "generated_at": "2026-03-31T09:12:11.676948",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chronic-memory-issues": {
+    "keyword": "chronic memory issues",
+    "generated_at": "2026-03-31T09:12:58.757735",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chub-ai-long-term-memory": {
+    "keyword": "chub ai long term memory",
+    "generated_at": "2026-03-31T09:13:46.402584",
+    "sources": [],
+    "quality_score": 65
+  },
+  "claude-chatbot-memory-feature": {
+    "keyword": "claude chatbot memory feature",
+    "generated_at": "2026-03-31T09:15:07.840314",
+    "sources": [],
+    "quality_score": 65
   }
 }
