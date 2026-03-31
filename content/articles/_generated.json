@@ -1877,5 +1877,35 @@
     "generated_at": "2026-03-31T00:53:36.390630",
     "sources": [],
     "quality_score": 65
+  },
+  "chatbot-conversational-memory": {
+    "keyword": "chatbot conversational memory",
+    "generated_at": "2026-03-31T02:55:24.971948",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chatbot-for-customer-support": {
+    "keyword": "chatbot for customer support",
+    "generated_at": "2026-03-31T02:56:16.832405",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chatbot-improve-memory": {
+    "keyword": "chatbot improve memory",
+    "generated_at": "2026-03-31T02:56:45.922412",
+    "sources": [],
+    "quality_score": 75
+  },
+  "chatbot-is-an-example-of": {
+    "keyword": "chatbot is an example of",
+    "generated_at": "2026-03-31T02:57:32.725896",
+    "sources": [],
+    "quality_score": 60
+  },
+  "chatbot-memory-architecture": {
+    "keyword": "chatbot memory architecture",
+    "generated_at": "2026-03-31T02:58:03.385245",
+    "sources": [],
+    "quality_score": 75
   }
 }
