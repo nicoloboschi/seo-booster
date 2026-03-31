@@ -213,12 +213,21 @@ def run_daemon():
                     print(f"  SERP check failed: {e}")
                 scheduler.mark_done("serp")
 
-            # 7. Deploy
+            # 7. Deploy + distribute
             if changed or scheduler.is_due("deploy", DEPLOY_INTERVAL_MINUTES):
                 ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print(f"\n[{ts}] Deploying...")
                 if git_deploy():
                     scheduler.mark_done("deploy")
+
+                # Cross-post new articles to Dev.to / Hashnode
+                if changed:
+                    try:
+                        from scripts.distribute import distribute_articles
+                        print(f"\n[{ts}] Distributing new articles...")
+                        distribute_articles("content/articles", max_articles=5)
+                    except Exception as e:
+                        print(f"  Distribution failed: {e}")
 
             # Sleep until next task
             _sleep_until_next(scheduler)

@@ -5,46 +5,76 @@
 ### On-Page SEO Rules
 1. **Primary keyword in first 100 words** — Google weighs early mentions heavily
 2. **Primary keyword in first H2** — the first subheading must contain the target keyword
-3. **"What is X" direct answer** — first paragraph directly answers the search query, targeting featured snippets (position 0)
-4. **Unique intro** — no generic "In this article we'll explore..." openings. Start with a direct statement, stat, or insight
-5. **Short paragraphs** — max 3-4 sentences per paragraph. Walls of text hurt readability metrics
+3. **"What is X" direct answer** — first paragraph is 40-60 words, directly answers the search query, targeting featured snippets (position 0) and AI Overviews
+4. **Unique intro with hook** — no generic openings. Start with: provocative question, surprising stat with source, bold/counterintuitive statement, or concrete scenario. BANNED: "In this article", "In today's digital age/landscape", "Let's explore/dive into"
+5. **Short paragraphs** — max 2-4 sentences per paragraph. Walls of text hurt readability metrics
 6. **Bold key phrases** — bold important terms and definitions. Google may use bolded text for featured snippets
-7. **Heading hierarchy** — strict H1 → H2 → H3, never skip levels. Include keywords naturally in H2/H3
-8. **1500-2500 words** — long enough to be authoritative, short enough to be focused
+7. **Heading hierarchy** — strict H1 → H2 → H3, never skip levels. Include keywords naturally in H2/H3. 4-7 H2 sections with H3 subsections. Subheading every 300-400 words
+8. **1500-2500 words** — long enough to be authoritative, short enough to be focused. Pillar articles: 3000-4000 words
+9. **Keyword density 1-2%** — primary keyword appears naturally ~20-40 times in 2000 words. Use variations, not just exact match
+10. **Sentence rhythm variety** — mix short sentences (5-8 words) with longer ones (15-20 words). Monotonous length is an AI tell
+
+### AI Content Quality Rules (anti-detection)
+11. **Banned AI-tell words** — NEVER use: "delve", "leverage", "robust", "comprehensive", "cutting-edge", "game-changer", "revolutionize", "paradigm", "synergy", "utilize", "furthermore", "moreover", "additionally", "notably", "importantly", "it's important to note", "in the realm of", "at the forefront", "a plethora of", "tapestry"
+12. **No em-dashes** — NEVER use — (em-dash). Use commas, semicolons, or periods instead. Em-dashes are the #1 AI writing tell
+13. **No filler words** — cut "absolutely", "essentially", "incredibly", "fundamentally", "undeniably", "literally", "basically"
+14. **Use contractions** — write "it's", "don't", "won't", "can't" for natural voice
+15. **Active voice 80%+** — avoid passive constructions
+16. **Specific over vague** — replace "significant improvement" with "34% improvement". Include 2-3 specific statistics with source attribution
+
+### Answer Engine Optimization (AEO/GEO)
+17. **Definition blocks** — after "What is X?" H2, write a self-contained 40-60 word definition that AI systems can extract directly
+18. **Statistics with attribution** — include 2-3 stats with sources (e.g., "According to a 2024 arxiv study..."). Increases AI citation rates 15-30%
+19. **List snippets** — for "how to" content, use numbered lists of 5-8 concise items
+20. **Comparison tables** — when comparing tools/approaches, use markdown tables (targets table featured snippets)
+21. **Self-contained sections** — each H2 section independently readable and extractable by AI
+
+### Topic Cluster Architecture
+22. **Pillar + supporting model** — each topic cluster has 1 pillar page (broad head term, 3000-4000 words) and 8-12 supporting articles (specific subtopics, 1500-2500 words)
+23. **Bidirectional linking** — pillar links to all supporting articles; each supporting article links back to pillar
+24. **Cross-linking siblings** — supporting articles in the same cluster link to each other where relevant
+25. **Cluster assignment** — every keyword tagged with `cluster` and `role` (pillar/supporting) in `keywords.yaml`. Run `seo-booster clusters` to assign
 
 ### Linking Rules (critical for ranking)
-9. **3-5 internal links per article** — link to other articles on the site within body text using descriptive anchor text like `[episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/)`. NEVER "click here" or "read more"
-10. **2-3 external links per article** — link to authoritative sources (Wikipedia, arxiv papers, official docs, GitHub repos). Signals trust to Google
-11. **Vectorize.io links** — where relevant, link to `https://vectorize.io/articles/slug` comparison guides
-12. **Hindsight link** — when mentioning Hindsight, link to `https://github.com/vectorize-io/hindsight`
-13. **Anchor text must be descriptive** — use keyword-rich text that describes the destination page
+26. **3-5 internal links per article** — link to other articles on the site within body text using descriptive anchor text like `[episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/)`. NEVER "click here" or "read more"
+27. **2-3 external links per article** — link to authoritative sources (Wikipedia, arxiv papers, official docs, GitHub repos). Signals trust to Google
+28. **Vectorize.io links** — where relevant, link to `https://vectorize.io/articles/slug` comparison guides
+29. **Hindsight link** — when mentioning Hindsight, link to `https://github.com/vectorize-io/hindsight`
+30. **Anchor text must be descriptive** — use keyword-rich text that describes the destination page
 
 ### Technical SEO (handled by templates)
-14. **Title tag under 60 chars** — truncated by Hugo template automatically
-15. **Meta description 150-160 chars** — post-processor fixes if too short
-16. **Single H1 per page** — template renders H1 from title, body starts at H2
-17. **Canonical URL** — auto-set by Hugo
-18. **Open Graph + Twitter Card tags** — auto-set by Hugo template
-19. **JSON-LD Article + FAQ schema** — FAQ section in front matter becomes structured data
-20. **Breadcrumb schema markup** — on every article page
-21. **Sitemap + robots.txt** — auto-generated by Hugo
-22. **Favicon** — SVG, linked in head
-23. **Google Analytics** — GA4 tag loaded when ID is set
-24. **Google Search Console verification** — meta tags in head
+31. **Title tag under 60 chars** — truncated by Hugo template automatically
+32. **Meta description 150-160 chars** — post-processor fixes if too short
+33. **Single H1 per page** — template renders H1 from title, body starts at H2
+34. **Canonical URL** — auto-set by Hugo
+35. **Open Graph + Twitter Card tags** — auto-set by Hugo template
+36. **JSON-LD Article + FAQ schema** — FAQ section in front matter becomes structured data
+37. **Breadcrumb schema markup** — on every article page
+38. **Sitemap + robots.txt** — auto-generated by Hugo
+39. **Favicon** — SVG, linked in head
+40. **Google Analytics** — GA4 tag loaded when ID is set
+41. **Google Search Console verification** — meta tags in head
 
 ### Content Quality Rules
-25. **1 article per unique keyword** — never create duplicate/overlapping articles (causes cannibalization)
-26. **Neutral technical tone** — not marketing, not tutorial. Clear, deep technical content
-27. **Hindsight mentioned naturally** — as ONE of the tools/approaches, never the focus
-28. **Code examples in Python** — where relevant to the topic
-29. **FAQ section (2-3 questions)** — at the end of every article, feeds into FAQ schema
-30. **Last updated date** — use `lastmod` in front matter for content freshness signal
+42. **1 article per unique keyword** — never create duplicate/overlapping articles (causes cannibalization)
+43. **Neutral technical tone** — not marketing, not tutorial. Clear, deep technical content
+44. **Hindsight mentioned naturally** — as ONE of the tools/approaches, never the focus
+45. **Code examples in Python** — where relevant to the topic
+46. **FAQ section (2-3 questions)** — at the end of every article, feeds into FAQ schema
+47. **Last updated date** — use `lastmod` in front matter for content freshness signal
+
+### Quality Gate (LLM review loop)
+48. **23-rule review** — every generated article is reviewed by LLM against all SEO rules before publishing
+49. **Score >= 70 to pass** — articles scoring below 70 are automatically revised
+50. **Up to 3 revision rounds** — each revision targets only the failing rules
+51. **Post-processor scrubbing** — after generation, algorithmic pass removes Unicode watermarks, replaces em-dashes, substitutes AI phrases, removes filler words
+52. **Content quality scoring** — checks humanity (AI phrases, sentence rhythm), specificity (vague quantifiers, stats), structure (prose-to-list ratio, heading frequency), SEO (keyword density), featured snippet formatting
 
 ### Keyword Research Rules
-31. **Validate keywords via Google Autocomplete** — don't guess, use real search data
-32. **Long-tail keywords (3-5 words)** — more specific = less competition = easier to rank
-33. **Memory-related topics only** — strict filter to stay in niche and build topical authority
-34. **1 keyword = 1 article** — go wide (many keywords) not deep (many articles per keyword)
+53. **Validate keywords via Google Autocomplete** — don't guess, use real search data
+54. **Long-tail keywords (3-5 words)** — more specific = less competition = easier to rank
+55. **Memory-related topics only** — strict filter to stay in niche and build topical authority
+56. **1 keyword = 1 article** — go wide (many keywords) not deep (many articles per keyword)
 
 ---
 
@@ -55,7 +85,8 @@ like a neutral technical knowledge hub.
 
 ## Architecture
 - **Hugo** static site with custom SEO templates (JSON-LD, meta tags, sitemap)
-- **Python CLI** (`seo-booster`) for content pipeline: scrape → generate → postprocess → audit → deploy
+- **Python CLI** (`seo-booster`) for content pipeline: scrape → generate → LLM review (3 rounds) → AI scrub → quality score → audit → deploy
+- **Topic clusters** — pillar/supporting article architecture with bidirectional linking
 - **Long-running daemon** (`seo-booster run`) handles everything autonomously via launchd
 - **GitHub Pages** for hosting — daemon pushes built site to `gh-pages` branch
 - **Google Search Console** integration for tracking and feedback loop
@@ -65,13 +96,16 @@ like a neutral technical knowledge hub.
 ## Commands
 - `uv run seo-booster run` — start the daemon (runs 24/7, handles everything)
 - `uv run seo-booster scrape` — scrape content sources
-- `uv run seo-booster generate --count 10` — generate articles
-- `uv run seo-booster validate` — fix front matter issues
+- `uv run seo-booster generate --count 10` — generate articles (with LLM review loop, up to 3 revisions)
+- `uv run seo-booster validate` — fix front matter + AI scrubbing + content quality scoring
 - `uv run seo-booster audit` — full SEO audit (front matter + HTML)
 - `uv run seo-booster stats` — pull Google Search Console data
 - `uv run seo-booster optimize` — AI-optimize underperforming articles
-- `uv run seo-booster research --add-opportunities` — discover new keywords
+- `uv run seo-booster research --add-opportunities` — discover new keywords + auto-assign clusters
+- `uv run seo-booster clusters` — assign/reassign topic clusters to all keywords
 - `uv run seo-booster health` — run health check + send Telegram report
+- `uv run seo-booster distribute` — cross-post articles to Dev.to + Hashnode
+- `uv run seo-booster distribute --status` — check distribution status
 - `hugo server` — local preview
 - `bash scripts/deploy.sh` — manual deploy to gh-pages
 
@@ -94,6 +128,9 @@ like a neutral technical knowledge hub.
 - `GEMINI_API_KEY` — Gemini 2.5 Flash Lite for article generation
 - `TELEGRAM_BOT_TOKEN` — Telegram bot for health reports
 - `TELEGRAM_CHAT_ID` — Telegram chat to send reports to
+- `DEVTO_API_KEY` — Dev.to API key (Settings → Extensions → DEV Community API Keys)
+- `HASHNODE_API_TOKEN` — Hashnode personal access token (Settings → Developer)
+- `HASHNODE_PUBLICATION_ID` — Hashnode publication/blog ID
 - GSC uses Application Default Credentials (gcloud auth)
 
 ## Important

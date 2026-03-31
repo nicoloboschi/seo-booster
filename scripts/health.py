@@ -151,6 +151,30 @@ def run_health_check() -> dict:
         report["stats"]["gsc_pages_reporting"] = len(rows)
         if total_impressions == 0:
             report["issues"].append("GSC shows 0 impressions — Google may not have indexed yet")
+
+        # Fetch top queries with positions (the "winning keywords")
+        try:
+            query_response = service.searchanalytics().query(
+                siteUrl="https://aiagentmemory.org/",
+                body={
+                    "startDate": start.strftime("%Y-%m-%d"),
+                    "endDate": end.strftime("%Y-%m-%d"),
+                    "dimensions": ["query"],
+                    "rowLimit": 10,
+                    "orderBy": [{"fieldName": "impressions", "sortOrder": "DESCENDING"}],
+                },
+            ).execute()
+            top_queries = []
+            for row in query_response.get("rows", []):
+                top_queries.append({
+                    "query": row["keys"][0],
+                    "impressions": row["impressions"],
+                    "clicks": row["clicks"],
+                    "position": round(row["position"], 1),
+                })
+            report["top_queries"] = top_queries
+        except Exception:
+            pass
     except Exception as e:
         report["checks"]["gsc_connected"] = False
         err = str(e)

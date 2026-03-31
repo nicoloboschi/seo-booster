@@ -69,6 +69,22 @@ def format_health_report(report: dict) -> str:
         for p in top_pages[:5]:
             lines.append(f"  • {p['path']} — {p['pageviews']} views")
 
+    # Top ranking queries (the "winning keywords")
+    top_queries = report.get("top_queries", [])
+    if top_queries:
+        lines.append(f"\n🏆 <b>Top ranking queries:</b>")
+        for q in top_queries[:7]:
+            pos = q["position"]
+            # Page indicator
+            if pos <= 10:
+                page_label = f"📍 #{pos:.0f}"
+            elif pos <= 20:
+                page_label = f"p2 #{pos:.0f}"
+            else:
+                page_label = f"p{int((pos - 1) // 10) + 1} #{pos:.0f}"
+            clicks_str = f", {q['clicks']} clicks" if q["clicks"] > 0 else ""
+            lines.append(f"  {page_label} | {q['impressions']} imp{clicks_str} | <i>{q['query']}</i>")
+
     # Checks
     failed = [k for k, v in checks.items() if not v]
     if failed:

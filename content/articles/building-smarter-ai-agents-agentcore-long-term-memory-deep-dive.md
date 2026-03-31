@@ -13,7 +13,7 @@ faq:
   - question: "Can AgentCore handle complex, multi-turn interactions with long-term memory?"
     answer: "Yes, AgentCore's design aims to support complex interactions by enabling agents to access and utilize stored information, ensuring consistency and relevance across extended dialogues or tasks."
 slug: "building-smarter-ai-agents-agentcore-long-term-memory-deep-dive"
-```
+---
 
 What if your AI assistant remembered every conversation, every preference, and every past success? This deep dive into AgentCore's long-term memory reveals how building smarter AI agents with persistent recall is no longer science fiction. It transforms AI from stateless entities into adaptive, continuously learning systems capable of complex reasoning.
 

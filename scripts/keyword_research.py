@@ -230,3 +230,192 @@ def add_opportunities_to_config(research_path: str, keywords_path: str, max_add:
         yaml.dump(config, f, default_flow_style=False, allow_unicode=True)
 
     print(f"Added {added} new keywords from research to {keywords_path}")
+
+
+# --- Topic Cluster Architecture ---
+
+# Predefined clusters for the AI memory niche. Each cluster has a pillar (broad head term)
+# and supporting topics. Keywords are matched to clusters by keyword overlap.
+TOPIC_CLUSTERS = [
+    {
+        "name": "ai-agent-memory",
+        "pillar_keyword": "AI agent memory",
+        "pillar_slug": "ai-agent-memory-explained",
+        "description": "The definitive guide to AI agent memory systems",
+        "match_terms": ["agent memory", "agent remember", "agentic memory", "agent recall",
+                        "agent persistent", "agent state", "stateful agent"],
+    },
+    {
+        "name": "memory-types",
+        "pillar_keyword": "types of AI memory",
+        "pillar_slug": "ai-agents-memory-types",
+        "description": "All types of memory in AI systems explained",
+        "match_terms": ["episodic memory", "semantic memory", "procedural memory",
+                        "short term memory", "long term memory", "working memory",
+                        "limited memory", "memory types", "memory hierarchy"],
+    },
+    {
+        "name": "memory-frameworks",
+        "pillar_keyword": "best ai memory system",
+        "pillar_slug": "best-ai-memory-systems",
+        "description": "Comparison of all AI memory frameworks and tools",
+        "match_terms": ["mem0", "zep", "letta", "memgpt", "cognee", "hindsight",
+                        "memory framework", "memory system compare", "alternative",
+                        "memory tool", "open source memory"],
+    },
+    {
+        "name": "ai-chat-memory",
+        "pillar_keyword": "AI chat memory",
+        "pillar_slug": "ai-that-remembers-conversations",
+        "description": "How to give AI chatbots persistent memory",
+        "match_terms": ["chat memory", "conversation memory", "remember conversation",
+                        "chatbot memory", "assistant remember", "ai remember",
+                        "character ai", "chat history", "persistent chat"],
+    },
+    {
+        "name": "rag-and-retrieval",
+        "pillar_keyword": "RAG vs agent memory",
+        "pillar_slug": "rag-vs-agent-memory",
+        "description": "RAG, embeddings, and retrieval for AI memory",
+        "match_terms": ["rag", "retrieval", "embedding", "vector", "context window",
+                        "knowledge base", "search", "index"],
+    },
+    {
+        "name": "memory-architecture",
+        "pillar_keyword": "AI memory architecture",
+        "pillar_slug": "ai-agent-architecture-patterns",
+        "description": "How to design and build AI memory systems",
+        "match_terms": ["architecture", "design", "implement", "build", "pattern",
+                        "consolidation", "benchmark", "evaluation", "system design"],
+    },
+]
+
+
+def assign_clusters(keywords_path: str):
+    """Assign topic cluster and role (pillar/supporting) to all keywords.
+
+    Each keyword is matched to a cluster based on term overlap. The keyword with
+    the matching pillar_slug becomes the pillar; all others are supporting.
+    Unmatched keywords get cluster=None (standalone).
+    """
+    with open(keywords_path) as f:
+        config = yaml.safe_load(f)
+
+    keywords = config.get("keywords", [])
+    if not keywords:
+        print("No keywords to cluster.")
+        return
+
+    # Build cluster assignments
+    assigned = 0
+    pillar_count = 0
+    supporting_count = 0
+
+    for kw in keywords:
+        primary = kw["primary"].lower()
+        slug = kw.get("slug", "")
+        related = " ".join(kw.get("related", [])).lower()
+        full_text = f"{primary} {related} {slug}"
+
+        best_cluster = None
+        best_score = 0
+
+        for cluster in TOPIC_CLUSTERS:
+            # Check if this keyword is the pillar
+            if slug == cluster["pillar_slug"]:
+                best_cluster = cluster
+                best_score = 999
+                break
+
+            # Score by match term overlap
+            score = sum(1 for term in cluster["match_terms"] if term in full_text)
+            if score > best_score:
+                best_score = score
+                best_cluster = cluster
+
+        if best_cluster and best_score > 0:
+            kw["cluster"] = best_cluster["name"]
+            if slug == best_cluster["pillar_slug"]:
+                kw["role"] = "pillar"
+                pillar_count += 1
+            else:
+                kw["role"] = "supporting"
+                supporting_count += 1
+            assigned += 1
+        else:
+            # Standalone — not in any cluster
+            kw.pop("cluster", None)
+            kw.pop("role", None)
+
+    with open(keywords_path, "w") as f:
+        yaml.dump(config, f, default_flow_style=False, allow_unicode=True, width=200)
+
+    print(f"\nTopic clusters assigned: {assigned}/{len(keywords)} keywords clustered")
+    print(f"  {pillar_count} pillar pages, {supporting_count} supporting pages")
+
+    # Print cluster summary
+    cluster_counts = {}
+    for kw in keywords:
+        c = kw.get("cluster", "unclustered")
+        cluster_counts[c] = cluster_counts.get(c, 0) + 1
+
+    print("\nCluster breakdown:")
+    for name, count in sorted(cluster_counts.items()):
+        pillar_slug = ""
+        for cl in TOPIC_CLUSTERS:
+            if cl["name"] == name:
+                pillar_slug = cl["pillar_slug"]
+                break
+        suffix = f" (pillar: {pillar_slug})" if pillar_slug else ""
+        print(f"  {name}: {count} articles{suffix}")
+
+
+def get_cluster_siblings(keywords_path: str, slug: str) -> dict:
+    """Get all sibling articles in the same cluster as the given slug.
+
+    Returns dict with:
+    - cluster_name: str
+    - role: "pillar" or "supporting"
+    - pillar_slug: str (the pillar article's slug)
+    - siblings: list of {slug, primary, role} for all other articles in the cluster
+    """
+    with open(keywords_path) as f:
+        config = yaml.safe_load(f)
+
+    keywords = config.get("keywords", [])
+
+    # Find this keyword's cluster
+    target_kw = None
+    for kw in keywords:
+        if kw.get("slug") == slug:
+            target_kw = kw
+            break
+
+    if not target_kw or not target_kw.get("cluster"):
+        return {}
+
+    cluster_name = target_kw["cluster"]
+
+    # Find pillar slug
+    pillar_slug = ""
+    for cl in TOPIC_CLUSTERS:
+        if cl["name"] == cluster_name:
+            pillar_slug = cl["pillar_slug"]
+            break
+
+    # Collect siblings
+    siblings = []
+    for kw in keywords:
+        if kw.get("cluster") == cluster_name and kw.get("slug") != slug:
+            siblings.append({
+                "slug": kw.get("slug", ""),
+                "primary": kw["primary"],
+                "role": kw.get("role", "supporting"),
+            })
+
+    return {
+        "cluster_name": cluster_name,
+        "role": target_kw.get("role", "supporting"),
+        "pillar_slug": pillar_slug,
+        "siblings": siblings,
+    }

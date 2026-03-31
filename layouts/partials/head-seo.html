@@ -4,6 +4,8 @@
 <meta name="google-site-verification" content="rt1oE59OFf5pnLRrTsdAUnjQta-PO_7TpJ0HZMrwayY">
 <meta name="google-site-verification" content="2nkHgCBlHQnNC3i8IrOer1D78_aOcxLsZMZw6n1IoP4">
 <link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon.png" | absURL }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
 
 {{/* Title — keep under 60 chars for Google SERP display */}}
 {{ $siteShort := "Agent Memory" }}
@@ -23,15 +25,16 @@
 <meta property="og:description" content="{{ $description | plainify | truncate 160 }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ $ogImageNum := 1 }}
-{{ with .File }}{{ $ogImageNum = add (mod (len .Path) 5) 1 }}{{ end }}
-{{ $ogImage := .Params.og_image | default (printf "images/og-%d.svg" $ogImageNum) }}
+{{ $ogImage := .Params.og_image | default "images/og-default.png" }}
 <meta property="og:image" content="{{ $ogImage | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 {{/* Twitter Card */}}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ $description | plainify | truncate 160 }}">
+<meta name="twitter:image" content="{{ $ogImage | absURL }}">
 
 {{/* Article specific */}}
 {{ if .IsPage }}

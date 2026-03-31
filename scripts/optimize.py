@@ -113,6 +113,13 @@ def apply_optimizations(report_path: str, content_dir: str):
             backup_file.write_text(article_content)
 
             article_file.write_text(optimized)
+
+            # Run post-processor to fix YAML quoting, AI scrubbing, etc.
+            from scripts.postprocess import postprocess_article
+            pp_fixes = postprocess_article(article_file)
+            if pp_fixes:
+                print(f"    Post-processed: {len(pp_fixes)} fixes")
+
             optimized_count += 1
             print(f"  → Optimized and saved. Backup at {backup_file}")
 

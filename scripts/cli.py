@@ -67,10 +67,20 @@ def optimize(report, content_dir):
 @click.option("--max-add", default=20, help="Max new keywords to add")
 def research(keywords, add_opportunities, max_add):
     """Research and validate keywords via Google Autocomplete."""
-    from scripts.keyword_research import research_and_validate, add_opportunities_to_config
+    from scripts.keyword_research import research_and_validate, add_opportunities_to_config, assign_clusters
     report = research_and_validate(keywords)
     if add_opportunities and report:
         add_opportunities_to_config("data/keyword-research.json", keywords, max_add)
+    # Always re-assign clusters after research (new keywords need cluster tags)
+    assign_clusters(keywords)
+
+
+@cli.command()
+@click.option("--keywords", default="data/keywords.yaml", help="Keywords config file")
+def clusters(keywords):
+    """Assign topic clusters to all keywords (pillar/supporting roles)."""
+    from scripts.keyword_research import assign_clusters
+    assign_clusters(keywords)
 
 
 @cli.command()
@@ -135,6 +145,22 @@ def audit(content_dir, port):
 
     print("Step 2: Building site and auditing HTML...\n")
     audit_html()
+
+
+@cli.command()
+@click.option("--content-dir", default="content/articles", help="Content directory")
+@click.option("--platforms", default="devto,hashnode", help="Comma-separated platforms (devto, hashnode)")
+@click.option("--max", "max_articles", default=5, help="Max articles to distribute per run")
+@click.option("--dry-run", is_flag=True, help="Preview without posting")
+@click.option("--status", is_flag=True, help="Show distribution status only")
+def distribute(content_dir, platforms, max_articles, dry_run, status):
+    """Cross-post articles to Dev.to and Hashnode for backlinks."""
+    from scripts.distribute import distribute_articles, distribution_status
+    if status:
+        distribution_status(content_dir)
+    else:
+        platform_list = [p.strip() for p in platforms.split(",")]
+        distribute_articles(content_dir, platform_list, max_articles, dry_run)
 
 
 @cli.command()

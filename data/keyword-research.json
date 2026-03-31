@@ -3329,31 +3329,196 @@
       "matching_suggestions": [
         "chatbot memory architecture"
       ]
+    },
+    {
+      "keyword": "chatbot memory github",
+      "slug": "chatbot-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot memory github"
+      ]
+    },
+    {
+      "keyword": "chatbot memory langchain",
+      "slug": "chatbot-memory-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot memory langchain"
+      ]
+    },
+    {
+      "keyword": "chatbot memory loss",
+      "slug": "chatbot-memory-loss",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot memory loss"
+      ]
+    },
+    {
+      "keyword": "chatbot memory management",
+      "slug": "chatbot-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot memory management"
+      ]
+    },
+    {
+      "keyword": "chatbot memory reddit",
+      "slug": "chatbot-memory-reddit",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot memory reddit",
+        "chatbot memory reddit",
+        "ai chatbot memory reddit"
+      ]
+    },
+    {
+      "keyword": "chatbot with best memory reddit",
+      "slug": "chatbot-with-best-memory-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with best memory reddit"
+      ]
+    },
+    {
+      "keyword": "chatbot with longest memory",
+      "slug": "chatbot-with-longest-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with longest memory"
+      ]
+    },
+    {
+      "keyword": "chatbot with memory langgraph",
+      "slug": "chatbot-with-memory-langgraph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with memory langgraph"
+      ]
+    },
+    {
+      "keyword": "chatbot with memory using langchain",
+      "slug": "chatbot-with-memory-using-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with memory using langchain"
+      ]
+    },
+    {
+      "keyword": "chatbots for customer service",
+      "slug": "chatbots-for-customer-service",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbots for customer service"
+      ]
+    },
+    {
+      "keyword": "chatbots to talk to",
+      "slug": "chatbots-to-talk-to",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbots to talk to"
+      ]
+    },
+    {
+      "keyword": "chronic memory issues",
+      "slug": "chronic-memory-issues",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chronic memory issues"
+      ]
+    },
+    {
+      "keyword": "chub ai long term memory",
+      "slug": "chub-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chub ai long term memory"
+      ]
+    },
+    {
+      "keyword": "claude ai long term memory",
+      "slug": "claude-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "claude ai long term memory"
+      ]
+    },
+    {
+      "keyword": "claude chatbot memory feature",
+      "slug": "claude-chatbot-memory-feature",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "claude chatbot memory feature"
+      ]
+    },
+    {
+      "keyword": "context window ai llm",
+      "slug": "context-window-ai-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window ai llm"
+      ]
+    },
+    {
+      "keyword": "context window by llm",
+      "slug": "context-window-by-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window by llm"
+      ]
+    },
+    {
+      "keyword": "context window for each llm",
+      "slug": "context-window-for-each-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window for each llm"
+      ]
+    },
+    {
+      "keyword": "context window for llm",
+      "slug": "context-window-for-llm",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "context window for llm",
+        "largest context window for llm"
+      ]
+    },
+    {
+      "keyword": "context window in llm",
+      "slug": "context-window-in-llm",
+      "autocomplete_matches": 6,
+      "validated": true,
+      "matching_suggestions": [
+        "context window in llm",
+        "context window in llm means",
+        "context window in llm models",
+        "define context window in llm",
+        "what is context window in llm models"
+      ]
     }
   ],
   "new_opportunities": [
-    "chatbot memory github",
-    "chatbot memory langchain",
-    "chatbot memory loss",
-    "chatbot memory management",
-    "chatbot memory reddit",
-    "chatbot with best memory reddit",
-    "chatbot with longest memory",
-    "chatbot with memory langgraph",
-    "chatbot with memory using langchain",
-    "chatbots for customer service",
-    "chatbots to talk to",
-    "chronic memory issues",
-    "chub ai long term memory",
-    "claude ai long term memory",
-    "claude chatbot memory feature",
-    "context window ai llm",
-    "context window by llm",
-    "context window for each llm",
-    "context window for llm",
-    "context window in llm",
-    "context window in llm means",
-    "context window in llm models",
     "context window length llm",
     "context window limit llm",
     "context window llm benchmark",
@@ -3388,7 +3553,6 @@
     "deepseek ai agent telegram long term memory",
     "deepseek llm context window",
     "deepseek llm.memory",
-    "define context window in llm",
     "difference between chatbot and ai chatbot",
     "dify chatbot memory",
     "dify llm node memory",
@@ -3524,7 +3688,6 @@
     "langgraph chatbot with memory github",
     "large context window llm",
     "large context window local llm",
-    "largest context window for llm",
     "largest context window llm",
     "largest context window llm free",
     "largest context window llm ollama",
@@ -3830,8 +3993,6 @@
     "what is chatbot in healthcare",
     "what is chatbot memory",
     "what is context memory in llm",
-    "what is context window in llm models",
-    "what is context window in llms",
     "what is context window llm",
     "what is context window size in llm",
     "what is conversation ai",
@@ -3936,9 +4097,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 316,
-    "validated": 309,
+    "total_keywords": 336,
+    "validated": 329,
     "low_volume": 7,
-    "new_opportunities_found": 602
+    "new_opportunities_found": 576
   }
 }

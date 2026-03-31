@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.seo-booster.daemon</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/nicoloboschi/dev/seo-booster/scripts/start-daemon.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/nicoloboschi/dev/seo-booster</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/nicoloboschi/dev/seo-booster/logs/daemon.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/nicoloboschi/dev/seo-booster/logs/daemon.err</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/nicoloboschi</string>
+        <key>PATH</key>
+        <string>/Users/nicoloboschi/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>

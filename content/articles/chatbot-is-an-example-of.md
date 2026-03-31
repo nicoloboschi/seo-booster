@@ -13,7 +13,7 @@ faq:
   - question: "Can a chatbot be considered an AI agent?"
     answer: "Yes, especially more advanced ones. A chatbot is an example of an AI agent when it can take actions, learn from interactions, and pursue goals beyond just responding to prompts, often incorporating memory and reasoning capabilities."
 slug: "chatbot-is-an-example-of"
-```
+---
 
 A chatbot is an example of **conversational AI**, demonstrating how machines can simulate human dialogue. This makes a chatbot an example of advanced AI applications.
 
