@@ -34,6 +34,9 @@ faq:
 - question: How does Retrieval-Augmented Generation (RAG) contribute to an AI chatbot that remembers everything?
   answer: RAG acts as a bridge between an AI chatbot's memory store and its language model. It retrieves relevant information from the memory and provides it as context to the LLM, ensuring that the AI's
     responses are grounded in past conversations and learned knowledge.
+- question: What is agent recall in the context of AI?
+  answer: Agent recall refers to an AI's ability to access and utilize information from its past interactions and stored knowledge base to inform its current responses and actions. This is a core component
+    of an AI chatbot that remembers everything.
 slug: ai-chatbot-that-remembers-everything
 ---
 
@@ -198,3 +201,7 @@ Vector databases are crucial for storing and retrieving information in an AI cha
 ### How does Retrieval-Augmented Generation (RAG) contribute to an AI chatbot that remembers everything?
 
 RAG acts as a bridge between an AI chatbot's memory store and its language model. It retrieves relevant information from the memory and provides it as context to the LLM, ensuring that the AI's responses are grounded in past conversations and learned knowledge.
+
+### What is agent recall in the context of AI?
+
+Agent recall refers to an AI's ability to access and use information from its past interactions and stored knowledge base to inform its current responses and actions. This is a core component of an AI chatbot that remembers everything.

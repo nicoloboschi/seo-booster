@@ -1,6 +1,6 @@
 ---
 title: 'AI Memory Explained: How Agents Remember and Learn'
-description: 'AI memory explained: Understand how AI agents store, retrieve, and utilize information to learn, reason, and perform complex tasks effectively.'
+description: 'AI memory explained: Understand how AI agents store, retrieve, and utilize information to learn, reason, and perform complex tasks effectively. Explore types, arc...'
 date: 2026-03-28
 lastmod: 2026-03-28
 tags:
@@ -14,6 +14,8 @@ keywords:
 - how AI agents remember
 - long-term memory AI
 - AI recall
+- AI memory systems
+- AI memory architecture
 faq:
 - question: What is the primary function of AI memory?
   answer: The primary function of AI memory is to store, organize, and retrieve information that an AI agent has encountered or learned. This enables the agent to recall past experiences, maintain context,
@@ -24,6 +26,9 @@ faq:
 - question: Can AI agents forget information?
   answer: Yes, AI agents can be designed to forget information. This can happen through memory consolidation processes, data eviction based on relevance or age, or by overwriting older data with newer information,
     mimicking aspects of biological forgetting.
+- question: What are the main types of AI memory?
+  answer: The main types of AI memory include short-term memory (working memory) for active processing and long-term memory for persistent storage of knowledge and experiences. Within long-term memory,
+    episodic memory stores specific events, and semantic memory stores general facts and concepts. Understanding these types is crucial for **ai memory explained**.
 slug: ai-memory-explained
 ---
 
@@ -221,3 +226,6 @@ A2: Vector databases store numerical representations (embeddings) of data. They 
 
 **Q3: Can AI agents remember conversations from the past?**
 A3: Yes, AI agents can be designed to remember conversations. This is typically achieved through long-term memory systems, often employing vector databases to store conversation logs and allow retrieval of past interactions for context and continuity. This capability is explored in articles about [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+
+**Q4: What are the main types of AI memory?**
+A4: The main types of AI memory include short-term memory (working memory) for active processing and long-term memory for persistent storage of knowledge and experiences. Within long-term memory, episodic memory stores specific events, and semantic memory stores general facts and concepts. Understanding these types is crucial for **ai memory explained**.

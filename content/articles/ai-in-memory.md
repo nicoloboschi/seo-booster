@@ -9,6 +9,9 @@ tags:
 - memory systems
 - agent memory
 - AI architecture
+- ai in memory
+- retrieval-augmented generation
+- long-term memory for AI agents
 keywords:
 - ai in memory
 - agent memory
@@ -31,6 +34,9 @@ faq:
 - question: How does AI memory enable AI agents to learn and adapt?
   answer: AI memory enables AI agents to learn and adapt by providing them with a persistent record of past experiences, data, and interactions. This allows agents to identify patterns, recall relevant
     information for current tasks, and refine their decision-making processes over time, leading to more intelligent and context-aware behavior.
+- question: What are the key components of an AI memory system?
+  answer: Key components of an AI memory system include storage mechanisms, encoding and retrieval processes, contextualization modules, and forgetting mechanisms. These work together to manage information
+    flow and ensure effective recall.
 slug: ai-in-memory
 ---
 
@@ -164,3 +170,6 @@ The main types of AI memory include episodic memory (recalling specific events),
 
 ### How does AI memory enable AI agents to learn and adapt?
 AI memory enables AI agents to learn and adapt by providing them with a persistent record of past experiences, data, and interactions. This allows agents to identify patterns, recall relevant information for current tasks, and refine their decision-making processes over time, leading to more intelligent and context-aware behavior.
+
+### What are the key components of an AI memory system?
+Key components of an AI memory system include storage mechanisms, encoding and retrieval processes, contextualization modules, and forgetting mechanisms. These work together to manage information flow and ensure effective recall.
