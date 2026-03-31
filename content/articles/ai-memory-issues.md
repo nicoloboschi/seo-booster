@@ -9,6 +9,9 @@ tags:
 - memory issues
 - LLM memory
 - AI recall
+- AI forgetting
+- RAG
+- AI long-term memory
 keywords:
 - ai memory issues
 - agent memory problems
@@ -18,6 +21,10 @@ keywords:
 - AI recall
 - AI long-term memory
 - RAG
+- AI memory performance
+- AI memory benchmarks
+- AI memory systems
+- AI recall accuracy
 faq:
 - question: What are the primary reasons for AI forgetting information?
   answer: AI forgetting primarily stems from the **limited context window** of LLMs, where older information is pushed out as new data is processed. Additionally, inefficient memory storage, overwriting
@@ -32,6 +39,9 @@ faq:
   answer: Achieving reliable **AI recall** is challenging due to several factors. The finite nature of **context window limitations** in LLMs means that information can be lost if not managed externally.
     Furthermore, **retrieval failures**, where the AI cannot access the correct information, and the inherent tendency for AI systems to overwrite or lose data without robust **long-term memory** mechanisms,
     all contribute to the difficulty in ensuring consistent and accurate recall.
+- question: How can AI memory performance be evaluated?
+  answer: AI memory performance is evaluated using **AI memory benchmarks** that test recall accuracy, response latency, and the ability to maintain context over long interactions. Comparing different **AI
+    memory systems** and their effectiveness in addressing specific **ai memory issues** is also crucial for optimizing performance and **AI recall accuracy**.
 slug: ai-memory-issues
 ---
 

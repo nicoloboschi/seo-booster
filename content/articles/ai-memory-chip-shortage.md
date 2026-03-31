@@ -9,6 +9,9 @@ tags:
 - supply chain
 - AI hardware
 - AI chip shortage
+- AI memory chips
+- AI hardware shortage
+- AI semiconductor supply
 keywords:
 - ai memory chip shortage
 - AI hardware shortage
@@ -31,6 +34,9 @@ faq:
 - question: What are the main drivers of the AI memory chip shortage?
   answer: The primary drivers include unprecedented demand growth for AI hardware, bottlenecks in fab construction, geopolitical and trade tensions affecting the global supply chain, and limited availability
     of key materials and specialized equipment for AI chip manufacturing.
+- question: How can AI memory chip constraints be mitigated through software optimization?
+  answer: Software optimization, including techniques like model compression, quantization, and efficient data management, can reduce the raw memory requirements for AI systems, thereby mitigating the impact
+    of hardware shortages.
 slug: ai-memory-chip-shortage
 ---
 

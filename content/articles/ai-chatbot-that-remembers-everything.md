@@ -37,6 +37,9 @@ faq:
 - question: What is agent recall in the context of AI?
   answer: Agent recall refers to an AI's ability to access and utilize information from its past interactions and stored knowledge base to inform its current responses and actions. This is a core component
     of an AI chatbot that remembers everything.
+- question: What is persistent memory in AI chatbots?
+  answer: Persistent memory in AI chatbots refers to the ability of the AI to retain and access information across multiple conversations and sessions, rather than forgetting it once a session ends. This
+    allows for a continuous and context-aware user experience.
 slug: ai-chatbot-that-remembers-everything
 ---
 
@@ -205,3 +208,7 @@ RAG acts as a bridge between an AI chatbot's memory store and its language model
 ### What is agent recall in the context of AI?
 
 Agent recall refers to an AI's ability to access and use information from its past interactions and stored knowledge base to inform its current responses and actions. This is a core component of an AI chatbot that remembers everything.
+
+### What is persistent memory in AI chatbots?
+
+Persistent memory in AI chatbots refers to the ability of the AI to retain and access information across multiple conversations and sessions, rather than forgetting it once a session ends. This allows for a continuous and context-aware user experience.

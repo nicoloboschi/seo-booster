@@ -10,6 +10,7 @@ tags:
 - vector embeddings retrieval
 - similarity search agents
 - semantic similarity
+- embedding search memory
 keywords:
 - embedding models memory
 - vector embeddings retrieval
@@ -34,6 +35,9 @@ faq:
 - question: How do vector databases contribute to efficient AI memory retrieval?
   answer: Vector databases are optimized for storing and querying high-dimensional vectors. They use techniques like Approximate Nearest Neighbor (ANN) search and specialized indexing to enable fast and
     scalable retrieval of semantically similar information, which is crucial for **embedding search memory**.
+- question: What is the difference between keyword search and semantic search in AI memory?
+  answer: Keyword search relies on exact word matching, while semantic search, powered by embedding models, understands the meaning and context of queries, retrieving information based on conceptual similarity
+    rather than just literal terms. This allows for more nuanced and relevant recall.
 slug: embedding-models-for-memory
 ---
 
@@ -128,6 +132,8 @@ The choice of embedding model is critical and depends heavily on the specific ap
 ### Benchmarks and Evaluation for AI Memory Systems
 
 Evaluating the effectiveness of embedding models for memory applications requires careful consideration of relevant benchmarks and metrics. The goal is to ensure that the **vector embeddings retrieval** accurately reflects the underlying **semantic similarity** of the data.
+
+#### Key Evaluation Metrics and Benchmarks:
 
 * **Semantic Textual Similarity (STS) Benchmarks:** Datasets like STS Benchmark (STS-B) provide pairs of sentences with human-annotated similarity scores. Models are evaluated on their ability to predict these scores accurately, directly measuring their grasp of **semantic similarity**.
 * **Question Answering (QA) Datasets:** Benchmarks like SQuAD (Stanford Question Answering Dataset) or Natural Questions can be adapted. While not directly measuring retrieval for memory, performance on QA indicates how well embeddings capture the underlying meaning needed for answering questions based on retrieved context.

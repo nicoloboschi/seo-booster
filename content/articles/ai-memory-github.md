@@ -1,6 +1,6 @@
 ---
-title: 'AI Memory GitHub: Exploring Open-Source Solutions for AI Recall & Vector Databases'
-description: Explore AI Memory GitHub for open-source solutions like vector databases, RAG frameworks, and agent memory systems. Learn about AI memory solutions GitHub with pr...
+title: 'AI Memory GitHub: Open-Source Solutions for AI Recall & Vector Databases'
+description: Explore AI Memory GitHub for open-source solutions like vector databases, RAG frameworks, and agent memory systems. Discover GitHub AI memory tools for enhanced A...
 date: 2026-03-28
 lastmod: 2026-03-28
 tags:
@@ -21,6 +21,8 @@ keywords:
 - vector databases for AI
 - RAG frameworks GitHub
 - AI recall GitHub
+- pinecone
+- vector
 faq:
 - question: What are the benefits of using open-source AI memory solutions from GitHub?
   answer: Open-source AI memory projects on GitHub offer transparency, customization, and community-driven development. They allow developers to inspect code, adapt it to specific needs, and benefit from
@@ -34,6 +36,9 @@ faq:
 - question: How do vector databases contribute to AI memory on GitHub?
   answer: Vector databases are crucial for AI memory on GitHub as they store information as numerical vectors (embeddings). This enables efficient similarity searches, allowing AI to find semantically related
     information quickly, which is fundamental for retrieval-augmented generation (RAG) and persistent recall.
+- question: What are some popular vector databases available on GitHub for AI memory?
+  answer: Popular vector databases with significant GitHub presence include Pinecone (though its core service is managed, its SDKs and related projects are on GitHub), Weaviate, ChromaDB, and FAISS. These
+    tools are essential for efficient semantic search in AI memory systems.
 slug: ai-memory-github
 ---
 

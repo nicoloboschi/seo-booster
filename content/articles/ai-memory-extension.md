@@ -17,6 +17,8 @@ keywords:
 - retrieval augmented generation
 - AI recall
 - AI context management
+- AI memory management
+- AI persistent memory
 faq:
 - question: How does AI memory extension differ from just using a larger context window?
   answer: A larger context window provides more immediate working memory for an LLM, but it's still finite and volatile. AI memory extension uses external, persistent storage and retrieval mechanisms, allowing
@@ -30,6 +32,9 @@ faq:
 - question: What is the role of retrieval augmented generation (RAG) in AI memory extension?
   answer: Retrieval Augmented Generation (RAG) is a key technique for AI memory extension. It enhances an LLM's capabilities by retrieving relevant information from an external knowledge base and injecting
     it into the LLM's prompt. This allows the AI to access and utilize information beyond its immediate context window, leading to more informed and contextually relevant responses.
+- question: What is AI memory management in the context of AI memory extension?
+  answer: AI memory management refers to the strategies and techniques used to efficiently store, organize, retrieve, and prune information within an AI's extended memory system. This includes filtering,
+    summarization, hierarchical organization, and forgetting mechanisms to ensure optimal performance and prevent memory overload.
 slug: ai-memory-extension
 ---
 
@@ -238,3 +243,7 @@ Key challenges include efficiently storing and indexing vast amounts of data, de
 ### What is the role of retrieval augmented generation (RAG) in AI memory extension?
 
 Retrieval Augmented Generation (RAG) is a key technique for AI memory extension. It enhances an LLM's capabilities by retrieving relevant information from an external knowledge base and injecting it into the LLM's prompt. This allows the AI to access and use information beyond its immediate context window, leading to more informed and contextually relevant responses.
+
+### What is AI memory management in the context of AI memory extension?
+
+AI memory management refers to the strategies and techniques used to efficiently store, organize, retrieve, and prune information within an AI's extended memory system. This includes filtering, summarization, hierarchical organization, and forgetting mechanisms to ensure optimal performance and prevent memory overload.

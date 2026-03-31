@@ -34,6 +34,9 @@ faq:
 - question: What is the difference between short-term and long-term memory in AI chatbots?
   answer: Short-term memory, often managed by an LLM's context window, holds recent conversational data for immediate recall. Long-term memory allows AI to retain and access information across multiple
     conversations or extended periods, enabling persistent recall of user preferences and past interactions.
+- question: How does AI achieve "long-term memory"?
+  answer: AI achieves long-term memory by storing conversational data and learned information in external databases, such as vector databases. This allows the AI to access and recall information across
+    multiple sessions, enabling persistent recall and a more continuous user experience.
 slug: ai-chatbot-memory
 ---
 
@@ -55,7 +58,7 @@ However, this short-term memory is ephemeral. Once the context window is full or
 
 The **context window** of LLMs, while powerful, presents a significant constraint. It dictates how much information the model can consider at any given moment. When conversations exceed this limit, earlier parts of the dialogue are effectively forgotten. This is a primary driver for developing external memory solutions for AI, especially for achieving **AI with long term memory**.
 
-### Types of AI Chatbot Memory for Enhanced Recall
+## Types of AI Chatbot Memory for Enhanced Recall
 
 Just as human memory is multifaceted, **AI chatbot memory** can be categorized into several types, each serving a distinct purpose in maintaining conversational continuity and knowledge. Understanding these distinctions is key to building effective **conversational AI memory** systems.
 

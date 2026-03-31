@@ -42,8 +42,13 @@ faq:
 - question: How does AI agent architecture influence planning memory and tool utilization?
   answer: The architecture of an AI agent dictates how its memory systems are structured and accessed. Advanced architectures can better integrate planning memory with reasoning modules and tool-use capabilities,
     allowing for more sophisticated foresight and strategic action selection. This includes how memory is stored, retrieved, and processed to inform planning and tool deployment.
+- question: How do AI agent architecture, memory, planning, and tool use interrelate?
+  answer: The AI agent architecture provides the framework for how memory systems are designed and accessed. This architecture directly influences the agent's ability to store and retrieve information for
+    planning. Effective planning, in turn, dictates how and when tools are utilized. The architecture ensures these components work synergistically, enabling the agent to make informed decisions, execute
+    complex tasks, and adapt its tool usage based on its stored memories and future goals.
 slug: ai-agent-planning-memory
 ---
+
 
 **AI agent planning memory** is the specialized system within an AI that stores, retrieves, and reasons about future actions, goals, and their outcomes. This enables foresight, allowing agents to strategize, simulate scenarios, and make informed decisions to achieve complex objectives effectively, forming the bedrock of intelligent behavior.
 
@@ -160,4 +165,23 @@ class PlanningMemory:
  print(f"No directly relevant experience found for '{current_situation}'.")
  return None, None, None
 
-##
+## Example Usage:
+memory = PlanningMemory()
+
+## Agent performs a task and stores the experience
+memory.add_experience(
+ situation="Navigating a maze with a blocked path",
+ action="Tried turning left, then right",
+ outcome="Hit a dead end",
+ tools_used=["map"]
+)
+
+memory.add_experience(
+ situation="Navigating a maze with a clear path ahead",
+ action="Proceeded straight",
+ outcome="Reached a junction",
+ tools_used=["compass"]
+)
+
+## Agent faces a new situation and uses memory for reasoning
+print("\n

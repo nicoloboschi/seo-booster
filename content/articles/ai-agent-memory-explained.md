@@ -34,6 +34,9 @@ faq:
 - question: How is AI agent memory managed for long-term tasks?
   answer: AI agent memory management for long-term tasks involves strategies like using external memory stores (e.g., vector databases), summarization techniques, and efficient retrieval mechanisms to ensure
     relevant information is accessible and the agent can build upon past interactions.
+- question: What are the core components of an AI agent memory system?
+  answer: The core components of an AI agent memory system typically include mechanisms for storing information (e.g., databases, vector stores), retrieval methods (e.g., search algorithms, similarity matching),
+    and management strategies (e.g., summarization, forgetting, context window management).
 slug: ai-agent-memory-explained
 ---
 
@@ -186,3 +189,5 @@ AI agent memory is a foundational element for creating intelligent, adaptive, an
  Key architectures for AI agent memory systems include short-term vs. long-term memory distinctions, various memory structures like key-value stores, vector databases, and knowledge graphs, and memory management techniques such as summarization and forgetting mechanisms.
 * **How is AI agent memory managed for long-term tasks?**
  AI agent memory management for long-term tasks involves strategies like using external memory stores (e.g., vector databases), summarization techniques, and efficient retrieval mechanisms to ensure relevant information is accessible and the agent can build upon past interactions.
+* **What are the core components of an AI agent memory system?**
+ The core components of an AI agent memory system typically include mechanisms for storing information (e.g., databases, vector stores), retrieval methods (e.g., search algorithms, similarity matching), and management strategies (e.g., summarization, forgetting, context window management).
