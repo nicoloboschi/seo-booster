@@ -3516,29 +3516,193 @@
         "define context window in llm",
         "what is context window in llm models"
       ]
+    },
+    {
+      "keyword": "context window length llm",
+      "slug": "context-window-length-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window length llm"
+      ]
+    },
+    {
+      "keyword": "context window limit llm",
+      "slug": "context-window-limit-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window limit llm"
+      ]
+    },
+    {
+      "keyword": "context window llm benchmark",
+      "slug": "context-window-llm-benchmark",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm benchmark"
+      ]
+    },
+    {
+      "keyword": "context window llm comparison",
+      "slug": "context-window-llm-comparison",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm comparison",
+        "context window llm comparison 2025"
+      ]
+    },
+    {
+      "keyword": "context window llm comparison 2025",
+      "slug": "context-window-llm-comparison-2025",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm comparison 2025"
+      ]
+    },
+    {
+      "keyword": "context window llm definition",
+      "slug": "context-window-llm-definition",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm definition"
+      ]
+    },
+    {
+      "keyword": "context window llm example",
+      "slug": "context-window-llm-example",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm example"
+      ]
+    },
+    {
+      "keyword": "context window llm explained",
+      "slug": "context-window-llm-explained",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm explained"
+      ]
+    },
+    {
+      "keyword": "context window llm list",
+      "slug": "context-window-llm-list",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm list"
+      ]
+    },
+    {
+      "keyword": "context window llm meaning",
+      "slug": "context-window-llm-meaning",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm meaning"
+      ]
+    },
+    {
+      "keyword": "context window llm models",
+      "slug": "context-window-llm-models",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm models"
+      ]
+    },
+    {
+      "keyword": "context window llm openai",
+      "slug": "context-window-llm-openai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm openai"
+      ]
+    },
+    {
+      "keyword": "context window llm paper",
+      "slug": "context-window-llm-paper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm paper"
+      ]
+    },
+    {
+      "keyword": "context window llm ranking",
+      "slug": "context-window-llm-ranking",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm ranking"
+      ]
+    },
+    {
+      "keyword": "context window llm size",
+      "slug": "context-window-llm-size",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm size"
+      ]
+    },
+    {
+      "keyword": "context window management llm",
+      "slug": "context-window-management-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window management llm"
+      ]
+    },
+    {
+      "keyword": "context window of an llm",
+      "slug": "context-window-of-an-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window of an llm"
+      ]
+    },
+    {
+      "keyword": "context window of different llm",
+      "slug": "context-window-of-different-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window of different llm"
+      ]
+    },
+    {
+      "keyword": "context window of llm",
+      "slug": "context-window-of-llm",
+      "autocomplete_matches": 4,
+      "validated": true,
+      "matching_suggestions": [
+        "context window of llm",
+        "context window of llm models",
+        "how to extend context window of llm",
+        "how to increase context window of llm"
+      ]
+    },
+    {
+      "keyword": "context window of llm models",
+      "slug": "context-window-of-llm-models",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window of llm models"
+      ]
     }
   ],
   "new_opportunities": [
-    "context window length llm",
-    "context window limit llm",
-    "context window llm benchmark",
-    "context window llm comparison",
-    "context window llm comparison 2025",
-    "context window llm definition",
-    "context window llm example",
-    "context window llm explained",
-    "context window llm list",
-    "context window llm meaning",
-    "context window llm models",
-    "context window llm openai",
-    "context window llm paper",
-    "context window llm ranking",
-    "context window llm size",
-    "context window management llm",
-    "context window of an llm",
-    "context window of different llm",
-    "context window of llm",
-    "context window of llm models",
     "context window per llm",
     "context window size in llm",
     "context window size llm comparison",
@@ -3608,7 +3772,6 @@
     "how to create an ai agent",
     "how to delete chatgpt memory on phone",
     "how to expand ai agents memory",
-    "how to extend context window of llm",
     "how to find chatgpt memory",
     "how to fix character ai memory",
     "how to free up chatgpt memory",
@@ -3622,7 +3785,6 @@
     "how to improve character ai memory",
     "how to improve janitor ai memory",
     "how to improve llm memory",
-    "how to increase context window of llm",
     "how to increase llm memory",
     "how to learn memory techniques",
     "how to make an ai self-aware",
@@ -4097,9 +4259,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 336,
-    "validated": 329,
+    "total_keywords": 356,
+    "validated": 349,
     "low_volume": 7,
-    "new_opportunities_found": 576
+    "new_opportunities_found": 554
   }
 }
