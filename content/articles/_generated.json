@@ -1937,5 +1937,35 @@
     "generated_at": "2026-03-31T05:05:57.558270",
     "sources": [],
     "quality_score": 65
+  },
+  "chatbot-with-best-memory-reddit": {
+    "keyword": "chatbot with best memory reddit",
+    "generated_at": "2026-03-31T07:07:40.961253",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chatbot-with-longest-memory": {
+    "keyword": "chatbot with longest memory",
+    "generated_at": "2026-03-31T07:08:26.607779",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chatbot-with-memory-langgraph": {
+    "keyword": "chatbot with memory langgraph",
+    "generated_at": "2026-03-31T07:09:03.457151",
+    "sources": [],
+    "quality_score": 75
+  },
+  "chatbot-with-memory-using-langchain": {
+    "keyword": "chatbot with memory using langchain",
+    "generated_at": "2026-03-31T07:09:47.818860",
+    "sources": [],
+    "quality_score": 65
+  },
+  "chatbots-for-customer-service": {
+    "keyword": "chatbots for customer service",
+    "generated_at": "2026-03-31T07:10:34.431623",
+    "sources": [],
+    "quality_score": 65
   }
 }
