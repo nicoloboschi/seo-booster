@@ -3855,27 +3855,172 @@
       "matching_suggestions": [
         "dify llm node memory"
       ]
+    },
+    {
+      "keyword": "do ai agents have memory",
+      "slug": "do-ai-agents-have-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "do ai agents have memory"
+      ]
+    },
+    {
+      "keyword": "do ai robots have feelings",
+      "slug": "do-ai-robots-have-feelings",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "do ai robots have feelings"
+      ]
+    },
+    {
+      "keyword": "does ai have long term memory",
+      "slug": "does-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "does c.ai have long term memory",
+      "slug": "does-c-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does c.ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "does character.ai have long term memory",
+      "slug": "does-character-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does character.ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "does claude ai have long term memory",
+      "slug": "does-claude-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does claude ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "does llm have memory",
+      "slug": "does-llm-have-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does llm have memory"
+      ]
+    },
+    {
+      "keyword": "does llm make you a lawyer",
+      "slug": "does-llm-make-you-a-lawyer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does llm make you a lawyer"
+      ]
+    },
+    {
+      "keyword": "dram memory ai",
+      "slug": "dram-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "dram memory ai"
+      ]
+    },
+    {
+      "keyword": "effective context window llm",
+      "slug": "effective-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "effective context window llm"
+      ]
+    },
+    {
+      "keyword": "embedded memory meaning",
+      "slug": "embedded-memory-meaning",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedded memory meaning"
+      ]
+    },
+    {
+      "keyword": "embedded process model of memory",
+      "slug": "embedded-process-model-of-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedded process model of memory"
+      ]
+    },
+    {
+      "keyword": "embedding model memory usage",
+      "slug": "embedding-model-memory-usage",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedding model memory usage"
+      ]
+    },
+    {
+      "keyword": "examples of intelligent agents in ai",
+      "slug": "examples-of-intelligent-agents-in-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "examples of intelligent agents in ai"
+      ]
+    },
+    {
+      "keyword": "extending llm context window",
+      "slug": "extending-llm-context-window",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "extending llm context window",
+        "extending llm context window beyond 2 million tokens"
+      ]
+    },
+    {
+      "keyword": "extending llm context window beyond 2 million tokens",
+      "slug": "extending-llm-context-window-beyond-2-million-tokens",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "extending llm context window beyond 2 million tokens"
+      ]
+    },
+    {
+      "keyword": "faiss vector database in memory",
+      "slug": "faiss-vector-database-in-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "faiss vector database in memory"
+      ]
+    },
+    {
+      "keyword": "first husband of ai ai delas alas",
+      "slug": "first-husband-of-ai-ai-delas-alas",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "first husband of ai ai delas alas"
+      ]
     }
   ],
   "new_opportunities": [
-    "do ai agents have memory",
-    "do ai robots have feelings",
-    "does ai have long term memory",
-    "does c.ai have long term memory",
-    "does character.ai have long term memory",
-    "does claude ai have long term memory",
-    "does llm have memory",
-    "does llm make you a lawyer",
-    "dram memory ai",
-    "effective context window llm",
-    "embedded memory meaning",
-    "embedded process model of memory",
-    "embedding model memory usage",
-    "examples of intelligent agents in ai",
-    "extending llm context window",
-    "extending llm context window beyond 2 million tokens",
-    "faiss vector database in memory",
-    "first husband of ai ai delas alas",
     "flipped ai chat long term memory",
     "flipped ai long term memory",
     "free ai that remembers",
@@ -4257,7 +4402,6 @@
     "top brain foods improve memory",
     "vector database ai memory",
     "vector database for llm memory",
-    "vector database in memory",
     "vector database in memory python",
     "vector database llm long term memory",
     "vector database llm memory",
@@ -4396,9 +4540,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 373,
-    "validated": 366,
+    "total_keywords": 391,
+    "validated": 384,
     "low_volume": 7,
-    "new_opportunities_found": 536
+    "new_opportunities_found": 517
   }
 }
