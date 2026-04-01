@@ -49,7 +49,7 @@ faq:
     within a persistent long-term memory store over extended periods, making it more efficient and meaningful for future recall and use.
 slug: ai-agent-long-term-memory
 ---
----
+
 
 **AI agent long term memory** is the crucial component that allows artificial intelligence agents to retain and access information beyond a single interaction or a limited context window, enabling persistent learning and more sophisticated, context-aware behavior over time. Unlike the fleeting nature of short-term or working memory, which is often bound by the immediate operational scope, long-term memory provides a durable **AI knowledge base**. This persistence is vital for **long running AI agents** that need to build upon past experiences, adapt to evolving environments, and maintain a consistent persona or understanding across extended operational lifecycles. Effectively managing this persistent knowledge is a cornerstone of advanced agent design.
 
