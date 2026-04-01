@@ -1,92 +1,120 @@
 {
   "period": {
-    "start": "2026-02-28",
-    "end": "2026-03-28"
+    "start": "2026-03-01",
+    "end": "2026-03-29"
   },
   "pages": [
     {
       "key": "https://aiagentmemory.org/articles/ai-chat-that-remembers-everything-free/",
+      "clicks": 2,
+      "impressions": 89,
+      "ctr": 2.25,
+      "position": 7.0
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "clicks": 1,
-      "impressions": 57,
-      "ctr": 1.75,
-      "position": 6.5
+      "impressions": 253,
+      "ctr": 0.4,
+      "position": 17.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-chatbot-memory/",
+      "clicks": 1,
+      "impressions": 36,
+      "ctr": 2.78,
+      "position": 8.3
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-bank/",
       "clicks": 1,
-      "impressions": 3,
-      "ctr": 33.33,
-      "position": 8.3
+      "impressions": 34,
+      "ctr": 2.94,
+      "position": 20.6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-book/",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 100,
+      "position": 5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-design/",
+      "clicks": 1,
+      "impressions": 18,
+      "ctr": 5.56,
+      "position": 6.3
     },
     {
       "key": "https://aiagentmemory.org/articles/embedding-models-for-memory/",
       "clicks": 1,
-      "impressions": 56,
-      "ctr": 1.79,
-      "position": 6.6
+      "impressions": 95,
+      "ctr": 1.05,
+      "position": 6.3
     },
     {
       "key": "https://aiagentmemory.org/articles/temporal-reasoning-ai-memory/",
       "clicks": 1,
-      "impressions": 53,
-      "ctr": 1.89,
-      "position": 6.2
+      "impressions": 73,
+      "ctr": 1.37,
+      "position": 6.0
     },
     {
       "key": "https://aiagentmemory.org/",
       "clicks": 0,
-      "impressions": 88,
+      "impressions": 115,
       "ctr": 0,
-      "position": 29.7
+      "position": 34.8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/agentic-ai-long-term-memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-agent-architecture-patterns/",
       "clicks": 0,
-      "impressions": 176,
+      "impressions": 229,
       "ctr": 0,
       "position": 7.1
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-agent-chat-memory/",
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 79,
       "ctr": 0,
-      "position": 9.6
+      "position": 9.3
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-agent-long-term-memory/",
       "clicks": 0,
-      "impressions": 43,
+      "impressions": 90,
       "ctr": 0,
-      "position": 6.3
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
-      "clicks": 0,
-      "impressions": 182,
-      "ctr": 0,
-      "position": 14.3
+      "position": 7.1
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-agent-planning-memory/",
       "clicks": 0,
-      "impressions": 49,
+      "impressions": 102,
       "ctr": 0,
-      "position": 6.4
+      "position": 6.9
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-agent-that-remembers/",
       "clicks": 0,
-      "impressions": 56,
+      "impressions": 87,
       "ctr": 0,
-      "position": 9.9
+      "position": 9.0
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-chat-memory-reddit/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 14,
       "ctr": 0,
-      "position": 5.6
+      "position": 5.8
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-chat-memory/",
@@ -98,170 +126,233 @@
     {
       "key": "https://aiagentmemory.org/articles/ai-chatbot-infinite-memory/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 19,
       "ctr": 0,
-      "position": 5
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-chatbot-memory/",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 8.2
+      "position": 6
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-chatbot-that-remembers-everything/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 15,
       "ctr": 0,
-      "position": 6.2
+      "position": 7.9
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-chatbot-that-remembers/",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 95,
       "ctr": 0,
-      "position": 5.8
+      "position": 6.1
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-girlfriend-long-term-memory/",
       "clicks": 0,
-      "impressions": 58,
+      "impressions": 112,
       "ctr": 0,
-      "position": 6.5
+      "position": 7.0
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-girlfriend-memory/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 17,
       "ctr": 0,
-      "position": 6.3
+      "position": 7.6
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-in-memory-care/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 7
+      "position": 8
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-in-memory/",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 44,
       "ctr": 0,
-      "position": 8.3
+      "position": 22.0
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-and-storage-stocks/",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 7.4
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-breakthrough/",
+      "key": "https://aiagentmemory.org/articles/ai-infinite-memory/",
       "clicks": 0,
       "impressions": 6,
       "ctr": 0,
       "position": 4.5
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-bubble/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-and-storage-stocks/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 13,
       "ctr": 0,
-      "position": 1.8
+      "position": 7.8
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-chip-shortage/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-boost-module-gigabyte/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 8,
       "ctr": 0,
-      "position": 4.7
+      "position": 5
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-chips/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-crisis/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-boost-module/",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 7
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-demand/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-bottleneck/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 14,
       "ctr": 0,
-      "position": 13
+      "position": 7.4
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-design/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-box/",
       "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 3.5
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-developer-job/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-developer/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-dump/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-engine/",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0,
-      "position": 8.7
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-etf/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 11
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-explained/",
-      "clicks": 0,
-      "impressions": 16,
+      "impressions": 3,
       "ctr": 0,
       "position": 5.7
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-extension/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-breakthrough/",
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-bubble/",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 4.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-chip-companies/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-chip-makers/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.4
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-chip-shortage/",
+      "clicks": 0,
+      "impressions": 45,
+      "ctr": 0,
+      "position": 5.4
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-chips/",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-cover/",
       "clicks": 0,
       "impressions": 6,
       "ctr": 0,
-      "position": 6
+      "position": 9.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-crisis/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-demand/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-developer-job/",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 6.6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-developer/",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 5.7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-drive/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-dump-analyzer/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-dump/",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 3.4
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-engine/",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-enhancer/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-etf/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-explained/",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 6.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-extension/",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 5.7
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-file/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 5.5
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-forum/",
@@ -271,137 +362,354 @@
       "position": 10
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-full/",
+      "key": "https://aiagentmemory.org/articles/ai-memory-frameworks/",
       "clicks": 0,
       "impressions": 4,
       "ctr": 0,
-      "position": 8.8
+      "position": 5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-full/",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7.5
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-function/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 15,
       "ctr": 0,
-      "position": 4
+      "position": 12.4
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-game-generator/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-game/",
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
       "position": 9.5
     },
     {
+      "key": "https://aiagentmemory.org/articles/ai-memory-game/",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 6.1
+    },
+    {
       "key": "https://aiagentmemory.org/articles/ai-memory-gemini/",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 33,
       "ctr": 0,
-      "position": 5.9
+      "position": 6.2
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-github/",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 164,
+      "ctr": 0,
+      "position": 8.6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-glasses/",
+      "clicks": 0,
+      "impressions": 1,
       "ctr": 0,
       "position": 9
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-google/",
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-graph/",
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 6.9
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-hardware/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-hbm/",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-helper/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-hierarchy/",
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 4.9
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-honor/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6.8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-hug/",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 9
     },
     {
-      "key": "https://aiagentmemory.org/articles/ai-memory-graph/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 7.3
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-hbm/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 7.5
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-hierarchy/",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 2.3
-    },
-    {
-      "key": "https://aiagentmemory.org/articles/ai-memory-honor/",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 8.5
-    },
-    {
       "key": "https://aiagentmemory.org/articles/ai-memory-is-sold-out/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 9,
       "ctr": 0,
-      "position": 8.5
+      "position": 8.3
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-issues/",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 103,
       "ctr": 0,
-      "position": 6.5
+      "position": 7.5
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-journal/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 1
+      "position": 4.5
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-memory-keeper/",
       "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-library/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-llm/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-long-term/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-market-share/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-market/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-matters/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-mem0/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-n8n/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-news/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-overclock/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-paper/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 2.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-penny-stocks/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-perfume-korea/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-photo/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-price-spike/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-problem/",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-stocks/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-memory-system-github/",
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 5.6
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-native-memory/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-necklace-that-remembers-everything/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-no-memory-lyrics/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-no-memory/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-on-memory/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-open-memory/",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 4.5
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-ram-expensive/",
+      "clicks": 0,
       "impressions": 5,
       "ctr": 0,
-      "position": 3.8
+      "position": 4.2
+    },
+    {
+      "key": "https://aiagentmemory.org/articles/ai-ram-hanuman/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
     },
     {
       "key": "https://aiagentmemory.org/articles/ai-that-remembers-conversations/",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 29,
       "ctr": 0,
-      "position": 6.3
+      "position": 6.6
     },
     {
       "key": "https://aiagentmemory.org/articles/memory-consolidation-ai-agents/",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 34,
       "ctr": 0,
-      "position": 4.3
+      "position": 5.0
     },
     {
       "key": "https://aiagentmemory.org/articles/rag-vs-agent-memory/",
       "clicks": 0,
-      "impressions": 199,
+      "impressions": 260,
       "ctr": 0,
-      "position": 4.9
+      "position": 5.0
     },
     {
       "key": "https://aiagentmemory.org/tags/agent-architectures/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 12.8
+      "position": 12.6
     },
     {
       "key": "https://aiagentmemory.org/tags/ai-agents/",
@@ -411,11 +719,25 @@
       "position": 8.7
     },
     {
+      "key": "https://aiagentmemory.org/tags/ai-chat/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
       "key": "https://aiagentmemory.org/tags/ai-memory/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 63
+      "position": 67.6
+    },
+    {
+      "key": "https://aiagentmemory.org/tags/ai-optimization/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
     },
     {
       "key": "https://aiagentmemory.org/tags/alternatives/",
@@ -434,9 +756,16 @@
     {
       "key": "https://aiagentmemory.org/tags/evaluation/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
-      "position": 15
+      "position": 11
+    },
+    {
+      "key": "https://aiagentmemory.org/tags/gigabyte/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "key": "https://aiagentmemory.org/tags/llm/",
@@ -448,16 +777,23 @@
     {
       "key": "https://aiagentmemory.org/tags/local-llm/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
       "position": 11
     },
     {
       "key": "https://aiagentmemory.org/tags/persistent-memory/",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 11,
       "ctr": 0,
-      "position": 61
+      "position": 61.7
+    },
+    {
+      "key": "https://aiagentmemory.org/tags/telegram/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
     },
     {
       "key": "https://aiagentmemory.org/tags/temporal-reasoning/",
@@ -467,11 +803,18 @@
       "position": 65
     },
     {
+      "key": "https://aiagentmemory.org/tags/wearable-ai/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
       "key": "https://aiagentmemory.org/tags/zep/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 7,
       "ctr": 0,
-      "position": 19
+      "position": 13.7
     }
   ],
   "queries": [
@@ -483,11 +826,32 @@
       "position": 5
     },
     {
-      "key": "\"cut rag processors\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "key": "what is agent memory",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 100,
+      "position": 16
+    },
+    {
+      "key": "\"crucial\" \"ram\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "key": "\"cut rag processors\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "key": "\"milvus\" \"database\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "key": "\"pinecone\" \"vector\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
@@ -499,12 +863,26 @@
     {
       "key": "\"recall.ai\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5
+      "position": 4.7
+    },
+    {
+      "key": "\"shorttermrecall\" \"llamaindex\"",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
     },
     {
       "key": "\"shorttermrecall\" llama_index",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "key": "\"shorttermrecall\" llamaindex",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
@@ -513,9 +891,9 @@
     {
       "key": "agent memory",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 11,
       "ctr": 0,
-      "position": 25.4
+      "position": 22.3
     },
     {
       "key": "agent memory architecture patterns",
@@ -527,16 +905,30 @@
     {
       "key": "agent memory management",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 49
+      "position": 37
     },
     {
       "key": "agent memory retrieval augmented generation rag",
       "clicks": 0,
-      "impressions": 80,
+      "impressions": 102,
       "ctr": 0,
-      "position": 3.4
+      "position": 3.3
+    },
+    {
+      "key": "agentic memory ai model agent",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "key": "ai accelerator hbm memory package",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
     },
     {
       "key": "ai agent architecture components tools memory planning",
@@ -548,16 +940,30 @@
     {
       "key": "ai agent architecture tools memory planning",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 9,
       "ctr": 0,
-      "position": 7.3
+      "position": 6.9
+    },
+    {
+      "key": "ai agent long-term memory architecture",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
     },
     {
       "key": "ai agent memory",
       "clicks": 0,
-      "impressions": 65,
+      "impressions": 94,
       "ctr": 0,
-      "position": 36
+      "position": 43.3
+    },
+    {
+      "key": "ai agent memory architecture 2025",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2.5
     },
     {
       "key": "ai agent memory architecture 2026",
@@ -574,6 +980,13 @@
       "position": 7
     },
     {
+      "key": "ai agent memory architecture patterns",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
       "key": "ai agent memory consolidation techniques",
       "clicks": 0,
       "impressions": 1,
@@ -581,11 +994,25 @@
       "position": 3
     },
     {
+      "key": "ai agent memory github",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
       "key": "ai agent memory management",
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
       "position": 23
+    },
+    {
+      "key": "ai agent memory management -site:youtube.com -site:reddit.com -site:x.com -site:twitter.com -site:facebook.com -site:instagram.com -site:tiktok.com -site:linkedin.com -site:pinterest.com -site:nytimes.com -site:wsj.com -site:yelp.com -site:rottentomatoes.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "key": "ai agent memory management 2026",
@@ -602,6 +1029,13 @@
       "position": 72
     },
     {
+      "key": "ai agent memory mechanisms",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
       "key": "ai agent memory retrieval augmented generation vs knowledge graph",
       "clicks": 0,
       "impressions": 3,
@@ -614,6 +1048,20 @@
       "impressions": 5,
       "ctr": 0,
       "position": 4
+    },
+    {
+      "key": "ai agent memory types short-term long-term episodic semantic procedural",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "key": "ai agent planning and reasoning",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
     },
     {
       "key": "ai agent tools memory planning",
@@ -630,18 +1078,102 @@
       "position": 5
     },
     {
-      "key": "ai chatbots with contextual memory and personalization",
+      "key": "ai chatbot with memory",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 4
+      "position": 49
+    },
+    {
+      "key": "ai chatbots with contextual memory and personalization",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "key": "ai conversation summarization techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "key": "ai memories honor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "key": "ai memory",
       "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 58.1
+    },
+    {
+      "key": "ai memory bottleneck",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 59
+      "position": 11
+    },
+    {
+      "key": "ai memory bubble",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "key": "ai memory consolidation techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "ai memory demand",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "key": "ai memory etf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "ai memory github",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "key": "ai memory misuse",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "key": "ai memory persistence risk",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "key": "ai memory technical principles",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     },
     {
       "key": "ai with long term memory",
@@ -651,11 +1183,32 @@
       "position": 35
     },
     {
+      "key": "aimemoryboostmodule",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
       "key": "best retrieval augmented generation strategies agent memory",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 7
+    },
+    {
+      "key": "chaotic semantic memory github",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 19.8
+    },
+    {
+      "key": "custom ai memory retrieval techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "key": "explain how retrieval-augmented generation changes when multiple agents share a common memory versus each holding private context.",
@@ -679,11 +1232,25 @@
       "position": 11
     },
     {
+      "key": "how does ai memory affect response time or performance?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
       "key": "how memory interacts with reasoning planning tool use in ai agents",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6.2
+      "position": 6.5
+    },
+    {
+      "key": "llamaindex.context shorttermrecall python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
     },
     {
       "key": "llm agent architecture tools memory planner",
@@ -700,11 +1267,32 @@
       "position": 9
     },
     {
+      "key": "llm long term memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
       "key": "llm memory architecture",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 5
+    },
+    {
+      "key": "long-term agent memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "key": "maintain clean and accurate ai memory stores",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
     },
     {
       "key": "mem0 alternatives",
@@ -716,30 +1304,58 @@
     {
       "key": "memory agent",
       "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 58.3
+    },
+    {
+      "key": "memory chips for artificial intelligence",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 50
+      "position": 23
+    },
+    {
+      "key": "memory developer",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
     },
     {
       "key": "memory in ai agents",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 73
+      "position": 73.2
+    },
+    {
+      "key": "memory prices ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "key": "memorybank ai agents",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "key": "persistent memory",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 78.3
+      "position": 76.4
     },
     {
       "key": "persistent memory for agents",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 65
+      "position": 59.8
     },
     {
       "key": "persistent memory for ai agents",
@@ -754,6 +1370,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 2
+    },
+    {
+      "key": "rag retrieval augmented generation new techniques 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "key": "temporal reasoning",
@@ -777,11 +1400,46 @@
       "position": 9
     },
     {
+      "key": "tidb agent memory",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "key": "trade-offs between accuracy throughput memory in ai systems",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
       "key": "we want to build memory for our customer service ai agents so they remember previous conversations. can we use a streaming topic as the persistent log for this context?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
       "position": 7
+    },
+    {
+      "key": "what major challenge can occur if ai systems lack sufficient ram",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "key": "why is ai making ram expensive",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "key": "why is ram so important for ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "key": "zep memory",
@@ -792,6 +1450,14 @@
     }
   ],
   "page_queries": [
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "what is agent memory",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 100,
+      "position": 16
+    },
     {
       "page": "https://aiagentmemory.org/articles/ai-memory-bank/",
       "query": "agent memory bank",
@@ -820,9 +1486,9 @@
       "page": "https://aiagentmemory.org/",
       "query": "ai agent memory",
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 52,
       "ctr": 0,
-      "position": 40.3
+      "position": 43.1
     },
     {
       "page": "https://aiagentmemory.org/",
@@ -842,19 +1508,27 @@
     },
     {
       "page": "https://aiagentmemory.org/",
+      "query": "ai memory",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "page": "https://aiagentmemory.org/",
       "query": "memory agent",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 50
+      "position": 41
     },
     {
       "page": "https://aiagentmemory.org/",
       "query": "memory in ai agents",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 73
+      "position": 73.2
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-architecture-patterns/",
@@ -879,6 +1553,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 7
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-architecture-patterns/",
+      "query": "ai agent memory architecture patterns",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-architecture-patterns/",
@@ -908,17 +1590,25 @@
       "page": "https://aiagentmemory.org/articles/ai-agent-chat-memory/",
       "query": "persistent memory for agents",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 73
+      "position": 71.5
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-chat-memory/",
       "query": "we want to build memory for our customer service ai agents so they remember previous conversations. can we use a streaming topic as the persistent log for this context?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
       "position": 7
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-long-term-memory/",
+      "query": "ai agent long-term memory architecture",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-long-term-memory/",
@@ -932,17 +1622,25 @@
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "query": "agent memory",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
-      "position": 17
+      "position": 15.2
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "agent memory management",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "query": "ai agent memory",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 48,
       "ctr": 0,
-      "position": 34.4
+      "position": 44.9
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
@@ -954,6 +1652,14 @@
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "ai agent memory mechanisms",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "query": "ai agent memory systems architecture",
       "clicks": 0,
       "impressions": 5,
@@ -962,19 +1668,43 @@
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "ai agent memory types short-term long-term episodic semantic procedural",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "long-term agent memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
+      "query": "memory agent",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "query": "memory in ai agents",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 78
+      "position": 78.7
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
       "query": "persistent memory for agents",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 65
+      "position": 64
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-memory-explained/",
@@ -988,9 +1718,17 @@
       "page": "https://aiagentmemory.org/articles/ai-agent-planning-memory/",
       "query": "ai agent architecture tools memory planning",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 9,
       "ctr": 0,
-      "position": 7.3
+      "position": 6.9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-agent-planning-memory/",
+      "query": "ai agent planning and reasoning",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-planning-memory/",
@@ -1004,17 +1742,17 @@
       "page": "https://aiagentmemory.org/articles/ai-agent-planning-memory/",
       "query": "how memory interacts with reasoning planning tool use in ai agents",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6.2
+      "position": 6.5
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-that-remembers/",
       "query": "ai agent memory",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 69.5
+      "position": 71.3
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-agent-that-remembers/",
@@ -1058,6 +1796,14 @@
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-chatbot-memory/",
+      "query": "ai chatbot with memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-chatbot-memory/",
       "query": "ai with long term memory",
       "clicks": 0,
       "impressions": 1,
@@ -1068,25 +1814,193 @@
       "page": "https://aiagentmemory.org/articles/ai-chatbot-that-remembers/",
       "query": "ai chatbots with contextual memory and personalization",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 4
+      "position": 5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-in-memory/",
+      "query": "ai agent memory",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 77.4
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-in-memory/",
       "query": "ai memory",
       "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 73.8
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bank/",
+      "query": "ai agent memory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 73.5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bank/",
+      "query": "ai memory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bank/",
+      "query": "memorybank ai agents",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 59
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bank/",
+      "query": "tidb agent memory",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-boost-module-gigabyte/",
+      "query": "aimemoryboostmodule",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bottleneck/",
+      "query": "ai memory bottleneck",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bottleneck/",
+      "query": "how does ai memory affect response time or performance?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bottleneck/",
+      "query": "what major challenge can occur if ai systems lack sufficient ram",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-bubble/",
+      "query": "ai memory bubble",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-chips/",
+      "query": "memory chips for artificial intelligence",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-demand/",
+      "query": "ai memory demand",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-design/",
+      "query": "ai agent memory architecture 2025",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-design/",
+      "query": "ai memory technical principles",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-design/",
+      "query": "custom ai memory retrieval techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-developer-job/",
+      "query": "memory developer",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-developer/",
+      "query": "ai agent memory architecture 2025",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-engine/",
+      "query": "\"shorttermrecall\" \"llamaindex\"",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-memory-engine/",
       "query": "\"shorttermrecall\" llama_index",
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-engine/",
+      "query": "\"shorttermrecall\" llamaindex",
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 11
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-etf/",
+      "query": "ai memory etf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-function/",
+      "query": "ai agent memory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64.5
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-memory-github/",
@@ -1098,6 +2012,30 @@
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-memory-github/",
+      "query": "ai agent memory github",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-github/",
+      "query": "ai memory github",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-github/",
+      "query": "chaotic semantic memory github",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 19.8
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-github/",
       "query": "github ai memory",
       "clicks": 0,
       "impressions": 1,
@@ -1105,12 +2043,44 @@
       "position": 41
     },
     {
-      "page": "https://aiagentmemory.org/articles/ai-memory-is-sold-out/",
-      "query": "\"cut rag processors\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "page": "https://aiagentmemory.org/articles/ai-memory-hbm/",
+      "query": "ai accelerator hbm memory package",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 8
+      "position": 10
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-honor/",
+      "query": "ai memories honor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-honor/",
+      "query": "rag retrieval augmented generation new techniques 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-is-sold-out/",
+      "query": "\"cut rag processors\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-is-sold-out/",
+      "query": "trade-offs between accuracy throughput memory in ai systems",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
     },
     {
       "page": "https://aiagentmemory.org/articles/ai-memory-issues/",
@@ -1121,6 +2091,22 @@
       "position": 6
     },
     {
+      "page": "https://aiagentmemory.org/articles/ai-memory-issues/",
+      "query": "ai memory misuse",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-issues/",
+      "query": "ai memory persistence risk",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
       "page": "https://aiagentmemory.org/articles/ai-memory-keeper/",
       "query": "\"recall.ai\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
       "clicks": 0,
@@ -1129,12 +2115,148 @@
       "position": 4
     },
     {
+      "page": "https://aiagentmemory.org/articles/ai-memory-keeper/",
+      "query": "maintain clean and accurate ai memory stores",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-library/",
+      "query": "ai agent memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-llm/",
+      "query": "llm long term memory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-mem0/",
+      "query": "agentic memory ai model agent",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-penny-stocks/",
+      "query": "\"recall.ai\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-price-spike/",
+      "query": "memory prices ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-system-github/",
+      "query": "\"shorttermrecall\" \"llamaindex\"",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-system-github/",
+      "query": "\"shorttermrecall\" llama_index",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-memory-system-github/",
+      "query": "llamaindex.context shorttermrecall python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-native-memory/",
+      "query": "ai agent memory architecture 2025",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-on-memory/",
+      "query": "ai agent memory management -site:youtube.com -site:reddit.com -site:x.com -site:twitter.com -site:facebook.com -site:instagram.com -site:tiktok.com -site:linkedin.com -site:pinterest.com -site:nytimes.com -site:wsj.com -site:yelp.com -site:rottentomatoes.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-open-memory/",
+      "query": "\"milvus\" \"database\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-ram-expensive/",
+      "query": "\"crucial\" \"ram\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-ram-expensive/",
+      "query": "why is ai making ram expensive",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-ram-expensive/",
+      "query": "why is ram so important for ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/ai-that-remembers-conversations/",
+      "query": "ai conversation summarization techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "https://aiagentmemory.org/articles/memory-consolidation-ai-agents/",
+      "query": "ai memory consolidation techniques",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
       "page": "https://aiagentmemory.org/articles/rag-vs-agent-memory/",
       "query": "agent memory retrieval augmented generation rag",
       "clicks": 0,
-      "impressions": 80,
+      "impressions": 102,
       "ctr": 0,
-      "position": 3.4
+      "position": 3.3
     },
     {
       "page": "https://aiagentmemory.org/articles/rag-vs-agent-memory/",
@@ -1196,9 +2318,9 @@
       "page": "https://aiagentmemory.org/tags/ai-memory/",
       "query": "memory in ai agents",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 83
+      "position": 83.8
     },
     {
       "page": "https://aiagentmemory.org/tags/alternatives/",
@@ -1212,17 +2334,17 @@
       "page": "https://aiagentmemory.org/tags/persistent-memory/",
       "query": "persistent memory",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 78.3
+      "position": 76.4
     },
     {
       "page": "https://aiagentmemory.org/tags/persistent-memory/",
       "query": "persistent memory for agents",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 78
+      "position": 66.7
     },
     {
       "page": "https://aiagentmemory.org/tags/persistent-memory/",
