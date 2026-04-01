@@ -33,6 +33,9 @@ faq:
 - question: How does memory consolidation improve AI agent consistency?
   answer: Memory consolidation improves AI agent consistency by transforming raw, potentially varied inputs into more stable, abstract representations. Techniques like summarization and hierarchical structuring
     ensure that the agent draws from a more unified and less contradictory knowledge base, leading to more predictable and reliable outputs, even when faced with semantically similar but distinct raw data.
+- question: What are the key techniques for memory consolidation in AI?
+  answer: Key techniques for memory consolidation in AI include summarization (abstractive and extractive), memory compression (e.g., vector quantization, knowledge distillation), and hierarchical memory
+    structures that organize information at different levels of abstraction. These methods transform raw data into more efficient and retrievable knowledge.
 slug: memory-consolidation-ai-agents
 ---
 

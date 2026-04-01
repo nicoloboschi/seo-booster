@@ -44,7 +44,11 @@ faq:
 - question: What are the benefits of AI chat memory for users?
   answer: AI chat memory offers significant benefits to users, including more natural and engaging conversations, personalized recommendations, reduced repetition of information, and a sense of continuity
     and understanding from the AI.
+- question: How does AI remember conversations in real-time?
+  answer: In real-time, AI chat memory primarily relies on its short-term memory, often managed by the LLM's context window. This allows it to recall recent messages and the immediate topic of discussion
+    to provide coherent responses within the current interaction.
 slug: ai-chat-memory
+---
 ---
 
 Imagine an AI that truly remembers your conversations. What if your chatbot could recall your preferences from last week, or even last year? This is the promise of **AI chat memory**.

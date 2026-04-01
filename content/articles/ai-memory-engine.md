@@ -39,6 +39,8 @@ faq:
 - question: How does LlamaIndex relate to AI memory engines?
   answer: LlamaIndex is a popular data framework for LLM applications that significantly aids in building AI memory engines by providing tools for data ingestion, indexing, and querying, especially for
     vector databases and RAG.
+- question: What are the key components of an AI memory engine?
+  answer: Key components include a data persistence layer, querying and retrieval mechanisms, information encoding and indexing, and memory management and consolidation.
 slug: ai-memory-engine
 ---
 
@@ -118,7 +120,7 @@ The presence of a powerful **AI memory engine** unlocks a new level of sophistic
 
 An **AI memory engine** allows agents to build a user profile over time, remembering preferences, past interactions, and individual needs. This leads to highly personalized experiences, where the AI feels more like a tailored assistant than a generic tool. This deep personalization is a hallmark of advanced **AI memory systems**.
 
-For example, an e-commerce AI could remember a user's past purchases, browsing history, and stated preferences to offer highly relevant product recommendations. This depth of understanding is impossible without a persistent memory managed by an effective **AI memory engine**. This is a key differentiator when comparing [agent memory vs RAG](/articles/rag-vs-agent-memory/).
+For example, an e-commerce AI could remember a user's past purchases, browsing history, and stated preferences to offer highly relevant product recommendations. This depth of understanding is impossible without a persistent memory managed by an effective **AI memory engine**. This is a key differentiator when comparing [agent memory vs RAG](/articles/agent-memory-vs-rag/).
 
 ### Continuous Learning and Adaptation
 
@@ -245,3 +247,5 @@ The future of **AI memory engines** points towards more integrated, adaptive, an
  Short-term recall refers to an AI agent's ability to quickly access and use recently processed or highly relevant information, often within the immediate context of a task or conversation. This is crucial for immediate responsiveness and task completion.
 * **How does LlamaIndex relate to AI memory engines?**
  LlamaIndex is a popular data framework for LLM applications that significantly aids in building AI memory engines by providing tools for data ingestion, indexing, and querying, especially for vector databases and RAG.
+* **What are the key components of an AI memory engine?**
+ Key components include a data persistence layer, querying and retrieval mechanisms, information encoding and indexing, and memory management and consolidation.

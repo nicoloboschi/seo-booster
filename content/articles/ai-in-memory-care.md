@@ -40,6 +40,9 @@ faq:
 - question: What are the benefits of AI for dementia patients?
   answer: AI offers numerous benefits for dementia patients, including enhanced safety through fall and wandering detection, improved cognitive function via engaging games and reminiscence therapy, increased
     independence through daily task support, and personalized care plans. It also provides valuable data insights for caregivers.
+- question: How does AI contribute to personalized care plans in memory care?
+  answer: AI analyzes data on an individual's behavior, health, and engagement to identify patterns and predict needs. This allows for the creation of highly tailored care plans that adapt to the resident's
+    evolving condition, ensuring more effective and personalized support.
 slug: ai-in-memory-care
 ---
 

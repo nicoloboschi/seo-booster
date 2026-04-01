@@ -228,14 +228,20 @@ As AI agents become more sophisticated, their memory capabilities will be the ke
 
 ## FAQ
 
-**Q1: What is the difference between short-term and long-term memory in AI?**
-A1: Short-term AI memory holds immediate, active information for current tasks, similar to human working memory. Long-term AI memory stores information persistently over extended periods, enabling recall of past experiences and learned knowledge, much like human long-term memory. This distinction is key to **ai memory explained**.
+**Q1: What is the primary function of AI memory?**
+A1: The primary function of AI memory is to store, organize, and retrieve information that an AI agent has encountered or learned. This enables the agent to recall past experiences, maintain context, and make informed decisions.
 
-**Q2: How do vector databases contribute to AI memory?**
-A2: Vector databases store numerical representations (embeddings) of data. They enable AI agents to perform fast, semantic similarity searches, retrieving relevant past information based on meaning rather than exact keywords, which is crucial for effective recall and a core part of **ai memory explained**.
+**Q2: How does AI memory differ from human memory?**
+A2: AI memory is typically more structured and data-driven, often relying on databases or vector stores. Human memory is biological, fluid, and prone to reconstruction, incorporating emotions and subjective experiences in ways AI memory currently does not.
 
-**Q3: Can AI agents remember conversations from the past?**
-A3: Yes, AI agents can be designed to remember conversations. This is typically achieved through long-term memory systems, often employing vector databases to store conversation logs and allow retrieval of past interactions for context and continuity. This capability is explored in articles about [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+**Q3: Can AI agents forget information?**
+A3: Yes, AI agents can be designed to forget information. This can happen through memory consolidation processes, data eviction based on relevance or age, or by overwriting older data with newer information, mimicking aspects of biological forgetting.
 
 **Q4: What are the main types of AI memory?**
 A4: The main types of AI memory include short-term memory (working memory) for active processing and long-term memory for persistent storage of knowledge and experiences. Within long-term memory, episodic memory stores specific events, and semantic memory stores general facts and concepts. Understanding these types is crucial for **ai memory explained**.
+
+**Q5: How do vector databases contribute to AI memory?**
+A5: Vector databases store numerical representations (embeddings) of data. They enable AI agents to perform fast, semantic similarity searches, retrieving relevant past information based on meaning rather than exact keywords, which is crucial for effective recall and a core part of **ai memory explained**.
+
+**Q6: Can AI agents remember conversations from the past?**
+A6: Yes, AI agents can be designed to remember conversations. This is typically achieved through long-term memory systems, often employing vector databases to store conversation logs and allow retrieval of past interactions for context and continuity. This capability is explored in articles about [AI that remembers conversations](/articles/ai-that-remembers-conversations/).

@@ -38,6 +38,9 @@ faq:
 - question: What is the difference between keyword search and semantic search in AI memory?
   answer: Keyword search relies on exact word matching, while semantic search, powered by embedding models, understands the meaning and context of queries, retrieving information based on conceptual similarity
     rather than just literal terms. This allows for more nuanced and relevant recall.
+- question: How do embedding models improve the performance of AI memory systems?
+  answer: Embedding models improve AI memory by converting unstructured data into numerical vectors that capture semantic meaning. This allows for more accurate and contextually relevant retrieval of information,
+    moving beyond simple keyword matching to understand the underlying intent and concepts.
 slug: embedding-models-for-memory
 ---
 

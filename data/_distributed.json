@@ -161,5 +161,275 @@
         "posted_at": "2026-04-01T10:44:23"
       }
     }
+  },
+  "ai-agent-planning-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb1b3e17e83a27977e20",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-planning-memory-enhancing-decision-making-reasoning-and-tool-use",
+        "posted_at": "2026-04-01T10:45:15"
+      }
+    }
+  },
+  "ai-agent-procedural-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb1f4bf2068989dc54ec",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-procedural-memory-how-agents-learn-skills",
+        "posted_at": "2026-04-01T10:45:19"
+      }
+    }
+  },
+  "ai-agent-simple-memory-n8n": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb234bf2068989dc54ee",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-simple-memory-in-n8n-a-practical-guide",
+        "posted_at": "2026-04-01T10:45:23"
+      }
+    }
+  },
+  "ai-agent-that-remembers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb270073c845cd4fd010",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agent-that-remembers-architectures-mechanisms-and-future-of-ai-memory",
+        "posted_at": "2026-04-01T10:45:27"
+      }
+    }
+  },
+  "ai-agents-examples": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb2b3606212f3cba0de5",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agents-examples-real-world-applications-and-architectures",
+        "posted_at": "2026-04-01T10:45:31"
+      }
+    }
+  },
+  "ai-agents-memory-storage-memori-gibsonai": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb2fbfc981fc97167331",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agents-memory-storage-understanding-memori-and-gibsonai-concepts",
+        "posted_at": "2026-04-01T10:45:35"
+      }
+    }
+  },
+  "ai-agents-memory-types": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb330073c845cd4fd012",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agents-differentiating-long-term-and-short-term-memory",
+        "posted_at": "2026-04-01T10:45:39"
+      }
+    }
+  },
+  "ai-agents-need-memory-control-over-more-context": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb370073c845cd4fd014",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agents-need-memory-control-over-more-context",
+        "posted_at": "2026-04-01T10:45:43"
+      }
+    }
+  },
+  "ai-ai-delas-alas-height": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb3a0073c845cd4fd016",
+        "url": "https://aiagentmemory.hashnode.dev/ai-ai-delas-alas-height-unpacking-the-search-phenomenon",
+        "posted_at": "2026-04-01T10:45:46"
+      }
+    }
+  },
+  "ai-and-long-term-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb3e0073c845cd4fd018",
+        "url": "https://aiagentmemory.hashnode.dev/ai-and-long-term-memory-enabling-persistent-agent-recall",
+        "posted_at": "2026-04-01T10:45:50"
+      }
+    }
+  },
+  "ai-and-memory-wall": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb423e17e83a27977e22",
+        "url": "https://aiagentmemory.hashnode.dev/breaking-the-ai-and-memory-wall-architectures-for-persistent-ai-recall",
+        "posted_at": "2026-04-01T10:45:54"
+      }
+    }
+  },
+  "ai-app-that-remembers-everything": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb463e17e83a27977e24",
+        "url": "https://aiagentmemory.hashnode.dev/ai-app-that-remembers-everything-capabilities-and-limitations",
+        "posted_at": "2026-04-01T10:45:58"
+      }
+    }
+  },
+  "ai-apps-to-talk-to": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb4abfc981fc97167333",
+        "url": "https://aiagentmemory.hashnode.dev/ai-apps-to-talk-to-features-capabilities-and-future",
+        "posted_at": "2026-04-01T10:46:02"
+      }
+    }
+  },
+  "ai-assistant-remembers-everything": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb4e5a0c2fac1a0ebd70",
+        "url": "https://aiagentmemory.hashnode.dev/ai-assistant-that-remembers-everything-architectures-and-technologies",
+        "posted_at": "2026-04-01T10:46:06"
+      }
+    }
+  },
+  "ai-chat-best-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb514bf2068989dc54f0",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-best-memory-enhancing-conversational-recall",
+        "posted_at": "2026-04-01T10:46:09"
+      }
+    }
+  },
+  "ai-chat-bot-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb553e17e83a27977e26",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-bot-memory-enabling-persistent-conversations",
+        "posted_at": "2026-04-01T10:46:13"
+      }
+    }
+  },
+  "ai-chat-good-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb59bfc981fc97167335",
+        "url": "https://aiagentmemory.hashnode.dev/how-to-give-ai-chat-a-good-memory",
+        "posted_at": "2026-04-01T10:46:17"
+      }
+    }
+  },
+  "ai-chat-infinite-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb5d3606212f3cba0de7",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-infinite-memory-beyond-context-windows",
+        "posted_at": "2026-04-01T10:46:21"
+      }
+    }
+  },
+  "ai-chat-long-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb61bfc981fc97167337",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-long-memory-enabling-persistent-contextual-conversations",
+        "posted_at": "2026-04-01T10:46:25"
+      }
+    }
+  },
+  "ai-chat-memory-reddit": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb65f28d684defb3529e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-memory-reddit-unpacking-user-questions-on-persistent-conversations-solutions",
+        "posted_at": "2026-04-01T10:46:29"
+      }
+    }
+  },
+  "ai-chat-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb69f28d684defb352a0",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-memory-how-conversational-ai-remembers-your-conversations",
+        "posted_at": "2026-04-01T10:46:33"
+      }
+    }
+  },
+  "ai-chat-permanent-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb6df28d684defb352a2",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-permanent-memory-enabling-long-term-recall",
+        "posted_at": "2026-04-01T10:46:37"
+      }
+    }
+  },
+  "ai-chat-that-remembers-everything-free": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb71f28d684defb352a4",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-that-remembers-everything-free-your-definitive-guide",
+        "posted_at": "2026-04-01T10:46:41"
+      }
+    }
+  },
+  "ai-chat-that-remembers-everything": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb754cc00c47f43b63e3",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chat-that-remembers-everything-building-persistent-conversations",
+        "posted_at": "2026-04-01T10:46:45"
+      }
+    }
+  },
+  "ai-chatbot-best-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb794bf2068989dc54f2",
+        "url": "https://aiagentmemory.hashnode.dev/unlocking-ai-chatbot-best-memory-architectures-and-techniques",
+        "posted_at": "2026-04-01T10:46:49"
+      }
+    }
+  },
+  "ai-chatbot-for-customer-service": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb7d0073c845cd4fd01a",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-for-customer-service-revolutionizing-support",
+        "posted_at": "2026-04-01T10:46:53"
+      }
+    }
+  },
+  "ai-chatbot-good-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb800073c845cd4fd01c",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-good-memory-architectures-for-enhanced-recall",
+        "posted_at": "2026-04-01T10:46:56"
+      }
+    }
+  },
+  "ai-chatbot-infinite-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb844bf2068989dc54f4",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-infinite-memory-overcoming-limitations-for-seamless-conversations",
+        "posted_at": "2026-04-01T10:47:00"
+      }
+    }
+  },
+  "ai-chatbot-long-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb88bfc981fc97167339",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-long-memory-enabling-persistent-conversations",
+        "posted_at": "2026-04-01T10:47:04"
+      }
+    }
+  },
+  "ai-chatbot-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69ccdb8c4cc00c47f43b63e5",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-memory-enabling-lifelong-conversations-with-persistent-recall",
+        "posted_at": "2026-04-01T10:47:08"
+      }
+    }
   }
 }

@@ -8,12 +8,20 @@ tags:
 - AI agents
 - LLMs
 - memory limitations
+- AI recall
+- AI forgetting
+- RAG
+- agent memory
 keywords:
 - ai memory problem
 - agent memory limitations
 - LLM memory
 - AI recall
 - AI forgetting
+- RAG for AI memory
+- AI long-term memory
+- AI context window
+- AI memory solutions
 faq:
 - question: What are the main reasons for the AI memory problem?
   answer: The primary reasons include the finite context window of LLMs, which limits immediate recall; the computational cost and complexity of storing and searching vast amounts of data for long-term
@@ -24,6 +32,9 @@ faq:
 - question: Can AI agents remember conversations like humans do?
   answer: Current AI agents can be designed to remember conversations for extended periods using techniques like episodic memory storage and RAG. While they don't 'remember' in the subjective, biological
     sense, they can be engineered to store, retrieve, and act upon conversational history with increasing fidelity, mimicking aspects of human recall and addressing the ai memory problem.
+- question: What is the "catastrophic forgetting" phenomenon in AI?
+  answer: Catastrophic forgetting occurs when an AI model, particularly in sequential learning tasks, loses previously learned information as it acquires new knowledge. This is a significant challenge in
+    building AI systems that can learn continuously and is a key aspect of the ai memory problem.
 slug: ai-memory-problem
 ---
 
@@ -32,7 +43,7 @@ Could an AI truly forget a crucial piece of information it learned yesterday, ev
 
 ## What is the AI Memory Problem?
 
-The **ai memory problem** describes the inherent limitations in how AI systems, especially large language models (LLMs), store, retrieve, and use information over extended periods. This challenges their ability to learn continuously, maintain context in long interactions, and exhibit consistent, informed behavior.
+The **ai memory problem** describes the inherent limitations in how AI systems, especially large language models (LLMs), store, retrieve, and use information over extended periods. This challenges their ability to learn continuously, maintain context in long interactions, and exhibit consistent, informed behavior. Understanding **agent memory limitations** is crucial for advancing AI.
 
 ### Core Challenges of AI Memory
 

@@ -39,6 +39,9 @@ faq:
 - question: How do vector databases contribute to AI memory in Google's systems?
   answer: Vector databases store information as numerical embeddings that capture semantic meaning. This allows Google's AI to perform fast, efficient similarity searches, crucial for retrieving relevant
     memories and understanding context.
+- question: What are the key challenges in developing AI memory for Google?
+  answer: Key challenges include ensuring scalability and efficiency for vast datasets, implementing intelligent forgetting and memory consolidation, balancing personalization with user privacy, and developing
+    robust temporal reasoning capabilities.
 slug: ai-memory-google
 ---
 

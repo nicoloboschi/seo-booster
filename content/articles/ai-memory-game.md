@@ -22,6 +22,23 @@ keywords:
 - AI agent memory
 - AI recall
 - temporal reasoning in AI
+- AI memory benchmarks
+- AI memory management
+- AI memory scalability
+- AI memory challenges
+- AI memory architecture
+- AI memory consolidation
+- AI memory forgetting
+- AI memory bias
+- AI memory evaluation
+- AI memory systems
+- AI recall
+- agent memory
+- machine learning
+- memory systems
+- AI memory game
+- AI recall
+- temporal reasoning in AI
 faq:
 - question: What is the AI memory game?
   answer: The AI memory game is a conceptual framework and technical challenge focused on engineering AI agents to effectively store, retrieve, and utilize information. It explores how artificial intelligence
@@ -44,6 +61,9 @@ faq:
 - question: What is temporal reasoning in AI memory?
   answer: Temporal reasoning in AI memory refers to an agent's ability to understand and process information related to time, including the order of events, durations, and temporal relationships. This is
     crucial for episodic memory, enabling AI to reconstruct event timelines and understand causality.
+- question: What are the main challenges in AI memory development?
+  answer: Key challenges include ensuring **scalability and efficiency** for large datasets, managing **relevance and forgetting**, preventing **catastrophic forgetting** in neural networks, and mitigating
+    **bias in memory** to ensure fair AI recall.
 slug: ai-memory-game
 ---
 
