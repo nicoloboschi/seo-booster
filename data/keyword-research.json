@@ -4018,28 +4018,182 @@
       "matching_suggestions": [
         "first husband of ai ai delas alas"
       ]
+    },
+    {
+      "keyword": "flipped ai chat long term memory",
+      "slug": "flipped-ai-chat-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "flipped ai chat long term memory"
+      ]
+    },
+    {
+      "keyword": "flipped ai long term memory",
+      "slug": "flipped-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "flipped ai long term memory"
+      ]
+    },
+    {
+      "keyword": "free ai that remembers",
+      "slug": "free-ai-that-remembers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "free ai that remembers"
+      ]
+    },
+    {
+      "keyword": "gemini ai long term memory",
+      "slug": "gemini-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "gemini ai long term memory"
+      ]
+    },
+    {
+      "keyword": "gemini chatbot memory",
+      "slug": "gemini-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "gemini chatbot memory"
+      ]
+    },
+    {
+      "keyword": "giving a long term memory",
+      "slug": "giving-a-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "giving a long term memory"
+      ]
+    },
+    {
+      "keyword": "golden memory ram review",
+      "slug": "golden-memory-ram-review",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "golden memory ram review"
+      ]
+    },
+    {
+      "keyword": "good memory ai chat",
+      "slug": "good-memory-ai-chat",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "good memory ai chat",
+        "good memory ai chatbot"
+      ]
+    },
+    {
+      "keyword": "good memory ai chatbot",
+      "slug": "good-memory-ai-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "good memory ai chatbot"
+      ]
+    },
+    {
+      "keyword": "google long term memory ai",
+      "slug": "google-long-term-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google long term memory ai"
+      ]
+    },
+    {
+      "keyword": "google titans give ai human-like memory",
+      "slug": "google-titans-give-ai-human-like-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google titans give ai human-like memory"
+      ]
+    },
+    {
+      "keyword": "graffiti ai that remembers stuff",
+      "slug": "graffiti-ai-that-remembers-stuff",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "graffiti ai that remembers stuff"
+      ]
+    },
+    {
+      "keyword": "helping ai have long term memory",
+      "slug": "helping-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "helping ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "high context window llm",
+      "slug": "high-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "high context window llm"
+      ]
+    },
+    {
+      "keyword": "highest context window llm",
+      "slug": "highest-context-window-llm",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "highest context window llm",
+        "highest context window llm free"
+      ]
+    },
+    {
+      "keyword": "highest context window llm free",
+      "slug": "highest-context-window-llm-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "highest context window llm free"
+      ]
+    },
+    {
+      "keyword": "how ai remembers",
+      "slug": "how-ai-remembers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how ai remembers"
+      ]
+    },
+    {
+      "keyword": "how are long term memories stored in the brain",
+      "slug": "how-are-long-term-memories-stored-in-the-brain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how are long term memories stored in the brain"
+      ]
+    },
+    {
+      "keyword": "how does ai memory work",
+      "slug": "how-does-ai-memory-work",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how does ai memory work"
+      ]
     }
   ],
   "new_opportunities": [
-    "flipped ai chat long term memory",
-    "flipped ai long term memory",
-    "free ai that remembers",
-    "gemini ai long term memory",
-    "gemini chatbot memory",
-    "giving a long term memory",
-    "golden memory ram review",
-    "good memory ai chat",
-    "good memory ai chatbot",
-    "google long term memory ai",
-    "google titans give ai human-like memory",
-    "graffiti ai that remembers stuff",
-    "helping ai have long term memory",
-    "high context window llm",
-    "highest context window llm",
-    "highest context window llm free",
-    "how ai remembers",
-    "how are long term memories stored in the brain",
-    "how does ai memory work",
     "how does chatbot memory work",
     "how does long term memory work in ai",
     "how images are stored in memory",
@@ -4540,9 +4694,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 391,
-    "validated": 384,
+    "total_keywords": 410,
+    "validated": 403,
     "low_volume": 7,
-    "new_opportunities_found": 517
+    "new_opportunities_found": 498
   }
 }
