@@ -3700,26 +3700,164 @@
       "matching_suggestions": [
         "context window of llm models"
       ]
+    },
+    {
+      "keyword": "context window per llm",
+      "slug": "context-window-per-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window per llm"
+      ]
+    },
+    {
+      "keyword": "context window size in llm",
+      "slug": "context-window-size-in-llm",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "context window size in llm",
+        "what is context window size in llm"
+      ]
+    },
+    {
+      "keyword": "context window size llm comparison",
+      "slug": "context-window-size-llm-comparison",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window size llm comparison"
+      ]
+    },
+    {
+      "keyword": "context window size of llm",
+      "slug": "context-window-size-of-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window size of llm"
+      ]
+    },
+    {
+      "keyword": "crewai long term memory",
+      "slug": "crewai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "crewai long term memory"
+      ]
+    },
+    {
+      "keyword": "crushon ai long term memory",
+      "slug": "crushon-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "crushon ai long term memory"
+      ]
+    },
+    {
+      "keyword": "custom ai agent with memory",
+      "slug": "custom-ai-agent-with-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "custom ai agent with memory",
+        "custom ai agent with memory github"
+      ]
+    },
+    {
+      "keyword": "custom ai agent with memory github",
+      "slug": "custom-ai-agent-with-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "custom ai agent with memory github"
+      ]
+    },
+    {
+      "keyword": "debuts ai powered memory agent features",
+      "slug": "debuts-ai-powered-memory-agent-features",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "debuts ai powered memory agent features"
+      ]
+    },
+    {
+      "keyword": "deeplearning ai long term agentic memory with langgraph",
+      "slug": "deeplearning-ai-long-term-agentic-memory-with-langgraph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deeplearning ai long term agentic memory with langgraph"
+      ]
+    },
+    {
+      "keyword": "deeplearning.ai long term memory",
+      "slug": "deeplearning-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deeplearning.ai long term memory"
+      ]
+    },
+    {
+      "keyword": "deepseek ai agent telegram long term memory",
+      "slug": "deepseek-ai-agent-telegram-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deepseek ai agent telegram long term memory"
+      ]
+    },
+    {
+      "keyword": "deepseek llm context window",
+      "slug": "deepseek-llm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deepseek llm context window"
+      ]
+    },
+    {
+      "keyword": "deepseek llm.memory",
+      "slug": "deepseek-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deepseek llm.memory"
+      ]
+    },
+    {
+      "keyword": "difference between chatbot and ai chatbot",
+      "slug": "difference-between-chatbot-and-ai-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "difference between chatbot and ai chatbot"
+      ]
+    },
+    {
+      "keyword": "dify chatbot memory",
+      "slug": "dify-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "dify chatbot memory"
+      ]
+    },
+    {
+      "keyword": "dify llm node memory",
+      "slug": "dify-llm-node-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "dify llm node memory"
+      ]
     }
   ],
   "new_opportunities": [
-    "context window per llm",
-    "context window size in llm",
-    "context window size llm comparison",
-    "context window size of llm",
-    "crewai long term memory",
-    "crushon ai long term memory",
-    "custom ai agent with memory",
-    "custom ai agent with memory github",
-    "debuts ai powered memory agent features",
-    "deeplearning ai long term agentic memory with langgraph",
-    "deeplearning.ai long term memory",
-    "deepseek ai agent telegram long term memory",
-    "deepseek llm context window",
-    "deepseek llm.memory",
-    "difference between chatbot and ai chatbot",
-    "dify chatbot memory",
-    "dify llm node memory",
     "do ai agents have memory",
     "do ai robots have feelings",
     "does ai have long term memory",
@@ -4156,7 +4294,6 @@
     "what is chatbot memory",
     "what is context memory in llm",
     "what is context window llm",
-    "what is context window size in llm",
     "what is conversation ai",
     "what is in memory vector database",
     "what is intelligent agent in artificial intelligence",
@@ -4259,9 +4396,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 356,
-    "validated": 349,
+    "total_keywords": 373,
+    "validated": 366,
     "low_volume": 7,
-    "new_opportunities_found": 554
+    "new_opportunities_found": 536
   }
 }
