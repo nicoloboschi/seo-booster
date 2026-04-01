@@ -2267,5 +2267,29 @@
     "generated_at": "2026-04-01T06:06:23.199117",
     "sources": [],
     "quality_score": 65
+  },
+  "does-c-ai-have-long-term-memory": {
+    "keyword": "does c.ai have long term memory",
+    "generated_at": "2026-04-01T08:07:57.853934",
+    "sources": [],
+    "quality_score": 55
+  },
+  "does-character-ai-have-long-term-memory": {
+    "keyword": "does character.ai have long term memory",
+    "generated_at": "2026-04-01T08:08:40.547999",
+    "sources": [],
+    "quality_score": 55
+  },
+  "does-claude-ai-have-long-term-memory": {
+    "keyword": "does claude ai have long term memory",
+    "generated_at": "2026-04-01T08:09:08.385777",
+    "sources": [],
+    "quality_score": 65
+  },
+  "does-llm-have-memory": {
+    "keyword": "does llm have memory",
+    "generated_at": "2026-04-01T08:09:54.146520",
+    "sources": [],
+    "quality_score": 65
   }
 }
