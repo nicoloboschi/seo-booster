@@ -4302,29 +4302,182 @@
       "matching_suggestions": [
         "how to free up chatgpt memory"
       ]
+    },
+    {
+      "keyword": "agent framework agent memory",
+      "slug": "agent-framework-agent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "agent framework agent memory"
+      ]
+    },
+    {
+      "keyword": "ai agents agentic memory part 9",
+      "slug": "ai-agents-agentic-memory-part-9",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agents agentic memory part 9"
+      ]
+    },
+    {
+      "keyword": "ai coding agent memory",
+      "slug": "ai-coding-agent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai coding agent memory"
+      ]
+    },
+    {
+      "keyword": "ai girl memory",
+      "slug": "ai-girl-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai girl memory"
+      ]
+    },
+    {
+      "keyword": "ai memory dram",
+      "slug": "ai-memory-dram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory dram"
+      ]
+    },
+    {
+      "keyword": "ai memory free",
+      "slug": "ai-memory-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory free"
+      ]
+    },
+    {
+      "keyword": "ai memory hackathon",
+      "slug": "ai-memory-hackathon",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory hackathon"
+      ]
+    },
+    {
+      "keyword": "ai memory lab",
+      "slug": "ai-memory-lab",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory lab"
+      ]
+    },
+    {
+      "keyword": "ai memory learning",
+      "slug": "ai-memory-learning",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory learning"
+      ]
+    },
+    {
+      "keyword": "ai memory options",
+      "slug": "ai-memory-options",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory options"
+      ]
+    },
+    {
+      "keyword": "artificial intelligence memory her",
+      "slug": "artificial-intelligence-memory-her",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "artificial intelligence memory her"
+      ]
+    },
+    {
+      "keyword": "best ai memory framework",
+      "slug": "best-ai-memory-framework",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai memory framework",
+        "best ai memory framework"
+      ]
+    },
+    {
+      "keyword": "best ai that has memory",
+      "slug": "best-ai-that-has-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai that has memory"
+      ]
+    },
+    {
+      "keyword": "best memory character ai",
+      "slug": "best-memory-character-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory character ai"
+      ]
+    },
+    {
+      "keyword": "best open source llm memory",
+      "slug": "best-open-source-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best open source llm memory"
+      ]
+    },
+    {
+      "keyword": "building llm memory from scratch",
+      "slug": "building-llm-memory-from-scratch",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "building llm memory from scratch"
+      ]
+    },
+    {
+      "keyword": "chatbot with infinite memory",
+      "slug": "chatbot-with-infinite-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with infinite memory"
+      ]
+    },
+    {
+      "keyword": "context window for local llm",
+      "slug": "context-window-for-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window for local llm"
+      ]
+    },
+    {
+      "keyword": "context window problem llm",
+      "slug": "context-window-problem-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window problem llm"
+      ]
     }
   ],
   "new_opportunities": [
-    "agent framework agent memory",
-    "ai agents agentic memory part 9",
-    "ai coding agent memory",
-    "ai girl memory",
     "ai long term.memory github",
-    "ai memory dram",
-    "ai memory free",
-    "ai memory hackathon",
-    "ai memory lab",
-    "ai memory learning",
-    "ai memory options",
-    "artificial intelligence memory her",
-    "best ai memory framework",
-    "best ai that has memory",
-    "best memory character ai",
-    "best open source llm memory",
-    "building llm memory from scratch",
-    "chatbot with infinite memory",
-    "context window for local llm",
-    "context window problem llm",
     "conversational ai chatbot companies",
     "cosa significa context window negli llm",
     "does local llm have memory",
@@ -4814,9 +4967,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 428,
-    "validated": 393,
+    "total_keywords": 447,
+    "validated": 412,
     "low_volume": 35,
-    "new_opportunities_found": 507
+    "new_opportunities_found": 488
   }
 }
