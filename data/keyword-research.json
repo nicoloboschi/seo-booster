@@ -4474,25 +4474,147 @@
       "matching_suggestions": [
         "context window problem llm"
       ]
+    },
+    {
+      "keyword": "conversational ai chatbot companies",
+      "slug": "conversational-ai-chatbot-companies",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "conversational ai chatbot companies"
+      ]
+    },
+    {
+      "keyword": "cosa significa context window negli llm",
+      "slug": "cosa-significa-context-window-negli-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "cosa significa context window negli llm"
+      ]
+    },
+    {
+      "keyword": "does local llm have memory",
+      "slug": "does-local-llm-have-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does local llm have memory"
+      ]
+    },
+    {
+      "keyword": "graphiti zep memory",
+      "slug": "graphiti-zep-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "graphiti zep memory"
+      ]
+    },
+    {
+      "keyword": "hindsight llm memory",
+      "slug": "hindsight-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "hindsight llm memory"
+      ]
+    },
+    {
+      "keyword": "how to get memory better",
+      "slug": "how-to-get-memory-better",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to get memory better"
+      ]
+    },
+    {
+      "keyword": "how to give ai agents memory",
+      "slug": "how-to-give-ai-agents-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give ai agents memory",
+        "how to give ai agents memory"
+      ]
+    },
+    {
+      "keyword": "how to give ai long term memory",
+      "slug": "how-to-give-ai-long-term-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give ai long term memory",
+        "how to give ai long term memory"
+      ]
+    },
+    {
+      "keyword": "how to give chatgpt memory",
+      "slug": "how-to-give-chatgpt-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give chatgpt memory"
+      ]
+    },
+    {
+      "keyword": "how to give llm memory",
+      "slug": "how-to-give-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give llm memory"
+      ]
+    },
+    {
+      "keyword": "how to give local llm memory",
+      "slug": "how-to-give-local-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give local llm memory"
+      ]
+    },
+    {
+      "keyword": "how to implement llm memory",
+      "slug": "how-to-implement-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to implement llm memory"
+      ]
+    },
+    {
+      "keyword": "how to improve brain memory",
+      "slug": "how-to-improve-brain-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve brain memory"
+      ]
+    },
+    {
+      "keyword": "how to improve character ai memory",
+      "slug": "how-to-improve-character-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve character ai memory"
+      ]
+    },
+    {
+      "keyword": "how to improve janitor ai memory",
+      "slug": "how-to-improve-janitor-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve janitor ai memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "conversational ai chatbot companies",
-    "cosa significa context window negli llm",
-    "does local llm have memory",
-    "graphiti zep memory",
-    "hindsight llm memory",
-    "how to get memory better",
-    "how to give ai agents memory",
-    "how to give ai long term memory",
-    "how to give chatgpt memory",
-    "how to give llm memory",
-    "how to give local llm memory",
-    "how to implement llm memory",
-    "how to improve brain memory",
-    "how to improve character ai memory",
-    "how to improve janitor ai memory",
     "how to improve llm memory",
     "how to increase llm memory",
     "how to learn memory techniques",
@@ -4967,9 +5089,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 447,
-    "validated": 412,
+    "total_keywords": 462,
+    "validated": 427,
     "low_volume": 35,
-    "new_opportunities_found": 488
+    "new_opportunities_found": 473
   }
 }

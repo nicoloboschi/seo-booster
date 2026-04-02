@@ -1,5 +1,5 @@
 ---
-title: "Gemini Chatbot Memory: Understanding How Google''s AI Remembers"
+title: 'Gemini Chatbot Memory: Understanding How Google''''s AI Remembers'
 description: 'Gemini Chatbot Memory: Understanding How Google''s AI Remembers. Learn about gemini chatbot memory, Gemini AI memory with practical examples, code snippets, and ar...'
 date: 2026-04-01
 lastmod: 2026-04-01

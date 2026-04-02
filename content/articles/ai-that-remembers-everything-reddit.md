@@ -1,5 +1,5 @@
 ---
-title: "AI That Remembers Everything: Reddit''s Obsession Explained"
+title: 'AI That Remembers Everything: Reddit''''s Obsession Explained'
 description: Explore the concept of an AI that remembers everything, its feasibility, and why it's a hot topic on Reddit. Understand memory systems for AI.
 date: 2026-03-29
 lastmod: 2026-03-29
