@@ -49,6 +49,7 @@ faq:
     often powered by embedding models and vector databases.
 slug: ai-ram-hanuman
 ---
+---
 
 AI RAM Hanuman conceptually represents the rapid and efficient memory recall capabilities of AI agents, akin to the legendary Hanuman's speed and memory. It signifies swift, precise access to knowledge, enabling intelligent systems to retrieve information instantly for complex tasks. This concept highlights the goal of making an AI's internal knowledge as accessible as human intuition.
 
