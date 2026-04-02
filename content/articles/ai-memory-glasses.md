@@ -1,7 +1,22 @@
 ---
-
-AI memory glasses are wearable devices that act as an external memory, continuously recording and processing user experiences to enable instant recall of past events and information. These smart glasses aim to offload the burden of remembering, making information accessible on demand and augmenting human recall.
-
+title: 'AI Memory Glasses: Wearable Technology for Instant Recall and Augmented Memory'
+description: 'AI memory glasses are wearable devices that act as an external memory, continuously recording and processing user experiences to enable instant recall of past events and information.'
+date: 2026-03-28
+lastmod: 2026-03-28
+tags:
+- AI memory
+- wearable technology
+- AI glasses
+- augmented memory
+- personal AI
+keywords:
+- ai memory glasses
+- wearable AI memory
+- smart glasses memory
+- AI recall wearable
+- augmented human memory
+- memory glasses AI
+slug: ai-memory-glasses
 ---
 ## What are AI Memory Glasses?
 

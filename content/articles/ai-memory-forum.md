@@ -62,7 +62,8 @@ faq:
   answer: Effective **AI memory** is crucial for **AI reasoning**. It allows agents to access past experiences, learned knowledge, and contextual information to make informed decisions, solve complex problems,
     and engage in multi-step thought processes. An **AI memory forum** often delves into how memory systems enhance an agent's reasoning capabilities.
 - question: What are AI memory benchmarks and why are they important?
-  answer: **AI memory benchmarks** are standardized tests and metrics used to evaluate the performance and effectiveness of different AI memory systems. They are crucial for comparing approaches, identifying strengths and weaknesses, and driving progress in the field of **agent recall** and **long-term memory AI**. Discussions about these benchmarks are common in an **AI memory forum**.
+  answer: '**AI memory benchmarks** are standardized tests and metrics used to evaluate the performance and effectiveness of different AI memory systems. They are crucial for comparing approaches, identifying
+    strengths and weaknesses, and driving progress in the field of **agent recall** and **long-term memory AI**. Discussions about these benchmarks are common in an **AI memory forum**.'
 slug: ai-memory-forum
 ---
 

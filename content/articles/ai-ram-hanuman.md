@@ -1,5 +1,5 @@
 ---
-title: 'AI RAM Hanuman: Understanding AI's Rapid Recall and Memory'
+title: "AI RAM Hanuman: Understanding AI's Rapid Recall and Memory"
 description: Explore AI RAM Hanuman, a concept representing rapid AI memory access. Learn how it enables intelligent agents to recall information swiftly for better performance.
 date: 2026-03-29
 lastmod: 2026-03-29
