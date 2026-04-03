@@ -580,7 +580,7 @@
         "llm memory management",
         "llm memory management github",
         "llm memory management tools",
-        "llm memory system"
+        "llm memory systems"
       ]
     },
     {
@@ -2369,11 +2369,9 @@
     {
       "keyword": "ai ram in news",
       "slug": "ai-ram-in-news",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai ram in news"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai ram initiative",
@@ -4121,11 +4119,9 @@
     {
       "keyword": "how are long term memories stored in the brain",
       "slug": "how-are-long-term-memories-stored-in-the-brain",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how are long term memories stored in the brain"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how does ai memory work",
@@ -4700,9 +4696,10 @@
     {
       "keyword": "how to memory",
       "slug": "how-to-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "how to memory",
         "how to memory"
       ]
     },
@@ -4923,29 +4920,149 @@
       "matching_suggestions": [
         "input context window llm"
       ]
+    },
+    {
+      "keyword": "ai agent local memory",
+      "slug": "ai-agent-local-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent local memory"
+      ]
+    },
+    {
+      "keyword": "ai memory booster",
+      "slug": "ai-memory-booster",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory booster"
+      ]
+    },
+    {
+      "keyword": "ai memory gap",
+      "slug": "ai-memory-gap",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory gap"
+      ]
+    },
+    {
+      "keyword": "ai memory generator",
+      "slug": "ai-memory-generator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory generator"
+      ]
+    },
+    {
+      "keyword": "ai memory palace",
+      "slug": "ai-memory-palace",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory palace"
+      ]
+    },
+    {
+      "keyword": "ai memory prompt",
+      "slug": "ai-memory-prompt",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory prompt"
+      ]
+    },
+    {
+      "keyword": "ai memory systems",
+      "slug": "ai-memory-systems",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory systems",
+        "ai memory systems"
+      ]
+    },
+    {
+      "keyword": "ai that remembers chats",
+      "slug": "ai-that-remembers-chats",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that remembers chats"
+      ]
+    },
+    {
+      "keyword": "anything llm persistent memory",
+      "slug": "anything-llm-persistent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "anything llm persistent memory"
+      ]
+    },
+    {
+      "keyword": "best llm for mem0",
+      "slug": "best-llm-for-mem0",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best llm for mem0"
+      ]
+    },
+    {
+      "keyword": "best memory system for ai",
+      "slug": "best-memory-system-for-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory system for ai"
+      ]
+    },
+    {
+      "keyword": "how to increase memory in illustrator",
+      "slug": "how-to-increase-memory-in-illustrator",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "is ai actually intelligent",
+      "slug": "is-ai-actually-intelligent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai actually intelligent"
+      ]
+    },
+    {
+      "keyword": "is ai finally closing in on human intelligence",
+      "slug": "is-ai-finally-closing-in-on-human-intelligence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai finally closing in on human intelligence"
+      ]
+    },
+    {
+      "keyword": "is ai getting smarter",
+      "slug": "is-ai-getting-smarter",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai getting smarter"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai agent local memory",
     "ai long term.memory github",
-    "ai memory booster",
-    "ai memory gap",
-    "ai memory generator",
-    "ai memory palace",
-    "ai memory prompt",
-    "ai memory systems",
-    "ai that remembers chats",
-    "anything llm persistent memory",
-    "best llm for mem0",
-    "best memory system for ai",
-    "how to increase memory in illustrator",
-    "is ai actually intelligent",
-    "is ai finally closing in on human intelligence",
-    "is ai getting smarter",
+    "ai memory icon",
+    "how long does long-term memory last",
     "is ai really ai",
     "is ai really that intelligent",
     "is llm necessary",
-    "is long term memory a sign of intelligence",
     "is long term memory limitless",
     "is long term memory permanent",
     "is long term memory unlimited",
@@ -5127,7 +5244,6 @@
     "llm parametric memory",
     "llm procedural memory",
     "llm procedural memory optimization",
-    "llm programs law",
     "llm ram needed",
     "llm ram offload",
     "llm vision memory file path",
@@ -5165,7 +5281,6 @@
     "mem0 embedding",
     "mem0 embedding model",
     "mem0 episodic memory",
-    "mem0 for agents",
     "mem0 for rag",
     "mem0 graph memory",
     "mem0 in ai",
@@ -5175,6 +5290,7 @@
     "mem0 memory layer",
     "mem0 memory types",
     "mem0 openmemory",
+    "mem0 pydantic ai",
     "memory ai jobs",
     "memory architectures in long term ai agents beyond simple state representation",
     "memory based chatbot",
@@ -5192,7 +5308,6 @@
     "memory os of ai agent emnlp",
     "memory os of ai agent github",
     "memory plugin ai",
-    "memory system for ai",
     "memory system for ai agents",
     "memory system in ai",
     "memorydb vector database",
@@ -5313,7 +5428,6 @@
     "what is system ai",
     "what is the best ai chatbot",
     "what is the best type of memory",
-    "what is the intelligent agent in ai and where are they used",
     "what is the largest context window llm",
     "what is the purpose of an llm",
     "what is the smartest ai",
@@ -5388,9 +5502,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 497,
-    "validated": 456,
-    "low_volume": 41,
-    "new_opportunities_found": 460
+    "total_keywords": 512,
+    "validated": 468,
+    "low_volume": 44,
+    "new_opportunities_found": 443
   }
 }
