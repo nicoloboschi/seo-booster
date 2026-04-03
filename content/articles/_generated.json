@@ -2999,5 +2999,35 @@
     "generated_at": "2026-04-03T10:19:46.564056",
     "sources": [],
     "quality_score": 65
+  },
+  "ai-memory-booster": {
+    "keyword": "ai memory booster",
+    "generated_at": "2026-04-03T12:20:31.698630",
+    "sources": [],
+    "quality_score": 75
+  },
+  "ai-memory-gap": {
+    "keyword": "ai memory gap",
+    "generated_at": "2026-04-03T12:21:19.537871",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-generator": {
+    "keyword": "ai memory generator",
+    "generated_at": "2026-04-03T12:22:05.577871",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-palace": {
+    "keyword": "ai memory palace",
+    "generated_at": "2026-04-03T12:22:51.966055",
+    "sources": [],
+    "quality_score": 75
+  },
+  "ai-memory-prompt": {
+    "keyword": "ai memory prompt",
+    "generated_at": "2026-04-03T12:23:15.396202",
+    "sources": [],
+    "quality_score": 75
   }
 }
