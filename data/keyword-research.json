@@ -5054,25 +5054,146 @@
       "matching_suggestions": [
         "is ai getting smarter"
       ]
+    },
+    {
+      "keyword": "ai memory icon",
+      "slug": "ai-memory-icon",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory icon"
+      ]
+    },
+    {
+      "keyword": "how long does long-term memory last",
+      "slug": "how-long-does-long-term-memory-last",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how long does long-term memory last"
+      ]
+    },
+    {
+      "keyword": "is ai really ai",
+      "slug": "is-ai-really-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai really ai"
+      ]
+    },
+    {
+      "keyword": "is ai really that intelligent",
+      "slug": "is-ai-really-that-intelligent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai really that intelligent"
+      ]
+    },
+    {
+      "keyword": "is llm necessary",
+      "slug": "is-llm-necessary",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is llm necessary"
+      ]
+    },
+    {
+      "keyword": "is long term memory limitless",
+      "slug": "is-long-term-memory-limitless",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is long term memory limitless"
+      ]
+    },
+    {
+      "keyword": "is long term memory permanent",
+      "slug": "is-long-term-memory-permanent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is long term memory permanent"
+      ]
+    },
+    {
+      "keyword": "is long term memory unlimited",
+      "slug": "is-long-term-memory-unlimited",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is long term memory unlimited"
+      ]
+    },
+    {
+      "keyword": "is memory cloth real",
+      "slug": "is-memory-cloth-real",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is memory cloth real"
+      ]
+    },
+    {
+      "keyword": "is there a limit to long term memory",
+      "slug": "is-there-a-limit-to-long-term-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "is there a limit to long term memory",
+        "is there a limit to long term memory"
+      ]
+    },
+    {
+      "keyword": "is there an ai i can talk to",
+      "slug": "is-there-an-ai-i-can-talk-to",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is there an ai i can talk to"
+      ]
+    },
+    {
+      "keyword": "is zep memory free",
+      "slug": "is-zep-memory-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is zep memory free"
+      ]
+    },
+    {
+      "keyword": "is zep memory open source",
+      "slug": "is-zep-memory-open-source",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is zep memory open source"
+      ]
+    },
+    {
+      "keyword": "jan ai long term memory",
+      "slug": "jan-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "jan ai long term memory"
+      ]
+    },
+    {
+      "keyword": "janitor ai best memory",
+      "slug": "janitor-ai-best-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "janitor ai best memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "ai memory icon",
-    "how long does long-term memory last",
-    "is ai really ai",
-    "is ai really that intelligent",
-    "is llm necessary",
-    "is long term memory limitless",
-    "is long term memory permanent",
-    "is long term memory unlimited",
-    "is memory cloth real",
-    "is there a limit to long term memory",
-    "is there an ai i can talk to",
-    "is zep memory free",
-    "is zep memory open source",
-    "jan ai long term memory",
-    "janitor ai best memory",
     "janitor llm context window",
     "janitor llm memory",
     "joyland ai long term memory",
@@ -5479,7 +5600,6 @@
     "zep memory docker",
     "zep memory docker compose",
     "zep memory docs",
-    "zep memory free",
     "zep memory github",
     "zep memory graph",
     "zep memory in langgraph",
@@ -5493,7 +5613,6 @@
     "zep memory management",
     "zep memory mcp",
     "zep memory n8n",
-    "zep memory open source",
     "zep memory open source alternative",
     "zep memory paper",
     "zep memory pricing",
@@ -5502,9 +5621,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 512,
-    "validated": 468,
+    "total_keywords": 527,
+    "validated": 483,
     "low_volume": 44,
-    "new_opportunities_found": 443
+    "new_opportunities_found": 426
   }
 }
