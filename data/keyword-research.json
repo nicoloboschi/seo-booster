@@ -5493,28 +5493,173 @@
       "matching_suggestions": [
         "llm context window comparison chart"
       ]
+    },
+    {
+      "keyword": "llm context window compression koog",
+      "slug": "llm-context-window-compression-koog",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window compression koog"
+      ]
+    },
+    {
+      "keyword": "llm context window definition",
+      "slug": "llm-context-window-definition",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window definition"
+      ]
+    },
+    {
+      "keyword": "llm context window degradation",
+      "slug": "llm-context-window-degradation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window degradation"
+      ]
+    },
+    {
+      "keyword": "llm context window diagram",
+      "slug": "llm-context-window-diagram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window diagram"
+      ]
+    },
+    {
+      "keyword": "llm context window evolution",
+      "slug": "llm-context-window-evolution",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window evolution"
+      ]
+    },
+    {
+      "keyword": "llm context window extension",
+      "slug": "llm-context-window-extension",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window extension"
+      ]
+    },
+    {
+      "keyword": "llm context window for coding",
+      "slug": "llm-context-window-for-coding",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window for coding"
+      ]
+    },
+    {
+      "keyword": "llm context window history",
+      "slug": "llm-context-window-history",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window history"
+      ]
+    },
+    {
+      "keyword": "llm context window input output",
+      "slug": "llm-context-window-input-output",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window input output"
+      ]
+    },
+    {
+      "keyword": "llm context window memory",
+      "slug": "llm-context-window-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window memory",
+        "llm context window memory usage"
+      ]
+    },
+    {
+      "keyword": "llm context window memory usage",
+      "slug": "llm-context-window-memory-usage",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window memory usage"
+      ]
+    },
+    {
+      "keyword": "llm context window optimization",
+      "slug": "llm-context-window-optimization",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window optimization"
+      ]
+    },
+    {
+      "keyword": "llm context window over time",
+      "slug": "llm-context-window-over-time",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window over time"
+      ]
+    },
+    {
+      "keyword": "llm context window overflow",
+      "slug": "llm-context-window-overflow",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window overflow"
+      ]
+    },
+    {
+      "keyword": "llm context window paradox",
+      "slug": "llm-context-window-paradox",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window paradox"
+      ]
+    },
+    {
+      "keyword": "llm context window performance",
+      "slug": "llm-context-window-performance",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window performance"
+      ]
+    },
+    {
+      "keyword": "llm course time",
+      "slug": "llm-course-time",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm course time"
+      ]
+    },
+    {
+      "keyword": "llm decoding memory bound",
+      "slug": "llm-decoding-memory-bound",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm decoding memory bound"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm context window compression koog",
-    "llm context window definition",
-    "llm context window degradation",
-    "llm context window diagram",
-    "llm context window evolution",
-    "llm context window extension",
-    "llm context window for coding",
-    "llm context window history",
-    "llm context window input output",
-    "llm context window memory",
-    "llm context window memory usage",
-    "llm context window optimization",
-    "llm context window over time",
-    "llm context window overflow",
-    "llm context window paradox",
-    "llm context window performance",
-    "llm course time",
-    "llm decoding memory bound",
     "llm dynamic context window",
     "llm dynamic memory",
     "llm external memory",
@@ -5890,9 +6035,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 560,
-    "validated": 516,
+    "total_keywords": 578,
+    "validated": 534,
     "low_volume": 44,
-    "new_opportunities_found": 392
+    "new_opportunities_found": 374
   }
 }
