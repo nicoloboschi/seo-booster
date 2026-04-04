@@ -1,0 +1,31 @@
+keywords:
+- cluster: memory-frameworks
+  instructions: Cover what OpenClaw is, its agent memory capabilities, how it compares
+    to other frameworks like Hermes. Reference Vectorize comparison guides.
+  primary: openclaw ai agent memory
+  related:
+  - openclaw memory
+  - openclaw vs hermes
+  - openclaw agent framework
+  role: supporting
+  slug: openclaw-ai-agent-memory
+- cluster: memory-frameworks
+  instructions: Cover Hermes agent memory system, how it works, memory providers,
+    common issues. Reference Vectorize guides on Hermes.
+  primary: hermes agent memory
+  related:
+  - hermes memory system
+  - hermes agent memory providers
+  - hermes memory not working
+  role: supporting
+  slug: hermes-agent-memory
+- cluster: memory-frameworks
+  instructions: Head-to-head comparison of OpenClaw and Hermes agent memory. Architecture,
+    providers, performance, use cases. Include comparison table.
+  primary: openclaw vs hermes agent memory
+  related:
+  - openclaw hermes comparison
+  - best agent memory framework
+  - openclaw or hermes
+  role: supporting
+  slug: openclaw-vs-hermes-agent-memory
