@@ -3521,5 +3521,35 @@
     "generated_at": "2026-04-04T22:33:15.092753",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-gpu-memory": {
+    "keyword": "llm gpu memory",
+    "generated_at": "2026-04-04T23:48:28.892044",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-gpu-memory-calculator": {
+    "keyword": "llm gpu memory calculator",
+    "generated_at": "2026-04-04T23:49:20.885336",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-gpu-memory-consumption-calculator": {
+    "keyword": "llm gpu memory consumption calculator",
+    "generated_at": "2026-04-04T23:50:13.037907",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-gpu-memory-requirements": {
+    "keyword": "llm gpu memory requirements",
+    "generated_at": "2026-04-04T23:51:05.622643",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-gpu-memory-size": {
+    "keyword": "llm gpu memory size",
+    "generated_at": "2026-04-04T23:51:31.530865",
+    "sources": [],
+    "quality_score": 75
   }
 }
