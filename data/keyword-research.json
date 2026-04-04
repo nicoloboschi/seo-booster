@@ -5356,25 +5356,147 @@
       "matching_suggestions": [
         "llm api context window"
       ]
+    },
+    {
+      "keyword": "llm arena context window",
+      "slug": "llm-arena-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm arena context window"
+      ]
+    },
+    {
+      "keyword": "llm based memory",
+      "slug": "llm-based-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm based memory"
+      ]
+    },
+    {
+      "keyword": "llm branches in india",
+      "slug": "llm-branches-in-india",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm branches in india"
+      ]
+    },
+    {
+      "keyword": "llm chat history memory",
+      "slug": "llm-chat-history-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm chat history memory"
+      ]
+    },
+    {
+      "keyword": "llm chatbot memory",
+      "slug": "llm-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm chatbot memory"
+      ]
+    },
+    {
+      "keyword": "llm context window accuracy",
+      "slug": "llm-context-window-accuracy",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window accuracy"
+      ]
+    },
+    {
+      "keyword": "llm context window architecture",
+      "slug": "llm-context-window-architecture",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window architecture"
+      ]
+    },
+    {
+      "keyword": "llm context window arxiv",
+      "slug": "llm-context-window-arxiv",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window arxiv"
+      ]
+    },
+    {
+      "keyword": "llm context window attention",
+      "slug": "llm-context-window-attention",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window attention"
+      ]
+    },
+    {
+      "keyword": "llm context window calculator",
+      "slug": "llm-context-window-calculator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window calculator"
+      ]
+    },
+    {
+      "keyword": "llm context window chart",
+      "slug": "llm-context-window-chart",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window chart"
+      ]
+    },
+    {
+      "keyword": "llm context window compare",
+      "slug": "llm-context-window-compare",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window compare"
+      ]
+    },
+    {
+      "keyword": "llm context window comparison",
+      "slug": "llm-context-window-comparison",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window comparison",
+        "llm context window comparison 2024",
+        "llm context window comparison chart"
+      ]
+    },
+    {
+      "keyword": "llm context window comparison 2024",
+      "slug": "llm-context-window-comparison-2024",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window comparison 2024"
+      ]
+    },
+    {
+      "keyword": "llm context window comparison chart",
+      "slug": "llm-context-window-comparison-chart",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window comparison chart"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm arena context window",
-    "llm based memory",
-    "llm branches in india",
-    "llm chat history memory",
-    "llm chatbot memory",
-    "llm context window accuracy",
-    "llm context window architecture",
-    "llm context window arxiv",
-    "llm context window attention",
-    "llm context window calculator",
-    "llm context window chart",
-    "llm context window compare",
-    "llm context window comparison",
-    "llm context window comparison 2024",
-    "llm context window comparison chart",
     "llm context window compression koog",
     "llm context window definition",
     "llm context window degradation",
@@ -5768,9 +5890,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 545,
-    "validated": 501,
+    "total_keywords": 560,
+    "validated": 516,
     "low_volume": 44,
-    "new_opportunities_found": 407
+    "new_opportunities_found": 392
   }
 }
