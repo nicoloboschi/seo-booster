@@ -3365,5 +3365,35 @@
     "generated_at": "2026-04-04T13:22:31.120226",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-context-window-comparison-chart": {
+    "keyword": "llm context window comparison chart",
+    "generated_at": "2026-04-04T15:27:08.022065",
+    "sources": [],
+    "quality_score": 75
+  },
+  "llm-context-window-compression-koog": {
+    "keyword": "llm context window compression koog",
+    "generated_at": "2026-04-04T15:27:55.543373",
+    "sources": [],
+    "quality_score": 55
+  },
+  "llm-context-window-definition": {
+    "keyword": "llm context window definition",
+    "generated_at": "2026-04-04T15:28:44.230801",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-context-window-degradation": {
+    "keyword": "llm context window degradation",
+    "generated_at": "2026-04-04T15:29:02.991225",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-context-window-diagram": {
+    "keyword": "llm context window diagram",
+    "generated_at": "2026-04-04T15:29:47.576772",
+    "sources": [],
+    "quality_score": 65
   }
 }
