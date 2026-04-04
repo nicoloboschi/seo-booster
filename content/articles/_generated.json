@@ -3395,5 +3395,35 @@
     "generated_at": "2026-04-04T15:29:47.576772",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-context-window-evolution": {
+    "keyword": "llm context window evolution",
+    "generated_at": "2026-04-04T17:31:12.791887",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-context-window-extension": {
+    "keyword": "llm context window extension",
+    "generated_at": "2026-04-04T17:31:27.455670",
+    "sources": [],
+    "quality_score": 75
+  },
+  "llm-context-window-for-coding": {
+    "keyword": "llm context window for coding",
+    "generated_at": "2026-04-04T17:32:01.019111",
+    "sources": [],
+    "quality_score": 75
+  },
+  "llm-context-window-history": {
+    "keyword": "llm context window history",
+    "generated_at": "2026-04-04T17:32:49.668599",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-context-window-input-output": {
+    "keyword": "llm context window input output",
+    "generated_at": "2026-04-04T17:33:49.860760",
+    "sources": [],
+    "quality_score": 55
   }
 }
