@@ -25,8 +25,8 @@
 </span></span><span class=line><span class=ln>23</span><span class=cl><span class=n>query_text</span> <span class=o>=</span> <span class=s2>&#34;What is the user&#39;s display setting?&#34;</span>
 </span></span><span class=line><span class=ln>24</span><span class=cl><span class=n>query_embedding</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=n>query_text</span><span class=p>)</span><span class=o>.</span><span class=n>tolist</span><span class=p>()</span>
 </span></span><span class=line><span class=ln>25</span><span class=cl>
-</span></span><span class=line><span class=ln>26</span><span class=cl><span class=c1>## Perform a similarity search</span><span class=err>
-</span></span></span><span class=line><span class=ln>27</span><span class=cl><span class=err></span><span class=n>results</span> <span class=o>=</span> <span class=n>collection</span><span class=o>.</span><span class=n>query</span><span class=p>(</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl><span class=c1>## Perform a similarity search</span>
+</span></span><span class=line><span class=ln>27</span><span class=cl><span class=n>results</span> <span class=o>=</span> <span class=n>collection</span><span class=o>.</span><span class=n>query</span><span class=p>(</span>
 </span></span><span class=line><span class=ln>28</span><span class=cl> <span class=n>query_embeddings</span><span class=o>=</span><span class=p>[</span><span class=n>query_embedding</span><span class=p>],</span>
 </span></span><span class=line><span class=ln>29</span><span class=cl> <span class=n>n_results</span><span class=o>=</span><span class=mi>1</span>
 </span></span><span class=line><span class=ln>30</span><span class=cl><span class=p>)</span>
