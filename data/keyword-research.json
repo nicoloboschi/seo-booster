@@ -5190,28 +5190,176 @@
       "matching_suggestions": [
         "janitor ai best memory"
       ]
+    },
+    {
+      "keyword": "janitor llm context window",
+      "slug": "janitor-llm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "janitor llm context window"
+      ]
+    },
+    {
+      "keyword": "janitor llm memory",
+      "slug": "janitor-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "janitor llm memory"
+      ]
+    },
+    {
+      "keyword": "joyland ai long term memory",
+      "slug": "joyland-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "joyland ai long term memory"
+      ]
+    },
+    {
+      "keyword": "kernel memory vector database",
+      "slug": "kernel-memory-vector-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "kernel memory vector database"
+      ]
+    },
+    {
+      "keyword": "langchain chatbot with memory github",
+      "slug": "langchain-chatbot-with-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "langchain chatbot with memory github"
+      ]
+    },
+    {
+      "keyword": "langgraph chatbot with memory example",
+      "slug": "langgraph-chatbot-with-memory-example",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "langgraph chatbot with memory example"
+      ]
+    },
+    {
+      "keyword": "langgraph chatbot with memory github",
+      "slug": "langgraph-chatbot-with-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "langgraph chatbot with memory github"
+      ]
+    },
+    {
+      "keyword": "large context window llm",
+      "slug": "large-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "large context window llm"
+      ]
+    },
+    {
+      "keyword": "large context window local llm",
+      "slug": "large-context-window-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "large context window local llm"
+      ]
+    },
+    {
+      "keyword": "largest context window llm",
+      "slug": "largest-context-window-llm",
+      "autocomplete_matches": 5,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window llm",
+        "largest context window llm free",
+        "largest context window llm ollama",
+        "largest context window llm open source",
+        "what is the largest context window llm"
+      ]
+    },
+    {
+      "keyword": "largest context window llm free",
+      "slug": "largest-context-window-llm-free",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window llm free"
+      ]
+    },
+    {
+      "keyword": "largest context window llm ollama",
+      "slug": "largest-context-window-llm-ollama",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window llm ollama"
+      ]
+    },
+    {
+      "keyword": "largest context window llm open source",
+      "slug": "largest-context-window-llm-open-source",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window llm open source"
+      ]
+    },
+    {
+      "keyword": "largest context window local llm",
+      "slug": "largest-context-window-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window local llm"
+      ]
+    },
+    {
+      "keyword": "largest context window open llm",
+      "slug": "largest-context-window-open-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window open llm"
+      ]
+    },
+    {
+      "keyword": "llm agent memory management",
+      "slug": "llm-agent-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm agent memory management"
+      ]
+    },
+    {
+      "keyword": "llm agent memory systems",
+      "slug": "llm-agent-memory-systems",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm agent memory systems"
+      ]
+    },
+    {
+      "keyword": "llm api context window",
+      "slug": "llm-api-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm api context window"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "janitor llm context window",
-    "janitor llm memory",
-    "joyland ai long term memory",
-    "kernel memory vector database",
-    "langchain chatbot with memory github",
-    "langgraph chatbot with memory example",
-    "langgraph chatbot with memory github",
-    "large context window llm",
-    "large context window local llm",
-    "largest context window llm",
-    "largest context window llm free",
-    "largest context window llm ollama",
-    "largest context window llm open source",
-    "largest context window local llm",
-    "largest context window open llm",
-    "llm agent memory management",
-    "llm agent memory systems",
-    "llm api context window",
     "llm arena context window",
     "llm based memory",
     "llm branches in india",
@@ -5549,7 +5697,6 @@
     "what is system ai",
     "what is the best ai chatbot",
     "what is the best type of memory",
-    "what is the largest context window llm",
     "what is the purpose of an llm",
     "what is the smartest ai",
     "what is the smartest ai right now",
@@ -5621,9 +5768,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 527,
-    "validated": 483,
+    "total_keywords": 545,
+    "validated": 501,
     "low_volume": 44,
-    "new_opportunities_found": 426
+    "new_opportunities_found": 407
   }
 }
