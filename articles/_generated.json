@@ -3671,5 +3671,35 @@
     "generated_at": "2026-04-05T08:12:14.867605",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-memory-bandwidth": {
+    "keyword": "llm memory bandwidth",
+    "generated_at": "2026-04-05T10:18:01.035509",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-bank": {
+    "keyword": "llm memory bank",
+    "generated_at": "2026-04-05T10:18:45.952446",
+    "sources": [],
+    "quality_score": 75
+  },
+  "llm-memory-bank-github": {
+    "keyword": "llm memory bank github",
+    "generated_at": "2026-04-05T10:19:30.508671",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-bench": {
+    "keyword": "llm memory bench",
+    "generated_at": "2026-04-05T10:20:12.370362",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-books": {
+    "keyword": "llm memory books",
+    "generated_at": "2026-04-05T10:21:00.278863",
+    "sources": [],
+    "quality_score": 65
   }
 }
