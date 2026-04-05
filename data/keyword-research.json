@@ -5820,29 +5820,175 @@
       "matching_suggestions": [
         "best agent memory framework"
       ]
+    },
+    {
+      "keyword": "llm inference memory calculator",
+      "slug": "llm-inference-memory-calculator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm inference memory calculator"
+      ]
+    },
+    {
+      "keyword": "llm inference memory requirements",
+      "slug": "llm-inference-memory-requirements",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm inference memory requirements"
+      ]
+    },
+    {
+      "keyword": "llm infinite memory",
+      "slug": "llm-infinite-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm infinite memory"
+      ]
+    },
+    {
+      "keyword": "llm international law syllabus",
+      "slug": "llm-international-law-syllabus",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm international law syllabus"
+      ]
+    },
+    {
+      "keyword": "llm latent memory",
+      "slug": "llm-latent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm latent memory"
+      ]
+    },
+    {
+      "keyword": "llm local memory",
+      "slug": "llm-local-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm local memory"
+      ]
+    },
+    {
+      "keyword": "llm memory access pattern",
+      "slug": "llm-memory-access-pattern",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory access pattern"
+      ]
+    },
+    {
+      "keyword": "llm memory agent",
+      "slug": "llm-memory-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory agent"
+      ]
+    },
+    {
+      "keyword": "llm memory api",
+      "slug": "llm-memory-api",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory api"
+      ]
+    },
+    {
+      "keyword": "llm memory architecture",
+      "slug": "llm-memory-architecture",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory architecture"
+      ]
+    },
+    {
+      "keyword": "llm memory arxiv",
+      "slug": "llm-memory-arxiv",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory arxiv"
+      ]
+    },
+    {
+      "keyword": "llm memory attack",
+      "slug": "llm-memory-attack",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory attack"
+      ]
+    },
+    {
+      "keyword": "llm memory augmentation",
+      "slug": "llm-memory-augmentation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory augmentation"
+      ]
+    },
+    {
+      "keyword": "llm memory awesome",
+      "slug": "llm-memory-awesome",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory awesome"
+      ]
+    },
+    {
+      "keyword": "llm memory bandwidth",
+      "slug": "llm-memory-bandwidth",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory bandwidth"
+      ]
+    },
+    {
+      "keyword": "llm memory bank",
+      "slug": "llm-memory-bank",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory bank",
+        "llm memory bank github",
+        "what is llm memory bank"
+      ]
+    },
+    {
+      "keyword": "llm memory bank github",
+      "slug": "llm-memory-bank-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory bank github"
+      ]
+    },
+    {
+      "keyword": "llm memory bench",
+      "slug": "llm-memory-bench",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory bench",
+        "llm memory benchmark"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm inference memory calculator",
-    "llm inference memory requirements",
-    "llm infinite memory",
-    "llm international law syllabus",
-    "llm latent memory",
-    "llm local memory",
-    "llm memory access pattern",
-    "llm memory agent",
-    "llm memory api",
-    "llm memory architecture",
-    "llm memory arxiv",
-    "llm memory attack",
-    "llm memory augmentation",
-    "llm memory awesome",
-    "llm memory bandwidth",
-    "llm memory bank",
-    "llm memory bank github",
-    "llm memory bench",
-    "llm memory benchmark",
     "llm memory books",
     "llm memory bottleneck",
     "llm memory buffer",
@@ -6089,7 +6235,6 @@
     "what is keep alive memory",
     "what is knowledge agent in artificial intelligence",
     "what is llm memory",
-    "what is llm memory bank",
     "what is long short term memory in ai",
     "what is long short-term memory",
     "what is long term memory in ai",
@@ -6184,9 +6329,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 596,
-    "validated": 551,
+    "total_keywords": 614,
+    "validated": 569,
     "low_volume": 45,
-    "new_opportunities_found": 359
+    "new_opportunities_found": 339
   }
 }
