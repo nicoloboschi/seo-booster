@@ -6121,25 +6121,145 @@
       "matching_suggestions": [
         "llm memory db"
       ]
+    },
+    {
+      "keyword": "llm memory decay",
+      "slug": "llm-memory-decay",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory decay"
+      ]
+    },
+    {
+      "keyword": "llm memory decoder",
+      "slug": "llm-memory-decoder",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory decoder"
+      ]
+    },
+    {
+      "keyword": "llm memory design",
+      "slug": "llm-memory-design",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory design"
+      ]
+    },
+    {
+      "keyword": "llm memory embedding",
+      "slug": "llm-memory-embedding",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory embedding"
+      ]
+    },
+    {
+      "keyword": "llm memory engineering",
+      "slug": "llm-memory-engineering",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory engineering"
+      ]
+    },
+    {
+      "keyword": "llm memory episodic",
+      "slug": "llm-memory-episodic",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory episodic"
+      ]
+    },
+    {
+      "keyword": "llm memory estimator",
+      "slug": "llm-memory-estimator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory estimator"
+      ]
+    },
+    {
+      "keyword": "llm memory evaluation",
+      "slug": "llm-memory-evaluation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory evaluation"
+      ]
+    },
+    {
+      "keyword": "llm memory example",
+      "slug": "llm-memory-example",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory example"
+      ]
+    },
+    {
+      "keyword": "llm memory expansion strategies",
+      "slug": "llm-memory-expansion-strategies",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory expansion strategies"
+      ]
+    },
+    {
+      "keyword": "llm memory explained",
+      "slug": "llm-memory-explained",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory explained"
+      ]
+    },
+    {
+      "keyword": "llm memory extension",
+      "slug": "llm-memory-extension",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory extension"
+      ]
+    },
+    {
+      "keyword": "llm memory feature",
+      "slug": "llm-memory-feature",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory feature"
+      ]
+    },
+    {
+      "keyword": "llm memory file",
+      "slug": "llm-memory-file",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory file"
+      ]
+    },
+    {
+      "keyword": "llm memory footprint",
+      "slug": "llm-memory-footprint",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory footprint"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory decay",
-    "llm memory decoder",
-    "llm memory design",
-    "llm memory embedding",
-    "llm memory engineering",
-    "llm memory episodic",
-    "llm memory estimator",
-    "llm memory evaluation",
-    "llm memory example",
-    "llm memory expansion strategies",
-    "llm memory explained",
-    "llm memory extension",
-    "llm memory feature",
-    "llm memory file",
-    "llm memory footprint",
     "llm memory framework",
     "llm memory function",
     "llm memory github",
@@ -6450,9 +6570,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 629,
-    "validated": 584,
+    "total_keywords": 644,
+    "validated": 599,
     "low_volume": 45,
-    "new_opportunities_found": 324
+    "new_opportunities_found": 309
   }
 }
