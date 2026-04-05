@@ -5985,25 +5985,146 @@
         "llm memory bench",
         "llm memory benchmark"
       ]
+    },
+    {
+      "keyword": "llm memory books",
+      "slug": "llm-memory-books",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory books"
+      ]
+    },
+    {
+      "keyword": "llm memory bottleneck",
+      "slug": "llm-memory-bottleneck",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory bottleneck"
+      ]
+    },
+    {
+      "keyword": "llm memory buffer",
+      "slug": "llm-memory-buffer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory buffer"
+      ]
+    },
+    {
+      "keyword": "llm memory calculator",
+      "slug": "llm-memory-calculator",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory calculator",
+        "llm memory calculator huggingface"
+      ]
+    },
+    {
+      "keyword": "llm memory calculator huggingface",
+      "slug": "llm-memory-calculator-huggingface",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory calculator huggingface"
+      ]
+    },
+    {
+      "keyword": "llm memory capacity",
+      "slug": "llm-memory-capacity",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory capacity"
+      ]
+    },
+    {
+      "keyword": "llm memory chatgpt",
+      "slug": "llm-memory-chatgpt",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory chatgpt"
+      ]
+    },
+    {
+      "keyword": "llm memory comparison",
+      "slug": "llm-memory-comparison",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory comparison"
+      ]
+    },
+    {
+      "keyword": "llm memory compression",
+      "slug": "llm-memory-compression",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory compression"
+      ]
+    },
+    {
+      "keyword": "llm memory consolidation",
+      "slug": "llm-memory-consolidation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory consolidation"
+      ]
+    },
+    {
+      "keyword": "llm memory consumption",
+      "slug": "llm-memory-consumption",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory consumption"
+      ]
+    },
+    {
+      "keyword": "llm memory context",
+      "slug": "llm-memory-context",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory context"
+      ]
+    },
+    {
+      "keyword": "llm memory database",
+      "slug": "llm-memory-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory database"
+      ]
+    },
+    {
+      "keyword": "llm memory dataset",
+      "slug": "llm-memory-dataset",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory dataset"
+      ]
+    },
+    {
+      "keyword": "llm memory db",
+      "slug": "llm-memory-db",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory db"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory books",
-    "llm memory bottleneck",
-    "llm memory buffer",
-    "llm memory calculator",
-    "llm memory calculator huggingface",
-    "llm memory capacity",
-    "llm memory chatgpt",
-    "llm memory comparison",
-    "llm memory compression",
-    "llm memory consolidation",
-    "llm memory consumption",
-    "llm memory context",
-    "llm memory database",
-    "llm memory dataset",
-    "llm memory db",
     "llm memory decay",
     "llm memory decoder",
     "llm memory design",
@@ -6329,9 +6450,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 614,
-    "validated": 569,
+    "total_keywords": 629,
+    "validated": 584,
     "low_volume": 45,
-    "new_opportunities_found": 339
+    "new_opportunities_found": 324
   }
 }
