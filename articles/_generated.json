@@ -3701,5 +3701,35 @@
     "generated_at": "2026-04-05T10:21:00.278863",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-memory-bottleneck": {
+    "keyword": "llm memory bottleneck",
+    "generated_at": "2026-04-05T12:22:38.528123",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-buffer": {
+    "keyword": "llm memory buffer",
+    "generated_at": "2026-04-05T12:23:00.342372",
+    "sources": [],
+    "quality_score": 70
+  },
+  "llm-memory-calculator": {
+    "keyword": "llm memory calculator",
+    "generated_at": "2026-04-05T12:23:44.212770",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-calculator-huggingface": {
+    "keyword": "llm memory calculator huggingface",
+    "generated_at": "2026-04-05T12:24:31.154518",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-capacity": {
+    "keyword": "llm memory capacity",
+    "generated_at": "2026-04-05T12:25:13.945191",
+    "sources": [],
+    "quality_score": 65
   }
 }
