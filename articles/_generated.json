@@ -3851,5 +3851,35 @@
     "generated_at": "2026-04-05T20:45:37.721414",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-memory-extension": {
+    "keyword": "llm memory extension",
+    "generated_at": "2026-04-05T22:50:37.960538",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-feature": {
+    "keyword": "llm memory feature",
+    "generated_at": "2026-04-05T22:51:22.348706",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-file": {
+    "keyword": "llm memory file",
+    "generated_at": "2026-04-05T22:52:04.514787",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-footprint": {
+    "keyword": "llm memory footprint",
+    "generated_at": "2026-04-05T22:52:49.260820",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-memory-framework": {
+    "keyword": "llm memory framework",
+    "generated_at": "2026-04-05T22:53:09.556399",
+    "sources": [],
+    "quality_score": 75
   }
 }
