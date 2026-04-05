@@ -5656,25 +5656,174 @@
       "matching_suggestions": [
         "llm decoding memory bound"
       ]
+    },
+    {
+      "keyword": "llm dynamic context window",
+      "slug": "llm-dynamic-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm dynamic context window"
+      ]
+    },
+    {
+      "keyword": "llm dynamic memory",
+      "slug": "llm-dynamic-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm dynamic memory"
+      ]
+    },
+    {
+      "keyword": "llm external memory",
+      "slug": "llm-external-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm external memory"
+      ]
+    },
+    {
+      "keyword": "llm from distance",
+      "slug": "llm-from-distance",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm from distance"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory",
+      "slug": "llm-gpu-memory",
+      "autocomplete_matches": 6,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory",
+        "llm gpu memory calculator",
+        "llm gpu memory consumption calculator",
+        "llm gpu memory requirements",
+        "llm gpu memory size"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory calculator",
+      "slug": "llm-gpu-memory-calculator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory calculator"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory consumption calculator",
+      "slug": "llm-gpu-memory-consumption-calculator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory consumption calculator"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory requirements",
+      "slug": "llm-gpu-memory-requirements",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory requirements"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory size",
+      "slug": "llm-gpu-memory-size",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory size"
+      ]
+    },
+    {
+      "keyword": "llm gpu memory utilization",
+      "slug": "llm-gpu-memory-utilization",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm gpu memory utilization"
+      ]
+    },
+    {
+      "keyword": "llm has memory",
+      "slug": "llm-has-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm has memory"
+      ]
+    },
+    {
+      "keyword": "llm hierarchical memory",
+      "slug": "llm-hierarchical-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm hierarchical memory"
+      ]
+    },
+    {
+      "keyword": "llm history memory",
+      "slug": "llm-history-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm history memory"
+      ]
+    },
+    {
+      "keyword": "llm in memory",
+      "slug": "llm-in-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm in memory"
+      ]
+    },
+    {
+      "keyword": "llm inference memory bound",
+      "slug": "llm-inference-memory-bound",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm inference memory bound"
+      ]
+    },
+    {
+      "keyword": "openclaw ai agent memory",
+      "slug": "openclaw-ai-agent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openclaw memory embedding model"
+      ]
+    },
+    {
+      "keyword": "hermes agent memory",
+      "slug": "hermes-agent-memory",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "openclaw vs hermes agent memory",
+      "slug": "openclaw-vs-hermes-agent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best agent memory framework"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm dynamic context window",
-    "llm dynamic memory",
-    "llm external memory",
-    "llm from distance",
-    "llm gpu memory",
-    "llm gpu memory calculator",
-    "llm gpu memory consumption calculator",
-    "llm gpu memory requirements",
-    "llm gpu memory size",
-    "llm gpu memory utilization",
-    "llm has memory",
-    "llm hierarchical memory",
-    "llm history memory",
-    "llm in memory",
-    "llm inference memory bound",
     "llm inference memory calculator",
     "llm inference memory requirements",
     "llm infinite memory",
@@ -6035,9 +6184,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 578,
-    "validated": 534,
-    "low_volume": 44,
-    "new_opportunities_found": 374
+    "total_keywords": 596,
+    "validated": 551,
+    "low_volume": 45,
+    "new_opportunities_found": 359
   }
 }
