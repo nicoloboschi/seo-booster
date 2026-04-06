@@ -6392,25 +6392,149 @@
       "matching_suggestions": [
         "llm memory layer"
       ]
+    },
+    {
+      "keyword": "llm memory leak",
+      "slug": "llm-memory-leak",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory leak"
+      ]
+    },
+    {
+      "keyword": "llm memory library",
+      "slug": "llm-memory-library",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory library"
+      ]
+    },
+    {
+      "keyword": "llm memory limit",
+      "slug": "llm-memory-limit",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory limit",
+        "why is llm memory limited"
+      ]
+    },
+    {
+      "keyword": "llm memory long term",
+      "slug": "llm-memory-long-term",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory long term"
+      ]
+    },
+    {
+      "keyword": "llm memory loss",
+      "slug": "llm-memory-loss",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory loss"
+      ]
+    },
+    {
+      "keyword": "llm memory management",
+      "slug": "llm-memory-management",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory management",
+        "llm memory management github",
+        "llm memory management tools"
+      ]
+    },
+    {
+      "keyword": "llm memory management github",
+      "slug": "llm-memory-management-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory management github"
+      ]
+    },
+    {
+      "keyword": "llm memory management tools",
+      "slug": "llm-memory-management-tools",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory management tools"
+      ]
+    },
+    {
+      "keyword": "llm memory mcp",
+      "slug": "llm-memory-mcp",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory mcp",
+        "llm memory mcp server"
+      ]
+    },
+    {
+      "keyword": "llm memory mcp server",
+      "slug": "llm-memory-mcp-server",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory mcp server"
+      ]
+    },
+    {
+      "keyword": "llm memory meaning",
+      "slug": "llm-memory-meaning",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory meaning"
+      ]
+    },
+    {
+      "keyword": "llm memory mechanism",
+      "slug": "llm-memory-mechanism",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory mechanism"
+      ]
+    },
+    {
+      "keyword": "llm memory mem0",
+      "slug": "llm-memory-mem0",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory mem0"
+      ]
+    },
+    {
+      "keyword": "llm memory model",
+      "slug": "llm-memory-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory model"
+      ]
+    },
+    {
+      "keyword": "llm memory module",
+      "slug": "llm-memory-module",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory module"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory leak",
-    "llm memory library",
-    "llm memory limit",
-    "llm memory long term",
-    "llm memory loss",
-    "llm memory management",
-    "llm memory management github",
-    "llm memory management tools",
-    "llm memory mcp",
-    "llm memory mcp server",
-    "llm memory meaning",
-    "llm memory mechanism",
-    "llm memory mem0",
-    "llm memory model",
-    "llm memory module",
     "llm memory n8n",
     "llm memory needed",
     "llm memory network",
@@ -6651,7 +6775,6 @@
     "why am i losing memory",
     "why am i losing memory all of a sudden",
     "why is ai memory so bad",
-    "why is llm memory limited",
     "why llm is important",
     "why use redis instead of memory",
     "world's most intelligent ai",
@@ -6690,9 +6813,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 659,
-    "validated": 614,
+    "total_keywords": 674,
+    "validated": 629,
     "low_volume": 45,
-    "new_opportunities_found": 293
+    "new_opportunities_found": 277
   }
 }
