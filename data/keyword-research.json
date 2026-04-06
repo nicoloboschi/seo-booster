@@ -6531,25 +6531,146 @@
       "matching_suggestions": [
         "llm memory module"
       ]
+    },
+    {
+      "keyword": "llm memory n8n",
+      "slug": "llm-memory-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory n8n"
+      ]
+    },
+    {
+      "keyword": "llm memory needed",
+      "slug": "llm-memory-needed",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory needed"
+      ]
+    },
+    {
+      "keyword": "llm memory network",
+      "slug": "llm-memory-network",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory network"
+      ]
+    },
+    {
+      "keyword": "llm memory offloading",
+      "slug": "llm-memory-offloading",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory offloading"
+      ]
+    },
+    {
+      "keyword": "llm memory open source",
+      "slug": "llm-memory-open-source",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory open source"
+      ]
+    },
+    {
+      "keyword": "llm memory openai",
+      "slug": "llm-memory-openai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory openai"
+      ]
+    },
+    {
+      "keyword": "llm memory optimization",
+      "slug": "llm-memory-optimization",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory optimization",
+        "llm memory optimization technique"
+      ]
+    },
+    {
+      "keyword": "llm memory optimization technique",
+      "slug": "llm-memory-optimization-technique",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory optimization technique"
+      ]
+    },
+    {
+      "keyword": "llm memory paper",
+      "slug": "llm-memory-paper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory paper"
+      ]
+    },
+    {
+      "keyword": "llm memory pdf",
+      "slug": "llm-memory-pdf",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory pdf"
+      ]
+    },
+    {
+      "keyword": "llm memory persistence",
+      "slug": "llm-memory-persistence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory persistence"
+      ]
+    },
+    {
+      "keyword": "llm memory plugin",
+      "slug": "llm-memory-plugin",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory plugin"
+      ]
+    },
+    {
+      "keyword": "llm memory problem",
+      "slug": "llm-memory-problem",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory problem"
+      ]
+    },
+    {
+      "keyword": "llm memory prompt",
+      "slug": "llm-memory-prompt",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory prompt"
+      ]
+    },
+    {
+      "keyword": "llm memory python",
+      "slug": "llm-memory-python",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory python"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory n8n",
-    "llm memory needed",
-    "llm memory network",
-    "llm memory offloading",
-    "llm memory open source",
-    "llm memory openai",
-    "llm memory optimization",
-    "llm memory optimization technique",
-    "llm memory paper",
-    "llm memory pdf",
-    "llm memory persistence",
-    "llm memory plugin",
-    "llm memory problem",
-    "llm memory prompt",
-    "llm memory python",
     "llm memory requirements",
     "llm memory requirements calculator",
     "llm memory survey",
@@ -6813,9 +6934,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 674,
-    "validated": 629,
+    "total_keywords": 689,
+    "validated": 644,
     "low_volume": 45,
-    "new_opportunities_found": 277
+    "new_opportunities_found": 262
   }
 }
