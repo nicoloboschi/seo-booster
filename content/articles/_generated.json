@@ -4205,5 +4205,35 @@
     "generated_at": "2026-04-06T21:51:20.253983",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-procedural-memory-optimization": {
+    "keyword": "llm procedural memory optimization",
+    "generated_at": "2026-04-06T23:52:44.274802",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-ram-needed": {
+    "keyword": "llm ram needed",
+    "generated_at": "2026-04-06T23:53:32.776373",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-ram-offload": {
+    "keyword": "llm ram offload",
+    "generated_at": "2026-04-06T23:54:11.582425",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-vision-memory-file-path": {
+    "keyword": "llm vision memory file path",
+    "generated_at": "2026-04-06T23:54:51.053766",
+    "sources": [],
+    "quality_score": 65
+  },
+  "llm-vision-memory-not-working": {
+    "keyword": "llm vision memory not working",
+    "generated_at": "2026-04-06T23:55:35.564599",
+    "sources": [],
+    "quality_score": 55
   }
 }
