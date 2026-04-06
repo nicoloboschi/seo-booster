@@ -49,7 +49,7 @@ faq:
     to provide coherent responses within the current interaction.
 slug: ai-chat-memory
 ---
-
+---
 
 Imagine an AI that truly remembers your conversations. What if your chatbot could recall your preferences from last week, or even last year? This is the promise of **AI chat memory**.
 
