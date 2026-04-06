@@ -6256,25 +6256,146 @@
       "matching_suggestions": [
         "llm memory footprint"
       ]
+    },
+    {
+      "keyword": "llm memory framework",
+      "slug": "llm-memory-framework",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory framework",
+        "reasoningbank llm memory framework"
+      ]
+    },
+    {
+      "keyword": "llm memory function",
+      "slug": "llm-memory-function",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory function"
+      ]
+    },
+    {
+      "keyword": "llm memory github",
+      "slug": "llm-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory github"
+      ]
+    },
+    {
+      "keyword": "llm memory golang",
+      "slug": "llm-memory-golang",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory golang"
+      ]
+    },
+    {
+      "keyword": "llm memory google",
+      "slug": "llm-memory-google",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory google"
+      ]
+    },
+    {
+      "keyword": "llm memory graph",
+      "slug": "llm-memory-graph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory graph"
+      ]
+    },
+    {
+      "keyword": "llm memory icon",
+      "slug": "llm-memory-icon",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory icon"
+      ]
+    },
+    {
+      "keyword": "llm memory implementation",
+      "slug": "llm-memory-implementation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory implementation"
+      ]
+    },
+    {
+      "keyword": "llm memory improvement research",
+      "slug": "llm-memory-improvement-research",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory improvement research"
+      ]
+    },
+    {
+      "keyword": "llm memory injection",
+      "slug": "llm-memory-injection",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory injection"
+      ]
+    },
+    {
+      "keyword": "llm memory issue",
+      "slug": "llm-memory-issue",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory issue"
+      ]
+    },
+    {
+      "keyword": "llm memory knowledge graph",
+      "slug": "llm-memory-knowledge-graph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory knowledge graph"
+      ]
+    },
+    {
+      "keyword": "llm memory langchain",
+      "slug": "llm-memory-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory langchain"
+      ]
+    },
+    {
+      "keyword": "llm memory langgraph",
+      "slug": "llm-memory-langgraph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory langgraph"
+      ]
+    },
+    {
+      "keyword": "llm memory layer",
+      "slug": "llm-memory-layer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory layer"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory framework",
-    "llm memory function",
-    "llm memory github",
-    "llm memory golang",
-    "llm memory google",
-    "llm memory graph",
-    "llm memory icon",
-    "llm memory implementation",
-    "llm memory improvement research",
-    "llm memory injection",
-    "llm memory issue",
-    "llm memory knowledge graph",
-    "llm memory langchain",
-    "llm memory langgraph",
-    "llm memory layer",
     "llm memory leak",
     "llm memory library",
     "llm memory limit",
@@ -6419,7 +6540,6 @@
     "rag vs ram",
     "ram ai images",
     "reasoningbank llm agent memory framework",
-    "reasoningbank llm memory framework",
     "self organizing ai memory system",
     "short and long term memory ai",
     "short term and long term memory agentic ai",
@@ -6570,9 +6690,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 644,
-    "validated": 599,
+    "total_keywords": 659,
+    "validated": 614,
     "low_volume": 45,
-    "new_opportunities_found": 309
+    "new_opportunities_found": 293
   }
 }
