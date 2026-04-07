@@ -314,7 +314,6 @@
     "context window llm": [
       "1 million context window llm",
       "10 million context window llm",
-      "1m context window local llm",
       "2 million context window llm",
       "anything llm context window",
       "average llm context window",
@@ -331,7 +330,8 @@
       "context window in llm",
       "context window in llm means",
       "context window in llm models",
-      "context window length llm"
+      "context window llm benchmark",
+      "context window llm comparison"
     ],
     "mem0": [
       "best llm for mem0",
@@ -691,11 +691,9 @@
     {
       "keyword": "1m context window local llm",
       "slug": "1m-context-window-local-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "1m context window local llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "2 million context window llm",
@@ -913,7 +911,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 34,
+      "autocomplete_matches": 31,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -3483,20 +3481,16 @@
     {
       "keyword": "context window length llm",
       "slug": "context-window-length-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window length llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window limit llm",
       "slug": "context-window-limit-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window limit llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window llm benchmark",
@@ -3554,11 +3548,9 @@
     {
       "keyword": "context window llm list",
       "slug": "context-window-llm-list",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window llm list"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window llm meaning",
@@ -5257,28 +5249,23 @@
     {
       "keyword": "large context window llm",
       "slug": "large-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "large context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "large context window local llm",
       "slug": "large-context-window-local-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "large context window local llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "largest context window llm",
       "slug": "largest-context-window-llm",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
-        "largest context window llm",
         "largest context window llm free",
         "largest context window llm ollama",
         "largest context window llm open source",
@@ -5315,11 +5302,9 @@
     {
       "keyword": "largest context window local llm",
       "slug": "largest-context-window-local-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "largest context window local llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "largest context window open llm",
@@ -6805,33 +6790,192 @@
       "matching_suggestions": [
         "llm vision memory not working"
       ]
+    },
+    {
+      "keyword": "llm with most context window",
+      "slug": "llm-with-most-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm with most context window"
+      ]
+    },
+    {
+      "keyword": "local llm persistent memory",
+      "slug": "local-llm-persistent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "local llm persistent memory"
+      ]
+    },
+    {
+      "keyword": "long short term memory ai model",
+      "slug": "long-short-term-memory-ai-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long short term memory ai model"
+      ]
+    },
+    {
+      "keyword": "long short term memory in ai",
+      "slug": "long-short-term-memory-in-ai",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "long short term memory in ai",
+        "what is long short term memory in ai"
+      ]
+    },
+    {
+      "keyword": "long short term memory meaning",
+      "slug": "long-short-term-memory-meaning",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long short term memory meaning"
+      ]
+    },
+    {
+      "keyword": "long term agentic memory with langgraph deeplearning ai",
+      "slug": "long-term-agentic-memory-with-langgraph-deeplearning-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term agentic memory with langgraph deeplearning ai"
+      ]
+    },
+    {
+      "keyword": "long term memory ai assistant",
+      "slug": "long-term-memory-ai-assistant",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory ai assistant"
+      ]
+    },
+    {
+      "keyword": "long term memory ai model",
+      "slug": "long-term-memory-ai-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory ai model"
+      ]
+    },
+    {
+      "keyword": "long term memory ai reddit",
+      "slug": "long-term-memory-ai-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory ai reddit"
+      ]
+    },
+    {
+      "keyword": "long term memory aids",
+      "slug": "long-term-memory-aids",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory aids"
+      ]
+    },
+    {
+      "keyword": "long term memory better than short term",
+      "slug": "long-term-memory-better-than-short-term",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory better than short term"
+      ]
+    },
+    {
+      "keyword": "long term memory character ai",
+      "slug": "long-term-memory-character-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory character ai"
+      ]
+    },
+    {
+      "keyword": "long term memory deeplearning.ai",
+      "slug": "long-term-memory-deeplearning-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory deeplearning.ai"
+      ]
+    },
+    {
+      "keyword": "long term memory for ai",
+      "slug": "long-term-memory-for-ai",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory for ai",
+        "long term memory for ai agents"
+      ]
+    },
+    {
+      "keyword": "long term memory for ai agents",
+      "slug": "long-term-memory-for-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory for ai agents"
+      ]
+    },
+    {
+      "keyword": "long term memory in ai",
+      "slug": "long-term-memory-in-ai",
+      "autocomplete_matches": 5,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory in ai",
+        "long term memory in ai agents",
+        "short term vs long term memory in ai agents",
+        "what is long term memory in ai",
+        "what is long term memory in ai agents"
+      ]
+    },
+    {
+      "keyword": "long term memory in ai agents",
+      "slug": "long-term-memory-in-ai-agents",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory in ai agents",
+        "short term vs long term memory in ai agents",
+        "what is long term memory in ai agents"
+      ]
+    },
+    {
+      "keyword": "long term memory janitor ai reddit",
+      "slug": "long-term-memory-janitor-ai-reddit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory janitor ai reddit"
+      ]
+    },
+    {
+      "keyword": "long term memory local ai",
+      "slug": "long-term-memory-local-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory local ai"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm with most context window",
-    "local llm persistent memory",
-    "long short term memory ai model",
-    "long short term memory in ai",
-    "long short term memory meaning",
-    "long term agentic memory with langgraph deeplearning ai",
-    "long term memory ai assistant",
-    "long term memory ai model",
-    "long term memory ai reddit",
-    "long term memory aids",
-    "long term memory better than short term",
-    "long term memory character ai",
-    "long term memory deeplearning.ai",
-    "long term memory for ai",
-    "long term memory for ai agents",
-    "long term memory in ai",
-    "long term memory in ai agents",
-    "long term memory janitor ai reddit",
-    "long term memory local ai",
     "long term memory the foundation of ai self evolution",
     "long-term memory duration",
     "long-term memory examples",
-    "longest context window llm",
     "lstm long short term memory ai",
     "max context window llm",
     "mem0 agent memory",
@@ -6911,13 +7055,11 @@
     "self organizing ai memory system",
     "short and long term memory ai",
     "short term and long term memory agentic ai",
-    "short term memory ai",
     "short term memory ai agent",
     "short term memory aids",
     "short term memory and long term memory ai",
     "short term memory for ai agents",
     "short term memory loss ai",
-    "short term vs long term memory in ai agents",
     "spring ai conversation memory",
     "the ai that remembers consequence",
     "top brain foods improve memory",
@@ -6964,10 +7106,7 @@
     "what is keep alive memory",
     "what is knowledge agent in artificial intelligence",
     "what is llm memory",
-    "what is long short term memory in ai",
     "what is long short-term memory",
-    "what is long term memory in ai",
-    "what is long term memory in ai agents",
     "what is mean by llm",
     "what is meant by llm",
     "what is mem0 ai",
@@ -7057,9 +7196,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 704,
-    "validated": 659,
-    "low_volume": 45,
-    "new_opportunities_found": 247
+    "total_keywords": 723,
+    "validated": 671,
+    "low_volume": 52,
+    "new_opportunities_found": 222
   }
 }
