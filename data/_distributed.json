@@ -5240,5 +5240,194 @@
         "posted_at": "2026-04-07T23:04:40"
       }
     }
+  },
+  "llm-memory-dataset": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5716c528ab5d70d22119f",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-datasets-fueling-advanced-ai-recall",
+        "posted_at": "2026-04-07T23:04:44"
+      }
+    }
+  },
+  "llm-memory-db": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571704265160c50c63445",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-db-enhancing-ai-agents-with-persistent-knowledge",
+        "posted_at": "2026-04-07T23:04:48"
+      }
+    }
+  },
+  "llm-memory-decay": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571746e859aa14e14bd55",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-llm-memory-decay-why-ai-forgets-and-how-to-fix-it",
+        "posted_at": "2026-04-07T23:04:52"
+      }
+    }
+  },
+  "llm-memory-decoder": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d57178a6dd44a432c57346",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-decoder-enhancing-ai-recall-and-context",
+        "posted_at": "2026-04-07T23:04:56"
+      }
+    }
+  },
+  "llm-memory-design": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5717ca6dd44a432c57348",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-design-architecting-persistent-recall-for-ai-agents",
+        "posted_at": "2026-04-07T23:05:00"
+      }
+    }
+  },
+  "llm-memory-embedding": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571804265160c50c63447",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-embedding-storing-and-retrieving-knowledge-for-ai-agents",
+        "posted_at": "2026-04-07T23:05:04"
+      }
+    }
+  },
+  "llm-memory-engineering": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571846e859aa14e14bd57",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-engineering-crafting-persistent-recall-for-ai-agents",
+        "posted_at": "2026-04-07T23:05:08"
+      }
+    }
+  },
+  "llm-memory-episodic": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571876e859aa14e14bd59",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-understanding-episodic-recall-for-ai-agents",
+        "posted_at": "2026-04-07T23:05:12"
+      }
+    }
+  },
+  "llm-memory-estimator": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5718b9288482725babf12",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-estimator-quantifying-ai-agent-recall-costs",
+        "posted_at": "2026-04-07T23:05:15"
+      }
+    }
+  },
+  "llm-memory-evaluation": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5718fa6dd44a432c5734a",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-evaluation-benchmarking-agent-recall-and-retention",
+        "posted_at": "2026-04-07T23:05:19"
+      }
+    }
+  },
+  "llm-memory-example": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571934265160c50c63449",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-example-enhancing-ai-agents-with-recall",
+        "posted_at": "2026-04-07T23:05:23"
+      }
+    }
+  },
+  "llm-memory-expansion-strategies": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d57197a6dd44a432c5734c",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-expansion-strategies-overcoming-context-limitations",
+        "posted_at": "2026-04-07T23:05:27"
+      }
+    }
+  },
+  "llm-memory-explained": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5719bb7050915680fffe3",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-explained-how-large-language-models-remember",
+        "posted_at": "2026-04-07T23:05:31"
+      }
+    }
+  },
+  "llm-memory-extension": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5719fb7050915680fffe5",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-extension-breaking-through-context-window-barriers",
+        "posted_at": "2026-04-07T23:05:35"
+      }
+    }
+  },
+  "llm-memory-feature": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571a3a6dd44a432c5734e",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-feature-enabling-persistent-knowledge-in-ai",
+        "posted_at": "2026-04-07T23:05:39"
+      }
+    }
+  },
+  "llm-memory-file": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571a7b7050915680fffe7",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-file-storing-and-retrieving-ai-knowledge",
+        "posted_at": "2026-04-07T23:05:43"
+      }
+    }
+  },
+  "llm-memory-footprint": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571ab4265160c50c6344b",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-llm-memory-footprint-optimizing-ai-recall",
+        "posted_at": "2026-04-07T23:05:47"
+      }
+    }
+  },
+  "llm-memory-framework": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571af073c107da7fa7538",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-frameworks-bridging-the-gap-in-ai-recall",
+        "posted_at": "2026-04-07T23:05:51"
+      }
+    }
+  },
+  "llm-memory-function": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571b3a6dd44a432c57350",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-llm-memory-function-how-large-language-models-remember",
+        "posted_at": "2026-04-07T23:05:55"
+      }
+    }
+  },
+  "llm-memory-github": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571b6b7050915680fffe9",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-github-navigating-open-source-solutions-for-ai-recall",
+        "posted_at": "2026-04-07T23:05:59"
+      }
+    }
+  },
+  "llm-memory-golang": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571ba93f66aee84b4b6c1",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-in-go-architecting-recall-for-ai-agents",
+        "posted_at": "2026-04-07T23:06:03"
+      }
+    }
   }
 }
