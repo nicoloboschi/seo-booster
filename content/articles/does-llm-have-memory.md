@@ -13,6 +13,9 @@ keywords:
 - AI recall
 - context window
 - long-term memory AI
+- AI agents
+- episodic memory AI
+- semantic memory AI
 faq:
 - question: Do LLMs have a built-in memory like humans?
   answer: No, LLMs do not have inherent biological memory. They process information within a limited **context window**. For persistent recall, external **memory systems** are integrated around the LLM.
@@ -21,9 +24,11 @@ faq:
     as needed.
 - question: What is the primary limitation of an LLM's memory?
   answer: The main limitation is the **context window**, which has a finite size. Information outside this window is effectively 'forgotten' unless stored and retrieved by an external memory mechanism.
+- question: Can LLMs truly "remember" information?
+  answer: LLMs don't "remember" in the human sense. Their apparent recall is achieved through mechanisms like **context windows** for short-term recall and **external memory systems** for persistent **AI
+    recall**.
 slug: does-llm-have-memory
 ---
-
 
 LLMs do not possess inherent memory in the human sense. Their apparent recall arises from sophisticated **external memory systems** and finite **context windows**, not from intrinsic learning or persistent storage within the model itself. Understanding this distinction is key to grasping whether an LLM has memory.
 

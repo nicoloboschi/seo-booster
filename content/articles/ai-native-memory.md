@@ -9,6 +9,8 @@ tags:
 - AI-native
 - AI recall
 - agent cognition
+- AI agent memory architecture
+- LLM agent memory
 keywords:
 - ai native memory
 - agent memory
@@ -18,6 +20,8 @@ keywords:
 - AI agent memory architecture
 - AI memory systems
 - AI agent cognition
+- LLM agent memory architecture
+- AI recall strategies
 faq:
 - question: What distinguishes AI-native memory from traditional memory systems?
   answer: AI-native memory is designed from the ground up for AI agents, integrating seamlessly with their learning and reasoning processes. Traditional systems often adapt existing databases, lacking this
@@ -30,6 +34,9 @@ faq:
 - question: What is the role of vector databases in AI-native memory?
   answer: Vector databases store and efficiently query embeddings, which are numerical representations of data that capture semantic meaning. This allows AI agents to quickly retrieve relevant information
     based on semantic similarity, a core function of AI-native memory.
+- question: What are the key considerations for an AI agent memory architecture?
+  answer: Key considerations include seamless integration with the agent's core processing, dynamic learning and adaptation capabilities, efficient contextual awareness and retrieval, and robust memory
+    management and consolidation strategies.
 slug: ai-native-memory
 ---
 

@@ -30,6 +30,9 @@ faq:
 - question: What is LLM long-term memory and why is it important?
   answer: LLM long-term memory refers to the ability of a large language model to retain and access information over extended periods, far beyond its immediate context window. This is crucial for AI agents
     to develop a persistent understanding of users, tasks, and the world, enabling more coherent, adaptive, and intelligent interactions over time.
+- question: How do AI memory features interact with Large Language Models?
+  answer: AI memory features interact with LLMs by providing them with mechanisms to store, retrieve, and utilize information beyond their immediate context window. This allows LLMs to maintain conversational
+    coherence, learn from past interactions, and access external knowledge bases, leading to more sophisticated and context-aware AI agents.
 slug: ai-memory-llm
 ---
 
@@ -88,7 +91,7 @@ Implementing memory for LLMs can be approached in several ways, ranging from sim
 
 The simplest form of memory involves carefully crafting prompts to include relevant past information. This can involve:
 
-* **Summarizing previous turns:** Before sending a new prompt, a summary of the last few interactions is generated and included.
+* **Summarizing previous turns:** Before sending a new prompt, a summary of the last few turns is generated and included.
 * **Maintaining a chat history:** The entire conversation history, up to the context window limit, is passed with each new query.
 
 While effective for short-term recall, this method quickly hits the context window limit. For applications requiring deeper memory, more advanced techniques are necessary. This is a fundamental aspect of [AI agent memory explained](/articles/ai-agent-memory-explained/).

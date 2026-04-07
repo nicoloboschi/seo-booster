@@ -43,9 +43,11 @@ faq:
 - question: What are the benefits of using an AI memory game generator for AI development?
   answer: For AI development, an AI memory game generator can be used to create specific test cases for evaluating and benchmarking the memory capabilities of new AI models, identify areas for improvement,
     and facilitate targeted AI agent memory training.
+- question: What types of AI memory can be trained using these generators?
+  answer: AI memory game generators can train various forms of AI memory, including episodic memory (recalling specific events), semantic memory (general knowledge), and working memory (short-term information
+    retention and manipulation).
 slug: ai-memory-game-generator
 ---
-
 
 An **ai memory game generator** crafts engaging, personalized memory games. It creates dynamic challenges to test and enhance recall for both AI agents and users, moving beyond static exercises for improved learning and cognitive function.
 

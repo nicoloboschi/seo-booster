@@ -51,6 +51,7 @@ faq:
     vector stores, or even streaming topics as persistent logs. The goal is to ensure AI agents remember past interactions and context to provide continuous and informed support.
 slug: ai-agent-chat-memory
 ---
+---
 
 **AI agent chat memory** is the capability of an AI to retain and recall past interactions, enabling persistent and coherent conversations. This technology is crucial for creating natural dialogue by allowing AI to remember user inputs, preferences, and context over time, preventing frustrating, forgetful exchanges.
 

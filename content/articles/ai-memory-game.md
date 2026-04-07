@@ -64,6 +64,9 @@ faq:
 - question: What are the main challenges in AI memory development?
   answer: Key challenges include ensuring **scalability and efficiency** for large datasets, managing **relevance and forgetting**, preventing **catastrophic forgetting** in neural networks, and mitigating
     **bias in memory** to ensure fair AI recall.
+- question: How is AI memory evaluated?
+  answer: AI memory is evaluated using various benchmarks that test an agent's ability to recall specific facts, maintain context over long interactions, and perform tasks requiring temporal reasoning.
+    Metrics often focus on retrieval accuracy, response coherence, and task completion rates.
 slug: ai-memory-game
 ---
 
@@ -171,6 +174,8 @@ Other notable systems include [Zep Memory AI Guide](/articles/zep-memory-ai-guid
 
 **Temporal reasoning** is the ability of an AI agent to understand and process information related to time. This includes understanding the order of events, durations, and temporal relationships between different pieces of information.
 
+### Temporal Reasoning in AI Memory for Event Sequencing
+
 For an AI memory game, **temporal reasoning** is vital for episodic memory. It allows agents to reconstruct timelines of events, understand causality, and make predictions based on sequences of past occurrences. This capability is a hallmark of more advanced [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/) and is essential for nuanced **AI recall**.
 
 ## Challenges in AI Memory Development for Reliable Recall
@@ -196,6 +201,8 @@ AI memory systems can inherit biases present in their training data. This can le
 ## AI Memory Benchmarks and Evaluation for AI Recall
 
 To measure progress in AI memory development, researchers use various **AI memory benchmarks**. These benchmarks test an agent's ability to recall specific facts, maintain context over long conversations, and perform tasks requiring temporal reasoning.
+
+### Evaluating AI Memory Systems for Performance
 
 Metrics often focus on retrieval accuracy, response coherence, and task completion rates. Comparing different [AI memory benchmarks](/articles/ai-memory-benchmarks/) helps identify strengths and weaknesses in various memory systems and architectures, informing strategies for the **AI memory game** and improving **AI recall**.
 

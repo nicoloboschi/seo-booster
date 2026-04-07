@@ -31,6 +31,9 @@ faq:
 - question: What role do vector databases play in AI memory frameworks?
   answer: Vector databases are crucial for modern AI memory frameworks as they store and index data as numerical vectors, enabling efficient similarity searches for conceptual retrieval of memories. This
     is fundamental for LLM memory systems and persistent memory AI.
+- question: How does memory consolidation AI work within these frameworks?
+  answer: Memory consolidation AI involves techniques to summarize, distill, or compress older memories. This process helps manage vast amounts of data efficiently, retaining key information while reducing
+    storage overhead, and is vital for persistent memory AI.
 slug: ai-memory-frameworks
 ---
 

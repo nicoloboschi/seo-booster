@@ -49,6 +49,9 @@ faq:
 - question: How does AI girlfriend memory contribute to a personalized AI experience?
   answer: By remembering user preferences, past conversations, and emotional cues, AI girlfriend memory allows the AI to tailor its responses, offer relevant suggestions, and avoid repetitive interactions.
     This creates a more unique and engaging experience for each user, making the AI feel more attuned to their individual needs and personality.
+- question: How does AI companion memory differ from general LLM memory?
+  answer: While both leverage LLMs, AI companion memory is specifically optimized for relational continuity, emotional context, and personalization within a user-AI relationship. General LLM memory might
+    focus on broader knowledge recall or task completion, whereas AI companion memory prioritizes building a persistent, empathetic connection.
 slug: ai-girlfriend-memory
 ---
 
@@ -247,3 +250,6 @@ Bias in memory systems is another concern. If the training data contains biases,
 
 * **How does AI girlfriend memory contribute to a personalized AI experience?**
  By remembering user preferences, past conversations, and emotional cues, AI girlfriend memory allows the AI to tailor its responses, offer relevant suggestions, and avoid repetitive interactions. This creates a more unique and engaging experience for each user, making the AI feel more attuned to their individual needs and personality.
+
+* **How does AI companion memory differ from general LLM memory?**
+ AI companion memory is specifically optimized for relational continuity, emotional context, and personalization within a user-AI relationship. General LLM memory might focus on broader knowledge recall or task completion, whereas AI companion memory prioritizes building a persistent, empathetic connection.

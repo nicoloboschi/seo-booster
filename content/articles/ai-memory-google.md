@@ -1,6 +1,6 @@
 ---
 title: 'AI Memory Google: How Google AI Leverages Memory for Smarter Search and LLMs'
-description: 'Explore AI Memory Google: Understand how Google AI uses memory in search, LLMs like Gemini, and its architecture. Learn about practical examples and key components.'
+description: 'Explore AI Memory Google: Understand how Google AI uses memory in search, LLMs like Gemini, and its architecture. Learn about practical examples, key components, ...'
 date: 2026-03-28
 lastmod: 2026-03-28
 tags:
@@ -42,6 +42,9 @@ faq:
 - question: What are the key challenges in developing AI memory for Google?
   answer: Key challenges include ensuring scalability and efficiency for vast datasets, implementing intelligent forgetting and memory consolidation, balancing personalization with user privacy, and developing
     robust temporal reasoning capabilities.
+- question: What is the difference between semantic and episodic memory in AI?
+  answer: Semantic memory refers to general knowledge and facts, like understanding that Paris is the capital of France. Episodic memory, on the other hand, is about recalling specific personal experiences
+    or events, such as remembering what you ate for breakfast this morning. Google's AI leverages both for comprehensive understanding and interaction.
 slug: ai-memory-google
 ---
 

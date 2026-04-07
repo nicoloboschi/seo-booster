@@ -449,5 +449,446 @@
         "posted_at": "2026-04-03T10:21:44"
       }
     }
+  },
+  "ai-agents-agentic-memory-part-9": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537aad7a38df2689e293d",
+        "url": "https://aiagentmemory.hashnode.dev/ai-agents-agentic-memory-part-9-advanced-recall-and-forgetting-mechanisms",
+        "posted_at": "2026-04-07T18:58:18"
+      }
+    }
+  },
+  "ai-chatbot-that-remembers-everything": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537aeb49cf2b7d296d952",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-that-remembers-everything-architectures-capabilities-and-practical-examples",
+        "posted_at": "2026-04-07T18:58:22"
+      }
+    }
+  },
+  "ai-chatbot-that-remembers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537b2b49cf2b7d296d956",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-that-remembers-building-contextual-continuity-and-long-term-memory",
+        "posted_at": "2026-04-07T18:58:26"
+      }
+    }
+  },
+  "ai-chatbot-with-best-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537b6b49cf2b7d296d958",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-with-best-memory-architectures-and-technologies",
+        "posted_at": "2026-04-07T18:58:30"
+      }
+    }
+  },
+  "ai-chatbot-with-memory-free": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537bab49cf2b7d296d95a",
+        "url": "https://aiagentmemory.hashnode.dev/ai-chatbot-with-memory-free-understanding-limitations-and-free-solutions",
+        "posted_at": "2026-04-07T18:58:34"
+      }
+    }
+  },
+  "ai-coding-agent-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537be2409dfd4eaddc77a",
+        "url": "https://aiagentmemory.hashnode.dev/ai-coding-agent-memory-enhancing-code-generation-and-debugging",
+        "posted_at": "2026-04-07T18:58:38"
+      }
+    }
+  },
+  "ai-companion-with-long-term-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537c2d7a38df2689e293f",
+        "url": "https://aiagentmemory.hashnode.dev/ai-companion-with-long-term-memory-building-lasting-digital-relationships",
+        "posted_at": "2026-04-07T18:58:42"
+      }
+    }
+  },
+  "ai-dungeon-memory-system": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537c6d7a38df2689e2941",
+        "url": "https://aiagentmemory.hashnode.dev/ai-dungeon-memory-system-enhancing-interactive-storytelling",
+        "posted_at": "2026-04-07T18:58:46"
+      }
+    }
+  },
+  "ai-episodic-memory-faiss": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537cad7a38df2689e2943",
+        "url": "https://aiagentmemory.hashnode.dev/ai-episodic-memory-with-faiss-enhancing-agent-recall",
+        "posted_at": "2026-04-07T18:58:50"
+      }
+    }
+  },
+  "ai-episodic-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537ceb49cf2b7d296d95c",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-ai-episodic-memory-how-agents-recall-experiences",
+        "posted_at": "2026-04-07T18:58:54"
+      }
+    }
+  },
+  "ai-external-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537d1b49cf2b7d296d95e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-external-memory-augmenting-agent-capabilities-beyond-core-models",
+        "posted_at": "2026-04-07T18:58:57"
+      }
+    }
+  },
+  "ai-flash-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537d59787d8333c098e4e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-flash-memory-enhancing-ai-agent-recall-and-performance",
+        "posted_at": "2026-04-07T18:59:01"
+      }
+    }
+  },
+  "ai-for-memory-loss": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537d9d7a38df2689e2945",
+        "url": "https://aiagentmemory.hashnode.dev/ai-for-memory-loss-enhancing-recall-and-cognitive-support",
+        "posted_at": "2026-04-07T18:59:05"
+      }
+    }
+  },
+  "ai-for-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537dd0637a9cef2a3008e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-for-memory-enhancing-ai-agents-with-persistent-recall",
+        "posted_at": "2026-04-07T18:59:09"
+      }
+    }
+  },
+  "ai-foundry-agent-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537e1b49cf2b7d296d962",
+        "url": "https://aiagentmemory.hashnode.dev/ai-foundry-agent-memory-enhancing-ai-recall-and-context",
+        "posted_at": "2026-04-07T18:59:13"
+      }
+    }
+  },
+  "ai-foundry-agent-service-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537e5b49cf2b7d296d964",
+        "url": "https://aiagentmemory.hashnode.dev/ai-foundry-agent-service-memory-enabling-persistent-recall",
+        "posted_at": "2026-04-07T18:59:17"
+      }
+    }
+  },
+  "ai-foundry-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537e9b49cf2b7d296d966",
+        "url": "https://aiagentmemory.hashnode.dev/ai-foundry-memory-architecting-persistent-recall-for-agents",
+        "posted_at": "2026-04-07T18:59:21"
+      }
+    }
+  },
+  "ai-friend-that-remembers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537ed0637a9cef2a30090",
+        "url": "https://aiagentmemory.hashnode.dev/ai-friend-that-remembers-building-lasting-digital-companions",
+        "posted_at": "2026-04-07T18:59:25"
+      }
+    }
+  },
+  "ai-girlfriend-long-term-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537f1b49cf2b7d296d968",
+        "url": "https://aiagentmemory.hashnode.dev/ai-girlfriend-long-term-memory-building-lasting-digital-companionship-connection",
+        "posted_at": "2026-04-07T18:59:29"
+      }
+    }
+  },
+  "ai-girlfriend-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537f5b49cf2b7d296d96a",
+        "url": "https://aiagentmemory.hashnode.dev/ai-girlfriend-memory-enhancing-conversational-bonds-with-advanced-recall",
+        "posted_at": "2026-04-07T18:59:33"
+      }
+    }
+  },
+  "ai-girlfriend-that-remembers-everything": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537f9b49cf2b7d296d96c",
+        "url": "https://aiagentmemory.hashnode.dev/ai-girlfriend-that-remembers-everything-building-lasting-digital-companionship",
+        "posted_at": "2026-04-07T18:59:37"
+      }
+    }
+  },
+  "ai-girlfriend-that-remembers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d537fc9787d8333c098e50",
+        "url": "https://aiagentmemory.hashnode.dev/ai-girlfriends-that-remember-building-lasting-digital-companionship",
+        "posted_at": "2026-04-07T18:59:41"
+      }
+    }
+  },
+  "ai-gpu-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53800b49cf2b7d296d96e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-gpu-memory-accelerating-ai-with-high-speed-on-chip-storage",
+        "posted_at": "2026-04-07T18:59:44"
+      }
+    }
+  },
+  "ai-has-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53804b49cf2b7d296d970",
+        "url": "https://aiagentmemory.hashnode.dev/does-ai-have-memory-understanding-how-ai-remembers",
+        "posted_at": "2026-04-07T18:59:48"
+      }
+    }
+  },
+  "ai-human-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53808d7a38df2689e2947",
+        "url": "https://aiagentmemory.hashnode.dev/ai-human-memory-bridging-the-gap-between-machine-and-mind",
+        "posted_at": "2026-04-07T18:59:52"
+      }
+    }
+  },
+  "ai-image-generator-that-remembers-characters": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5380c0637a9cef2a30094",
+        "url": "https://aiagentmemory.hashnode.dev/ai-image-generator-that-remembers-characters-enabling-visual-continuity",
+        "posted_at": "2026-04-07T18:59:56"
+      }
+    }
+  },
+  "ai-image-generator-that-remembers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53810d7a38df2689e2949",
+        "url": "https://aiagentmemory.hashnode.dev/ai-image-generator-that-remembers-beyond-static-prompts",
+        "posted_at": "2026-04-07T19:00:00"
+      }
+    }
+  },
+  "ai-in-memory-care": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53814b49cf2b7d296d972",
+        "url": "https://aiagentmemory.hashnode.dev/ai-in-memory-care-enhancing-support-safety-and-quality-of-life-for-dementia-patients",
+        "posted_at": "2026-04-07T19:00:04"
+      }
+    }
+  },
+  "ai-in-memory-computing": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53817b49cf2b7d296d974",
+        "url": "https://aiagentmemory.hashnode.dev/ai-in-memory-computing-accelerating-intelligence",
+        "posted_at": "2026-04-07T19:00:07"
+      }
+    }
+  },
+  "ai-in-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5381bb49cf2b7d296d976",
+        "url": "https://aiagentmemory.hashnode.dev/ai-in-memory-architectures-types-and-future-possibilities-for-smarter-agents",
+        "posted_at": "2026-04-07T19:00:12"
+      }
+    }
+  },
+  "ai-infinite-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5381fd7a38df2689e294e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-infinite-memory-achieving-unlimited-recall-for-agents",
+        "posted_at": "2026-04-07T19:00:15"
+      }
+    }
+  },
+  "ai-killing-ram-prices": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538230637a9cef2a30096",
+        "url": "https://aiagentmemory.hashnode.dev/ais-impact-on-ram-prices-is-the-boom-sustainable",
+        "posted_at": "2026-04-07T19:00:19"
+      }
+    }
+  },
+  "ai-killing-ram": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538270637a9cef2a30098",
+        "url": "https://aiagentmemory.hashnode.dev/is-ai-killing-ram-understanding-the-memory-demands-of-modern-ai",
+        "posted_at": "2026-04-07T19:00:23"
+      }
+    }
+  },
+  "ai-long-term-memory-github": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5382b0637a9cef2a3009a",
+        "url": "https://aiagentmemory.hashnode.dev/ai-long-term-memory-github-finding-open-source-solutions",
+        "posted_at": "2026-04-07T19:00:27"
+      }
+    }
+  },
+  "ai-meeting-summary": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5382f0637a9cef2a3009c",
+        "url": "https://aiagentmemory.hashnode.dev/ai-meeting-summary-transforming-how-teams-capture-and-recall-information",
+        "posted_at": "2026-04-07T19:00:31"
+      }
+    }
+  },
+  "ai-memorial-generator": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53833d7a38df2689e2950",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memorial-generator-crafting-digital-legacies",
+        "posted_at": "2026-04-07T19:00:35"
+      }
+    }
+  },
+  "ai-memory-agent": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538370637a9cef2a3009e",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-agent-storing-and-recalling-information-for-smarter-ai",
+        "posted_at": "2026-04-07T19:00:39"
+      }
+    }
+  },
+  "ai-memory-aid": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5383b2409dfd4eaddc77c",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-aid-enhancing-ai-agent-recall-and-performance",
+        "posted_at": "2026-04-07T19:00:43"
+      }
+    }
+  },
+  "ai-memory-and-context": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5383f0637a9cef2a300a0",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-and-context-enabling-sophisticated-agent-behavior",
+        "posted_at": "2026-04-07T19:00:47"
+      }
+    }
+  },
+  "ai-memory-and-storage-etf": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538432409dfd4eaddc780",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-the-ai-memory-and-storage-etf-investing-in-ais-foundation",
+        "posted_at": "2026-04-07T19:00:51"
+      }
+    }
+  },
+  "ai-memory-and-storage-stocks": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538470637a9cef2a300a2",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-and-storage-stocks-investing-in-the-future-of-ai-recall-and-data-infrastructure",
+        "posted_at": "2026-04-07T19:00:55"
+      }
+    }
+  },
+  "ai-memory-api": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5384b2409dfd4eaddc782",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-the-ai-memory-api-enabling-persistent-recall-for-agents",
+        "posted_at": "2026-04-07T19:00:59"
+      }
+    }
+  },
+  "ai-memory-app": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5384f2409dfd4eaddc784",
+        "url": "https://aiagentmemory.hashnode.dev/what-is-an-ai-memory-app-and-how-does-it-work",
+        "posted_at": "2026-04-07T19:01:03"
+      }
+    }
+  },
+  "ai-memory-architecture": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538539b6f4ec23ec2a119",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-architecture-building-intelligent-recall",
+        "posted_at": "2026-04-07T19:01:07"
+      }
+    }
+  },
+  "ai-memory-assistant": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d53857d7a38df2689e2952",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-assistant-enhancing-agent-recall-and-context",
+        "posted_at": "2026-04-07T19:01:11"
+      }
+    }
+  },
+  "ai-memory-bank": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5385b2409dfd4eaddc786",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-bank-how-agents-store-recall-and-utilize-information",
+        "posted_at": "2026-04-07T19:01:15"
+      }
+    }
+  },
+  "ai-memory-benchmarks": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d5385fb49cf2b7d296d978",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-benchmarks-evaluating-performance-and-quality-of-ai-agent-memory-systems",
+        "posted_at": "2026-04-07T19:01:19"
+      }
+    }
+  },
+  "ai-memory-book": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538639787d8333c098e58",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-book-enhancing-ai-recall-and-contextual-understanding",
+        "posted_at": "2026-04-07T19:01:23"
+      }
+    }
+  },
+  "ai-memory-boost-module-gigabyte": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d538669787d8333c098e5a",
+        "url": "https://aiagentmemory.hashnode.dev/gigabyte-ai-memory-boost-module-supercharging-ai-agent-performance-with-dedicated-hardware",
+        "posted_at": "2026-04-07T19:01:27"
+      }
+    }
   }
 }

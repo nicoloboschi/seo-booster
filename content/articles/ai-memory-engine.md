@@ -41,6 +41,9 @@ faq:
     vector databases and RAG.
 - question: What are the key components of an AI memory engine?
   answer: Key components include a data persistence layer, querying and retrieval mechanisms, information encoding and indexing, and memory management and consolidation.
+- question: What is short-term recall in AI and how is it implemented?
+  answer: Short-term recall in AI refers to an agent's ability to access and utilize recent or highly relevant information rapidly. Frameworks like LlamaIndex offer tools and abstractions, such as `ShortTermMemory`
+    or similar constructs, to manage this immediate context, often by leveraging the LLM's context window or a dedicated in-memory cache for quick access.
 slug: ai-memory-engine
 ---
 
@@ -249,3 +252,5 @@ The future of **AI memory engines** points towards more integrated, adaptive, an
  LlamaIndex is a popular data framework for LLM applications that significantly aids in building AI memory engines by providing tools for data ingestion, indexing, and querying, especially for vector databases and RAG.
 * **What are the key components of an AI memory engine?**
  Key components include a data persistence layer, querying and retrieval mechanisms, information encoding and indexing, and memory management and consolidation.
+* **What is short-term recall in AI and how is it implemented?**
+ Short-term recall in AI refers to an agent's ability to access and use recent or highly relevant information rapidly. Frameworks like LlamaIndex offer tools and abstractions, such as `ShortTermMemory` or similar constructs, to manage this immediate context, often by using the LLM's context window or a dedicated in-memory cache for quick access.

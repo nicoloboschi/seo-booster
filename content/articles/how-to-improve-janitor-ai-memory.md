@@ -14,6 +14,8 @@ keywords:
 - ai agent memory
 - llm memory systems
 - context window management
+- janitor ai memory strategies
+- enhance janitor ai recall
 faq:
 - question: What is Janitor AI?
   answer: Janitor AI is a tool designed to help manage and clean up large language model (LLM) contexts, often by summarizing or discarding less relevant information to maintain efficiency. It's particularly
@@ -24,6 +26,9 @@ faq:
 - question: Can Janitor AI's memory be expanded beyond its default limits?
   answer: Yes, by employing advanced techniques like external memory stores, retrieval augmentation, and optimized memory management strategies, Janitor AI's effective memory capacity can be significantly
     extended beyond its initial limitations.
+- question: What are the key strategies for Janitor AI memory optimization?
+  answer: Key strategies include understanding and managing context window limits, implementing external memory stores like vector databases, enhancing retrieval mechanisms, utilizing temporal reasoning,
+    and employing specialized memory architectures such as episodic and semantic memory.
 slug: how-to-improve-janitor-ai-memory
 ---
 
@@ -161,3 +166,4 @@ add_memory("AI: Flight to London confirmed for Tuesday.", time.time() - 240) # 4
 add_memory("User asked about the weather again.", time.time() - 60) # 1 min ago
 
 print("\n
+

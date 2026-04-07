@@ -40,6 +40,9 @@ faq:
 - question: What is the role of High-Bandwidth Memory (HBM) in the AI memory chip shortage?
   answer: High-Bandwidth Memory (HBM) is crucial for AI accelerators due to its high performance. The complex manufacturing process for HBM, combined with its escalating demand for AI training and inference,
     is a significant contributor to the overall AI memory chip shortage.
+- question: What are the primary impacts of the AI chip shortage on the semiconductor industry?
+  answer: The primary impacts include increased hardware costs, project delays, stifled innovation, and a heightened focus on supply chain resilience and manufacturing capacity expansion for AI-specific
+    chips.
 slug: ai-memory-chip-shortage
 ---
 
