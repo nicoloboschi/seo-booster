@@ -6667,25 +6667,148 @@
       "matching_suggestions": [
         "llm memory python"
       ]
+    },
+    {
+      "keyword": "llm memory requirements",
+      "slug": "llm-memory-requirements",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory requirements",
+        "llm memory requirements calculator"
+      ]
+    },
+    {
+      "keyword": "llm memory requirements calculator",
+      "slug": "llm-memory-requirements-calculator",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory requirements calculator"
+      ]
+    },
+    {
+      "keyword": "llm memory survey",
+      "slug": "llm-memory-survey",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory survey"
+      ]
+    },
+    {
+      "keyword": "llm memory vector database",
+      "slug": "llm-memory-vector-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory vector database"
+      ]
+    },
+    {
+      "keyword": "llm native memory",
+      "slug": "llm-native-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm native memory"
+      ]
+    },
+    {
+      "keyword": "llm no memory",
+      "slug": "llm-no-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm no memory"
+      ]
+    },
+    {
+      "keyword": "llm optional memory free advanced",
+      "slug": "llm-optional-memory-free-advanced",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm optional memory free advanced",
+        "llm optional memory free advanced comfyui"
+      ]
+    },
+    {
+      "keyword": "llm optional memory free advanced comfyui",
+      "slug": "llm-optional-memory-free-advanced-comfyui",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm optional memory free advanced comfyui"
+      ]
+    },
+    {
+      "keyword": "llm parametric memory",
+      "slug": "llm-parametric-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm parametric memory"
+      ]
+    },
+    {
+      "keyword": "llm procedural memory",
+      "slug": "llm-procedural-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "llm procedural memory",
+        "llm procedural memory optimization"
+      ]
+    },
+    {
+      "keyword": "llm procedural memory optimization",
+      "slug": "llm-procedural-memory-optimization",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm procedural memory optimization"
+      ]
+    },
+    {
+      "keyword": "llm ram needed",
+      "slug": "llm-ram-needed",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm ram needed"
+      ]
+    },
+    {
+      "keyword": "llm ram offload",
+      "slug": "llm-ram-offload",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm ram offload"
+      ]
+    },
+    {
+      "keyword": "llm vision memory file path",
+      "slug": "llm-vision-memory-file-path",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm vision memory file path"
+      ]
+    },
+    {
+      "keyword": "llm vision memory not working",
+      "slug": "llm-vision-memory-not-working",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm vision memory not working"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "llm memory requirements",
-    "llm memory requirements calculator",
-    "llm memory survey",
-    "llm memory vector database",
-    "llm native memory",
-    "llm no memory",
-    "llm optional memory free advanced",
-    "llm optional memory free advanced comfyui",
-    "llm parametric memory",
-    "llm procedural memory",
-    "llm procedural memory optimization",
-    "llm ram needed",
-    "llm ram offload",
-    "llm vision memory file path",
-    "llm vision memory not working",
     "llm with most context window",
     "local llm persistent memory",
     "long short term memory ai model",
@@ -6934,9 +7057,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 689,
-    "validated": 644,
+    "total_keywords": 704,
+    "validated": 659,
     "low_volume": 45,
-    "new_opportunities_found": 262
+    "new_opportunities_found": 247
   }
 }
