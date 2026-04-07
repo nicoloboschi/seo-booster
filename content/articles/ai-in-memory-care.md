@@ -43,6 +43,9 @@ faq:
 - question: How does AI contribute to personalized care plans in memory care?
   answer: AI analyzes data on an individual's behavior, health, and engagement to identify patterns and predict needs. This allows for the creation of highly tailored care plans that adapt to the resident's
     evolving condition, ensuring more effective and personalized support.
+- question: How does AI help manage medication for dementia patients?
+  answer: AI-powered systems can provide smart medication dispensers that alert patients when it's time to take their pills and confirm dosage. They can also notify caregivers if a dose is missed, ensuring
+    timely intervention and reducing the risk of adverse health outcomes.
 slug: ai-in-memory-care
 ---
 

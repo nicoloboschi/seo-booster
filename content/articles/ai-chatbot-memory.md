@@ -40,6 +40,9 @@ faq:
 - question: What are the key benefits of AI with long-term memory?
   answer: AI with long-term memory offers enhanced personalization, improved user experience through context retention, the ability to learn and adapt over time, and the capacity to handle complex, multi-turn
     conversations more effectively.
+- question: What makes an AI chatbot have "memory"?
+  answer: An AI chatbot has memory when it can store, retrieve, and utilize information from past interactions or learned data. This goes beyond simply processing the current input, allowing for continuity
+    and personalization in conversations.
 slug: ai-chatbot-memory
 ---
 

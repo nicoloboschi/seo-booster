@@ -46,7 +46,7 @@ The development of sophisticated Artificial Intelligence (AI) agents hinges on t
 
 ## What is AI Agent Memory?
 
-At its core, AI agent memory is analogous to biological memory. It's the capacity of an agent to retain information acquired through its interactions with the environment or from external sources, and to recall or use this information when needed. This information can range from immediate sensory input to long-term learned knowledge. Understanding **AI agent memory** is key to building intelligent systems.
+**AI agent memory** refers to the capability of an artificial intelligence agent to store, retrieve, and use past experiences, information, and learned knowledge to inform its current actions and decision-making. At its core, AI agent memory is analogous to biological memory. It's the capacity of an agent to retain information acquired through its interactions with the environment or from external sources, and to recall or use this information when needed. This information can range from immediate sensory input to long-term learned knowledge. Understanding **AI agent memory** is key to building intelligent systems.
 
 Memory in AI agents serves several crucial functions:
 
