@@ -4295,5 +4295,35 @@
     "generated_at": "2026-04-07T04:07:26.896023",
     "sources": [],
     "quality_score": 65
+  },
+  "long-term-memory-better-than-short-term": {
+    "keyword": "long term memory better than short term",
+    "generated_at": "2026-04-07T06:09:02.105908",
+    "sources": [],
+    "quality_score": 65
+  },
+  "long-term-memory-character-ai": {
+    "keyword": "long term memory character ai",
+    "generated_at": "2026-04-07T06:09:57.841356",
+    "sources": [],
+    "quality_score": 65
+  },
+  "long-term-memory-deeplearning-ai": {
+    "keyword": "long term memory deeplearning.ai",
+    "generated_at": "2026-04-07T06:10:38.830207",
+    "sources": [],
+    "quality_score": 75
+  },
+  "long-term-memory-for-ai": {
+    "keyword": "long term memory for ai",
+    "generated_at": "2026-04-07T06:11:19.133411",
+    "sources": [],
+    "quality_score": 65
+  },
+  "long-term-memory-for-ai-agents": {
+    "keyword": "long term memory for ai agents",
+    "generated_at": "2026-04-07T06:12:09.199099",
+    "sources": [],
+    "quality_score": 65
   }
 }
