@@ -3504,24 +3504,6 @@
     "sources": [],
     "quality_score": 65
   },
-  "openclaw-ai-agent-memory": {
-    "keyword": "openclaw ai agent memory",
-    "generated_at": "2026-04-04T22:31:41.669801",
-    "sources": [],
-    "quality_score": 65
-  },
-  "hermes-agent-memory": {
-    "keyword": "hermes agent memory",
-    "generated_at": "2026-04-04T22:32:32.277921",
-    "sources": [],
-    "quality_score": 65
-  },
-  "openclaw-vs-hermes-agent-memory": {
-    "keyword": "openclaw vs hermes agent memory",
-    "generated_at": "2026-04-04T22:33:15.092753",
-    "sources": [],
-    "quality_score": 65
-  },
   "llm-gpu-memory": {
     "keyword": "llm gpu memory",
     "generated_at": "2026-04-04T23:48:28.892044",
@@ -4355,5 +4337,31 @@
     "generated_at": "2026-04-07T08:19:43.264634",
     "sources": [],
     "quality_score": 70
+  },
+  "openclaw-ai-agent-memory": {
+    "keyword": "openclaw ai agent memory",
+    "generated_at": "2026-04-07T09:13:22.332839",
+    "sources": [
+      "https://vectorize.io/articles/openclaw-memory-hindsight-vs-supermemory-vs-mem0",
+      "https://vectorize.io/articles/openclaw-vs-hermes-agent-memory",
+      "https://vectorize.io/articles/hermes-agent-memory-explained"
+    ],
+    "quality_score": 65
+  },
+  "hermes-agent-memory": {
+    "keyword": "hermes agent memory",
+    "generated_at": "2026-04-07T09:14:08.874187",
+    "sources": [
+      "https://vectorize.io/articles/hermes-agent-memory-explained",
+      "https://vectorize.io/articles/hermes-agent-memory-not-working",
+      "https://vectorize.io/articles/hermes-agent-memory-providers-compared"
+    ],
+    "quality_score": 65
+  },
+  "openclaw-vs-hermes-agent-memory": {
+    "keyword": "openclaw vs hermes agent memory",
+    "generated_at": "2026-04-07T09:15:04.756271",
+    "sources": [],
+    "quality_score": 65
   }
 }
