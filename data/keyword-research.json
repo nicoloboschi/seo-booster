@@ -314,6 +314,7 @@
     "context window llm": [
       "1 million context window llm",
       "10 million context window llm",
+      "1m context window local llm",
       "2 million context window llm",
       "anything llm context window",
       "average llm context window",
@@ -330,8 +331,7 @@
       "context window in llm",
       "context window in llm means",
       "context window in llm models",
-      "context window llm benchmark",
-      "context window llm comparison"
+      "context window length llm"
     ],
     "mem0": [
       "best llm for mem0",
@@ -691,9 +691,11 @@
     {
       "keyword": "1m context window local llm",
       "slug": "1m-context-window-local-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "1m context window local llm"
+      ]
     },
     {
       "keyword": "2 million context window llm",
@@ -911,7 +913,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 31,
+      "autocomplete_matches": 34,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -3481,16 +3483,20 @@
     {
       "keyword": "context window length llm",
       "slug": "context-window-length-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window length llm"
+      ]
     },
     {
       "keyword": "context window limit llm",
       "slug": "context-window-limit-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window limit llm"
+      ]
     },
     {
       "keyword": "context window llm benchmark",
@@ -3548,9 +3554,11 @@
     {
       "keyword": "context window llm list",
       "slug": "context-window-llm-list",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm list"
+      ]
     },
     {
       "keyword": "context window llm meaning",
@@ -5249,23 +5257,28 @@
     {
       "keyword": "large context window llm",
       "slug": "large-context-window-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "large context window llm"
+      ]
     },
     {
       "keyword": "large context window local llm",
       "slug": "large-context-window-local-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "large context window local llm"
+      ]
     },
     {
       "keyword": "largest context window llm",
       "slug": "largest-context-window-llm",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
+        "largest context window llm",
         "largest context window llm free",
         "largest context window llm ollama",
         "largest context window llm open source",
@@ -5302,9 +5315,11 @@
     {
       "keyword": "largest context window local llm",
       "slug": "largest-context-window-local-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "largest context window local llm"
+      ]
     },
     {
       "keyword": "largest context window open llm",
@@ -6969,25 +6984,147 @@
       "matching_suggestions": [
         "long term memory local ai"
       ]
+    },
+    {
+      "keyword": "long term memory the foundation of ai self evolution",
+      "slug": "long-term-memory-the-foundation-of-ai-self-evolution",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory the foundation of ai self evolution"
+      ]
+    },
+    {
+      "keyword": "long-term memory duration",
+      "slug": "long-term-memory-duration",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long-term memory duration"
+      ]
+    },
+    {
+      "keyword": "long-term memory examples",
+      "slug": "long-term-memory-examples",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long-term memory examples"
+      ]
+    },
+    {
+      "keyword": "lstm long short term memory ai",
+      "slug": "lstm-long-short-term-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "lstm long short term memory ai"
+      ]
+    },
+    {
+      "keyword": "max context window llm",
+      "slug": "max-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "max context window llm"
+      ]
+    },
+    {
+      "keyword": "mem0 agent memory",
+      "slug": "mem0-agent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 agent memory"
+      ]
+    },
+    {
+      "keyword": "mem0 ai founder",
+      "slug": "mem0-ai-founder",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 ai founder"
+      ]
+    },
+    {
+      "keyword": "mem0 ai memory",
+      "slug": "mem0-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 ai memory"
+      ]
+    },
+    {
+      "keyword": "mem0 building production-ready ai agents",
+      "slug": "mem0-building-production-ready-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 building production-ready ai agents"
+      ]
+    },
+    {
+      "keyword": "mem0 delete memory",
+      "slug": "mem0-delete-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 delete memory"
+      ]
+    },
+    {
+      "keyword": "mem0 embedding",
+      "slug": "mem0-embedding",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 embedding",
+        "mem0 embedding model"
+      ]
+    },
+    {
+      "keyword": "mem0 embedding model",
+      "slug": "mem0-embedding-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 embedding model"
+      ]
+    },
+    {
+      "keyword": "mem0 episodic memory",
+      "slug": "mem0-episodic-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 episodic memory"
+      ]
+    },
+    {
+      "keyword": "mem0 for rag",
+      "slug": "mem0-for-rag",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 for rag"
+      ]
+    },
+    {
+      "keyword": "mem0 graph memory",
+      "slug": "mem0-graph-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 graph memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "long term memory the foundation of ai self evolution",
-    "long-term memory duration",
-    "long-term memory examples",
-    "lstm long short term memory ai",
-    "max context window llm",
-    "mem0 agent memory",
-    "mem0 ai founder",
-    "mem0 ai memory",
-    "mem0 building production-ready ai agents",
-    "mem0 delete memory",
-    "mem0 embedding",
-    "mem0 embedding model",
-    "mem0 episodic memory",
-    "mem0 for rag",
-    "mem0 graph memory",
+    "longest context window llm",
     "mem0 in ai",
     "mem0 in memory",
     "mem0 long term memory",
@@ -7196,9 +7333,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 723,
-    "validated": 671,
-    "low_volume": 52,
-    "new_opportunities_found": 222
+    "total_keywords": 738,
+    "validated": 693,
+    "low_volume": 45,
+    "new_opportunities_found": 208
   }
 }
