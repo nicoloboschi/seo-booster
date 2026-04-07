@@ -40,7 +40,7 @@ faq:
     for Large Language Models (LLMs). The LLM handles the core processing and response generation, while MEM0 stores and retrieves relevant historical data. This allows the LLM to access long-term context
     beyond its immediate input window, enabling more coherent and informed interactions. Developers integrate MEM0 by connecting it to their LLM agent's architecture, often through APIs or SDKs provided
     by MEM0 implementations, allowing the agent to query and update its memory as needed.  ---
----
+
 
 **AI memory MEM0** equips agents with persistent, long-term recall. It enables the storage, retrieval, and management of past interaction data, fostering continuous learning and maintaining context for sophisticated operations. This is a key component for advanced agentic systems.
 
@@ -166,4 +166,3 @@ MEM0 is fundamental to agentic AI by providing the persistent memory required fo
 ### How does MEM0 work and what is its typical integration path?
 MEM0 works by providing a structured system for AI agents to store, retrieve, and manage past interactions and experiences. Its typical integration path involves acting as an external memory module for Large Language Models (LLMs). The LLM handles the core processing and response generation, while MEM0 stores and retrieves relevant historical data. This allows the LLM to access long-term context beyond its immediate input window, enabling more coherent and informed interactions. Developers integrate MEM0 by connecting it to their LLM agent's architecture, often through APIs or SDKs provided by MEM0 implementations, allowing the agent to query and update its memory as needed.
 
----

@@ -4501,5 +4501,35 @@
     "generated_at": "2026-04-07T18:50:52.922208",
     "sources": [],
     "quality_score": 65
+  },
+  "memory-ai-jobs": {
+    "keyword": "memory ai jobs",
+    "generated_at": "2026-04-07T20:52:58.083380",
+    "sources": [],
+    "quality_score": 65
+  },
+  "memory-architectures-in-long-term-ai-agents-beyond-simple-state-representation": {
+    "keyword": "memory architectures in long term ai agents beyond simple state representation",
+    "generated_at": "2026-04-07T20:53:23.545937",
+    "sources": [],
+    "quality_score": 75
+  },
+  "memory-based-chatbot": {
+    "keyword": "memory based chatbot",
+    "generated_at": "2026-04-07T20:54:01.151519",
+    "sources": [],
+    "quality_score": 75
+  },
+  "memory-bot-discord": {
+    "keyword": "memory bot discord",
+    "generated_at": "2026-04-07T20:54:39.635320",
+    "sources": [],
+    "quality_score": 65
+  },
+  "memory-bot-juna": {
+    "keyword": "memory bot juna",
+    "generated_at": "2026-04-07T20:55:24.975032",
+    "sources": [],
+    "quality_score": 65
   }
 }
