@@ -5429,5 +5429,14 @@
         "posted_at": "2026-04-07T23:06:03"
       }
     }
+  },
+  "llm-memory-google": {
+    "platforms": {
+      "hashnode": {
+        "id": "69d571beb7050915680fffeb",
+        "url": "https://aiagentmemory.hashnode.dev/llm-memory-with-google-enhancing-ai-recall-and-context",
+        "posted_at": "2026-04-07T23:06:06"
+      }
+    }
   }
 }
