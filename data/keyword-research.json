@@ -7120,25 +7120,148 @@
       "matching_suggestions": [
         "mem0 graph memory"
       ]
+    },
+    {
+      "keyword": "longest context window llm",
+      "slug": "longest-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "longest context window llm"
+      ]
+    },
+    {
+      "keyword": "mem0 in ai",
+      "slug": "mem0-in-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 in ai"
+      ]
+    },
+    {
+      "keyword": "mem0 in memory",
+      "slug": "mem0-in-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 in memory"
+      ]
+    },
+    {
+      "keyword": "mem0 long term memory",
+      "slug": "mem0-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 long term memory"
+      ]
+    },
+    {
+      "keyword": "mem0 memory",
+      "slug": "mem0-memory",
+      "autocomplete_matches": 4,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 memory",
+        "mem0 memory layer",
+        "mem0 memory types",
+        "what is mem0 memory"
+      ]
+    },
+    {
+      "keyword": "mem0 memory layer",
+      "slug": "mem0-memory-layer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 memory layer"
+      ]
+    },
+    {
+      "keyword": "mem0 memory types",
+      "slug": "mem0-memory-types",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 memory types"
+      ]
+    },
+    {
+      "keyword": "mem0 openmemory",
+      "slug": "mem0-openmemory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 openmemory"
+      ]
+    },
+    {
+      "keyword": "mem0 pydantic ai",
+      "slug": "mem0-pydantic-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 pydantic ai"
+      ]
+    },
+    {
+      "keyword": "memory ai jobs",
+      "slug": "memory-ai-jobs",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory ai jobs"
+      ]
+    },
+    {
+      "keyword": "memory architectures in long term ai agents beyond simple state representation",
+      "slug": "memory-architectures-in-long-term-ai-agents-beyond-simple-state-representation",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory architectures in long term ai agents beyond simple state representation"
+      ]
+    },
+    {
+      "keyword": "memory based chatbot",
+      "slug": "memory-based-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory based chatbot"
+      ]
+    },
+    {
+      "keyword": "memory bot discord",
+      "slug": "memory-bot-discord",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory bot discord"
+      ]
+    },
+    {
+      "keyword": "memory bot juna",
+      "slug": "memory-bot-juna",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory bot juna"
+      ]
+    },
+    {
+      "keyword": "memory cache llm",
+      "slug": "memory-cache-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory cache llm"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "longest context window llm",
-    "mem0 in ai",
-    "mem0 in memory",
-    "mem0 long term memory",
-    "mem0 memory",
-    "mem0 memory layer",
-    "mem0 memory types",
-    "mem0 openmemory",
-    "mem0 pydantic ai",
-    "memory ai jobs",
-    "memory architectures in long term ai agents beyond simple state representation",
-    "memory based chatbot",
-    "memory bot discord",
-    "memory bot juna",
-    "memory cache llm",
     "memory card vs ram",
     "memory chatbot langflow",
     "memory for chatbot",
@@ -7247,7 +7370,6 @@
     "what is mean by llm",
     "what is meant by llm",
     "what is mem0 ai",
-    "what is mem0 memory",
     "what is memory cloth",
     "what is memory database",
     "what is memory fabric",
@@ -7333,9 +7455,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 738,
-    "validated": 693,
+    "total_keywords": 753,
+    "validated": 708,
     "low_volume": 45,
-    "new_opportunities_found": 208
+    "new_opportunities_found": 192
   }
 }
