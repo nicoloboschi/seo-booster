@@ -4741,5 +4741,35 @@
     "generated_at": "2026-04-08T11:40:44.727974",
     "sources": [],
     "quality_score": 75
+  },
+  "permanent-memory-llm": {
+    "keyword": "permanent memory llm",
+    "generated_at": "2026-04-08T13:43:02.266047",
+    "sources": [],
+    "quality_score": 65
+  },
+  "persistent-ai-memory-system": {
+    "keyword": "persistent ai memory system",
+    "generated_at": "2026-04-08T13:43:58.609628",
+    "sources": [],
+    "quality_score": 65
+  },
+  "persistent-memory-for-llm": {
+    "keyword": "persistent memory for llm",
+    "generated_at": "2026-04-08T13:44:54.236486",
+    "sources": [],
+    "quality_score": 65
+  },
+  "persistent-memory-in-llm": {
+    "keyword": "persistent memory in llm",
+    "generated_at": "2026-04-08T13:45:44.474998",
+    "sources": [],
+    "quality_score": 65
+  },
+  "pydantic-ai-long-term-memory": {
+    "keyword": "pydantic ai long term memory",
+    "generated_at": "2026-04-08T13:46:42.636766",
+    "sources": [],
+    "quality_score": 65
   }
 }
