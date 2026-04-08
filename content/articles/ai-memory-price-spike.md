@@ -49,7 +49,7 @@ faq:
     prices over the long term.
 slug: ai-memory-price-spike
 ---
-
+---
 
 ## What is an AI Memory Price Spike?
 

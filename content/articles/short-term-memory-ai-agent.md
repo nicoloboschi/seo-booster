@@ -52,7 +52,6 @@ These methods allow agents to maintain a sense of continuity within a single ses
 
 The very nature of short-term memory imposes significant limitations on AI agents. Its **limited capacity** means agents can only hold a finite amount of information at once. Information also **decays rapidly** unless actively maintained or rehearsed, leading to forgetting even within short timeframes.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 Also, short-term memory is prone to **interference**. New information can overwrite or disrupt existing data, making it unreliable for complex, multi-turn dialogues or tasks that require recalling specific details from earlier in an interaction. This is a key differentiator from more robust memory systems.

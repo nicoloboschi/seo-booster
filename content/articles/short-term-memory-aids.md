@@ -63,7 +63,6 @@ These methods are essential for long-running interactions, ensuring the agent do
 
 Designing an AI agent that effectively uses short term memory involves careful consideration of its architecture and employed tools. The goal is to create a system that feels coherent and responsive.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### The Role of Architecture Patterns
