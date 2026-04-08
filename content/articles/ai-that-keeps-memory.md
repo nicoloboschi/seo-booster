@@ -133,6 +133,9 @@ class AIAgent:
 ## response = agent.process_input("What did we discuss yesterday about the project?")
 ```
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 This example illustrates how an agent can query its memory system and use the retrieved information to generate a more informed response, demonstrating an **AI that keeps memory**.
 
 ### Memory Management: Consolidation and Forgetting

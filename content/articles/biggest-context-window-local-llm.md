@@ -62,6 +62,9 @@ This capability is fundamental to building AI that truly remembers conversations
 
 Historically, the primary bottleneck for LLM context has been computational cost. Processing longer sequences requires significantly more memory and processing power, often making it infeasible for local deployment. However, innovative architectural changes and optimization techniques are overcoming these hurdles for models aiming to be the **biggest context window local LLM**.
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 ### The Quadratic Bottleneck of Attention
 
 The original Transformer architecture's attention mechanism exhibits **quadratic complexity** with respect to the input sequence length. This means that doubling the context length quadruples the computational and memory requirements for attention calculations. For example, processing 100,000 tokens instead of 10,000 tokens would require roughly 100 times more computation and memory for the attention layers. This scaling issue made very **large context windows** impractical for many years.

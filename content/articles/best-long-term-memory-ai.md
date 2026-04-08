@@ -93,6 +93,9 @@ similarities = cosine_similarity([query_embedding], memory_embeddings)[0]
 most_similar_index = similarities.argmax()
 highest_similarity = similarities[most_similar_index]
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 print(f"Most similar memory: '{memory_entries[most_similar_index]}'")
 print(f"Similarity score: {highest_similarity:.4f}")
 

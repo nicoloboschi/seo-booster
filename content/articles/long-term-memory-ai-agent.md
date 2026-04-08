@@ -77,6 +77,9 @@ class VectorDBClient:
  self.knowledge_base: List[Dict[str, Any]] = [] # Stores {"id": ..., "vector": ..., "text": ...}
  self.next_id = 0
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
  def add_document(self, text: str, embedding: List[float]):
  """Adds a document (text and its embedding) to the knowledge base."""
  doc_id = str(self.next_id)

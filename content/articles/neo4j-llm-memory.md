@@ -115,6 +115,9 @@ password = "password" # Replace with your Neo4j password
 ## Establish a connection to the Neo4j database
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 def get_company_acquisition_query(company_name):
  """
  Simulates an LLM generating a Cypher query to find companies acquired by a given company.

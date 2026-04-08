@@ -119,6 +119,9 @@ Memory deletion acts as a complementary strategy to techniques like summarizatio
 
 The way MEM0 delete memory is used can differ based on the agent's architecture. For instance, an agent designed for [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) might use deletion to prune old event sequences that are no longer relevant to the current context.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ### Task-Oriented Agents
 
 For agents focused on completing specific tasks, memory deletion can be used to clear out context related to completed tasks. This frees up cognitive resources for new ones. Effective `mem0 delete memory` operations are vital here.

@@ -64,6 +64,9 @@ The implementation of these memory types within a Dify application dictates its 
 
 Building effective **dify chatbot memory** involves selecting and integrating appropriate technologies and strategies. Dify, as a platform, provides tools and frameworks that facilitate this, but the underlying principles of AI memory systems are universal.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### Choosing the Right Vector Database for Dify
 
 A cornerstone of modern AI memory is the use of **embedding models for memory**. These models convert text (like conversation snippets) into numerical vectors. These vectors capture the semantic meaning of the text. When a new query comes in, it's also converted into a vector, and the system searches for the most similar vectors in its memory database.

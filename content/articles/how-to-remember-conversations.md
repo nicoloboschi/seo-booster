@@ -96,6 +96,9 @@ class MockPineconeIndex:
  def upsert(self, vectors):
  print(f"Mock upserted: {vectors}")
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 index = MockPineconeIndex()
 
 def store_conversation_turn(user_utterance, agent_response, turn_id):

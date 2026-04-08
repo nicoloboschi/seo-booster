@@ -72,6 +72,9 @@ Mem0’s integration simplifies the development of agents that need to remember 
 
 Mem0 offers several advantages for AI developers seeking effective memory solutions. Its design prioritizes ease of use and reliable recall, making **mem0 in memory** a valuable tool. The benefits of **mem0 in memory** are substantial.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ### Simplicity and Integration
 
 Mem0 is often implemented in Python, making it accessible to a wide range of developers. Its APIs are designed for straightforward integration with popular LLM orchestration frameworks like LangChain or LlamaIndex. This ease of integration significantly speeds up development cycles for AI applications requiring persistent memory. Developers can **employ** **mem0 in memory** without extensive re-architecting. The **mem0 in memory** framework is designed for ease of use.

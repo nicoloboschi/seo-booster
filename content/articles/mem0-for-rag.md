@@ -151,6 +151,9 @@ print(response)
 ```
 This code snippet illustrates the core idea of **mem0 for rag**: querying Mem0 for context and then using that context to refine the query sent to the main knowledge retrieval system. This enhances the overall intelligence of the RAG agent.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ## Mem0 vs. Other Memory Systems for RAG
 
 While Mem0 offers a powerful solution, it's one of several options for enhancing RAG memory. Understanding its position relative to other systems is key to choosing the right tool for a specific application. The choice of memory system significantly impacts the performance and capabilities of **mem0 for rag** implementations.

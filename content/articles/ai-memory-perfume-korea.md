@@ -163,6 +163,9 @@ Ensuring that memory data is anonymized and securely stored, and that users have
 
 While the concept of **AI Memory Perfume** is primarily focused on personal experience, its underlying principles could extend to other fields. The ability to link AI-driven analysis with sensory output has broad implications for **Korean AI innovation**.
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 ### Therapeutic and Wellness Applications of AI Perfume
 
 In therapeutic settings, AI-driven scents could be used for memory recall therapy, particularly for individuals with conditions affecting memory, such as Alzheimer's disease or dementia. A familiar scent linked to a positive memory could help ground patients and improve their emotional well-being. A study published in the *Journal of Alzheimer's Disease* found that olfactory stimulation can improve memory performance in older adults by up to 22%.

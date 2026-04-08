@@ -118,6 +118,9 @@ class MockVectorDBClient:
 embedding_model = MockEmbeddingModel()
 client = MockVectorDBClient(host="localhost", port=5432)
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 def store_agent_interaction(agent_id: str, user_query: str, agent_response: str, timestamp: str):
  """Stores a full interaction (query and response) in the memory library."""
  interaction_text = f"User: {user_query}\nAgent: {agent_response}"

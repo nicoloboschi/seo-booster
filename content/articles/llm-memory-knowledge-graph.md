@@ -50,6 +50,9 @@ When integrated with LLMs, these graphs act as an extended, explicit memory. The
 
 Building an effective **LLM memory knowledge graph** involves a structured approach to data integration and LLM interfacing. It's about creating a bridge between unstructured text understanding and structured relational data access.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ### Data Ingestion and Structuring for Graphs
 
 The foundational step is ingesting data from diverse sources, including structured databases, unstructured text, and other AI model outputs. Crucially, this data must be transformed into a knowledge graph format, identifying key entities and their relationships.

@@ -80,6 +80,9 @@ A 2024 report from the AI Memory Initiative indicated that agents employing long
 
 Implementing memory for LLMs involves integrating them into broader AI agent architectures. Several patterns and systems have emerged to facilitate this, enhancing the basic "does LLM have memory" question.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### Retrieval-Augmented Generation (RAG)
 
 **Retrieval-Augmented Generation (RAG)** is a popular technique. It involves retrieving relevant information from an external knowledge base (often a vector database) and providing it as context to the LLM. This allows the LLM to access information it wasn't originally trained on, improving its recall.

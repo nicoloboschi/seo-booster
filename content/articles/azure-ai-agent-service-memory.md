@@ -85,4 +85,7 @@ from azure.search.documents.models import Vector
 from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI # Assuming Azure OpenAI for LLM
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 ## 

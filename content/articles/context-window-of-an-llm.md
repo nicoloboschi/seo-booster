@@ -75,6 +75,9 @@ Researchers are developing innovations to overcome these limitations. Techniques
 
 While the inherent **context window of an LLM** presents a hard limit, several strategies extend an AI's ability to process and recall information beyond this direct constraint. These methods are crucial for applications requiring deep understanding of extensive data. Expanding the effective context is key to unlocking new AI capabilities.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### Retrieval-Augmented Generation (RAG) Explained
 
 RAG combines LLM generation with an external retrieval system. Instead of relying solely on the LLM's internal knowledge or its limited context window, RAG retrieves relevant information from a database (often using [embedding models for RAG](/articles/embedding-models-for-rag/)) and injects it into the LLM's prompt. This allows the LLM to access and reason over vast amounts of data without needing an enormous **context window of an LLM**. This effectively bypasses the direct **LLM context length** limitation for knowledge retrieval.

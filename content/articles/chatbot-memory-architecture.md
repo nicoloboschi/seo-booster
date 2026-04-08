@@ -122,6 +122,9 @@ def retrieve_relevant_memory(query_text, memory_store, model, top_k=3):
  sim = cosine_similarity([query_embedding], [embedding])[0][0]
  similarities.append((text, sim))
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
  similarities.sort(key=lambda item: item[1], reverse=True)
  return [text for text, sim in similarities[:top_k]]
 

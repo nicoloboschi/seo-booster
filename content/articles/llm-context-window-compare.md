@@ -45,6 +45,9 @@ LLMs process text by breaking it down into **tokens**, which can be words, sub-w
 
 The size of an LLM's context window profoundly influences its capabilities and limitations. Models with smaller windows struggle with tasks involving extensive input data, leading to fragmented understanding or forgetting earlier details. Conversely, larger windows unlock more sophisticated applications.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ### Limitations Imposed by Small Context Windows
 
 Many early and even current LLMs operate with relatively small context windows, often in the range of 2,000 to 8,000 tokens. This can be a significant bottleneck. For instance, trying to summarize a book or analyze a lengthy legal document within such a constraint will inevitably lead to information loss. The model simply can't "see" the entire text at once.

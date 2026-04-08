@@ -60,6 +60,9 @@ A well-designed MCP server ensures these components work harmoniously, fostering
 
 An **AI memory MCP server** is typically an architectural pattern that integrates several distinct components rather than being a single piece of software. Its design emphasizes efficient data management and rapid information retrieval, making it a cornerstone of any advanced **AI recall server**. The architecture of an **AI memory MCP server** is modular.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ### Key Architectural Components
 
 The standard architecture of an **AI memory MCP server** usually comprises several critical parts. These components work in concert to provide agents with a comprehensive memory system.

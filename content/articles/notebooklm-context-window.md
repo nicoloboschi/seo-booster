@@ -82,6 +82,9 @@ These tools allow users to proactively manage what information is most critical.
 
 While you can't directly expand NotebookLM's context window, you can employ strategies to make the most of its existing capacity. Think of it as efficiently packing a suitcase rather than trying to magically enlarge it.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### 1. Organize Your Sources Logically
 
 Group related documents together. If you're researching a specific historical event, upload all primary sources first, then secondary analyses. This helps NotebookLM understand thematic connections and retrieve more relevant information when prompted.

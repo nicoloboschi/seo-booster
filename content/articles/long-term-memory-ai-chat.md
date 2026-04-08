@@ -62,6 +62,9 @@ if index_name not in pc.list_indexes():
  pc.create_index(index_name, dimension=embedding_model.get_sentence_embedding_dimension())
 index = pc.Index(index_name)
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 def add_to_memory(text_chunk: str, user_id: str):
  """Adds a chunk of text to the long-term memory."""
  embedding = embedding_model.encode(text_chunk).tolist()

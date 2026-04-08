@@ -232,6 +232,9 @@ def detect_anomaly(sensor_data, baseline_mean, baseline_std, threshold=3.0):
 baseline_temp_mean = 22.0 # Typical comfortable room temperature
 baseline_temp_std = 0.5 # Small variation expected
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ## Simulate current sensor readings over a short period
 current_readings = np.array([22.1, 22.3, 21.9, 22.0, 25.5, 22.2]) # 25.5 indicates a significant spike
 

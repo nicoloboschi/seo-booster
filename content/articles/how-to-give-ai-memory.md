@@ -44,6 +44,9 @@ The challenge lies not just in storing information but in retrieving the *right*
 
 Several architectural patterns and techniques are employed to imbue AI systems with memory. These can broadly be categorized into:
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 1. **State Management:** Simple, direct storage of conversational history or task-specific data.
 2. **External Knowledge Bases:** Using databases, vector stores, or knowledge graphs to store and retrieve information.
 3. **Hybrid Approaches:** Combining multiple methods for robust memory capabilities.

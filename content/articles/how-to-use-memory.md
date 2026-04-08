@@ -84,6 +84,9 @@ class EmbeddingModel:
  print(f"Generating embedding for: '{text[:30]}...'")
  return [hash(c) for c in text[:10]] # Simplified representation
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 class VectorStore:
  def __init__(self):
  self.store = {} # {id: {"embedding": List[float], "text": str}}

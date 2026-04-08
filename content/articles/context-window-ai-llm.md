@@ -60,6 +60,9 @@ from transformers import AutoTokenizer
 ## Using a different model to showcase variety, adjust as needed.
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 def simulate_context_window(text, max_tokens=4096):
  """Simulates fitting text into a context window and checks if it exceeds the limit."""
  tokens = tokenizer.tokenize(text)

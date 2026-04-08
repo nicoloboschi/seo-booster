@@ -39,6 +39,9 @@ Could an AI truly understand an entire novel, recalling every intricate detail? 
 
 A **context window** defines the maximum number of tokens, words or sub-word units, an LLM can consider when processing input and generating output. Think of it as the model's short-term memory. If a conversation or document exceeds this limit, earlier parts are "forgotten," leading to a loss of crucial information. This constraint significantly impacts the utility of LLMs in real-world applications, especially those requiring continuous learning or deep understanding of vast datasets.
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 ### The Role of Tokens
 
 For instance, a model with a 4,000-token context window can only "see" about 3,000 words at once. This is insufficient for analyzing lengthy legal documents, complex research papers, or even extended customer service interactions. This leads to fragmented understanding and repetitive or irrelevant responses. Addressing these [solutions for context window limitations](/articles/context-window-limitations-solutions/) is a primary research focus for any LLM aiming for extensive context.

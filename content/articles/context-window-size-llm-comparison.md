@@ -63,6 +63,9 @@ This limitation is a key challenge for building AI agents that need to remember 
 
 The landscape of LLM development is characterized by a rapid increase in context window sizes. What was once considered large, like 2,000-4,000 tokens, is now surpassed by models offering tens of thousands, hundreds of thousands, and even millions of tokens. This evolution has significant implications for the types of tasks LLMs can perform. A thorough **LLMs context window comparison** reveals the diverse capabilities available.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### Evolution of Context Windows: From Small to Vast
 
 Early LLM releases, such as initial versions of GPT-3, typically featured context windows ranging from 2,000 to 4,000 tokens. While groundbreaking at the time, these limits constrained their ability to process lengthy documents or engage in sustained, context-rich dialogues.

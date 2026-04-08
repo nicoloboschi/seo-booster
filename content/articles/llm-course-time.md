@@ -196,6 +196,9 @@ print("Fine-tuning complete.")
 print("Fine-tuned model is ready for evaluation or inference.")
 ```
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 This example provides a glimpse into the practical side of learning LLMs, demonstrating how models can be adapted for specific tasks, a key component of understanding **LLM learning duration**.
 
 ## FAQ

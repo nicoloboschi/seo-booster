@@ -61,6 +61,9 @@ vector_store = []
 ## Using a model suitable for diverse text, representative of what might be used with DeepSeek LLMs
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+
 def add_memory(text: str, agent_id: str = "deepseek_agent_1"):
  """Encodes text and stores it with its agent ID."""
  embedding = model.encode(text)

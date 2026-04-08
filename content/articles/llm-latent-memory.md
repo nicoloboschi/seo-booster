@@ -34,6 +34,9 @@ Could an AI truly "forget" a crucial detail from a past conversation? This is th
 
 **LLM latent memory** refers to the implicit knowledge and learned associations stored within a large language model's internal parameters. This memory isn't stored as discrete, queryable data points but rather as patterns and relationships learned during extensive training, influencing the model's understanding, reasoning, and generation capabilities.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 LLMs learn to associate words, concepts, and facts by adjusting the weights and biases of their neural networks. This learned information forms the **latent space**, a high-dimensional representation where semantic relationships are encoded. When an LLM processes a prompt, it navigates this latent space to generate relevant and coherent outputs, a process crucial for tasks like text generation and summarization.
 
 ### The Nature of Implicit Knowledge

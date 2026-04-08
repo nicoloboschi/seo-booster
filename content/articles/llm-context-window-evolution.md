@@ -56,6 +56,9 @@ For instance, models with a 1 million token context window can process approxima
 
 The expansion of context windows is not solely a matter of increased computational power; it's propelled by significant architectural and algorithmic innovations. These changes are designed to overcome the computational and memory challenges associated with processing extremely long sequences of tokens.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ### Attention Mechanism Enhancements
 
 The **self-attention mechanism**, a foundational element of Transformer architectures, has been a primary focus for innovation. Standard self-attention exhibits quadratic complexity relative to sequence length (O(n²)), rendering it computationally prohibitive for very long contexts. Consequently, researchers have devised more efficient attention variants.

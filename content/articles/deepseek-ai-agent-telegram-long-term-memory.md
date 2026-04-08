@@ -47,6 +47,9 @@ DeepSeek AI agents can implement long-term memory functionalities by integrating
 
 The ability for an AI agent to remember past interactions is crucial for developing sophisticated conversational systems. When discussing a **DeepSeek AI agent** operating within **Telegram**, the concept of **long-term memory** becomes paramount for creating agents that feel genuinely intelligent and responsive. Without a persistent memory system, AI agents are limited to the immediate context of the current conversation, akin to having a very short attention span. This severely hinders their capacity to build rapport, recall user preferences, or refer back to previous discussions, making interactions feel disjointed and forgetful.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 The integration of DeepSeek AI with Telegram for long-term memory aims to overcome these limitations. This allows the agent to access a persistent store of information, effectively creating a continuous dialogue history that can be queried and used. This is not just about remembering names; it's about understanding the nuances of a user's history with the agent, their stated goals, and their ongoing needs.
 
 ### The Importance of Memory in AI Agents

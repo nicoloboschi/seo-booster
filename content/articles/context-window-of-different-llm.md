@@ -89,6 +89,9 @@ import tiktoken
 ## Load the encoding for GPT-3.5 Turbo
 encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 text = "This is an example sentence to tokenize for LLM context."
 tokens = encoding.encode(text)
 

@@ -87,6 +87,9 @@ Longer context windows naturally lead to slower inference times. Generating a re
 
 Researchers and engineers are exploring various strategies to overcome the limitations of fixed and relatively small context windows, aiming for larger and more effectively used capacities. These approaches often involve architectural innovations or optimized training techniques.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ### Architectural Innovations
 
 Newer model architectures and modifications to the self-attention mechanism are key. Techniques like **sparse attention**, **linear attention**, and **recurrent memory** aim to reduce the quadratic complexity of standard attention. Models like Longformer and Reformer were early examples of such efforts.

@@ -71,4 +71,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 text_to_embed = "User asked about their upcoming meeting with John Doe."
 embedding = model.encode(text_to_embed)
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ## 

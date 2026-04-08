@@ -73,6 +73,9 @@ slug: ai-agent-architecture-patterns
 
 The field of artificial intelligence is rapidly advancing, with a significant focus on developing increasingly sophisticated AI agents capable of independent operation and complex task completion. At the heart of these capabilities lies the **AI agent architecture**, which serves as the fundamental blueprint dictating how an agent perceives its environment, processes information, makes decisions, and executes actions. Designing effective **AI agent architectures** is paramount for building robust and intelligent **autonomous agent systems**. This exploration delves into prominent AI agent architectures, their underlying **agent architecture patterns**, and the critical role of memory within these frameworks, touching upon various **AI agent memory architecture patterns**. Understanding the **agent loop architecture** is fundamental to grasping how these systems operate.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ### The Core Components of an AI Agent Architecture
 
 Before dissecting specific architectures, it's beneficial to understand the common functional components that typically comprise an AI agent. These **AI agent components** are the building blocks for any intelligent system.

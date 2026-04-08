@@ -191,6 +191,9 @@ This application extends to research assistants that can sift through vast scien
 
 While **LLM memory DBs** offer significant advantages, several challenges remain. Addressing these will shape the future of AI memory.
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 ### Memory Efficiency and Cost
 
 Storing and indexing vast amounts of data, especially high-dimensional vectors, can be computationally expensive. Optimizing embedding generation, indexing strategies, and database infrastructure is crucial for making these systems more efficient and accessible. A 2023 survey by Gartner indicated that the cost of managing AI infrastructure, including memory systems, is a primary concern for enterprise adoption.

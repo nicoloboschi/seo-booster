@@ -34,6 +34,9 @@ A **context window LLM example** illustrates how AI models process information w
 
 The **context window** of a Large Language Model (LLM) is the maximum amount of text, measured in tokens, that the model can actively process and "remember" at any given moment. It defines the input length an LLM can handle for generating coherent output, serving as its immediate working memory.
 
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+
 This **context window** is a fundamental architectural constraint. For instance, models like GPT-3.5 have a context window of 4,096 tokens, while newer models like GPT-4 can handle up to 128,000 tokens. When an LLM exceeds this limit, it drops the earliest tokens to make space for new ones.
 
 ### How Context Windows Affect LLM Performance

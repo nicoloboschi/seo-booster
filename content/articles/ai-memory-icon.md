@@ -146,6 +146,9 @@ Many AI agents use **Retrieval-Augmented Generation (RAG)** to access external k
 
 Creating an effective **AI memory icon** requires balancing technical accuracy with user intuition. Designers must consider the target audience and the specific functions of the AI system. An intuitive **AI memory symbol** is key to good UX.
 
+
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+
 ### User-Centric Design Principles
 
 An effective icon should be:

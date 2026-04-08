@@ -116,6 +116,9 @@ Models with active communities often have better documentation, more readily ava
 
 Several models stand out for their efficiency and performance. These are often smaller variants of larger, well-known architectures or models specifically designed for reduced resource usage.
 
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+
 ### Phi-3 Family by Microsoft
 
 Microsoft's Phi-3 series, particularly the Phi-3-mini (3.8B parameters), is a strong contender. It offers remarkable performance for its size, rivaling models significantly larger on various benchmarks. It's trained on carefully curated, high-quality data, enhancing its reasoning and language understanding capabilities within a small footprint.

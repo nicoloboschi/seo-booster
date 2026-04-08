@@ -65,6 +65,9 @@ This prevents the memory store from becoming an unmanageable flood of raw data. 
 
 To build sophisticated AI agents, developers implement various memory types, each serving a distinct purpose in how an LLM interacts with information. These types define the scope and nature of **LLM memory**.
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ### Episodic Memory in AI Agents Explained
 
 **Episodic memory** stores specific events or experiences in chronological order. For an LLM agent, this means recalling past interactions, decisions, and outcomes from specific points in time. This allows the agent to reference past conversations or actions accurately. Remembering "when I last spoke to you on Tuesday, we discussed X" relies on episodic recall. Implementing [AI agent episodic memory](/articles/ai-agent-episodic-memory/) is key for agents that need to track sequences of events, making **does an LLM remember** specific moments.

@@ -134,6 +134,9 @@ jazz_results = mcp_memory.query_across_contexts("jazz", ["user_profile", "curren
 for res in jazz_results:
  print(f"- {res}")
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 print("\nQuerying for 'entertainment' across task_planning and current_session contexts:")
 entertainment_results = mcp_memory.query_across_contexts("entertainment", ["task_planning", "current_session"])
 for res in entertainment_results:

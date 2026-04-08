@@ -102,4 +102,7 @@ def retrieve_relevant_chunks(query_embedding, document_embeddings, documents, to
  # Return the actual document text for the top indices.
  return [documents[i] for i in top_indices]
 
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+
 ## 
