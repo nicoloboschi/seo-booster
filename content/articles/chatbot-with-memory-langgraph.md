@@ -1,7 +1,6 @@
 ---
 title: 'Chatbot with Memory using LangGraph: Building Stateful AI Agents'
-description: Build a chatbot with memory using LangGraph for stateful AI agents. Learn about LangGraph's state machine, conversational AI memory, long-term memory AI agent integration, and practical examples
-  for creating intelligent, remembering chatbots.
+description: Build a chatbot with memory using LangGraph for stateful AI agents. Learn about LangGraph's state machine, conversational AI memory, long-term memory AI agent int...
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -58,10 +57,10 @@ LangGraph's core innovation is modeling agent execution as a **state machine**. 
 
 The state in LangGraph is customizable. For simple conversational memory, the state might be a message list. For complex agents, it could include:
 
-*   **Conversation History**: A chronological log of user and AI messages.
-*   **User Profile**: Details like name, preferences, and past interactions.
-*   **Tool Usage History**: Records of tool invocations and their results.
-*   **Summaries**: Condensed versions of past conversations to manage memory size.
+* **Conversation History**: A chronological log of user and AI messages.
+* **User Profile**: Details like name, preferences, and past interactions.
+* **Tool Usage History**: Records of tool invocations and their results.
+* **Summaries**: Condensed versions of past conversations to manage memory size.
 
 Consider a simple state definition in Python:
 
@@ -112,9 +111,9 @@ While LangGraph's state machine manages immediate context, **long-term memory AI
 
 LangGraph easily integrates these systems. A LangGraph node can:
 
-1.  **Retrieve** relevant information from a vector database based on the current query.
-2.  **Augment** the LLM prompt with this retrieved context.
-3.  **Update** the vector database with the new interaction.
+1. **Retrieve** relevant information from a vector database based on the current query.
+2. **Augment** the LLM prompt with this retrieved context.
+3. **Update** the vector database with the new interaction.
 
 This approach significantly enhances **ai_agent_episodic_memory** by allowing agents to recall specific past events. For instance, remembering a user's favorite book is possible. This is a key differentiator from **limited memory AI**. According to a 2023 study by the [National Institute of Standards and Technology (NIST)](https://www.nist.gov/news-events/news/2023/07/nist-study-shows-how-ai-can-generate-more-accurate-text), RAG implementations can improve LLM response relevance by up to 40%.
 
@@ -189,11 +188,11 @@ When agents use tools (searching web, accessing databases), results must be inco
 
 As memory grows, performance can suffer. Strategies like:
 
-1.  **Memory pruning**: Removing old or irrelevant information.
-2.  **Summarization**: Condensing past interactions.
-3.  **Efficient retrieval**: Optimizing vector database queries.
-4.  **State compression**: Reducing the size of the stored state.
-5.  **Asynchronous processing**: Offloading memory-intensive tasks.
+1. **Memory pruning**: Removing old or irrelevant information.
+2. **Summarization**: Condensing past interactions.
+3. **Efficient retrieval**: Optimizing vector database queries.
+4. **State compression**: Reducing the size of the stored state.
+5. **Asynchronous processing**: Offloading memory-intensive tasks.
 
 are essential for maintaining a responsive **AI assistant remembers everything**. Comparing different [best AI agent memory systems](/articles/best-ai-memory-systems/) can inform these choices. LLM context window sizes, often ranging from 4k to over 100k tokens, also dictate how much immediate history can be processed, making external memory systems vital for truly long-term recall in a **chatbot with memory LangGraph**. These strategies are fundamental to managing **stateful memory** effectively.
 

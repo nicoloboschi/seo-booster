@@ -66,10 +66,10 @@ For AI agents, a generous context window is akin to having a better short-term m
 
 A larger context window enables LLMs to:
 
-*   **Maintain Coherent Dialogues:** AI assistants can remember more of the conversation history, avoiding repetitive questions and providing more contextually aware replies. This is important for applications like [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
-*   **Process Longer Documents:** LLMs can analyze and summarize lengthy reports, articles, or books without losing track of key information.
-*   **Perform Complex Reasoning:** By having more information available, models can connect disparate pieces of information and perform more intricate analytical tasks.
-*   **Reduce Hallucinations:** With more context, models are less likely to invent information, as they have a richer source of truth to draw from.
+* **Maintain Coherent Dialogues:** AI assistants can remember more of the conversation history, avoiding repetitive questions and providing more contextually aware replies. This is important for applications like [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+* **Process Longer Documents:** LLMs can analyze and summarize lengthy reports, articles, or books without losing track of key information.
+* **Perform Complex Reasoning:** By having more information available, models can connect disparate pieces of information and perform more intricate analytical tasks.
+* **Reduce Hallucinations:** With more context, models are less likely to invent information, as they have a richer source of truth to draw from.
 
 ### The Challenge of Limited Context
 

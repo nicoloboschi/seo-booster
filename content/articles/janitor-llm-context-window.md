@@ -1,6 +1,6 @@
 ---
 title: 'Janitor LLM Context Window: Expanding AI''s Short-Term Recall and Memory'
-description: Explore the Janitor LLM context window, its limitations, and innovative solutions like RAG and memory summarization for enhancing AI's short-term memory and recall capabilities.
+description: Explore the Janitor LLM context window, its limitations, and innovative solutions like RAG and memory summarization for enhancing AI's short-term memory and recal...
 date: 2026-04-04
 lastmod: 2026-04-04
 tags:
@@ -33,6 +33,7 @@ faq:
 - question: What is the primary function of the Janitor LLM context window?
   answer: The primary function of the **Janitor LLM context window** is to define the finite amount of information, measured in tokens, that an AI model can process and consider at any given moment. This
     directly impacts its immediate recall and ability to maintain coherent interactions.
+slug: janitor-llm-context-window
 ---
 
 
@@ -86,7 +87,7 @@ Fortunately, several techniques exist to help AI agents overcome **Janitor LLM c
 
 **Retrieval-Augmented Generation (RAG)** is a popular method for enhancing LLM capabilities. RAG systems blend LLM generation with external knowledge retrieval. When an LLM needs information outside its current context window, it queries an external database, often a vector database, to find relevant data. This is a key strategy for **expanding LLM memory**.
 
-*   **Process:** User query → Embed query → Search vector database → Retrieve top-k documents → Prepend documents to user query → Feed combined prompt to LLM → LLM generates response.
+* **Process:** User query → Embed query → Search vector database → Retrieve top-k documents → Prepend documents to user query → Feed combined prompt to LLM → LLM generates response.
 
 RAG is a cornerstone of modern AI development. It provides LLMs with up-to-date, relevant information without requiring costly retraining. This technique bypasses the direct reliance on the **Janitor LLM context window**. This is a key differentiator compared to [agent memory vs RAG](/articles/agent-memory-vs-rag/). The effectiveness of RAG critically depends on the quality of the [embedding models used in RAG](/articles/embedding-models-used-in-rag/).
 
@@ -94,7 +95,7 @@ RAG is a cornerstone of modern AI development. It provides LLMs with up-to-date,
 
 Another effective approach actively manages context by condensing information. Older conversation parts are summarized or compressed into shorter, salient points. These summaries then feed back into the context window, preserving key information and freeing up valuable token space. This is a form of **AI memory** management.
 
-*   **Techniques:** Periodic dialogue summarization, identifying key entities and facts, using a separate LLM to condense history.
+* **Techniques:** Periodic dialogue summarization, identifying key entities and facts, using a separate LLM to condense history.
 
 This method requires a smart agent architecture. It must intelligently decide what information to summarize and when. It's a form of **memory consolidation for AI agents**. This helps maintain a coherent narrative over time, working around the **Janitor LLM context window**.
 
@@ -102,8 +103,8 @@ This method requires a smart agent architecture. It must intelligently decide wh
 
 AI agents can also use dedicated external memory systems. These systems can include simple key-value stores, complex graph databases, or specialized vector databases. These systems provide a persistent, long-term memory repository for the AI.
 
-*   **Vector Databases:** These databases store information as numerical vectors, known as embeddings. They enable efficient semantic searching based on meaning. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer open-source solutions for building robust agent memory systems.
-*   **Knowledge Graphs:** These represent information as interconnected entities and their relationships. They enable complex reasoning and inference.
+* **Vector Databases:** These databases store information as numerical vectors, known as embeddings. They enable efficient semantic searching based on meaning. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer open-source solutions for building robust agent memory systems.
+* **Knowledge Graphs:** These represent information as interconnected entities and their relationships. They enable complex reasoning and inference.
 
 These systems act as a long-term memory store. The AI agent retrieves information from them as needed. This effectively bypasses **Janitor LLM context window** constraints for historical data. This is essential for [AI agents with long-term conversational memory](/articles/ai-agents-with-long-term-conversational-memory/). Managing the **Janitor LLM context window** is key for immediate interactions.
 

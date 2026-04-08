@@ -1,6 +1,6 @@
 ---
 title: 'DeepSeek LLM Context Window: Expanding AI''s Recall Horizon with 128K Tokens'
-description: Explore the DeepSeek LLM context window, its 128K token capacity, and how it enhances AI memory and task performance. Learn about LLM context windows with practical examples and code snippets.
+description: Explore the DeepSeek LLM context window, its 128K token capacity, and how it enhances AI memory and task performance. Learn about LLM context windows with practic...
 date: 2026-04-01
 lastmod: 2026-04-01
 tags:
