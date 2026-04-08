@@ -84,7 +84,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 ## Our "memory store" - a list of tuples (text, embedding) simulating an AI memory stick
 memory_store = []
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 def add_to_memory(text):

@@ -59,3 +59,5 @@ The distinction between an **ai memory drive** and short-term memory is critical
 
 | Feature | Short-Term Memory (Context Window) | AI Memory Drive (Persistent Storage) |
 | :
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

@@ -163,3 +163,5 @@ agent.remember("HBM provides high bandwidth and low latency.")
 agent.remember("It's crucial for AI agent recall.")
 print(agent.recall("HBM"))
 print(agent.recall())
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.

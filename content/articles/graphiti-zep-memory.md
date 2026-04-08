@@ -88,7 +88,6 @@ from sentence_transformers import SentenceTransformer
 from chromadb import Client
 from chromadb.utils import embedding_functions
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ## 

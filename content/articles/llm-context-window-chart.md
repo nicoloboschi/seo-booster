@@ -50,7 +50,6 @@ A larger context window allows an LLM to consider more preceding text when gener
 
 The **context window limitation** is a fundamental constraint in current LLM architectures. While models like GPT-4 offer substantial context, even billions of tokens can be insufficient for extremely long-form content analysis or maintaining very lengthy dialogues. This **LLM context limitation** directly impacts the agent's ability to recall and process information effectively.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Impact on Conversational Flow

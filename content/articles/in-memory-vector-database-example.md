@@ -193,3 +193,5 @@ for result in top_results:
 ## This example illustrates the core principle of an in-memory vector database for AI agents:
 ## storing data in RAM for extremely fast retrieval, enabling quick AI agent recall and
 ## efficient processing of information for real-time applications.
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

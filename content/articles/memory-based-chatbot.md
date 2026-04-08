@@ -84,7 +84,6 @@ class ConversationMemory:
  self.vector_db = vector_db_client
  self.conversation_history = [] # For simpler, chronological recall if needed
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
  def add_message(self, speaker: str, text: str, timestamp: int):

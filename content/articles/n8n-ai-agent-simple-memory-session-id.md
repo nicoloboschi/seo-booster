@@ -76,7 +76,6 @@ Here's a Python example demonstrating how you might manage session IDs for an n8
 ## with a persistent storage solution like a database node or Redis.
 session_data_store = {}
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 def get_session_memory(session_id):

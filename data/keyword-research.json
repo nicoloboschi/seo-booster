@@ -7422,25 +7422,145 @@
       "matching_suggestions": [
         "most intelligent chatbot"
       ]
+    },
+    {
+      "keyword": "n8n ai agent clear memory",
+      "slug": "n8n-ai-agent-clear-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai agent clear memory"
+      ]
+    },
+    {
+      "keyword": "n8n ai agent node memory",
+      "slug": "n8n-ai-agent-node-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai agent node memory"
+      ]
+    },
+    {
+      "keyword": "n8n ai agent simple memory session id",
+      "slug": "n8n-ai-agent-simple-memory-session-id",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai agent simple memory session id"
+      ]
+    },
+    {
+      "keyword": "n8n ai agent window buffer memory",
+      "slug": "n8n-ai-agent-window-buffer-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai agent window buffer memory"
+      ]
+    },
+    {
+      "keyword": "n8n ai long term memory",
+      "slug": "n8n-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai long term memory"
+      ]
+    },
+    {
+      "keyword": "n8n chatbot memory",
+      "slug": "n8n-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n chatbot memory"
+      ]
+    },
+    {
+      "keyword": "neo4j llm memory",
+      "slug": "neo4j-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "neo4j llm memory"
+      ]
+    },
+    {
+      "keyword": "notebooklm context window",
+      "slug": "notebooklm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "notebooklm context window"
+      ]
+    },
+    {
+      "keyword": "nvidia llm memory",
+      "slug": "nvidia-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "nvidia llm memory"
+      ]
+    },
+    {
+      "keyword": "open ai long term memory",
+      "slug": "open-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "open ai long term memory"
+      ]
+    },
+    {
+      "keyword": "open source agent memory framework",
+      "slug": "open-source-agent-memory-framework",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "open source agent memory framework"
+      ]
+    },
+    {
+      "keyword": "openai agents sdk memory",
+      "slug": "openai-agents-sdk-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openai agents sdk memory"
+      ]
+    },
+    {
+      "keyword": "openai ai powered browser memory agent features",
+      "slug": "openai-ai-powered-browser-memory-agent-features",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openai ai powered browser memory agent features"
+      ]
+    },
+    {
+      "keyword": "openai ai powered memory agent features",
+      "slug": "openai-ai-powered-memory-agent-features",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openai ai powered memory agent features"
+      ]
+    },
+    {
+      "keyword": "openclaw memory embedding model",
+      "slug": "openclaw-memory-embedding-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openclaw memory embedding model"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "n8n ai agent clear memory",
-    "n8n ai agent node memory",
-    "n8n ai agent simple memory session id",
-    "n8n ai agent window buffer memory",
-    "n8n ai long term memory",
-    "n8n chatbot memory",
-    "neo4j llm memory",
-    "notebooklm context window",
-    "nvidia llm memory",
-    "open ai long term memory",
-    "open source agent memory framework",
-    "openai agents sdk memory",
-    "openai ai powered browser memory agent features",
-    "openai ai powered memory agent features",
-    "openclaw memory embedding model",
     "permanent memory example",
     "permanent memory llm",
     "persistent ai memory system",
@@ -7601,9 +7721,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 771,
-    "validated": 726,
+    "total_keywords": 786,
+    "validated": 741,
     "low_volume": 45,
-    "new_opportunities_found": 174
+    "new_opportunities_found": 159
   }
 }

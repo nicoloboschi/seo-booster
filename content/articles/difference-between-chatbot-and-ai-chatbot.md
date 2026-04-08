@@ -134,7 +134,6 @@ recognizer.add_intent("weather_query", ["what's the weather like", "how is it ou
 recognizer.add_intent("farewell", ["bye", "goodbye for now", "see you later"])
 recognizer.add_intent("order_status", ["where is my order", "check my order status", "track my package"])
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 user_message = "Hi, what's the weather like today?"

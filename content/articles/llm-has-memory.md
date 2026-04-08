@@ -65,7 +65,6 @@ This prevents the memory store from becoming an unmanageable flood of raw data. 
 
 To build sophisticated AI agents, developers implement various memory types, each serving a distinct purpose in how an LLM interacts with information. These types define the scope and nature of **LLM memory**.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Episodic Memory in AI Agents Explained

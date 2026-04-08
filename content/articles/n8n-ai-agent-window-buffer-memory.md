@@ -55,7 +55,6 @@ A 2023 survey of LLM practitioners indicated that **78% of developers consider m
 
 n8n, a powerful workflow automation tool, can be used to orchestrate AI agents, including their memory management. While n8n itself doesn't have a built-in "AI agent window buffer memory" node, you can implement this functionality using its existing nodes and custom logic.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Workflow Design for Context Management

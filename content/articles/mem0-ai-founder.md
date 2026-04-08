@@ -157,7 +157,6 @@ This example shows how distinct pieces of information can be transformed into nu
 
 The **vision of the Mem0 AI founder** is to build the **foundational memory infrastructure** upon which future generations of intelligent AI agents will be built. By focusing on persistent, learnable memory, Mem0 AI is addressing a critical limitation in AI development. This work paves the way for AI that can truly understand, remember, and interact with the world in increasingly sophisticated ways. As the field of AI memory continues to evolve, the principles championed by Mem0 AI will undoubtedly play a crucial role. The journey to truly intelligent AI is deeply intertwined with its ability to remember, a path actively shaped by initiatives like Mem0 AI and its visionary founder.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ## FAQ

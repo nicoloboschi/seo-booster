@@ -105,7 +105,6 @@ class MockLLM:
  print(f"LLM received prompt: {prompt}\nwith context: {context}\n")
  return f"Response to '{prompt}' based on context."
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 class VectorStore:

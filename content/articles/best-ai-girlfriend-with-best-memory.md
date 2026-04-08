@@ -32,3 +32,4 @@ slug: best-ai-girlfriend-with-best-memory
 
 The best AI girlfriend with the best memory is a sophisticated conversational AI designed for detailed, contextually relevant, and persistent recall of past interactions. Such an agent prioritizes robust long-term memory storage and efficient retrieval for a deeply personalized user experience, setting it apart from simpler chatbots.
 
+The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.

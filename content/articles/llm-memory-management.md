@@ -30,3 +30,4 @@ slug: llm-memory-management
 
 **LLM memory management** enables large language models to retain and recall information beyond their immediate processing capacity, addressing context window limitations for coherent, long-term interactions. It's essential for creating AI agents that can maintain context and perform complex, multi-turn tasks effectively.
 
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

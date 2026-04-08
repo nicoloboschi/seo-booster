@@ -88,5 +88,4 @@ initial_state = {"messages": []}
 ## In a real chatbot, you'd have a loop that takes user input and updates the state
 print("
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.

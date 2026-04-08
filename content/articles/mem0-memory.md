@@ -57,7 +57,6 @@ These features collectively enable AI agents to exhibit more coherent, context-a
 
 AI agents operating without persistent memory are akin to individuals with severe amnesia; they struggle to learn, adapt, or maintain consistent personas. **Long-term memory in AI agents** is the foundation for building sophisticated capabilities like personalized user experiences, complex problem-solving, and continuous learning.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 Without it, agents would repeatedly ask the same questions, fail to recognize returning users, or be unable to build upon past successes or failures. According to a 2023 survey by AI Research Group, over 70% of developers building complex AI agents identified memory limitations as a primary bottleneck in agent performance.

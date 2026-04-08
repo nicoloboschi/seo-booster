@@ -45,7 +45,6 @@ For instance, a prompt might include a summary of the last five messages, key en
 
 The inherent statelessness of many LLMs means they don't "remember" past interactions by default. Each new input is processed in isolation unless specific mechanisms are in place. **LLM memory prompts** are a primary method for overcoming this limitation, enabling sophisticated **AI recall** capabilities.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 Without effective memory prompting, an AI agent might ask redundant questions, contradict previous statements, or fail to grasp the evolving context of a dialogue. This leads to a disjointed and inefficient user experience. By contrast, agents that effectively use memory prompts can engage in more meaningful, context-aware interactions, mimicking human conversational abilities more closely.

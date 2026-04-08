@@ -98,7 +98,6 @@ from langchain.llms import OpenAI # Example LLM
 from langchain.vectorstores import Chroma # Example Vector Store
 from langchain.embeddings import OpenAIEmbeddings # Example Embedding Model
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ## 

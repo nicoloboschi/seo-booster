@@ -217,7 +217,6 @@ builder.set_entry_point("process_input")
 ## Compile the graph
 graph = builder.compile()
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ## Example of running the graph

@@ -119,7 +119,6 @@ print("Embedding 3 shape:", embedding3.shape)
 ## Similarity could be calculated using cosine similarity.
 ```
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Memory Consolidation and Forgetting in Persistent Memory for AI

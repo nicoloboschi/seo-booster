@@ -128,7 +128,6 @@ from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes.models import VectorizableText, SearchableField, SimpleField, SearchIndex, VectorSearch, VectorSearchAlgorithmConfiguration, HnswAlgorithmConfiguration
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ## Replace with your actual Azure AI Search details

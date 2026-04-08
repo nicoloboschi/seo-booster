@@ -106,3 +106,5 @@ Vector databases are central to many advanced AI memory solutions. Their pricing
 
 | Feature | Cost Factors | Typical Pricing Model | Notes |
 | :
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

@@ -92,7 +92,6 @@ The ability to understand and reason about the order of events is critical for m
 
 Practical implementation involves choosing the right tools and integrating them into the agent's architecture. Open-source solutions and specialized libraries offer various pathways to achieve persistent memory, making the process of giving an AI agent long-term memory more accessible.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Foundational Memory Storage Example (Python)

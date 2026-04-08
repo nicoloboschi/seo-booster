@@ -40,3 +40,4 @@ The **LLM context window** represents the maximum sequence length, in tokens, th
 
 LLMs process text by first breaking it down into **tokens**. A token is a common sequence of characters found in text, which can be a word, part of a word, or punctuation. For English text, approximately 100 tokens equate to about 75 words. This conversion is vital for estimating the actual amount of human-readable text that fits within a model's context window.
 
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

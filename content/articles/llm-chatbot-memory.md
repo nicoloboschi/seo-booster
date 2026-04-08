@@ -126,7 +126,6 @@ Without careful management, the LLM will simply "forget" crucial details as the 
 
 Here's a simple Python example demonstrating a basic in-memory buffer for **llm chatbot memory**. This approach uses a list to store recent messages, simulating a short-term context, with a placeholder for retrieval logic.
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ```python

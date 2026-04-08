@@ -144,3 +144,5 @@ prompt_for_question = tokenizer.decode(truncated_inputs['input_ids'][0]) + "\n\n
 ## If the 'truncated_inputs' cut off the end, the answer will be nonsensical or "I don't know".
 ## For brevity, we won't run the generation here but explain the principle.
 print("\n
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

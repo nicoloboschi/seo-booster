@@ -130,7 +130,6 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 ## Assume you have a LangChain LLM and ChatModel set up
 from langchain_openai import ChatOpenAI
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ## 

@@ -108,7 +108,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 ## Generate embeddings for the documents
 document_embeddings = model.encode(documents)
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ## Function to perform RAG

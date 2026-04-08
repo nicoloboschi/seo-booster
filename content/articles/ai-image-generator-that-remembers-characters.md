@@ -72,7 +72,6 @@ Several techniques enable this character recall, crucial for any **consistent ch
 
 Building an ai image generator that remembers characters requires specific architectural considerations. It's not just about the image generation model itself, but how it interacts with external or internal memory components. This allows for **visual storytelling ai** to be more coherent.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Integrating Memory with Image Models

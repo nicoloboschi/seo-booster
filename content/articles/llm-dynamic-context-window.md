@@ -96,3 +96,5 @@ Here's a comparative look:
 
 | Feature | Fixed Context Window (e.g., 100k tokens) | Dynamic Context Window |
 | :
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

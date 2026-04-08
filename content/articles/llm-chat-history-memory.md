@@ -87,7 +87,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 ## In a production system, this would be a scalable vector database.
 vector_store = []
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 def add_to_memory(speaker, text):

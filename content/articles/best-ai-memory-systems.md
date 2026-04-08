@@ -24,3 +24,5 @@ faq:
     vast amounts of information over extended periods, often employing sophisticated indexing and retrieval mechanisms beyond a simple sliding window.
 slug: best-ai-memory-systems
 ---
+
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.

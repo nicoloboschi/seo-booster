@@ -35,7 +35,6 @@ slug: ai-foundry-agent-memory
 
 **AI Foundry agent memory** systems are designed to equip AI agents with the capability to store, retrieve, and use information over time. This functionality is critical for agents to maintain context, learn from interactions, and perform complex tasks with greater accuracy and coherence, moving beyond stateless operations.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 **AI Foundry agent memory** systems are specialized architectures within the AI Foundry platform that empower AI agents with the ability to store, retrieve, and use information over time. This functionality is fundamental for enabling agents to maintain situational awareness, learn from experience, and execute tasks with greater accuracy and coherence. Without effective **ai foundry agent memory**, AI agents would be stateless, unable to build upon previous interactions or learned knowledge, severely limiting their utility.

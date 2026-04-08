@@ -72,7 +72,6 @@ Mem0’s integration simplifies the development of agents that need to remember 
 
 Mem0 offers several advantages for AI developers seeking effective memory solutions. Its design prioritizes ease of use and reliable recall, making **mem0 in memory** a valuable tool. The benefits of **mem0 in memory** are substantial.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Simplicity and Integration

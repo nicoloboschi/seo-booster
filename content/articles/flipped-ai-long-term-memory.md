@@ -88,3 +88,5 @@ The distinction between flipped and traditional long-term memory is crucial for 
 
 | Feature | Traditional Long-Term Memory | Flipped AI Long Term Memory |
 | :
+
+One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

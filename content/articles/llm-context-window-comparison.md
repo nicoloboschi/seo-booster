@@ -46,7 +46,6 @@ The size of this window, often measured in tokens, varies significantly between 
 
 A larger context window generally leads to improved AI performance in several key areas. When an AI can access more prior information, it can better understand the nuances of a conversation, avoid repetitive statements, and maintain a consistent persona or task focus. This is particularly important for complex, multi-turn dialogues or when processing lengthy documents.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Reduced Coherence and Repetition

@@ -37,7 +37,6 @@ Could an AI truly remember everything you've ever told it? An **infinite context
 
 An **infinite context window LLM** is a large language model designed to process and remember an unbounded amount of input data, effectively granting it limitless memory for its operational lifespan. Unlike standard models with fixed token limits, these advanced systems can theoretically recall and use any information from their entire interaction history, a significant leap for **long context LLMs**. This allows for a much deeper and more nuanced understanding of complex queries and ongoing dialogues.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### The Pursuit of Unlimited Context in LLMs

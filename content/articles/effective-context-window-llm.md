@@ -44,7 +44,6 @@ LLMs process information in discrete units called tokens. The **context window**
 
 Traditional LLMs face inherent limitations due to their fixed context window sizes. This can lead to a degradation of performance as conversations lengthen or complex data inputs grow. Understanding these limitations is the first step toward overcoming them. A smaller **effective context window LLM** poses significant challenges.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Degradation in Long Conversations

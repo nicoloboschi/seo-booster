@@ -113,7 +113,6 @@ client.upsert(
 )
 print("Memory stored successfully for Candy AI.")
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ##

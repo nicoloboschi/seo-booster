@@ -35,3 +35,4 @@ The **LLM Arena context window** is the maximum quantity of text, measured in to
 
 This **llm arena context window** defines the boundary of an LLM's immediate processing. It dictates how much conversational history or prompt data the model actively uses when generating its next output. This is a critical factor in assessing LLM performance, directly impacting their capacity for consistent, relevant responses.
 
+Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.

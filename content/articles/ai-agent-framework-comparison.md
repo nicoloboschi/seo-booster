@@ -201,7 +201,6 @@ crew = Crew(
  verbose=2 # Increased verbosity for demonstration
 )
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ## Execute the crew's tasks

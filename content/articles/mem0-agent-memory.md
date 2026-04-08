@@ -105,7 +105,6 @@ def query_memory(query_text, k=3):
  results = vectorstore.similarity_search(query_text, k=k, embeddings=embeddings)
  return [doc.page_content for doc in results]
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ## 

@@ -75,7 +75,6 @@ While not directly analogous to physical RAM, the concept of fast, temporary wor
 
 **Memory cards**, such as SD cards, microSD cards, or CompactFlash cards, are types of **non-volatile storage**. This means they retain data even when the power is turned off. Their primary function is to store files like photos, videos, documents, music, and application data permanently or semi-permanently.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Capacity and Persistence

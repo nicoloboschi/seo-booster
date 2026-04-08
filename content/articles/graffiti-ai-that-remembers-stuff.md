@@ -39,3 +39,4 @@ What if your AI assistant forgot your name halfway through a conversation? This 
 
 Imagine an AI assistant that forgets your name mid-conversation. This frustrating reality is about to change with "graffiti AI that remembers stuff," a breakthrough in persistent AI memory. This technology allows agents to build a continuous understanding, learn from past interactions, and maintain a consistent identity over time.
 
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

@@ -62,7 +62,6 @@ This capability is fundamental to building AI that truly remembers conversations
 
 Historically, the primary bottleneck for LLM context has been computational cost. Processing longer sequences requires significantly more memory and processing power, often making it infeasible for local deployment. However, innovative architectural changes and optimization techniques are overcoming these hurdles for models aiming to be the **biggest context window local LLM**.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### The Quadratic Bottleneck of Attention

@@ -57,3 +57,5 @@ The landscape of LLM context windows is rapidly evolving. Here's a snapshot of s
 
 | Model Family | Largest Reported Context Window (Tokens) | Approx. Word Count (75 words/100 tokens) | Notes |
 | :
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

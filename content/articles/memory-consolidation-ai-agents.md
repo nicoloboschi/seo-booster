@@ -147,3 +147,5 @@ Memory consolidation is not merely an optimization technique; it is a fundamenta
 * Develop a deeper, more structured understanding of their environment and tasks.
 
 As AI agents become more integrated into complex systems and perform increasingly sophisticated tasks, the ability to consolidate and manage memory effectively will be a key differentiator, paving the way for more robust, intelligent, and trustworthy AI.
+
+Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.

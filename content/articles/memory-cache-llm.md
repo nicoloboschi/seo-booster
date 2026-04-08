@@ -173,7 +173,6 @@ except redis.exceptions.ConnectionError as e:
 ## Define cache capacity
 CACHE_CAPACITY = 3
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 def get_cached_embedding_redis(text: str) -> list[float]:

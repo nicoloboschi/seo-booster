@@ -84,3 +84,5 @@ Various systems and techniques aim to provide long-term memory for AI agents. Un
 
 | Approach | Description | Pros | Cons |
 | :
+
+For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.

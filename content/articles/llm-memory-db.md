@@ -191,7 +191,6 @@ This application extends to research assistants that can sift through vast scien
 
 While **LLM memory DBs** offer significant advantages, several challenges remain. Addressing these will shape the future of AI memory.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Memory Efficiency and Cost

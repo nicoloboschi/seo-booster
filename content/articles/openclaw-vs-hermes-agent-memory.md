@@ -119,7 +119,6 @@ For large-scale deployments requiring massive memory stores, OpenClaw's flexibil
 
 The optimal choice between OpenClaw and Hermes depends heavily on the specific application and development priorities for your **AI agent memory**.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### When to Use OpenClaw

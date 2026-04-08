@@ -188,7 +188,6 @@ Mem0 aims to address these through its architecture, making it a viable option f
 
 The field of AI memory is rapidly evolving. Frameworks like Mem0 are instrumental in enabling more capable and intelligent AI agents. As LLMs continue to advance, the need for sophisticated memory systems will only grow, impacting the future of **mem0 building production-ready ai agents**.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Advancements in Agent Memory

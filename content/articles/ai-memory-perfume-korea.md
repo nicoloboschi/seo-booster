@@ -163,7 +163,6 @@ Ensuring that memory data is anonymized and securely stored, and that users have
 
 While the concept of **AI Memory Perfume** is primarily focused on personal experience, its underlying principles could extend to other fields. The ability to link AI-driven analysis with sensory output has broad implications for **Korean AI innovation**.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Therapeutic and Wellness Applications of AI Perfume

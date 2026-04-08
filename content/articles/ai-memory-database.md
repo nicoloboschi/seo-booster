@@ -75,7 +75,6 @@ class MockVectorDBClient:
  self.vectors = {}
  self.metadata = {}
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
  def add_vector(self, vector_id, vector, metadata):
