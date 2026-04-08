@@ -1,6 +1,6 @@
 ---
 title: 'Chatbot Conversational Memory: Enabling Fluid and Contextual AI Interactions'
-description: 'Explore Chatbot Conversational Memory: the AI's ability to retain and recall past interactions for fluid, contextual, and personalized dialogue. Learn about STM, LTM, implementation methods, and challenges.'
+description: "Explore Chatbot Conversational Memory: the AI's ability to retain and recall past interactions for fluid, contextual, and personalized dialogue. Learn about STM, LTM, implementation methods, and challenges."
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -28,7 +28,9 @@ faq:
   answer: While the goal is to remember relevant information, most chatbots have limitations. Their memory capacity is finite, and they employ strategies to prioritize and retain the most important details.
     Advanced systems aim to capture key insights, but perfect recall of every single word is not always feasible or necessary.
 - question: What are the key components of effective chatbot conversational memory?
-  answer: Effective chatbot conversational memory relies on several components: short-term memory (context window), long-term memory (persistent storage), episodic memory (specific events), semantic memory (general knowledge), and robust implementation methods like vector databases and RAG.
+  answer: '
+    Effective chatbot conversational memory relies on several components: short-term memory (context window), long-term memory (persistent storage), episodic memory (specific events), semantic memory
+    (general knowledge), and robust implementation methods like vector databases and RAG.'
 slug: chatbot-conversational-memory
 ---
 

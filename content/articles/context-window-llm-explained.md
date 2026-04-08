@@ -1,6 +1,6 @@
 ---
-title: 'Context Window LLM Explained: Understanding AI's Short-Term Memory'
-description: 'Explore the concept of a context window LLM explained, understanding its role in AI memory, token limits, and practical implications with real-world examples.'
+title: 'Context Window LLM Explained: Understanding AI''s Short-Term Memory'
+description: Explore the concept of a context window LLM explained, understanding its role in AI memory, token limits, and practical implications with real-world examples.
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -20,9 +20,11 @@ faq:
 - question: Why is the context window important for AI memory?
   answer: A larger context window allows an LLM to retain more information from previous interactions or documents, enabling more coherent and contextually relevant responses, mimicking short-term memory.
 - question: What are the main limitations of LLM context windows?
-  answer: The primary limitations are the fixed size, which restricts how much information can be processed at once, and the computational cost, which increases significantly with larger windows, leading to slower inference.
+  answer: The primary limitations are the fixed size, which restricts how much information can be processed at once, and the computational cost, which increases significantly with larger windows, leading
+    to slower inference.
 - question: How does the context window LLM explained relate to token limits?
-  answer: The context window LLM explained is fundamentally defined by its token limit. This limit dictates the maximum number of tokens (words, sub-words, or characters) an LLM can process simultaneously, influencing its ability to understand and generate contextually relevant text.
+  answer: The context window LLM explained is fundamentally defined by its token limit. This limit dictates the maximum number of tokens (words, sub-words, or characters) an LLM can process simultaneously,
+    influencing its ability to understand and generate contextually relevant text.
 slug: context-window-llm-explained
 ---
 

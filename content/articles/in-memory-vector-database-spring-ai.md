@@ -63,13 +63,17 @@ keywords:
 - in memory vector database for spring ai
 faq:
 - question: What is an in-memory vector database for Spring AI?
-  answer: An in-memory vector database for Spring AI is a memory-resident data store optimized for high-dimensional vector embeddings. It allows Spring AI applications to perform rapid similarity searches, retrieving contextual information for AI agents with very low latency, thereby improving responsiveness and accuracy in AI-driven tasks.
+  answer: '
+    An in-memory vector database for Spring AI is a memory-resident data store optimized for high-dimensional vector embeddings. It allows Spring AI applications to perform rapid similarity searches,
+    retrieving contextual information for AI agents with very low latency, thereby improving responsiveness and accuracy in AI-driven tasks.'
 - question: How does Spring AI integrate with vector databases?
   answer: Spring AI provides abstractions and integrations that simplify connecting to and utilizing various vector databases. This allows developers to seamlessly incorporate vector search capabilities into their Spring-based AI applications.
 - question: What are the benefits of using an in-memory vector database with Spring AI?
   answer: Benefits include significantly reduced latency for AI responses, improved context retrieval for AI agents, and enhanced performance for complex AI tasks that rely on quick similarity searches against large datasets.
 - question: How does an in-memory vector database improve AI agent memory?
-  answer: An in-memory vector database significantly speeds up the retrieval of vector embeddings, which represent an AI agent's memories or knowledge. This rapid access allows agents to recall information almost instantaneously, leading to more fluid and contextually relevant interactions and faster decision-making.
+  answer: '
+    An in-memory vector database significantly speeds up the retrieval of vector embeddings, which represent an AI agent''s memories or knowledge. This rapid access allows agents to recall information
+    almost instantaneously, leading to more fluid and contextually relevant interactions and faster decision-making.'
 slug: in-memory-vector-database-spring-ai
 ---
 

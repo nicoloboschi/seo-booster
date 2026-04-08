@@ -35,9 +35,13 @@ faq:
   answer: AI agents don't store raw pixels. Instead, they use computer vision models to extract meaningful features, objects, and scene context, converting them into numerical representations (embeddings)
     for efficient storage and retrieval within their AI visual memory.
 - question: What is AI object recognition memory?
-  answer: AI object recognition memory refers to an AI agent's ability to identify, store, and recall specific objects within images it has processed. This allows the AI to recognize and remember items like "a red car" or "a dog" for future reference.
+  answer: '
+    AI object recognition memory refers to an AI agent''s ability to identify, store, and recall specific objects within images it has processed. This allows the AI to recognize and remember items
+    like "a red car" or "a dog" for future reference.'
 - question: How does AI scene memory differ from object recognition?
-  answer: While AI object recognition focuses on individual items, AI scene memory involves understanding the broader context and relationships within an image, such as "a park on a sunny day" or "an indoor office." It captures the overall environment and its elements.
+  answer: '
+    While AI object recognition focuses on individual items, AI scene memory involves understanding the broader context and relationships within an image, such as "a park on a sunny day" or "an indoor
+    office." It captures the overall environment and its elements.'
 slug: ai-memory-photo
 ---
 

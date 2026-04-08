@@ -50,7 +50,10 @@ faq:
   answer: Popular open-source AI memory solutions on GitHub include frameworks like LangChain and LlamaIndex, which offer built-in memory modules. Dedicated libraries such as Hindsight and Zep also provide
     advanced memory and context management capabilities for AI agents and LLMs.
 - question: What is `shorttermrecall` in LlamaIndex and how does it relate to AI memory systems on GitHub?
-  answer: `shorttermrecall` is a concept within LlamaIndex, an open-source framework often found on GitHub, that refers to the ability of an AI agent to quickly access and utilize recent information or context. This is a crucial component of **short-term memory AI** and is fundamental for maintaining conversational flow and immediate task relevance in LLM applications. Many **open-source memory system LLM applications** on GitHub leverage LlamaIndex's capabilities for efficient **short-term memory AI**.
+  answer: '
+    `shorttermrecall` is a concept within LlamaIndex, an open-source framework often found on GitHub, that refers to the ability of an AI agent to quickly access and utilize recent information or
+    context. This is a crucial component of **short-term memory AI** and is fundamental for maintaining conversational flow and immediate task relevance in LLM applications. Many **open-source memory
+    system LLM applications** on GitHub leverage LlamaIndex''s capabilities for efficient **short-term memory AI**.'
 slug: ai-memory-system-github
 ---
 

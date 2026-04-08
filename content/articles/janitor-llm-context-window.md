@@ -1,5 +1,5 @@
 ---
-title: 'Janitor LLM Context Window: Expanding AI's Short-Term Recall and Memory'
+title: 'Janitor LLM Context Window: Expanding AI''s Short-Term Recall and Memory'
 description: Explore the Janitor LLM context window, its limitations, and innovative solutions like RAG and memory summarization for enhancing AI's short-term memory and recall capabilities.
 date: 2026-04-04
 lastmod: 2026-04-04
@@ -22,13 +22,17 @@ keywords:
 - expanding LLM memory
 faq:
 - question: Can the Janitor LLM context window be increased directly?
-  answer: For a specific pre-trained model like 'Janitor LLM,' its context window is fixed by its architecture and training. Developers can use techniques like RAG or memory summarization to effectively extend the AI's usable memory, simulating a larger context.
+  answer: For a specific pre-trained model like 'Janitor LLM,' its context window is fixed by its architecture and training. Developers can use techniques like RAG or memory summarization to effectively
+    extend the AI's usable memory, simulating a larger context.
 - question: How does RAG help with the Janitor LLM context window limitation?
-  answer: RAG allows the LLM to retrieve relevant information from an external knowledge base. This retrieved information is added to the prompt, providing the LLM with context beyond its fixed **Janitor LLM context window**.
+  answer: RAG allows the LLM to retrieve relevant information from an external knowledge base. This retrieved information is added to the prompt, providing the LLM with context beyond its fixed **Janitor
+    LLM context window**.
 - question: What are the trade-offs of using larger context window models versus RAG?
-  answer: Larger context models offer simpler implementation but are computationally expensive and can have higher latency. RAG adds complexity with retrieval systems but can be more cost-effective. It allows access to dynamic, external knowledge bases, offering a flexible solution for extending memory.
+  answer: Larger context models offer simpler implementation but are computationally expensive and can have higher latency. RAG adds complexity with retrieval systems but can be more cost-effective. It
+    allows access to dynamic, external knowledge bases, offering a flexible solution for extending memory.
 - question: What is the primary function of the Janitor LLM context window?
-  answer: The primary function of the **Janitor LLM context window** is to define the finite amount of information, measured in tokens, that an AI model can process and consider at any given moment. This directly impacts its immediate recall and ability to maintain coherent interactions.
+  answer: The primary function of the **Janitor LLM context window** is to define the finite amount of information, measured in tokens, that an AI model can process and consider at any given moment. This
+    directly impacts its immediate recall and ability to maintain coherent interactions.
 ---
 
 

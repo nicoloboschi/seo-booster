@@ -1,6 +1,7 @@
 ---
-title: 'LLM Context Window Diagram: Visualizing AI's Working Memory'
-description: Explore an LLM context window diagram to understand how AI models process information and manage their limited working memory for effective recall. Learn about token limits, attention mechanisms, and strategies to overcome these constraints.
+title: 'LLM Context Window Diagram: Visualizing AI''s Working Memory'
+description: Explore an LLM context window diagram to understand how AI models process information and manage their limited working memory for effective recall. Learn about token limits, attention mechanisms,
+  and strategies to overcome these constraints.
 date: 2026-04-04
 lastmod: 2026-04-04
 tags:
@@ -36,9 +37,11 @@ faq:
   answer: These diagrams help developers and users visualize the ephemeral nature of LLM memory, understand potential information loss, and strategize methods like RAG or memory consolidation to overcome
     these limitations.
 - question: What are token limits in LLMs?
-  answer: Token limits refer to the maximum number of tokens (pieces of words, punctuation, or sub-word units) that an LLM can process in a single input or output. This limit defines the size of the LLM's context window.
+  answer: Token limits refer to the maximum number of tokens (pieces of words, punctuation, or sub-word units) that an LLM can process in a single input or output. This limit defines the size of the LLM's
+    context window.
 - question: How do attention mechanisms relate to the LLM context window?
-  answer: Attention mechanisms allow LLMs to weigh the importance of different tokens within the context window. However, the computational cost of attention mechanisms scales quadratically with the sequence length, directly contributing to the need for a limited context window.
+  answer: Attention mechanisms allow LLMs to weigh the importance of different tokens within the context window. However, the computational cost of attention mechanisms scales quadratically with the sequence
+    length, directly contributing to the need for a limited context window.
 slug: llm-context-window-diagram
 ---
 

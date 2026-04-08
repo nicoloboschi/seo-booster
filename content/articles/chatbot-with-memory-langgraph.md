@@ -1,6 +1,7 @@
 ---
 title: 'Chatbot with Memory using LangGraph: Building Stateful AI Agents'
-description: 'Build a chatbot with memory using LangGraph for stateful AI agents. Learn about LangGraph's state machine, conversational AI memory, long-term memory AI agent integration, and practical examples for creating intelligent, remembering chatbots.'
+description: Build a chatbot with memory using LangGraph for stateful AI agents. Learn about LangGraph's state machine, conversational AI memory, long-term memory AI agent integration, and practical examples
+  for creating intelligent, remembering chatbots.
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -29,7 +30,9 @@ faq:
   answer: Yes, by integrating external **long-term memory AI agent** solutions such as vector databases for semantic search and employing memory consolidation strategies, LangGraph chatbots can achieve
     robust long-term memory. The state machine architecture provides the framework to manage these integrations and ensure relevant information is accessible across extended interactions.
 - question: What are effective AI conversation summarization techniques for chatbots with memory?
-  answer: Effective AI conversation summarization techniques for chatbots with memory include extractive summarization (identifying key sentences), abstractive summarization (generating new sentences that capture the essence), and hierarchical summarization (summarizing chunks of conversation and then summarizing those summaries). LangGraph can implement these by dedicating nodes to process conversation history and condense it into a more manageable form, crucial for managing **context window limitations** and **stateful memory**.
+  answer: Effective AI conversation summarization techniques for chatbots with memory include extractive summarization (identifying key sentences), abstractive summarization (generating new sentences that
+    capture the essence), and hierarchical summarization (summarizing chunks of conversation and then summarizing those summaries). LangGraph can implement these by dedicating nodes to process conversation
+    history and condense it into a more manageable form, crucial for managing **context window limitations** and **stateful memory**.
 slug: chatbot-with-memory-langgraph
 ---
 

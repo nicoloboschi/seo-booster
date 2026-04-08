@@ -58,7 +58,10 @@ faq:
   answer: The risks of **AI memory misuse** include the potential for biased information to be retained and propagated, leading to unfair or discriminatory outcomes. **AI memory persistence risk** also
     involves concerns about data privacy and security, as sensitive information stored by AI agents could be vulnerable to breaches or unauthorized access if not properly managed and secured.
 - question: How do AI working memory and episodic memory differ, and what are their roles in AI agents?
-  answer: **AI working memory** is analogous to the context window, holding information actively being processed for immediate tasks. **AI episodic memory**, on the other hand, aims to store and recall specific past events and interactions, similar to human autobiographical memory. Both are crucial for coherent AI behavior, with working memory enabling real-time task execution and episodic memory providing continuity and context across interactions.
+  answer: '
+    **AI working memory** is analogous to the context window, holding information actively being processed for immediate tasks. **AI episodic memory**, on the other hand, aims to store and recall
+    specific past events and interactions, similar to human autobiographical memory. Both are crucial for coherent AI behavior, with working memory enabling real-time task execution and episodic
+    memory providing continuity and context across interactions.'
 slug: ai-memory-issues
 ---
 

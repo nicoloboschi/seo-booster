@@ -1,5 +1,5 @@
 ---
-title: 'AI''''s Impact on RAM Prices: Is the Boom Sustainable?'
+title: 'AI''s Impact on RAM Prices: Is the Boom Sustainable?'
 description: 'AI''s Impact on RAM Prices: Is the Boom Sustainable?. Learn about ai killing ram prices, AI RAM demand with practical examples, code snippets, and architectural in...'
 date: 2026-03-27
 lastmod: 2026-03-27

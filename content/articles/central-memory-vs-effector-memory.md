@@ -1,6 +1,6 @@
 ---
 title: 'Central Memory vs. Effector Memory in AI Agents: Understanding the Core Differences'
-description: 'Delve into the critical distinctions between central memory and effector memory in AI agents. Learn how each memory type contributes to an agent\'s understanding, reasoning, and action execution.'
+description: "Delve into the critical distinctions between central memory and effector memory in AI agents. Learn how each memory type contributes to an agent's understanding, reasoning, and action execution."
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -29,7 +29,9 @@ faq:
 - question: How does effector memory contribute to an AI agent's learning?
   answer: Effector memory is crucial for learning procedural skills. By storing successful action sequences and their parameters, agents can refine their performance, automate tasks, and execute them more efficiently over time.
 - question: Why is the integration of central and effector memory important?
-  answer: Integrating these memory types allows AI agents to exhibit goal-directed and adaptive behavior. Central memory informs *what* actions are needed based on context and goals, while effector memory dictates *how* those actions are executed effectively.
+  answer: '
+    Integrating these memory types allows AI agents to exhibit goal-directed and adaptive behavior. Central memory informs *what* actions are needed based on context and goals, while effector memory
+    dictates *how* those actions are executed effectively.'
 - question: Can an AI agent have both central and effector memory?
   answer: Yes, advanced AI agents are designed to integrate both central and effector memory. This integration allows them to possess both broad understanding and the ability to execute complex tasks efficiently.
 slug: central-memory-vs-effector-memory

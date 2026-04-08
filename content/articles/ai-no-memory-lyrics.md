@@ -46,7 +46,9 @@ faq:
   answer: It's highly unlikely AI will ever develop "natural" memory in the biological sense. However, ongoing advancements in AI memory systems are creating computational equivalents that can store, recall,
     and learn from information with increasing sophistication, mimicking aspects of human memory.
 - question: What is "letta ai agent memory"?
-  answer: "Letta ai agent memory" refers to the concept of memory within AI agents, particularly focusing on how these agents store, retrieve, and utilize information over time. It encompasses various AI memory systems and strategies designed to give agents a form of recall.
+  answer: '
+    "Letta ai agent memory" refers to the concept of memory within AI agents, particularly focusing on how these agents store, retrieve, and utilize information over time. It encompasses various AI
+    memory systems and strategies designed to give agents a form of recall.'
 slug: ai-no-memory-lyrics
 ---
 ---

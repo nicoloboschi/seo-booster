@@ -1,6 +1,6 @@
 ---
-title: 'Bot Memory Janitor AI: Optimizing Your Agent's Recall and Performance'
-description: 'Discover Bot Memory Janitor AI, the essential process for cleaning and organizing AI agent memory. Learn how it improves recall, speed, and decision-making with practical examples and strategies.'
+title: 'Bot Memory Janitor AI: Optimizing Your Agent''s Recall and Performance'
+description: Discover Bot Memory Janitor AI, the essential process for cleaning and organizing AI agent memory. Learn how it improves recall, speed, and decision-making with practical examples and strategies.
 date: 2026-03-30
 lastmod: 2026-03-30
 tags:
@@ -28,7 +28,8 @@ faq:
 - question: Can bot memory janitor AI be implemented with open-source tools?
   answer: Yes, various open-source memory systems and custom scripts can be adapted to perform janitorial functions, often by setting expiration policies or using similarity-based pruning.
 - question: How can I make my bot memory janitor AI faster?
-  answer: To make your bot memory janitor AI faster, focus on efficient data structures, optimized pruning algorithms, leveraging similarity search with efficient indexing, and implementing policy-based management for proactive cleanup.
+  answer: To make your bot memory janitor AI faster, focus on efficient data structures, optimized pruning algorithms, leveraging similarity search with efficient indexing, and implementing policy-based
+    management for proactive cleanup.
 slug: bot-memory-janitor-ai
 ---
 
