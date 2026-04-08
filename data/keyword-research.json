@@ -7258,28 +7258,174 @@
       "matching_suggestions": [
         "memory cache llm"
       ]
+    },
+    {
+      "keyword": "memory card vs ram",
+      "slug": "memory-card-vs-ram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory card vs ram"
+      ]
+    },
+    {
+      "keyword": "memory chatbot langflow",
+      "slug": "memory-chatbot-langflow",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory chatbot langflow"
+      ]
+    },
+    {
+      "keyword": "memory for chatbot",
+      "slug": "memory-for-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory for chatbot"
+      ]
+    },
+    {
+      "keyword": "memory in ai agent n8n",
+      "slug": "memory-in-ai-agent-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory in ai agent n8n"
+      ]
+    },
+    {
+      "keyword": "memory in chatbot",
+      "slug": "memory-in-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory in chatbot"
+      ]
+    },
+    {
+      "keyword": "memory of ai",
+      "slug": "memory-of-ai",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "memory of ai agent",
+        "memory of ai"
+      ]
+    },
+    {
+      "keyword": "memory of ai agent",
+      "slug": "memory-of-ai-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory of ai agent"
+      ]
+    },
+    {
+      "keyword": "memory os ai agent",
+      "slug": "memory-os-ai-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory os ai agent"
+      ]
+    },
+    {
+      "keyword": "memory os of ai agent emnlp",
+      "slug": "memory-os-of-ai-agent-emnlp",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory os of ai agent emnlp"
+      ]
+    },
+    {
+      "keyword": "memory os of ai agent github",
+      "slug": "memory-os-of-ai-agent-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory os of ai agent github"
+      ]
+    },
+    {
+      "keyword": "memory plugin ai",
+      "slug": "memory-plugin-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory plugin ai"
+      ]
+    },
+    {
+      "keyword": "memory system for ai agents",
+      "slug": "memory-system-for-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory system for ai agents"
+      ]
+    },
+    {
+      "keyword": "memory system in ai",
+      "slug": "memory-system-in-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory system in ai"
+      ]
+    },
+    {
+      "keyword": "memorydb vector database",
+      "slug": "memorydb-vector-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memorydb vector database"
+      ]
+    },
+    {
+      "keyword": "microsoft agent framework memory",
+      "slug": "microsoft-agent-framework-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "microsoft agent framework memory",
+        "microsoft agent framework memory management"
+      ]
+    },
+    {
+      "keyword": "microsoft agent framework memory management",
+      "slug": "microsoft-agent-framework-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "microsoft agent framework memory management"
+      ]
+    },
+    {
+      "keyword": "most advanced conversational ai",
+      "slug": "most-advanced-conversational-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "most advanced conversational ai"
+      ]
+    },
+    {
+      "keyword": "most intelligent chatbot",
+      "slug": "most-intelligent-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "most intelligent chatbot"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "memory card vs ram",
-    "memory chatbot langflow",
-    "memory for chatbot",
-    "memory in ai agent n8n",
-    "memory in chatbot",
-    "memory of ai",
-    "memory of ai agent",
-    "memory os ai agent",
-    "memory os of ai agent emnlp",
-    "memory os of ai agent github",
-    "memory plugin ai",
-    "memory system for ai agents",
-    "memory system in ai",
-    "memorydb vector database",
-    "microsoft agent framework memory",
-    "microsoft agent framework memory management",
-    "most advanced conversational ai",
-    "most intelligent chatbot",
     "n8n ai agent clear memory",
     "n8n ai agent node memory",
     "n8n ai agent simple memory session id",
@@ -7455,9 +7601,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 753,
-    "validated": 708,
+    "total_keywords": 771,
+    "validated": 726,
     "low_volume": 45,
-    "new_opportunities_found": 192
+    "new_opportunities_found": 174
   }
 }
