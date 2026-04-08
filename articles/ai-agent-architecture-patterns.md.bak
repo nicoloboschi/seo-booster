@@ -1,5 +1,5 @@
 ---
-title: 'AI Agent Architectures: ReAct, Plan-and-Execute, Memory & Core Components'
+title: 'AI Agent Architectures: ReAct, Plan-and-Execute, and Memory Patterns Explained'
 description: Discover key AI agent architectures like ReAct and Plan-and-Execute. Understand their design patterns, core components, and the crucial role of memory in autonomo...
 date: 2026-03-24
 tags:
@@ -11,6 +11,8 @@ tags:
 - AI Agent Memory
 - ReAct Architecture
 - Plan-and-Execute Architecture
+- AI Agent Components
+- AI Agent Memory Architecture Patterns
 keywords:
 - AI agent architectures
 - agent architecture patterns
@@ -40,6 +42,15 @@ faq:
 - question: How do AI agent memory architecture patterns differ?
   answer: AI agent memory architecture patterns vary significantly. Some focus on short-term working memory for immediate task context (like in ReAct), while others emphasize long-term knowledge bases and
     state tracking for complex planning (like in Plan-and-Execute). The integration of memory directly impacts an agent's ability to learn, adapt, and perform complex reasoning.
+- question: What are the key AI agent memory architecture patterns to consider?
+  answer: Key AI agent memory architecture patterns include those supporting short-term working memory for immediate context (like in ReAct), long-term knowledge bases for persistent information, and state-tracking
+    mechanisms for planning and execution. The specific pattern chosen significantly impacts an agent's ability to learn, adapt, and perform complex reasoning.
+- question: What are the essential AI agent components in any architecture?
+  answer: Essential AI agent components include Perception (sensing the environment), Reasoning/Cognition (processing information and making decisions), Memory (storing and retrieving information), Action
+    Selection/Decision Making (choosing the best action), and Actuation (executing actions).
+- question: How does LLM agent design leverage memory and planning?
+  answer: LLM agent design increasingly integrates memory and planning to enhance capabilities. Architectures like ReAct use memory for context and planning to guide tool use, enabling more sophisticated
+    autonomous behavior.
 slug: ai-agent-architecture-patterns
 ---
 
