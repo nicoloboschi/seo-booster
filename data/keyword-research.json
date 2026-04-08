@@ -68,13 +68,10 @@
     ],
     "best ai memory": [
       "ai chatbot with best memory",
-      "best ai agent memory",
       "best ai app for memory",
       "best ai app with best memory",
       "best ai app with good memory",
       "best ai app with long memory",
-      "best ai assistant with memory",
-      "best ai chat app with memory",
       "best ai chat for memory",
       "best ai chat memory",
       "best ai chat with best memory",
@@ -86,7 +83,10 @@
       "best ai chatbot with good memory reddit",
       "best ai chatbot with long memory",
       "best ai companion memory",
-      "best ai for memory"
+      "best ai for memory",
+      "best ai for memory reddit",
+      "best ai for memory retention",
+      "best ai girlfriend memory"
     ],
     "llm memory": [
       "best llm memory",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 186,
+      "autocomplete_matches": 185,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -506,12 +506,11 @@
     {
       "keyword": "best ai memory system",
       "slug": "best-ai-memory-systems",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "best ai agent memory",
         "best ai memory system",
-        "best ai agent memory",
         "best ai memory system",
         "best ai memory system"
       ]
@@ -2675,20 +2674,16 @@
     {
       "keyword": "best ai assistant with memory",
       "slug": "best-ai-assistant-with-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai assistant with memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chat app with memory",
       "slug": "best-ai-chat-app-with-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai chat app with memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chat for memory",
@@ -4184,10 +4179,9 @@
     {
       "keyword": "how much ram for ai",
       "slug": "how-much-ram-for-ai",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "how much ram for ai",
         "how much ram for ai"
       ]
     },
@@ -7557,25 +7551,147 @@
       "matching_suggestions": [
         "openclaw memory embedding model"
       ]
+    },
+    {
+      "keyword": "permanent memory example",
+      "slug": "permanent-memory-example",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "permanent memory example"
+      ]
+    },
+    {
+      "keyword": "permanent memory llm",
+      "slug": "permanent-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "permanent memory llm"
+      ]
+    },
+    {
+      "keyword": "persistent ai memory system",
+      "slug": "persistent-ai-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "persistent ai memory system"
+      ]
+    },
+    {
+      "keyword": "persistent memory for llm",
+      "slug": "persistent-memory-for-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "persistent memory for llm"
+      ]
+    },
+    {
+      "keyword": "persistent memory in llm",
+      "slug": "persistent-memory-in-llm",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "what is persistent memory in llm",
+        "persistent memory in llm",
+        "what is persistent memory in llm"
+      ]
+    },
+    {
+      "keyword": "pydantic ai long term memory",
+      "slug": "pydantic-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "pydantic ai long term memory"
+      ]
+    },
+    {
+      "keyword": "python vector database in memory",
+      "slug": "python-vector-database-in-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "python vector database in memory"
+      ]
+    },
+    {
+      "keyword": "rag and bone review",
+      "slug": "rag-and-bone-review",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag and bone review"
+      ]
+    },
+    {
+      "keyword": "rag and bone vs theory",
+      "slug": "rag-and-bone-vs-theory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag and bone vs theory"
+      ]
+    },
+    {
+      "keyword": "rag chatbot with memory langchain",
+      "slug": "rag-chatbot-with-memory-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag chatbot with memory langchain"
+      ]
+    },
+    {
+      "keyword": "rag review",
+      "slug": "rag-review",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag review"
+      ]
+    },
+    {
+      "keyword": "rag vs ai memory",
+      "slug": "rag-vs-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag vs ai memory"
+      ]
+    },
+    {
+      "keyword": "rag vs long term memory",
+      "slug": "rag-vs-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag vs long term memory"
+      ]
+    },
+    {
+      "keyword": "rag vs memory bank",
+      "slug": "rag-vs-memory-bank",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag vs memory bank"
+      ]
+    },
+    {
+      "keyword": "rag vs ram",
+      "slug": "rag-vs-ram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "rag vs ram"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "permanent memory example",
-    "permanent memory llm",
-    "persistent ai memory system",
-    "persistent memory for llm",
-    "persistent memory in llm",
-    "pydantic ai long term memory",
-    "python vector database in memory",
-    "rag and bone review",
-    "rag and bone vs theory",
-    "rag chatbot with memory langchain",
-    "rag review",
-    "rag vs ai memory",
-    "rag vs long term memory",
-    "rag vs memory bank",
-    "rag vs ram",
     "ram ai images",
     "reasoningbank llm agent memory framework",
     "self organizing ai memory system",
@@ -7643,7 +7759,6 @@
     "what is memory tagging",
     "what is memory tuning in llm",
     "what is persistent memory",
-    "what is persistent memory in llm",
     "what is rag memory",
     "what is role of memory in agentic ai system",
     "what is short term memory in ai",
@@ -7721,9 +7836,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 786,
-    "validated": 741,
-    "low_volume": 45,
-    "new_opportunities_found": 159
+    "total_keywords": 801,
+    "validated": 754,
+    "low_volume": 47,
+    "new_opportunities_found": 143
   }
 }

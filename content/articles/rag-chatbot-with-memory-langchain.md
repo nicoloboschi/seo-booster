@@ -49,7 +49,6 @@ LangChain acts as a framework that simplifies the development of complex AI appl
 
 LangChain offers several **memory types** that can be integrated into a RAG pipeline. These range from simple conversation buffers to more sophisticated summarization or knowledge graph-based memories. The choice of memory significantly impacts the chatbot's ability to recall specific details versus general themes. The effective implementation of a **rag chatbot with memory langchain** hinges on selecting the appropriate memory strategy.
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ### Choosing the Right Memory Type
