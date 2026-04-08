@@ -13,7 +13,7 @@
 </span></span><span class=line><span class=ln>11</span><span class=cl><span class=n>model</span> <span class=o>=</span> <span class=n>AutoModelForCausalLM</span><span class=o>.</span><span class=n>from_pretrained</span><span class=p>(</span>
 </span></span><span class=line><span class=ln>12</span><span class=cl> <span class=n>model_name</span><span class=p>,</span>
 </span></span><span class=line><span class=ln>13</span><span class=cl> <span class=n>quantization_config</span><span class=o>=</span><span class=n>quantization_config</span><span class=p>,</span>
-</span></span><span class=line><span class=ln>14</span><span class=cl> <span class=err>d</span><span class=n>evice_map</span><span class=o>=</span><span class=s2>&#34;auto&#34;</span> <span class=c1># Automatically distributes model across available GPUs</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl> <span class=n>device_map</span><span class=o>=</span><span class=s2>&#34;auto&#34;</span> <span class=c1># Automatically distributes model across available GPUs</span>
 </span></span><span class=line><span class=ln>15</span><span class=cl><span class=p>)</span>
 </span></span><span class=line><span class=ln>16</span><span class=cl><span class=n>tokenizer</span> <span class=o>=</span> <span class=n>AutoTokenizer</span><span class=o>.</span><span class=n>from_pretrained</span><span class=p>(</span><span class=n>model_name</span><span class=p>)</span>
 </span></span><span class=line><span class=ln>17</span><span class=cl>
