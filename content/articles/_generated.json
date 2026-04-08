@@ -4651,5 +4651,35 @@
     "generated_at": "2026-04-08T05:21:11.669564",
     "sources": [],
     "quality_score": 65
+  },
+  "n8n-ai-agent-node-memory": {
+    "keyword": "n8n ai agent node memory",
+    "generated_at": "2026-04-08T07:22:48.935904",
+    "sources": [],
+    "quality_score": 65
+  },
+  "n8n-ai-agent-simple-memory-session-id": {
+    "keyword": "n8n ai agent simple memory session id",
+    "generated_at": "2026-04-08T07:23:26.527266",
+    "sources": [],
+    "quality_score": 65
+  },
+  "n8n-ai-agent-window-buffer-memory": {
+    "keyword": "n8n ai agent window buffer memory",
+    "generated_at": "2026-04-08T07:24:02.648409",
+    "sources": [],
+    "quality_score": 65
+  },
+  "n8n-ai-long-term-memory": {
+    "keyword": "n8n ai long term memory",
+    "generated_at": "2026-04-08T07:24:48.867161",
+    "sources": [],
+    "quality_score": 65
+  },
+  "n8n-chatbot-memory": {
+    "keyword": "n8n chatbot memory",
+    "generated_at": "2026-04-08T07:25:37.514063",
+    "sources": [],
+    "quality_score": 65
   }
 }
