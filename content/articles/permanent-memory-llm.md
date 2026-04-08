@@ -97,7 +97,6 @@ class EmbeddingModel:
  print(f"Generating embedding for: '{text[:30]}...'")
  return [hash(text + str(i)) % 1000 / 1000 for i in range(768)] # Dummy embedding
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 class VectorDB:
