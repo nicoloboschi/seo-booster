@@ -36,7 +36,6 @@ Why should an AI remember a specific conversation from last Tuesday, not just ge
 
 **Episodic memory in LLMs refers to an AI's capacity to store, retain, and retrieve specific past events, interactions, or experiences, including their temporal and contextual details.** This allows an LLM to recall specific conversations, user preferences from a particular session, or the sequence of actions it took to solve a problem.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 This type of memory contrasts with recalling general knowledge. It focuses on the unique, time-stamped occurrences that form an interaction history. For example, an LLM with strong **LLM episodic memory** could recall a user's specific dietary restrictions mentioned during a particular meal planning session last week, rather than just knowing general facts about dietary needs. This distinction is vital for building AI that feels more personal and adaptive, showcasing the essence of **episodic memory LLM** functionality.
