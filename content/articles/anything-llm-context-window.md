@@ -49,7 +49,7 @@ faq:
     amounts of information, leading to more capable and human-like AI.
 slug: anything-llm-context-window
 ---
----
+
 
 The **anything LLM context window** represents the aspirational goal for Large Language Models (LLMs) to process and retain information from virtually unlimited input text. This signifies an AI's capacity to reference and reason over entire corpora, overcoming current memory limitations and driving innovation in AI memory systems and model architectures, moving towards **agentic AI long-term memory**.
 
