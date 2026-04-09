@@ -123,7 +123,6 @@ Beyond simply expanding context windows, techniques that intelligently manage wh
 
 Overcoming the **AI memory wall** requires a multi-faceted strategy. Here are key steps organizations and researchers are taking to mitigate these **AI memory limitations**.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 1. **Optimize Retrieval Algorithms:** Continuously refine search algorithms within vector databases and knowledge graphs to reduce query latency.
