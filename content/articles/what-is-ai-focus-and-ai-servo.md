@@ -73,7 +73,6 @@ These components work in concert to direct the agent's attention effectively. Wi
 
 **AI servo** extends the concept of **AI focus** by introducing a dynamic, adaptive control system. If **AI focus** is the decision to look at something, **AI servo** is the continuous, fine-tuned adjustment of that gaze, ensuring it remains locked onto the target or smoothly tracks moving targets. It's about actively managing the agent's attention over time, especially in dynamic environments or during extended interactions.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 The "servo" aspect implies a feedback loop. The agent constantly monitors incoming data and its own internal state to gauge whether its current **AI focus** remains optimal. If new information suggests a shift in priority or a change in the task's requirements, the **AI servo** mechanism adjusts the agent's attention accordingly.
