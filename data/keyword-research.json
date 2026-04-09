@@ -283,9 +283,7 @@
     "embedding model memory": [
       "embedded memory meaning",
       "embedding model memory usage",
-      "how images are stored in memory",
       "in memory embedding model",
-      "openclaw memory embedding model",
       "what is a memory model",
       "what is memory tagging"
     ],
@@ -4153,11 +4151,9 @@
     {
       "keyword": "how images are stored in memory",
       "slug": "how-images-are-stored-in-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how images are stored in memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how llm memory works",
@@ -5799,11 +5795,9 @@
     {
       "keyword": "openclaw ai agent memory",
       "slug": "openclaw-ai-agent-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "openclaw memory embedding model"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "hermes agent memory",
@@ -7552,11 +7546,9 @@
     {
       "keyword": "openclaw memory embedding model",
       "slug": "openclaw-memory-embedding-model",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "openclaw memory embedding model"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "permanent memory example",
@@ -7976,25 +7968,150 @@
       "matching_suggestions": [
         "what is agent in ai"
       ]
+    },
+    {
+      "keyword": "what is agent in artificial intelligence",
+      "slug": "what-is-agent-in-artificial-intelligence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is agent in artificial intelligence"
+      ]
+    },
+    {
+      "keyword": "what is ai based chatbot",
+      "slug": "what-is-ai-based-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai based chatbot"
+      ]
+    },
+    {
+      "keyword": "what is ai context memory",
+      "slug": "what-is-ai-context-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai context memory"
+      ]
+    },
+    {
+      "keyword": "what is ai focus and ai servo",
+      "slug": "what-is-ai-focus-and-ai-servo",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai focus and ai servo"
+      ]
+    },
+    {
+      "keyword": "what is ai memories honor",
+      "slug": "what-is-ai-memories-honor",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai memories honor"
+      ]
+    },
+    {
+      "keyword": "what is ai memory",
+      "slug": "what-is-ai-memory",
+      "autocomplete_matches": 5,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai memory",
+        "what is ai memory bank",
+        "what is ai memory called",
+        "what is ai memory crisis",
+        "what is ai memory wall"
+      ]
+    },
+    {
+      "keyword": "what is ai memory called",
+      "slug": "what-is-ai-memory-called",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai memory called"
+      ]
+    },
+    {
+      "keyword": "what is ai memory wall",
+      "slug": "what-is-ai-memory-wall",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai memory wall"
+      ]
+    },
+    {
+      "keyword": "what is an autonomous agent in artificial intelligence",
+      "slug": "what-is-an-autonomous-agent-in-artificial-intelligence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is an autonomous agent in artificial intelligence"
+      ]
+    },
+    {
+      "keyword": "what is best for brain memory",
+      "slug": "what-is-best-for-brain-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is best for brain memory"
+      ]
+    },
+    {
+      "keyword": "what is character ai memory",
+      "slug": "what-is-character-ai-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "what is character ai memory",
+        "what is character ai memory limit"
+      ]
+    },
+    {
+      "keyword": "what is character ai memory limit",
+      "slug": "what-is-character-ai-memory-limit",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is character ai memory limit"
+      ]
+    },
+    {
+      "keyword": "what is chatbot example",
+      "slug": "what-is-chatbot-example",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is chatbot example"
+      ]
+    },
+    {
+      "keyword": "what is chatbot in healthcare",
+      "slug": "what-is-chatbot-in-healthcare",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is chatbot in healthcare"
+      ]
+    },
+    {
+      "keyword": "what is chatbot memory",
+      "slug": "what-is-chatbot-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is chatbot memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "what is agent in artificial intelligence",
-    "what is ai based chatbot",
-    "what is ai context memory",
-    "what is ai focus and ai servo",
-    "what is ai memories honor",
-    "what is ai memory",
-    "what is ai memory called",
-    "what is ai memory wall",
-    "what is an autonomous agent in artificial intelligence",
-    "what is best for brain memory",
-    "what is character ai memory",
-    "what is character ai memory limit",
-    "what is chatbot example",
-    "what is chatbot in healthcare",
-    "what is chatbot memory",
     "what is context memory in llm",
     "what is context window llm",
     "what is conversation ai",
@@ -8093,9 +8210,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 832,
-    "validated": 787,
-    "low_volume": 45,
-    "new_opportunities_found": 112
+    "total_keywords": 847,
+    "validated": 799,
+    "low_volume": 48,
+    "new_opportunities_found": 97
   }
 }
