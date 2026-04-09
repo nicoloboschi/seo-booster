@@ -7838,25 +7838,148 @@
       "matching_suggestions": [
         "vector database llm long term memory"
       ]
+    },
+    {
+      "keyword": "vector database llm memory",
+      "slug": "vector-database-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database llm memory"
+      ]
+    },
+    {
+      "keyword": "vector database long term memory",
+      "slug": "vector-database-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database long term memory"
+      ]
+    },
+    {
+      "keyword": "vector database memory requirements",
+      "slug": "vector-database-memory-requirements",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database memory requirements"
+      ]
+    },
+    {
+      "keyword": "vertex ai agent engine memory",
+      "slug": "vertex-ai-agent-engine-memory",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "vertex ai agent engine memory",
+        "vertex ai agent engine memory bank",
+        "vertex ai agent engine memory bank pricing"
+      ]
+    },
+    {
+      "keyword": "vertex ai agent engine memory bank",
+      "slug": "vertex-ai-agent-engine-memory-bank",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "vertex ai agent engine memory bank",
+        "vertex ai agent engine memory bank pricing"
+      ]
+    },
+    {
+      "keyword": "vertex ai agent engine memory bank pricing",
+      "slug": "vertex-ai-agent-engine-memory-bank-pricing",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vertex ai agent engine memory bank pricing"
+      ]
+    },
+    {
+      "keyword": "what ai remember previous conversations",
+      "slug": "what-ai-remember-previous-conversations",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what ai remember previous conversations"
+      ]
+    },
+    {
+      "keyword": "what ai remembers conversations",
+      "slug": "what-ai-remembers-conversations",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what ai remembers conversations"
+      ]
+    },
+    {
+      "keyword": "what are the best ai tools",
+      "slug": "what-are-the-best-ai-tools",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what are the best ai tools"
+      ]
+    },
+    {
+      "keyword": "what are the components of an ai system",
+      "slug": "what-are-the-components-of-an-ai-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what are the components of an ai system"
+      ]
+    },
+    {
+      "keyword": "what are the models of memory",
+      "slug": "what-are-the-models-of-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what are the models of memory"
+      ]
+    },
+    {
+      "keyword": "what data does ai collect",
+      "slug": "what-data-does-ai-collect",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what data does ai collect"
+      ]
+    },
+    {
+      "keyword": "what does context window mean for llm",
+      "slug": "what-does-context-window-mean-for-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what does context window mean for llm"
+      ]
+    },
+    {
+      "keyword": "what is a memory model",
+      "slug": "what-is-a-memory-model",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is a memory model"
+      ]
+    },
+    {
+      "keyword": "what is agent in ai",
+      "slug": "what-is-agent-in-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is agent in ai"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "vector database llm memory",
-    "vector database long term memory",
-    "vector database memory requirements",
-    "vertex ai agent engine memory",
-    "vertex ai agent engine memory bank",
-    "vertex ai agent engine memory bank pricing",
-    "what ai remember previous conversations",
-    "what ai remembers conversations",
-    "what are the best ai tools",
-    "what are the components of an ai system",
-    "what are the models of memory",
-    "what data does ai collect",
-    "what does context window mean for llm",
-    "what is a memory model",
-    "what is agent in ai",
     "what is agent in artificial intelligence",
     "what is ai based chatbot",
     "what is ai context memory",
@@ -7970,9 +8093,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 817,
-    "validated": 772,
+    "total_keywords": 832,
+    "validated": 787,
     "low_volume": 45,
-    "new_opportunities_found": 127
+    "new_opportunities_found": 112
   }
 }
