@@ -4897,5 +4897,35 @@
     "generated_at": "2026-04-09T00:12:37.498455",
     "sources": [],
     "quality_score": 70
+  },
+  "top-brain-foods-improve-memory": {
+    "keyword": "top brain foods improve memory",
+    "generated_at": "2026-04-09T02:18:12.323384",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vector-database-for-llm-memory": {
+    "keyword": "vector database for llm memory",
+    "generated_at": "2026-04-09T02:19:01.731034",
+    "sources": [],
+    "quality_score": 60
+  },
+  "vector-database-for-memory": {
+    "keyword": "vector database for memory",
+    "generated_at": "2026-04-09T02:19:40.018058",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vector-database-llm-long-term-memory": {
+    "keyword": "vector database llm long term memory",
+    "generated_at": "2026-04-09T02:20:13.780569",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vector-database-llm-memory": {
+    "keyword": "vector database llm memory",
+    "generated_at": "2026-04-09T02:20:27.066756",
+    "sources": [],
+    "quality_score": 75
   }
 }

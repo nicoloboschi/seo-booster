@@ -68,10 +68,13 @@
     ],
     "best ai memory": [
       "ai chatbot with best memory",
+      "best ai agent memory",
       "best ai app for memory",
       "best ai app with best memory",
       "best ai app with good memory",
       "best ai app with long memory",
+      "best ai assistant with memory",
+      "best ai chat app with memory",
       "best ai chat for memory",
       "best ai chat memory",
       "best ai chat with best memory",
@@ -83,10 +86,7 @@
       "best ai chatbot with good memory reddit",
       "best ai chatbot with long memory",
       "best ai companion memory",
-      "best ai for memory",
-      "best ai for memory reddit",
-      "best ai for memory retention",
-      "best ai girlfriend memory"
+      "best ai for memory"
     ],
     "llm memory": [
       "best llm memory",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 185,
+      "autocomplete_matches": 186,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -506,11 +506,12 @@
     {
       "keyword": "best ai memory system",
       "slug": "best-ai-memory-systems",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
         "best ai agent memory",
         "best ai memory system",
+        "best ai agent memory",
         "best ai memory system",
         "best ai memory system"
       ]
@@ -2674,16 +2675,20 @@
     {
       "keyword": "best ai assistant with memory",
       "slug": "best-ai-assistant-with-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai assistant with memory"
+      ]
     },
     {
       "keyword": "best ai chat app with memory",
       "slug": "best-ai-chat-app-with-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chat app with memory"
+      ]
     },
     {
       "keyword": "best ai chat for memory",
@@ -4179,9 +4184,10 @@
     {
       "keyword": "how much ram for ai",
       "slug": "how-much-ram-for-ai",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "how much ram for ai",
         "how much ram for ai"
       ]
     },
@@ -7688,26 +7694,154 @@
       "matching_suggestions": [
         "rag vs ram"
       ]
+    },
+    {
+      "keyword": "ram ai images",
+      "slug": "ram-ai-images",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ram ai images"
+      ]
+    },
+    {
+      "keyword": "reasoningbank llm agent memory framework",
+      "slug": "reasoningbank-llm-agent-memory-framework",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "reasoningbank llm agent memory framework"
+      ]
+    },
+    {
+      "keyword": "self organizing ai memory system",
+      "slug": "self-organizing-ai-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "self organizing ai memory system"
+      ]
+    },
+    {
+      "keyword": "short and long term memory ai",
+      "slug": "short-and-long-term-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short and long term memory ai"
+      ]
+    },
+    {
+      "keyword": "short term and long term memory agentic ai",
+      "slug": "short-term-and-long-term-memory-agentic-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term and long term memory agentic ai"
+      ]
+    },
+    {
+      "keyword": "short term memory ai agent",
+      "slug": "short-term-memory-ai-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory ai agent"
+      ]
+    },
+    {
+      "keyword": "short term memory aids",
+      "slug": "short-term-memory-aids",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory aids"
+      ]
+    },
+    {
+      "keyword": "short term memory and long term memory ai",
+      "slug": "short-term-memory-and-long-term-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory and long term memory ai"
+      ]
+    },
+    {
+      "keyword": "short term memory for ai agents",
+      "slug": "short-term-memory-for-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory for ai agents"
+      ]
+    },
+    {
+      "keyword": "short term memory loss ai",
+      "slug": "short-term-memory-loss-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory loss ai"
+      ]
+    },
+    {
+      "keyword": "spring ai conversation memory",
+      "slug": "spring-ai-conversation-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "spring ai conversation memory"
+      ]
+    },
+    {
+      "keyword": "the ai that remembers consequence",
+      "slug": "the-ai-that-remembers-consequence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "the ai that remembers consequence"
+      ]
+    },
+    {
+      "keyword": "top brain foods improve memory",
+      "slug": "top-brain-foods-improve-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "top brain foods improve memory"
+      ]
+    },
+    {
+      "keyword": "vector database for llm memory",
+      "slug": "vector-database-for-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database for llm memory"
+      ]
+    },
+    {
+      "keyword": "vector database for memory",
+      "slug": "vector-database-for-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database for memory"
+      ]
+    },
+    {
+      "keyword": "vector database llm long term memory",
+      "slug": "vector-database-llm-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database llm long term memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "ram ai images",
-    "reasoningbank llm agent memory framework",
-    "self organizing ai memory system",
-    "short and long term memory ai",
-    "short term and long term memory agentic ai",
-    "short term memory ai agent",
-    "short term memory aids",
-    "short term memory and long term memory ai",
-    "short term memory for ai agents",
-    "short term memory loss ai",
-    "spring ai conversation memory",
-    "the ai that remembers consequence",
-    "top brain foods improve memory",
-    "vector database for llm memory",
-    "vector database for memory",
-    "vector database llm long term memory",
     "vector database llm memory",
     "vector database long term memory",
     "vector database memory requirements",
@@ -7836,9 +7970,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 801,
-    "validated": 754,
-    "low_volume": 47,
-    "new_opportunities_found": 143
+    "total_keywords": 817,
+    "validated": 772,
+    "low_volume": 45,
+    "new_opportunities_found": 127
   }
 }
