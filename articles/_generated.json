@@ -4927,5 +4927,35 @@
     "generated_at": "2026-04-09T02:20:27.066756",
     "sources": [],
     "quality_score": 75
+  },
+  "vector-database-long-term-memory": {
+    "keyword": "vector database long term memory",
+    "generated_at": "2026-04-09T04:22:14.048793",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vector-database-memory-requirements": {
+    "keyword": "vector database memory requirements",
+    "generated_at": "2026-04-09T04:23:05.668344",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vertex-ai-agent-engine-memory": {
+    "keyword": "vertex ai agent engine memory",
+    "generated_at": "2026-04-09T04:23:50.551949",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vertex-ai-agent-engine-memory-bank": {
+    "keyword": "vertex ai agent engine memory bank",
+    "generated_at": "2026-04-09T04:24:32.791264",
+    "sources": [],
+    "quality_score": 65
+  },
+  "vertex-ai-agent-engine-memory-bank-pricing": {
+    "keyword": "vertex ai agent engine memory bank pricing",
+    "generated_at": "2026-04-09T04:25:11.939515",
+    "sources": [],
+    "quality_score": 65
   }
 }
