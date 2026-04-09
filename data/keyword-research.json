@@ -283,7 +283,9 @@
     "embedding model memory": [
       "embedded memory meaning",
       "embedding model memory usage",
+      "how images are stored in memory",
       "in memory embedding model",
+      "openclaw memory embedding model",
       "what is a memory model",
       "what is memory tagging"
     ],
@@ -4151,9 +4153,11 @@
     {
       "keyword": "how images are stored in memory",
       "slug": "how-images-are-stored-in-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how images are stored in memory"
+      ]
     },
     {
       "keyword": "how llm memory works",
@@ -5795,9 +5799,11 @@
     {
       "keyword": "openclaw ai agent memory",
       "slug": "openclaw-ai-agent-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openclaw memory embedding model"
+      ]
     },
     {
       "keyword": "hermes agent memory",
@@ -7546,9 +7552,11 @@
     {
       "keyword": "openclaw memory embedding model",
       "slug": "openclaw-memory-embedding-model",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "openclaw memory embedding model"
+      ]
     },
     {
       "keyword": "permanent memory example",
@@ -8108,28 +8116,173 @@
       "matching_suggestions": [
         "what is chatbot memory"
       ]
+    },
+    {
+      "keyword": "what is context memory in llm",
+      "slug": "what-is-context-memory-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is context memory in llm"
+      ]
+    },
+    {
+      "keyword": "what is context window llm",
+      "slug": "what-is-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is context window llm"
+      ]
+    },
+    {
+      "keyword": "what is conversation ai",
+      "slug": "what-is-conversation-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is conversation ai"
+      ]
+    },
+    {
+      "keyword": "what is episodic memory in llm",
+      "slug": "what-is-episodic-memory-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is episodic memory in llm"
+      ]
+    },
+    {
+      "keyword": "what is fram memory",
+      "slug": "what-is-fram-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is fram memory"
+      ]
+    },
+    {
+      "keyword": "what is in memory vector database",
+      "slug": "what-is-in-memory-vector-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is in memory vector database"
+      ]
+    },
+    {
+      "keyword": "what is intelligent agent in artificial intelligence",
+      "slug": "what-is-intelligent-agent-in-artificial-intelligence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is intelligent agent in artificial intelligence"
+      ]
+    },
+    {
+      "keyword": "what is keep alive memory",
+      "slug": "what-is-keep-alive-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is keep alive memory"
+      ]
+    },
+    {
+      "keyword": "what is knowledge agent in artificial intelligence",
+      "slug": "what-is-knowledge-agent-in-artificial-intelligence",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is knowledge agent in artificial intelligence"
+      ]
+    },
+    {
+      "keyword": "what is llm memory",
+      "slug": "what-is-llm-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "what is llm memory",
+        "what is llm memory bank"
+      ]
+    },
+    {
+      "keyword": "what is long short-term memory",
+      "slug": "what-is-long-short-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is long short-term memory"
+      ]
+    },
+    {
+      "keyword": "what is mean by llm",
+      "slug": "what-is-mean-by-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is mean by llm"
+      ]
+    },
+    {
+      "keyword": "what is meant by llm",
+      "slug": "what-is-meant-by-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is meant by llm"
+      ]
+    },
+    {
+      "keyword": "what is mem0 ai",
+      "slug": "what-is-mem0-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is mem0 ai"
+      ]
+    },
+    {
+      "keyword": "what is memory cloth",
+      "slug": "what-is-memory-cloth",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory cloth"
+      ]
+    },
+    {
+      "keyword": "what is memory database",
+      "slug": "what-is-memory-database",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory database"
+      ]
+    },
+    {
+      "keyword": "what is memory fabric",
+      "slug": "what-is-memory-fabric",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory fabric"
+      ]
+    },
+    {
+      "keyword": "what is memory system",
+      "slug": "what-is-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory system"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "what is context memory in llm",
-    "what is context window llm",
-    "what is conversation ai",
-    "what is episodic memory in llm",
-    "what is fram memory",
-    "what is in memory vector database",
-    "what is intelligent agent in artificial intelligence",
-    "what is keep alive memory",
-    "what is knowledge agent in artificial intelligence",
-    "what is llm memory",
-    "what is long short-term memory",
-    "what is mean by llm",
-    "what is meant by llm",
-    "what is mem0 ai",
-    "what is memory cloth",
-    "what is memory database",
-    "what is memory fabric",
-    "what is memory system",
     "what is memory tagging",
     "what is memory tuning in llm",
     "what is persistent memory",
@@ -8210,9 +8363,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 847,
-    "validated": 799,
-    "low_volume": 48,
-    "new_opportunities_found": 97
+    "total_keywords": 865,
+    "validated": 820,
+    "low_volume": 45,
+    "new_opportunities_found": 79
   }
 }

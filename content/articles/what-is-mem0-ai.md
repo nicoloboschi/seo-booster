@@ -129,7 +129,6 @@ Mem0 AI ensures that the **memory store is persistent and reliable**. Data isn't
 
 Mem0 AI finds applications in a variety of AI agent scenarios. One common use case is in **conversational AI**, enabling chatbots and virtual assistants to remember past interactions and user preferences. This leads to more natural and personalized conversations, as discussed in [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 Another significant area is **autonomous systems**. Agents controlling robots, managing complex simulations, or performing long-term research tasks benefit immensely from persistent memory. They can learn from their environment and adapt their behavior based on accumulated experience. Understanding **what is Mem0 AI** reveals its broad applicability.
