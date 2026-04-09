@@ -129,7 +129,6 @@ vector_db = VectorStore()
 vector_db.add_document("doc1", "User prefers vegetarian meals.", [0.1, 0.2, 0.3])
 vector_db.add_document("doc2", "Meeting scheduled for Tuesday at 10 AM.", [0.4, 0.5, 0.6])
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 query_embedding = [0.15, 0.25, 0.35] # Simulate an embedding for a query about food preferences
