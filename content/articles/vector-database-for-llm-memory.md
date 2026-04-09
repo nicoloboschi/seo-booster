@@ -116,7 +116,6 @@ Open-source solutions like Milvus and Qdrant, or managed services like Pinecone,
 
 Implementing a vector database involves several key steps, from choosing the right database to managing the data flow between the LLM and the database. This is crucial for effective LLM memory. The process requires careful planning and execution to ensure optimal performance.
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ### Choosing the Right Vector Database

@@ -173,7 +173,6 @@ Researchers often use [AI memory benchmarks](/articles/ai-memory-benchmarks/) to
 
 Integrating **foods that enhance memory** into your daily routine doesn't require drastic changes. Small, consistent adjustments can yield significant benefits.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 1. **Start your day with berries:** Add a handful of blueberries or strawberries to your morning oatmeal, yogurt, or smoothie.
