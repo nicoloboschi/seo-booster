@@ -3590,11 +3590,9 @@
     {
       "keyword": "context window llm paper",
       "slug": "context-window-llm-paper",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window llm paper"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window llm ranking",
@@ -3665,11 +3663,9 @@
     {
       "keyword": "context window per llm",
       "slug": "context-window-per-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window per llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window size in llm",
@@ -4460,11 +4456,9 @@
     {
       "keyword": "context window problem llm",
       "slug": "context-window-problem-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window problem llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "conversational ai chatbot companies",
@@ -5624,20 +5618,16 @@
     {
       "keyword": "llm context window paradox",
       "slug": "llm-context-window-paradox",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window paradox"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window performance",
       "slug": "llm-context-window-performance",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window performance"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm course time",
@@ -8454,25 +8444,148 @@
       "matching_suggestions": [
         "which ai chatbot has memory"
       ]
+    },
+    {
+      "keyword": "which ai has long term memory",
+      "slug": "which-ai-has-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which ai has long term memory"
+      ]
+    },
+    {
+      "keyword": "which ai has the best long term memory",
+      "slug": "which-ai-has-the-best-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which ai has the best long term memory"
+      ]
+    },
+    {
+      "keyword": "which ai is better",
+      "slug": "which-ai-is-better",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which ai is better"
+      ]
+    },
+    {
+      "keyword": "which country is best for llm",
+      "slug": "which-country-is-best-for-llm",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "which country is best for llm",
+        "which country is best for llm"
+      ]
+    },
+    {
+      "keyword": "which is the best ai in the world",
+      "slug": "which-is-the-best-ai-in-the-world",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "which is the best ai in the world",
+        "which is the best ai in the world"
+      ]
+    },
+    {
+      "keyword": "which llm course is best",
+      "slug": "which-llm-course-is-best",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which llm course is best"
+      ]
+    },
+    {
+      "keyword": "which llm has best context window",
+      "slug": "which-llm-has-best-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which llm has best context window"
+      ]
+    },
+    {
+      "keyword": "which llm have memory",
+      "slug": "which-llm-have-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which llm have memory"
+      ]
+    },
+    {
+      "keyword": "which llm is the best",
+      "slug": "which-llm-is-the-best",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "which llm is the best",
+        "which llm is the best"
+      ]
+    },
+    {
+      "keyword": "which specialisation is best in llm",
+      "slug": "which-specialisation-is-best-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which specialisation is best in llm"
+      ]
+    },
+    {
+      "keyword": "which specialization is best in llm",
+      "slug": "which-specialization-is-best-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which specialization is best in llm"
+      ]
+    },
+    {
+      "keyword": "who has the best chatbot",
+      "slug": "who-has-the-best-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "who has the best chatbot"
+      ]
+    },
+    {
+      "keyword": "who has the best memory ever",
+      "slug": "who-has-the-best-memory-ever",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "who has the best memory ever"
+      ]
+    },
+    {
+      "keyword": "why ai ram",
+      "slug": "why-ai-ram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why ai ram"
+      ]
+    },
+    {
+      "keyword": "why am i experiencing memory loss",
+      "slug": "why-am-i-experiencing-memory-loss",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i experiencing memory loss"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "which ai has long term memory",
-    "which ai has the best long term memory",
-    "which ai is better",
-    "which country is best for llm",
-    "which is the best ai in the world",
-    "which llm course is best",
-    "which llm has best context window",
-    "which llm have memory",
-    "which llm is the best",
-    "which specialisation is best in llm",
-    "which specialization is best in llm",
-    "who has the best chatbot",
-    "who has the best memory ever",
-    "why ai ram",
-    "why am i experiencing memory loss",
     "why am i getting memory card error",
     "why am i having memory issues",
     "why am i having memory loss",
@@ -8519,9 +8632,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 884,
-    "validated": 839,
-    "low_volume": 45,
-    "new_opportunities_found": 60
+    "total_keywords": 899,
+    "validated": 849,
+    "low_volume": 50,
+    "new_opportunities_found": 45
   }
 }

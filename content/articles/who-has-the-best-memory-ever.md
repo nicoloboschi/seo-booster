@@ -61,7 +61,6 @@ class AIAgentMemory:
  def __init__(self):
  self.memory_store = {} # Using a dictionary as a simple store
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
  def add_memory(self, timestamp, event_description, event_details):
