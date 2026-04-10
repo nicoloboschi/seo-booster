@@ -5491,5 +5491,35 @@
     "generated_at": "2026-04-10T20:12:43.826112",
     "sources": [],
     "quality_score": 65
+  },
+  "why-use-redis-instead-of-memory": {
+    "keyword": "why use redis instead of memory",
+    "generated_at": "2026-04-10T22:13:58.411259",
+    "sources": [],
+    "quality_score": 75
+  },
+  "zep-memory-alternative": {
+    "keyword": "zep memory alternative",
+    "generated_at": "2026-04-10T22:14:47.777633",
+    "sources": [],
+    "quality_score": 65
+  },
+  "zep-memory-api": {
+    "keyword": "zep memory api",
+    "generated_at": "2026-04-10T22:15:49.236433",
+    "sources": [],
+    "quality_score": 65
+  },
+  "zep-memory-api-key": {
+    "keyword": "zep memory api key",
+    "generated_at": "2026-04-10T22:16:37.969372",
+    "sources": [],
+    "quality_score": 65
+  },
+  "zep-memory-architecture": {
+    "keyword": "zep memory architecture",
+    "generated_at": "2026-04-10T22:17:25.109888",
+    "sources": [],
+    "quality_score": 65
   }
 }
