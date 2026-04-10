@@ -138,7 +138,6 @@ class MockVectorDBClient:
 embedding_model = MockEmbeddingModel()
 vector_db_client = MockVectorDBClient()
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 def store_memory(text_data: str, metadata: dict):

@@ -77,7 +77,6 @@ Countries within the European Union are prioritizing ethical AI and regulatory f
 
 Several interconnected factors determine a country's standing in the global LLM race. Understanding these elements helps assess the current and future landscape for which country is best for LLM development.
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ### Talent Pool and Expertise
