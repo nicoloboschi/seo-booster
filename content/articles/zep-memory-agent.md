@@ -83,7 +83,6 @@ client = ZepClient(
 ## Define a session ID for a specific conversation
 session_id = "user-123-session-abc"
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ## 

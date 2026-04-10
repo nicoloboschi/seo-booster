@@ -52,7 +52,6 @@ By offloading conversational history to a dedicated memory store, agents can acc
 
 At its core, **zep chat memory** involves capturing, storing, and retrieving conversational turns. This process typically uses a combination of techniques, often including **vector embeddings** and structured data storage. The goal is to make past interactions searchable and relevant to the current dialogue.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Capturing and Storing Conversations
