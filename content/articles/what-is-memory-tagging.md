@@ -86,7 +86,6 @@ For advanced AI agents, particularly those involved in [long-term memory AI agen
 
 **Memory tagging** isn't the only method for organizing AI memory. It often complements or is used alongside other techniques. Understanding these distinctions is key to designing effective [AI agent memory systems](/articles/ai-agent-memory-explained).
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ### Tagging vs. Embeddings in AI Memory
