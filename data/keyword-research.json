@@ -8279,29 +8279,185 @@
       "matching_suggestions": [
         "what is memory system"
       ]
+    },
+    {
+      "keyword": "what is memory tagging",
+      "slug": "what-is-memory-tagging",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory tagging"
+      ]
+    },
+    {
+      "keyword": "what is memory tuning in llm",
+      "slug": "what-is-memory-tuning-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory tuning in llm"
+      ]
+    },
+    {
+      "keyword": "what is persistent memory",
+      "slug": "what-is-persistent-memory",
+      "autocomplete_matches": 3,
+      "validated": true,
+      "matching_suggestions": [
+        "what is persistent memory in llm",
+        "what is persistent memory",
+        "what is persistent memory in llm"
+      ]
+    },
+    {
+      "keyword": "what is rag memory",
+      "slug": "what-is-rag-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is rag memory"
+      ]
+    },
+    {
+      "keyword": "what is role of memory in agentic ai system",
+      "slug": "what-is-role-of-memory-in-agentic-ai-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is role of memory in agentic ai system"
+      ]
+    },
+    {
+      "keyword": "what is short term memory in ai",
+      "slug": "what-is-short-term-memory-in-ai",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "what is short term memory in ai",
+        "what is short term memory in ai agent"
+      ]
+    },
+    {
+      "keyword": "what is short term memory in ai agent",
+      "slug": "what-is-short-term-memory-in-ai-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is short term memory in ai agent"
+      ]
+    },
+    {
+      "keyword": "what is system ai",
+      "slug": "what-is-system-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is system ai"
+      ]
+    },
+    {
+      "keyword": "what is the best ai chatbot",
+      "slug": "what-is-the-best-ai-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best ai chatbot"
+      ]
+    },
+    {
+      "keyword": "what is the best type of memory",
+      "slug": "what-is-the-best-type-of-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best type of memory"
+      ]
+    },
+    {
+      "keyword": "what is the purpose of an llm",
+      "slug": "what-is-the-purpose-of-an-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the purpose of an llm"
+      ]
+    },
+    {
+      "keyword": "what is the smartest ai",
+      "slug": "what-is-the-smartest-ai",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the smartest ai",
+        "what is the smartest ai right now"
+      ]
+    },
+    {
+      "keyword": "what is the smartest ai right now",
+      "slug": "what-is-the-smartest-ai-right-now",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the smartest ai right now"
+      ]
+    },
+    {
+      "keyword": "what is the smartest chatbot",
+      "slug": "what-is-the-smartest-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the smartest chatbot"
+      ]
+    },
+    {
+      "keyword": "what is zep memory",
+      "slug": "what-is-zep-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is zep memory"
+      ]
+    },
+    {
+      "keyword": "when will ai have long term memory",
+      "slug": "when-will-ai-have-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "when will ai have long term memory"
+      ]
+    },
+    {
+      "keyword": "where does memory man take place",
+      "slug": "where-does-memory-man-take-place",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "where does memory man take place"
+      ]
+    },
+    {
+      "keyword": "where is long term memory in the brain",
+      "slug": "where-is-long-term-memory-in-the-brain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "where is long term memory in the brain"
+      ]
+    },
+    {
+      "keyword": "which ai chatbot has memory",
+      "slug": "which-ai-chatbot-has-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which ai chatbot has memory"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "what is memory tagging",
-    "what is memory tuning in llm",
-    "what is persistent memory",
-    "what is rag memory",
-    "what is role of memory in agentic ai system",
-    "what is short term memory in ai",
-    "what is short term memory in ai agent",
-    "what is system ai",
-    "what is the best ai chatbot",
-    "what is the best type of memory",
-    "what is the purpose of an llm",
-    "what is the smartest ai",
-    "what is the smartest ai right now",
-    "what is the smartest chatbot",
-    "what is zep memory",
-    "when will ai have long term memory",
-    "where does memory man take place",
-    "where is long term memory in the brain",
-    "which ai chatbot has memory",
     "which ai has long term memory",
     "which ai has the best long term memory",
     "which ai is better",
@@ -8363,9 +8519,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 865,
-    "validated": 820,
+    "total_keywords": 884,
+    "validated": 839,
     "low_volume": 45,
-    "new_opportunities_found": 79
+    "new_opportunities_found": 60
   }
 }
