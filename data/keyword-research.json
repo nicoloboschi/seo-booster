@@ -3590,9 +3590,11 @@
     {
       "keyword": "context window llm paper",
       "slug": "context-window-llm-paper",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm paper"
+      ]
     },
     {
       "keyword": "context window llm ranking",
@@ -3663,9 +3665,11 @@
     {
       "keyword": "context window per llm",
       "slug": "context-window-per-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window per llm"
+      ]
     },
     {
       "keyword": "context window size in llm",
@@ -4456,9 +4460,11 @@
     {
       "keyword": "context window problem llm",
       "slug": "context-window-problem-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window problem llm"
+      ]
     },
     {
       "keyword": "conversational ai chatbot companies",
@@ -5618,16 +5624,20 @@
     {
       "keyword": "llm context window paradox",
       "slug": "llm-context-window-paradox",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window paradox"
+      ]
     },
     {
       "keyword": "llm context window performance",
       "slug": "llm-context-window-performance",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window performance"
+      ]
     },
     {
       "keyword": "llm course time",
@@ -8582,28 +8592,175 @@
       "matching_suggestions": [
         "why am i experiencing memory loss"
       ]
+    },
+    {
+      "keyword": "why am i getting memory card error",
+      "slug": "why-am-i-getting-memory-card-error",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i getting memory card error"
+      ]
+    },
+    {
+      "keyword": "why am i having memory issues",
+      "slug": "why-am-i-having-memory-issues",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i having memory issues"
+      ]
+    },
+    {
+      "keyword": "why am i having memory loss",
+      "slug": "why-am-i-having-memory-loss",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i having memory loss",
+        "why am i having memory loss at a young age"
+      ]
+    },
+    {
+      "keyword": "why am i having memory loss at a young age",
+      "slug": "why-am-i-having-memory-loss-at-a-young-age",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i having memory loss at a young age"
+      ]
+    },
+    {
+      "keyword": "why am i having memory problems",
+      "slug": "why-am-i-having-memory-problems",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i having memory problems"
+      ]
+    },
+    {
+      "keyword": "why am i losing memory",
+      "slug": "why-am-i-losing-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i losing memory",
+        "why am i losing memory all of a sudden"
+      ]
+    },
+    {
+      "keyword": "why am i losing memory all of a sudden",
+      "slug": "why-am-i-losing-memory-all-of-a-sudden",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why am i losing memory all of a sudden"
+      ]
+    },
+    {
+      "keyword": "why is ai memory so bad",
+      "slug": "why-is-ai-memory-so-bad",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why is ai memory so bad"
+      ]
+    },
+    {
+      "keyword": "why llm is important",
+      "slug": "why-llm-is-important",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why llm is important"
+      ]
+    },
+    {
+      "keyword": "why use redis instead of memory",
+      "slug": "why-use-redis-instead-of-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why use redis instead of memory"
+      ]
+    },
+    {
+      "keyword": "world's most intelligent ai",
+      "slug": "world-s-most-intelligent-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "world's most intelligent ai"
+      ]
+    },
+    {
+      "keyword": "zep chat memory",
+      "slug": "zep-chat-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep chat memory"
+      ]
+    },
+    {
+      "keyword": "zep for memory",
+      "slug": "zep-for-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep for memory"
+      ]
+    },
+    {
+      "keyword": "zep memory agent",
+      "slug": "zep-memory-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory agent"
+      ]
+    },
+    {
+      "keyword": "zep memory alternative",
+      "slug": "zep-memory-alternative",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory alternative"
+      ]
+    },
+    {
+      "keyword": "zep memory api",
+      "slug": "zep-memory-api",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory api",
+        "zep memory api key"
+      ]
+    },
+    {
+      "keyword": "zep memory api key",
+      "slug": "zep-memory-api-key",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory api key"
+      ]
+    },
+    {
+      "keyword": "zep memory architecture",
+      "slug": "zep-memory-architecture",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory architecture"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "why am i getting memory card error",
-    "why am i having memory issues",
-    "why am i having memory loss",
-    "why am i having memory loss at a young age",
-    "why am i having memory problems",
-    "why am i losing memory",
-    "why am i losing memory all of a sudden",
-    "why is ai memory so bad",
-    "why llm is important",
-    "why use redis instead of memory",
-    "world's most intelligent ai",
-    "zep chat memory",
-    "zep for memory",
-    "zep memory agent",
-    "zep memory alternative",
-    "zep memory api",
-    "zep memory api key",
-    "zep memory architecture",
     "zep memory arxiv",
     "zep memory assistant",
     "zep memory assistant github",
@@ -8632,9 +8789,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 899,
-    "validated": 849,
-    "low_volume": 50,
-    "new_opportunities_found": 45
+    "total_keywords": 917,
+    "validated": 872,
+    "low_volume": 45,
+    "new_opportunities_found": 27
   }
 }

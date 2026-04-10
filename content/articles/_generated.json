@@ -5521,5 +5521,35 @@
     "generated_at": "2026-04-10T22:17:25.109888",
     "sources": [],
     "quality_score": 65
+  },
+  "zep-memory-arxiv": {
+    "keyword": "zep memory arxiv",
+    "generated_at": "2026-04-11T00:22:29.909156",
+    "sources": [],
+    "quality_score": 65
+  },
+  "zep-memory-assistant": {
+    "keyword": "zep memory assistant",
+    "generated_at": "2026-04-11T00:23:20.300263",
+    "sources": [],
+    "quality_score": 55
+  },
+  "zep-memory-assistant-github": {
+    "keyword": "zep memory assistant github",
+    "generated_at": "2026-04-11T00:24:04.200360",
+    "sources": [],
+    "quality_score": 70
+  },
+  "zep-memory-cloud": {
+    "keyword": "zep memory cloud",
+    "generated_at": "2026-04-11T00:24:47.462669",
+    "sources": [],
+    "quality_score": 65
+  },
+  "zep-memory-docker": {
+    "keyword": "zep memory docker",
+    "generated_at": "2026-04-11T00:25:30.225577",
+    "sources": [],
+    "quality_score": 65
   }
 }
