@@ -56,7 +56,6 @@ Consider an n8n workflow designed to onboard new users. The AI agent needs to re
 
 Integrating Zep Memory into n8n typically involves using n8n's HTTP Request node or custom code nodes to interact with a running Zep server. You'll need to set up Zep first, then configure n8n nodes to send and receive data from it. This process allows your workflows to query Zep for relevant memories or store new information generated during execution. Effective **zep memory in n8n** relies on this interaction.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### API Endpoint Configuration

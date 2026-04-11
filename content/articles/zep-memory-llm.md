@@ -117,7 +117,6 @@ except Exception as e:
  # Exit or handle the error appropriately if Zep is not available
  exit()
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 def get_agent_response(user_query: str, session_id: str):

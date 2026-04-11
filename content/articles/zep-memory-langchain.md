@@ -145,7 +145,6 @@ class ZephyrLangchainMemory(BaseMemory):
 # # print(response)
 ```
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 This code illustrates the structure. A real implementation would involve detailed interaction with a **Zephyr Memory** client library. This approach aligns with how other memory systems, like [Letta AI](/articles/letta-ai-guide/), can be integrated. The **zep memory langchain** pattern is a key component for developers building sophisticated agents.
