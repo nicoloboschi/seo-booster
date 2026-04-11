@@ -4960,11 +4960,9 @@
     {
       "keyword": "ai memory palace",
       "slug": "ai-memory-palace",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory palace"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory prompt",
@@ -9000,8 +8998,8 @@
   ],
   "summary": {
     "total_keywords": 943,
-    "validated": 898,
-    "low_volume": 45,
+    "validated": 897,
+    "low_volume": 46,
     "new_opportunities_found": 1
   }
 }
