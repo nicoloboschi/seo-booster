@@ -8757,29 +8757,183 @@
       "matching_suggestions": [
         "zep memory architecture"
       ]
+    },
+    {
+      "keyword": "zep memory arxiv",
+      "slug": "zep-memory-arxiv",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory arxiv"
+      ]
+    },
+    {
+      "keyword": "zep memory assistant",
+      "slug": "zep-memory-assistant",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory assistant",
+        "zep memory assistant github"
+      ]
+    },
+    {
+      "keyword": "zep memory assistant github",
+      "slug": "zep-memory-assistant-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory assistant github"
+      ]
+    },
+    {
+      "keyword": "zep memory cloud",
+      "slug": "zep-memory-cloud",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory cloud"
+      ]
+    },
+    {
+      "keyword": "zep memory docker",
+      "slug": "zep-memory-docker",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory docker",
+        "zep memory docker compose"
+      ]
+    },
+    {
+      "keyword": "zep memory docker compose",
+      "slug": "zep-memory-docker-compose",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory docker compose"
+      ]
+    },
+    {
+      "keyword": "zep memory docs",
+      "slug": "zep-memory-docs",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory docs"
+      ]
+    },
+    {
+      "keyword": "zep memory github",
+      "slug": "zep-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory github"
+      ]
+    },
+    {
+      "keyword": "zep memory graph",
+      "slug": "zep-memory-graph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory graph"
+      ]
+    },
+    {
+      "keyword": "zep memory in langgraph",
+      "slug": "zep-memory-in-langgraph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory in langgraph"
+      ]
+    },
+    {
+      "keyword": "zep memory in n8n",
+      "slug": "zep-memory-in-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory in n8n"
+      ]
+    },
+    {
+      "keyword": "zep memory langchain",
+      "slug": "zep-memory-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory langchain"
+      ]
+    },
+    {
+      "keyword": "zep memory langgraph",
+      "slug": "zep-memory-langgraph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory langgraph"
+      ]
+    },
+    {
+      "keyword": "zep memory layer",
+      "slug": "zep-memory-layer",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory layer"
+      ]
+    },
+    {
+      "keyword": "zep memory llm",
+      "slug": "zep-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory llm"
+      ]
+    },
+    {
+      "keyword": "zep memory local",
+      "slug": "zep-memory-local",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory local"
+      ]
+    },
+    {
+      "keyword": "zep memory logo",
+      "slug": "zep-memory-logo",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory logo"
+      ]
+    },
+    {
+      "keyword": "zep memory management",
+      "slug": "zep-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory management"
+      ]
+    },
+    {
+      "keyword": "zep memory mcp",
+      "slug": "zep-memory-mcp",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory mcp"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "zep memory arxiv",
-    "zep memory assistant",
-    "zep memory assistant github",
-    "zep memory cloud",
-    "zep memory docker",
-    "zep memory docker compose",
-    "zep memory docs",
-    "zep memory github",
-    "zep memory graph",
-    "zep memory in langgraph",
-    "zep memory in n8n",
-    "zep memory langchain",
-    "zep memory langgraph",
-    "zep memory layer",
-    "zep memory llm",
-    "zep memory local",
-    "zep memory logo",
-    "zep memory management",
-    "zep memory mcp",
     "zep memory n8n",
     "zep memory open source alternative",
     "zep memory paper",
@@ -8789,9 +8943,9 @@
     "zep the memory foundation for your ai stack"
   ],
   "summary": {
-    "total_keywords": 917,
-    "validated": 872,
+    "total_keywords": 936,
+    "validated": 891,
     "low_volume": 45,
-    "new_opportunities_found": 27
+    "new_opportunities_found": 8
   }
 }

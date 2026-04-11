@@ -155,7 +155,6 @@ if __name__ == "__main__":
  memory_client = ZepMemoryClient()
  agent_a = "agent-123"
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
  # Storing memories - this action is symbolized by the zep memory logo
