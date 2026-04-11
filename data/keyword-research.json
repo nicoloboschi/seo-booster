@@ -8930,22 +8930,78 @@
       "matching_suggestions": [
         "zep memory mcp"
       ]
+    },
+    {
+      "keyword": "zep memory n8n",
+      "slug": "zep-memory-n8n",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory n8n"
+      ]
+    },
+    {
+      "keyword": "zep memory open source alternative",
+      "slug": "zep-memory-open-source-alternative",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory open source alternative"
+      ]
+    },
+    {
+      "keyword": "zep memory paper",
+      "slug": "zep-memory-paper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory paper"
+      ]
+    },
+    {
+      "keyword": "zep memory pricing",
+      "slug": "zep-memory-pricing",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory pricing"
+      ]
+    },
+    {
+      "keyword": "zep memory self hosted",
+      "slug": "zep-memory-self-hosted",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory self hosted"
+      ]
+    },
+    {
+      "keyword": "zep memory vs mem0",
+      "slug": "zep-memory-vs-mem0",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory vs mem0"
+      ]
+    },
+    {
+      "keyword": "zep the memory foundation for your ai stack",
+      "slug": "zep-the-memory-foundation-for-your-ai-stack",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep the memory foundation for your ai stack"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github",
-    "zep memory n8n",
-    "zep memory open source alternative",
-    "zep memory paper",
-    "zep memory pricing",
-    "zep memory self hosted",
-    "zep memory vs mem0",
-    "zep the memory foundation for your ai stack"
+    "ai long term.memory github"
   ],
   "summary": {
-    "total_keywords": 936,
-    "validated": 891,
+    "total_keywords": 943,
+    "validated": 898,
     "low_volume": 45,
-    "new_opportunities_found": 8
+    "new_opportunities_found": 1
   }
 }

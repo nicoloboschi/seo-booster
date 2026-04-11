@@ -85,7 +85,6 @@ import json
 ZEP_API_URL = "http://localhost:8000/api/v1" # Your Zep server address
 COLLECTION_NAME = "n8n_workflow_memory" # Name of the Zep collection
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ## 

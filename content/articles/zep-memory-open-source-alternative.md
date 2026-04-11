@@ -76,7 +76,6 @@ The ecosystem offers numerous valuable tools for AI memory. Projects like **Lang
 
 Building an effective AI memory system with open source components involves selecting the right tools and integrating them thoughtfully. This often means combining a **vector database** for semantic recall with other data structures for managing different types of memory, such as **episodic memory in AI agents** or **semantic memory in AI agents**. This modular approach allows for a more tailored and efficient memory solution than a monolithic proprietary system, making an **open source zep alternative** a compelling choice.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### **Integrating Memory Components**

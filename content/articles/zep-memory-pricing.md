@@ -74,7 +74,6 @@ Many developers find that understanding **AI agent memory cost** requires lookin
 
 Managed Zep Memory services often present tiered pricing to accommodate different user needs. These tiers are usually defined by specific usage limits and included features.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Usage-Based Tiers
