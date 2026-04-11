@@ -131,7 +131,6 @@ This Python example illustrates the conceptual flow of using a memory system lik
 from datetime import datetime, timedelta
 import time # Import time for sleep
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 class ZeppMemorySystem:

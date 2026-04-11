@@ -127,7 +127,6 @@ class AgentMemory:
 ## retrieved = long_term_mem.retrieve_memory("What did the user ask?")
 ```
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ## Comparative Analysis: Zepp Memory vs. Mem0
