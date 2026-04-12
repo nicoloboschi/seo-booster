@@ -134,6 +134,7 @@
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
+      "age of ai ai delas alas",
       "ai agent that remembers",
       "ai ai delas alas height",
       "ai app that remembers everything",
@@ -151,8 +152,7 @@
       "ai remember app",
       "ai remember me",
       "ai that actually remembers",
-      "ai that can remember",
-      "ai that remembers chats"
+      "ai that can remember"
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 186,
+      "autocomplete_matches": 184,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -6342,11 +6342,9 @@
     {
       "keyword": "llm memory injection",
       "slug": "llm-memory-injection",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory injection"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory issue",
@@ -7199,11 +7197,9 @@
     {
       "keyword": "mem0 pydantic ai",
       "slug": "mem0-pydantic-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 pydantic ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "memory ai jobs",
@@ -8996,12 +8992,15 @@
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github"
+    "age of ai ai delas alas",
+    "ai long term.memory github",
+    "ai powered with memory agent features",
+    "llm inference memory bandwidth"
   ],
   "summary": {
     "total_keywords": 943,
-    "validated": 898,
-    "low_volume": 45,
-    "new_opportunities_found": 1
+    "validated": 896,
+    "low_volume": 47,
+    "new_opportunities_found": 4
   }
 }
