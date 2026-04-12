@@ -95,6 +95,7 @@
       "best low memory llm",
       "best open source llm memory",
       "building llm memory from scratch",
+      "deepseek llm.memory",
       "dify llm node memory",
       "does llm have memory",
       "does llm make you a lawyer",
@@ -107,8 +108,7 @@
       "how to give local llm memory",
       "how to implement llm memory",
       "how to improve llm memory",
-      "how to increase llm memory",
-      "how to make llm have memory"
+      "how to increase llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 177,
+      "autocomplete_matches": 184,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -3777,9 +3777,11 @@
     {
       "keyword": "deepseek llm.memory",
       "slug": "deepseek-llm-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deepseek llm.memory"
+      ]
     },
     {
       "keyword": "difference between chatbot and ai chatbot",
@@ -5649,9 +5651,11 @@
     {
       "keyword": "llm decoding memory bound",
       "slug": "llm-decoding-memory-bound",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm decoding memory bound"
+      ]
     },
     {
       "keyword": "llm dynamic context window",
@@ -5665,9 +5669,11 @@
     {
       "keyword": "llm dynamic memory",
       "slug": "llm-dynamic-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm dynamic memory"
+      ]
     },
     {
       "keyword": "llm external memory",
@@ -6092,44 +6098,56 @@
     {
       "keyword": "llm memory database",
       "slug": "llm-memory-database",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory database"
+      ]
     },
     {
       "keyword": "llm memory dataset",
       "slug": "llm-memory-dataset",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory dataset"
+      ]
     },
     {
       "keyword": "llm memory db",
       "slug": "llm-memory-db",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory db"
+      ]
     },
     {
       "keyword": "llm memory decay",
       "slug": "llm-memory-decay",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory decay"
+      ]
     },
     {
       "keyword": "llm memory decoder",
       "slug": "llm-memory-decoder",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory decoder"
+      ]
     },
     {
       "keyword": "llm memory design",
       "slug": "llm-memory-design",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory design"
+      ]
     },
     {
       "keyword": "llm memory embedding",
@@ -6679,9 +6697,11 @@
     {
       "keyword": "llm memory vector database",
       "slug": "llm-memory-vector-database",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory vector database"
+      ]
     },
     {
       "keyword": "llm native memory",
@@ -9003,8 +9023,8 @@
   ],
   "summary": {
     "total_keywords": 946,
-    "validated": 889,
-    "low_volume": 57,
+    "validated": 899,
+    "low_volume": 47,
     "new_opportunities_found": 1
   }
 }
