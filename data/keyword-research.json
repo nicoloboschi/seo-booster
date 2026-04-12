@@ -8989,18 +8989,42 @@
       "matching_suggestions": [
         "zep the memory foundation for your ai stack"
       ]
+    },
+    {
+      "keyword": "age of ai ai delas alas",
+      "slug": "age-of-ai-ai-delas-alas",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "age of ai ai delas alas"
+      ]
+    },
+    {
+      "keyword": "ai powered with memory agent features",
+      "slug": "ai-powered-with-memory-agent-features",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai powered with memory agent features"
+      ]
+    },
+    {
+      "keyword": "llm inference memory bandwidth",
+      "slug": "llm-inference-memory-bandwidth",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm inference memory bandwidth"
+      ]
     }
   ],
   "new_opportunities": [
-    "age of ai ai delas alas",
-    "ai long term.memory github",
-    "ai powered with memory agent features",
-    "llm inference memory bandwidth"
+    "ai long term.memory github"
   ],
   "summary": {
-    "total_keywords": 943,
-    "validated": 896,
+    "total_keywords": 946,
+    "validated": 899,
     "low_volume": 47,
-    "new_opportunities_found": 4
+    "new_opportunities_found": 1
   }
 }
