@@ -49,7 +49,7 @@ faq:
     the significance of recency and temporal context in decision-making. It's about understanding the *meaning* and *implications* of time, not just its sequence.
 slug: temporal-reasoning-ai-memory
 ---
-
+---
 
 ## Temporal Reasoning AI: The Imperative of Time in Artificial Intelligence
 
