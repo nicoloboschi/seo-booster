@@ -4246,9 +4246,11 @@
     {
       "keyword": "how to create an ai agent",
       "slug": "how-to-create-an-ai-agent",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to create an ai agent"
+      ]
     },
     {
       "keyword": "how to delete chatgpt memory on phone",
@@ -4262,9 +4264,11 @@
     {
       "keyword": "how to expand ai agents memory",
       "slug": "how-to-expand-ai-agents-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to expand ai agents memory"
+      ]
     },
     {
       "keyword": "how to find chatgpt memory",
@@ -4519,9 +4523,10 @@
     {
       "keyword": "how to give ai agents memory",
       "slug": "how-to-give-ai-agents-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "how to give ai agents memory",
         "how to give ai agents memory"
       ]
     },
@@ -9018,8 +9023,8 @@
   ],
   "summary": {
     "total_keywords": 946,
-    "validated": 897,
-    "low_volume": 49,
+    "validated": 899,
+    "low_volume": 47,
     "new_opportunities_found": 1
   }
 }
