@@ -6587,5 +6587,23 @@
         "posted_at": "2026-04-14T15:38:56"
       }
     }
+  },
+  "chatbot-with-best-memory-reddit": {
+    "platforms": {
+      "hashnode": {
+        "id": "69de6073a41cc30fd39d25ed",
+        "url": "https://aiagentmemory.hashnode.dev/chatbot-with-best-memory-reddits-top-picks-ai-memory-systems-explained",
+        "posted_at": "2026-04-14T17:42:43"
+      }
+    }
+  },
+  "chatbot-with-memory-langgraph": {
+    "platforms": {
+      "hashnode": {
+        "id": "69de607726826c8eb08ec2ad",
+        "url": "https://aiagentmemory.hashnode.dev/chatbot-with-memory-using-langgraph-building-stateful-ai-agents",
+        "posted_at": "2026-04-14T17:42:47"
+      }
+    }
   }
 }
