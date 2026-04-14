@@ -49,6 +49,7 @@ faq:
     enabling fast and semantically relevant data recall.
 slug: embedding-models-for-memory
 ---
+---
 
 ## The Crucial Role of Embedding Models in AI Memory Systems
 

@@ -39,7 +39,7 @@ faq:
 - question: How is AI making RAM more expensive?
   answer: AI is making RAM more expensive by driving demand for specialized, high-performance memory like HBM, which has significantly higher manufacturing costs than standard RAM. The increasing complexity
     and size of AI models also necessitate larger RAM capacities, further increasing overall hardware costs. ---
----
+
 
 The high cost of RAM for AI stems from its specialized performance requirements, driving up manufacturing and integration expenses. This memory is essential for handling massive datasets and complex computations, making it a significant component of AI hardware budgets, often costing several times more than standard memory. Understanding why AI RAM is expensive impacts AI development budgets and sheds light on how AI is making RAM more expensive.
 
@@ -182,4 +182,3 @@ RAM is crucial for AI because it acts as the high-speed workspace for AI models.
 
 ### How is AI making RAM more expensive?
 AI is making RAM more expensive by driving demand for specialized, high-performance memory like HBM, which has significantly higher manufacturing costs than standard RAM. The increasing complexity and size of AI models also necessitate larger RAM capacities, further increasing overall hardware costs.
----

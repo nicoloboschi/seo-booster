@@ -123,7 +123,6 @@ def retrieve_context(memory_store, current_query, k=2):
  # Simple retrieval: return the last k stored interactions
  return memory_store[-k:] if len(memory_store) >= k else memory_store
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ## 

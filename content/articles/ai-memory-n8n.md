@@ -49,6 +49,7 @@ faq:
     into more intelligent, adaptive, and personalized assistants, crucial for advanced n8n AI agent memory.
 slug: ai-memory-n8n
 ---
+---
 
 AI memory in n8n enables workflows to recall past interactions, making them more intelligent and context-aware. This integration allows n8n agents to store and retrieve information, transforming stateless executions into dynamic, adaptive processes that learn from history. Implementing **ai memory n8n** enhances decision-making and personalization, a core component of **n8n AI agent memory**.
 
@@ -207,7 +208,6 @@ Tools like **Mem0**, an open-source AI memory framework, offer structured approa
 ## Advanced Memory Techniques for n8n Agents
 
 To enhance memory-enabled agents in n8n, explore advanced techniques. These create more dynamic AI beyond basic storage and retrieval, improving **ai memory n8n**.
-
 
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 

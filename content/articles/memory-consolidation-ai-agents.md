@@ -49,6 +49,7 @@ faq:
     allowing agents to retain and recall crucial information over extended periods, leading to more consistent and informed decision-making.
 slug: memory-consolidation-ai-agents
 ---
+---
 
 ## Memory Consolidation in AI Agents: From Raw Data to Efficient Knowledge Representation
 

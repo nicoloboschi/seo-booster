@@ -49,6 +49,7 @@ faq:
     memory problem.
 slug: ai-memory-problem
 ---
+---
 
 Could an AI truly forget a crucial piece of information it learned yesterday, even if it's vital for today's task? This is a core challenge in building truly intelligent and capable AI agents. Current AI systems often struggle to retain and recall information effectively, impacting their performance and reliability, a key aspect of the **ai memory problem**.
 

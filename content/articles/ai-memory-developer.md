@@ -49,6 +49,7 @@ faq:
     to store, retrieve, and utilize information over time. They are crucial for creating AI that can learn and adapt.
 slug: ai-memory-developer
 ---
+---
 
 An **AI memory developer** is a specialized software engineer who designs, builds, and maintains the memory systems within artificial intelligence agents. They create the cognitive architecture that allows AI to store, retrieve, and use information over time, enabling learning and context-aware decision-making for smarter agents. This role is crucial for developing sophisticated AI applications.
 

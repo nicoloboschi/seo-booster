@@ -49,7 +49,7 @@ faq:
     system that can query the stored information based on context or similarity. Some systems also incorporate memory consolidation and forgetting mechanisms.
 slug: ai-memory-box
 ---
-
+---
 
 An **AI memory box** is a specialized system for storing, organizing, and retrieving information that an AI agent can access. It acts as a persistent knowledge store, enabling agents to recall past interactions, learned facts, and relevant context, thereby improving their performance and coherence over time. This concept is crucial for building more capable and context-aware AI systems.
 
