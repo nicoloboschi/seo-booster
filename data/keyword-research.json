@@ -4579,9 +4579,11 @@
     {
       "keyword": "how to improve brain memory",
       "slug": "how-to-improve-brain-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve brain memory"
+      ]
     },
     {
       "keyword": "how to improve character ai memory",
@@ -8059,9 +8061,11 @@
     {
       "keyword": "what is best for brain memory",
       "slug": "what-is-best-for-brain-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is best for brain memory"
+      ]
     },
     {
       "keyword": "what is character ai memory",
@@ -9019,8 +9023,8 @@
   ],
   "summary": {
     "total_keywords": 946,
-    "validated": 897,
-    "low_volume": 49,
+    "validated": 899,
+    "low_volume": 47,
     "new_opportunities_found": 1
   }
 }
