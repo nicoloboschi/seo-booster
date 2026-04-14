@@ -35,6 +35,14 @@ faq:
 - question: What are the key memory technologies driving AI advancements?
   answer: Key technologies include High Bandwidth Memory (HBM) for increased data throughput, Processing-in-Memory (PIM) and Near-Memory Processing (NMP) to reduce data movement bottlenecks, and emerging
     non-volatile memory (NVM) technologies for persistent storage. These innovations are central to the work of AI memory chip companies.
+- question: Will AI memory chips eventually replace traditional RAM?
+  answer: It's unlikely that AI memory chips will entirely replace traditional RAM in general-purpose computing. Instead, they will likely coexist. AI-specific memory will be integrated into AI accelerators
+    and specialized systems, while standard RAM will continue to serve the needs of everyday computing tasks. The trend is towards specialized hardware for specialized workloads, a focus for many AI memory
+    companies.
+- question: How do companies like Hindsight fit into the AI memory ecosystem?
+  answer: While Hindsight is an open-source AI memory system, it represents the software layer that uses the hardware capabilities provided by AI memory chip companies. Systems like Hindsight manage how
+    AI agents store, retrieve, and use information, making use of the speed and capacity offered by advanced memory hardware. Efficient software memory management is crucial for unlocking the full potential
+    of the underlying hardware. You can explore [open-source AI memory solutions compared](/articles/open-source-memory-systems-compared/) to understand this relationship.
 slug: ai-memory-chip-companies
 ---
 

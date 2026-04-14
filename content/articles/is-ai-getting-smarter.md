@@ -39,6 +39,9 @@ faq:
 - question: How does AI memory contribute to AI getting smarter?
   answer: AI memory systems are fundamental to AI getting smarter by enabling agents to retain, recall, and utilize past information. This allows for more informed decision-making, contextual understanding,
     and continuous learning, directly enhancing AI's perceived intelligence and capabilities.
+- question: What are the key components of AI intelligence?
+  answer: The key components of AI intelligence include advanced learning algorithms, sophisticated reasoning capabilities, and robust AI memory systems. These elements work together to enable AI agents
+    to perceive, process, learn, and act effectively in their environments.
 slug: is-ai-getting-smarter
 ---
 
@@ -176,4 +179,3 @@ print(agent.process_input("What's the weather like today?"))
 print(agent.process_input("I'm thinking about AI memory."))
 
 print("\n
-

@@ -42,6 +42,9 @@ faq:
 - question: What are the latest agent memory research updates?
   answer: Recent agent memory research updates focus on novel architectures for persistent memory, improved temporal reasoning capabilities, and more efficient methods for memory consolidation and retrieval
     in complex AI systems.
+- question: What are the latest AI memory system updates?
+  answer: Recent AI memory system updates include advancements in neural memory architectures, more efficient data indexing for faster retrieval, and improved integration of external knowledge bases with
+    LLMs, often leveraging techniques like RAG and beyond.
 slug: ai-memory-news
 ---
 
@@ -183,3 +186,6 @@ The drive towards more capable **AI agents with memory** is reshaping the field.
 
 * **What are the latest agent memory research updates?**
  Recent agent memory research updates focus on novel architectures for persistent memory, improved temporal reasoning capabilities, and more efficient methods for memory consolidation and retrieval in complex AI systems.
+
+* **What are the latest AI memory system updates?**
+ Recent AI memory system updates include advancements in neural memory architectures, more efficient data indexing for faster retrieval, and improved integration of external knowledge bases with LLMs, often using techniques like RAG and beyond.

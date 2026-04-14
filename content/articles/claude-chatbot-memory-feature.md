@@ -29,6 +29,8 @@ faq:
 - question: Does Claude have an AI memory feature?
   answer: Yes, Claude has a **claude chatbot memory feature** that allows it to remember and utilize information from past interactions within a single conversation. This is primarily managed through its
     context window.
+- question: How does Claude's memory work?
+  answer: Claude's memory primarily functions through its **context window**, which stores recent prompts and responses to inform its next output. This allows for coherent dialogue within a single conversation.
 slug: claude-chatbot-memory-feature
 ---
 
@@ -154,4 +156,3 @@ class MockAnthropicClient:
  Simulates an API call to Claude for generating a response.
  """
  print(f"
-

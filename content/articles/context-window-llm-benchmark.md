@@ -35,6 +35,10 @@
     {
       "question": "What are the key challenges in context window benchmarking?",
       "answer": "Key challenges include high computational costs for evaluating large contexts, ensuring reproducibility and standardization across different setups, and the difficulty in defining and measuring true 'understanding' versus pattern matching. These factors influence the effectiveness of any **context window LLM benchmark**."
+    },
+    {
+      "question": "What is the 'lost in the middle' phenomenon in LLMs?",
+      "answer": "The 'lost in the middle' phenomenon refers to the tendency of LLMs to struggle with recalling information presented in the middle of a very long context window, even if they can access information at the beginning or end. A **context window LLM benchmark** is designed to identify and quantify this weakness."
     }
   ],
   "slug": "context-window-llm-benchmark"
@@ -227,3 +231,6 @@ Benchmarks typically involve tasks requiring recall of information placed at var
 
 ### What are the key challenges in context window benchmarking?
 Key challenges include high computational costs for evaluating large contexts, ensuring reproducibility and standardization across different setups, and the difficulty in defining and measuring true 'understanding' versus pattern matching. These factors influence the effectiveness of any **context window LLM benchmark**.
+
+### What is the 'lost in the middle' phenomenon in LLMs?
+The 'lost in the middle' phenomenon refers to the tendency of LLMs to struggle with recalling information presented in the middle of a very long context window, even if they can access information at the beginning or end. A **context window LLM benchmark** is designed to identify and quantify this weakness.

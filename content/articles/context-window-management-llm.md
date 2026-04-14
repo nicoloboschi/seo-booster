@@ -27,6 +27,9 @@ faq:
 - question: What is AI context management?
   answer: AI context management refers to the techniques and strategies employed to optimize how AI models, particularly Large Language Models (LLMs), process, retain, and utilize information within their
     operational memory or "context window" to ensure coherent and relevant outputs.
+- question: How does context window management LLM differ from general AI memory?
+  answer: Context window management LLM specifically refers to optimizing the transient, immediate memory of an LLM, whereas general AI memory can encompass more persistent, long-term storage and retrieval
+    mechanisms.
 slug: context-window-management-llm
 ---
 

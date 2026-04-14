@@ -46,6 +46,9 @@ faq:
 - question: How does AI help manage medication for dementia patients?
   answer: AI-powered systems can provide smart medication dispensers that alert patients when it's time to take their pills and confirm dosage. They can also notify caregivers if a dose is missed, ensuring
     timely intervention and reducing the risk of adverse health outcomes.
+- question: What are the primary applications of AI in memory care?
+  answer: The primary applications of AI in memory care include enhancing safety through fall and wandering detection, providing cognitive engagement and stimulation, supporting daily routines and independence,
+    and assisting caregivers with data analysis and task automation.
 slug: ai-in-memory-care
 ---
 

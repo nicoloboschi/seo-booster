@@ -36,6 +36,9 @@ faq:
 - question: What is the role of Retrieval-Augmented Generation (RAG) in AI memory boost modules?
   answer: RAG is a key technique often integrated into AI memory boost modules. It allows agents to retrieve relevant information from external knowledge bases and inject it into the LLM's context, effectively
     expanding its memory and improving recall for specific queries.
+- question: How does an AI memory boost module help an AI agent remember conversations?
+  answer: Yes, a significant application of AI memory boost modules is enabling AI agents to remember past conversations. By storing interaction history and context, these modules allow agents to maintain
+    continuity and personalization in ongoing dialogues, as explored in [ai-agent-episodic-memory](/articles/ai-agent-episodic-memory/).
 slug: ai-memory-boost-module
 ---
 

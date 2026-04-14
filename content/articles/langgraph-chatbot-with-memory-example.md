@@ -16,6 +16,8 @@ keywords:
 - langgraph examples
 - LangGraph memory chatbot
 - AI agent memory
+- persistent conversations
+- conversational AI
 faq:
 - question: How does LangGraph manage memory for chatbots?
   answer: LangGraph manages memory by allowing developers to define explicit states that can include memory components, like lists of past messages, which are passed between nodes during graph execution.
@@ -27,6 +29,9 @@ faq:
 - question: How is memory implemented in a LangGraph chatbot example?
   answer: In a LangGraph chatbot example, memory is typically implemented by defining a state that includes a list of messages. This state is passed between nodes, allowing the chatbot to access and build
     upon previous turns in the conversation.
+- question: What is AI chatbot persistence and why is it important?
+  answer: AI chatbot persistence refers to the ability of a chatbot to remember past interactions and context across multiple turns or sessions. This is crucial for creating natural, engaging, and efficient
+    user experiences, as it allows the chatbot to avoid asking repetitive questions and provide more relevant responses.
 slug: langgraph-chatbot-with-memory-example
 ---
 

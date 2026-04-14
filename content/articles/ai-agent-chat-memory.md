@@ -29,6 +29,7 @@ keywords:
 - AI agents remember conversations
 - AI context window limitations
 - AI memory for customer service
+slug: ai-agent-chat-memory
 faq:
 - question: What is AI agent chat memory?
   answer: AI agent chat memory refers to the capability of an AI to retain and recall past interactions, enabling persistent and coherent conversations. This technology is crucial for creating natural dialogue
@@ -49,7 +50,6 @@ faq:
 - question: How can I implement persistent memory for AI agents, especially for customer service?
   answer: Implementing persistent memory for AI agents, particularly for customer service, involves setting up robust systems to store and retrieve conversation history. This can include using databases,
     vector stores, or even streaming topics as persistent logs. The goal is to ensure AI agents remember past interactions and context to provide continuous and informed support.
-slug: ai-agent-chat-memory
 ---
 ---
 

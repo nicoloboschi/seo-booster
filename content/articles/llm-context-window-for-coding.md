@@ -25,6 +25,10 @@ faq:
   answer: RAG augments a model's knowledge by retrieving relevant information from external sources, effectively bringing it into the LLM's context window. A larger context window allows the model to *hold*
     more information directly. RAG is often more practical and scalable for extremely large codebases than relying solely on ever-increasing context window sizes, as it offers more targeted access to relevant
     data.
+- question: How can I optimize my code for LLM context windows?
+  answer: To optimize your code for LLM context windows, focus on modularity, clear documentation, and using descriptive variable/function names. Breaking down large files into smaller, manageable units
+    can also help. When interacting with LLMs, provide context incrementally and highlight critical sections of code. Techniques like RAG are also highly effective for providing relevant context without
+    overwhelming the model's native window.
 slug: llm-context-window-for-coding
 ---
 
@@ -150,4 +154,16 @@ def get_contextual_prompt(user_query, retrieved_code_snippets):
  Constructs a prompt for an LLM by combining a user query with retrieved code.
  """
  prompt = f"You are a helpful AI coding assistant. Use the following code context to answer the user's question.\n\n"
- prompt += "
+ prompt += "```python\n"
+ for snippet in retrieved_code_snippets:
+ prompt += snippet + "\n\n"
+ prompt += "```\n\n"
+ prompt += f"User Question: {user_query}\n"
+ return prompt
+
+## Example usage:
+## Assume retrieved_code_snippets is a list of strings, each a relevant code chunk
+## user_question = "How can I optimize this function for performance?"
+## contextual_prompt = get_contextual_prompt(user_question, retrieved_code_snippets)
+## print(contextual_prompt)
+```

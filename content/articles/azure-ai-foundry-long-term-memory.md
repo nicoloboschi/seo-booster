@@ -34,6 +34,9 @@ faq:
 - question: How can Azure AI Foundry agent services use Blob Storage for conversation state?
   answer: Azure AI Foundry agent services can leverage Azure Blob Storage to store unstructured data related to conversation state, such as large log files, media attachments, or serialized objects, which
     can then be referenced or retrieved as needed for persistent memory.
+- question: What are the key Azure services that power Azure AI Foundry agent memory?
+  answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, Azure AI Search for intelligent retrieval (including vector search), and Azure OpenAI Service
+    for the cognitive engine.
 slug: azure-ai-foundry-long-term-memory
 ---
 
@@ -79,7 +82,7 @@ To achieve semantic recall, text is converted into numerical representations cal
 
 The **Azure OpenAI Service** provides the large language models (LLMs) that process information. It receives the current user query alongside relevant retrieved memories to generate informed responses. Its advanced natural language understanding and generation capabilities are essential for making memory retrieval actionable within **Azure AI Foundry long-term memory**.
 
-### How Azure AI Foundry Facilitates Long-Term Memory
+## How Azure AI Foundry Facilitates Long-Term Memory
 
 Building **long-term memory in Azure AI Foundry** involves a cyclical process of capturing, storing, indexing, retrieving, and using information.
 

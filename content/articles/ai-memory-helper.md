@@ -40,6 +40,9 @@ faq:
 - question: How does an AI memory helper enable long-term memory for AI agents?
   answer: An AI memory helper provides a persistent storage solution beyond the limited context window of LLMs. By storing past interactions, user preferences, and learned facts, it allows AI agents to
     access and utilize information from much earlier in a conversation or across multiple sessions, effectively creating long-term memory capabilities.
+- question: What are the key components of an AI memory helper?
+  answer: Key components typically include a storage mechanism (like a vector database or key-value store), an indexing and retrieval system (often using embeddings), and an interface for the AI agent to
+    interact with the memory. Some advanced helpers also include summarization and forgetting mechanisms.
 slug: ai-memory-helper
 ---
 

@@ -66,6 +66,9 @@ faq:
 - question: What defines an agent's native architecture?
   answer: An agent's native architecture refers to its fundamental design and the core principles it follows for operation. This includes how it processes information, makes decisions, and interacts with
     its environment. Understanding the native architecture is key to predicting an agent's behavior and capabilities.
+- question: How does an agent's native architecture influence its capabilities?
+  answer: An agent's native architecture dictates its fundamental operational principles, including how it perceives, reasons, and acts. This foundational design directly impacts its ability to learn, adapt,
+    and perform complex tasks, influencing everything from its decision-making processes to its interaction with memory systems.
 slug: ai-agent-architecture-patterns
 ---
 

@@ -9,6 +9,8 @@ tags:
 - agent architecture
 - AI conversation summarization
 - persistent AI memory
+- customer service AI memory
+- streaming topic for AI context
 keywords:
 - ai that remembers past conversations
 - conversational memory AI
@@ -32,6 +34,11 @@ faq:
   answer: AI conversation summarization techniques are crucial for managing long-term memory. By condensing lengthy dialogues into concise summaries, AI agents can retain key information without being overwhelmed
     by raw data. This allows for more efficient retrieval of relevant past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive
     summarization are employed to create these memory digests.
+- question: How can we build memory for customer service AI agents to remember previous conversations, and can a streaming topic be used as a persistent log for this context?
+  answer: Yes, building memory for customer service AI agents to remember previous conversations is achievable. A streaming topic, such as those found in Kafka or similar message queues, can indeed serve
+    as a persistent log for this context. This streaming topic acts as a real-time, ordered record of all interactions. By processing this stream, AI agents can extract, summarize, and store key information.
+    Techniques like AI conversation summarization are vital here to condense the stream into actionable memory. This allows the AI to recall customer history, preferences, and past issues, leading to more
+    informed and efficient customer service.
 slug: ai-that-remembers-past-conversations
 ---
 
@@ -227,4 +234,8 @@ Current AI memory systems are sophisticated but differ fundamentally from human 
 ### How can AI conversation summarization techniques be used for memory?
 
 AI conversation summarization techniques are crucial for managing long-term memory. By condensing lengthy dialogues into concise summaries, AI agents can retain key information without being overwhelmed by raw data. This allows for more efficient retrieval of relevant past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive summarization are employed to create these memory digests.
+
+### How can we build memory for customer service AI agents to remember previous conversations, and can a streaming topic be used as a persistent log for this context?
+
+Yes, building memory for customer service AI agents to remember previous conversations is achievable. A streaming topic, such as those found in Kafka or similar message queues, can indeed serve as a persistent log for this context. This streaming topic acts as a real-time, ordered record of all interactions. By processing this stream, AI agents can extract, summarize, and store key information. Techniques like AI conversation summarization are vital here to condense the stream into actionable memory. This allows the AI to recall customer history, preferences, and past issues, leading to more informed and efficient customer service.
 ---

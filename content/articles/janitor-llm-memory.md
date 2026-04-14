@@ -9,6 +9,8 @@ tags:
 - memory systems
 - context window management
 - AI recall
+- janitor LLM memory
+- AI agent context
 keywords:
 - janitor llm memory
 - AI agent memory
@@ -32,6 +34,9 @@ faq:
 - question: How does Janitor LLM memory help manage the AI agent's context window?
   answer: Janitor LLM memory actively prunes or summarizes older or less relevant parts of the conversation history to ensure that the most critical information stays within the LLM's limited context window.
     This prevents the agent from exceeding its token limits and losing track of important details.
+- question: What are the primary strategies used in Janitor LLM memory for context window management?
+  answer: Primary strategies include token budgeting, information prioritization, and dynamic pruning. These methods ensure that the most relevant information is retained within the LLM's limited context
+    window, optimizing AI agent context and recall.
 slug: janitor-llm-memory
 ---
 
@@ -53,9 +58,9 @@ When an agent engages in a long conversation or performs a task requiring extens
 
 Effective **janitor LLM memory** relies on various strategies to manage this limited space. These techniques aim to maximize the utility of the available context for **AI agent context** and overall performance.
 
-1. **Token Budgeting**: Assigning a strict token limit for conversational history and actively monitoring it.
-2. **Information Prioritization**: Developing methods to score the importance of different pieces of information.
-3. **Dynamic Pruning**: Adjusting pruning frequency and intensity based on the current task or conversation stage.
+1. **Token Budgeting**: Assigning a strict token limit for conversational history and actively monitoring it. This is a foundational aspect of **context window management**.
+2. **Information Prioritization**: Developing methods to score the importance of different pieces of information. This ensures that critical data is prioritized within the limited **LLM context**.
+3. **Dynamic Pruning**: Adjusting pruning frequency and intensity based on the current task or conversation stage. This adaptive approach is key to efficient **context window management**.
 
 These methods are core to any **janitor LLM memory** implementation for efficient **context window management**.
 
@@ -158,4 +163,3 @@ class ConversationManager:
  print("Pruning complete.")
 
 ##
-```

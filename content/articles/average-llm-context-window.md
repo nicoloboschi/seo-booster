@@ -10,6 +10,7 @@ tags:
 - natural language processing
 - LLM context size
 - transformer models
+- GPT-2 context window
 keywords:
 - average llm context window
 - LLM context size
@@ -32,6 +33,8 @@ faq:
     an LLM can process beyond its inherent window size.
 - question: What was the context window of GPT-2?
   answer: The GPT-2 model, released in 2019, had a context window of up to 1,024 tokens. This was a significant advancement at the time but is considered small by today's standards.
+- question: What is the average LLM context window size?
+  answer: The average LLM context window typically ranges from a few thousand to tens of thousands of tokens. Leading models now offer much larger capacities, pushing the boundaries of what's possible.
 slug: average-llm-context-window
 ---
 
@@ -61,11 +64,11 @@ Conversely, a constrained context window forces the AI to "forget" older parts o
 
 ## Historical Evolution of LLM Context Windows
 
-Early transformer models, such as the original GPT, possessed relatively small context windows, often ranging from **512 to 2,048 tokens**. According to OpenAI's original GPT-2 paper, the model supported up to 1,024 tokens. This posed a significant limitation for tasks requiring extensive information processing. Subsequent advancements in attention mechanisms and architectural designs have dramatically expanded these limits over time, driving the *average LLM context window* higher.
+Early transformer models, such as the original GPT, possessed relatively small context windows, often ranging from **512 to 2,048 tokens**. According to OpenAI's original GPT-2 paper, the model supported up to **1,024 tokens**. This posed a significant limitation for tasks requiring extensive information processing. Subsequent advancements in attention mechanisms and architectural designs have dramatically expanded these limits over time, driving the *average LLM context window* higher.
 
 ### Key Milestones in Context Window Expansion
 
-* **GPT-2 (2019):** Offered context windows up to **1,024 tokens**. This marked a significant step in natural language understanding.
+* **GPT-2 (2019):** Offered context windows up to **1,024 tokens**. This marked a significant step in natural language understanding and is a key reference point when discussing **GPT-2 context window 1024 tokens**.
 * **GPT-3 (2020):** Increased this to **2,048 tokens**, with some variants later supporting **4,096 tokens**.
 * **PaLM (2022):** Demonstrated capabilities with larger windows, influencing subsequent developments.
 * **GPT-4 (2023):** Introduced **8,192** and **32,768 token** versions, significantly enhancing its ability to handle complex prompts.
@@ -179,5 +182,4 @@ user_input = "Can you summarize the key points we discussed about AI memory syst
 history = "User: We talked about different types of AI memory like short-term and long-term.\nAI: Yes, and we covered how context windows act as short-term memory.\nUser: Right, and the limitations of fixed context windows are a major challenge."
 
 final_prompt = create_prompt_within_context(user_input, history, model_context_limit)
-print("
-
+print("Final prompt constructed to fit within the context window.")

@@ -21,6 +21,7 @@ keywords:
 - retrieval-augmented generation
 - vector databases
 - long-term memory AI agents
+slug: ai-memory-hackathon
 faq:
 - question: What are common challenges in an AI memory hackathon?
   answer: Participants often face challenges with efficient data retrieval, managing context windows, implementing long-term memory, and ensuring the AI agent's recall is accurate and relevant to the task.
@@ -39,7 +40,6 @@ faq:
 - question: What is the role of vector databases in AI memory?
   answer: Vector databases store data as numerical representations called embeddings. For AI memory, they enable fast and efficient similarity searches, allowing agents to quickly retrieve memories that
     are semantically similar to the current query or context. This is crucial for **long-term memory AI agents**.
-slug: ai-memory-hackathon
 ---
 
 What if an AI agent forgot your entire conversation after a single question? This is the reality for many AI systems today, but an **AI memory hackathon** is changing that narrative. These focused events are crucial for developing AI agents that can truly remember, learn, and adapt. An **ai memory hackathon** is a concentrated event where developers build AI systems with enhanced memory, pushing boundaries on how agents store, retrieve, and use information for more context-aware applications. These events are critical for advancing **agent memory** systems beyond current limitations and limitations of static context windows.
@@ -75,7 +75,7 @@ Many hackathon projects aim to integrate both. For instance, an agent might use 
 
 In a hackathon setting, teams might build custom RAG pipelines. They'll focus on optimizing the retrieval step using techniques like **embedding models for memory** and efficient **vector databases**. The goal is to ensure the retrieved information is accurate, timely, and directly relevant to the agent's current task. Comparing RAG with dedicated agent memory systems is a common theme, as explored in [RAG vs Agent Memory](/articles/rag-vs-agent-memory/).
 
-### Optimizing Long-Term Memory Architectures
+### Optimizing Long-Term Memory Architectures for AI Agents
 
 Overcoming the **context window limitations** of LLMs is a primary goal. Hackathons often see participants developing or implementing **long-term memory AI agents**. This involves designing architectures that can store vast amounts of data and efficiently retrieve relevant snippets when needed.
 
@@ -185,6 +185,18 @@ The ultimate goal is to build AI that doesn't just process information but under
 ---
 
 ## FAQ
+
+### What are common challenges in an AI memory hackathon?
+
+Participants often face challenges with efficient data retrieval, managing context windows, implementing long-term memory, and ensuring the AI agent's recall is accurate and relevant to the task.
+
+### What skills are needed for an AI memory hackathon?
+
+Key skills include proficiency in Python, understanding of Large Language Models (LLMs), experience with vector databases and embedding models, knowledge of AI agent architectures, and problem-solving abilities.
+
+### How can I prepare for an AI memory hackathon?
+
+Prepare by studying different [AI agent memory types](/articles/ai-agents-memory-types/), experimenting with memory systems like Hindsight, and practicing building simple AI agents that can retain information.
 
 ### What are the main types of memory explored in AI?
 

@@ -37,6 +37,9 @@ faq:
 - question: What are the core AI memory needs for an AI agent to perform complex tasks?
   answer: For complex tasks, AI agents require a robust combination of memory types. This includes working memory for immediate processing, short-term memory for current context, episodic memory for recalling
     specific events and interactions, semantic memory for factual knowledge, and contextual memory to prioritize relevant information. Effective AI memory needs are met by integrating these systems.
+- question: How does working memory contribute to AI agent performance?
+  answer: Working memory in AI agents acts as a temporary, active workspace for immediate data processing and manipulation. It's crucial for real-time tasks like calculations, translations, and code generation,
+    enabling rapid execution and efficient handling of ongoing computations.
 slug: ai-memory-needs
 ---
 
@@ -184,3 +187,4 @@ The development of **persistent memory** in AI agents is a continuous area of re
 ## Conclusion: The Future of AI Memory
 
 The diverse and evolving AI memory needs are central to unlocking the full potential of artificial intelligence. From the immediate demands of working memory to the enduring knowledge stored in semantic and episodic systems, each type plays a critical role in fulfilling complex AI memory requirements. As research progresses, we can expect AI memory systems to become even more dynamic, adaptive, and sophisticated, paving the way for truly intelligent agents. The quest for AI that remembers everything is an ongoing journey, driven by these fundamental memory requirements. For a comparative look at different approaches, consider [Open-Source Memory Systems Compared](/articles/open-source-memory-systems-compared/).
+---

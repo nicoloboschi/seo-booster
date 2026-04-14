@@ -34,6 +34,9 @@ faq:
   answer: A chatbot memory architecture diagram visually represents the components and data flow within an AI's memory system. It's useful for understanding how different memory types (short-term, long-term,
     episodic, semantic) interact, how data is stored and retrieved (e.g., via vector databases or knowledge graphs), and how techniques like RAG are implemented. This helps in designing, debugging, and
     optimizing AI memory systems.
+- question: How do vector databases contribute to chatbot memory architecture?
+  answer: Vector databases are crucial for storing and retrieving semantically similar information efficiently. They convert text into numerical vectors (embeddings), allowing chatbots to quickly find relevant
+    past conversations or knowledge based on the meaning of the current query, which is a cornerstone of modern AI memory systems.
 slug: chatbot-memory-architecture
 ---
 

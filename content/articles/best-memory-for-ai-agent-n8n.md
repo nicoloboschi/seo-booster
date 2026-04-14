@@ -24,6 +24,8 @@ faq:
 - question: How does RAG compare to other memory types for n8n agents?
   answer: RAG (Retrieval-Augmented Generation) is excellent for providing factual context from external documents to n8n agents, whereas episodic memory focuses on recalling specific past events or interactions
     within a workflow.
+- question: What are the key components of AI memory for n8n?
+  answer: The key components include short-term memory (context windows), long-term persistent storage (databases, vector stores), episodic memory for event recall, and semantic memory for general knowledge.
 slug: best-memory-for-ai-agent-n8n
 ---
 
@@ -31,7 +33,7 @@ The best memory for an AI agent in n8n is not a single solution but a strategic 
 
 ## What is the Best Memory for AI Agent n8n?
 
-The "best" memory for an AI agent within n8n isn't a single product but a strategic approach. It involves selecting and integrating a memory system that effectively stores, retrieves, and manages the contextual data necessary for your specific n8n workflow's success, ensuring the AI agent can recall past states and information.
+The "best" memory for an AI agent within n8n isn't a single product but a strategic approach. It involves selecting and integrating a memory system that effectively stores, retrieves, and manages the contextual data necessary for your specific n8n workflow's success, ensuring the AI agent can recall past states and information. This is crucial for effective **n8n AI agent memory**.
 
 ### Defining AI Agent Memory in n8n Workflows
 
@@ -240,3 +242,6 @@ Yes, n8n's flexible node-based structure allows integration with various externa
 
 ### How does RAG compare to other memory types for n8n agents?
 RAG (Retrieval-Augmented Generation) is excellent for providing factual context from external documents to n8n agents, whereas episodic memory focuses on recalling specific past events or interactions within a workflow.
+
+### What are the key components of AI memory for n8n?
+The key components include short-term memory (context windows), long-term persistent storage (databases, vector stores), episodic memory for event recall, and semantic memory for general knowledge.

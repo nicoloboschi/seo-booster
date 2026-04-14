@@ -35,6 +35,9 @@ faq:
 - question: How much GPU memory do AI models typically require?
   answer: GPU memory requirements for AI models vary drastically. Simple models might need 4-8GB of VRAM, while complex deep learning models and LLMs can demand 24GB, 48GB, 80GB, or even hundreds of gigabytes
     of VRAM, often requiring multiple high-end GPUs.
+- question: How much RAM does AI actually need?
+  answer: The amount of RAM AI needs varies greatly. Simple ML tasks might use 8-16GB, while training large deep learning models can require 64GB, 128GB, or even terabytes of system RAM, alongside substantial
+    GPU VRAM.
 slug: how-much-ram-for-ai
 ---
 

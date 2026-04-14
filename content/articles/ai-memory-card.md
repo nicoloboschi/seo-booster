@@ -10,6 +10,10 @@ tags:
 - persistent memory AI
 - agent recall
 - AI knowledge base
+- long-term memory AI agents
+- retrieval-augmented generation
+- semantic memory AI agents
+- episodic memory in AI agents
 keywords:
 - ai memory card
 - agent memory
@@ -34,6 +38,9 @@ faq:
 - question: How does an AI memory card contribute to an AI agent's learning?
   answer: An AI memory card enables persistent learning by storing past interactions and learned information. This allows the agent to build upon previous experiences, adapt its behavior, and improve its
     performance over time, overcoming the limitations of short-term context windows.
+- question: What is the role of vector databases in AI memory cards?
+  answer: Vector databases are crucial for AI memory cards as they efficiently store and query high-dimensional vector embeddings of data. This enables semantic search, allowing AI agents to retrieve information
+    based on meaning and context, which is fundamental for effective agent recall and knowledge organization.
 slug: ai-memory-card
 ---
 
@@ -175,3 +182,5 @@ The distinction between an "AI memory card" and traditional storage devices like
 
 | Feature | AI Memory Card (Conceptual) | Traditional Storage (HDD/SSD) |
 | :
+
+---

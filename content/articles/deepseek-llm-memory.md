@@ -25,6 +25,9 @@ faq:
     or learned information.
 - question: What are the key benefits of DeepSeek LLM memory for AI agents?
   answer: The key benefits include enhanced recall, improved contextual understanding, the ability to learn from past interactions, and the creation of more personalized and coherent AI agent experiences.
+- question: How does DeepSeek LLM memory contribute to persistent memory AI?
+  answer: DeepSeek LLM memory enables AI agents to store and retrieve information over extended periods, effectively creating a persistent memory that goes beyond the immediate context window, allowing
+    for continuous learning and improved decision-making.
 slug: deepseek-llm-memory
 ---
 

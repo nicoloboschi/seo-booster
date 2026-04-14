@@ -10,6 +10,9 @@ tags:
 - long-term memory
 - persistent memory AI
 - agent memory systems
+- RAG
+- vector databases
+- LLM memory architecture
 keywords:
 - how to build llm memory
 - LLM memory architecture
@@ -21,6 +24,10 @@ keywords:
 - building LLM memory
 - LLM persistent memory
 - memory for AI agents
+- RAG
+- vector databases
+- conversational memory
+- LLM context window
 faq:
 - question: What is the primary challenge when building LLM memory?
   answer: The main challenge is enabling LLMs to retain and recall information beyond their immediate context window, allowing for coherent, extended interactions and learning. This requires external storage
@@ -33,6 +40,12 @@ faq:
     via Retrieval-Augmented Generation (RAG).
 - question: What is the role of vector databases in LLM memory?
   answer: Vector databases are crucial for storing information semantically. They house text embeddings, allowing for efficient semantic search to retrieve contextually relevant memories for the LLM.
+- question: What is Retrieval-Augmented Generation (RAG)?
+  answer: RAG is a technique that enhances LLM responses by retrieving relevant external information and incorporating it into the prompt before generation. This allows LLMs to access up-to-date or specific
+    knowledge beyond their training data, forming a core part of LLM memory systems.
+- question: How does LLM memory address the context window limitation?
+  answer: LLM memory systems, particularly through RAG and summarization techniques, overcome context window limitations by selectively retrieving and injecting only the most relevant past information into
+    the current prompt, rather than trying to fit the entire history.
 slug: how-to-build-llm-memory
 ---
 
@@ -134,12 +147,12 @@ def query_llm_with_memory(user_query: str):
  # 3. Construct the augmented prompt
  memory_text = "\n".join([mem['text'] for mem in retrieved_memories])
  augmented_prompt = f"""
- Here is some relevant past context:
- {memory_text}
+Here is some relevant past context:
+{memory_text}
 
- Based on this context and your general knowledge, answer the following:
- {user_query}
- """
+Based on this context and your general knowledge, answer the following:
+{user_query}
+"""
 
  # 4. Send to LLM and get response
  response = llm.generate(augmented_prompt)
@@ -169,7 +182,7 @@ Several libraries and frameworks simplify building LLM memory systems. Understan
 
 * **LangChain:** Offers modules for memory management, prompt templating, and RAG. It provides various memory types like `ConversationBufferMemory` and `ConversationSummaryMemory`.
 
-* **LlamaIndex:** Focuses on data indexing and retrieval for LLM applications, excellent for building powerful RAG pipelines and managing data sources for memory.
+* **LlamaIndex:** Focuses on data indexing and retrieval for LLM applications, excellent for building powerful RAG pipelines and managing data sources for memory. LlamaIndex is particularly useful for implementing **short-term recall** and managing data for LLM applications.
 
 * **Hindsight:** An open-source Python library designed to simplify AI agent memory creation and management. It offers flexible storage and retrieval options, making persistent recall easier. Explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
 
@@ -201,6 +214,10 @@ Addressing these challenges is key to creating intelligent and reliable AI agent
  Key components include a storage mechanism (like vector databases), retrieval strategies (like semantic search), and integration logic to feed relevant memories back into the LLM's prompt, often via Retrieval-Augmented Generation (RAG).
 * **What is the role of vector databases in LLM memory?**
  Vector databases are crucial for storing information semantically. They house text embeddings, allowing for efficient semantic search to retrieve contextually relevant memories for the LLM.
+* **What is Retrieval-Augmented Generation (RAG)?**
+ RAG is a technique that enhances LLM responses by retrieving relevant external information and incorporating it into the prompt before generation. This allows LLMs to access up-to-date or specific knowledge beyond their training data, forming a core part of LLM memory systems.
+* **How does LLM memory address the context window limitation?**
+ LLM memory systems, particularly through RAG and summarization techniques, overcome context window limitations by selectively retrieving and injecting only the most relevant past information into the current prompt, rather than trying to fit the entire history.
 
 ## Conclusion: The Future is Remembered with LLM Memory
 

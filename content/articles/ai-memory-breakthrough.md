@@ -39,6 +39,9 @@ faq:
 - question: How does an AI memory breakthrough differ from traditional AI data storage?
   answer: Unlike traditional data storage, an AI memory breakthrough focuses on dynamic, context-aware, and actively utilized information retrieval and integration within an AI's reasoning process, enabling
     learning and adaptation rather than just passive storage.
+- question: What are the core components of an AI memory breakthrough?
+  answer: Core components include advanced data structures for efficient indexing and retrieval, memory consolidation and forgetting mechanisms for long-term retention, and real-time learning capabilities
+    for continuous adaptation.
 slug: ai-memory-breakthrough
 ---
 

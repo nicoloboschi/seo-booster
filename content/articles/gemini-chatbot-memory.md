@@ -18,6 +18,8 @@ keywords:
 - conversational AI memory
 - AI memory systems
 - RAG for chatbots
+- gemini forgets context
+- gemini memory function
 faq:
 - question: How does Gemini remember past conversations?
   answer: Gemini utilizes its large language model's context window to retain recent conversation history. For longer-term recall across sessions, it can be integrated with external memory systems like
@@ -31,6 +33,10 @@ faq:
 - question: What is Retrieval-Augmented Generation (RAG) for Gemini's memory?
   answer: RAG enhances Gemini's memory by combining its generative abilities with an external knowledge retrieval mechanism. It stores past conversation turns or summaries in a searchable database (like
     a vector database) and retrieves relevant snippets to inform Gemini's responses, allowing it to access information beyond its immediate context window.
+- question: Why does Gemini sometimes forget context or previous instructions?
+  answer: Gemini can forget context or previous instructions primarily due to the limitations of its context window. If a conversation becomes too long, older parts fall outside this window and are effectively
+    forgotten. Additionally, complex or nuanced instructions might not be fully captured or retained if they are not explicitly reinforced or if the model prioritizes more recent information. External memory
+    systems like RAG are crucial to mitigate this.
 slug: gemini-chatbot-memory
 ---
 
@@ -182,4 +188,3 @@ def retrieve_from_memory(query_text: str, top_k: int = 3) -> list[str]:
 
 ## Example usage
 print("
-

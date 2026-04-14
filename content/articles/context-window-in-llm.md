@@ -178,6 +178,15 @@ This code snippet demonstrates how text is broken down into tokens, illustrating
 
 ## FAQ
 
+### What is the context window of an LLM?
+The **context window** of an LLM defines the maximum amount of text, measured in tokens, that the model can process at any given time. It dictates how much past information the LLM can access to generate its next output, acting as its short-term memory.
+
+### Why is the context window important for LLMs?
+A larger **context window** allows LLMs to maintain coherence over longer conversations, process more extensive documents, and understand complex instructions. It directly influences the model's ability to recall and use information from its input, impacting overall performance.
+
+### How do LLMs handle information beyond their context window?
+Information outside the **context window** is effectively forgotten by the model. Techniques like retrieval-augmented generation (RAG) or external memory systems are used to reintroduce relevant information into the LLM's active processing space.
+
 ### What is the difference between context window and long-term memory in LLMs?
 The **context window** is the LLM's short-term memory, holding a limited amount of recent input. **Long-term memory** refers to external systems or techniques that store and retrieve information over extended periods, allowing the AI to recall past interactions or knowledge beyond its immediate **LLM context window**.
 

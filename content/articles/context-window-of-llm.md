@@ -1,6 +1,6 @@
 ---
-title: 'Understanding the Context Window of LLMs: Limitations and Future of AI Memory'
-description: Explore the context window of LLMs, its limitations, and how it impacts AI memory and agent capabilities. Learn about solutions and future advancements in large c...
+title: 'Understanding the Context Window of LLMs: Limitations and the Future of AI Memory'
+description: Explore the context window of LLMs, its limitations, and how it impacts AI memory and agent capabilities. Learn about solutions and future advancements in large l...
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:
@@ -32,6 +32,15 @@ faq:
 - question: What are the main limitations of an LLM's context window?
   answer: The primary limitations of an LLM's context window are its finite capacity, leading to information loss for older inputs, and the significant computational cost associated with processing larger
     windows. This can result in AI agents forgetting details from earlier in a conversation or document.
+- question: What is the theoretical limit of an LLM's context window?
+  answer: There isn't a strict theoretical limit imposed by the nature of transformer architectures themselves, but practical limits are dictated by computational resources (memory and processing power)
+    and the efficiency of the attention mechanism. As hardware improves and algorithms become more efficient, these practical limits are constantly being pushed.
+- question: How does the context window affect an LLM's reasoning ability?
+  answer: A larger context window generally improves an LLM's reasoning ability by allowing it to consider more relevant information simultaneously. This is crucial for tasks requiring the synthesis of
+    information from different parts of a text or conversation, complex problem-solving, and understanding nuanced relationships between concepts.
+- question: Can an LLM "learn" from information outside its context window?
+  answer: An LLM cannot directly learn from information outside its current context window during a single inference. However, techniques like fine-tuning, RAG, and external memory systems allow the model
+    to indirectly access and incorporate knowledge from sources that exceed its immediate context, effectively enabling long-term learning and recall.
 slug: context-window-of-llm
 ---
 

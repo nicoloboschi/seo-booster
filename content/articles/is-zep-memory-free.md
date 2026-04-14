@@ -10,6 +10,8 @@ tags:
 - LLM Memory
 - Zep Pricing
 - Free AI Memory
+- Zep Cloud Pricing
+- Self-host Zep
 keywords:
 - is zep memory free
 - Zep pricing
@@ -21,6 +23,10 @@ keywords:
 - Zep cloud pricing
 - self-host Zep
 - Zep open source
+- Zep AI memory platform
+- Zep AI memory pricing 2026
+- Zep cloud pricing 2026
+- Zep cloud pricing free tier
 faq:
 - question: Is Zep Memory completely free to use?
   answer: Zep offers an open-source version which is free to self-host. However, their managed cloud service has a tiered pricing structure based on usage.
@@ -35,6 +41,8 @@ faq:
 - question: What are the main differences between Zep's open-source and cloud offerings?
   answer: The open-source version requires self-hosting and infrastructure management but is free. The cloud service is a managed, scalable solution with tiered pricing based on usage, offering convenience
     and ease of deployment.
+- question: What is the Zep AI memory platform and is it free?
+  answer: The Zep AI memory platform provides persistent memory for LLM applications. Its core is open-source and free to self-host, while its managed cloud service has usage-based pricing.
 slug: is-zep-memory-free
 ---
 
@@ -43,7 +51,7 @@ slug: is-zep-memory-free
 
 Is Zep Memory free? Zep provides a powerful open-source version you can self-host at no cost. However, their managed cloud service has a tiered pricing structure based on usage. Understanding these distinctions is vital for budgeting and selecting the right memory solution for your AI applications, clarifying whether **Zep Memory is free** for your needs.
 
-The **Zep Memory** project aims to provide effective memory capabilities for large language models (LLMs). It's designed to store and retrieve **conversational context**, **user preferences**, and **agent experiences**, enabling more sophisticated and personalized AI interactions. This article clarifies the **Zep pricing model** and explores its free, open-source offering, directly addressing whether **Zep Memory is free**.
+The **Zep AI memory platform** aims to provide effective memory capabilities for large language models (LLMs). It's designed to store and retrieve **conversational context**, **user preferences**, and **agent experiences**, enabling more sophisticated and personalized AI interactions. This article clarifies the **Zep pricing model** and explores its free, open-source offering, directly addressing whether **Zep Memory is free**.
 
 ## What is Zep Memory?
 
@@ -61,7 +69,7 @@ The core **Zep Memory** platform is **open-source**, meaning its source code is 
 
 This free tier is ideal for developers, researchers, and businesses prioritizing **data sovereignty** or operating with tight budgets. Setting up the **open-source Zep** version requires technical expertise in deploying and managing software, including databases and servers. Understanding the **Zep memory cost** for self-hosting primarily involves infrastructure expenses, not software licensing.
 
-### Zep's Managed Cloud Service: Pricing Tiers
+### Zep's Managed Cloud Service: Pricing Tiers and Zep Cloud Pricing
 
 Beyond the free open-source option, Zep offers a **managed cloud service**. This service abstracts away the complexities of self-hosting, providing a ready-to-use, scalable solution. The **Zep cloud pricing** is typically structured around usage, often following a **pay-as-you-go** model, meaning **is Zep Memory free** depends on your chosen service.
 
@@ -72,7 +80,7 @@ Key factors influencing the cost of Zep's managed service include:
 * **API call volume:** The frequency of requests to store or retrieve memory.
 * **Data retention periods:** Longer retention might incur higher storage costs.
 
-These tiered plans make the service accessible for various scales, from small projects to enterprise-level deployments. For precise details on current pricing, it's always best to consult the [official Zep documentation](https://docs.getzep.com/getting-started/installation/). Understanding the **Zep memory cost** is essential for planning.
+These tiered plans make the service accessible for various scales, from small projects to enterprise-level deployments. For precise details on current pricing, it's always best to consult the [official Zep documentation](https://docs.getzep.com/getting-started/installation/). Understanding the **Zep memory cost** is essential for planning. For those looking for a **Zep cloud pricing free tier**, while the open-source is free, the managed cloud service is consumption-based.
 
 ## Why is AI Memory Important?
 

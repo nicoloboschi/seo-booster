@@ -38,6 +38,9 @@ faq:
   answer: Character.AI uses the LLM's context window for short-term recall, simulating memory within a single session. True AI agent memory involves dedicated systems (like vector databases or knowledge
     graphs) for persistent storage and retrieval of information across many interactions, enabling deeper learning and continuity. This is a core distinction discussed in [agent memory vs. RAG](/articles/agent-memory-vs-rag/).
     This fundamental difference means **does Character.AI have long term memory** is a question with a clear technical answer.
+- question: How does Character.AI's memory compare to other AI chatbots?
+  answer: Many AI chatbots, like Character.AI, rely on the LLM's context window for memory. However, the size of this window and the sophistication of context management vary. Some chatbots might offer
+    more robust session-based memory or limited forms of short-term persistence, but true long-term, cross-session memory is still a developing area for most.
 slug: does-character-ai-have-long-term-memory
 ---
 
@@ -170,3 +173,6 @@ You cannot permanently train Character.AI characters in the way you might train 
 
 ### What's the difference between Character.AI's memory and AI Agent memory?
 Character.AI uses the LLM's context window for short-term recall, simulating memory within a single session. True AI agent memory involves dedicated systems (like vector databases or knowledge graphs) for persistent storage and retrieval of information across many interactions, enabling deeper learning and continuity. This is a core distinction discussed in [agent memory vs. RAG](/articles/agent-memory-vs-rag/). This fundamental difference means **does Character.AI have long term memory** is a question with a clear technical answer.
+
+### How does Character.AI's memory compare to other AI chatbots?
+Many AI chatbots, like Character.AI, rely on the LLM's context window for memory. However, the size of this window and the sophistication of context management vary. Some chatbots might offer more robust session-based memory or limited forms of short-term persistence, but true long-term, cross-session memory is still a developing area for most.

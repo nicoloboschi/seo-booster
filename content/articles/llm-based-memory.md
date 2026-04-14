@@ -32,6 +32,9 @@ faq:
 - question: What is Retrieval-Augmented Generation (RAG) in the context of LLM memory?
   answer: Retrieval-Augmented Generation (RAG) is a key technique for LLM memory systems. It involves retrieving relevant information from an external knowledge base (often a vector database) and injecting
     it into the LLM's prompt. This augments the LLM's knowledge and allows it to generate more informed and contextually relevant responses, effectively acting as a form of LLM-based memory.
+- question: How do vector databases contribute to LLM memory systems?
+  answer: Vector databases are crucial for LLM memory systems because they store information as vector embeddings. These embeddings capture the semantic meaning of text, allowing for efficient and nuanced
+    retrieval of relevant information based on meaning and context, rather than just keywords. This enables AI agents to access and utilize past knowledge more effectively.
 slug: llm-based-memory
 ---
 

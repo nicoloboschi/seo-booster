@@ -170,6 +170,15 @@ However, even with massive context windows, the fundamental challenge of efficie
 
 ## FAQ
 
+### What is the primary limitation of an LLM's context window?
+The primary limitation is the finite amount of text an LLM can process and retain at any given time, restricting its ability to recall and reason over extended conversations or documents.
+
+### How does the context window limit affect LLM performance?
+It leads to forgetting earlier parts of a conversation or document, reduced coherence in long interactions, and an inability to process very large inputs without chunking or summarization.
+
+### Can LLM context window limits be expanded?
+While inherent architectural limits exist, techniques like retrieval-augmented generation (RAG), summarization, and specialized model architectures are used to effectively extend an LLM's working memory beyond its hard context window.
+
 ### What is the main challenge with LLM context windows?
 The main challenge is the computational and memory cost that scales quadratically with the number of tokens. This limits the practical size of the context window, leading to information loss in long interactions.
 

@@ -33,6 +33,9 @@ faq:
     capabilities.
 - question: What makes the Gigabyte AI Memory Boost Module ideal for AI hardware acceleration?
   answer: Its design focuses on high bandwidth and low latency, crucial for the demanding memory access patterns of AI computations, making it a prime example of AI hardware acceleration.
+- question: How does the Gigabyte AI Memory Boost Module improve AI agent recall?
+  answer: By providing faster access to larger datasets and more complex models, the module allows AI agents to retrieve and process information more efficiently, leading to improved recall and contextual
+    understanding.
 slug: ai-memory-boost-module-gigabyte
 ---
 

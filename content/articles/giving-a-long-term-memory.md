@@ -34,6 +34,9 @@ faq:
 - question: What are the main architectures for giving AI agents long-term memory?
   answer: The main architectures include vector databases for semantic recall, key-value stores for factual data, and hybrid memory systems that combine multiple approaches to leverage the strengths of
     each for comprehensive AI agent long-term memory.
+- question: How does summarization contribute to AI agent long-term memory?
+  answer: Summarization helps manage the volume of data by condensing lengthy interactions or documents into concise summaries. This allows AI agents to retain the essential information without overwhelming
+    their memory storage, making persistent AI memory more scalable and efficient.
 slug: giving-a-long-term-memory
 ---
 
@@ -131,6 +134,10 @@ class SimpleMemory:
 memory_system = SimpleMemory()
 memory_system.add_memory("Hello there!", "Hi! How can I help you today?")
 memory_system.add_memory("What's the weather like?", "I don't have real-time weather access.")
-print("\n
+print("\n")
+print(memory_system.retrieve_last_interaction())
+print("\nAll memories:")
+print(memory_system.retrieve_all_memories())
+```
 
----
+This basic example demonstrates the core idea of storing past interactions. Real-world implementations would involve more sophisticated data structures, integration with LLMs for summarization and embedding, and robust retrieval mechanisms, all contributing to effective **AI agent long-term memory**.

@@ -35,6 +35,9 @@ faq:
   answer: Currently, Character AI, like most LLMs, doesn't possess human-like consciousness or true long-term memory. Its "memory" is an artifact of its architecture and programming, primarily relying on
     context windows and sophisticated prompt engineering. While it can simulate recall effectively, it doesn't experience or store memories in the biological sense. This is a key distinction discussed in
     [does Character AI have long term memory](/articles/character-ai-long-term-memory/).
+- question: How can I make Character AI remember specific details?
+  answer: To make Character AI remember specific details, use detailed system prompts, reinforce key information periodically within the conversation, and consider asking the AI to summarize its understanding.
+    Explicit reminders are also effective.
 slug: how-to-improve-character-ai-memory
 ---
 
@@ -204,3 +207,6 @@ RAG enhances AI memory by allowing the model to retrieve relevant information fr
 
 ### Can Character AI truly have "long-term memory" like a human?
 Currently, Character AI, like most LLMs, doesn't possess human-like consciousness or true long-term memory. Its "memory" is an artifact of its architecture and programming, primarily relying on context windows and sophisticated prompt engineering. While it can simulate recall effectively, it doesn't experience or store memories in the biological sense. This is a key distinction discussed in [does Character AI have long term memory](/articles/character-ai-long-term-memory/).
+
+### How can I make Character AI remember specific details?
+To make Character AI remember specific details, use detailed system prompts, reinforce key information periodically within the conversation, and consider asking the AI to summarize its understanding. Explicit reminders are also effective.

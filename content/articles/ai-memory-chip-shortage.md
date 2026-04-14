@@ -43,12 +43,15 @@ faq:
 - question: What are the primary impacts of the AI chip shortage on the semiconductor industry?
   answer: The primary impacts include increased hardware costs, project delays, stifled innovation, and a heightened focus on supply chain resilience and manufacturing capacity expansion for AI-specific
     chips.
+- question: What are the key AI chip supply issues contributing to the shortage?
+  answer: Key AI chip supply issues include the long lead times for building new fabrication plants, the specialized nature of AI memory manufacturing (like HBM), geopolitical disruptions, and shortages
+    of critical raw materials and equipment.
 slug: ai-memory-chip-shortage
 ---
 
 A critical global imbalance, the **AI memory chip shortage** occurs when demand for specialized semiconductor memory for AI workloads significantly exceeds available supply. This scarcity directly impacts AI innovation, leading to increased costs and project delays for essential AI hardware.
 
-## What is the AI Memory Chip Shortage?
+## Understanding the AI Memory Chip Shortage
 
 The **AI memory chip shortage** describes a global imbalance where demand for specialized semiconductor memory, designed for artificial intelligence workloads, significantly outstrips available supply. This scarcity affects critical components needed for both AI training and inference tasks.
 

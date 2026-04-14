@@ -32,6 +32,9 @@ faq:
 - question: What are the key components of Hindsight LLM Memory?
   answer: Key components include Memory Storage (often a vector database), an Embedding Model to convert text to vectors, a Retrieval Mechanism to find relevant memories, and a Context Injection process
     to feed memories back to the LLM.
+- question: How does Hindsight LLM Memory compare to traditional AI memory?
+  answer: Traditional AI memory is often limited by the LLM's context window, making it ephemeral. Hindsight LLM Memory provides a persistent, external storage solution that allows for much longer-term
+    recall and learning, significantly enhancing agent capabilities.
 slug: hindsight-llm-memory
 ---
 
@@ -117,3 +120,4 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.embeddings import OpenAIEmbeddings # Example embedding model
 
 ##
+```

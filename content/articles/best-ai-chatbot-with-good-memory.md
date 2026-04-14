@@ -10,6 +10,10 @@ tags:
 - long-term memory
 - AI memory systems
 - AI that remembers
+- AI assistant with memory
+- AI chatbots with contextual memory and personalization
+- AI chatbots with conversation memory features
+- AI chatbots with good memory
 keywords:
 - best ai chatbot with good memory
 - AI chatbot memory
@@ -32,6 +36,12 @@ faq:
 - question: What are the main types of memory used in AI chatbots?
   answer: AI chatbots primarily use **short-term memory**, often managed by the LLM's context window, and **long-term memory**, which involves external storage mechanisms like vector databases for persistent
     recall of past interactions. This is key for AI chatbots with good memory.
+- question: How can I test if an AI chatbot has good memory?
+  answer: To test memory, engage in a multi-turn conversation over time. Ask follow-up questions that refer to earlier parts of the discussion. Note if the chatbot correctly recalls names, facts, preferences,
+    or previous requests without needing reminders. This is a good way to evaluate an AI that remembers.
+- question: Are there open-source tools to build AI chatbots with good memory?
+  answer: Yes, there are several open-source tools and frameworks available. These include vector databases (e.g., Chroma, Weaviate), embedding libraries, and orchestration tools that help manage conversational
+    memory and retrieval processes. Projects like [Hindsight](https://github.com/vectorize-io/hindsight) offer a starting point for developing custom memory solutions for AI that remembers well.
 slug: best-ai-chatbot-with-good-memory
 ---
 

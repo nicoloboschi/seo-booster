@@ -11,6 +11,8 @@ tags:
 - in memory vector database rust
 - vector search
 - AI agent
+- AI agent memory rust
+- vector database performance
 keywords:
 - in memory vector database rust
 - rust vector database
@@ -33,6 +35,8 @@ faq:
 - question: What are the key performance metrics for an in-memory vector database in Rust?
   answer: Key metrics include indexing speed, query latency, throughput (queries per second), and memory usage efficiency. Rust's capabilities often lead to lower latency and higher throughput compared
     to other languages.
+- question: What are the primary use cases for an in-memory vector database in Rust?
+  answer: Key use cases include AI agent memory systems, retrieval-augmented generation (RAG), real-time recommendation engines, and semantic search applications where ultra-low latency is critical.
 slug: in-memory-vector-database-rust
 ---
 
@@ -287,3 +291,5 @@ While pure in-memory solutions have limitations regarding data volume, they are 
  For many AI agents, an in-memory vector database can store significant portions of their memory, especially short-term or frequently accessed information. However, very large long-term memories might require hybrid approaches or persistent storage.
 * **What are the key performance metrics for an in-memory vector database in Rust?**
  Key metrics include indexing speed, query latency, throughput (queries per second), and memory usage efficiency. Rust's capabilities often lead to lower latency and higher throughput compared to other languages.
+* **What are the primary use cases for an in-memory vector database in Rust?**
+ Key use cases include AI agent memory systems, retrieval-augmented generation (RAG), real-time recommendation engines, and semantic search applications where ultra-low latency is critical.

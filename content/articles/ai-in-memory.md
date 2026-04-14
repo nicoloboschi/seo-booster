@@ -43,7 +43,7 @@ faq:
 slug: ai-in-memory
 ---
 
-AI in memory equips artificial intelligence agents with the ability to store, recall, and act upon past experiences. This capability is fundamental for developing advanced AI that can learn, adapt, and exhibit more human-like intelligence and continuity, moving beyond stateless processing.
+**AI in memory** equips artificial intelligence agents with the ability to store, recall, and act upon past experiences. This capability is fundamental for developing advanced AI that can learn, adapt, and exhibit more human-like intelligence and continuity, moving beyond stateless processing.
 
 ## What is AI in Memory?
 

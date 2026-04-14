@@ -1,6 +1,6 @@
 ---
 title: 'n8n AI Agent Clear Memory: Managing and Resetting Agent Recall'
-description: 'n8n AI Agent Clear Memory: Managing and Resetting Agent Recall. Learn about n8n ai agent clear memory, n8n memory reset with practical examples, code snippets, an...'
+description: Learn how to manage and reset n8n AI agent memory. Discover strategies for clearing conversational history, context, and learned information to ensure optimal age...
 date: 2026-04-08
 lastmod: 2026-04-08
 tags:
@@ -14,6 +14,9 @@ keywords:
 - n8n agent recall
 - clear AI memory
 - n8n workflow memory
+- n8n ai agent memory
+- reset n8n AI agent memory
+- manage n8n AI agent memory
 faq:
 - question: How does clearing n8n AI agent memory work?
   answer: Clearing n8n AI agent memory involves resetting or deleting the stored conversational history, context, or learned information associated with a specific agent instance within an n8n workflow.
@@ -24,6 +27,9 @@ faq:
 - question: Can I selectively clear parts of an n8n AI agent's memory?
   answer: Yes, depending on how the memory is implemented in your n8n workflow, you can often selectively clear specific data points or conversational turns rather than performing a full reset. This requires
     precise control over the memory storage mechanism.
+- question: What are the main types of memory used by n8n AI agents?
+  answer: n8n AI agents typically use short-term memory (like LLM context windows) for immediate conversation history and long-term memory, which can be stored in workflow variables, external databases,
+    or specialized memory systems.
 slug: n8n-ai-agent-clear-memory
 ---
 
@@ -213,3 +219,5 @@ Effective memory management is as important as the AI's core logic. For comprehe
  You might need to clear memory to reset an agent for a new task, remove outdated or incorrect information, ensure data privacy by purging sensitive history, or troubleshoot issues caused by corrupted or excessive memory accumulation.
 * **Can I selectively clear parts of an n8n AI agent's memory?**
  Yes, depending on how the memory is implemented in your n8n workflow, you can often selectively clear specific data points or conversational turns rather than performing a full reset. This requires precise control over the memory storage mechanism.
+* **What are the main types of memory used by n8n AI agents?**
+ n8n AI agents typically use short-term memory (like LLM context windows) for immediate conversation history and long-term memory, which can be stored in workflow variables, external databases, or specialized memory systems.

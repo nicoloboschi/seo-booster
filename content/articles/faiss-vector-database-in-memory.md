@@ -11,6 +11,9 @@ tags:
 - similarity search
 - AI agents
 - vector embeddings
+- fast vector search
+- AI recall
+- semantic search
 keywords:
 - faiss vector database in memory
 - FAISS
@@ -23,6 +26,8 @@ keywords:
 - fast vector search
 - AI recall
 - semantic search
+- faiss db
+- faiss in memory
 faq:
 - question: What makes FAISS suitable for in-memory vector databases?
   answer: FAISS is designed for efficient similarity search on large collections of vectors. Its in-memory capabilities allow it to load entire datasets into RAM, enabling sub-millisecond query responses,
@@ -36,6 +41,9 @@ faq:
 - question: What are the benefits of using a FAISS vector database in memory for AI agents?
   answer: The primary benefit is drastically reduced latency for memory retrieval. This allows AI agents to access and utilize past information almost instantaneously, leading to more fluid conversations,
     better decision-making, and a more coherent sense of context and recall.
+- question: What is a FAISS vector database in memory?
+  answer: A FAISS vector database in memory refers to the FAISS library's implementation where the entire vector index is loaded and operated upon directly within the computer's Random Access Memory (RAM).
+    This configuration prioritizes speed by eliminating disk I/O, making it ideal for applications demanding extremely fast similarity searches.
 slug: faiss-vector-database-in-memory
 ---
 

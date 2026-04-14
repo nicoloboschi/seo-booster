@@ -1,6 +1,6 @@
 ---
-title: 'Graphiti Zep Memory: Enhancing AI Recall with Vector Databases'
-description: 'Graphiti Zep Memory: Enhancing AI Recall with Vector Databases. Learn about graphiti zep memory, Zep Memory with practical examples, code snippets, and architectu...'
+title: 'Graphiti Zep Memory: Enhancing AI Recall with Vector Databases and Zep'
+description: 'Explore Graphiti Zep Memory, a powerful AI memory solution combining Zep's structured data with vector databases for superior AI recall. Learn about Zep Memory, practical examples, and code snippets.'
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:
@@ -8,12 +8,15 @@ tags:
 - Zep Memory
 - Vector Databases
 - AI Agents
+- Graphiti Zep Memory
 keywords:
 - graphiti zep memory
 - Zep Memory
 - vector databases
 - AI recall
 - agent memory
+- Zep
+- AI memory system
 faq:
 - question: What is Graphiti Zep Memory?
   answer: Graphiti Zep Memory is an AI memory solution that combines Zep's structured data storage for conversations with vector database capabilities for semantic search. This fusion enables AI agents
@@ -23,9 +26,10 @@ faq:
     knowledge, leading to more coherent and contextually aware responses.
 - question: Can Graphiti Zep Memory be used for long-term AI memory?
   answer: Yes, Graphiti Zep Memory is designed to facilitate long-term AI memory by storing vast amounts of data and enabling efficient retrieval, overcoming the limitations of short-term context windows.
+- question: What is Zep Memory in the context of AI?
+  answer: Zep Memory is a specialized memory store designed for Large Language Model (LLM) applications. It excels at storing and retrieving conversational data, user profiles, and other structured information, providing a robust foundation for AI agents to maintain context and recall past interactions effectively.
 slug: graphiti-zep-memory
 ---
-
 
 **Graphiti Zep Memory** enhances AI recall by integrating Zep's structured conversational data with vector database semantic search. This fusion allows AI agents to efficiently retrieve relevant past information, significantly improving contextual understanding and response accuracy. It's a key architecture for AI that remembers.
 

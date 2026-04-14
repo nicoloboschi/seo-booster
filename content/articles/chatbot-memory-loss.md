@@ -34,6 +34,9 @@ faq:
 - question: What is the impact of AI forgetting conversations on user experience?
   answer: AI forgetting conversations leads to user frustration, repetitive questioning, slower task completion, lack of personalization, and erosion of trust. This significantly degrades the user experience
     and highlights the problem of AI losing context.
+- question: How does the LLM context window contribute to chatbot memory loss?
+  answer: The LLM context window is a finite limit on the amount of text a model can process at once. When a conversation exceeds this limit, older parts of the dialogue are dropped, causing the AI to forget
+    previous turns and leading to chatbot memory loss.
 slug: chatbot-memory-loss
 ---
 
@@ -146,4 +149,3 @@ conversation_stateless = ConversationChain(
 )
 
 print("
-
