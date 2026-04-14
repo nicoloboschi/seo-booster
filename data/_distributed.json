@@ -2341,7 +2341,13 @@
     }
   },
   "best-ai-memory-systems": {
-    "platforms": {}
+    "platforms": {
+      "hashnode": {
+        "id": "69de43683e0e2b03974b13f8",
+        "url": "https://aiagentmemory.hashnode.dev/evaluating-the-best-ai-memory-systems-for-advanced-agents",
+        "posted_at": "2026-04-14T15:38:48"
+      }
+    }
   },
   "best-ai-memory-tool": {
     "platforms": {
@@ -6561,6 +6567,24 @@
         "id": "69de4247f7623bef9140d12b",
         "url": "https://aiagentmemory.hashnode.dev/best-ai-app-for-memory-finding-the-right-tool-for-your-agent",
         "posted_at": "2026-04-14T15:33:59"
+      }
+    }
+  },
+  "central-memory-vs-effector-memory": {
+    "platforms": {
+      "hashnode": {
+        "id": "69de436c314c230a383f31cd",
+        "url": "https://aiagentmemory.hashnode.dev/central-memory-vs-effector-memory-in-ai-agents-understanding-the-core-differences",
+        "posted_at": "2026-04-14T15:38:52"
+      }
+    }
+  },
+  "character-ai-memory-system": {
+    "platforms": {
+      "hashnode": {
+        "id": "69de4370b26af4ad302c53d3",
+        "url": "https://aiagentmemory.hashnode.dev/character-ai-memory-system-how-it-works-its-importance-features",
+        "posted_at": "2026-04-14T15:38:56"
       }
     }
   }
