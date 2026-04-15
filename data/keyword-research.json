@@ -5642,11 +5642,9 @@
     {
       "keyword": "llm course time",
       "slug": "llm-course-time",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm course time"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm decoding memory bound",
@@ -9030,8 +9028,8 @@
   ],
   "summary": {
     "total_keywords": 947,
-    "validated": 899,
-    "low_volume": 48,
+    "validated": 898,
+    "low_volume": 49,
     "new_opportunities_found": 1
   }
 }
