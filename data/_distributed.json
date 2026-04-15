@@ -6632,5 +6632,41 @@
         "posted_at": "2026-04-15T17:30:19"
       }
     }
+  },
+  "ai-memory-chip-manufacturers": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfcd11cf3246047c615ae8",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-chip-manufacturers-powering-next-gen-intelligent-systems",
+        "posted_at": "2026-04-15T19:38:26"
+      }
+    }
+  },
+  "ai-memory-context": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfcd161df89359478f2d10",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-context-how-agents-understand-and-recall-information",
+        "posted_at": "2026-04-15T19:38:30"
+      }
+    }
+  },
+  "ai-memory-model": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfcd1a1df89359478f2d12",
+        "url": "https://aiagentmemory.hashnode.dev/understanding-the-ai-memory-model-how-agents-remember-and-learn",
+        "posted_at": "2026-04-15T19:38:34"
+      }
+    }
+  },
+  "best-memory-layer-for-ai-agents": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfcd1e1df89359478f2d14",
+        "url": "https://aiagentmemory.hashnode.dev/best-memory-layer-for-ai-agents-selecting-the-right-architecture",
+        "posted_at": "2026-04-15T19:38:38"
+      }
+    }
   }
 }
