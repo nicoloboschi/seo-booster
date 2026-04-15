@@ -112,7 +112,6 @@ This capability significantly reduces the reliance on external retrieval mechani
 
 The trajectory of the **LLM context window over time** points towards ever-increasing capacities, with research actively exploring **trillion token context windows**. We are likely to see windows that can handle entire libraries or vast datasets. However, the challenge will remain how to efficiently process and retrieve relevant information from such immense contexts. The **LLM context window growth** is expected to continue, pushing the boundaries of **LLM context window size**.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 The future will likely involve a hybrid approach:

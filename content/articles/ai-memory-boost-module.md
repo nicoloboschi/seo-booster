@@ -49,6 +49,7 @@ faq:
   answer: Key benefits include improved task completion rates, enhanced user experience through better context retention, greater adaptability and learning, and scalability for complex applications.
 slug: ai-memory-boost-module
 ---
+---
 
 An **AI memory boost module** is a specialized component designed to significantly improve an AI agent's ability to store, retrieve, and use information, thereby enhancing its performance and recall capabilities. It acts as an intelligent augmentation to an agent's inherent memory, enabling more sophisticated and nuanced AI behavior. This module unlocks truly advanced agentic capabilities.
 

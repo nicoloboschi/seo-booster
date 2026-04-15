@@ -49,6 +49,7 @@ faq:
     tasks, VRAM is equally crucial, directly impacting model training speed and the complexity of models that can be handled.
 slug: how-much-ram-for-ai
 ---
+---
 
 Could your AI project be crippled by insufficient RAM? Training large models demands immense memory, often exceeding that of thousands of average computers combined. The amount of RAM needed for AI varies significantly, from 16GB for basic tasks to over 128GB for large models. System RAM supports data loading and OS functions, while GPU VRAM is crucial for model computation. Understanding **how much RAM for AI** is key for optimal performance.
 

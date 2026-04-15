@@ -48,7 +48,6 @@ For AI agents to be truly useful, they need to possess a form of **AI agent memo
 
 Addressing the **LLM context window** limitations requires innovative approaches. Several techniques are being developed and used to enable **long-term memory AI** and improve **AI recall from distance**.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Retrieval-Augmented Generation (RAG) for Enhanced Recall

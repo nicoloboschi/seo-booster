@@ -49,6 +49,7 @@ faq:
     Each plays a role in overcoming the LLM memory bottleneck.
 slug: llm-memory-bottleneck
 ---
+---
 
 The **LLM memory bottleneck** represents a critical limitation in how much information a Large Language Model can actively process and retain at once. This constraint, primarily due to the finite **context window**, restricts the input size for a single inference, directly impacting an AI's ability to recall extensive past information or complex instructions.
 

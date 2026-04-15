@@ -164,7 +164,6 @@ try:
  weight_gb_fp16_7b = estimate_weight_size_gb(model_name_7b, precision_bytes=2)
  print(f"Estimated weight size for {model_name_7b} (FP16): {weight_gb_fp16_7b:.2f} GB")
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
  model_name_70b = "meta-llama/Llama-2-70b-hf" # Example model

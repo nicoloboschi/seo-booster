@@ -46,7 +46,6 @@
     ],
     "ai memory": [
       "ai agent memory knowledge graph",
-      "ai and memory wall",
       "ai episodic memory",
       "ai episodic memory faiss",
       "ai external memory",
@@ -64,6 +63,7 @@
       "ai killing ram prices",
       "ai memory agent",
       "ai memory aid",
+      "ai memory algorithm",
       "ai memory and context"
     ],
     "best ai memory": [
@@ -347,7 +347,7 @@
       "how to use mem0",
       "mem0 agent memory",
       "mem0 ai",
-      "mem0 ai founder",
+      "mem0 ai github",
       "mem0 ai memory",
       "mem0 alternatives",
       "mem0 api",
@@ -383,6 +383,8 @@
       "letta formerly memgpt",
       "letta memgpt github",
       "letta memgpt paper",
+      "letta memgpt reddit",
+      "letta metagpt",
       "letta vs memgpt",
       "rezept topfennockerl"
     ]
@@ -560,7 +562,7 @@
     {
       "keyword": "letta ai",
       "slug": "letta-ai-guide",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 7,
       "validated": true,
       "matching_suggestions": [
         "letta ai memgpt",
@@ -580,7 +582,7 @@
         "llm memory management",
         "llm memory management github",
         "llm memory management tools",
-        "llm memory systems"
+        "llm memory system"
       ]
     },
     {
@@ -605,13 +607,13 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 16,
+      "autocomplete_matches": 15,
       "validated": true,
       "matching_suggestions": [
         "example of limited memory ai",
         "limited memory ai",
-        "limited memory ai examples",
         "limited memory ai kya hai",
+        "limited memory ai examples",
         "limited memory ai examples"
       ]
     },
@@ -634,14 +636,14 @@
     {
       "keyword": "does character ai have long term memory",
       "slug": "character-ai-long-term-memory",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
-        "character ai memory extension",
         "how to improve character ai memory",
         "what is character ai memory",
         "what is character ai memory limit",
-        "character ai memory system"
+        "character ai memory system",
+        "how to make character ai memory better"
       ]
     },
     {
@@ -841,11 +843,9 @@
     {
       "keyword": "ai and memory wall",
       "slug": "ai-and-memory-wall",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai and memory wall"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai app that remembers everything",
@@ -1426,10 +1426,9 @@
     {
       "keyword": "ai memory book",
       "slug": "ai-memory-book",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory book",
         "ai memory book generator"
       ]
     },
@@ -1704,11 +1703,10 @@
     {
       "keyword": "ai memory extension",
       "slug": "ai-memory-extension",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory extension",
-        "character ai memory extension"
+        "ai memory extension"
       ]
     },
     {
@@ -2504,7 +2502,7 @@
     {
       "keyword": "ai that remembers everything",
       "slug": "ai-that-remembers-everything",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 7,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers everything",
@@ -2905,12 +2903,13 @@
     {
       "keyword": "best ai that remembers",
       "slug": "best-ai-that-remembers",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "best ai that remembers",
         "best ai that remembers conversations",
-        "best ai that remembers everything"
+        "best ai that remembers everything",
+        "what is the best ai that remembers everything"
       ]
     },
     {
@@ -3115,9 +3114,11 @@
     {
       "keyword": "best memory for ai agents",
       "slug": "best-memory-for-ai-agents",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory for ai agents"
+      ]
     },
     {
       "keyword": "big context window llm",
@@ -3608,11 +3609,9 @@
     {
       "keyword": "context window llm size",
       "slug": "context-window-llm-size",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window llm size"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window management llm",
@@ -4978,10 +4977,9 @@
     {
       "keyword": "ai memory systems",
       "slug": "ai-memory-systems",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory systems",
         "ai memory systems"
       ]
     },
@@ -7040,11 +7038,9 @@
     {
       "keyword": "mem0 ai founder",
       "slug": "mem0-ai-founder",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 ai founder"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 ai memory",
@@ -7349,11 +7345,9 @@
     {
       "keyword": "memory plugin ai",
       "slug": "memory-plugin-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "memory plugin ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "memory system for ai agents",
@@ -9026,12 +9020,17 @@
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github"
+    "ai long term.memory github",
+    "ai memory algorithm",
+    "ai memory efficiency",
+    "ai memory model",
+    "mem0 ai github",
+    "zep memory funding"
   ],
   "summary": {
     "total_keywords": 947,
-    "validated": 899,
-    "low_volume": 48,
-    "new_opportunities_found": 1
+    "validated": 896,
+    "low_volume": 51,
+    "new_opportunities_found": 6
   }
 }
