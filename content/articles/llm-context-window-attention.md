@@ -49,7 +49,7 @@ faq:
     current token being processed, thereby influencing the output. The **LLM context window attention** specifically refers to how this attention operates within the defined token limit of the context window.
 slug: llm-context-window-attention
 ---
----
+
 
 **LLM context window attention** is the mechanism allowing large language models to dynamically focus on relevant parts of input text within their processing limits. It assigns importance scores to tokens, enabling AI to prioritize information for better comprehension and recall, crucial for effective AI memory. This dynamic weighting is fundamental to their understanding and **AI information processing**.
 
