@@ -36,6 +36,9 @@ faq:
 - question: Where can I see my ChatGPT memory?
   answer: You can see your ChatGPT memory by accessing your conversation history on the OpenAI platform. This history tab displays all your past chats, allowing you to review them. For more advanced memory
     beyond the current session, you'll need to explore specialized AI memory systems.
+- question: How does ChatGPT's memory work for AI agents?
+  answer: For AI agents, ChatGPT's memory is typically managed through its conversational context window. For persistent AI memory, developers often integrate external systems like vector databases or specialized
+    memory frameworks to store and retrieve information across sessions.
 slug: how-to-find-chatgpt-memory
 ---
 

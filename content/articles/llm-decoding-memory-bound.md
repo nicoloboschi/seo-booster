@@ -24,7 +24,7 @@ keywords:
 faq:
 - question: What does 'LLM decoding memory bound' mean?
   answer: LLM decoding memory bound refers to the performance degradation or failure of a Large Language Model to accurately recall or process information due to limitations in its accessible memory, particularly
-    during the decoding or generation phase of LLM inference.
+    during the decoding or generation phase of LLM inference. It means the AI's ability to produce output is constrained by its memory access capabilities.
 - question: How does the context window limit LLM memory?
   answer: The context window limits how much information an LLM can actively consider at any given moment. When information falls outside this window, the model effectively 'forgets' it, leading to memory
     bound issues during complex tasks.
@@ -34,6 +34,9 @@ faq:
 - question: What is the role of the decoding phase in LLM memory bound issues?
   answer: The decoding phase is critical because it's when the LLM generates output token by token. If the model cannot efficiently access or process necessary information from its memory during this phase,
     it becomes memory bound, leading to errors in recall and coherence.
+- question: What are the key challenges associated with the decode phase LLM inference memory bound?
+  answer: The primary challenges of the decode phase LLM inference memory bound include slow response times, inaccurate or irrelevant output generation, and an inability to maintain context or recall specific
+    details from earlier in the conversation or task. This is due to the model's struggle to access and process the necessary information within its memory constraints during the sequential generation process.
 slug: llm-decoding-memory-bound
 ---
 
@@ -45,7 +48,7 @@ Could an AI forget your name mid-conversation? This isn't science fiction; it's 
 
 ### The Core Problem: Information Retrieval During Generation
 
-During the **decoding** phase, an LLM generates text token by token. At each step, it needs to access relevant information. This includes its training data, its immediate context window, and any external memory systems. When this retrieval process is slow, incomplete, or inaccurate, the model becomes **memory bound**. Its generation quality is then directly limited by its memory access speed and fidelity. The **LLM decoding memory bound** is a significant challenge for complex AI tasks, impacting **LLM inference memory bound** scenarios.
+During the **decoding** phase, an LLM generates text token by token. At each step, it needs to access relevant information. This includes its training data, its immediate context window, and any external memory systems. When this retrieval process is slow, incomplete, or inaccurate, the model becomes **memory bound**. Its generation quality is then directly limited by its memory access speed and fidelity. The **LLM decoding memory bound** is a significant challenge for complex AI tasks, impacting **AI inference memory bound** scenarios.
 
 ### Context Window Limitations
 

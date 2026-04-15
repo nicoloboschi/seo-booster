@@ -31,6 +31,9 @@ faq:
 - question: What is the role of AI memory in a chatbot with infinite memory?
   answer: AI memory systems are crucial for enabling a chatbot to store, retrieve, and utilize past interactions and learned information, forming the foundation for persistent recall and a near-infinite
     memory capability.
+- question: How does Retrieval-Augmented Generation (RAG) contribute to a chatbot with infinite memory?
+  answer: RAG allows a chatbot to access and utilize external, long-term memory stores dynamically. Instead of relying solely on a fixed knowledge base, RAG queries a persistent memory store, making the
+    chatbot's responses informed by its entire interaction history.
 slug: chatbot-with-infinite-memory
 ---
 

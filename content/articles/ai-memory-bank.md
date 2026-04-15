@@ -49,6 +49,10 @@ An **AI memory bank** is a system within an AI agent that stores, organizes, and
 
 An **AI memory bank** is a dedicated system within an AI agent responsible for storing, organizing, and retrieving information acquired during its operation. It acts as the agent's knowledge repository, allowing it to build context, learn from experiences, and make informed decisions. This memory is vital for tasks requiring continuity and understanding over extended periods. The concept of an **AI memory system** is central to creating sophisticated AI agents.
 
+### Definition: AI Memory Bank
+
+An **AI memory bank** is a computational structure designed to store, manage, and retrieve information for an artificial intelligence agent. It serves as the agent's persistent knowledge base, enabling it to learn from past interactions, recall relevant data, and apply this knowledge to future tasks and decision-making processes.
+
 ## Types of AI Memory
 
 AI memory banks aren't monolithic; they encompass various structures designed for different types of information and recall needs. Understanding these types is key to building sophisticated AI agents capable of nuanced behavior. These can broadly be categorized based on the nature of the information stored and how it's accessed.

@@ -36,6 +36,10 @@ faq:
   answer: LangGraph can implement AI conversation summarization techniques by dedicating specific nodes to process conversation history. These nodes can leverage LLMs to perform extractive, abstractive,
     or hierarchical summarization. The condensed summaries are then updated within the agent's state, effectively managing memory size and ensuring relevant context is retained for future interactions.
     This is a crucial aspect of **langgraph memory management**.
+- question: How can AI conversation summarization techniques be implemented for stateful memory in chatbots?
+  answer: AI conversation summarization techniques can be implemented for **stateful memory** by creating dedicated nodes within LangGraph that process conversation history. These nodes can utilize LLMs
+    to perform extractive, abstractive, or hierarchical summarization. The resulting condensed summaries are then updated within the agent's state, effectively managing memory size and ensuring relevant
+    context is retained for future interactions. This is a crucial aspect of **langgraph memory management** and essential for maintaining effective **stateful memory**.
 slug: chatbot-with-memory-langgraph
 ---
 

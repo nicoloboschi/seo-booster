@@ -56,6 +56,9 @@ faq:
 - question: What is the role of AI data storage in meeting AI memory demand?
   answer: AI data storage solutions are critical for housing the vast amounts of information AI systems need to access. Efficient and scalable AI data storage is fundamental to meeting the growing AI memory
     demand, enabling long-term recall and complex agent operations.
+- question: What are the core challenges in managing AI memory demand?
+  answer: Core challenges include balancing memory capacity with computational cost, ensuring efficient data retrieval, handling data volatility, and developing scalable storage solutions that can adapt
+    to the dynamic nature of AI workloads.
 slug: ai-memory-demand
 ---
 
@@ -209,15 +212,15 @@ class ConsolidatingMemory:
 
 ## Example Usage:
 ## Assuming openai.api_key is set or loaded from environment variables
-memory_manager = ConsolidatingMemory(max_recent_items=20, consolidation_threshold=3)
-memory_manager.add_memory("User asked about the weather in London.")
-memory_manager.add_memory("Agent provided the current weather for London.")
-memory_manager.add_memory("User asked about the capital of France.")
-memory_manager.add_memory("Agent correctly stated Paris is the capital of France.")
-memory_manager.add_memory("User asked for a recommendation for Italian food.")
-memory_manager.add_memory("Agent suggested a local Italian restaurant.")
+## memory_manager = ConsolidatingMemory(max_recent_items=20, consolidation_threshold=3)
+## memory_manager.add_memory("User asked about the weather in London.")
+## memory_manager.add_memory("Agent provided the current weather for London.")
+## memory_manager.add_memory("User asked about the capital of France.")
+## memory_manager.add_memory("Agent correctly stated Paris is the capital of France.")
+## memory_manager.add_memory("User asked for a recommendation for Italian food.")
+## memory_manager.add_memory("Agent suggested a local Italian restaurant.")
 
-print("\n")
+## print("\n")
 ```
 
 ## How AI Agent Autonomy Impacts AI Memory Demand

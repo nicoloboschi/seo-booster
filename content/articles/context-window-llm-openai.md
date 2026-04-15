@@ -106,14 +106,20 @@ The **context window** is a critical parameter for Large Language Models, direct
 
 ## FAQ
 
-### What is the main limitation of an LLM's context window?
+### What is the context window of an LLM?
+The context window of an LLM refers to the maximum amount of text, measured in tokens, that the model can consider at any given time during processing or generation. It dictates how much information the model can 'remember' or refer to from the input prompt and its own previous outputs.
 
+### How does OpenAI's context window compare to others?
+OpenAI has consistently pushed the boundaries of context window sizes with models like GPT-4 Turbo offering up to 128,000 tokens. While other research labs and companies are also developing larger context windows, OpenAI's offerings are among the most accessible and widely adopted in the industry.
+
+### Why is the context window size important for AI agents?
+A larger context window allows AI agents to maintain a more coherent and detailed understanding of long conversations or complex instructions. This directly impacts their ability to perform tasks requiring recall of prior information, leading to more effective and less forgetful interactions.
+
+### What is the main limitation of an LLM's context window?
 The primary limitation is its fixed size. If an input or conversation exceeds the token limit of the context window, the LLM will lose access to the oldest parts of the information, potentially leading to an incomplete understanding or inability to recall critical details.
 
 ### How does a larger context window benefit AI agent performance?
-
 A larger context window allows an AI agent to hold more information about a task, user, and previous interactions within its active memory. This leads to more coherent, contextually relevant, and less forgetful responses, enabling the agent to handle more complex tasks and maintain longer, more meaningful conversations.
 
 ### Are there ways to overcome context window limitations without relying on OpenAI models?
-
 Yes, techniques like Retrieval-Augmented Generation (RAG), external memory databases (e.g., vector stores), and information summarization allow AI systems to process and use information that exceeds the LLM's native context window. This is crucial for building persistent and knowledgeable agents.

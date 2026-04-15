@@ -47,6 +47,9 @@ faq:
 - question: How does AI memory improve n8n agent capabilities?
   answer: AI memory allows n8n agents to maintain context across multiple interactions, recall past conversations or actions, and make more informed decisions. This transforms them from stateless tools
     into more intelligent, adaptive, and personalized assistants, crucial for advanced n8n AI agent memory.
+- question: What is the primary goal of implementing AI memory in n8n?
+  answer: The primary goal is to enable n8n workflows and AI agents to retain context, recall past interactions, and make more informed, personalized decisions, transforming them from stateless processes
+    into dynamic, learning systems. This is the core of **n8n AI agent memory**.
 slug: ai-memory-n8n
 ---
 ---

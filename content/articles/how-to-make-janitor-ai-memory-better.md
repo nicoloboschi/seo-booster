@@ -1,6 +1,6 @@
 ---
 title: 'How to Make Janitor AI Memory Better: A Comprehensive Guide'
-description: Discover practical strategies to enhance Janitor AI memory. Learn about context window optimization, Retrieval-Augmented Generation (RAG), vector databases, and more to improve AI agent performance.
+description: Discover practical strategies to enhance Janitor AI memory. Learn about context window optimization, Retrieval-Augmented Generation (RAG), vector databases, and more to improve AI agent performance and make Janitor AI better.
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:
@@ -38,6 +38,8 @@ faq:
     and accurate responses.
 - question: What makes Janitor AI memory "good"?
   answer: "Good" Janitor AI memory is characterized by its ability to accurately recall relevant past information, maintain context over extended interactions, learn from experiences, and avoid repeating errors. This leads to more efficient and reliable task execution.
+- question: How can I make Janitor AI faster?
+  answer: Making Janitor AI faster often involves optimizing its memory retrieval, reducing redundant computations, and ensuring efficient context window management. Techniques like RAG and optimized vector databases can significantly speed up response times by providing quicker access to relevant information.
 slug: how-to-make-janitor-ai-memory-better
 ---
 

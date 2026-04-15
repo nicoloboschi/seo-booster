@@ -47,6 +47,9 @@ faq:
 - question: How do embedding models facilitate efficient **vector embeddings retrieval**?
   answer: Embedding models convert data into vectors. **Vector embeddings retrieval** involves embedding a query and then searching a vector database for stored vectors that are closest to the query vector,
     enabling fast and semantically relevant data recall.
+- question: How can embedding models be fine-tuned for specific AI memory tasks?
+  answer: Fine-tuning involves further training a pre-trained embedding model on a dataset relevant to the specific AI memory task or domain. This helps the model better capture the nuances of the target
+    data, leading to more accurate semantic representations and improved retrieval performance.
 slug: embedding-models-for-memory
 ---
 ---

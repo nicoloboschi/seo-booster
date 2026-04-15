@@ -20,6 +20,9 @@ keywords:
 - how LLMs remember
 - AI memory systems
 - persistent memory AI
+- vector databases for AI
+- AI memory benchmarks
+- embedding models for memory
 faq:
 - question: What is the main goal of LLM memory consolidation?
   answer: The primary goal is to enable LLMs to retain and recall information beyond their immediate context window, facilitating more consistent and knowledgeable interactions over time.
@@ -30,6 +33,9 @@ faq:
 - question: How do LLMs achieve long-term memory?
   answer: LLMs achieve long-term memory through processes like memory consolidation, which transfers information from transient working memory to persistent storage, enabling recall beyond the immediate
     context window.
+- question: What are vector databases and how do they relate to LLM memory?
+  answer: Vector databases are specialized databases designed to store and efficiently search high-dimensional data, such as embeddings generated from text. They are crucial for LLM memory consolidation
+    as they enable rapid retrieval of semantically similar information from long-term storage.
 slug: llm-memory-consolidation
 ---
 
@@ -171,3 +177,6 @@ A: Hardware can impact speed and capacity, but the core improvements in LLM memo
 
 **Q: How do LLMs achieve long-term memory?**
 A: LLMs achieve long-term memory through processes like memory consolidation, which transfers information from transient working memory to persistent storage, enabling recall beyond the immediate context window.
+
+**Q: What are vector databases and how do they relate to LLM memory?**
+A: Vector databases are specialized databases designed to store and efficiently search high-dimensional data, such as embeddings generated from text. They are crucial for LLM memory consolidation as they enable rapid retrieval of semantically similar information from long-term storage.

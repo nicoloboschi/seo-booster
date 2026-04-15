@@ -33,6 +33,9 @@ faq:
 - question: Why is persistent AI memory important for AI agents?
   answer: Persistent AI memory allows agents to build upon past interactions, maintain context across sessions, learn and adapt over time, and perform complex tasks that require remembering information
     beyond a single interaction. This is crucial for creating more capable and user-friendly AI.
+- question: How does Retrieval-Augmented Generation (RAG) contribute to AI memory?
+  answer: RAG enhances LLMs by retrieving relevant information from external knowledge bases and feeding it into the model's prompt. This allows AI agents to access up-to-date and specific information,
+    effectively extending their memory and improving response accuracy for persistent AI memory needs.
 slug: ai-memory-makers
 ---
 
@@ -42,7 +45,7 @@ slug: ai-memory-makers
 
 **AI memory makers** are the foundational technologies and architectural components that enable artificial intelligence systems, particularly AI agents, to store, retain, and recall information over time. They go beyond simple data storage, aiming to provide AI with a functional and context-aware memory analogous to human recollection, crucial for learning and complex task execution.
 
-These systems are critical for building more capable and persistent AI agents. Without effective memory, AI agents would be limited to stateless interactions, forgetting everything after each turn. **AI memory makers** allow agents to build upon past experiences, maintain conversational context, and perform tasks requiring long-term knowledge retention. This shift from stateless to **stateful AI** is a major advancement.
+These systems are critical for building more capable and persistent AI agents. Without effective memory, AI agents would be limited to stateless interactions, forgetting everything after each turn. **AI memory makers** allow agents to build upon past experiences, maintain conversational context, and perform tasks requiring long-term knowledge retention. This shift from stateless to **stateful AI** is a major advancement in **artificial intelligence memory**.
 
 ### The Crucial Role of Memory in AI Agents for Persistent AI
 

@@ -1,6 +1,6 @@
 ---
 title: 'Jan AI Long Term Memory: Enabling Persistent Agent Recall for Smarter AI'
-description: Discover how Jan AI long term memory empowers AI agents to store and recall information beyond immediate context, crucial for complex tasks and continuous learning.
+description: Discover how Jan AI long term memory empowers AI agents to store and recall information beyond immediate context, crucial for complex tasks and continuous learnin...
 date: 2026-04-03
 lastmod: 2026-04-03
 tags:
@@ -10,6 +10,8 @@ tags:
 - agent architecture
 - AI agents
 - persistent memory
+- vector databases
+- RAG
 keywords:
 - jan ai long term memory
 - AI memory
@@ -33,6 +35,9 @@ faq:
 - question: How do vector databases contribute to Jan AI long term memory?
   answer: Vector databases store information as numerical vectors. They enable efficient searching for semantically similar information, which is crucial for retrieving relevant memories from a large dataset,
     forming the backbone of many long-term memory implementations for AI.
+- question: What is the primary function of Jan AI long term memory?
+  answer: The primary function of Jan AI long term memory is to allow AI agents to store, retain, and recall information over extended periods, enabling them to maintain context, learn from past interactions,
+    and perform complex tasks that require historical data.
 slug: jan-ai-long-term-memory
 ---
 
@@ -144,14 +149,13 @@ For a deeper dive into various AI memory systems, explore our guide on the [best
 
 ## FAQ
 
-* **What is the primary function of Jan AI long term memory?**
- The primary function of Jan AI long term memory is to allow AI agents to store, retain, and recall information over extended periods, enabling them to maintain context, learn from past interactions, and perform complex tasks that require historical data.
-
-* **How do vector databases contribute to Jan AI long term memory?**
- Vector databases store information as numerical vectors. They enable efficient searching for semantically similar information, which is crucial for retrieving relevant memories from a large dataset, forming the backbone of many long-term memory implementations for AI.
-
+* **What is Jan AI long term memory?**
+ Jan AI long term memory refers to the system or mechanism that allows AI agents built with or for Jan AI to store and retrieve information over extended periods, far beyond the immediate conversational turn or task context.
+* **How does Jan AI long term memory differ from short-term memory?**
+ Short-term memory is transient, holding information only for the current interaction. Long term memory, like that conceptualized for Jan AI, persists indefinitely, enabling agents to build a history of experiences and knowledge.
 * **Why is long term memory important for AI agents?**
  Long term memory is vital for AI agents to learn from past interactions, maintain context across multiple sessions, personalize responses, and perform complex, multi-step tasks that require recalling prior events or learned information.
-
-* **What are the key challenges in implementing long term memory for AI agents?**
- Key challenges include ensuring scalability and managing costs, accurately retrieving relevant information while reducing noise, developing sophisticated temporal reasoning capabilities, and addressing critical privacy and security concerns related to storing vast amounts of data.
+* **How do vector databases contribute to Jan AI long term memory?**
+ Vector databases store information as numerical vectors. They enable efficient searching for semantically similar information, which is crucial for retrieving relevant memories from a large dataset, forming the backbone of many long-term memory implementations for AI.
+* **What is the primary function of Jan AI long term memory?**
+ The primary function of Jan AI long term memory is to allow AI agents to store, retain, and recall information over extended periods, enabling them to maintain context, learn from past interactions, and perform complex tasks that require historical data.

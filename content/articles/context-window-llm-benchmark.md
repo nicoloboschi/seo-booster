@@ -39,6 +39,10 @@
     {
       "question": "What is the 'lost in the middle' phenomenon in LLMs?",
       "answer": "The 'lost in the middle' phenomenon refers to the tendency of LLMs to struggle with recalling information presented in the middle of a very long context window, even if they can access information at the beginning or end. A **context window LLM benchmark** is designed to identify and quantify this weakness."
+    },
+    {
+      "question": "What are the main types of context window LLM benchmarks?",
+      "answer": "The main types of **context window LLM benchmarks** include comprehensive suites like LongBench, focused recall tests like the Needle-in-a-Haystack (NIH) test, and custom evaluation approaches tailored to specific applications. These benchmarks are crucial for **evaluating LLM memory** and overall **LLM performance**."
     }
   ],
   "slug": "context-window-llm-benchmark"
@@ -234,3 +238,6 @@ Key challenges include high computational costs for evaluating large contexts, e
 
 ### What is the 'lost in the middle' phenomenon in LLMs?
 The 'lost in the middle' phenomenon refers to the tendency of LLMs to struggle with recalling information presented in the middle of a very long context window, even if they can access information at the beginning or end. A **context window LLM benchmark** is designed to identify and quantify this weakness.
+
+### What are the main types of context window LLM benchmarks?
+The main types of **context window LLM benchmarks** include comprehensive suites like LongBench, focused recall tests like the Needle-in-a-Haystack (NIH) test, and custom evaluation approaches tailored to specific applications. These benchmarks are crucial for **evaluating LLM memory** and overall **LLM performance**.

@@ -23,7 +23,8 @@ keywords:
 - does ai use ram or vram
 - does ai use vram or ram
 - ram in ai
-- ram vs vram for ai
+- vram vs ram for ai
+- why does ai use vram instead of ram
 faq:
 - question: What is the primary difference between system RAM and VRAM for AI?
   answer: System RAM is general-purpose memory for the CPU, handling OS and program logic. VRAM is specialized GPU memory, optimized for the parallel, high-bandwidth computations required by AI models like
@@ -43,6 +44,9 @@ faq:
 - question: Why is VRAM more important than RAM for AI training?
   answer: VRAM is crucial for AI training because it directly interfaces with the GPU, which performs the massive parallel computations required for deep learning. Its high bandwidth and proximity to the
     processing cores allow for much faster data access and computation compared to system RAM, which is accessed by the CPU.
+- question: Does AI use RAM or VRAM for its core computations?
+  answer: For its core computations, AI heavily relies on VRAM. While system RAM handles general tasks and data management, the intensive parallel processing required by AI models like neural networks is
+    performed on the GPU, utilizing VRAM.
 slug: ai-ram-or-vram
 ---
 
@@ -225,3 +229,6 @@ The key difference lies in their purpose and optimization. RAM is system memory 
 
 ### Why is VRAM more important than RAM for AI training?
 VRAM is crucial for AI training because it directly interfaces with the GPU, which performs the massive parallel computations required for deep learning. Its high bandwidth and proximity to the processing cores allow for much faster data access and computation compared to system RAM, which is accessed by the CPU.
+
+### Does AI use RAM or VRAM for its core computations?
+For its core computations, AI heavily relies on VRAM. While system RAM handles general tasks and data management, the intensive parallel processing required by AI models like neural networks is performed on the GPU, using VRAM.

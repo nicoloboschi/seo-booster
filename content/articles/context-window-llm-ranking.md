@@ -39,6 +39,9 @@ faq:
 - question: What is the "lost in the middle" problem in LLMs?
   answer: The "lost in the middle" problem refers to the phenomenon where LLMs, especially those with very large context windows, struggle to accurately recall information that is positioned in the middle
     of the input sequence, often prioritizing information at the beginning or end.
+- question: What is LLM context window ranking?
+  answer: LLM context window ranking is the process of evaluating and comparing large language models (LLMs) based on the size, effectiveness, and efficiency of their context windows. This ranking helps
+    users and developers choose models best suited for tasks requiring the processing of extensive text or long conversational histories.
 slug: context-window-llm-ranking
 ---
 

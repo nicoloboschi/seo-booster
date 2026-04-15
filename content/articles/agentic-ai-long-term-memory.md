@@ -65,6 +65,14 @@
     {
       "question": "What are the benefits of using embedding models for agentic AI memory?",
       "answer": "Embedding models are crucial for agentic AI memory as they convert information into numerical representations that capture semantic meaning. This allows for efficient similarity searches, enabling the AI to retrieve relevant past data based on the context of its current task, thereby improving the accuracy and relevance of its responses and contributing to effective AI memory systems."
+    },
+    {
+      "question": "What is memory consolidation in AI agents?",
+      "answer": "Memory consolidation in AI agents refers to processes that strengthen, organize, and potentially summarize or prune stored information to improve its accessibility and relevance over time. This helps manage the growing volume of data in an agent's long-term memory and prevents it from becoming overwhelmed by less important details."
+    },
+    {
+      "question": "What are the core components of implementing short-term and long-term memory in agentic AI systems?",
+      "answer": "Implementing short-term and long-term memory in agentic AI systems involves distinct but interconnected components. Short-term memory (or working memory) handles immediate context and active processing, often managed by the LLM itself. Long-term memory involves persistent storage mechanisms like vector databases, knowledge graphs, or relational databases, coupled with retrieval strategies and memory consolidation processes to manage vast amounts of historical data."
     }
   ]
 }
@@ -189,3 +197,7 @@ Implementing long-term memory is a foundational requirement for agentic AI to ac
     Temporal reasoning allows agentic AI to understand the sequence of events, causality, and the duration of actions. This is crucial for tasks requiring an understanding of history, predicting future outcomes, and maintaining context across time, making memory retrieval more accurate and relevant for agentic workflows memory.
 *   **What are the benefits of using embedding models for agentic AI memory?**
     Embedding models are crucial for agentic AI memory as they convert information into numerical representations that capture semantic meaning. This allows for efficient similarity searches, enabling the AI to retrieve relevant past data based on the context of its current task, thereby improving the accuracy and relevance of its responses and contributing to effective AI memory systems.
+*   **What is memory consolidation in AI agents?**
+    Memory consolidation in AI agents refers to processes that strengthen, organize, and potentially summarize or prune stored information to improve its accessibility and relevance over time. This helps manage the growing volume of data in an agent's long-term memory and prevents it from becoming overwhelmed by less important details.
+*   **What are the core components of implementing short-term and long-term memory in agentic AI systems?**
+    Implementing short-term and long-term memory in agentic AI systems involves distinct but interconnected components. Short-term memory (or working memory) handles immediate context and active processing, often managed by the LLM itself. Long-term memory involves persistent storage mechanisms like vector databases, knowledge graphs, or relational databases, coupled with retrieval strategies and memory consolidation processes to manage vast amounts of historical data.

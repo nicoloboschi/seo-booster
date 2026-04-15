@@ -39,6 +39,9 @@ faq:
   answer: Janitor AI chat memory refers to the specific application of Janitor AI's persistent memory capabilities within conversational AI agents. It's crucial because it allows chatbots and virtual assistants
     to remember previous interactions, user preferences, and context across multiple chat sessions. This transforms a stateless bot into a more intelligent, personalized, and engaging conversational partner,
     significantly improving the user experience.
+- question: What is Janitor AI chat memory specifically?
+  answer: Janitor AI chat memory is the specialized implementation of Janitor AI's persistent memory features tailored for conversational agents. It allows chatbots and virtual assistants to retain context,
+    user preferences, and past dialogue history across multiple interactions, leading to more coherent and personalized chat experiences. This is a key component for building sophisticated AI chat memory.
 slug: how-to-use-janitor-ai-memory
 ---
 
@@ -133,9 +136,9 @@ The agent's prompt engineering plays a vital role here. You need to craft querie
 
 According to a 2023 report by AI Research Labs, agents using semantic search for memory retrieval demonstrated a **28% improvement in task completion accuracy** on long-horizon tasks compared to those relying solely on context windows. Effective querying is paramount for unlocking the full potential of **AI agent long-term memory**. This is a critical aspect of **how to use Janitor AI memory**.
 
-### Semantic Search Mechanisms
+### Semantic Search Mechanisms for AI Chat Memory
 
-Janitor AI memory typically employs vector databases for efficient semantic search. When a query is made, it's converted into an embedding vector. The system then finds the vectors in the database that are closest to the query vector. These represent the most semantically relevant memories. This relies heavily on the quality of the [embedding models for AI](/articles/embedding-models-for-ai/). This retrieval capability is central to **how to use Janitor AI memory**.
+Janitor AI memory typically employs vector databases for efficient semantic search. When a query is made, it's converted into an embedding vector. The system then finds the vectors in the database that are closest to the query vector. These represent the most semantically relevant memories. This relies heavily on the quality of the [embedding models for AI](/articles/embedding-models-for-ai/). This retrieval capability is central to **how to use Janitor AI memory**, especially for **Janitor AI chat memory**.
 
 ### Example: Retrieving User Preferences
 

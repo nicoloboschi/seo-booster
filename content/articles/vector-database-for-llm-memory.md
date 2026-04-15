@@ -11,6 +11,9 @@ tags:
 - embeddings
 - RAG
 - semantic search
+- open source vector databases
+- AI agent memory
+- vector memory
 keywords:
 - vector database for llm memory
 - LLM memory
@@ -34,6 +37,9 @@ faq:
 - question: What are the benefits of using a vector database for AI agent memory?
   answer: Using a vector database for AI agent memory allows for persistent recall of past interactions, enhanced contextual understanding, improved response relevance, and the ability to access a vast
     knowledge base beyond the LLM's immediate context window. This leads to more intelligent and capable AI agents.
+- question: What are open-source vector databases for AI agents in 2024?
+  answer: In 2024, popular open-source vector databases for AI agents include Milvus, Weaviate, Chroma, and Qdrant. These systems offer scalable solutions for managing vector embeddings and enabling robust
+    AI agent memory.
 slug: vector-database-for-llm-memory
 ---
 

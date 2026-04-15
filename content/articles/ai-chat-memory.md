@@ -57,6 +57,9 @@ faq:
 - question: How does an AI assistant's conversation memory work?
   answer: An AI assistant's conversation memory works by storing past interactions, user preferences, and context. This allows it to recall previous dialogue turns, understand ongoing topics, and provide
     more personalized and relevant responses, creating a continuous and intelligent interaction.
+- question: How does an AI assistant remember conversations?
+  answer: An AI assistant remembers conversations through its AI chat memory system, which includes short-term memory (like the LLM's context window) for immediate recall and long-term memory (often using
+    vector databases) to store and retrieve information across multiple interactions. This allows for a continuous and personalized user experience.
 slug: ai-chat-memory
 ---
 ---
@@ -207,3 +210,6 @@ Key challenges include managing the vast amount of data, ensuring efficient and 
 
 ### How does an AI assistant's conversation memory work?
 An AI assistant's conversation memory works by storing past interactions, user preferences, and context. This allows it to recall previous dialogue turns, understand ongoing topics, and provide more personalized and relevant responses, creating a continuous and intelligent interaction.
+
+### How does an AI assistant remember conversations?
+An AI assistant remembers conversations through its AI chat memory system, which includes short-term memory (like the LLM's context window) for immediate recall and long-term memory (often using vector databases) to store and retrieve information across multiple interactions. This allows for a continuous and personalized user experience.

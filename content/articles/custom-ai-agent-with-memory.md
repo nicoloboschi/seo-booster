@@ -44,6 +44,9 @@ faq:
 - question: What are the key considerations when choosing an AI agent memory implementation?
   answer: Key considerations include the type of data to be stored (structured vs. unstructured), the required retrieval speed, the scale of data, and the complexity of relationships between data points.
     Vector databases excel at semantic similarity for unstructured data, while knowledge graphs are better for structured, relational data. Hybrid approaches can offer the best of both worlds.
+- question: What are the primary challenges in AI agent memory management?
+  answer: Primary challenges in AI agent memory management include efficiently storing and retrieving vast amounts of data, preventing catastrophic forgetting, ensuring context relevance over extended periods,
+    and managing the computational resources required for complex memory operations.
 slug: custom-ai-agent-with-memory
 ---
 
@@ -99,7 +102,7 @@ Semantic memory stores general knowledge, facts, concepts, and their relationshi
 
 ## Implementing AI Agent Memory Management and Tools
 
-Creating an AI agent with memory involves selecting and integrating appropriate memory storage and retrieval mechanisms. This is where the practical engineering of AI memory systems truly begins. Understanding **AI agent memory management and tools** is crucial for effective implementation.
+Creating an AI agent with memory involves selecting and integrating appropriate memory storage and retrieval mechanisms. This is where the practical engineering of **AI memory systems** truly begins. Understanding **AI agent memory management and tools** is crucial for effective implementation.
 
 #### Vector Databases and Embeddings
 
@@ -199,3 +202,7 @@ Context windows define the amount of recent information an LLM can process at on
 ### What are the key considerations when choosing an AI agent memory implementation?
 
 Key considerations include the type of data to be stored (structured vs. unstructured), the required retrieval speed, the scale of data, and the complexity of relationships between data points. Vector databases excel at semantic similarity for unstructured data, while knowledge graphs are better for structured, relational data. Hybrid approaches can offer the best of both worlds.
+
+### What are the primary challenges in AI agent memory management?
+
+Primary challenges in AI agent memory management include efficiently storing and retrieving vast amounts of data, preventing catastrophic forgetting, ensuring context relevance over extended periods, and managing the computational resources required for complex memory operations.

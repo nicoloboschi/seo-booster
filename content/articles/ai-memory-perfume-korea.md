@@ -47,6 +47,9 @@ faq:
 - question: What is the role of AI in AI Memory Perfume Korea?
   answer: In AI Memory Perfume Korea, AI plays a crucial role in analyzing user-provided memory data, identifying emotional contexts, and then generating or selecting scent profiles that are uniquely associated
     with those memories. It acts as the bridge between abstract memories and tangible olfactory experiences.
+- question: What is the significance of AI scent creation in AI Memory Perfume?
+  answer: AI scent creation is the core technology that enables AI Memory Perfume to translate abstract memories into tangible olfactory experiences. It involves AI analyzing user data to generate or select
+    scent profiles that are uniquely tied to specific personal memories.
 slug: ai-memory-perfume-korea
 ---
 
@@ -141,4 +144,3 @@ One notable open source solution is [Hindsight](https://github.com/vectorize-io/
 ## The AI Memory Perfume system would use this
 generated_scent = associate_memory_with_scent(memory1, [scent_profile_picnic])
 print(f"Generated scent profile for memory: {generated_scent.name}")
-

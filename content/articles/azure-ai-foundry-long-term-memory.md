@@ -37,6 +37,8 @@ faq:
 - question: What are the key Azure services that power Azure AI Foundry agent memory?
   answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, Azure AI Search for intelligent retrieval (including vector search), and Azure OpenAI Service
     for the cognitive engine.
+- question: What specific Azure services are crucial for implementing Azure AI Foundry agent memory?
+  answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for intelligent retrieval. Azure OpenAI Service provides the cognitive engine.
 slug: azure-ai-foundry-long-term-memory
 ---
 
@@ -68,7 +70,7 @@ Azure AI Foundry facilitates long-term memory by orchestrating several key Azure
 
 #### Azure Blob Storage: For Unstructured Data Assets
 
-When agents need to reference larger, unstructured data like documents, images, or media files, **Azure Blob Storage** provides a scalable and cost-effective solution. This data can be indexed or linked to more structured memory records, supporting richer **agent recall**. This is particularly relevant for **azure ai foundry agent service conversation state blob storage** scenarios, where large conversational artifacts can be stored.
+When agents need to reference larger, unstructured data like documents, images, or media files, **Azure Blob Storage** provides a scalable and cost-effective solution. This data can be indexed or linked to more structured memory records, supporting richer **agent recall**. This is particularly relevant for **azure ai foundry agent service conversation state blob storage** scenarios, where large conversational artifacts can be stored. Understanding how **azure ai foundry agent services use blob storage for conversation state** is key to managing complex data.
 
 #### Azure AI Search: Enabling Intelligent Retrieval
 

@@ -31,6 +31,9 @@ faq:
 - question: What are the key benefits of using a Java vector database for AI memory?
   answer: A Java vector database offers the advantages of in-memory speed for rapid data retrieval, combined with Java's robust ecosystem for building scalable and maintainable AI applications. This is
     crucial for real-time AI tasks.
+- question: What makes an in-memory vector database suitable for real-time AI applications?
+  answer: The core benefit is its ability to access data directly from RAM, resulting in extremely low latency for vector searches. This speed is essential for AI applications that require immediate responses,
+    such as conversational agents, recommendation systems, and fraud detection.
 slug: in-memory-vector-database-java
 ---
 

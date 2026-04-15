@@ -36,6 +36,9 @@ faq:
   answer: You can find open-source AI agent memory projects on GitHub by searching for relevant keywords such as "AI agent memory GitHub," "LLM memory management," "open source AI tools for agents," or
     "agent architecture GitHub." Exploring popular AI development frameworks like LangChain or LlamaIndex on GitHub will also lead you to many relevant repositories and libraries for building custom AI
     agents with memory.
+- question: What are the challenges in implementing AI agent memory on GitHub?
+  answer: Challenges include managing the complexity of different memory types, ensuring efficient retrieval and storage, handling context window limitations of LLMs, and integrating various open-source
+    tools effectively. Many GitHub projects address these by offering modular designs and robust APIs for **AI agent memory** development.
 slug: custom-ai-agent-with-memory-github
 ---
 
@@ -159,4 +162,3 @@ print("\nMemory content:", memory.buffer)
 ```
 
 This example illustrates how a **custom AI agent with memory GitHub** project can use libraries like LangChain to implement basic recall, a foundational step for more complex agent behaviors.
----

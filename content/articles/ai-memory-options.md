@@ -34,6 +34,8 @@ faq:
 - question: Can AI agents forget information?
   answer: Yes, AI agents can be designed to forget information. This can occur naturally as short-term memory fades, or deliberately through memory consolidation processes that discard less relevant data
     to optimize storage and retrieval. Some systems also implement explicit "forgetting" mechanisms.
+- question: What are the key types of AI memory systems?
+  answer: The key types of AI memory systems include those based on Retrieval-Augmented Generation (RAG), vector databases, knowledge graphs, and hybrid architectures that combine these approaches.
 slug: ai-memory-options
 ---
 
@@ -211,6 +213,15 @@ The ongoing development of [LLM memory systems](/articles/llm-memory-system/) is
 
 ## FAQ
 
+### What is the primary function of memory in AI agents?
+The primary function of memory in AI agents is to store, retrieve, and use past information to inform current decisions, improve performance, and maintain context over time.
+
+### How do different AI memory options impact agent behavior?
+Different AI memory options affect agent behavior by influencing their ability to recall specific events (episodic), general knowledge (semantic), or learn from sequential experiences, thus shaping their responsiveness and decision-making.
+
+### Can AI agents truly 'remember' like humans?
+While AI agents can simulate aspects of human memory through sophisticated data storage and retrieval mechanisms, they don't possess subjective consciousness or emotional recall. Their 'memory' is a functional process of information management.
+
 ### What is the main challenge in implementing AI memory?
 The primary challenge lies in balancing the need for extensive recall with efficient storage and rapid retrieval. Large amounts of data can become unwieldy, and ensuring an agent can access the *right* information at the *right* time without significant latency is complex.
 
@@ -219,4 +230,7 @@ Traditional LLMs have memory limited by their training data and context window. 
 
 ### Can AI agents forget information?
 Yes, AI agents can be designed to forget information. This can occur naturally as short-term memory fades, or deliberately through memory consolidation processes that discard less relevant data to optimize storage and retrieval. Some systems also implement explicit "forgetting" mechanisms.
+
+### What are the key types of AI memory systems?
+The key types of AI memory systems include those based on Retrieval-Augmented Generation (RAG), vector databases, knowledge graphs, and hybrid architectures that combine these approaches.
 ---

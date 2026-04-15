@@ -10,6 +10,8 @@ tags:
 - AI Agent Memory
 - LLM Alternatives
 - AI Agent Systems
+- Vector Databases
+- Knowledge Graphs
 keywords:
 - is llm necessary
 - AI memory
@@ -22,6 +24,9 @@ keywords:
 - vector databases for AI memory
 - knowledge graphs for AI memory
 - hybrid AI memory
+- AI agent memory without LLM
+- core AI memory functions
+- specialized AI memory
 faq:
 - question: Can AI agents have memory without an LLM?
   answer: Yes, AI agents can implement memory systems without a full Large Language Model. Techniques like vector databases, knowledge graphs, and specialized memory modules can store and retrieve information
@@ -35,6 +40,9 @@ faq:
 - question: How do vector databases contribute to AI memory without an LLM?
   answer: Vector databases use embedding models to convert data into numerical vectors, enabling efficient semantic similarity searches. This allows AI agents to retrieve relevant information based on meaning,
     a core memory function achievable without a full LLM.
+- question: What are the core functions of AI agent memory?
+  answer: The core functions of AI agent memory include storage, retrieval, organization, and forgetting/pruning. These functions are essential for any intelligent system to retain and utilize information
+    effectively.
 slug: is-llm-necessary
 ---
 
@@ -200,3 +208,6 @@ The trend in advanced AI agent development is towards **hybrid memory systems** 
  Sole reliance on LLMs for memory can lead to high computational costs, potential for hallucination, and difficulty in managing long-term, structured data. Their large size and processing demands can also limit real-time performance.
 * **How do vector databases contribute to AI memory without an LLM?**
  Vector databases use embedding models to convert data into numerical vectors, enabling efficient semantic similarity searches. This allows AI agents to retrieve relevant information based on meaning, a core memory function achievable without a full LLM.
+* **What are the core functions of AI agent memory?**
+ The core functions of AI agent memory include storage, retrieval, organization, and forgetting/pruning. These functions are essential for any intelligent system to retain and use information effectively.
+---

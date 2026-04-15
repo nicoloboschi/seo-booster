@@ -11,6 +11,13 @@ tags:
 - persistent memory
 - AI memory systems
 - LLM memory
+- best ai memory framework
+- optimal AI memory framework
+- ideal AI memory framework
+- AI agent memory
+- AI recall mechanisms
+- episodic memory AI
+- semantic memory AI
 keywords:
 - best ai memory framework
 - AI memory systems
@@ -38,6 +45,9 @@ faq:
 - question: How can I choose the best AI memory framework for my project?
   answer: To choose the best AI memory framework, evaluate your project's specific needs regarding scalability, retrieval speed, integration complexity, required memory types (episodic, semantic), and persistence.
     Consider dedicated frameworks like Hindsight or Zep, or leverage vector databases with orchestration tools like LangChain or LlamaIndex.
+- question: What is the difference between episodic and semantic memory in AI?
+  answer: Episodic memory AI stores specific events and personal experiences with temporal context, like recalling a particular conversation. Semantic memory AI stores general knowledge, facts, and concepts,
+    like knowing the capital of France. Both are crucial for a comprehensive AI memory system.
 slug: best-ai-memory-framework
 ---
 

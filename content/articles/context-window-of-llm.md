@@ -41,6 +41,9 @@ faq:
 - question: Can an LLM "learn" from information outside its context window?
   answer: An LLM cannot directly learn from information outside its current context window during a single inference. However, techniques like fine-tuning, RAG, and external memory systems allow the model
     to indirectly access and incorporate knowledge from sources that exceed its immediate context, effectively enabling long-term learning and recall.
+- question: What are the practical implications of LLM context window limitations?
+  answer: The practical implications of LLM context window limitations include potential information loss in long conversations or documents, leading to AI agents forgetting crucial details. This can result
+    in repetitive interactions, misunderstandings, and a reduced ability for the AI to perform complex tasks that require recalling information from earlier in the interaction.
 slug: context-window-of-llm
 ---
 
@@ -198,4 +201,7 @@ A larger context window generally improves an LLM's reasoning ability by allowin
 
 ### Can an LLM "learn" from information outside its context window?
 An LLM cannot directly learn from information outside its current context window during a single inference. However, techniques like fine-tuning, RAG, and external memory systems allow the model to indirectly access and incorporate knowledge from sources that exceed its immediate context, effectively enabling long-term learning and recall.
+
+### What are the practical implications of LLM context window limitations?
+The practical implications of LLM context window limitations include potential information loss in long conversations or documents, leading to AI agents forgetting crucial details. This can result in repetitive interactions, misunderstandings, and a reduced ability for the AI to perform complex tasks that require recalling information from earlier in the interaction.
 ---

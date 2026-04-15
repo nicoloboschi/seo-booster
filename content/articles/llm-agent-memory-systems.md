@@ -42,6 +42,9 @@ faq:
 - question: Can LLM agents forget information?
   answer: Yes, LLM agents can "forget" information primarily due to context window limitations or if their memory systems are not designed for long-term retention or effective pruning. Advanced systems
     aim to manage this through structured storage and retrieval.
+- question: What is the role of vector databases in LLM agent memory systems?
+  answer: Vector databases are crucial for storing and retrieving information based on semantic similarity. They convert text into numerical embeddings, allowing for efficient searching of related concepts
+    rather than just keywords.
 slug: llm-agent-memory-systems
 ---
 
@@ -223,3 +226,6 @@ While chat history is a form of short-term memory, LLM agent memory systems are 
 
 ### Can LLM agents forget information?
 Yes, LLM agents can "forget" information primarily due to context window limitations or if their memory systems are not designed for long-term retention or effective pruning. Advanced systems aim to manage this through structured storage and retrieval.
+
+### What is the role of vector databases in LLM agent memory systems?
+Vector databases are crucial for storing and retrieving information based on semantic similarity. They convert text into numerical embeddings, allowing for efficient searching of related concepts rather than just keywords.

@@ -1,5 +1,5 @@
 {
-  "title": "Understanding and Overcoming Chronic Memory Issues in AI Agents: A Deep Dive",
+  "title": "Chronic Memory Issues in AI Agents: Causes, Solutions & Persistent Recall",
   "description": "Explore chronic memory issues in AI agents, their causes, and solutions like RAG and vector databases. Learn how to build AI with persistent, reliable memory for enhanced performance.",
   "date": "2026-03-31",
   "lastmod": "2026-03-31",

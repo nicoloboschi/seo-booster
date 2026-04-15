@@ -32,8 +32,12 @@ faq:
 - question: How does AI coding agent memory specifically help with debugging?
   answer: AI coding agent memory aids debugging by allowing agents to recall past error patterns, successful fixes for similar issues, and the context surrounding previous bugs. This enables faster identification
     of root causes and more effective solutions.
+- question: What are the key components of AI coding agent memory?
+  answer: Key components include data storage mechanisms (like vector databases), retrieval algorithms, different memory architectures (episodic, semantic, working), and integration strategies with LLMs,
+    all contributing to effective AI memory for coding.
 slug: ai-coding-agent-memory
 ---
+
 
 Could an AI assistant cut your debugging time in half? **AI coding agent memory** represents the systems and techniques that allow AI agents to store, recall, and use past information. This capability is essential for agents to learn, adapt, and provide contextually relevant assistance, moving beyond simple task execution to a truly collaborative development process.
 
@@ -154,5 +158,3 @@ memory_system.add_snippet("def greet(name):\n return f'Hello, {name}!'", "Functi
 memory_system.add_snippet("def farewell(name):\n return f'Goodbye, {name}!'", "Function to bid farewell")
 
 print("\n
-
----

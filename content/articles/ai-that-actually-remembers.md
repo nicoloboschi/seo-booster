@@ -36,6 +36,9 @@ faq:
 - question: What are AI memory benchmarks and why are they important?
   answer: AI memory benchmarks are standardized tests used to measure and compare the performance of different AI memory systems. They are crucial for evaluating how well AI can recall information, understand
     context, and adapt over time, driving progress in the field of AI memory.
+- question: What are the key components of an AI memory system?
+  answer: Key components include data storage (like vector databases or knowledge graphs), retrieval mechanisms (semantic search, graph traversal), and memory consolidation processes (summarization, abstraction)
+    to manage and organize information effectively.
 slug: ai-that-actually-remembers
 ---
 
@@ -200,4 +203,7 @@ Contextual memory in AI refers to the ability of an AI system to retain and use 
 
 ### What are AI memory benchmarks and why are they important?
 AI memory benchmarks are standardized tests used to measure and compare the performance of different AI memory systems. They are crucial for evaluating how well AI can recall information, understand context, and adapt over time, driving progress in the field of AI memory.
+
+### What are the key components of an AI memory system?
+Key components include data storage (like vector databases or knowledge graphs), retrieval mechanisms (semantic search, graph traversal), and memory consolidation processes (summarization, abstraction) to manage and organize information effectively.
 ---

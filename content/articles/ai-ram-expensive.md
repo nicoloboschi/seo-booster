@@ -38,8 +38,11 @@ faq:
     for training and inference. Without sufficient and fast RAM, AI computations would be prohibitively slow or impossible.
 - question: How is AI making RAM more expensive?
   answer: AI is making RAM more expensive by driving demand for specialized, high-performance memory like HBM, which has significantly higher manufacturing costs than standard RAM. The increasing complexity
-    and size of AI models also necessitate larger RAM capacities, further increasing overall hardware costs. ---
-
+    and size of AI models also necessitate larger RAM capacities, further increasing overall hardware costs.
+- question: What are the primary cost drivers for AI RAM?
+  answer: The primary cost drivers for AI RAM include the need for high bandwidth and capacity, specialized memory architectures like HBM, manufacturing complexity, and significant R&D investments. The
+    increasing demand from AI workloads also outpaces supply, contributing to higher prices.
+---
 
 The high cost of RAM for AI stems from its specialized performance requirements, driving up manufacturing and integration expenses. This memory is essential for handling massive datasets and complex computations, making it a significant component of AI hardware budgets, often costing several times more than standard memory. Understanding why AI RAM is expensive impacts AI development budgets and sheds light on how AI is making RAM more expensive.
 
@@ -182,3 +185,6 @@ RAM is crucial for AI because it acts as the high-speed workspace for AI models.
 
 ### How is AI making RAM more expensive?
 AI is making RAM more expensive by driving demand for specialized, high-performance memory like HBM, which has significantly higher manufacturing costs than standard RAM. The increasing complexity and size of AI models also necessitate larger RAM capacities, further increasing overall hardware costs.
+
+### What are the primary cost drivers for AI RAM?
+The primary cost drivers for AI RAM include the need for high bandwidth and capacity, specialized memory architectures like HBM, manufacturing complexity, and significant R&D investments. The increasing demand from AI workloads also outpaces supply, contributing to higher prices.

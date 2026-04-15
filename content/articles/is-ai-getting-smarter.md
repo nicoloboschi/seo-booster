@@ -42,6 +42,9 @@ faq:
 - question: What are the key components of AI intelligence?
   answer: The key components of AI intelligence include advanced learning algorithms, sophisticated reasoning capabilities, and robust AI memory systems. These elements work together to enable AI agents
     to perceive, process, learn, and act effectively in their environments.
+- question: What are the key advancements driving AI's increasing intelligence?
+  answer: Key advancements driving AI's increasing intelligence include breakthroughs in AI memory systems (episodic and semantic), sophisticated AI reasoning capabilities, and novel AI learning paradigms.
+    These, combined with advanced AI agent architectures, are enabling AI to perform more complex tasks and exhibit greater adaptability.
 slug: is-ai-getting-smarter
 ---
 
@@ -178,4 +181,6 @@ print(agent.process_input("Hello there!"))
 print(agent.process_input("What's the weather like today?"))
 print(agent.process_input("I'm thinking about AI memory."))
 
-print("\n
+print("\n")
+print(agent.recall_recent_interactions())
+```

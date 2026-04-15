@@ -30,6 +30,10 @@ faq:
 - question: What are the benefits of using LangGraph for chatbots with memory?
   answer: LangGraph's stateful graph architecture is ideal for managing complex conversational flows and memory. It allows for explicit state management, enabling developers to build sophisticated **langgraph
     memory** systems that can recall past interactions, user preferences, and context, leading to more coherent and personalized AI chatbot experiences.
+- question: How does LangGraph manage memory for AI chatbots?
+  answer: LangGraph manages memory by leveraging its stateful graph architecture. This allows for explicit state management where conversational history, user preferences, and other contextual information
+    can be stored and updated as the conversation progresses. Developers can implement custom memory solutions or integrate with external memory systems like vector databases for more advanced **langgraph
+    memory** capabilities.
 slug: langgraph-chatbot-with-memory-github
 ---
 

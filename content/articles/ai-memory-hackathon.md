@@ -11,6 +11,8 @@ tags:
 - memory systems
 - RAG
 - vector databases
+- agent architecture
+- LLM memory
 keywords:
 - ai memory hackathon
 - AI agents
@@ -40,6 +42,9 @@ faq:
 - question: What is the role of vector databases in AI memory?
   answer: Vector databases store data as numerical representations called embeddings. For AI memory, they enable fast and efficient similarity searches, allowing agents to quickly retrieve memories that
     are semantically similar to the current query or context. This is crucial for **long-term memory AI agents**.
+- question: What is an AI memory hackathon?
+  answer: An AI memory hackathon is a focused event where developers collaborate to build AI systems with enhanced memory capabilities, pushing the boundaries of how AI agents store, retrieve, and utilize
+    information over time.
 ---
 
 What if an AI agent forgot your entire conversation after a single question? This is the reality for many AI systems today, but an **AI memory hackathon** is changing that narrative. These focused events are crucial for developing AI agents that can truly remember, learn, and adapt. An **ai memory hackathon** is a concentrated event where developers build AI systems with enhanced memory, pushing boundaries on how agents store, retrieve, and use information for more context-aware applications. These events are critical for advancing **agent memory** systems beyond current limitations and limitations of static context windows.
@@ -186,26 +191,23 @@ The ultimate goal is to build AI that doesn't just process information but under
 
 ## FAQ
 
-### What are common challenges in an AI memory hackathon?
+### What is an AI memory hackathon?
+An AI memory hackathon is a focused event where developers collaborate to build AI systems with enhanced memory capabilities, pushing the boundaries of how AI agents store, retrieve, and use information over time.
 
+### What are common challenges in an AI memory hackathon?
 Participants often face challenges with efficient data retrieval, managing context windows, implementing long-term memory, and ensuring the AI agent's recall is accurate and relevant to the task.
 
 ### What skills are needed for an AI memory hackathon?
-
 Key skills include proficiency in Python, understanding of Large Language Models (LLMs), experience with vector databases and embedding models, knowledge of AI agent architectures, and problem-solving abilities.
 
 ### How can I prepare for an AI memory hackathon?
-
 Prepare by studying different [AI agent memory types](/articles/ai-agents-memory-types/), experimenting with memory systems like Hindsight, and practicing building simple AI agents that can retain information.
 
 ### What are the main types of memory explored in AI?
-
 AI memory systems primarily focus on **episodic memory** (recalling specific events), **semantic memory** (storing general knowledge and facts), and **working memory** (short-term information processing, akin to the LLM's context window). Hackathons often explore how to combine these for richer agent capabilities.
 
 ### How does RAG differ from traditional AI memory systems?
-
 RAG augments an LLM's generative capabilities by retrieving relevant information from an external knowledge base *before* generating a response. Traditional memory systems might focus on storing and recalling interaction history directly within the agent's architecture, aiming for a more integrated recall process.
 
 ### What is the role of vector databases in AI memory?
-
 Vector databases store data as numerical representations called embeddings. For AI memory, they enable fast and efficient similarity searches, allowing agents to quickly retrieve memories that are semantically similar to the current query or context. This is crucial for **long-term memory AI agents**.

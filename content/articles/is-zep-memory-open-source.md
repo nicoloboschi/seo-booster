@@ -41,6 +41,9 @@ faq:
 - question: What are the core components of Zep Memory that are open source?
   answer: The core components of Zep Memory, including its architecture for storing and indexing text embeddings, its vector database integration, and its API interface, are made available under an open-source
     license. This allows developers to leverage and contribute to its fundamental functionalities.
+- question: What are the key benefits of Zep Memory being open source?
+  answer: Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers
+    flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
 slug: is-zep-memory-open-source
 ---
 
@@ -170,4 +173,6 @@ The core of Zep Memory is typically released under a permissive open-source lice
 
 ### What are the core components of Zep Memory that are open source?
 Zep Memory's core components, including its architecture for storing and indexing text embeddings, its vector database integration, and its API interface, are made available under an open-source license. This allows developers to use and contribute to its fundamental functionalities.
+### What are the key benefits of Zep Memory being open source?
+Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
 ---

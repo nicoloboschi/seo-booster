@@ -46,6 +46,9 @@ faq:
 - question: How can AI agent recall be improved with the right database?
   answer: AI agent recall is significantly improved by using databases optimized for semantic search and relationship management. Vector databases enable fast retrieval of relevant information based on
     meaning, while graph databases help understand context and connections, leading to more accurate and nuanced recall.
+- question: What are the performance metrics to consider for an AI memory database?
+  answer: Key performance metrics for an AI memory database include query latency, indexing speed, scalability under heavy load, and the efficiency of similarity search algorithms. Benchmarking against
+    specific AI workloads is crucial.
 slug: best-database-for-ai-memory
 ---
 

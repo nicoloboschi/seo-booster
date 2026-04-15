@@ -70,6 +70,9 @@ faq:
 - question: How does AI memory management impact AI recall?
   answer: Effective AI memory management is crucial for ensuring that agents can efficiently store, retrieve, and utilize relevant information. Poor management can lead to slow retrieval, irrelevant results,
     and an inability to access critical data, thereby hindering overall AI recall capabilities.
+- question: What are the key components of an AI memory system?
+  answer: Key components include data ingestion and processing, embedding generation, a vector database for storage and retrieval, and an orchestration layer that manages the interaction between these elements
+    and the AI agent.
 slug: ai-memory-game
 ---
 

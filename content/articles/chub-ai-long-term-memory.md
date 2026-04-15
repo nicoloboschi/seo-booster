@@ -15,6 +15,9 @@ tags:
 - episodic memory AI
 - semantic memory AI
 - embedding models for memory
+- AI agent memory
+- agentic AI
+- LLM memory systems
 keywords:
 - chub ai long term memory
 - AI agent memory
@@ -26,6 +29,8 @@ keywords:
 - episodic memory AI
 - semantic memory AI
 - embedding models for memory
+- agentic AI
+- LLM memory systems
 faq:
 - question: What is CHUB AI long-term memory?
   answer: CHUB AI long-term memory refers to systems designed to allow AI agents to store, retrieve, and utilize information beyond a single interaction or short context window, enabling sustained learning
@@ -40,6 +45,9 @@ faq:
 - question: How do embedding models contribute to CHUB AI's long-term memory?
   answer: Embedding models convert data into numerical vectors that capture semantic meaning. This allows CHUB AI's long-term memory to efficiently store and retrieve information based on conceptual similarity,
     significantly enhancing agent recall and understanding.
+- question: What is agentic AI and how does long-term memory relate to it?
+  answer: Agentic AI refers to AI systems designed to act autonomously to achieve goals. Long-term memory is crucial for agentic AI as it enables them to learn from past experiences, adapt their strategies,
+    and maintain context over extended periods, leading to more effective and goal-oriented behavior.
 slug: chub-ai-long-term-memory
 ---
 
@@ -159,5 +167,3 @@ A 2024 study published in arXiv by researchers at Stanford University indicated 
 
 | Feature | Retrieval-Augmented Generation (RAG) | Long-Term Memory System (e.g., CHUB AI) |
 | :
-
----

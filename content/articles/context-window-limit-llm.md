@@ -48,6 +48,9 @@ faq:
 - question: Are there LLMs with very large context windows?
   answer: Yes, there are ongoing advancements in LLM architectures designed to support significantly larger context windows, with some models now capable of handling hundreds of thousands or even millions
     of tokens. This is an active area of research and development.
+- question: What are compaction strategies for LLMs?
+  answer: Compaction strategies for LLMs involve techniques that reduce the amount of information an LLM needs to process or store, such as summarization, token pruning, or efficient attention mechanisms,
+    to fit more data within its context window.
 slug: context-window-limit-llm
 ---
 
@@ -187,3 +190,6 @@ RAG augments the LLM's prompt with relevant information retrieved from an extern
 
 ### Are there LLMs with very large context windows?
 Yes, there are ongoing advancements in LLM architectures designed to support significantly larger context windows, with some models now capable of handling hundreds of thousands or even millions of tokens. This is an active area of research and development.
+
+### What are compaction strategies for LLMs?
+Compaction strategies for LLMs involve techniques that reduce the amount of information an LLM needs to process or store, such as summarization, token pruning, or efficient attention mechanisms, to fit more data within its context window.

@@ -54,6 +54,10 @@ faq:
 - question: What are some notable advancements in large context window LLMs?
   answer: Significant advancements include models like LongNet, which demonstrated capabilities up to 2048 kilotokens (2 million tokens), and research published in *Nature Machine Intelligence* showing
     over 25% improvement in complex reasoning tasks for models with context windows exceeding 100,000 tokens.
+- question: How does LongNet contribute to large context window LLMs?
+  answer: LongNet is a significant architectural innovation that allows Transformer models to scale their context window to unprecedented lengths, such as 2 million tokens. It achieves this by employing
+    a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This advancement is crucial for developing **large
+    context window local LLMs**.
 slug: large-context-window-local-llm
 ---
 
@@ -247,4 +251,7 @@ The future likely involves a hybrid approach: using the inherent large context w
 
 * **Q: What are some notable advancements in large context window LLMs?**
  A: Significant advancements include models like LongNet, which demonstrated capabilities up to 2048 kilotokens (2 million tokens), and research published in *Nature Machine Intelligence* showing over 25% improvement in complex reasoning tasks for models with context windows exceeding 100,000 tokens.
+
+* **Q: How does LongNet contribute to large context window LLMs?**
+ A: LongNet is a significant architectural innovation that allows Transformer models to scale their context window to unprecedented lengths, such as 2 million tokens. It achieves this by employing a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This advancement is crucial for developing **large context window local LLMs**.
 ---

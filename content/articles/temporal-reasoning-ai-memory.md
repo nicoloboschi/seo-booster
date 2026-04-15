@@ -52,6 +52,9 @@ faq:
 - question: How can memory decay AI improve an AI agent's efficiency?
   answer: Memory decay AI improves efficiency by reducing the cognitive load on the AI. By gradually fading or removing outdated or irrelevant information, it prevents the AI from being overwhelmed by a
     massive, undifferentiated memory store, allowing it to focus computational resources on more pertinent data.
+- question: What is the role of temporal memory in AI decision-making?
+  answer: Temporal memory allows AI to consider the sequence and timing of past events when making decisions. This enables more informed choices by understanding context, predicting consequences, and adapting
+    to evolving situations based on historical data.
 slug: temporal-reasoning-ai-memory
 ---
 

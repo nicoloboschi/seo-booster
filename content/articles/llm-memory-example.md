@@ -33,9 +33,11 @@ faq:
 - question: What are some practical LLM memory examples?
   answer: Practical LLM memory examples include chatbots that remember user preferences across sessions, AI assistants that recall previous instructions for multi-step tasks, and customer service bots that
     maintain context throughout a support interaction.
+- question: How do vector databases enhance LLM memory examples?
+  answer: Vector databases store information as embeddings, allowing for efficient semantic similarity searches. This enables LLM memory examples to retrieve contextually relevant past interactions, even
+    if they don't share exact keywords, significantly improving recall accuracy and conversational flow.
 slug: llm-memory-example
 ---
-
 
 An LLM memory example demonstrates how AI agents store and recall information beyond their immediate context window. This capability significantly enhances AI utility and user experience, enabling coherent conversations and complex task execution by allowing AI to remember past interactions and data. It's a crucial aspect of advanced AI development, moving beyond simple stateless interactions.
 
@@ -125,4 +127,4 @@ def retrieve_context(memory_store, current_query, k=2):
 
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
-## 
+##

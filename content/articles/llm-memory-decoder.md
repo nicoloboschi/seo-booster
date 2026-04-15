@@ -11,6 +11,10 @@ tags:
 - LLM Memory Decoder
 - AI Recall
 - Context Window
+- Information Retrieval
+- Semantic Memory
+- Episodic Memory
+- Retrieval-Augmented Generation
 keywords:
 - llm memory decoder
 - AI memory
@@ -35,6 +39,9 @@ faq:
 - question: How does an LLM memory decoder improve AI recall?
   answer: An LLM memory decoder significantly improves AI recall by translating complex encoded memories (like vector embeddings) back into coherent and understandable information. This allows the AI to
     access and utilize past data more effectively, leading to better context and more accurate responses.
+- question: What types of information can an LLM memory decoder reconstruct?
+  answer: An LLM memory decoder can reconstruct various types of information, including episodic memories (specific events and experiences), semantic knowledge (general facts and concepts), and conversational
+    history, all contributing to enhanced AI recall.
 slug: llm-memory-decoder
 ---
 

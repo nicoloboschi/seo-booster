@@ -41,6 +41,9 @@ faq:
 - question: What is "openmemory" in the context of AI?
   answer: '"Openmemory" refers to an AI system''s ability to have a dynamic, potentially unbounded, and persistent memory. Unlike traditional fixed-size memory buffers, open memory allows AI agents to continuously
     store, retrieve, and learn from their experiences over extended periods, fostering adaptation and growth.'
+- question: How do vector databases like Milvus enable efficient agent recall in open memory systems?
+  answer: Vector databases like Milvus store information as high-dimensional embeddings. This allows for rapid similarity searches, enabling AI agents to quickly retrieve relevant past experiences or knowledge
+    based on semantic meaning rather than exact keyword matches, which is crucial for effective agent recall.
 ---
 
 **AI open memory** provides AI agents with a persistent recall capability, allowing them to store and retrieve information dynamically over extended periods. This moves beyond transient memory buffers, creating evolving knowledge bases crucial for sophisticated understanding and adaptation, essential for agents that must learn and grow.
@@ -218,3 +221,7 @@ Milvus is a highly scalable and performant vector database specifically designed
 ### What is "openmemory" in the context of AI?
 
 "Openmemory" refers to an AI system's ability to have a dynamic, potentially unbounded, and persistent memory. Unlike traditional fixed-size memory buffers, open memory allows AI agents to continuously store, retrieve, and learn from their experiences over extended periods, fostering adaptation and growth.
+
+### How do vector databases like Milvus enable efficient agent recall in open memory systems?
+
+Vector databases like Milvus store information as high-dimensional embeddings. This allows for rapid similarity searches, enabling AI agents to quickly retrieve relevant past experiences or knowledge based on semantic meaning rather than exact keyword matches, which is crucial for effective agent recall.

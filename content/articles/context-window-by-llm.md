@@ -51,6 +51,10 @@
     {
       "question": "What does 'context window limit' mean for an LLM?",
       "answer": "The 'context window limit' refers to the maximum number of tokens an LLM can process and consider at any given time. Exceeding this limit means the model will disregard earlier parts of the input, effectively forgetting them. Understanding this **context window limit** is essential for effective LLM usage."
+    },
+    {
+      "question": "What are the key factors determining an LLM's context window size?",
+      "answer": "The **context window size** is primarily determined by the model's architecture, the amount of computational resources available for training and inference, and the specific design choices made by the developers. Factors like the efficiency of attention mechanisms and memory management play a crucial role in defining the achievable **LLM context window**."
     }
   ],
   "slug": "context-window-by-llm"
@@ -226,3 +230,7 @@ Context window limitations mean that conversational AI might \"forget\" earlier 
 ### What does 'context window limit' mean for an LLM?
 
 The 'context window limit' refers to the maximum number of tokens an LLM can process and consider at any given time. Exceeding this limit means the model will disregard earlier parts of the input, effectively forgetting them. Understanding this **context window limit** is essential for effective LLM usage.
+
+### What are the key factors determining an LLM's context window size?
+
+The **context window size** is primarily determined by the model's architecture, the amount of computational resources available for training and inference, and the specific design choices made by the developers. Factors like the efficiency of attention mechanisms and memory management play a crucial role in defining the achievable **LLM context window**.

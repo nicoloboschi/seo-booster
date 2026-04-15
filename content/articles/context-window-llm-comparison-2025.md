@@ -37,6 +37,9 @@ faq:
 - question: What is the primary benefit of a large context window for AI agents?
   answer: A large context window allows AI agents to retain and process significantly more information from conversations or documents simultaneously. This leads to improved coherence, better understanding
     of complex instructions, and a reduced need for external memory systems for short-term recall.
+- question: What are the key factors in an AI model context window comparison for 2025?
+  answer: Key factors include the raw token limit, efficiency of processing, cost per token, and the model's ability to effectively utilize information across the entire context. Performance on tasks requiring
+    long-term memory recall and complex reasoning are also critical.
 slug: context-window-llm-comparison-2025
 ---
 
@@ -189,3 +192,6 @@ LLMs with large context windows act as a dynamic, short-term memory, holding rec
 
 ### What is the primary benefit of a large context window for AI agents?
 A large context window allows AI agents to retain and process significantly more information from conversations or documents simultaneously. This leads to improved coherence, better understanding of complex instructions, and a reduced need for external memory systems for short-term recall.
+
+### What are the key factors in an AI model context window comparison for 2025?
+Key factors include the raw token limit, efficiency of processing, cost per token, and the model's ability to effectively use information across the entire context. Performance on tasks requiring long-term memory recall and complex reasoning are also critical.

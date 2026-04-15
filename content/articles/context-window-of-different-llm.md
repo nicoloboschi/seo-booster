@@ -36,6 +36,9 @@ faq:
   answer: A larger context window allows an LLM to consider more information from the input, leading to better understanding of complex queries, improved coherence in longer conversations, and the ability
     to process and summarize larger documents. Conversely, a smaller context window can result in the LLM "forgetting" earlier parts of the conversation or document, impacting its overall effectiveness.
     This is a key aspect of **LLM context window explained**.
+- question: What is tokenization in the context of LLMs?
+  answer: Tokenization is the process of breaking down text into smaller units called tokens, which can be words, sub-word units, or characters. LLMs process these tokens to understand and generate language.
+    The context window is measured in these tokens.
 slug: context-window-of-different-llm
 ---
 

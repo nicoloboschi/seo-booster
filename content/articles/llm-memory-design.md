@@ -10,6 +10,8 @@ tags:
 - Memory Design
 - Long-Term Memory AI
 - Persistent Memory AI
+- LLM Long Term Memory Architecture
+- Retrieval-Augmented Generation
 keywords:
 - llm memory design
 - AI memory architecture
@@ -17,6 +19,8 @@ keywords:
 - persistent memory AI
 - LLM recall
 - LLM long term memory architecture
+- RAG
+- vector databases
 faq:
 - question: What is the primary challenge in LLM memory design?
   answer: The primary challenge is enabling LLMs to retain and recall information beyond their immediate context window, facilitating coherent, long-term interactions and task execution.
@@ -27,6 +31,9 @@ faq:
 - question: What is the significance of long-term memory in AI agents?
   answer: Long-term memory is crucial for AI agents to maintain context across extended interactions, learn from past experiences, and perform complex tasks that require recalling information beyond the
     immediate conversation. This enables more sophisticated and personalized AI behavior.
+- question: What are the core principles of LLM long term memory architecture?
+  answer: The core principles involve augmenting LLMs with external, persistent storage and intelligent retrieval mechanisms to overcome context window limitations, enabling agents to learn, adapt, and
+    recall information over extended periods.
 slug: llm-memory-design
 ---
 

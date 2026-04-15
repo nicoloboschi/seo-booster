@@ -28,6 +28,8 @@ faq:
   answer: Challenges include efficient storage and retrieval, managing large volumes of data, ensuring data privacy, and integrating memory seamlessly with the LLM's inference process.
 - question: How does an LLM memory bank contribute to contextual memory for AI?
   answer: An LLM memory bank provides the foundational mechanism for contextual memory in AI by storing and retrieving past interactions and learned information, allowing the AI to understand and respond based on a broader history rather than just the immediate prompt.
+- question: What is the primary function of an LLM memory bank?
+  answer: The primary function of an **LLM memory bank** is to store and retrieve information that falls outside the LLM's immediate **context window**. This enables the AI to maintain context across extended interactions, recall past events, and access learned information, thereby improving its coherence and personalization.
 slug: llm-memory-bank
 ---
 

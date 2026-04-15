@@ -33,7 +33,10 @@ faq:
     longer dialogues.
 - question: How can I improve Character.AI's memory capabilities for longer conversations?
   answer: To improve Character.AI's memory capabilities for longer conversations, use explicit reinforcement, provide contextual summaries, manage conversation length, and break down complex topics. Understanding
-    the context window is also key.
+    the context window is key.
+- question: How does Character.AI handle long-term memory?
+  answer: Character.AI primarily relies on its context window for short-term memory. For longer-term recall, users need to employ strategies like explicit reinforcement and contextual summaries, as true
+    persistent long-term memory is an ongoing development in AI.
 slug: how-to-make-character-ai-memory-better
 ---
 

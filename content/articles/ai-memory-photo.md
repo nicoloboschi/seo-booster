@@ -52,6 +52,18 @@
     {
       "question": "How does AI memory photo contribute to AI visual understanding?",
       "answer": "AI memory photo enables AI agents to build a rich, persistent understanding of the visual world by storing and recalling past visual experiences. This allows for more nuanced interpretation, contextual awareness, and informed decision-making, moving beyond simple recognition to true AI visual understanding."
+    },
+    {
+      "question": "How can AI agents learn from photos without explicit programming?",
+      "answer": "AI agents can learn from photos through **unsupervised or self-supervised learning** techniques applied to computer vision models. By processing large datasets of images, these models can automatically identify patterns, objects, and relationships, which are then encoded into the agent's memory system for AI memory photo."
+    },
+    {
+      "question": "What's the difference between AI memory photo and a simple image database?",
+      "answer": "A simple image database stores photos and allows retrieval based on metadata or file names. **AI memory photo** involves an AI actively processing, understanding, and encoding the *content* of images into a retrievable format (like embeddings or structured knowledge). The AI can then reason about the visual information, not just locate the file, enhancing AI visual memory."
+    },
+    {
+      "question": "Can AI agents forget photos they have 'seen'?",
+      "answer": "Yes, AI memory systems can be designed with **forgetting mechanisms**. This can involve prioritizing newer or more frequently accessed memories, discarding redundant or low-importance information, or using techniques like **memory decay** to manage memory capacity and relevance, similar to concepts discussed in [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/). This is crucial for managing AI memory photo effectively."
     }
   ],
   "slug": "ai-memory-photo"

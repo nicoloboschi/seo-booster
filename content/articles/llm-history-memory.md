@@ -29,6 +29,12 @@ faq:
 - question: How does LLM history memory differ from a simple database?
   answer: LLM memory systems, especially those employing RAG or vector databases, are designed to retrieve information semantically and contextually, not just by exact keyword match. They integrate this
     retrieved information directly into the LLM's processing, influencing its response generation in a way a standalone database cannot.
+- question: How does LLM history memory impact AI ethics?
+  answer: The ability of LLMs to remember past interactions raises significant ethical considerations. Issues around data privacy, user consent for memory storage, and the potential for biased recall based
+    on historical data are paramount. Responsible development requires careful attention to these ethical dimensions.
+- question: Can LLMs forget information?
+  answer: Yes, LLMs can "forget" information in several ways. Information outside their context window is lost. Explicit memory systems can be designed to prune or archive less relevant data to manage storage.
+    Also, if an LLM is retrained on new data, its recall of older, overwritten information might diminish.
 slug: llm-history-memory
 ---
 

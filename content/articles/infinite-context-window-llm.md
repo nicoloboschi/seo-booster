@@ -9,6 +9,7 @@ tags:
 - Context Window
 - Long Context LLM
 - Unlimited Context LLM
+- Context Window Limits
 keywords:
 - infinite context window llm
 - long context llm
@@ -17,6 +18,9 @@ keywords:
 - large language models
 - context window limits
 - llm context window
+- ai context window
+- llm memory
+- long term ai memory
 faq:
 - question: What does an infinite context window LLM mean?
   answer: An infinite context window LLM refers to a theoretical or advanced large language model capable of processing and remembering an unlimited amount of input text or conversational history without
@@ -33,6 +37,9 @@ faq:
 - question: What are the main limitations of current LLM context windows?
   answer: The primary limitation of current LLMs is their fixed and finite context window. This means they can only process and retain a limited amount of information from their input history at any given
     time, leading to a loss of context in longer interactions.
+- question: How do LLM context window limits affect AI performance?
+  answer: LLM context window limits restrict the amount of information an AI can consider at once. This can lead to a loss of context in long conversations or when processing extensive documents, forcing
+    the AI to "forget" earlier parts of the input, thus hindering its ability to provide comprehensive and consistent responses.
 slug: infinite-context-window-llm
 ---
 

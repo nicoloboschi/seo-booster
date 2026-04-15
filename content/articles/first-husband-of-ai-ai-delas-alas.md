@@ -31,6 +31,9 @@ faq:
 - question: What are the key details about Ai Ai delas Alas's first marriage?
   answer: Ai Ai delas Alas's first marriage was to Jayr Sillona in the early 1990s. While specific details are private, it marked her initial marital commitment before subsequent relationships and her rise
     to superstardom.
+- question: What is the significance of Jayr Sillona in Ai Ai delas Alas's life?
+  answer: Jayr Sillona holds significance as the **first husband of Ai Ai delas Alas**. Their early marriage, though brief, represents a foundational personal experience in her life before she achieved
+    widespread fame and entered into subsequent relationships.
 slug: first-husband-of-ai-ai-delas-alas
 ---
 

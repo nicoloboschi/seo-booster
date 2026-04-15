@@ -17,6 +17,8 @@ keywords:
 - agent memory
 - Zep
 - AI memory system
+- zep
+- zep memory
 faq:
 - question: What is Graphiti Zep Memory?
   answer: Graphiti Zep Memory is an AI memory solution that combines Zep's structured data storage for conversations with vector database capabilities for semantic search. This fusion enables AI agents
@@ -28,6 +30,8 @@ faq:
   answer: Yes, Graphiti Zep Memory is designed to facilitate long-term AI memory by storing vast amounts of data and enabling efficient retrieval, overcoming the limitations of short-term context windows.
 - question: What is Zep Memory in the context of AI?
   answer: Zep Memory is a specialized memory store designed for Large Language Model (LLM) applications. It excels at storing and retrieving conversational data, user profiles, and other structured information, providing a robust foundation for AI agents to maintain context and recall past interactions effectively.
+- question: What are the core components of Graphiti Zep Memory?
+  answer: The core components of Graphiti Zep Memory are Zep, which handles structured conversational data, and a vector database, which manages semantic search through vector embeddings. This combination allows for comprehensive AI recall.
 slug: graphiti-zep-memory
 ---
 
@@ -39,7 +43,7 @@ slug: graphiti-zep-memory
 
 ### The Power of Zep in AI Memory
 
-Zep is a memory store designed specifically for LLM applications. It excels at storing and retrieving **conversational data**, user profiles, and other structured information critical for maintaining context. Unlike simple key-value stores or raw text files, Zep organizes information reflecting the flow of interaction. This makes it an excellent foundation for building AI agents that need to remember dialogue history.
+**Zep** is a memory store designed specifically for LLM applications. It excels at storing and retrieving **conversational data**, user profiles, and other structured information critical for maintaining context. Unlike simple key-value stores or raw text files, Zep organizes information reflecting the flow of interaction. This makes it an excellent foundation for building AI agents that need to remember dialogue history.
 
 Zep's architecture allows for efficient querying of past interactions. It stores messages, their metadata, and often automatically generates embeddings, facilitating both keyword and semantic searches. This structured approach is vital for many **AI agent architecture patterns**, ensuring important details aren't lost in a long conversation. The **graphiti zep memory** system relies heavily on this structured foundation.
 

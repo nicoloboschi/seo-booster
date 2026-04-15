@@ -47,6 +47,10 @@ faq:
   answer: AI agents can experience forgetting due to limitations in their context window or inefficient retrieval mechanisms. Memory decay can occur if information is not actively reinforced or if newer,
     more dominant information overwrites older data. Techniques like RAG and dedicated memory systems aim to mitigate this by providing persistent, searchable knowledge bases, directly addressing the ai
     memory problem.
+- question: What are the primary limitations of current AI memory systems?
+  answer: The primary limitations of current AI memory systems include the finite context window of Large Language Models (LLMs), which restricts the amount of information they can process at once; the
+    computational overhead and complexity associated with storing and retrieving vast datasets for long-term memory; and the inherent difficulty in discerning truly pertinent information from irrelevant
+    noise, leading to inefficient or inaccurate retrieval. These factors collectively contribute to the overall AI memory problem.
 slug: ai-memory-problem
 ---
 ---

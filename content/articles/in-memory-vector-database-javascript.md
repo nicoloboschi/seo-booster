@@ -16,6 +16,7 @@ keywords:
 - AI agent memory
 - in-memory AI
 - vector search javascript
+- javascript in-memory vector database
 faq:
 - question: What are the benefits of an in-memory vector database for JavaScript AI agents?
   answer: An in-memory vector database for JavaScript offers extremely low latency for vector searches, critical for AI agents needing near real-time recall. JavaScript implementations allow for seamless
@@ -35,6 +36,9 @@ faq:
 - question: What are the main performance bottlenecks for in-memory vector databases in JavaScript?
   answer: The primary bottlenecks are available RAM, the efficiency of the indexing algorithm used for search, and the JavaScript engine's ability to handle concurrent operations. Optimizing these factors
     is key to achieving maximum speed. For instance, HNSW indices generally outperform brute-force search by orders of magnitude.
+- question: What is a JavaScript in-memory vector database and why is it important for AI agents?
+  answer: A JavaScript in-memory vector database stores vector embeddings in RAM, enabling extremely fast retrieval for AI agents. This is crucial for applications requiring real-time decision-making and
+    contextual recall, making AI agents more responsive and intelligent within JavaScript environments.
 slug: in-memory-vector-database-javascript
 ---
 
@@ -190,6 +194,8 @@ While memory constraints and data persistence are important considerations, the 
 
 ## FAQ
 
+* **Q: What is a JavaScript in-memory vector database and why is it important for AI agents?**
+ A: A JavaScript in-memory vector database stores vector embeddings in RAM, enabling extremely fast retrieval for AI agents. This is crucial for applications requiring real-time decision-making and contextual recall, making AI agents more responsive and intelligent within JavaScript environments.
 * **Q: Can I use an in-memory vector database for long-term memory in AI agents?**
  A: Purely in-memory databases lose data on restart. For long-term memory, you'd need to pair an in-memory solution with a persistence strategy, or use a disk-based or hybrid vector database designed for durability. Industry reports indicate that over 60% of AI applications require persistent memory for reliable operation.
 * **Q: How do embedding models affect in-memory vector database performance in JavaScript?**

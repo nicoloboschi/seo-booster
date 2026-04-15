@@ -30,7 +30,7 @@ faq:
   answer: Vector databases store conversation embeddings, allowing for rapid semantic similarity searches. This enables the chatbot to retrieve relevant past interactions, effectively extending its memory.
 - question: What is a chatbot memory architecture?
   answer: A chatbot memory architecture refers to the design and components used to store, manage, and retrieve conversational data for an AI. This includes short-term memory (LLM context), medium-term
-    memory (caches), and long-term memory (external databases like vector stores).
+    memory (caches), and long-term memory (external databases like vector stores). A well-designed architecture is crucial for a **chatbot with the longest memory**.
 - question: What is the primary mechanism for a chatbot to have a long memory?
   answer: A chatbot achieves a long memory primarily by using external memory systems, such as vector databases storing conversation embeddings, to supplement the limited context window of its underlying
     Large Language Model (LLM). This allows for the storage and retrieval of past interactions beyond the LLM's immediate processing capacity, enabling the longest chatbot memory.

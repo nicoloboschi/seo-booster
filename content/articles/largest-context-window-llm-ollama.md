@@ -37,6 +37,8 @@ faq:
     reasoning tasks that require recalling extensive information.
 - question: What is the largest context window LLM available through Ollama?
   answer: The "largest" context window LLM can vary as new models are released. However, Ollama supports models with context windows ranging from tens of thousands to hundreds of thousands of tokens, with some experimental models pushing even further. The specific model and your hardware will determine the maximum achievable context length.
+- question: How can I maximize the use of a large context window LLM with Ollama?
+  answer: To maximize the use of a large context window LLM with Ollama, employ effective prompt engineering, consider Retrieval-Augmented Generation (RAG) for extremely large datasets, and explore fine-tuning for specific long-context tasks.
 slug: largest-context-window-llm-ollama
 ---
 
@@ -228,3 +230,6 @@ Using a largest context window LLM with Ollama allows for deeper understanding o
 
 ### What is the largest context window LLM available through Ollama?
 The "largest" context window LLM can vary as new models are released. However, Ollama supports models with context windows ranging from tens of thousands to hundreds of thousands of tokens, with some experimental models pushing even further. The specific model and your hardware will determine the maximum achievable context length.
+
+### How can I maximize the use of a large context window LLM with Ollama?
+To maximize the use of a large context window LLM with Ollama, employ effective prompt engineering, consider Retrieval-Augmented Generation (RAG) for extremely large datasets, and explore fine-tuning for specific long-context tasks.

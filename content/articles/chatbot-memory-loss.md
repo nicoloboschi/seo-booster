@@ -10,6 +10,10 @@ tags:
 - conversational AI
 - AI forgetting conversations
 - persistent AI memory
+- AI's memory gaps
+- conversational recall issues
+- AI losing context
+- LLM context window
 keywords:
 - chatbot memory loss
 - AI memory loss
@@ -37,6 +41,9 @@ faq:
 - question: How does the LLM context window contribute to chatbot memory loss?
   answer: The LLM context window is a finite limit on the amount of text a model can process at once. When a conversation exceeds this limit, older parts of the dialogue are dropped, causing the AI to forget
     previous turns and leading to chatbot memory loss.
+- question: What are stateless LLMs and how do they cause AI forgetting conversations?
+  answer: Stateless LLMs treat each interaction as independent, lacking inherent memory. This means they forget previous turns unless specific memory systems are integrated, directly contributing to AI
+    forgetting conversations and AI's memory gaps.
 slug: chatbot-memory-loss
 ---
 

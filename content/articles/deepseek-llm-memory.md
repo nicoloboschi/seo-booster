@@ -28,6 +28,9 @@ faq:
 - question: How does DeepSeek LLM memory contribute to persistent memory AI?
   answer: DeepSeek LLM memory enables AI agents to store and retrieve information over extended periods, effectively creating a persistent memory that goes beyond the immediate context window, allowing
     for continuous learning and improved decision-making.
+- question: What are the core components of DeepSeek LLM memory systems?
+  answer: Core components typically include the DeepSeek LLM itself, a memory storage mechanism (like vector databases or key-value stores), and an interface for retrieving and integrating stored information
+    into the LLM's context.
 slug: deepseek-llm-memory
 ---
 

@@ -35,6 +35,9 @@ faq:
 - question: How are Google titans specifically advancing AI memory?
   answer: Google titans are investing heavily in novel AI architectures, exploring techniques like mimicking episodic and semantic memory systems, and developing hybrid memory approaches to overcome current
     limitations and achieve persistent recall in AI.
+- question: What are the primary challenges in developing human-like memory for AI?
+  answer: Key challenges include achieving scalability and efficiency in AI memory systems, addressing data privacy and potential biases, managing the computational costs of advanced memory, and moving
+    beyond mere data storage to true understanding and reasoning.
 slug: google-titans-give-ai-human-like-memory
 ---
 

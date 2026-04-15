@@ -35,6 +35,9 @@ faq:
 - question: How does Hindsight LLM Memory compare to traditional AI memory?
   answer: Traditional AI memory is often limited by the LLM's context window, making it ephemeral. Hindsight LLM Memory provides a persistent, external storage solution that allows for much longer-term
     recall and learning, significantly enhancing agent capabilities.
+- question: What are the primary challenges addressed by Hindsight LLM Memory?
+  answer: Hindsight LLM Memory primarily addresses the limitations of LLM context windows, which restrict an AI's ability to recall information from past interactions. It enables persistent AI recall and
+    long-term memory for AI agents.
 slug: hindsight-llm-memory
 ---
 

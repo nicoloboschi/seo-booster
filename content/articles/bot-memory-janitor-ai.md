@@ -39,6 +39,8 @@ faq:
   answer: "Janitor AI memory" refers to the specific memory components and processes within an AI agent that are dedicated to cleaning, organizing, and optimizing its overall memory store. This includes the mechanisms for removing redundant or outdated information to ensure efficient recall.
 - question: How does memory storage for bots impact their performance?
   answer: The way a bot's memory is stored significantly impacts its performance. Inefficient storage can lead to slow retrieval, increased computational costs, and degraded decision-making. Effective memory storage, managed by a bot memory janitor AI, is crucial for speed and accuracy.
+- question: When will Janitor AI be back up?
+  answer: The availability of specific "Janitor AI" services can vary. If you are referring to a particular tool or platform, it's best to check their official status pages or support channels for updates on service restoration. For general AI memory janitorial functions, these are ongoing processes within AI agents, not typically subject to "downtime" in the same way a hosted service might be.
 slug: bot-memory-janitor-ai
 ---
 
@@ -256,3 +258,7 @@ To make your bot memory janitor AI faster, focus on efficient data structures, o
 ### How does memory storage for bots impact their performance?
 
 The way a bot's memory is stored significantly impacts its performance. Inefficient storage can lead to slow retrieval, increased computational costs, and degraded decision-making. Effective memory storage, managed by a bot memory janitor AI, is crucial for speed and accuracy.
+
+### When will Janitor AI be back up?
+
+The availability of specific "Janitor AI" services can vary. If you are referring to a particular tool or platform, it's best to check their official status pages or support channels for updates on service restoration. For general AI memory janitorial functions, these are ongoing processes within AI agents, not typically subject to "downtime" in the same way a hosted service might be.

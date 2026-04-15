@@ -36,6 +36,9 @@ faq:
 - question: How does Claude AI ensure coherence in long texts and conversations?
   answer: Claude AI ensures coherence in long texts and conversations through its large context window and advanced attention mechanisms. These allow it to maintain a strong understanding of the overall
     dialogue, referencing earlier points to provide relevant and consistent responses, effectively managing its long-term memory within a session.
+- question: What are the key components enabling Claude AI's long-term memory?
+  answer: The key components enabling Claude AI's long-term memory are its large context window and advanced attention mechanisms. These work together to allow the model to process and retain information
+    from extended conversational turns within a single session, crucial for maintaining coherence.
 slug: claude-ai-long-term-memory
 ---
 ## What is Claude AI Long-Term Memory?
@@ -179,3 +182,7 @@ The primary mechanisms behind Claude AI's long-term memory are its large context
 
 ### How does Claude AI ensure coherence in long texts and conversations?
 Claude AI ensures coherence in long texts and conversations through its large context window and advanced attention mechanisms. These allow it to maintain a strong understanding of the overall dialogue, referencing earlier points to provide relevant and consistent responses, effectively managing its long-term memory within a session.
+
+### What are the key components enabling Claude AI's long-term memory?
+The key components enabling Claude AI's long-term memory are its large context window and advanced attention mechanisms. These work together to allow the model to process and retain information from extended conversational turns within a single session, crucial for maintaining coherence.
+---

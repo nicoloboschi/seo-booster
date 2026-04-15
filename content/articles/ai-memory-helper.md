@@ -43,6 +43,9 @@ faq:
 - question: What are the key components of an AI memory helper?
   answer: Key components typically include a storage mechanism (like a vector database or key-value store), an indexing and retrieval system (often using embeddings), and an interface for the AI agent to
     interact with the memory. Some advanced helpers also include summarization and forgetting mechanisms.
+- question: How does an AI memory helper differ from a standard LLM context window?
+  answer: An AI memory helper acts as an external, persistent storage that supplements the LLM's limited, transient context window. While the LLM's context window holds information for the immediate interaction,
+    an AI memory helper stores data across sessions and much longer periods, enabling true long-term memory and significantly enhancing AI recall.
 slug: ai-memory-helper
 ---
 

@@ -10,6 +10,8 @@ tags:
 - vector databases
 - AI image memory
 - visual memory AI
+- image embeddings
+- AI visual recall
 keywords:
 - how images are stored in memory
 - AI image memory
@@ -34,6 +36,10 @@ faq:
 - question: What is the role of multimodal models in AI image memory?
   answer: Multimodal models are crucial for AI image memory as they can generate embeddings for both images and text in the same vector space. This allows AI agents to search their image memory using natural
     language queries, bridging the gap between visual and textual information for more intuitive recall.
+- question: How does AI achieve visual recall from stored images?
+  answer: AI achieves visual recall by first converting images into numerical **embeddings**. These embeddings are then stored in specialized **vector databases**. When an AI needs to recall an image, it
+    queries the vector database with a similar embedding (generated from a text query or another image). The database efficiently returns the most similar stored embeddings, which are then mapped back to
+    the original images, enabling AI visual recall.
 slug: how-images-are-stored-in-memory
 ---
 

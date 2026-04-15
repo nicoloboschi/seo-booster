@@ -1,6 +1,6 @@
 {
   "title": "LLM Memory Bench: Evaluating AI's Recall Capabilities for Agents",
-  "description": "Explore LLM Memory Bench, a critical tool for evaluating AI's recall capabilities. Understand AI memory benchmarks, agent memory testing, and context retention with practical insights.",
+  "description": "Explore LLM Memory Bench, a critical tool for evaluating AI's recall capabilities. Understand AI memory benchmarks, agent memory testing, and context retention with practical insights for agent memory bench development.",
   "date": "2026-04-05",
   "lastmod": "2026-04-05",
   "tags": [
@@ -38,6 +38,10 @@
     {
       "question": "What is an 'agent memory bench'?",
       "answer": "An agent memory bench is a specialized type of LLM memory bench designed to specifically assess the memory capabilities of AI agents. It focuses on how well an agent can store, recall, and utilize information within the context of its tasks and interactions, crucial for robust agent performance."
+    },
+    {
+      "question": "What are key memoryagentbench evaluation metrics?",
+      "answer": "Key memoryagentbench evaluation metrics include accuracy, precision, latency in information retrieval, effective context window utilization, and the degree of information drift over time. These metrics help quantify an agent's recall and retention capabilities."
     }
   ],
   "slug": "llm-memory-bench"
@@ -203,3 +207,5 @@ A growing need exists for standardized **LLM memory bench** protocols that allow
  While general benchmarks test broad capabilities like reasoning or generation, an LLM memory bench specifically focuses on the mechanisms and effectiveness of information storage and retrieval within the LLM, making it key for evaluating agent memory.
 - **What is an 'agent memory bench'?**
  An agent memory bench is a specialized type of LLM memory bench designed to specifically assess the memory capabilities of AI agents. It focuses on how well an agent can store, recall, and utilize information within the context of its tasks and interactions, crucial for robust agent performance.
+- **What are key memoryagentbench evaluation metrics?**
+ Key memoryagentbench evaluation metrics include accuracy, precision, latency in information retrieval, effective context window utilization, and the degree of information drift over time. These metrics help quantify an agent's recall and retention capabilities.

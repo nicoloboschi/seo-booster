@@ -11,6 +11,7 @@ tags:
 - vector databases
 - LLM embeddings
 - RAG implementation
+- vector database embedding methods
 keywords:
 - how to give LLM memory
 - LLM memory
@@ -21,6 +22,7 @@ keywords:
 - LLM embeddings
 - RAG implementation
 - vector database embedding methods
+- vector database embedding methods for RAG
 faq:
 - question: What is the primary challenge when giving an LLM memory?
   answer: The primary challenge is the LLM's inherent statelessness and limited context window, which prevent it from retaining information across multiple interactions or long conversations. Effectively
@@ -37,6 +39,9 @@ faq:
 - question: How do vector database embedding methods contribute to RAG?
   answer: Vector database embedding methods are crucial for RAG. They convert text into numerical vectors that capture semantic meaning. These embeddings are stored in vector databases, allowing for fast
     similarity searches to retrieve contextually relevant information, which is then used to augment the LLM's prompt, thereby enabling effective LLM memory.
+- question: What are the key components of a RAG system for LLM memory?
+  answer: A RAG system for LLM memory typically includes an embedding model to convert text into vectors, a vector database to store and search these vectors, a retrieval mechanism to fetch relevant information,
+    and the LLM itself to generate responses based on the augmented prompt. The effectiveness of vector database embedding methods is paramount for accurate retrieval.
 slug: how-to-give-llm-memory
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'LLM-Based Memory: Enhancing AI Agent Recall and Context for Persistent Understanding'
-description: Explore LLM-based memory systems that extend AI agent context, enabling persistent recall and sophisticated reasoning beyond fixed context windows. Learn about RA...
+description: Explore LLM-based memory systems that extend AI agent context, enabling persistent recall and sophisticated reasoning beyond fixed context windows. Learn about Re...
 date: 2026-04-04
 lastmod: 2026-04-04
 tags:
@@ -34,7 +34,10 @@ faq:
     it into the LLM's prompt. This augments the LLM's knowledge and allows it to generate more informed and contextually relevant responses, effectively acting as a form of LLM-based memory.
 - question: How do vector databases contribute to LLM memory systems?
   answer: Vector databases are crucial for LLM memory systems because they store information as vector embeddings. These embeddings capture the semantic meaning of text, allowing for efficient and nuanced
-    retrieval of relevant information based on meaning and context, rather than just keywords. This enables AI agents to access and utilize past knowledge more effectively.
+    retrieval of information based on meaning and context, rather than just keywords. This enables AI agents to access and utilize past knowledge more effectively.
+- question: What are the main types of LLM memory architectures?
+  answer: The main types of LLM memory architectures include Retrieval-Augmented Generation (RAG), Episodic Memory, Semantic Memory, and Hybrid Memory Systems. Each offers a different approach to enhancing
+    an AI agent's recall and understanding.
 slug: llm-based-memory
 ---
 

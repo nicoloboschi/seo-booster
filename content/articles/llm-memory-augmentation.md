@@ -14,6 +14,9 @@ tags:
 - Context Window
 - Episodic Memory
 - Semantic Memory
+- AI Agents
+- Knowledge Graphs
+- Memory Consolidation
 keywords:
 - llm memory augmentation
 - LLM memory
@@ -39,6 +42,9 @@ faq:
 - question: What are the core components of LLM memory augmentation?
   answer: The core components of **LLM memory augmentation** typically involve techniques like Retrieval-Augmented Generation (RAG), **vector databases** for storing embeddings, and potentially external
     **knowledge graphs**. These work together to extend an LLM's ability to recall and utilize information beyond its immediate **context window**.
+- question: How does RAG contribute to LLM memory augmentation?
+  answer: Retrieval-Augmented Generation (RAG) is a key technique for **LLM memory augmentation**. It enhances **AI recall** by retrieving relevant information from external sources and providing it to
+    the LLM at inference time, effectively expanding its accessible knowledge beyond its **context window**.
 slug: llm-memory-augmentation
 ---
 

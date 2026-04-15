@@ -14,6 +14,8 @@ tags:
 - fast vector search
 - AI recall
 - semantic search
+- faiss db
+- faiss in memory
 keywords:
 - faiss vector database in memory
 - FAISS
@@ -44,6 +46,10 @@ faq:
 - question: What is a FAISS vector database in memory?
   answer: A FAISS vector database in memory refers to the FAISS library's implementation where the entire vector index is loaded and operated upon directly within the computer's Random Access Memory (RAM).
     This configuration prioritizes speed by eliminating disk I/O, making it ideal for applications demanding extremely fast similarity searches.
+- question: What is a FAISS DB and how does it differ from a traditional database?
+  answer: A FAISS DB (Database) specifically refers to using the FAISS library for managing and searching vector embeddings. Unlike traditional relational databases that store structured data in tables,
+    a FAISS DB is optimized for high-dimensional vector similarity search. When deployed in memory, it offers significantly faster retrieval speeds for AI applications compared to disk-based traditional
+    databases.
 slug: faiss-vector-database-in-memory
 ---
 

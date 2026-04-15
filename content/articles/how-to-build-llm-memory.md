@@ -13,6 +13,8 @@ tags:
 - RAG
 - vector databases
 - LLM memory architecture
+- short-term recall
+- LlamaIndex
 keywords:
 - how to build llm memory
 - LLM memory architecture
@@ -28,6 +30,10 @@ keywords:
 - vector databases
 - conversational memory
 - LLM context window
+- short-term recall
+- LlamaIndex
+- LLM long term memory
+- LLM long-term memory
 faq:
 - question: What is the primary challenge when building LLM memory?
   answer: The main challenge is enabling LLMs to retain and recall information beyond their immediate context window, allowing for coherent, extended interactions and learning. This requires external storage
@@ -46,6 +52,12 @@ faq:
 - question: How does LLM memory address the context window limitation?
   answer: LLM memory systems, particularly through RAG and summarization techniques, overcome context window limitations by selectively retrieving and injecting only the most relevant past information into
     the current prompt, rather than trying to fit the entire history.
+- question: What is short-term recall in LLM memory?
+  answer: Short-term recall refers to an AI agent's ability to remember recent interactions or information within a limited timeframe, often managed by conversational memory systems or by leveraging the
+    LLM's immediate context window effectively.
+- question: How can LlamaIndex help build LLM memory?
+  answer: LlamaIndex is a powerful data framework that simplifies the process of connecting LLMs with external data sources. It is particularly useful for building robust RAG pipelines and managing data
+    for both short-term recall and long-term memory storage in AI agents.
 slug: how-to-build-llm-memory
 ---
 
@@ -109,9 +121,9 @@ This stores general knowledge, facts, and concepts. It allows an LLM to understa
 
 This stores specific events or experiences, including their temporal and contextual details. For an AI agent, this means remembering a particular conversation, a user's specific request at a certain time, or a sequence of actions. Implementing [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is key for conversational continuity and personalized interactions.
 
-### Working Memory
+### Working Memory and Short-Term Recall
 
-This is the LLM's immediate, short-term recall, dictated by its context window. While not "built" like long-term storage, effectively using this working memory is critical. Techniques that optimize prompt construction and information summarization directly support working memory use.
+This is the LLM's immediate, short-term recall, dictated by its context window. While not "built" like long-term storage, effectively using this working memory is critical. Techniques that optimize prompt construction and information summarization directly support working memory use. **Short-term recall** is essential for maintaining conversational flow and immediate task context.
 
 ## Strategies for Implementing LLM Memory
 
@@ -182,7 +194,7 @@ Several libraries and frameworks simplify building LLM memory systems. Understan
 
 * **LangChain:** Offers modules for memory management, prompt templating, and RAG. It provides various memory types like `ConversationBufferMemory` and `ConversationSummaryMemory`.
 
-* **LlamaIndex:** Focuses on data indexing and retrieval for LLM applications, excellent for building powerful RAG pipelines and managing data sources for memory. LlamaIndex is particularly useful for implementing **short-term recall** and managing data for LLM applications.
+* **LlamaIndex:** Focuses on data indexing and retrieval for LLM applications, excellent for building powerful RAG pipelines and managing data sources for memory. **LlamaIndex** is particularly useful for implementing **short-term recall** and managing data for LLM applications.
 
 * **Hindsight:** An open-source Python library designed to simplify AI agent memory creation and management. It offers flexible storage and retrieval options, making persistent recall easier. Explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
 
@@ -218,6 +230,10 @@ Addressing these challenges is key to creating intelligent and reliable AI agent
  RAG is a technique that enhances LLM responses by retrieving relevant external information and incorporating it into the prompt before generation. This allows LLMs to access up-to-date or specific knowledge beyond their training data, forming a core part of LLM memory systems.
 * **How does LLM memory address the context window limitation?**
  LLM memory systems, particularly through RAG and summarization techniques, overcome context window limitations by selectively retrieving and injecting only the most relevant past information into the current prompt, rather than trying to fit the entire history.
+* **What is short-term recall in LLM memory?**
+ Short-term recall refers to an AI agent's ability to remember recent interactions or information within a limited timeframe, often managed by conversational memory systems or by using the LLM's immediate context window effectively.
+* **How can LlamaIndex help build LLM memory?**
+ LlamaIndex is a powerful data framework that simplifies the process of connecting LLMs with external data sources. It is particularly useful for building robust RAG pipelines and managing data for both short-term recall and long-term memory storage in AI agents.
 
 ## Conclusion: The Future is Remembered with LLM Memory
 

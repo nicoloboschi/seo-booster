@@ -35,6 +35,9 @@ faq:
 - question: How does an AI memory database contribute to persistent AI memory?
   answer: An AI memory database provides the essential infrastructure for storing and retrieving an AI agent's learned experiences and contextual information over extended periods, ensuring that the agent
     retains knowledge and can build upon past interactions, thus creating persistent AI memory.
+- question: What are the key components of an AI memory system?
+  answer: Key components of an AI memory system include the AI memory database itself for storage, embedding models for data representation, indexing mechanisms for efficient retrieval, and the AI agent's
+    interface for querying and utilizing the stored information.
 slug: ai-memory-database
 ---
 

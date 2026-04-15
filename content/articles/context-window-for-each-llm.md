@@ -41,6 +41,9 @@ faq:
 - question: What are AI context windows?
   answer: AI context windows refer to the specific context window sizes of different Large Language Models (LLMs). Understanding the context window for each LLM is crucial for optimizing AI agent performance
     and memory.
+- question: What are compaction strategies for LLMs?
+  answer: Compaction strategies are techniques used to reduce the token count of input data for LLMs while preserving essential information. This allows more data to fit within the LLM's context window,
+    improving its ability to process and recall information from longer texts.
 slug: context-window-for-each-llm
 ---
 
@@ -190,3 +193,6 @@ Strategies include using retrieval-augmented generation (RAG), employing summari
 
 ### What are AI context windows?
 AI context windows refer to the specific context window sizes of different Large Language Models (LLMs). Understanding the context window for each LLM is crucial for optimizing AI agent performance and memory.
+
+### What are compaction strategies for LLMs?
+Compaction strategies are techniques used to reduce the token count of input data for LLMs while preserving essential information. This allows more data to fit within the LLM's context window, improving its ability to process and recall information from longer texts.

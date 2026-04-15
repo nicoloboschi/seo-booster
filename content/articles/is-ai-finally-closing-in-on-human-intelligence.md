@@ -37,6 +37,9 @@ faq:
 - question: How does AI memory compare to human memory?
   answer: Human memory is complex, involving episodic, semantic, and procedural recall. AI memory, particularly episodic memory in AI agents, aims to replicate the ability to recall specific past events
     and learn from them, a crucial step towards more human-like AI.
+- question: What are the key differences between narrow AI and Artificial General Intelligence (AGI)?
+  answer: Narrow AI excels at specific tasks (e.g., playing chess, recognizing faces), while AGI would possess human-like cognitive abilities to understand, learn, and apply knowledge across a wide range
+    of tasks, exhibiting flexibility and common sense.
 slug: is-ai-finally-closing-in-on-human-intelligence
 ---
 

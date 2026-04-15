@@ -33,6 +33,9 @@ faq:
 - question: How does quantization affect LLM GPU memory size?
   answer: Quantization reduces the precision of model weights (e.g., from FP16 to INT8 or INT4), significantly decreasing the **LLM GPU memory size** required to store the model. This can halve or quarter
     memory usage with minimal loss in accuracy, making larger models more accessible on limited hardware.
+- question: What are the key components that consume LLM GPU memory during inference?
+  answer: The primary components consuming **LLM GPU memory size** during inference are the model's weights and the key-value (KV) cache. The KV cache stores intermediate attention computations and grows
+    with the input sequence length and generated tokens.
 slug: llm-gpu-memory-size
 ---
 
@@ -177,4 +180,7 @@ VRAM (Video RAM) is on the GPU and is extremely fast, essential for the parallel
 
 **How does quantization affect LLM GPU memory size?**
 Quantization reduces the precision of model weights (e.g., from FP16 to INT8 or INT4), significantly decreasing the **LLM GPU memory size** required to store the model. This can halve or quarter memory usage with minimal loss in accuracy, making larger models more accessible on limited hardware.
+
+**What are the key components that consume LLM GPU memory during inference?**
+The primary components consuming **LLM GPU memory size** during inference are the model's weights and the key-value (KV) cache. The KV cache stores intermediate attention computations and grows with the input sequence length and generated tokens.
 ---

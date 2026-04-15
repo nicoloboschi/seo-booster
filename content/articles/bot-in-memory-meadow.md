@@ -14,6 +14,10 @@ tags:
 - AI memory systems
 - AI recall
 - long-term memory AI
+- AI context window
+- catastrophic forgetting
+- retrieval-augmented generation
+- vector databases
 keywords:
 - bot in memory meadow
 - AI memory
@@ -41,6 +45,8 @@ faq:
     architectures and retrieval mechanisms.
 - question: What are the main technical hurdles to achieving a true AI memory meadow?
   answer: Key challenges include overcoming context window limitations, ensuring efficient scalability for massive memory stores, preventing catastrophic forgetting during learning, and accurately retrieving only the most relevant information for any given situation, all critical for a fully realized bot in memory meadow.
+- question: How does the AI context window impact an AI's memory?
+  answer: The AI context window is a form of short-term memory that limits how much recent information an AI can process at once. Information outside this window can be lost, necessitating external memory solutions for a bot in memory meadow.
 slug: bot-in-memory-meadow
 ---
 

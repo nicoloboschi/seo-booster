@@ -11,6 +11,9 @@ tags:
 - long-term memory AI
 - RAG
 - vector databases
+- AI that remembers conversations
+- agent persistent memory
+- AI agent long-term memory
 keywords:
 - how to make llm have memory
 - LLM memory
@@ -45,6 +48,9 @@ faq:
 - question: How do AI agents achieve long-term memory?
   answer: AI agents achieve long-term memory through specialized architectures and techniques like Retrieval-Augmented Generation (RAG), vector databases, and explicit memory modules that store and retrieve
     information across extended interaction periods.
+- question: What are the different types of AI agent memory?
+  answer: AI agents can utilize various types of memory, including short-term memory (for immediate context), episodic memory (for specific past events), semantic memory (for general knowledge), and working
+    memory (for active processing). Each type serves a distinct purpose in enabling intelligent behavior.
 slug: how-to-make-llm-have-memory
 ---
 
@@ -216,3 +222,5 @@ Giving LLMs memory is not a single solution but a collection of techniques and a
  Yes, LLMs can "forget" information if it falls outside their context window, is not included in RAG retrieval, or if memory management systems actively prune older or less relevant data through processes like memory consolidation.
 * **How do AI agents achieve long-term memory?**
  AI agents achieve long-term memory through specialized architectures and techniques like Retrieval-Augmented Generation (RAG), vector databases, and explicit memory modules that store and retrieve information across extended interaction periods.
+* **What are the different types of AI agent memory?**
+ AI agents can use various types of memory, including short-term memory (for immediate context), episodic memory (for specific past events), semantic memory (for general knowledge), and working memory (for active processing). Each type serves a distinct purpose in enabling intelligent behavior.

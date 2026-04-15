@@ -54,6 +54,9 @@ faq:
 - question: What is Retrieval-Augmented Generation (RAG) for Gemini?
   answer: Retrieval-Augmented Generation (RAG) is a technique that enhances Gemini's responses by retrieving relevant information from an external knowledge base before generating an answer. This allows
     Gemini to access and utilize data beyond its immediate training or context window, significantly improving accuracy and contextuality.
+- question: How does Gemini's long-term memory work?
+  answer: Gemini's long-term memory is typically implemented using external storage systems, such as vector databases, that store and retrieve information from past interactions or knowledge bases. This
+    allows Gemini to access data beyond its immediate context window, enabling persistent recall and learning.
 slug: ai-memory-gemini
 ---
 
@@ -273,3 +276,7 @@ AI memory significantly enhances Gemini's capabilities by enabling it to remembe
 ### What is Retrieval-Augmented Generation (RAG) for Gemini?
 
 Retrieval-Augmented Generation (RAG) is a technique that enhances Gemini's responses by retrieving relevant information from an external knowledge base before generating an answer. This allows Gemini to access and use data beyond its immediate training or context window, significantly improving accuracy and contextuality.
+
+### How does Gemini's long-term memory work?
+
+Gemini's long-term memory is typically implemented using external storage systems, such as vector databases, that store and retrieve information from past interactions or knowledge bases. This allows Gemini to access data beyond its immediate context window, enabling persistent recall and learning.

@@ -29,6 +29,9 @@ faq:
   answer: To optimize your code for LLM context windows, focus on modularity, clear documentation, and using descriptive variable/function names. Breaking down large files into smaller, manageable units
     can also help. When interacting with LLMs, provide context incrementally and highlight critical sections of code. Techniques like RAG are also highly effective for providing relevant context without
     overwhelming the model's native window.
+- question: What are the primary challenges of LLM context windows in coding?
+  answer: The primary challenges of LLM context windows in coding revolve around their limited capacity, leading to a "forgetting" problem where the AI loses track of earlier code or conversation context.
+    This impacts code generation consistency, dependency awareness, and debugging effectiveness, especially in large or complex projects.
 slug: llm-context-window-for-coding
 ---
 

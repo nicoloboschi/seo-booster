@@ -12,6 +12,10 @@ tags:
 - chatbot memory management
 - AI assistant memory
 - persistent memory AI
+- AI memory layer
+- chatbot context window
+- RAG for AI memory
+- vector databases for AI
 keywords:
 - chatbot memory management
 - AI memory
@@ -38,6 +42,9 @@ faq:
     information overload and data privacy.
 - question: What is the role of the AI memory layer in conversational AI?
   answer: The AI memory layer is crucial for enabling chatbots to retain context, personalize interactions, and recall past information, transforming them from stateless to stateful agents.
+- question: How does RAG improve chatbot memory?
+  answer: RAG (Retrieval-Augmented Generation) enhances chatbot memory by allowing it to retrieve relevant information from external knowledge bases and incorporate it into its responses, effectively expanding
+    its context beyond its immediate training data or conversation history.
 slug: chatbot-memory-management
 ---
 

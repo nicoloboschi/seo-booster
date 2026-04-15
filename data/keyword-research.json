@@ -96,19 +96,19 @@
       "best open source llm memory",
       "building llm memory from scratch",
       "deepseek llm.memory",
-      "different llm memory expansion strategies",
       "dify llm node memory",
       "does llm have memory",
       "does llm make you a lawyer",
       "does local llm have memory",
       "hindsight llm memory",
-      "how does llm memory work",
       "how llm memory works",
       "how to build llm memory",
       "how to calculate llm memory usage",
       "how to give llm memory",
       "how to give local llm memory",
-      "how to implement llm memory"
+      "how to implement llm memory",
+      "how to improve llm memory",
+      "how to increase llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 186,
+      "autocomplete_matches": 184,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -5651,9 +5651,11 @@
     {
       "keyword": "llm decoding memory bound",
       "slug": "llm-decoding-memory-bound",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm decoding memory bound"
+      ]
     },
     {
       "keyword": "llm dynamic context window",
@@ -5667,9 +5669,11 @@
     {
       "keyword": "llm dynamic memory",
       "slug": "llm-dynamic-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm dynamic memory"
+      ]
     },
     {
       "keyword": "llm external memory",
@@ -6202,10 +6206,9 @@
     {
       "keyword": "llm memory expansion strategies",
       "slug": "llm-memory-expansion-strategies",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "different llm memory expansion strategies",
         "llm memory expansion strategies"
       ]
     },
@@ -9013,16 +9016,22 @@
       "matching_suggestions": [
         "llm inference memory bandwidth"
       ]
+    },
+    {
+      "keyword": "how does llm memory work",
+      "slug": "how-does-llm-memory-work",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github",
-    "how does llm memory work"
+    "ai long term.memory github"
   ],
   "summary": {
-    "total_keywords": 946,
-    "validated": 897,
-    "low_volume": 49,
-    "new_opportunities_found": 2
+    "total_keywords": 947,
+    "validated": 899,
+    "low_volume": 48,
+    "new_opportunities_found": 1
   }
 }

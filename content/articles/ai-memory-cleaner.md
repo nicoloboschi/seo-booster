@@ -45,6 +45,12 @@ faq:
 - question: How does an AI memory cleaner contribute to reducing AI costs?
   answer: An **AI memory cleaner** reduces AI costs by optimizing computational resource usage. By clearing out redundant or unused data, it lowers memory footprint, requiring less RAM and processing power.
     This directly translates to lower cloud computing bills and reduced hardware expenses, making AI more economically feasible.
+- question: What is the role of pruning in AI memory management?
+  answer: Pruning is a fundamental technique used by an **AI memory cleaner** to selectively remove data from an agent's memory. This process is based on criteria such as recency, relevance, and redundancy,
+    ensuring that the agent's memory remains efficient and focused on essential information for optimal **AI performance optimization**.
+- question: How does an AI memory cleaner improve AI performance?
+  answer: An **AI memory cleaner** improves AI performance by reducing latency and speeding up task completion. By streamlining an agent's memory through **AI memory pruning**, it allows for faster access
+    to relevant information, leading to quicker responses and more efficient operation. This is crucial for **AI performance optimization**.
 slug: ai-memory-cleaner
 ---
 

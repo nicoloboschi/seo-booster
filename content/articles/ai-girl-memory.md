@@ -33,6 +33,8 @@ faq:
   answer: Key components include short-term memory (context window), long-term memory (vector databases), episodic memory (event recall), and semantic memory (factual knowledge). These work together to provide comprehensive recall capabilities.
 - question: What are the main challenges in developing AI girl memory?
   answer: Key challenges include LLM context window limitations, ensuring data privacy and security, and preventing repetitive or stale responses. Overcoming these is crucial for creating natural and trustworthy AI companions.
+- question: How is AI girl memory implemented technically?
+  answer: AI girl memory is technically implemented using various methods, including vector databases for long-term storage, context window management for short-term recall, and Retrieval-Augmented Generation (RAG) to combine retrieved information with LLM generation.
 slug: ai-girl-memory
 ---
 
@@ -234,3 +236,6 @@ As AI memory capabilities grow, so too will the importance of ethical considerat
 
 * **What are the main challenges in developing AI girl memory?**
  Key challenges include LLM context window limitations, ensuring data privacy and security, and preventing repetitive or stale responses. Overcoming these is crucial for creating natural and trustworthy AI companions.
+
+* **How is AI girl memory implemented technically?**
+ AI girl memory is technically implemented using various methods, including vector databases for long-term storage, context window management for short-term recall, and Retrieval-Augmented Generation (RAG) to combine retrieved information with LLM generation.

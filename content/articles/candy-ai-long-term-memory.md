@@ -35,6 +35,9 @@ faq:
 - question: How does Candy AI ensure persistent memory for AI agents?
   answer: Candy AI ensures **persistent memory for AI** agents by implementing advanced **AI agent memory systems** that go beyond the limitations of standard LLM context windows. This involves utilizing
     techniques like **vector databases for AI** to store and retrieve information semantically, enabling **agent recall** across extended interactions.
+- question: How does Candy AI's long-term memory improve user experience?
+  answer: By enabling **agent recall** and **persistent memory for AI**, Candy AI agents can remember user preferences, past conversations, and context. This leads to more personalized, efficient, and natural
+    interactions, reducing the need for users to repeat information and fostering a sense of continuity.
 slug: candy-ai-long-term-memory
 ---
 

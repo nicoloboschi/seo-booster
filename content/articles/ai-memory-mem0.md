@@ -44,7 +44,6 @@ faq:
 
 **AI memory MEM0** is a foundational technology that equips AI agents with persistent, long-term recall. It enables the crucial storage, retrieval, and management of past interaction data, fostering continuous learning and maintaining context for sophisticated operations. This is a key component for advanced agentic systems, providing the **agent memory** that allows AI to evolve.
 
----
 ## What is AI Memory MEM0?
 
 **AI Memory MEM0** is a specialized framework designed to equip AI agents with persistent, long-term memory capabilities. It allows agents to store, retrieve, and manage information from past interactions and experiences, creating continuity for agentic systems. This **AI agent memory** solution is crucial for developing AI that can learn and adapt over time, moving beyond the limitations of stateless models.

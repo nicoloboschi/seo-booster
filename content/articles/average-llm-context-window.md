@@ -35,6 +35,9 @@ faq:
   answer: The GPT-2 model, released in 2019, had a context window of up to 1,024 tokens. This was a significant advancement at the time but is considered small by today's standards.
 - question: What is the average LLM context window size?
   answer: The average LLM context window typically ranges from a few thousand to tens of thousands of tokens. Leading models now offer much larger capacities, pushing the boundaries of what's possible.
+- question: What does "GPT-2 context window 1024 tokens" mean?
+  answer: This refers to the specific context window size of the GPT-2 model, which was limited to processing a maximum of 1,024 tokens at a time. This was a notable feature of GPT-2's architecture and
+    a benchmark for its era.
 slug: average-llm-context-window
 ---
 
