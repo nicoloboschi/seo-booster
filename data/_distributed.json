@@ -6614,5 +6614,23 @@
         "posted_at": "2026-04-14T19:48:53"
       }
     }
+  },
+  "ai-memory-algorithm": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfaf06d21e478f683bf918",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-algorithms-architectures-for-agent-recall",
+        "posted_at": "2026-04-15T17:30:15"
+      }
+    }
+  },
+  "ai-memory-efficiency": {
+    "platforms": {
+      "hashnode": {
+        "id": "69dfaf0bf07c963e2447d60b",
+        "url": "https://aiagentmemory.hashnode.dev/ai-memory-efficiency-boosting-agent-performance-and-reducing-costs",
+        "posted_at": "2026-04-15T17:30:19"
+      }
+    }
   }
 }
