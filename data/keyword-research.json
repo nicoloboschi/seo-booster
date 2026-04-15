@@ -46,7 +46,6 @@
     ],
     "ai memory": [
       "ai agent memory knowledge graph",
-      "ai and memory",
       "ai and memory wall",
       "ai episodic memory",
       "ai episodic memory faiss",
@@ -64,7 +63,8 @@
       "ai killing ram",
       "ai killing ram prices",
       "ai memory agent",
-      "ai memory algorithm"
+      "ai memory algorithm",
+      "ai memory and context"
     ],
     "best ai memory": [
       "ai chatbot with best memory",
@@ -347,7 +347,7 @@
       "how to use mem0",
       "mem0 agent memory",
       "mem0 ai",
-      "mem0 ai github",
+      "mem0 ai founder",
       "mem0 ai memory",
       "mem0 alternatives",
       "mem0 api",
@@ -1373,9 +1373,11 @@
     {
       "keyword": "ai memory api",
       "slug": "ai-memory-api",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory api"
+      ]
     },
     {
       "keyword": "ai memory app",
@@ -1476,9 +1478,11 @@
     {
       "keyword": "ai memory bubble",
       "slug": "ai-memory-bubble",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory bubble"
+      ]
     },
     {
       "keyword": "ai memory card",
@@ -1543,11 +1547,10 @@
     {
       "keyword": "ai memory companies",
       "slug": "ai-memory-companies",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "ai memory companies",
-        "best ai memory companies",
         "best ai memory companies"
       ]
     },
@@ -2052,9 +2055,11 @@
     {
       "keyword": "ai memory mem0",
       "slug": "ai-memory-mem0",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory mem0"
+      ]
     },
     {
       "keyword": "ai memory meme",
@@ -2167,18 +2172,18 @@
     {
       "keyword": "ai memory pendant",
       "slug": "ai-memory-pendant",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory pendant"
+      ]
     },
     {
       "keyword": "ai memory penny stocks",
       "slug": "ai-memory-penny-stocks",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory penny stocks"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory perfume korea",
@@ -3597,9 +3602,11 @@
     {
       "keyword": "context window llm size",
       "slug": "context-window-llm-size",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm size"
+      ]
     },
     {
       "keyword": "context window management llm",
@@ -4379,9 +4386,10 @@
     {
       "keyword": "best ai memory framework",
       "slug": "best-ai-memory-framework",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "best ai memory framework",
         "best ai memory framework"
       ]
     },
@@ -4911,11 +4919,9 @@
     {
       "keyword": "ai memory booster",
       "slug": "ai-memory-booster",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory booster"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory gap",
@@ -7005,9 +7011,11 @@
     {
       "keyword": "mem0 ai founder",
       "slug": "mem0-ai-founder",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 ai founder"
+      ]
     },
     {
       "keyword": "mem0 ai memory",
@@ -7039,10 +7047,9 @@
     {
       "keyword": "mem0 embedding",
       "slug": "mem0-embedding",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "mem0 embedding",
         "mem0 embedding model"
       ]
     },
@@ -7067,11 +7074,9 @@
     {
       "keyword": "mem0 for rag",
       "slug": "mem0-for-rag",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 for rag"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 graph memory",
@@ -8999,11 +9004,9 @@
     {
       "keyword": "mem0 ai github",
       "slug": "mem0-ai-github",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 ai github"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "zep memory funding",
@@ -9013,28 +9016,132 @@
       "matching_suggestions": [
         "zep memory funding"
       ]
+    },
+    {
+      "keyword": "ai memory chip manufacturers",
+      "slug": "ai-memory-chip-manufacturers",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip manufacturers"
+      ]
+    },
+    {
+      "keyword": "ai memory context",
+      "slug": "ai-memory-context",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "best memory layer for ai agents",
+      "slug": "best-memory-layer-for-ai-agents",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory layer for ai agents"
+      ]
+    },
+    {
+      "keyword": "context window management in llm",
+      "slug": "context-window-management-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window management in llm"
+      ]
+    },
+    {
+      "keyword": "dify llm memory",
+      "slug": "dify-llm-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "dify llm memory"
+      ]
+    },
+    {
+      "keyword": "do you need llb for llm",
+      "slug": "do-you-need-llb-for-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "do you need llb for llm"
+      ]
+    },
+    {
+      "keyword": "does ai agents have memory",
+      "slug": "does-ai-agents-have-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "does ai agents have memory"
+      ]
+    },
+    {
+      "keyword": "latest news about ai ai delas alas",
+      "slug": "latest-news-about-ai-ai-delas-alas",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "latest news about ai ai delas alas"
+      ]
+    },
+    {
+      "keyword": "llm memory approaches",
+      "slug": "llm-memory-approaches",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory approaches"
+      ]
+    },
+    {
+      "keyword": "llm memory cache",
+      "slug": "llm-memory-cache",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory cache"
+      ]
+    },
+    {
+      "keyword": "llm programs law",
+      "slug": "llm-programs-law",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm programs law"
+      ]
+    },
+    {
+      "keyword": "memory learning ai",
+      "slug": "memory-learning-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory learning ai"
+      ]
+    },
+    {
+      "keyword": "persistent memory examples",
+      "slug": "persistent-memory-examples",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "persistent memory examples"
+      ]
     }
   ],
   "new_opportunities": [
     "ai long term.memory github",
-    "ai memory chip manufacturers",
-    "ai memory context",
-    "best memory layer for ai agents",
-    "context window management in llm",
-    "dify llm memory",
-    "do you need llb for llm",
-    "does ai agents have memory",
-    "latest news about ai ai delas alas",
-    "llm memory approaches",
-    "llm memory cache",
-    "llm programs law",
-    "memory learning ai",
-    "persistent memory examples"
+    "ai memory compression breakthrough",
+    "ai memory map"
   ],
   "summary": {
-    "total_keywords": 952,
-    "validated": 877,
-    "low_volume": 75,
-    "new_opportunities_found": 14
+    "total_keywords": 965,
+    "validated": 891,
+    "low_volume": 74,
+    "new_opportunities_found": 3
   }
 }

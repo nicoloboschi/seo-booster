@@ -42,7 +42,6 @@ Why would an AI system need to remember anything at all? Imagine an AI assistant
 
 The core advantage of an **LLM memory cache** lies in its ability to **reduce computational load**. Large language models, especially transformers, perform complex calculations for every token they process. Caching these intermediate results, such as attention scores or key-value pairs, means the model doesn't have to re-derive them repeatedly. This directly translates to faster response times and lower operational costs.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 A 2024 study published on arXiv indicated that transformer models can spend up to 70% of their inference time on computations that could be potentially cached. Implementing an effective **LLM cache** can therefore lead to substantial performance gains. This is particularly critical for real-time applications where latency is a major concern.
