@@ -49,7 +49,7 @@ faq:
     an AI agent's memory for improved recall and contextual understanding.
 slug: dify-llm-node-memory
 ---
-
+---
 
 Could an AI agent truly understand you without remembering what you said moments ago? **Dify LLM node memory** bridges this gap, enabling AI agents to store and retrieve information crucial for effective interaction and complex task completion within the Dify platform. This capability is fundamental for building sophisticated AI.
 

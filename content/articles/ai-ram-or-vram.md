@@ -49,7 +49,7 @@ faq:
     performed on the GPU, utilizing VRAM.
 slug: ai-ram-or-vram
 ---
----
+
 
 Could your AI agent's sluggishness be a memory problem? The distinction between **AI RAM or VRAM** is often the culprit, impacting everything from training speed to response times.
 

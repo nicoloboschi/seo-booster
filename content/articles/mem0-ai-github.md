@@ -178,7 +178,6 @@ This foundational example illustrates how an agent can store conversational segm
 
 As AI technology continues its rapid advancement, the demand for sophisticated memory systems will undoubtedly escalate. Projects like Mem0 AI are paving the way, actively pushing the boundaries of what AI agents can remember and learn over time. The **Mem0 AI GitHub** project is central to this progress.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Enhancing Context and Coherence
