@@ -8047,11 +8047,9 @@
     {
       "keyword": "what is chatbot example",
       "slug": "what-is-chatbot-example",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is chatbot example"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is chatbot in healthcare",
@@ -8308,11 +8306,9 @@
     {
       "keyword": "what is the best ai chatbot",
       "slug": "what-is-the-best-ai-chatbot",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the best ai chatbot"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the best type of memory",
@@ -8354,11 +8350,9 @@
     {
       "keyword": "what is the smartest chatbot",
       "slug": "what-is-the-smartest-chatbot",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the smartest chatbot"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is zep memory",
@@ -8508,11 +8502,9 @@
     {
       "keyword": "who has the best chatbot",
       "slug": "who-has-the-best-chatbot",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "who has the best chatbot"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "who has the best memory ever",
@@ -9156,8 +9148,8 @@
   ],
   "summary": {
     "total_keywords": 967,
-    "validated": 893,
-    "low_volume": 74,
+    "validated": 889,
+    "low_volume": 78,
     "new_opportunities_found": 1
   }
 }
