@@ -49,6 +49,8 @@ faq:
   answer: By remembering past interactions, preferences, and context, Google's AI memory enables highly personalized search results, content recommendations, and conversational experiences, making services more relevant to individual users.
 - question: How does Google's AI architecture utilize memory?
   answer: Google's AI architecture integrates memory at multiple levels, from short-term context windows in LLMs to long-term knowledge graphs and vector databases. This layered approach allows for efficient processing of information and dynamic adaptation to user needs.
+- question: What are the primary types of AI memory systems Google employs?
+  answer: Google employs a multi-layered approach to AI memory, including short-term context windows for LLMs, long-term storage via vector databases and knowledge graphs, and dynamic retrieval mechanisms. This allows for efficient processing and adaptation to user needs.
 slug: ai-memory-google
 ---
 

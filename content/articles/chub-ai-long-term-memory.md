@@ -48,8 +48,12 @@ faq:
 - question: What is agentic AI and how does long-term memory relate to it?
   answer: Agentic AI refers to AI systems designed to act autonomously to achieve goals. Long-term memory is crucial for agentic AI as it enables them to learn from past experiences, adapt their strategies,
     and maintain context over extended periods, leading to more effective and goal-oriented behavior.
+- question: How does CHUB AI's long-term memory differ from traditional AI memory?
+  answer: Traditional AI memory is often limited to short-term context windows, meaning information is lost quickly. CHUB AI's long-term memory provides persistent storage and recall capabilities, allowing
+    AI agents to build upon past interactions and knowledge over extended periods, leading to more coherent and intelligent behavior.
 slug: chub-ai-long-term-memory
 ---
+
 
 Imagine an AI that forgets your name mid-conversation. This frustrating reality is being overcome by **CHUB AI's long-term memory** systems, which enable agents to retain and recall information, improving coherence and task performance. **CHUB AI long-term memory** provides AI agents with the crucial ability to retain and recall information across extended periods, moving beyond the limitations of short-term context windows. This persistent recall is foundational for building more capable, adaptive, and contextually aware artificial intelligence systems.
 

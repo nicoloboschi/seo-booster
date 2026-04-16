@@ -57,6 +57,9 @@ faq:
   answer: To find the best AI memory GitHub repositories, consider your project's specific needs (e.g., scalability, performance, features like episodic or semantic memory). Look for active communities,
     comprehensive documentation, and projects that integrate with tools like vector databases (e.g., Pinecone, ChromaDB) or RAG frameworks (e.g., LangChain). Searching for terms like "AI agent memory GitHub"
     or "LLM memory GitHub" can yield relevant results.
+- question: What are the core components of an AI memory engine found on GitHub?
+  answer: An AI memory engine typically comprises a storage mechanism (like a vector database), a retrieval system to fetch relevant information, and an integration layer to feed this information back to
+    the AI model. GitHub hosts numerous open-source projects that provide these components, allowing developers to build sophisticated AI memory engines.
 slug: ai-memory-github
 ---
 

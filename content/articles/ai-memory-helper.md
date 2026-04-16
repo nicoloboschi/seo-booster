@@ -46,6 +46,9 @@ faq:
 - question: How does an AI memory helper differ from a standard LLM context window?
   answer: An AI memory helper acts as an external, persistent storage that supplements the LLM's limited, transient context window. While the LLM's context window holds information for the immediate interaction,
     an AI memory helper stores data across sessions and much longer periods, enabling true long-term memory and significantly enhancing AI recall.
+- question: How can an AI memory helper be implemented for conversational AI?
+  answer: For conversational AI, an AI memory helper stores dialogue history, user preferences, and learned conversational patterns. This allows the AI to recall previous turns in a conversation, understand
+    context, and provide more natural, personalized responses, moving beyond simple turn-by-turn interactions.
 slug: ai-memory-helper
 ---
 

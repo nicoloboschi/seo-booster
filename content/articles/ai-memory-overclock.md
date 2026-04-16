@@ -39,6 +39,9 @@ faq:
 - question: What are the implications of AI memory overclocking on agentic AI long-term memory?
   answer: Overclocking AI memory can significantly enhance agentic AI long-term memory by enabling faster retrieval and more efficient management of vast amounts of historical data. This allows agents to
     access and utilize their long-term knowledge more effectively, leading to more sophisticated reasoning and decision-making capabilities.
+- question: What are the primary goals of AI memory overclocking?
+  answer: The primary goals of AI memory overclocking are to significantly increase the speed at which an AI agent can access and retrieve information, and to expand its capacity to store and manage larger
+    datasets, thereby enhancing its overall responsiveness and capability.
 slug: ai-memory-overclock
 ---
 

@@ -59,6 +59,9 @@ faq:
 - question: What are the core challenges in managing AI memory demand?
   answer: Core challenges include balancing memory capacity with computational cost, ensuring efficient data retrieval, handling data volatility, and developing scalable storage solutions that can adapt
     to the dynamic nature of AI workloads.
+- question: How does AI system memory relate to AI memory demand?
+  answer: AI system memory refers to the total memory resources an AI system utilizes, including RAM, VRAM, and storage. AI memory demand is the measure of how much of these resources are required for specific
+    tasks and overall operation.
 slug: ai-memory-demand
 ---
 

@@ -55,6 +55,9 @@ faq:
 - question: What is the role of temporal memory in AI decision-making?
   answer: Temporal memory allows AI to consider the sequence and timing of past events when making decisions. This enables more informed choices by understanding context, predicting consequences, and adapting
     to evolving situations based on historical data.
+- question: What are the key challenges in implementing effective temporal reasoning in AI?
+  answer: Key challenges include managing the scalability of temporal data, representing temporal granularity accurately, handling uncertainty and ambiguity in temporal information, and balancing memory
+    depth with computational resources.
 slug: temporal-reasoning-ai-memory
 ---
 

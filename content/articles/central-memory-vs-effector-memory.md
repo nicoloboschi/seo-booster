@@ -41,6 +41,9 @@ faq:
 - question: How does effector memory facilitate AI task execution?
   answer: Effector memory stores learned skills, motor commands, and action sequences. When an AI agent needs to perform a task, it consults effector memory to retrieve the precise actions and parameters
     required for efficient and effective execution.
+- question: How does central memory differ from effector memory in terms of scope?
+  answer: Central memory has a broad scope, encompassing general knowledge, beliefs, and environmental context. Effector memory has a narrow, specialized scope, focusing specifically on the details of actions
+    and their execution.
 slug: central-memory-vs-effector-memory
 ---
 

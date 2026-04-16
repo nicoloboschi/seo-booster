@@ -38,6 +38,9 @@ faq:
 - question: How does Candy AI's long-term memory improve user experience?
   answer: By enabling **agent recall** and **persistent memory for AI**, Candy AI agents can remember user preferences, past conversations, and context. This leads to more personalized, efficient, and natural
     interactions, reducing the need for users to repeat information and fostering a sense of continuity.
+- question: What are the benefits of using vector databases for AI agent memory?
+  answer: Vector databases enable **semantic search**, allowing AI agents to retrieve information based on meaning rather than exact keywords. This is crucial for effective **agent recall** and forms a
+    vital part of **Candy AI long term memory** by ensuring relevant past interactions are easily accessible, even if the phrasing differs.
 slug: candy-ai-long-term-memory
 ---
 
@@ -144,3 +147,4 @@ These strategies ensure that the AI agent can access and use relevant past infor
 The development of **persistent memory for AI** is an ongoing area of research and development. As AI agents become more sophisticated, the need for them to remember and learn from past interactions will only grow. **Candy AI long term memory** represents a significant step towards creating AI that is not only intelligent but also deeply personalized and contextually aware.
 
 The ability for AI agents to have **conversational AI memory** that is both deep and accessible is transformative. It moves us closer to AI assistants that can truly understand and remember users, leading to more natural, efficient, and helpful interactions. The ongoing advancements in **AI agent memory systems** and **vector databases for AI** are paving the way for a future where AI remembers.
+---

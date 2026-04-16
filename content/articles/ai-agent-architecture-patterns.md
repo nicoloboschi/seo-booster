@@ -69,6 +69,9 @@ faq:
 - question: How does an agent's native architecture influence its capabilities?
   answer: An agent's native architecture dictates its fundamental operational principles, including how it perceives, reasons, and acts. This foundational design directly impacts its ability to learn, adapt,
     and perform complex tasks, influencing everything from its decision-making processes to its interaction with memory systems.
+- question: What are the key differences between ReAct and Plan-and-Execute architectures?
+  answer: The ReAct architecture interleaves reasoning and action dynamically, allowing for iterative refinement and tool use. In contrast, the Plan-and-Execute architecture separates planning from execution,
+    generating a complete plan before any actions are taken. This makes Plan-and-Execute more suitable for predictable tasks, while ReAct is better for dynamic environments.
 slug: ai-agent-architecture-patterns
 ---
 

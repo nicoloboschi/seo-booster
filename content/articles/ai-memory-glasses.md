@@ -53,6 +53,10 @@
     {
       "question": "How does AI memory glasses technology work?",
       "answer": "AI memory glasses work by capturing sensory data (visual, auditory) through integrated cameras and microphones. This data is then processed by AI models to create a searchable personal memory log, enabling users to recall past events and information."
+    },
+    {
+      "question": "What are the key components of AI memory glasses?",
+      "answer": "The key components of AI memory glasses include sensory hardware (cameras, microphones, sensors), AI processing units for memory recording, and a personal memory database for storing and organizing captured experiences."
     }
   ]
 }

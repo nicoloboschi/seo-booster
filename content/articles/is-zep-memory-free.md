@@ -63,7 +63,7 @@ Is Zep Memory free? Zep provides a powerful open-source version you can self-hos
 
 The **Zep AI memory platform** aims to provide effective memory capabilities for large language models (LLMs). It's designed to store and retrieve **conversational context**, **user preferences**, and **agent experiences**, enabling more sophisticated and personalized AI interactions. This article clarifies the **Zep pricing model** and explores its free, open-source offering, directly addressing whether **Zep Memory is free**.
 
-## What is Zep Memory?
+## What is the Zep AI Memory Platform?
 
 Zep is an **AI memory platform** designed to give LLM-powered applications persistent and accessible memory. It focuses on storing and retrieving **semantic meaning** and **context** from conversations and interactions, going beyond simple chat history. This allows AI agents to build long-term understanding and recall past events more effectively.
 

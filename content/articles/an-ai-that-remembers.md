@@ -40,6 +40,9 @@ faq:
 - question: What is RetainDB and how does it relate to AI memory?
   answer: RetainDB is a conceptual or actual database system designed to store and manage the long-term memory of AI agents. It facilitates persistent memory by enabling AI systems to retain and access
     past interactions and learned information, crucial for building an AI that remembers and learns over time.
+- question: How does an AI with persistent memory differ from an AI with only short-term memory?
+  answer: An AI with persistent memory can retain and access information over extended periods, allowing for continuous learning and deeper personalization. In contrast, an AI with only short-term memory
+    (like a limited context window) forgets past interactions once they fall outside that window, hindering its ability to build a consistent understanding or provide truly personalized experiences.
 slug: an-ai-that-remembers
 ---
 

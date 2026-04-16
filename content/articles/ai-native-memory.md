@@ -194,4 +194,3 @@ class AIAgentWithVectorMemory:
  print("Loading LLM...")
  # This mock LLM returns a formatted string indicating it received the prompt.
  return lambda prompt: f"
-

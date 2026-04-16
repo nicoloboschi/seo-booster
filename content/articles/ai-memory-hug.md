@@ -52,6 +52,9 @@ faq:
 - question: How can AI memory hug improve user experience?
   answer: An AI memory hug significantly improves user experience by making AI interactions more natural, personalized, and efficient. It eliminates the need for users to repeat information, ensures the
     AI understands the ongoing context of a conversation or task, and leads to more relevant and helpful responses, ultimately making the AI feel more intelligent and reliable.
+- question: What are the core components of an AI memory hug system?
+  answer: The core components of an AI memory hug system typically involve robust embedding models for semantic representation, efficient vector databases for rapid similarity searches, structured methods
+    for memory consolidation, and the integration of different memory types like episodic and semantic memory to ensure comprehensive recall.
 slug: ai-memory-hug
 ---
 

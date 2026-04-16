@@ -106,8 +106,8 @@ The ongoing research into [llm-memory-system](/articles/llm-memory-system/) arch
 
 ## Frequently Asked Questions about the AI Memory Crisis
 
-### What causes the AI memory crisis?
-The AI memory crisis stems from inherent limitations in current AI architectures, primarily bounded context windows, inefficient memory retrieval, and a lack of mechanisms for long-term information storage and recall.
+### What are the primary causes of the AI memory crisis?
+The primary causes of the AI memory crisis include bounded context windows in LLMs, inefficient memory retrieval mechanisms, the absence of true long-term memory architectures, and a lack of sophisticated memory consolidation processes. These factors collectively limit an AI agent's ability to retain and recall information effectively over time.
 
 ### How can AI agents overcome memory limitations?
 Overcoming memory limitations involves developing advanced memory architectures, employing techniques like retrieval augmentation, external memory modules, and novel memory consolidation strategies to enable true long-term recall.
@@ -123,9 +123,6 @@ Persistent memory AI refers to systems that can retain and recall information ov
 
 ### What is the difference between episodic and semantic memory in AI?
 Episodic memory in AI refers to recalling specific past events and their context, similar to human autobiographical memory. Semantic memory, on the other hand, stores general knowledge, facts, and concepts about the world, independent of personal experience. Both are crucial for comprehensive AI understanding and recall.
-
-### What are the primary causes of the AI memory crisis?
-The primary causes of the AI memory crisis include bounded context windows in LLMs, inefficient memory retrieval mechanisms, the absence of true long-term memory architectures, and a lack of sophisticated memory consolidation processes. These factors collectively limit an AI agent's ability to retain and recall information effectively over time.
 
 ### How does Retrieval-Augmented Generation (RAG) help with AI memory?
 RAG enhances AI memory by retrieving relevant information from external knowledge bases and feeding it into the LLM's context window. This allows AI to access and utilize information beyond its inherent limitations, crucial for tasks requiring long-term recall.

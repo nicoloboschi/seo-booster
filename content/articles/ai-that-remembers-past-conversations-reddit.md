@@ -47,6 +47,9 @@ faq:
 - question: What are the core components of an AI assistant's memory of past conversations?
   answer: An AI assistant's memory of past conversations typically involves storing interaction data, using embedding models for semantic understanding, and employing retrieval mechanisms like RAG to access
     relevant information. This allows the AI to recall context, user preferences, and specific details from previous exchanges.
+- question: What are the primary techniques for AI conversation summarization?
+  answer: Primary techniques include extractive summarization (selecting key sentences), abstractive summarization (generating new sentences that capture the essence), and using LLMs with RAG to synthesize
+    information from conversation logs. The goal is to condense lengthy dialogues into concise, informative summaries.
 slug: ai-that-remembers-past-conversations-reddit
 ---
 

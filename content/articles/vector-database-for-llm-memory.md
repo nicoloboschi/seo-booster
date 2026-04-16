@@ -40,6 +40,9 @@ faq:
 - question: What are open-source vector databases for AI agents in 2024?
   answer: In 2024, popular open-source vector databases for AI agents include Milvus, Weaviate, Chroma, and Qdrant. These systems offer scalable solutions for managing vector embeddings and enabling robust
     AI agent memory.
+- question: How does Retrieval-Augmented Generation (RAG) work with vector databases for LLM memory?
+  answer: RAG uses vector databases to retrieve relevant information from an external knowledge base. This retrieved information is then augmented with the LLM's prompt, allowing it to generate more informed
+    and contextually accurate responses, effectively enhancing LLM memory.
 slug: vector-database-for-llm-memory
 ---
 

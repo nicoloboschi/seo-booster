@@ -258,3 +258,4 @@ Selecting an appropriate memory layer, such as one utilizing vector databases fo
 
 ### What is a practical guide to choosing a memory layer for my chatbot?
 A practical guide to choosing a memory layer involves defining your scope (session vs. cross-session), identifying the granularity of information needed, estimating data volume, and then selecting the appropriate storage mechanism (e.g., vector databases for semantic recall, relational DBs for structured data). Integration with LLMs and effective retrieval strategies are also key.
+---

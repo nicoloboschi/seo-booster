@@ -12,6 +12,8 @@ tags:
 - Persistent AI
 - AI Assistant Memory
 - AI That Remembers Conversations
+- AI Assistant Memory Storage Capabilities
+- AI With Persistent Memory
 keywords:
 - ai chatbot that remembers everything
 - AI memory

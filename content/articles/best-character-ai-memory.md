@@ -38,6 +38,9 @@ faq:
 - question: What is the role of RAG in enhancing Character AI memory?
   answer: Retrieval-Augmented Generation (RAG) combines LLMs with external memory retrieval systems (like vector databases) to provide more contextually relevant and accurate responses, significantly improving
     conversational recall.
+- question: What are the core challenges in achieving optimal Character AI memory?
+  answer: Core challenges include managing the scale of conversational data, ensuring semantic understanding for accurate recall, preventing information decay, and integrating memory seamlessly with the
+    LLM's generation process.
 slug: best-character-ai-memory
 ---
 

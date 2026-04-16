@@ -17,6 +17,9 @@ tags:
 - knowledge graph for AI
 - hybrid AI database
 - vector search for AI
+- AI agent recall
+- semantic search for AI
+- AI knowledge graph
 keywords:
 - best database for AI memory
 - AI memory database
@@ -49,6 +52,9 @@ faq:
 - question: What are the performance metrics to consider for an AI memory database?
   answer: Key performance metrics for an AI memory database include query latency, indexing speed, scalability under heavy load, and the efficiency of similarity search algorithms. Benchmarking against
     specific AI workloads is crucial.
+- question: What is the role of vector databases in AI memory?
+  answer: Vector databases are fundamental for AI memory because they are specifically designed to store, index, and query high-dimensional vector embeddings. These embeddings capture the semantic meaning
+    of data, enabling AI agents to perform fast and accurate similarity searches for recall and understanding.
 slug: best-database-for-ai-memory
 ---
 

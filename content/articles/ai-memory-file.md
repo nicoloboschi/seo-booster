@@ -48,6 +48,8 @@ faq:
 - question: How can AI memory files be optimized for efficient knowledge retrieval?
   answer: AI memory files can be optimized through techniques like memory consolidation, advanced retrieval strategies (e.g., multi-hop retrieval), and efficient indexing methods, ensuring that relevant
     information is quickly and accurately accessed.
+- question: What is agent memory storage?
+  answer: Agent memory storage refers to the systems and methods used by AI agents to store and manage their knowledge, experiences, and contextual information over time, enabling them to learn and adapt.
 slug: ai-memory-file
 ---
 ---

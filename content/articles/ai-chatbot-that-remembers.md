@@ -61,6 +61,9 @@ faq:
 - question: How does an AI platform remember company context and provide personalized assistance?
   answer: An AI platform remembers company context by indexing and storing company-specific data, such as documents, policies, and historical interactions, often within vector databases. This enables the
     AI to access and utilize this information to provide contextually relevant answers and personalized assistance tailored to the organization's needs and user preferences.
+- question: How does an AI remember company context and provide personalized assistance?
+  answer: An AI platform remembers company context by indexing and storing company-specific data, such as documents, policies, and historical interactions, often within vector databases. This enables the
+    AI to access and utilize this information to provide contextually relevant answers and personalized assistance tailored to the organization's needs and user preferences.
 slug: ai-chatbot-that-remembers
 ---
 

@@ -32,7 +32,7 @@ faq:
     and biological processes that define human recollection. AI memory is functional, not experiential.
 - question: How can AI conversation summarization techniques be used for memory?
   answer: AI conversation summarization techniques are crucial for managing long-term memory. By condensing lengthy dialogues into concise summaries, AI agents can retain key information without being overwhelmed
-    by raw data. This allows for more efficient retrieval of relevant past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive
+    by raw data. This allows for more efficient retrieval of past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive
     summarization are employed to create these memory digests.
 - question: How can we build memory for customer service AI agents to remember previous conversations, and can a streaming topic be used as a persistent log for this context?
   answer: Yes, building memory for customer service AI agents to remember previous conversations is achievable. A streaming topic, such as those found in Kafka or similar message queues, can indeed serve
@@ -42,6 +42,9 @@ faq:
 - question: What are the challenges in building AI that remembers past conversations?
   answer: Key challenges include managing LLM context window limitations, ensuring data privacy and security, achieving computational scalability for vast amounts of data, and developing effective mechanisms
     for selective forgetting and relevance assessment.
+- question: What is a streaming topic in the context of AI memory?
+  answer: A streaming topic, often used in message queue systems like Kafka, acts as a real-time, ordered log of events or messages. For AI memory, it can serve as a persistent, continuous stream of conversation
+    data. AI agents can process this stream to extract, summarize, and store key interaction details, forming a dynamic memory log.
 slug: ai-that-remembers-past-conversations
 ---
 
@@ -236,7 +239,7 @@ Current AI memory systems are sophisticated but differ fundamentally from human 
 
 ### How can AI conversation summarization techniques be used for memory?
 
-AI conversation summarization techniques are crucial for managing long-term memory. By condensing lengthy dialogues into concise summaries, AI agents can retain key information without being overwhelmed by raw data. This allows for more efficient retrieval of relevant past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive summarization are employed to create these memory digests.
+AI conversation summarization techniques are crucial for managing long-term memory. By condensing lengthy dialogues into concise summaries, AI agents can retain key information without being overwhelmed by raw data. This allows for more efficient retrieval of past interactions, improving the AI's ability to recall context and provide personalized responses. Techniques like extractive and abstractive summarization are employed to create these memory digests.
 
 ### How can we build memory for customer service AI agents to remember previous conversations, and can a streaming topic be used as a persistent log for this context?
 
@@ -245,4 +248,8 @@ Yes, building memory for customer service AI agents to remember previous convers
 ### What are the challenges in building AI that remembers past conversations?
 
 Key challenges include managing LLM context window limitations, ensuring data privacy and security, achieving computational scalability for vast amounts of data, and developing effective mechanisms for selective forgetting and relevance assessment.
+
+### What is a streaming topic in the context of AI memory?
+
+A streaming topic, often used in message queue systems like Kafka, acts as a real-time, ordered log of events or messages. For AI memory, it can serve as a persistent, continuous stream of conversation data. AI agents can process this stream to extract, summarize, and store key interaction details, forming a dynamic memory log.
 ---

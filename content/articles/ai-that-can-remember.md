@@ -36,6 +36,9 @@ faq:
 - question: What is augmented general intelligence?
   answer: Augmented general intelligence refers to AI systems that enhance human capabilities by providing advanced cognitive support, learning, and decision-making assistance, often leveraging sophisticated
     memory systems for context and knowledge.
+- question: How does an AI remember past interactions?
+  answer: AI remembers through various memory systems. These can range from short-term buffers for immediate context to sophisticated long-term storage like vector databases or knowledge graphs, enabling
+    recall of past data and interactions.
 ---
 
 What if your AI assistant could recall every conversation you've ever had, remembering your preferences, past requests, and even subtle nuances? This isn't science fiction; it's the promise of **AI that can remember**. The ability for an **AI that can remember** is not just a futuristic concept; it's a critical requirement for building truly intelligent and useful agents. This persistent recall capability transforms AI from a simple tool into a contextual partner. The development of **AI memory systems** is central to this evolution.

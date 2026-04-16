@@ -49,6 +49,9 @@ faq:
 - question: What are the most sought-after AI memory chips currently?
   answer: The most sought-after AI memory chips are typically High Bandwidth Memory (HBM) modules, which are essential for high-performance AI accelerators like GPUs. Their unique architecture and demanding
     manufacturing process make them a bottleneck in the current **AI chip shortage**.
+- question: How is the AI chip shortage impacting the broader semiconductor market?
+  answer: The AI chip shortage is creating ripple effects across the semiconductor market, driving up prices for related components, increasing lead times for various chip types, and forcing companies to
+    re-evaluate their supply chain strategies to secure essential AI hardware.
 slug: ai-memory-chip-shortage
 ---
 

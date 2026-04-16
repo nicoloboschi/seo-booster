@@ -58,6 +58,9 @@ faq:
   answer: LongNet is a significant architectural innovation that allows Transformer models to scale their context window to unprecedented lengths, such as 2 million tokens. It achieves this by employing
     a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This advancement is crucial for developing **large
     context window local LLMs**.
+- question: What is the significance of LongNet for large context window AI?
+  answer: LongNet is a groundbreaking architecture that enables Transformer models to handle context windows of up to 2 million tokens. By using dilated and sliding window attention, it significantly improves
+    computational efficiency for processing very long sequences, making it a key development for **large context window AI**.
 slug: large-context-window-local-llm
 ---
 
@@ -117,13 +120,14 @@ Fast storage, like an NVMe SSD, is essential for quickly loading model weights a
 
 Several architectural improvements have made handling massive contexts feasible. These innovations reduce the computational complexity that traditionally scales quadratically with context length.
 
-### Efficient Attention Mechanisms
+### Efficient Attention Mechanisms: The Role of LongNet
 
 The standard **self-attention** mechanism in Transformers has a computational complexity of O(n²), where 'n' is the context length. This quadratic scaling makes it prohibitively expensive for very long sequences. New methods aim to approximate attention or reduce its complexity. The original [Transformer paper](https://arxiv.org/abs/1706.03762) introduced this mechanism.
 
 1. **Sparse Attention:** Instead of every token attending to every other token, sparse attention mechanisms restrict the connections, focusing on specific patterns or local windows. Examples include **Longformer** and **BigBird**.
 2. **Linear Attention:** These methods aim to reduce complexity to O(n) by reformulating the attention mechanism. Models like **Performer** and **Linformer** explore this.
-3. **Recurrent Memory Transformers:** These combine Transformer architectures with recurrent mechanisms to maintain a state that summarizes past information, effectively extending memory without a quadratic cost.
+3. **LongNet:** A significant advancement in this area, **LongNet** is an architecture designed to scale Transformer context windows to unprecedented lengths, such as 2 million tokens. It achieves this by employing a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This innovation is crucial for developing **large context window local LLMs** and contributes significantly to **large context window AI**.
+4. **Recurrent Memory Transformers:** These combine Transformer architectures with recurrent mechanisms to maintain a state that summarizes past information, effectively extending memory without a quadratic cost.
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -254,4 +258,6 @@ The future likely involves a hybrid approach: using the inherent large context w
 
 * **Q: How does LongNet contribute to large context window LLMs?**
  A: LongNet is a significant architectural innovation that allows Transformer models to scale their context window to unprecedented lengths, such as 2 million tokens. It achieves this by employing a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This advancement is crucial for developing **large context window local LLMs**.
----
+
+* **Q: What is the significance of LongNet for large context window AI?**
+ A: LongNet is a groundbreaking architecture that enables Transformer models to handle context windows of up to 2 million tokens. By using dilated and sliding window attention, it significantly improves computational efficiency for processing very long sequences, making it a key development for **large context window AI**.

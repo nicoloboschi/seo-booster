@@ -34,6 +34,9 @@ faq:
 - question: How can I ensure my n8n AI agent's memory is managed effectively for documentation tools?
   answer: For documentation tools, effective memory management involves clearly defining what information the AI agent needs to retain for context and what can be cleared. This might mean resetting memory
     between distinct documentation generation tasks or ensuring that only relevant past interactions are passed to the LLM to avoid confusion and maintain accuracy in generated documentation.
+- question: What is the role of `n8n ai agent node documentation tools memory` in clearing memory?
+  answer: When using n8n AI agents for documentation tools, managing their memory is crucial. Clearing specific memory related to past documentation tasks ensures that the agent focuses on the current request,
+    preventing outdated information from influencing new documentation. This involves understanding which parts of the `n8n ai agent memory` are relevant to the documentation context and can be safely reset.
 slug: n8n-ai-agent-clear-memory
 ---
 
@@ -227,3 +230,5 @@ Effective memory management is as important as the AI's core logic. For comprehe
  n8n AI agents typically use short-term memory (like LLM context windows) for immediate conversation history and long-term memory, which can be stored in workflow variables, external databases, or specialized memory systems.
 * **How can I ensure my n8n AI agent's memory is managed effectively for documentation tools?**
  For documentation tools, effective memory management involves clearly defining what information the AI agent needs to retain for context and what can be cleared. This might mean resetting memory between distinct documentation generation tasks or ensuring that only relevant past interactions are passed to the LLM to avoid confusion and maintain accuracy in generated documentation.
+* **What is the role of `n8n ai agent node documentation tools memory` in clearing memory?**
+ When using n8n AI agents for documentation tools, managing their memory is crucial. Clearing specific memory related to past documentation tasks ensures that the agent focuses on the current request, preventing outdated information from influencing new documentation. This involves understanding which parts of the `n8n ai agent memory` are relevant to the documentation context and can be safely reset.

@@ -11,6 +11,9 @@ tags:
 - AI Memory Makers
 - Stateful AI
 - Long-Term Memory AI
+- AI Memory Architecture
+- Retrieval-Augmented Generation
+- Agent Memory Systems
 keywords:
 - ai memory makers
 - artificial intelligence memory
@@ -20,6 +23,8 @@ keywords:
 - stateful AI
 - persistent AI memory
 - AI memory architecture
+- Retrieval-Augmented Generation
+- AI agent memory
 faq:
 - question: What are the primary functions of AI memory makers?
   answer: AI memory makers are responsible for storing, organizing, retrieving, and forgetting information. They enable AI agents to learn from past interactions, maintain context, and perform complex tasks
@@ -36,6 +41,8 @@ faq:
 - question: How does Retrieval-Augmented Generation (RAG) contribute to AI memory?
   answer: RAG enhances LLMs by retrieving relevant information from external knowledge bases and feeding it into the model's prompt. This allows AI agents to access up-to-date and specific information,
     effectively extending their memory and improving response accuracy for persistent AI memory needs.
+- question: What are the key components of an AI memory system?
+  answer: Key components of AI memory systems include storage mechanisms (like vector databases), retrieval mechanisms (semantic and keyword search), and processes for memory consolidation and forgetting.
 slug: ai-memory-makers
 ---
 
@@ -81,7 +88,7 @@ Storing information is only half the battle. **AI memory makers** must also effi
 
 ### Memory Consolidation and Forgetting in AI Memory Systems
 
-Human memory isn't a perfect archive; it consolidates important information and forgets irrelevant details. Advanced **AI memory makers** aim to mimic this selective retention. **Memory consolidation in AI agents** involves prioritizing and strengthening important memories, while mechanisms for forgetting prevent the system from becoming overloaded with outdated or redundant data.
+Human memory isn't a perfect archive; it consolidates important information and forgets irrelevant details. Advanced **AI memory makers** aim to mimic this selective retention. **Memory consolidation in AI agents** involves prioritizing and strengthening memories, while mechanisms for forgetting prevent the system from becoming overloaded with outdated or redundant data.
 
 This process is vital for maintaining efficiency and relevance. An AI that remembers every trivial detail might struggle to access the most pertinent information quickly. Controlled forgetting ensures that the AI’s memory remains a valuable, curated resource.
 

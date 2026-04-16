@@ -42,6 +42,9 @@ faq:
 - question: What is LLM context window ranking?
   answer: LLM context window ranking is the process of evaluating and comparing large language models (LLMs) based on the size, effectiveness, and efficiency of their context windows. This ranking helps
     users and developers choose models best suited for tasks requiring the processing of extensive text or long conversational histories.
+- question: How do transformer context limits impact LLM performance?
+  answer: Transformer context limits, defined by the context window size, directly affect an LLM's ability to retain information. A smaller context window means the model can process less input at once,
+    potentially leading to a loss of crucial details in longer interactions or documents, thus impacting overall LLM performance and the relevance of its outputs.
 slug: context-window-llm-ranking
 ---
 

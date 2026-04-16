@@ -57,6 +57,9 @@ faq:
 - question: What are the key considerations when choosing an AI companion with memory?
   answer: When choosing an AI companion with memory, consider its ability to recall context, personalize interactions, maintain conversation flow, and ensure data privacy and security. The effectiveness
     of its memory system directly impacts its usefulness and your overall experience.
+- question: How do different AI memory types compare for companion agents?
+  answer: Episodic memory focuses on specific events and conversations, while semantic memory stores general knowledge and facts. Both are crucial, with episodic memory enabling personalized recall of interactions
+    and semantic memory providing foundational understanding for the AI companion.
 slug: best-ai-companion-memory
 ---
 
@@ -295,3 +298,7 @@ To ensure your AI companion remembers important details, look for systems that o
 
 What are the key considerations when choosing an AI companion with memory?
 When choosing an AI companion with memory, consider its ability to recall context, personalize interactions, maintain conversation flow, and ensure data privacy and security. The effectiveness of its memory system directly impacts its usefulness and your overall experience.
+
+How do different AI memory types compare for companion agents?
+Episodic memory focuses on specific events and conversations, while semantic memory stores general knowledge and facts. Both are crucial, with episodic memory enabling personalized recall of interactions and semantic memory providing foundational understanding for the AI companion.
+

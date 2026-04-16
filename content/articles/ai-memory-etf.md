@@ -62,6 +62,10 @@ faq:
   answer: Key trends shaping the AI Memory ETF market include the increasing demand for AI agents with long-term memory, advancements in neuromorphic computing, the growing importance of vector databases
     for efficient data retrieval, and the continuous development of solutions to overcome context window limitations in large language models. The overall expansion of AI applications across industries
     also drives the need for more sophisticated AI memory solutions.
+- question: What is an AI Memory ETF and what does it invest in?
+  answer: An AI Memory ETF is an exchange-traded fund specifically designed to invest in companies at the forefront of developing and implementing artificial intelligence memory systems. This includes firms
+    focused on AI agent memory, retrieval-augmented generation (RAG), and solutions that expand AI context windows. It offers a diversified approach to investing in the critical infrastructure that powers
+    advanced AI capabilities.
 slug: ai-memory-etf
 ---
 

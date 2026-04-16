@@ -41,6 +41,9 @@ faq:
 - question: What is Janitor AI context size and why is it important?
   answer: Janitor AI context size refers to the amount of information (measured in tokens) that the AI can consider at any given moment. Optimizing this is crucial because a larger, well-managed context
     size allows the AI to retain more relevant details from conversations, leading to more coherent and informed responses.
+- question: How can I effectively manage Janitor AI's context window size?
+  answer: Managing Janitor AI's context window size involves intelligent summarization of past interactions, prioritizing information based on relevance, and employing dynamic sliding window techniques
+    to ensure the most critical data remains accessible.
 slug: how-to-improve-janitor-ai-memory
 ---
 
@@ -177,4 +180,32 @@ add_memory("User inquired about booking a flight to London.", time.time() - 300)
 add_memory("AI: Flight to London confirmed for Tuesday.", time.time() - 240) # 4 mins ago
 add_memory("User asked about the weather again.", time.time() - 60) # 1 min ago
 
-print("\n\n
+print("\n\nRetrieving memories for 'weather':")
+print(retrieve_memories("weather"))
+
+print("\n\nRetrieving memories for 'flight booking':")
+print(retrieve_memories("flight booking"))
+```
+
+## Frequently Asked Questions about Janitor AI Memory
+
+### What is Janitor AI?
+Janitor AI is a tool designed to help manage and clean up large language model (LLM) contexts, often by summarizing or discarding less relevant information to maintain efficiency. It's particularly useful in applications requiring long-term conversation recall.
+
+### Why is Janitor AI memory important?
+Effective Janitor AI memory is crucial for maintaining coherent, context-aware interactions. It allows the AI to recall past information accurately, leading to more relevant responses and improved task performance over extended periods.
+
+### Can Janitor AI's memory be expanded beyond its default limits?
+Yes, by employing advanced techniques like external memory stores, retrieval augmentation, and optimized memory management strategies, Janitor AI's effective memory capacity can be significantly extended beyond its initial limitations.
+
+### What are the key strategies for Janitor AI memory optimization?
+Key strategies include understanding and managing context window limits, implementing external memory stores like vector databases, enhancing retrieval mechanisms, using temporal reasoning, and employing specialized memory architectures such as episodic and semantic memory.
+
+### How does Janitor AI manage its context window size?
+Janitor AI manages its context window by employing intelligent summarization, information prioritization, and dynamic sliding window techniques. This ensures that the most relevant information is retained within the LLM's processing capacity, preventing information overload and maintaining conversational coherence.
+
+### What is Janitor AI context size and why is it important?
+Janitor AI context size refers to the amount of information (measured in tokens) that the AI can consider at any given moment. Optimizing this is crucial because a larger, well-managed context size allows the AI to retain more relevant details from conversations, leading to more coherent and informed responses.
+
+### How can I effectively manage Janitor AI's context window size?
+Managing Janitor AI's context window size involves intelligent summarization of past interactions, prioritizing information based on relevance, and employing dynamic sliding window techniques to ensure the most critical data remains accessible.

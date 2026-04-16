@@ -51,9 +51,12 @@ faq:
   answer: The primary limitations of current AI memory systems include the finite context window of Large Language Models (LLMs), which restricts the amount of information they can process at once; the
     computational overhead and complexity associated with storing and retrieving vast datasets for long-term memory; and the inherent difficulty in discerning truly pertinent information from irrelevant
     noise, leading to inefficient or inaccurate retrieval. These factors collectively contribute to the overall AI memory problem.
+- question: How does the AI context window limit an AI's memory?
+  answer: The AI context window is a fixed-size buffer that an LLM uses to process information for generating its next output. Any information that falls outside this window is effectively lost unless explicitly
+    stored elsewhere. This limitation directly contributes to the AI memory problem, as it restricts the AI's ability to recall details from earlier parts of a long conversation or document.
 slug: ai-memory-problem
 ---
----
+
 
 Could an AI truly forget a crucial piece of information it learned yesterday, even if it's vital for today's task? This is a core challenge in building truly intelligent and capable AI agents. Current AI systems often struggle to retain and recall information effectively, impacting their performance and reliability, a key aspect of the **ai memory problem**.
 

@@ -49,6 +49,9 @@ faq:
 - question: How does AI achieve long-term memory?
   answer: AI achieves long-term memory by utilizing external memory systems, such as vector databases and specialized LLM memory architectures, which store and index conversational history and learned information
     beyond the immediate processing window of the LLM.
+- question: What are the key components of an AI chatbot with infinite memory?
+  answer: Key components include robust memory storage (like vector databases), efficient retrieval mechanisms, context management, and integration with Large Language Models (LLMs) to process and utilize
+    the recalled information.
 slug: ai-chatbot-infinite-memory
 ---
 
