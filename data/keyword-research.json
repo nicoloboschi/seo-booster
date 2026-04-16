@@ -130,7 +130,7 @@
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
       "building smarter ai agents agentcore long term memory deep dive",
-      "can you have good long term memory but bad short term memory"
+      "candy ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -3202,11 +3202,9 @@
     {
       "keyword": "can you have good long term memory but bad short term memory",
       "slug": "can-you-have-good-long-term-memory-but-bad-short-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "can you have good long term memory but bad short term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "candy ai long term memory",
@@ -5075,11 +5073,9 @@
     {
       "keyword": "is llm necessary",
       "slug": "is-llm-necessary",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is llm necessary"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is long term memory limitless",
@@ -6869,11 +6865,9 @@
     {
       "keyword": "long term memory better than short term",
       "slug": "long-term-memory-better-than-short-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term memory better than short term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory character ai",
@@ -8326,11 +8320,9 @@
     {
       "keyword": "what is the purpose of an llm",
       "slug": "what-is-the-purpose-of-an-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the purpose of an llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the smartest ai",
@@ -9156,8 +9148,8 @@
   ],
   "summary": {
     "total_keywords": 967,
-    "validated": 893,
-    "low_volume": 74,
+    "validated": 889,
+    "low_volume": 78,
     "new_opportunities_found": 1
   }
 }
