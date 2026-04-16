@@ -38,6 +38,9 @@ faq:
 - question: What makes an AI agent memory system effective?
   answer: An effective AI agent memory system is characterized by its ability to store relevant information, retrieve it efficiently, manage context effectively within LLM limitations, and adapt to user
     needs over time. It balances recall with relevance and avoids information overload.
+- question: What is the primary goal of chatbot memory projects on GitHub?
+  answer: The primary goal is to create open-source tools and frameworks that enable AI chatbots to retain, recall, and effectively use information from past interactions, thereby improving conversation
+    quality, context understanding, and user experience.
 slug: chatbot-memory-github
 ---
 
