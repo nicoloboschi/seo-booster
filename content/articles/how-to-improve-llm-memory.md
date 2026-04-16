@@ -48,6 +48,9 @@ faq:
 - question: How can AI agents achieve long-term memory?
   answer: AI agents can achieve long-term memory through techniques like Retrieval-Augmented Generation (RAG), which connects LLMs to external knowledge bases, and by implementing persistent external memory
     systems such as vector databases and knowledge graphs. Effective memory management and consolidation are also crucial.
+- question: What are the primary challenges in improving LLM memory?
+  answer: Key challenges in improving LLM memory include the computational cost of processing large datasets, ensuring data privacy and security with external memory, and developing more sophisticated memory
+    architectures that incorporate temporal reasoning and self-correction.
 slug: how-to-improve-llm-memory
 ---
 
@@ -176,3 +179,6 @@ An effective LLM memory system typically involves a combination of strategies su
 
 ### How can AI agents achieve long-term memory?
 AI agents can achieve long-term memory through techniques like Retrieval-Augmented Generation (RAG), which connects LLMs to external knowledge bases, and by implementing persistent external memory systems such as vector databases and knowledge graphs. Effective memory management and consolidation are also crucial.
+
+### What are the primary challenges in improving LLM memory?
+Key challenges in improving LLM memory include the computational cost of processing large datasets, ensuring data privacy and security with external memory, and developing more sophisticated memory architectures that incorporate temporal reasoning and self-correction.

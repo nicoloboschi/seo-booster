@@ -51,6 +51,14 @@
     {
       "question": "How can AI memory capacity be benchmarked?",
       "answer": "AI memory capacity is benchmarked by evaluating an agent's ability to store, retrieve, and apply information under various conditions using standardized tests. Key metrics include retrieval accuracy, latency, and throughput on memory-intensive tasks."
+    },
+    {
+      "question": "What is the difference between AI short-term and long-term memory?",
+      "answer": "AI short-term memory (STM) holds actively used information for current tasks, similar to working memory, and is often volatile. Long-term memory (LTM) stores information for extended periods, crucial for learning and recalling past experiences, often involving databases or specialized modules."
+    },
+    {
+      "question": "How does Retrieval-Augmented Generation (RAG) impact AI memory requirements?",
+      "answer": "RAG systems enhance AI recall by combining LLMs with external knowledge retrieval. They require memory for the knowledge base (often a vector database) and the retrieval mechanism, making them a memory-efficient way to access information beyond an LLM's training data or context window."
     }
   ],
   "slug": "how-much-memory-does-ai-need"
@@ -229,3 +237,9 @@ By employing strategies like vector databases, RAG, and specialized architecture
 
 *   **Q: How can AI memory capacity be benchmarked?**
     A: AI memory capacity is benchmarked by evaluating an agent's ability to store, retrieve, and apply information under various conditions using standardized tests. Key metrics include retrieval accuracy, latency, and throughput on memory-intensive tasks.
+
+*   **Q: What is the difference between AI short-term and long-term memory?**
+    A: AI short-term memory (STM) holds actively used information for current tasks, similar to working memory, and is often volatile. Long-term memory (LTM) stores information for extended periods, crucial for learning and recalling past experiences, often involving databases or specialized modules.
+
+*   **Q: How does Retrieval-Augmented Generation (RAG) impact AI memory requirements?**
+    A: RAG systems enhance AI recall by combining LLMs with external knowledge retrieval. They require memory for the knowledge base (often a vector database) and the retrieval mechanism, making them a memory-efficient way to access information beyond an LLM's training data or context window.

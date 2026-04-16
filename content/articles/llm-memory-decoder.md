@@ -42,6 +42,9 @@ faq:
 - question: What types of information can an LLM memory decoder reconstruct?
   answer: An LLM memory decoder can reconstruct various types of information, including episodic memories (specific events and experiences), semantic knowledge (general facts and concepts), and conversational
     history, all contributing to enhanced AI recall.
+- question: How does an LLM memory decoder contribute to Retrieval-Augmented Generation (RAG)?
+  answer: In RAG systems, the LLM memory decoder is crucial for processing the information retrieved by the RAG system. It translates the retrieved data (often in vector embeddings) into a format the LLM
+    can understand and use to generate a more informed and contextually relevant response.
 slug: llm-memory-decoder
 ---
 

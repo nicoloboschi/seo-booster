@@ -15,7 +15,7 @@ tags:
 - artificial general intelligence
 - AI agent memory
 - episodic memory in AI agents
-- semantic memory in AI agents
+- semantic memory in AI memory
 - temporal reasoning in AI memory
 - AI memory retrieval
 - AI memory benchmarks
@@ -67,6 +67,9 @@ faq:
 - question: How does AI agent memory contribute to its perceived intelligence?
   answer: Effective AI agent memory systems are crucial for creating agents that can maintain context, learn from past interactions, and perform complex, multi-step tasks. Without memory, an AI would be
     perpetually starting from scratch, severely limiting its perceived intelligence. The sophistication of an AI's memory directly impacts the perception of whether AI is really AI.
+- question: What are the key limitations of current AI systems?
+  answer: Current AI systems face significant limitations, including context window constraints (short-term memory issues), a lack of subjective experience or sentience, and the "black box" problem, which
+    hinders transparency in their decision-making processes. These limitations are central to the debate of whether AI is truly AI.
 slug: is-ai-really-ai
 ---
 
@@ -102,7 +105,7 @@ A significant factor in how we perceive AI's intelligence is its ability to reme
 
 ### Episodic Memory and AI: Recalling Past Events
 
-**Episodic memory in AI agents** allows them to store and retrieve specific past events or experiences. This is akin to human autobiographical memory. When an AI can recall "what happened last Tuesday" or "the outcome of a specific prior interaction," it appears more intelligent and capable. Systems like **Hindsight** are open-source tools designed to help manage and enhance these memory capabilities for AI agents. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is key to assessing AI's perceived intelligence.
+**Episodic memory in AI agents** allows them to store and retrieve specific past events or experiences. This is akin to human autobiographical memory. When an AI can recall "what happened last Tuesday" or "the outcome of a specific prior interaction," it appears more intelligent and capable. Systems like Hindsight are open-source tools designed to help manage and enhance these memory capabilities for AI agents. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is key to assessing AI's perceived intelligence.
 
 ### Semantic vs. Episodic Memory: Knowledge vs. Experience
 
@@ -237,3 +240,7 @@ Key challenges include replicating consciousness and sentience, achieving true g
 ### How does AI agent memory contribute to its perceived intelligence?
 
 Effective AI agent memory systems are crucial for creating agents that can maintain context, learn from past interactions, and perform complex, multi-step tasks. Without memory, an AI would be perpetually starting from scratch, severely limiting its perceived intelligence. The sophistication of an AI's memory directly impacts the perception of whether AI is really AI.
+
+### What are the key limitations of current AI systems?
+
+Current AI systems face significant limitations, including context window constraints (short-term memory issues), a lack of subjective experience or sentience, and the "black box" problem, which hinders transparency in their decision-making processes. These limitations are central to the debate of whether AI is truly AI.

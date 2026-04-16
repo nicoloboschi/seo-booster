@@ -42,6 +42,9 @@ faq:
 - question: How can an in-memory vector database example be implemented?
   answer: An in-memory vector database example can be implemented using programming languages like Python, leveraging libraries for numerical operations and data structures. While simplified examples can
     be built, production-ready solutions often utilize optimized indexing algorithms and specialized databases for maximum performance.
+- question: What is the primary advantage of an in-memory vector database for AI agents?
+  answer: The primary advantage is speed. By storing data in RAM, an in-memory vector database offers significantly lower latency for vector similarity searches, enabling AI agents to access information
+    and recall context almost instantaneously.
 slug: in-memory-vector-database-example
 ---
 

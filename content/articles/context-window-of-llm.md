@@ -44,6 +44,9 @@ faq:
 - question: What are the practical implications of LLM context window limitations?
   answer: The practical implications of LLM context window limitations include potential information loss in long conversations or documents, leading to AI agents forgetting crucial details. This can result
     in repetitive interactions, misunderstandings, and a reduced ability for the AI to perform complex tasks that require recalling information from earlier in the interaction.
+- question: What are window limits in LLMs?
+  answer: Window limits in LLMs refer to the maximum number of tokens an LLM can process at any given time. These limits define the scope of its immediate memory and directly impact its ability to retain
+    and utilize information from longer conversations or documents. Exceeding these window limits means older information is effectively discarded.
 slug: context-window-of-llm
 ---
 
@@ -204,4 +207,6 @@ An LLM cannot directly learn from information outside its current context window
 
 ### What are the practical implications of LLM context window limitations?
 The practical implications of LLM context window limitations include potential information loss in long conversations or documents, leading to AI agents forgetting crucial details. This can result in repetitive interactions, misunderstandings, and a reduced ability for the AI to perform complex tasks that require recalling information from earlier in the interaction.
----
+
+### What are window limits in LLMs?
+Window limits in LLMs refer to the maximum number of tokens an LLM can process at any given time. These limits define the scope of its immediate memory and directly impact its ability to retain and use information from longer conversations or documents. Exceeding these window limits means older information is effectively discarded.

@@ -45,7 +45,11 @@ faq:
 - question: What is the role of vector databases in LLM agent memory systems?
   answer: Vector databases are crucial for storing and retrieving information based on semantic similarity. They convert text into numerical embeddings, allowing for efficient searching of related concepts
     rather than just keywords.
+- question: What is retrieval-augmented generation (RAG) in the context of AI memory?
+  answer: Retrieval-Augmented Generation (RAG) is a technique that enhances LLM responses by retrieving relevant information from an external knowledge source (like an LLM agent's memory) before generating
+    an answer. This improves accuracy and reduces hallucinations.
 slug: llm-agent-memory-systems
+---
 ---
 
 ## What are LLM Agent Memory Systems?
@@ -229,3 +233,6 @@ Yes, LLM agents can "forget" information primarily due to context window limitat
 
 ### What is the role of vector databases in LLM agent memory systems?
 Vector databases are crucial for storing and retrieving information based on semantic similarity. They convert text into numerical embeddings, allowing for efficient searching of related concepts rather than just keywords.
+
+### What is retrieval-augmented generation (RAG) in the context of AI memory?
+Retrieval-Augmented Generation (RAG) is a technique that enhances LLM responses by retrieving relevant information from an external knowledge source (like an LLM agent's memory) before generating an answer. This improves accuracy and reduces hallucinations.

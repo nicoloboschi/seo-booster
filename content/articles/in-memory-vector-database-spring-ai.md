@@ -36,6 +36,9 @@ faq:
 - question: Can an in-memory vector database be used for persistent AI memory?
   answer: Generally, no. In-memory databases are volatile and lose data upon system restart. They are best suited for active working memory or caching frequently accessed data. For long-term, persistent
     AI memory, disk-based vector databases or other storage solutions are necessary.
+- question: What are the key considerations when choosing an in-memory vector store for Spring AI?
+  answer: Key considerations include the size of your vector embeddings, expected query load, cost of RAM, and the need for data persistence. While in-memory offers speed, it's crucial to balance this with
+    durability requirements.
 slug: in-memory-vector-database-spring-ai
 ---
 
@@ -182,3 +185,6 @@ The combination of Spring AI's developer-friendly ecosystem and the raw speed of
 
 * **Can an in-memory vector database be used for persistent AI memory?**
  Generally, no. In-memory databases are volatile and lose data upon system restart. They are best suited for active working memory or caching frequently accessed data. For long-term, persistent AI memory, disk-based vector databases or other storage solutions are necessary.
+
+* **What are the key considerations when choosing an in-memory vector store for Spring AI?**
+ Key considerations include the size of your vector embeddings, expected query load, cost of RAM, and the need for data persistence. While in-memory offers speed, it's crucial to balance this with durability requirements.

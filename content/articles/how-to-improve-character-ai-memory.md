@@ -107,8 +107,8 @@ This approach transforms a stateless interaction into one with a persistent memo
 
 AI memory can be broadly categorized into **episodic memory** and **semantic memory**. Understanding the distinction is key to improving recall.
 
-* **Episodic Memory** relates to specific events and experiences, like recalling a particular conversation or interaction. For Character AI, this means remembering a specific dialogue thread or a user's unique request from a past session. This is crucial for [AI agent episodic memory](/articles/ai-agent-episodic-memory/).
-* **Semantic Memory** pertains to general knowledge, facts, and concepts. For an AI character, this includes its core personality traits, backstory, and general world knowledge. This is the domain of [semantic memory in AI agents](/articles/semantic-memory-ai-agents/).
+* **Episodic Memory:** Relates to specific events and experiences, like recalling a particular conversation or interaction. For Character AI, this means remembering a specific dialogue thread or a user's unique request from a past session. This is crucial for [AI agent episodic memory](/articles/ai-agent-episodic-memory/).
+* **Semantic Memory:** Pertains to general knowledge, facts, and concepts. For an AI character, this includes its core personality traits, backstory, and general world knowledge. This is the domain of [semantic memory in AI agents](/articles/semantic-memory-ai-agents/).
 
 Improving Character AI memory often involves trying to simulate both types of recall, even within the constraints of its architecture.
 

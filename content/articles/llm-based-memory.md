@@ -38,6 +38,9 @@ faq:
 - question: What are the main types of LLM memory architectures?
   answer: The main types of LLM memory architectures include Retrieval-Augmented Generation (RAG), Episodic Memory, Semantic Memory, and Hybrid Memory Systems. Each offers a different approach to enhancing
     an AI agent's recall and understanding.
+- question: How does LLM-based memory improve AI agent performance?
+  answer: LLM-based memory significantly improves AI agent performance by overcoming the limitations of fixed context windows. This allows agents to maintain conversational continuity, recall task-specific
+    instructions, access a broader knowledge base, and generate more contextually relevant and informed responses, leading to more sophisticated and persistent understanding.
 slug: llm-based-memory
 ---
 

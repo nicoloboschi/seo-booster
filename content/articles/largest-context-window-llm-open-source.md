@@ -41,6 +41,8 @@ faq:
   answer: The largest context window LLM open source democratizes access to advanced AI capabilities. It allows developers to build more sophisticated AI agents that can understand and process vast amounts of information, leading to more coherent, context-aware, and powerful applications without proprietary restrictions.
 - question: What is the difference between a large context window and traditional LLM memory?
   answer: A large context window allows an LLM to process a vast amount of information *simultaneously* within a single input. Traditional LLM memory often refers to techniques like RAG or external databases that store and retrieve information over time. A large context window enhances the LLM's ability to utilize information provided directly in its prompt or conversation history, complementing external memory systems.
+- question: What is a "context window" in the context of LLMs?
+  answer: A context window refers to the maximum amount of text (measured in tokens) that an LLM can consider at any one time when processing input and generating output. A larger context window allows the LLM to "remember" and process more information from the ongoing conversation or provided documents.
 slug: largest-context-window-llm-open-source
 ---
 
@@ -185,3 +187,6 @@ The largest context window LLM open source democratizes access to advanced AI ca
 
 ### What is the difference between a large context window and traditional LLM memory?
 A large context window allows an LLM to process a vast amount of information *simultaneously* within a single input. Traditional LLM memory often refers to techniques like RAG or external databases that store and retrieve information over time. A large context window enhances the LLM's ability to utilize information provided directly in its prompt or conversation history, complementing external memory systems.
+
+### What is a "context window" in the context of LLMs?
+A context window refers to the maximum amount of text (measured in tokens) that an LLM can consider at any one time when processing input and generating output. A larger context window allows the LLM to "remember" and process more information from the ongoing conversation or provided documents.

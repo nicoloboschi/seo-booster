@@ -44,6 +44,10 @@ faq:
 - question: Are there ways to overcome the fixed context window limitation of LLMs?
   answer: Yes, techniques like Retrieval-Augmented Generation (RAG), memory consolidation, and the use of external memory modules allow AI systems to access and use information beyond their inherent context
     window, effectively extending their memory capabilities.
+- question: What are AI memory limits in large language models?
+  answer: AI memory limits in large language models refer to the constraints imposed by the LLM's context window size. This means the model can only process and recall a finite amount of information at
+    any given time. Once the **context window limit** is reached, older information is typically discarded, impacting the AI's ability to maintain long-term context or recall distant details from a conversation
+    or document.
 ---
 
 The **context window size of an LLM** dictates how much information it can "remember" or process simultaneously. This limit, measured in tokens, directly impacts an AI's ability to understand long conversations, complex documents, and perform tasks requiring broad recall. It's a fundamental constraint shaping current AI capabilities, defining the effective **context length** an AI can manage.
@@ -161,4 +165,6 @@ The ongoing evolution of the **context window size of LLM** technology is fundam
  Larger context windows allow AI agents to maintain a more extensive understanding of ongoing interactions, recall more details from previous turns, and process longer documents without losing crucial information. This leads to more coherent, contextually relevant, and capable AI behavior, directly impacting **AI memory**.
 * **Are there ways to overcome the fixed context window limitation of LLMs?**
  Yes, techniques like Retrieval-Augmented Generation (RAG), memory consolidation, and the use of external memory modules allow AI systems to access and use information beyond their inherent context window, effectively extending their memory capabilities.
+* **What are AI memory limits in large language models?**
+ AI memory limits in large language models refer to the constraints imposed by the LLM's context window size. This means the model can only process and recall a finite amount of information at any given time. Once the **context window limit** is reached, older information is typically discarded, impacting the AI's ability to maintain long-term context or recall distant details from a conversation or document.
 ---

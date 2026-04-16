@@ -44,6 +44,9 @@ faq:
 - question: What are compaction strategies for LLMs?
   answer: Compaction strategies are techniques used to reduce the token count of input data for LLMs while preserving essential information. This allows more data to fit within the LLM's context window,
     improving its ability to process and recall information from longer texts.
+- question: What is the "lost in the middle" phenomenon in LLMs?
+  answer: The "lost in the middle" phenomenon refers to LLMs struggling to recall information located in the middle of long texts, even with large context windows. Models tend to focus more on information
+    at the beginning and end of the context.
 slug: context-window-for-each-llm
 ---
 
@@ -196,3 +199,6 @@ AI context windows refer to the specific context window sizes of different Large
 
 ### What are compaction strategies for LLMs?
 Compaction strategies are techniques used to reduce the token count of input data for LLMs while preserving essential information. This allows more data to fit within the LLM's context window, improving its ability to process and recall information from longer texts.
+
+### What is the "lost in the middle" phenomenon in LLMs?
+The "lost in the middle" phenomenon refers to LLMs struggling to recall information located in the middle of long texts, even with large context windows. Models tend to focus more on information at the beginning and end of the context.

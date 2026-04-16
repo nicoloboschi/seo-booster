@@ -45,6 +45,9 @@ faq:
 - question: What are the key advancements driving AI's increasing intelligence?
   answer: Key advancements driving AI's increasing intelligence include breakthroughs in AI memory systems (episodic and semantic), sophisticated AI reasoning capabilities, and novel AI learning paradigms.
     These, combined with advanced AI agent architectures, are enabling AI to perform more complex tasks and exhibit greater adaptability.
+- question: How does AI reasoning contribute to AI getting smarter?
+  answer: AI reasoning enables AI to move beyond simple data processing to making logical deductions, inferences, and solving problems. This capability allows AI agents to understand cause-and-effect, plan,
+    and make more informed decisions, significantly enhancing their perceived intelligence and overall AI capabilities.
 slug: is-ai-getting-smarter
 ---
 

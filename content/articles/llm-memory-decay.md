@@ -22,6 +22,9 @@ keywords:
 - AI forgetting explained
 - how LLMs remember
 - persistent AI memory
+- AI context window limitations
+- semantic search for AI
+- AI knowledge retrieval
 faq:
 - question: What is LLM memory decay?
   answer: LLM memory decay refers to the gradual loss of information or context that a language model has processed or learned over time. This can impact its ability to recall past interactions or knowledge
@@ -38,6 +41,12 @@ faq:
 - question: How do LLMs "remember" things?
   answer: LLMs "remember" by processing information within their current context window. For longer-term recall, they rely on external memory systems or techniques like RAG to access and utilize previously
     processed data.
+- question: What are AI context window limitations and how do they cause memory decay?
+  answer: AI context window limitations refer to the fixed amount of text (measured in tokens) an LLM can process at any given time. Information outside this window is inaccessible for immediate reasoning,
+    causing older parts of a conversation or data to be effectively "forgotten" as new information enters the window.
+- question: How does semantic search help with AI forgetting?
+  answer: Semantic search, often powered by vector databases, allows AI systems to find information based on meaning rather than just keywords. This is crucial for retrieving relevant context that might
+    have been lost due to memory decay, enabling more accurate and context-aware responses.
 slug: llm-memory-decay
 ---
 
@@ -61,7 +70,7 @@ Several factors contribute to **llm memory decay**. These are not necessarily fl
 
 The most significant contributor to memory decay is the **context window**. This is the fixed amount of text (measured in tokens) an LLM can process at any given time. Information outside this window is inaccessible to the model for immediate reasoning.
 
-As a conversation grows, older parts inevitably fall out of the context window. The LLM effectively "forgets" these earlier details because they are no longer part of its active input. For example, if an LLM has a context window of 4,000 tokens and a conversation reaches 5,000 tokens, the first 1,000 tokens are lost. This directly impacts **language model memory**.
+As a conversation grows, older parts inevitably fall out of the context window. The LLM effectively "forgets" these earlier details because they are no longer part of its active input. For example, if an LLM has a context window of 4,000 tokens and a conversation reaches 5,000 tokens, the first 1,000 tokens are lost. This directly impacts **language model memory**. Understanding **AI context window limitations** is key to grasping this issue.
 
 ### Statistical Nature of Language Models: How LLMs "Remember"
 
@@ -113,7 +122,7 @@ One straightforward approach is to use models with larger context windows. Model
 Here's how it works:
 1. **Store Information:** Relevant data (past conversations, documents, facts) is chunked, embedded, and stored in a **vector database**.
 2. **User Query:** When a user asks a question or makes a statement, it's embedded.
-3. **Retrieve Context:** The embedded query is used to search the vector database for the most similar (relevant) information chunks.
+3. **Retrieve Context:** The embedded query is used to search the vector database for the most similar (relevant) information chunks. This is where **semantic search for AI** plays a crucial role.
 4. **Augment Prompt:** These retrieved chunks are added to the original user query as context.
 5. **Generate Response:** The LLM receives the augmented prompt and generates a response informed by both the immediate query and the retrieved external knowledge.
 
@@ -123,7 +132,7 @@ This approach effectively addresses **llm memory decay** by providing the LLM wi
 
 Beyond RAG, dedicated **external memory systems** act as an LLM's long-term repository. These are typically built using **vector databases** like Pinecone, Weaviate, or even open-source solutions.
 
-These systems store information as **embeddings** (numerical representations of text meaning). When information needs to be recalled, a query is converted into an embedding and used to find semantically similar stored embeddings. This allows AI agents to access and recall information far beyond their native context window, creating **persistent AI memory**.
+These systems store information as **embeddings** (numerical representations of text meaning). When information needs to be recalled, a query is converted into an embedding and used to find semantically similar stored embeddings. This allows AI agents to access and recall information far beyond their native context window, creating **persistent AI memory**. This process is fundamental to **AI knowledge retrieval**.
 
 The open-source project **Hindsight** provides a framework for integrating such memory capabilities into AI agents. You can explore it here: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight).
 

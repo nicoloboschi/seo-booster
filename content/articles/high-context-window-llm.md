@@ -35,6 +35,9 @@ faq:
 - question: What are the key architectural innovations enabling high context window LLMs?
   answer: Key innovations include efficient attention mechanisms (sparse, linear, dilated attention), new model architectures (recurrence, state-space models), and enhanced positional encodings (RoPE, ALiBi)
     that reduce computational complexity and improve sequence handling.
+- question: What is the "lost in the middle" phenomenon in LLMs?
+  answer: The "lost in the middle" phenomenon refers to the tendency of LLMs, even with large context windows, to struggle with effectively utilizing information located in the middle of a very long input.
+    They may prioritize information at the beginning and end of the context.
 slug: high-context-window-llm
 ---
 
@@ -227,3 +230,7 @@ A **large context window LLM** is significant because it allows AI to process an
 ### What are the key architectural innovations enabling high context window LLMs?
 
 Key innovations include efficient attention mechanisms (sparse, linear, dilated attention), new model architectures (recurrence, state-space models), and enhanced positional encodings (RoPE, ALiBi) that reduce computational complexity and improve sequence handling.
+
+### What is the "lost in the middle" phenomenon in LLMs?
+
+The "lost in the middle" phenomenon refers to the tendency of LLMs, even with large context windows, to struggle with effectively using information located in the middle of a very long input. They may prioritize information at the beginning and end of the context.

@@ -38,6 +38,9 @@ faq:
 - question: How does DeepSeek AI leverage long-term memory for enhanced Telegram conversations?
   answer: DeepSeek AI agents on Telegram leverage long-term memory by storing and retrieving past interaction data. This allows them to recall user preferences, previous requests, and conversational context,
     leading to more personalized, coherent, and intelligent responses that go beyond the immediate turn of the conversation.
+- question: What are the key components of a DeepSeek AI agent's long-term memory system on Telegram?
+  answer: A DeepSeek AI agent's long-term memory system on Telegram typically comprises a data storage mechanism (like a vector database), an indexing system for efficient retrieval, and an integration
+    layer that allows the AI model to access and utilize this stored information during conversations. This enables the agent to recall past interactions and user context.
 slug: deepseek-ai-agent-telegram-long-term-memory
 ---
 
@@ -89,4 +92,3 @@ While episodic memory recalls specific events, semantic memory provides the unde
 
 | Memory Type | Description | Example for Telegram Agent |
 | :
-

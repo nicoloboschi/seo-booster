@@ -9,6 +9,8 @@ tags:
 - agent architecture
 - persistent memory AI
 - long-term memory AI
+- AI recall
+- AI assistant that remembers
 keywords:
 - llm memory agent
 - AI memory agent
@@ -17,6 +19,7 @@ keywords:
 - persistent memory AI
 - AI assistant that remembers conversations
 - AI agent persistent memory
+- AI recall
 faq:
 - question: What is an LLM memory agent?
   answer: An LLM memory agent is an AI system designed to store and retrieve information beyond the limited context window of a standard Large Language Model (LLM). It allows the agent to maintain a persistent,
@@ -39,6 +42,8 @@ faq:
 - question: How does an LLM memory agent improve AI recall?
   answer: An LLM memory agent significantly improves AI recall by providing a dedicated system for storing and retrieving information beyond the LLM's limited context window. This allows for consistent
     access to past conversations, learned facts, and user preferences, leading to more informed and contextually relevant responses.
+- question: What are the key components of an LLM memory agent?
+  answer: A typical LLM memory agent includes an LLM core, a memory module for storage, a retrieval mechanism to access stored information, and an orchestration layer to manage the flow between these components.
 slug: llm-memory-agent
 ---
 
@@ -281,3 +286,5 @@ As memory systems become more efficient and intelligent, the line between human 
  While related and often used together, RAG (Retrieval Augmented Generation) and LLM agent memory are not the same. RAG typically retrieves information from an external corpus to inform a single LLM response. Agent memory refers to the agent's ability to store and recall its *own* past interactions and learned information over time, which may or may not involve RAG principles for retrieval.
 * **How does an LLM memory agent improve AI recall?**
  An LLM memory agent significantly improves AI recall by providing a dedicated system for storing and retrieving information beyond the LLM's limited context window. This allows for consistent access to past conversations, learned facts, and user preferences, leading to more informed and contextually relevant responses.
+* **What are the key components of an LLM memory agent?**
+ A typical LLM memory agent includes an LLM core, a memory module for storage, a retrieval mechanism to access stored information, and an orchestration layer to manage the flow between these components.

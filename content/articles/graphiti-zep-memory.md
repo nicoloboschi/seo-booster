@@ -32,6 +32,8 @@ faq:
   answer: Zep Memory is a specialized memory store designed for Large Language Model (LLM) applications. It excels at storing and retrieving conversational data, user profiles, and other structured information, providing a robust foundation for AI agents to maintain context and recall past interactions effectively.
 - question: What are the core components of Graphiti Zep Memory?
   answer: The core components of Graphiti Zep Memory are Zep, which handles structured conversational data, and a vector database, which manages semantic search through vector embeddings. This combination allows for comprehensive AI recall.
+- question: How does Zep contribute to Graphiti Zep Memory?
+  answer: Zep acts as the structured data layer within Graphiti Zep Memory, specifically designed to store and retrieve conversational data, user profiles, and other structured information. Its ability to maintain the chronological and thematic order of interactions is crucial for providing context to AI agents.
 slug: graphiti-zep-memory
 ---
 
@@ -45,7 +47,7 @@ slug: graphiti-zep-memory
 
 **Zep** is a memory store designed specifically for LLM applications. It excels at storing and retrieving **conversational data**, user profiles, and other structured information critical for maintaining context. Unlike simple key-value stores or raw text files, Zep organizes information reflecting the flow of interaction. This makes it an excellent foundation for building AI agents that need to remember dialogue history.
 
-Zep's architecture allows for efficient querying of past interactions. It stores messages, their metadata, and often automatically generates embeddings, facilitating both keyword and semantic searches. This structured approach is vital for many **AI agent architecture patterns**, ensuring important details aren't lost in a long conversation. The **graphiti zep memory** system relies heavily on this structured foundation.
+Zep's architecture allows for efficient querying of past interactions. It stores messages, their metadata, and often automatically generates embeddings, facilitating both keyword and semantic searches. This structured approach is vital for many **AI agent architecture patterns**, ensuring important details aren't lost in a long conversation. The **graphiti zep memory** system relies heavily on this structured foundation provided by **Zep Memory**.
 
 #### Zep's Data Structure for AI
 
@@ -98,4 +100,4 @@ from chromadb.utils import embedding_functions
 
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
-## 
+##

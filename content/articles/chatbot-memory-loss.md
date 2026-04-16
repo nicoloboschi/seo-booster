@@ -44,6 +44,9 @@ faq:
 - question: What are stateless LLMs and how do they cause AI forgetting conversations?
   answer: Stateless LLMs treat each interaction as independent, lacking inherent memory. This means they forget previous turns unless specific memory systems are integrated, directly contributing to AI
     forgetting conversations and AI's memory gaps.
+- question: How can vector databases help prevent AI losing context?
+  answer: Vector databases store conversation snippets as semantic embeddings. This allows AI to query for semantically similar past interactions, retrieving relevant context even from distant parts of
+    a conversation, thus preventing AI losing context.
 slug: chatbot-memory-loss
 ---
 
@@ -156,3 +159,6 @@ conversation_stateless = ConversationChain(
 )
 
 print("
+
+What to optimize:
+Content depth: Position 6.8. Ranking queries: . Add more depth around these terms, add an FAQ entry, ensure keywords appear in H2/H3 headings.

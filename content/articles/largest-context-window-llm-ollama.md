@@ -33,12 +33,13 @@ faq:
 - question: How does Ollama manage large context windows effectively?
   answer: Ollama efficiently loads and serves models, allowing users to access LLMs with extensive context windows. It abstracts away much of the complexity, making large context models more accessible.
 - question: What are the benefits of using a largest context window LLM with Ollama?
-  answer: Using a largest context window LLM with Ollama allows for deeper understanding of long documents, more coherent long-form conversations, improved AI agent memory, and better performance on complex
-    reasoning tasks that require recalling extensive information.
+  answer: Using a largest context window LLM with Ollama allows for deeper understanding of long documents, more coherent long-form conversations, improved AI agent memory, and better performance on complex reasoning tasks that require recalling extensive information.
 - question: What is the largest context window LLM available through Ollama?
   answer: The "largest" context window LLM can vary as new models are released. However, Ollama supports models with context windows ranging from tens of thousands to hundreds of thousands of tokens, with some experimental models pushing even further. The specific model and your hardware will determine the maximum achievable context length.
 - question: How can I maximize the use of a large context window LLM with Ollama?
   answer: To maximize the use of a large context window LLM with Ollama, employ effective prompt engineering, consider Retrieval-Augmented Generation (RAG) for extremely large datasets, and explore fine-tuning for specific long-context tasks.
+- question: What are the hardware requirements for running large context window LLMs with Ollama?
+  answer: Running large context window LLMs locally with Ollama demands substantial hardware, primarily VRAM on your GPU. Models with larger context windows require significantly more memory. Generally, GPUs with 24GB of VRAM or more are recommended for context windows exceeding 32K tokens to ensure efficient inference.
 slug: largest-context-window-llm-ollama
 ---
 
@@ -194,7 +195,7 @@ try:
  messages.append({'role': 'assistant', 'content': f"Processing the document you provided. The key challenges in deploying LLMs include context window limitations and the complexity of prompt engineering. One approach to address these is using Retrieval-Augmented Generation (RAG) to provide relevant information concisely."})
 
  # Second interaction: User asks a question that requires recalling earlier specific points
- user_question_2 = "You mentioned AI memory systems earlier. Can you elaborate on the different types of AI memory and how the largest context window LLM with Ollama helps with agent capabilities?"
+ user_question_2 = "You mentioned AI memory systems earlier. Can you elaborate on the different types of AI memory and how the largest context window LLM with Ollama helps for agent capabilities?"
  messages.append({'role': 'assistant', 'content': f"Certainly. AI memory systems include episodic memory for recalling specific events, semantic memory for general knowledge, and working memory for current processing, similar to a context window. The largest context window LLM with Ollama significantly enhances agent capabilities by providing a more expansive working memory. This allows agents to retain and process more information over longer interactions, enabling complex planning and reasoning, as discussed in point 5 of the initial document."})
 
  # Sending the entire conversation history to Ollama
@@ -233,3 +234,6 @@ The "largest" context window LLM can vary as new models are released. However, O
 
 ### How can I maximize the use of a large context window LLM with Ollama?
 To maximize the use of a large context window LLM with Ollama, employ effective prompt engineering, consider Retrieval-Augmented Generation (RAG) for extremely large datasets, and explore fine-tuning for specific long-context tasks.
+
+### What are the hardware requirements for running large context window LLMs with Ollama?
+Running large context window LLMs locally with Ollama demands substantial hardware, primarily VRAM on your GPU. Models with larger context windows require significantly more memory. Generally, GPUs with 24GB of VRAM or more are recommended for context windows exceeding 32K tokens to ensure efficient inference.

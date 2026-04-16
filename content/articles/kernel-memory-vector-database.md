@@ -36,6 +36,8 @@ faq:
   answer: Several open-source solutions are emerging, such as Hindsight, which can integrate with various vector databases like Chroma, Weaviate, or Pinecone, offering flexibility for AI agent memory systems. Exploring these options allows developers to build robust and cost-effective AI recall capabilities.
 - question: What makes an open-source AI memory system suitable for AI agents?
   answer: An open-source AI memory system suitable for AI agents typically offers flexibility, cost-effectiveness, and community-driven development. It should provide robust vector database integration for persistent storage and efficient retrieval, enabling complex agent recall and learning capabilities.
+- question: What are the benefits of using an open-source vector database memory system for AI agents?
+  answer: Open-source vector database memory systems for AI agents offer significant advantages, including cost-effectiveness, flexibility, community support, and rapid innovation. They allow developers to build powerful, persistent memory capabilities for their agents without the licensing costs of proprietary solutions, making advanced AI agent recall more accessible.
 slug: kernel-memory-vector-database
 ---
 

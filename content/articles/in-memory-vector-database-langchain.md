@@ -45,6 +45,9 @@ faq:
 - question: How does an in-memory vector database facilitate fast vector retrieval in Langchain?
   answer: In-memory vector databases facilitate fast vector retrieval in Langchain by eliminating the I/O overhead associated with disk-based storage. By keeping embeddings in RAM, query times are drastically
     reduced, allowing Langchain agents to access relevant information almost instantaneously for quicker decision-making and response generation.
+- question: What are the trade-offs of using an in-memory vector database for Langchain?
+  answer: The primary trade-off is memory capacity. In-memory databases are limited by the amount of RAM available on the system. While they offer unparalleled speed, they may not be suitable for extremely
+    large datasets that exceed available memory. Disk-based databases, while slower, can handle much larger volumes of data.
 slug: in-memory-vector-database-langchain
 ---
 

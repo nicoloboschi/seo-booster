@@ -10,6 +10,7 @@ tags:
 - agent architectures
 - Gemini AI memory capabilities
 - persistent memory AI
+- Gemini advanced memory
 keywords:
 - gemini ai long term memory
 - Gemini AI memory
@@ -19,6 +20,8 @@ keywords:
 - Gemini AI memory capabilities
 - how Gemini AI remembers
 - Gemini advanced memory
+- Gemini AI context window
+- RAG for AI memory
 faq:
 - question: How does Gemini AI achieve long term memory?
   answer: Gemini AI likely employs a combination of techniques, including large context windows, external memory modules like vector databases, and sophisticated retrieval mechanisms to simulate long term
@@ -30,6 +33,9 @@ faq:
 - question: How does Gemini AI's long term memory differ from its context window?
   answer: Gemini AI's context window refers to the amount of information it can process in a single interaction. Long term memory involves storing and retrieving information beyond this immediate window,
     often using external systems.
+- question: What are Gemini AI's advanced memory capabilities?
+  answer: Gemini AI's advanced memory capabilities include its ability to leverage vast context windows, integrate with external memory modules like vector databases, and utilize Retrieval-Augmented Generation
+    (RAG) for persistent recall.
 slug: gemini-ai-long-term-memory
 ---
 

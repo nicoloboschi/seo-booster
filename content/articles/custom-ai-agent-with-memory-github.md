@@ -39,6 +39,10 @@ faq:
 - question: What are the challenges in implementing AI agent memory on GitHub?
   answer: Challenges include managing the complexity of different memory types, ensuring efficient retrieval and storage, handling context window limitations of LLMs, and integrating various open-source
     tools effectively. Many GitHub projects address these by offering modular designs and robust APIs for **AI agent memory** development.
+- question: How does AI agent memory on GitHub contribute to LLM memory management?
+  answer: Open-source projects on GitHub offer various strategies and tools for **LLM memory management**. These include techniques for summarizing past interactions, selectively retrieving relevant information
+    to fit within LLM context windows, and developing custom memory architectures that go beyond the limitations of standard LLM context. This allows for more efficient and effective use of LLMs in long-term
+    conversational or task-oriented agents.
 slug: custom-ai-agent-with-memory-github
 ---
 

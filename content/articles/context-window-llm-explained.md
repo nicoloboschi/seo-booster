@@ -36,6 +36,8 @@ faq:
   answer: A small context window can lead to AI assistants forgetting previous instructions, repeating themselves, or failing to understand the overall topic of a lengthy document. This necessitates workarounds, like breaking down complex requests or manually re-feeding information.
 - question: What is the definition of an LLM context window?
   answer: The definition of an LLM context window refers to the specific amount of text, measured in tokens, that a large language model can process and consider simultaneously. It's the model's immediate working memory for understanding and generating text.
+- question: What does "context window LLM explained" mean in practice?
+  answer: "Context window LLM explained" refers to understanding the finite amount of text an LLM can process at once, acting as its short-term memory. This window dictates how much of a preceding conversation or document the AI can "see" to generate relevant responses, crucial for maintaining coherence and understanding.
 slug: context-window-llm-explained
 ---
 
@@ -215,3 +217,6 @@ A7: A small context window can lead to AI assistants forgetting previous instruc
 
 **Q8: What is the definition of an LLM context window?**
 A8: The definition of an LLM context window refers to the specific amount of text, measured in tokens, that a large language model can process and consider simultaneously. It's the model's immediate working memory for understanding and generating text.
+
+**Q9: What does "context window LLM explained" mean in practice?**
+A9: "Context window LLM explained" refers to understanding the finite amount of text an LLM can process at once, acting as its short-term memory. This window dictates how much of a preceding conversation or document the AI can "see" to generate relevant responses, crucial for maintaining coherence and understanding.

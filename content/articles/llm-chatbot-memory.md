@@ -42,6 +42,9 @@ faq:
 - question: How do AI agents use context windows for memory?
   answer: AI agents utilize the context window as their immediate, short-term memory. It holds the most recent parts of a conversation, allowing the LLM to process and respond based on the immediate dialogue.
     However, its limited size necessitates external storage for longer-term recall.
+- question: How do AI agents consolidate memory?
+  answer: AI agents consolidate memory by intelligently selecting, summarizing, and storing key information from conversations into long-term storage. This process ensures that important details are retained
+    and easily retrievable, preventing information overload and improving the AI's ability to recall context across extended interactions.
 slug: llm-chatbot-memory
 ---
 

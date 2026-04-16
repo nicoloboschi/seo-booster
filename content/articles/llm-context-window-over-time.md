@@ -11,6 +11,8 @@ tags:
 - Large Context Window LLM
 - LLM Context Window Evolution
 - LLM Context Window Size
+- LLM Context Window History
+- LLM Memory Capacity
 keywords:
 - llm context window over time
 - context window evolution
@@ -42,6 +44,9 @@ faq:
 - question: What is a trillion token context window?
   answer: A trillion token context window refers to a hypothetical or future LLM capability that can process and retain an enormous amount of information, equivalent to trillions of tokens. This would represent
     a monumental leap in AI's ability to understand and reason over vast datasets, far exceeding current capabilities.
+- question: What are the practical implications of a large context window LLM?
+  answer: Large context window LLMs enable deeper document analysis, more coherent long-form content generation, and better understanding of complex codebases. They reduce the need for manual chunking of
+    information and allow AI to handle more intricate tasks that require synthesizing information from extensive inputs.
 slug: llm-context-window-over-time
 ---
 
@@ -125,5 +130,5 @@ This integration will enable AI agents to exhibit a much deeper and more consist
 
 Here's a simplified look at how LLM context window sizes have grown over time:
 
-| Model/Era | Approximate Context Window (Tokens) | Key Developments | Source (Approximate) |
+| Model/Era | Approximate Context Window (Tokens) | Key Developments
 | :

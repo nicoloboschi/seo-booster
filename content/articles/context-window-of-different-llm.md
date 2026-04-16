@@ -18,6 +18,8 @@ keywords:
 - understanding context window
 - LLM context window explained
 - context window comparison
+- tokenization LLM
+- attention mechanisms LLM
 faq:
 - question: What is the difference between context window and long-term memory for LLMs?
   answer: The context window refers to the amount of information an LLM can process at one time during a single inference. Long-term memory for AI agents involves storing and retrieving information across
@@ -39,6 +41,9 @@ faq:
 - question: What is tokenization in the context of LLMs?
   answer: Tokenization is the process of breaking down text into smaller units called tokens, which can be words, sub-word units, or characters. LLMs process these tokens to understand and generate language.
     The context window is measured in these tokens.
+- question: How do attention mechanisms impact the LLM context window?
+  answer: Attention mechanisms allow LLMs to weigh the importance of different tokens within the context window. A larger context window provides more tokens for the attention mechanism to consider, potentially
+    leading to more nuanced and contextually relevant outputs. This is a critical factor in **understanding context window** capabilities.
 slug: context-window-of-different-llm
 ---
 
@@ -80,11 +85,11 @@ LLMs function by predicting the subsequent token in a sequence based on the toke
 
 ### Tokenization Explained: The Building Blocks of Context
 
-Before an LLM can interpret text, it must first be segmented into **tokens**. These tokens can represent entire words, sub-word units, or individual characters. For standard English text, a common approximation suggests that 100 tokens correspond to approximately 75 words. The **context window** is universally measured in these tokens, not in a raw word count.
+Before an LLM can interpret text, it must first be segmented into **tokens**. These tokens can represent entire words, sub-word units, or individual characters. For standard English text, a common approximation suggests that 100 tokens correspond to approximately 75 words. The **context window** is universally measured in these tokens, not in a raw word count. This process is crucial for **tokenization LLM** understanding.
 
 ### The Role of Attention Mechanisms in Large Language Model Context
 
-**Attention mechanisms** are indispensable components of modern LLMs. They empower the model to dynamically assign weights to different tokens within the input sequence, thereby determining their relevance when generating each output token. A broader **context window** provides the attention mechanism with a larger pool of tokens to consider, potentially leading to more informed and contextually appropriate outputs.
+**Attention mechanisms** are indispensable components of modern LLMs. They empower the model to dynamically assign weights to different tokens within the input sequence, thereby determining their relevance when generating each output token. A broader **context window** provides the attention mechanism with a larger pool of tokens to consider, potentially leading to more informed and contextually appropriate outputs. This is a key aspect of **attention mechanisms LLM** functionality.
 
 This is where techniques like **retrieval-augmented generation (RAG)** become crucial. RAG doesn't directly expand an LLM's inherent processing window but instead supplies relevant information from an external knowledge repository, which is then incorporated *within* that window for processing. This is a core strategy for managing the **context window of different LLMs** and is a key aspect of **[detailed guide to rag-and-retrieval](/articles/rag-vs-agent-memory/)**.
 

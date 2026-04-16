@@ -38,6 +38,8 @@ faq:
 - question: What are the benefits of giving AI long-term memory?
   answer: Giving AI long-term memory allows agents to learn and adapt, maintain context across interactions, perform complex tasks, provide personalized experiences, and avoid repetitive queries, transforming
     them into more dynamic and evolving entities.
+- question: What are the key evaluation metrics for AI long-term memory systems?
+  answer: Key metrics include recall accuracy, retrieval latency, contextual relevance, task completion rate, and adaptability. These help assess how effectively an AI retains and utilizes stored information.
 slug: how-to-give-ai-long-term-memory
 ---
 
@@ -254,3 +256,6 @@ While AI systems can be engineered to store vast amounts of data, "remembering e
 
 ### What are the benefits of giving AI long-term memory?
 Giving AI long-term memory allows agents to learn and adapt, maintain context across interactions, perform complex tasks, provide personalized experiences, and avoid repetitive queries, transforming them into more dynamic and evolving entities.
+
+### What are the key evaluation metrics for AI long-term memory systems?
+Key metrics include recall accuracy, retrieval latency, contextual relevance, task completion rate, and adaptability. These help assess how effectively an AI retains and uses stored information.

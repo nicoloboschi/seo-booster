@@ -43,6 +43,9 @@ faq:
 - question: What are the key benefits of giving an AI agent long-term memory?
   answer: Giving an AI agent long-term memory enables continuous learning, personalized interactions, improved task completion for complex dialogues, and the ability to act as evolving entities rather than
     stateless tools.
+- question: How can AI agents utilize past interactions for better performance?
+  answer: AI agents can utilize past interactions by storing them as memories. This allows them to recall context, user preferences, and previous problem-solving steps, leading to more personalized, efficient,
+    and contextually aware responses in future interactions. This is a core aspect of giving an AI agent long-term memory.
 slug: giving-a-long-term-memory
 ---
 

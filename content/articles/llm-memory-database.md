@@ -37,6 +37,9 @@ faq:
 - question: How can LLM memory databases improve AI agent capabilities?
   answer: By providing **persistent memory for LLMs**, these databases enable AI agents to remember past interactions, user preferences, and learned information. This leads to more coherent conversations,
     personalized responses, and the ability to perform complex, multi-turn tasks, significantly enhancing **AI recall** and overall agent intelligence.
+- question: What are the key components of an LLM memory database?
+  answer: Key components include a data storage mechanism (often a vector database), an embedding model to convert text into numerical vectors, and an indexing strategy for efficient retrieval. These elements
+    work together to provide **persistent memory for LLMs**.
 slug: llm-memory-database
 ---
 

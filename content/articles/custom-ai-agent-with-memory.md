@@ -47,9 +47,11 @@ faq:
 - question: What are the primary challenges in AI agent memory management?
   answer: Primary challenges in AI agent memory management include efficiently storing and retrieving vast amounts of data, preventing catastrophic forgetting, ensuring context relevance over extended periods,
     and managing the computational resources required for complex memory operations.
+- question: What are the key components of an AI agent memory system?
+  answer: Key components of an AI agent memory system typically include a large language model (LLM) for processing, an external memory store (like a vector database or knowledge graph) for persistence,
+    an observation processing unit to interpret incoming data, and an action execution system to interact with the environment.
 slug: custom-ai-agent-with-memory
 ---
-
 
 What if your AI assistant could recall every conversation, every task, and every preference you've ever shared? This is the promise of a **custom AI agent with memory**. It's an AI system designed with persistent storage, enabling it to recall and use past information for informed decision-making. This enhances its ability to learn, adapt, and perform complex tasks with human-like continuity, moving beyond stateless interactions.
 
@@ -207,3 +209,7 @@ Key considerations include the type of data to be stored (structured vs. unstruc
 ### What are the primary challenges in AI agent memory management?
 
 Primary challenges in AI agent memory management include efficiently storing and retrieving vast amounts of data, preventing catastrophic forgetting, ensuring context relevance over extended periods, and managing the computational resources required for complex memory operations.
+
+### What are the key components of an AI agent memory system?
+
+Key components of an AI agent memory system typically include a large language model (LLM) for processing, an external memory store (like a vector database or knowledge graph) for persistence, an observation processing unit to interpret incoming data, and an action execution system to interact with the environment.

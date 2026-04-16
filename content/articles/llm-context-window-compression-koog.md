@@ -43,6 +43,9 @@ faq:
 - question: What are the key benefits of LLM context window compression for AI efficiency?
   answer: Key benefits include reduced computational load, faster processing times, lower inference costs, enhanced memory recall, improved conversational coherence, and the ability for AI agents to handle
     longer and more complex interactions.
+- question: What are the core challenges addressed by LLM context window compression?
+  answer: The core challenges addressed by LLM context window compression include the finite token limits of LLMs, the resulting loss of information in long conversations, and the computational overhead
+    associated with processing large amounts of data.
 slug: llm-context-window-compression-koog
 ---
 
@@ -216,3 +219,6 @@ The ultimate goal is to create AI agents with near-limitless memory and understa
 * **Q: What are the key benefits of LLM context window compression for AI efficiency?**
  A: Key benefits include reduced computational load, faster processing times, lower inference costs, enhanced memory recall, improved conversational coherence, and the ability for AI agents to handle longer
  and more complex interactions.
+
+* **Q: What are the core challenges addressed by LLM context window compression?**
+ A: The core challenges addressed by LLM context window compression include the finite token limits of LLMs, the resulting loss of information in long conversations, and the computational overhead associated with processing large amounts of data.

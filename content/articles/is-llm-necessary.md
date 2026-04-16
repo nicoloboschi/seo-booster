@@ -43,6 +43,9 @@ faq:
 - question: What are the core functions of AI agent memory?
   answer: The core functions of AI agent memory include storage, retrieval, organization, and forgetting/pruning. These functions are essential for any intelligent system to retain and utilize information
     effectively.
+- question: What are the core AI memory functions that don't require an LLM?
+  answer: Core AI memory functions such as storage, retrieval, organization, and forgetting/pruning can be implemented using specialized data structures and algorithms without the need for a full LLM. Vector
+    databases and knowledge graphs are prime examples of systems that handle these functions efficiently.
 slug: is-llm-necessary
 ---
 
@@ -84,7 +87,7 @@ While LLMs offer powerful enhancements, relying on them solely for memory can be
 
 One of the most popular alternatives involves **embedding models for memory**. These models convert data (text, images, audio) into numerical vectors in a high-dimensional space. **Vector databases** then store and index these vectors, allowing for rapid similarity searches.
 
-When an agent needs to recall information, it can convert its current query into a vector and search the database for similar existing vectors. This approach is highly effective for tasks requiring semantic retrieval, such as finding documents or past conversation snippets related to a current topic. This forms the backbone of many **Retrieval-Augmented Generation (RAG)** systems, which can operate without a full LLM for core retrieval, challenging the notion that **is LLM necessary** for all memory tasks.
+When an agent needs to recall information, it can convert its current query into a vector and search the database for similar existing vectors. This approach is highly effective for tasks requiring semantic retrieval, such as finding documents or past conversation snippets related to a current topic. This forms the backbone of many Retrieval-Augmented Generation (RAG) systems, which can operate without a full LLM for core retrieval, challenging the notion that **is LLM necessary** for all memory tasks.
 
 Here's a basic Python example demonstrating a conceptual similarity search using embeddings:
 
@@ -210,4 +213,6 @@ The trend in advanced AI agent development is towards **hybrid memory systems** 
  Vector databases use embedding models to convert data into numerical vectors, enabling efficient semantic similarity searches. This allows AI agents to retrieve relevant information based on meaning, a core memory function achievable without a full LLM.
 * **What are the core functions of AI agent memory?**
  The core functions of AI agent memory include storage, retrieval, organization, and forgetting/pruning. These functions are essential for any intelligent system to retain and use information effectively.
+* **What are the core AI memory functions that don't require an LLM?**
+ Core AI memory functions such as storage, retrieval, organization, and forgetting/pruning can be implemented using specialized data structures and algorithms without the need for a full LLM. Vector databases and knowledge graphs are prime examples of systems that handle these functions efficiently.
 ---

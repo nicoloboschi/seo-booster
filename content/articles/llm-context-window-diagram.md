@@ -55,6 +55,8 @@ faq:
   answer: An LLM context window diagram visualizes token limits by depicting a fixed-size buffer that can only hold a specific number of tokens. As new tokens are processed, older ones are pushed out, illustrating the constraint imposed by the token limit.
 - question: What are LLM context window tokens diagrams?
   answer: LLM context window tokens diagrams are specific visualizations that focus on how tokens are managed within the context window. They illustrate the fixed capacity in terms of tokens and how information is processed and potentially lost as new tokens enter the window, directly representing the **token limits**.
+- question: How do LLM context window diagram tokens relate to LLM context window limitations?
+  answer: LLM context window diagram tokens are the units that define the size of the context window. The number of these tokens directly dictates the **LLM context window limitations**, as a finite number of tokens can be processed at any given time.
 slug: llm-context-window-diagram
 ---
 

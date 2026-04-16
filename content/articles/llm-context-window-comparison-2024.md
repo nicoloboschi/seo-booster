@@ -40,8 +40,12 @@ faq:
 - question: What are the key differences in LLM context window sizes in 2024?
   answer: In 2024, LLM context window sizes vary significantly. While some models offer tens of thousands of tokens, leading-edge models like Gemini 1.5 Pro and Claude 3 can handle up to 1 million tokens
     or more. This vast difference impacts their ability to process lengthy documents and maintain long conversational histories.
+- question: What is a token in the context of LLMs?
+  answer: A token is the fundamental unit of text that Large Language Models (LLMs) process. Tokens can represent words, parts of words, punctuation, or even spaces. The exact way text is broken down into
+    tokens can differ between LLMs, affecting how much text a specific token limit can encompass.
 slug: llm-context-window-comparison-2024
 ---
+
 
 The **LLM context window comparison 2024** reveals leading models now offer context windows up to 1 million tokens, a significant leap from previous limitations. This expansion enables AI agents to process vastly more information, dramatically enhancing their understanding and recall capabilities for complex tasks.
 

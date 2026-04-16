@@ -41,6 +41,9 @@ faq:
 - question: What are the primary AI security threats posed by LLM memory attacks?
   answer: The primary AI security threats from LLM memory attacks include unauthorized access to sensitive training data, privacy violations through membership inference, model manipulation, and the potential
     for widespread data leakage. These attacks directly undermine the confidentiality and integrity of AI systems.
+- question: What is the role of large language model recall in LLM memory attacks?
+  answer: Large language model recall is central to LLM memory attacks. Attackers exploit how LLMs retrieve and utilize information from their training data or context windows. By understanding and manipulating
+    the recall mechanisms, attackers can extract sensitive data, infer private information, or cause the model to behave in unintended ways, leading to data leakage and other AI security threats.
 slug: llm-memory-attack
 ---
 

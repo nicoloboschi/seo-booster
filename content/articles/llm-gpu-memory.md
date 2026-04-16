@@ -45,6 +45,10 @@
     {
       "question": "How does the context window size affect LLM GPU memory?",
       "answer": "A larger context window requires the LLM to process and store representations (activations) for a greater number of input tokens. This directly increases the demand on **llm gpu memory**. Consequently, models with larger context windows often necessitate more powerful GPUs or advanced optimization techniques to manage memory effectively, especially for longer sequences."
+    },
+    {
+      "question": "What are the key hardware considerations for LLM GPU memory?",
+      "answer": "Key hardware considerations include the amount of VRAM available, memory bandwidth, and the type of GPU (consumer vs. datacenter). Multi-GPU setups are also crucial for models exceeding single-GPU capacity, utilizing techniques like data and model parallelism."
     }
   ],
   "slug": "llm-gpu-memory"
@@ -222,3 +226,6 @@ Technically, it's possible to run LLMs using only the CPU and system RAM. Howeve
 
 ### How does the context window size affect LLM GPU memory?
 A larger context window requires the LLM to process and store representations (activations) for a greater number of input tokens. This directly increases the demand on **llm gpu memory**. Consequently, models with larger context windows often necessitate more powerful GPUs or advanced optimization techniques to manage memory effectively, especially for longer sequences.
+
+### What are the key hardware considerations for LLM GPU memory?
+Key hardware considerations include the amount of VRAM available, memory bandwidth, and the type of GPU (consumer vs. datacenter). Multi-GPU setups are also crucial for models exceeding single-GPU capacity, utilizing techniques like data and model parallelism.

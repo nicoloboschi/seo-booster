@@ -38,6 +38,9 @@ faq:
 - question: What are the primary challenges addressed by Hindsight LLM Memory?
   answer: Hindsight LLM Memory primarily addresses the limitations of LLM context windows, which restrict an AI's ability to recall information from past interactions. It enables persistent AI recall and
     long-term memory for AI agents.
+- question: How does Hindsight LLM Memory contribute to scalable AI memory?
+  answer: Hindsight LLM Memory achieves scalability by leveraging efficient storage and retrieval mechanisms, such as vector databases, which can handle vast amounts of data and complex queries, ensuring
+    that the AI's memory can grow alongside its experience without performance degradation.
 slug: hindsight-llm-memory
 ---
 

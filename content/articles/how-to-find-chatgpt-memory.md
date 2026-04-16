@@ -39,6 +39,9 @@ faq:
 - question: How does ChatGPT's memory work for AI agents?
   answer: For AI agents, ChatGPT's memory is typically managed through its conversational context window. For persistent AI memory, developers often integrate external systems like vector databases or specialized
     memory frameworks to store and retrieve information across sessions.
+- question: Can I find ChatGPT memory for specific past conversations?
+  answer: Yes, you can find ChatGPT memory for specific past conversations by accessing your chat history on the OpenAI platform. Each saved chat acts as a record of a past interaction, allowing you to
+    revisit and review the dialogue. This is the primary way users can "find" their ChatGPT memory.
 slug: how-to-find-chatgpt-memory
 ---
 

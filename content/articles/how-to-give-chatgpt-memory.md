@@ -45,7 +45,11 @@ faq:
 - question: How can I give AI memory to LLMs in general?
   answer: Giving AI memory to LLMs involves similar strategies as with ChatGPT, including prompt engineering, context window management, and integrating external memory systems like vector databases or
     knowledge graphs. The core principle is to provide the LLM with access to relevant past information.
+- question: What are the key components of giving an AI memory?
+  answer: The key components typically involve a method for storing information (like a database), a mechanism for retrieving relevant information based on current context, and a way to inject that retrieved
+    information back into the AI's input or processing. This allows for **how to give AI memory** to systems.
 slug: how-to-give-chatgpt-memory
+---
 ---
 
 Giving ChatGPT memory involves implementing strategies such as prompt engineering, context management, and external memory systems to retain and access information across interactions, transforming it into a more context-aware assistant. This is fundamental to understanding **how to give ChatGPT memory** effectively.

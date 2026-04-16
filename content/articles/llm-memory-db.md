@@ -10,6 +10,8 @@ tags:
 - Vector Databases
 - AI Agents
 - Persistent Memory
+- LLM Memory Database
+- LLM Memory
 keywords:
 - llm memory db
 - LLM memory
@@ -33,6 +35,9 @@ faq:
 - question: How does semantic search work in LLM memory databases?
   answer: Semantic search in LLM memory databases uses vector embeddings to understand the meaning of queries and stored data. It retrieves information based on conceptual similarity rather than exact keyword
     matches, making it more aligned with how LLMs process language.
+- question: What is the primary function of an LLM memory database?
+  answer: The primary function of an LLM memory database is to provide AI agents with a persistent and accessible knowledge store, allowing them to recall past interactions, learned information, and external
+    data, thereby enhancing their ability to perform complex reasoning and complete tasks effectively.
 slug: llm-memory-db
 ---
 
@@ -232,3 +237,6 @@ Key components include vector embeddings, specialized vector databases optimized
 
 ### How does semantic search work in LLM memory databases?
 Semantic search in LLM memory databases uses vector embeddings to understand the meaning of queries and stored data. It retrieves information based on conceptual similarity rather than exact keyword matches, making it more aligned with how LLMs process language.
+
+### What is the primary function of an LLM memory database?
+The primary function of an LLM memory database is to provide AI agents with a persistent and accessible knowledge store, allowing them to recall past interactions, learned information, and external data, thereby enhancing their ability to perform complex reasoning and complete tasks effectively.

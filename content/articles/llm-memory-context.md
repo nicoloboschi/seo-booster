@@ -38,6 +38,9 @@ faq:
 - question: How can LLM context memory be improved for better AI recall?
   answer: LLM context memory can be improved through techniques like Retrieval-Augmented Generation (RAG), summarization, and specialized memory architectures, all aimed at enhancing an LLM's ability to
     recall and utilize information effectively.
+- question: What are the key components of LLM memory context?
+  answer: Key components include the current prompt, conversational history, and any explicitly provided external data, all constrained by the model's context window. Effective LLM context memory ensures
+    these elements are processed coherently.
 slug: llm-memory-context
 ---
 
@@ -217,3 +220,5 @@ While traditional AI memory might excel at storing precise facts, **LLM memory c
  Tokens are the basic units of text that an LLM processes. The context window is measured in tokens, and its size directly limits how much information an LLM can consider at any given time.
 * **How can LLM context memory be improved for better AI recall?**
  LLM context memory can be improved through techniques like Retrieval-Augmented Generation (RAG), summarization, and specialized memory architectures, all aimed at enhancing an LLM's ability to recall and use information effectively.
+* **What are the key components of LLM memory context?**
+ Key components include the current prompt, conversational history, and any explicitly provided external data, all constrained by the model's context window. Effective LLM context memory ensures these elements are processed coherently.

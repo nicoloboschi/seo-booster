@@ -36,8 +36,12 @@ faq:
 - question: How do dynamic context windows improve AI memory management?
   answer: Dynamic context windows enhance AI memory management by allowing LLMs to prioritize and focus on the most relevant information for a given task, rather than being constrained by a fixed amount
     of memory. This selective processing leads to more efficient use of computational resources and better retention of critical details, forming a core aspect of effective llm memory management.
+- question: What are the core components of an LLM dynamic context window system?
+  answer: A dynamic context window system typically involves sophisticated attention mechanisms, intelligent context selection algorithms, and potentially hierarchical processing or summarization techniques
+    to manage information flow effectively.
 slug: llm-dynamic-context-window
 ---
+
 
 An **llm dynamic context window** is a system that intelligently adjusts an AI's information processing scope in real-time. This adaptive capability moves beyond fixed token limits, allowing for more efficient and nuanced AI reasoning crucial for complex tasks. It represents an evolution in how AI manages its immediate working memory, offering a more sophisticated approach to **llm memory management**.
 
@@ -105,4 +109,5 @@ A dynamic context window offers a different approach. It's not just about *how m
 
 Here's a comparative look:
 
-| Feature | Fixed Context Window (e.g., 100k tokens) | Dynamic Context Window 
+| Feature | Fixed Context Window (e.g., 100k tokens) | Dynamic Context Window |
+| :

@@ -13,6 +13,7 @@ tags:
 - AI vs human intelligence
 - consciousness in AI
 - AI memory
+- episodic memory in AI agents
 keywords:
 - is AI finally closing in on human intelligence
 - AI and human intelligence
@@ -40,6 +41,9 @@ faq:
 - question: What are the key differences between narrow AI and Artificial General Intelligence (AGI)?
   answer: Narrow AI excels at specific tasks (e.g., playing chess, recognizing faces), while AGI would possess human-like cognitive abilities to understand, learn, and apply knowledge across a wide range
     of tasks, exhibiting flexibility and common sense.
+- question: What are the core components of AI cognitive abilities?
+  answer: Core components of AI cognitive abilities include learning, problem-solving, pattern recognition, natural language processing, and increasingly, memory systems. However, true understanding, consciousness,
+    and common sense remain significant challenges.
 slug: is-ai-finally-closing-in-on-human-intelligence
 ---
 

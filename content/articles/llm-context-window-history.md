@@ -37,6 +37,9 @@ faq:
 - question: How does LLM context window size impact AI recall?
   answer: A larger LLM context window size allows the AI to consider more prior conversation or data in its current response, directly improving its ability to recall and utilize relevant historical information
     for more accurate and contextually aware outputs.
+- question: What are the practical implications of limited LLM context window history?
+  answer: Limited LLM context window history can lead to AI assistants forgetting previous instructions, losing conversational context, and providing less coherent or relevant responses in longer interactions.
+    This directly impacts user experience and the AI's overall utility.
 slug: llm-context-window-history
 ---
 

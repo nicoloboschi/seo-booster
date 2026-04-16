@@ -1,6 +1,6 @@
 ---
 title: 'How to Use Janitor AI Memory: A Practical Guide for Agents'
-description: Learn how to use Janitor AI memory effectively for your AI agents. This guide covers setup, integration, and best practices for persistent memory, including FAQs ...
+description: Master Janitor AI memory for your AI agents. This comprehensive guide covers setup, integration, storing/retrieving data, advanced techniques, and FAQs for persis...
 date: 2026-04-03
 lastmod: 2026-04-03
 tags:
@@ -12,6 +12,7 @@ tags:
 - persistent memory for AI
 - Janitor AI chat
 - AI agent memory
+- Janitor AI chat memory
 keywords:
 - how to use janitor ai memory
 - Janitor AI memory
@@ -42,6 +43,9 @@ faq:
 - question: What is Janitor AI chat memory specifically?
   answer: Janitor AI chat memory is the specialized implementation of Janitor AI's persistent memory features tailored for conversational agents. It allows chatbots and virtual assistants to retain context,
     user preferences, and past dialogue history across multiple interactions, leading to more coherent and personalized chat experiences. This is a key component for building sophisticated AI chat memory.
+- question: How does Janitor AI chat memory differ from standard LLM context?
+  answer: Standard LLM context is ephemeral, limited to the current conversation window. Janitor AI chat memory provides persistent storage that extends beyond a single session, allowing agents to recall
+    past interactions, user preferences, and learned information over extended periods, crucial for truly engaging AI chat.
 slug: how-to-use-janitor-ai-memory
 ---
 

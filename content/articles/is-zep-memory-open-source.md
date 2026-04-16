@@ -44,6 +44,9 @@ faq:
 - question: What are the key benefits of Zep Memory being open source?
   answer: Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers
     flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
+- question: What is the primary function of Zep Memory?
+  answer: The primary function of Zep Memory is to provide a persistent, searchable memory layer for AI agents and LLMs, enabling them to recall past interactions and information for more coherent and context-aware
+    responses.
 slug: is-zep-memory-open-source
 ---
 
@@ -175,4 +178,6 @@ The core of Zep Memory is typically released under a permissive open-source lice
 Zep Memory's core components, including its architecture for storing and indexing text embeddings, its vector database integration, and its API interface, are made available under an open-source license. This allows developers to use and contribute to its fundamental functionalities.
 ### What are the key benefits of Zep Memory being open source?
 Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
+### What is the primary function of Zep Memory?
+The primary function of Zep Memory is to provide a persistent, searchable memory layer for AI agents and LLMs, enabling them to recall past interactions and information for more coherent and context-aware responses.
 ---

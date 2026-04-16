@@ -34,8 +34,11 @@ faq:
 - question: What is the significance of Jayr Sillona in Ai Ai delas Alas's life?
   answer: Jayr Sillona holds significance as the **first husband of Ai Ai delas Alas**. Their early marriage, though brief, represents a foundational personal experience in her life before she achieved
     widespread fame and entered into subsequent relationships.
+- question: What was the name of Ai Ai delas Alas's first husband?
+  answer: The **first husband of Ai Ai delas Alas** was **Jayr Sillona**.
 slug: first-husband-of-ai-ai-delas-alas
 ---
+
 
 **Jayr Sillona** was the **first husband of Ai Ai delas Alas**, the acclaimed Filipina actress and comedian. They married in the early 1990s, marking her initial venture into marriage. This union represents a significant, albeit private, chapter in her personal history before subsequent relationships. Understanding who was the **first husband of Ai Ai delas Alas** provides context to her life story and her journey as a public figure.
 

@@ -49,6 +49,12 @@ faq:
 - question: What is the primary bottleneck for increasing LLM context window size?
   answer: The primary bottleneck is the computational and memory complexity of the self-attention mechanism in Transformer architectures, which scales quadratically (O(N^2)) with the sequence length (N).
     This makes processing longer sequences exponentially more expensive.
+- question: What is the significance of LLM context length?
+  answer: The LLM context length, determined by the context window, dictates how much information a model can process at once. A longer context length allows for better understanding of complex documents,
+    more coherent conversations, and improved performance on tasks requiring extensive background knowledge.
+- question: How does the context window LLM use impact its memory?
+  answer: The context window acts as the LLM's short-term memory. A larger context window means the LLM can retain and refer to more of the conversation or document history, leading to more consistent and
+    contextually aware responses, effectively enhancing its perceived AI memory.
 slug: llm-context-window-architecture
 ---
 
@@ -234,3 +240,11 @@ While a model is typically trained with a specific context window size, techniqu
 ### What is the primary bottleneck for increasing LLM context window size?
 
 The primary bottleneck is the computational and memory complexity of the self-attention mechanism in Transformer architectures, which scales quadratically (O(N^2)) with the sequence length (N). This makes processing longer sequences exponentially more expensive.
+
+### What is the significance of LLM context length?
+
+The LLM context length, determined by the context window, dictates how much information a model can process at once. A longer context length allows for better understanding of complex documents, more coherent conversations, and improved performance on tasks requiring extensive background knowledge.
+
+### How does the context window LLM use impact its memory?
+
+The context window acts as the LLM's short-term memory. A larger context window means the LLM can retain and refer to more of the conversation or document history, leading to more consistent and contextually aware responses, effectively enhancing its perceived AI memory.

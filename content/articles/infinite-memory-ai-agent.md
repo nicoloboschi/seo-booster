@@ -26,6 +26,10 @@ keywords:
 - AI knowledge retention
 - AI context window limitations
 - AI recall capabilities
+- RAG for AI memory
+- external memory for AI
+- semantic memory AI
+- episodic memory AI
 faq:
 - question: What is an infinite memory AI agent?
   answer: An infinite memory AI agent is a theoretical or aspirational AI system designed to retain and access information indefinitely, without the practical limitations of finite storage or context windows.
@@ -49,6 +53,9 @@ faq:
 - question: How can AI agents improve their recall capabilities?
   answer: AI agents can improve their recall by employing strategies such as using external memory systems (vector databases, knowledge graphs), implementing Retrieval-Augmented Generation (RAG), and developing
     distinct episodic and semantic memory modules.
+- question: What is RAG and how does it help with AI memory?
+  answer: RAG (Retrieval-Augmented Generation) is a technique where an AI agent retrieves relevant information from an external knowledge base before generating a response. This allows the agent to access
+    information beyond its immediate training data or context window, significantly enhancing its recall capabilities and simulating longer-term memory.
 slug: infinite-memory-ai-agent
 ---
 
@@ -155,3 +162,6 @@ As AI agents become more sophisticated, their ability to manage and access vast 
 
 * **Question:** How can AI agents improve their recall capabilities?
  **Answer:** AI agents can improve their recall by employing strategies such as using external memory systems (vector databases, knowledge graphs), implementing Retrieval-Augmented Generation (RAG), and developing distinct episodic and semantic memory modules.
+
+* **Question:** What is RAG and how does it help with AI memory?
+ **Answer:** RAG (Retrieval-Augmented Generation) is a technique where an AI agent retrieves relevant information from an external knowledge base before generating a response. This allows the agent to access information beyond its immediate training data or context window, significantly enhancing its recall capabilities and simulating longer-term memory.

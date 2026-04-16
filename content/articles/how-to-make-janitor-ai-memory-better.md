@@ -40,6 +40,8 @@ faq:
   answer: "Good" Janitor AI memory is characterized by its ability to accurately recall relevant past information, maintain context over extended interactions, learn from experiences, and avoid repeating errors. This leads to more efficient and reliable task execution.
 - question: How can I make Janitor AI faster?
   answer: Making Janitor AI faster often involves optimizing its memory retrieval, reducing redundant computations, and ensuring efficient context window management. Techniques like RAG and optimized vector databases can significantly speed up response times by providing quicker access to relevant information.
+- question: What are the key components of effective AI memory for agents like Janitor AI?
+  answer: Effective AI memory for agents like Janitor AI typically involves a combination of short-term memory (like the LLM's context window), long-term memory for persistent knowledge, and working memory for active processing. Optimizing each of these contributes to overall agent performance.
 slug: how-to-make-janitor-ai-memory-better
 ---
 
@@ -51,13 +53,11 @@ Could Janitor AI forget a critical safety protocol mid-task, leading to disaster
 
 ### The Core Components of AI Memory
 
-AI memory systems aren't monolithic; they involve several layers influencing **how to make Janitor AI memory better**.
+AI memory systems aren't monolithic; they involve several layers influencing **how to make Janitor AI memory better**. Understanding these components is the first step in improving how an AI agent, like Janitor AI, remembers, directly impacting **how to make Janitor AI memory better**.
 
 *   **Short-Term Memory (STM)**: Often the **context window** of an LLM, holding immediate task information but being volatile with strict limits.
 *   **Long-Term Memory (LTM)**: Where persistent information is stored, allowing agents to recall past interactions or learned skills beyond the current context window.
 *   **Working Memory**: A conceptual space where the AI actively processes information from STM and LTM to make decisions.
-
-Understanding these components is the first step in improving how an AI agent, like Janitor AI, remembers, directly impacting **how to make Janitor AI memory better**.
 
 ## Strategies for Enhancing Janitor AI's Memory Capabilities
 

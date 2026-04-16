@@ -44,6 +44,9 @@ faq:
 - question: Why is context window management crucial for AI agents?
   answer: Context window management is crucial because LLMs have a finite capacity for processing information at any given time. Without effective management, agents can lose track of important details
     in long conversations, leading to degraded performance and inaccurate responses. Janitor LLM memory directly addresses this challenge.
+- question: How does Janitor LLM memory contribute to effective AI recall?
+  answer: By intelligently curating the information within the LLM's context window, Janitor LLM memory ensures that the most relevant past interactions and data are readily accessible. This direct access
+    to pertinent information significantly enhances the AI agent's ability to recall and utilize it for accurate and timely responses.
 slug: janitor-llm-memory
 ---
 
@@ -170,4 +173,3 @@ class ConversationManager:
  print("Pruning complete.")
 
 ##
-```

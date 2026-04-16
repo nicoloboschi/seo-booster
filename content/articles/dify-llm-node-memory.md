@@ -47,6 +47,9 @@ faq:
 - question: How does a dify llm node contribute to AI memory?
   answer: A dify llm node acts as a functional unit within the Dify platform. When enhanced with memory capabilities, it becomes a 'dify llm node memory' component, specifically designed to manage and utilize
     an AI agent's memory for improved recall and contextual understanding.
+- question: What are the key components of a dify llm node for memory?
+  answer: A dify llm node for memory typically includes a mechanism for storing data (like a vector database or key-value store), an interface for retrieving data, and logic to integrate this retrieved
+    information into the LLM's processing pipeline.
 slug: dify-llm-node-memory
 ---
 ---
@@ -182,3 +185,5 @@ For those looking to build powerful AI applications, exploring platforms like Di
  A 'dify llm node' is a modular component within the Dify platform designed to perform specific functions, such as interacting with Large Language Models (LLMs). When equipped with memory capabilities, it becomes a 'dify llm node memory' unit, enabling AI agents to store and recall information.
 * **How does a dify llm node contribute to AI memory?**
  A dify llm node acts as a functional unit within the Dify platform. When enhanced with memory capabilities, it becomes a 'dify llm node memory' component, specifically designed to manage and use an AI agent's memory for improved recall and contextual understanding.
+* **What are the key components of a dify llm node for memory?**
+ A dify llm node for memory typically includes a mechanism for storing data (like a vector database or key-value store), an interface for retrieving data, and logic to integrate this retrieved information into the LLM's processing pipeline.
