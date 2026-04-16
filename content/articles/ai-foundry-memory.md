@@ -28,7 +28,7 @@ faq:
 - question: Can AI Foundry memory systems handle unstructured data like images or audio?
   answer: Yes, many modern **AI Foundry memory systems** are designed to handle unstructured data. They often use multimodal embedding models to convert various data types into vector representations, allowing for semantic search and retrieval across different modalities.
 - question: How does AI Foundry memory improve complex task completion for agents?
-  answer: **AI Foundry memory** significantly enhances complex task completion by allowing agents to recall intermediate steps, user preferences, and constraints across multiple stages of a task. This persistent recall ensures agents maintain coherence and execute multi-step processes effectively, moving beyond the limitations of transient context.
+  answer: '**AI Foundry memory** significantly enhances complex task completion by allowing agents to recall intermediate steps, user preferences, and constraints across multiple stages of a task. This persistent recall ensures agents maintain coherence and execute multi-step processes effectively, moving beyond the limitations of transient context.'
 slug: ai-foundry-memory
 ---
 
