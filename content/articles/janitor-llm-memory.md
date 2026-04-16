@@ -49,6 +49,7 @@ faq:
     to pertinent information significantly enhances the AI agent's ability to recall and utilize it for accurate and timely responses.
 slug: janitor-llm-memory
 ---
+---
 
 What happens when an AI agent "forgets" crucial details mid-conversation? **Janitor LLM memory** is a technique for AI agents that prunes and summarizes their conversational history. It ensures only the most relevant information stays within the LLM's limited context window, preventing data overload and improving recall for better decision-making. This **janitor LLM memory** strategy is crucial for agents to maintain coherence in extended interactions.
 

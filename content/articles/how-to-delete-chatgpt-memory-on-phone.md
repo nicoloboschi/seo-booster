@@ -157,7 +157,6 @@ Clearing your phone's app cache can sometimes resolve minor display issues or fr
 
 Users sometimes encounter problems when trying to delete their ChatGPT memory on their phone. These can range from the app not syncing correctly to confusion about what data is actually being removed. This section addresses common issues related to **ChatGPT privacy settings**.
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ### Chats Not Disappearing After Deletion

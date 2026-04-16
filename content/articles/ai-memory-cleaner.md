@@ -154,7 +154,6 @@ class MemoryManager:
 ## manager._prune_low_relevance() # Manually trigger pruning based on relevance
 ```
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 This code snippet illustrates how an **AI memory cleaner** can implement basic pruning strategies, focusing on data age and relevance to maintain an efficient memory state.

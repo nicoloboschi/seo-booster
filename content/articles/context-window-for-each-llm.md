@@ -49,6 +49,7 @@ faq:
     at the beginning and end of the context.
 slug: context-window-for-each-llm
 ---
+---
 
 What if your AI agent forgot the start of your conversation after only a few sentences? The **context window for each LLM** is the core limitation, defining how much information it can process at once. This token limit directly impacts an AI's ability to recall details, maintain conversational flow, and perform complex reasoning, shaping its overall utility. Understanding the **LLM context window** is crucial for effective AI agent development.
 

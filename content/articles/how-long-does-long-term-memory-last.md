@@ -193,5 +193,4 @@ print("Attempting to prune old memories...")
 agent_memory.prune_old_memories()
 print(f"Attempting to retrieve pruned memory: {agent_memory.retrieve_memory('very_old_fact')}")
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.

@@ -49,6 +49,7 @@ faq:
     a conversation, thus preventing AI losing context.
 slug: chatbot-memory-loss
 ---
+---
 
 **Chatbot memory loss** refers to an AI's inability to retain or recall information from previous conversation turns or interactions. This deficiency prevents the AI from maintaining context, leading to repetitive questions and a disjointed user experience, hindering the development of truly intelligent conversational agents.
 

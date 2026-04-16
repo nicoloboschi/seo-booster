@@ -50,6 +50,7 @@ faq:
 slug: is-zep-memory-open-source
 ---
 
+
 Could your AI agent forget crucial details from a conversation just minutes later? The answer often lies in its memory system, and understanding if Zep Memory is open source is key to unlocking its full potential for persistent AI recall. Zep Memory offers a persistent, searchable memory layer for AI agents, with its core components being **open source**. This allows developers to inspect, modify, and distribute the codebase, fostering transparency and community involvement.
 
 ## What is Zep Memory and is it Open Source?
@@ -180,4 +181,3 @@ Zep Memory's core components, including its architecture for storing and indexin
 Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
 ### What is the primary function of Zep Memory?
 The primary function of Zep Memory is to provide a persistent, searchable memory layer for AI agents and LLMs, enabling them to recall past interactions and information for more coherent and context-aware responses.
----

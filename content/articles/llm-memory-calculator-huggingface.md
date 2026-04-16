@@ -119,7 +119,6 @@ print(f"Input token count: {input_token_count}")
 estimated_total_tokens = input_token_count + max_output_tokens
 print(f"Estimated total tokens (prompt + max output): {estimated_total_tokens}")
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ## Compare against model.config.max_position_embeddings
