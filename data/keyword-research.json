@@ -9131,17 +9131,33 @@
       "matching_suggestions": [
         "persistent memory examples"
       ]
+    },
+    {
+      "keyword": "ai memory compression breakthrough",
+      "slug": "ai-memory-compression-breakthrough",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory compression breakthrough"
+      ]
+    },
+    {
+      "keyword": "ai memory map",
+      "slug": "ai-memory-map",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory map"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github",
-    "ai memory compression breakthrough",
-    "ai memory map"
+    "ai long term.memory github"
   ],
   "summary": {
-    "total_keywords": 965,
-    "validated": 891,
+    "total_keywords": 967,
+    "validated": 893,
     "low_volume": 74,
-    "new_opportunities_found": 3
+    "new_opportunities_found": 1
   }
 }
