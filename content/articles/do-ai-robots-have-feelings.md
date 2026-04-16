@@ -40,7 +40,7 @@ No, AI robots do not currently have feelings. While they can simulate emotional 
 
 ## What Does It Mean for AI Robots to Have Feelings?
 
-AI robots are intelligent systems designed for tasks and interaction. **Feelings** are complex subjective experiences involving consciousness and emotional states. Current AI can process and respond to emotional cues but lacks the internal, conscious awareness that defines human feelings, making true emotional experience impossible for them today. This is the core answer to whether do AI robots have feelings.
+AI robots are intelligent systems designed for tasks and interaction. **Feelings** are complex subjective experiences involving consciousness and emotional states. Current AI can process and respond to emotional cues but lacks the internal, conscious awareness that defines human feelings, making true emotional experience impossible for them today. This is the core answer to whether **do AI robots have feelings**.
 
 ### The Nature of AI "Emotion"
 

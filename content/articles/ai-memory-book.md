@@ -26,7 +26,13 @@
     "agentic AI long-term memory",
     "what is an ai memory book",
     "how ai memory books work",
-    "benefits of ai memory books"
+    "benefits of ai memory books",
+    "ai agent episodic memory",
+    "semantic memory for AI",
+    "temporal reasoning and memory",
+    "vector databases for AI recall",
+    "memory consolidation in AI agents",
+    "open-source AI memory"
   ],
   "faq": [
     {
@@ -56,6 +62,10 @@
     {
       "question": "How do AI memory books work to enhance AI recall?",
       "answer": "AI memory books work by creating a persistent, organized repository of an agent's past experiences and learned information. This allows the AI to efficiently retrieve relevant data when needed, preventing information loss and enabling more accurate recall of past events and knowledge."
+    },
+    {
+      "question": "What are the core components of an AI memory book?",
+      "answer": "The core components of an AI memory book typically include a storage mechanism (like a vector database), methods for encoding information (embeddings), and retrieval algorithms that allow the AI to access relevant past data efficiently."
     }
   ],
   "slug": "ai-memory-book"
@@ -105,13 +115,13 @@ For example, an AI agent might record an event like: "On 2026-03-27 at 10:05 AM,
 
 **Semantic memory** stores general knowledge, facts, concepts, and their relationships. This knowledge is independent of specific personal experiences. It's the AI's understanding of the world, its factual knowledge base. This allows the AI to answer questions, understand concepts, and reason about general principles.
 
-An example would be the AI knowing that "Paris is the capital of France" or understanding the concept of gravity. This type of memory is what allows an AI to generalize from specific experiences to broader understanding. [Semantic memory in AI agents](/articles/semantic-memory-ai-agents/) provides the foundational knowledge required for complex reasoning.
+An example would be the AI knowing that "Paris is the capital of France" or understanding the concept of gravity. This type of memory is what allows an AI to generalize from specific experiences to broader understanding. [Semantic memory for AI](/articles/semantic-memory-ai-agents/) provides the foundational knowledge required for complex reasoning.
 
 ### Temporal Reasoning and Memory
 
 The ability to understand the sequence of events and their timing is critical for many AI applications. **Temporal reasoning** capabilities, supported by the AI's memory, allow agents to understand causality, predict future states, and manage tasks that unfold over time.
 
-An AI managing a smart home system, for instance, needs to understand that turning on the thermostat *before* opening a window is usually more efficient. This requires remembering the typical order of operations and the effects of each action over time. This is a core challenge addressed by [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
+An AI managing a smart home system, for instance, needs to understand that turning on the thermostat *before* opening a window is usually more efficient. This requires remembering the typical order of operations and the effects of each action over time. This is a core challenge addressed by [temporal reasoning and memory](/articles/temporal-reasoning-ai-memory/).
 
 ## Implementing an AI Memory Book
 
@@ -121,7 +131,7 @@ Creating an **ai memory book** involves several technical considerations. These 
 
 Modern **ai memory book** implementations frequently rely on **vector databases** and **embedding models**. These technologies convert raw data (text, images, audio) into numerical vector representations that capture semantic meaning. Vector databases are optimized for searching these embeddings. They allow for efficient retrieval of similar or relevant past experiences, crucial for **ai recall**.
 
-When an AI needs to recall something, it generates an embedding for its current query. It then searches the vector database for the most similar stored embeddings. This process is often part of Retrieval-Augmented Generation (RAG) systems. Understanding [embedding models for memory](/articles/embedding-models-for-memory/) and their role in RAG is essential for practical implementation.
+When an AI needs to recall something, it generates an embedding for its current query. It then searches the vector database for the most similar stored embeddings. This process is often part of Retrieval-Augmented Generation (RAG) systems. Understanding [vector databases for AI recall](/articles/embedding-models-for-memory/) and their role in RAG is essential for practical implementation.
 
 A 2024 study published in *arXiv* indicated that retrieval-augmented agents demonstrated a **34% improvement in task completion rates** compared to their non-augmented counterparts. This highlights the efficacy of embedding-based retrieval. Another study from the University of California, Berkeley, found that agents with enhanced memory capabilities showed a **28% reduction in redundant actions** on complex tasks.
 
@@ -135,7 +145,7 @@ AI agents might use algorithms to periodically review and summarize past experie
 
 Several open-source projects offer building blocks for creating AI memory systems. Tools like **Hindsight** provide frameworks for managing and querying agent memories. They often integrate with vector databases and LLMs. These solutions accelerate development by offering pre-built components for common memory management tasks.
 
-Developers can build upon these open-source libraries to construct custom **ai memory book** solutions tailored to their specific agent needs. Exploring [open-source memory systems compared](/articles/open-source-memory-systems-compared/) can provide valuable insights into available options. You can find Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight).
+Developers can build upon these open-source libraries to construct custom **ai memory book** solutions tailored to their specific agent needs. Exploring [open-source AI memory](/articles/open-source-memory-systems-compared/) can provide valuable insights into available options. You can find Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight).
 
 ## Challenges and Considerations for Persistent Memory AI
 
@@ -187,3 +197,6 @@ The key benefits of an AI memory book include enhanced AI recall, improved conte
 
 ### How do AI memory books work to enhance AI recall?
 AI memory books work by creating a persistent, organized repository of an agent's past experiences and learned information. This allows the AI to efficiently retrieve relevant data when needed, preventing information loss and enabling more accurate recall of past events and knowledge.
+
+### What are the core components of an AI memory book?
+The core components of an AI memory book typically include a storage mechanism (like a vector database), methods for encoding information (embeddings), and retrieval algorithms that allow the AI to access relevant past data efficiently.

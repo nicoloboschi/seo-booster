@@ -48,9 +48,11 @@ faq:
 - question: What is the difference between a general software developer and an AI memory developer?
   answer: While both roles involve coding and system design, an AI memory developer specializes in the unique challenges of creating persistent, contextual memory for AI agents. This requires deep knowledge
     of LLMs, vector databases, and AI agent architectures, which goes beyond typical software development.
+- question: How does an AI memory developer contribute to overcoming LLM context window limitations?
+  answer: AI memory developers implement external memory systems, such as vector databases, that LLMs can query. This allows LLMs to access and utilize information beyond their immediate context window,
+    effectively extending their memory and enabling more complex, long-term interactions.
 slug: ai-memory-developer-job
 ---
-
 
 The **AI memory developer job** focuses on creating and maintaining the systems that allow AI agents to store, retrieve, and use information over time. This crucial role enables **long-term memory in AI agents**, empowering them to learn from experiences and maintain context across extended interactions, leading to more capable and aware AI.
 
@@ -180,4 +182,3 @@ print(f"Retrieved: {recent_interactions}")
 ```
 
 This snippet illustrates the fundamental concept of storing and retrieving data, a core task within an **ai memory developer job**.
-

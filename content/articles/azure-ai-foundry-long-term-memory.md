@@ -39,6 +39,9 @@ faq:
     for the cognitive engine.
 - question: What specific Azure services are crucial for implementing Azure AI Foundry agent memory?
   answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for intelligent retrieval. Azure OpenAI Service provides the cognitive engine.
+- question: How does Azure AI Foundry ensure persistent memory for its agents?
+  answer: Azure AI Foundry ensures persistent memory by integrating robust Azure services like Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for efficient
+    retrieval, enabling comprehensive agent recall.
 slug: azure-ai-foundry-long-term-memory
 ---
 

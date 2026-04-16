@@ -52,6 +52,9 @@ faq:
 - question: How does AI support individuals with mild cognitive impairment (MCI)?
   answer: For individuals with MCI, AI can offer early detection of changes in cognitive patterns, provide personalized cognitive training exercises, and deliver reminders to support daily living. This
     proactive approach can help manage the condition and potentially slow its progression.
+- question: What are the ethical considerations when implementing AI in memory care?
+  answer: Key ethical considerations include ensuring robust data privacy and security, maintaining transparency in AI decision-making, preventing algorithmic bias, and ensuring that AI complements rather
+    than replaces human interaction and empathy.
 slug: ai-in-memory-care
 ---
 

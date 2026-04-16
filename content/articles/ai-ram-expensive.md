@@ -42,6 +42,9 @@ faq:
 - question: What are the primary cost drivers for AI RAM?
   answer: The primary cost drivers for AI RAM include the need for high bandwidth and capacity, specialized memory architectures like HBM, manufacturing complexity, and significant R&D investments. The
     increasing demand from AI workloads also outpaces supply, contributing to higher prices.
+- question: What are the key differences between RAM for AI and standard RAM?
+  answer: RAM for AI, often referred to as AI RAM, is distinguished by its significantly higher bandwidth, capacity, and speed requirements compared to standard RAM found in consumer devices. This is driven
+    by the massive datasets and complex computations inherent in AI workloads, necessitating specialized architectures like HBM.
 ---
 
 The high cost of RAM for AI stems from its specialized performance requirements, driving up manufacturing and integration expenses. This memory is essential for handling massive datasets and complex computations, making it a significant component of AI hardware budgets, often costing several times more than standard memory. Understanding why AI RAM is expensive impacts AI development budgets and sheds light on how AI is making RAM more expensive.
@@ -188,3 +191,6 @@ AI is making RAM more expensive by driving demand for specialized, high-performa
 
 ### What are the primary cost drivers for AI RAM?
 The primary cost drivers for AI RAM include the need for high bandwidth and capacity, specialized memory architectures like HBM, manufacturing complexity, and significant R&D investments. The increasing demand from AI workloads also outpaces supply, contributing to higher prices.
+
+### What are the key differences between RAM for AI and standard RAM?
+RAM for AI, often referred to as AI RAM, is distinguished by its significantly higher bandwidth, capacity, and speed requirements compared to standard RAM found in consumer devices. This is driven by the massive datasets and complex computations inherent in AI workloads, necessitating specialized architectures like HBM.
