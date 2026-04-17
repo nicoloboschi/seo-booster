@@ -49,7 +49,7 @@ faq:
     can be missed, directly contributing to the **llm context window paradox** and highlighting the need for better information prioritization.
 slug: llm-context-window-paradox
 ---
-
+---
 
 The **llm context window paradox** describes the counterintuitive observation that simply increasing an LLM's context window size doesn't reliably improve performance and can sometimes degrade it. This occurs due to challenges like attention dilution and computational overhead, making larger windows a double-edged sword for AI understanding.
 

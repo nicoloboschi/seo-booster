@@ -134,25 +134,4 @@ Hermes Agent supports several external memory providers, each offering distinct 
 ### Comparing Hermes Agent Memory Providers
 
 | Provider | Capture model | Retrieval | Cross-session persistence | Best for |
-|---|---|---|---|---|
-| Built-in (`MEMORY.md` + session archive) | Agent-curated, ~2,200 char limit | `session_search` SQLite query | Limited by character cap | Solo workflows, short sessions |
-| [Hindsight](https://github.com/vectorize-io/hindsight) | Automatic, all interactions indexed | Vector + structured retrieval, prefetch on each turn | Yes, no manual prompting | Production agents needing reliable recall |
-| Mem0 | Automatic, summary-driven | Vector similarity | Yes | Lightweight chat memory |
-| Custom REST provider | Developer-defined | Developer-defined | Depends on backend | Bespoke storage/compliance needs |
-
-The choice between these **hermes agent memory providers** comes down to how aggressively you need automatic capture versus controlled, agent-curated writes.
-
-### The Role of Hindsight Memory in Hermes Agent
-
-**Hindsight memory hermes agent** integration represents a significant leap in agent recall capabilities. As an external memory provider, [Hindsight](https://github.com/vectorize-io/hindsight) automatically captures and indexes all agent interactions, including conversations, tool usage, and generated outputs. This comprehensive indexing allows for more robust retrieval of past conversations and facts, directly addressing the limitations of Hermes's built-in memory layers. By ensuring that all data is captured and easily searchable, Hindsight guarantees more consistent **long-term memory in AI agents** without requiring manual intervention or specific prompting for memory storage. This makes it an invaluable tool for complex projects where detailed historical context is essential. For a broader survey of memory backends, see our guide to the [best LLM memory systems](/articles/best-llm-memory/) and [AI agent memory architectures](/articles/ai-agent-memory-explained/).
-
-### Key Features of Hermes Agent AI Framework Memory Systems
-
-The **hermes agent ai framework features** a sophisticated, multi-layered approach to memory. This architecture is designed to handle a wide spectrum of information needs, from immediate context to long-term knowledge retention. The core of the **hermes agent ai memory system** lies in its ability to manage different types of data through distinct mechanisms:
-
-* **Prompt Memory:** Essential for short-term context, always present in the LLM's immediate working space.
-* **Session Archive:** Provides **episodic memory in AI agents** through a searchable SQLite database of past interactions.
-* **Skills:** Enables procedural memory by storing and refining reusable task execution sequences.
-* **External Memory Providers:** Offers extensibility for advanced data capture, retrieval, and persistence, significantly enhancing the overall **hermes memory system**.
-
-This robust design ensures that Hermes agents can learn, adapt, and recall information effectively, forming the foundation for more intelligent and capable AI applications.
+|
