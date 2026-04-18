@@ -170,7 +170,6 @@
     ],
     "rag vs memory": [
       "golden memory ram review",
-      "is memory cloth real",
       "rag and bone review",
       "rag and bone vs theory",
       "rag review",
@@ -180,9 +179,7 @@
       "rag vs memory bank",
       "rag vs ram",
       "what is memory cloth",
-      "what is memory fabric",
       "what is rag memory",
-      "what is the best type of memory",
       "why use redis instead of memory"
     ],
     "ai memory system": [
@@ -5109,11 +5106,9 @@
     {
       "keyword": "is memory cloth real",
       "slug": "is-memory-cloth-real",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is memory cloth real"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is there a limit to long term memory",
@@ -8215,11 +8210,9 @@
     {
       "keyword": "what is memory fabric",
       "slug": "what-is-memory-fabric",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is memory fabric"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is memory system",
@@ -8317,11 +8310,9 @@
     {
       "keyword": "what is the best type of memory",
       "slug": "what-is-the-best-type-of-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the best type of memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the purpose of an llm",
@@ -9156,8 +9147,8 @@
   ],
   "summary": {
     "total_keywords": 967,
-    "validated": 893,
-    "low_volume": 74,
+    "validated": 890,
+    "low_volume": 77,
     "new_opportunities_found": 1
   }
 }
