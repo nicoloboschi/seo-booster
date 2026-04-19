@@ -79,7 +79,6 @@ This distinction is critical. A truly human-like memory system would need to sea
 
 Building AI systems with memory involves several key components and techniques. The goal is to move beyond the stateless nature of many foundational LLM models and develop effective **llm human memory**.
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 ### Storing Information
