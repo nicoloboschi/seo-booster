@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 184,
+      "autocomplete_matches": 188,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -454,9 +454,11 @@
     {
       "keyword": "ai agent persistent memory",
       "slug": "ai-agent-persistent-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent persistent memory"
+      ]
     },
     {
       "keyword": "ai agent episodic memory",
@@ -767,9 +769,11 @@
     {
       "keyword": "ai agent procedural memory",
       "slug": "ai-agent-procedural-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent procedural memory"
+      ]
     },
     {
       "keyword": "ai agent simple memory n8n",
@@ -9156,8 +9160,8 @@
   ],
   "summary": {
     "total_keywords": 967,
-    "validated": 893,
-    "low_volume": 74,
+    "validated": 895,
+    "low_volume": 72,
     "new_opportunities_found": 1
   }
 }
