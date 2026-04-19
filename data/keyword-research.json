@@ -101,14 +101,14 @@
       "do you need llb for llm",
       "does llm have memory",
       "does llm make you a lawyer",
-      "does local llm have memory",
       "hindsight llm memory",
       "how llm memory works",
       "how to build llm memory",
       "how to calculate llm memory usage",
       "how to give llm memory",
       "how to give local llm memory",
-      "how to implement llm memory"
+      "how to implement llm memory",
+      "how to improve llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -391,7 +391,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 188,
+      "autocomplete_matches": 187,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -573,13 +573,12 @@
     {
       "keyword": "llm memory system",
       "slug": "llm-memory-system",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "best llm memory system",
         "llm memory management",
         "llm memory management github",
-        "llm memory management tools",
         "llm memory system"
       ]
     },
@@ -913,7 +912,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 34,
+      "autocomplete_matches": 35,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -3975,11 +3974,9 @@
     {
       "keyword": "flipped ai long term memory",
       "slug": "flipped-ai-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "flipped ai long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "free ai that remembers",
@@ -4479,11 +4476,9 @@
     {
       "keyword": "does local llm have memory",
       "slug": "does-local-llm-have-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "does local llm have memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "graphiti zep memory",
@@ -6417,12 +6412,11 @@
     {
       "keyword": "llm memory management",
       "slug": "llm-memory-management",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "llm memory management",
-        "llm memory management github",
-        "llm memory management tools"
+        "llm memory management github"
       ]
     },
     {
@@ -6437,11 +6431,9 @@
     {
       "keyword": "llm memory management tools",
       "slug": "llm-memory-management-tools",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory management tools"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory mcp",
@@ -6611,11 +6603,9 @@
     {
       "keyword": "llm memory plugin",
       "slug": "llm-memory-plugin",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory plugin"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory problem",
@@ -9156,12 +9146,15 @@
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github"
+    "ai long term.memory github",
+    "llm human memory",
+    "llm memory map",
+    "llm personal memory"
   ],
   "summary": {
     "total_keywords": 967,
-    "validated": 895,
-    "low_volume": 72,
-    "new_opportunities_found": 1
+    "validated": 891,
+    "low_volume": 76,
+    "new_opportunities_found": 4
   }
 }
