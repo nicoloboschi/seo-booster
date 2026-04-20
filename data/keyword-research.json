@@ -79,14 +79,14 @@
       "best ai chat memory",
       "best ai chat with best memory",
       "best ai chat with good memory",
-      "best ai chat with long memory",
       "best ai chatbot for memory",
       "best ai chatbot with best memory",
       "best ai chatbot with good memory",
       "best ai chatbot with good memory reddit",
-      "best ai chatbot with long memory",
       "best ai companion memory",
-      "best ai for memory"
+      "best ai for memory",
+      "best ai for memory reddit",
+      "best ai for memory retention"
     ],
     "llm memory": [
       "best llm memory",
@@ -2714,11 +2714,9 @@
     {
       "keyword": "best ai chat with long memory",
       "slug": "best-ai-chat-with-long-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai chat with long memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chat with long term memory",
@@ -2761,11 +2759,9 @@
     {
       "keyword": "best ai chatbot with long memory",
       "slug": "best-ai-chatbot-with-long-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai chatbot with long memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai companion memory",
@@ -2929,20 +2925,16 @@
     {
       "keyword": "best ai with long memory",
       "slug": "best-ai-with-long-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai with long memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai with long term memory",
       "slug": "best-ai-with-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai with long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai with persistent memory",
@@ -3053,9 +3045,10 @@
     {
       "keyword": "best long term memory ai",
       "slug": "best-long-term-memory-ai",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
+        "best long term memory ai",
         "best long term memory ai chatbot",
         "best long term memory ai",
         "best long term memory ai chatbot"
@@ -9193,12 +9186,13 @@
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github"
+    "ai long term.memory github",
+    "best long memory ai"
   ],
   "summary": {
     "total_keywords": 973,
-    "validated": 893,
-    "low_volume": 80,
-    "new_opportunities_found": 1
+    "validated": 889,
+    "low_volume": 84,
+    "new_opportunities_found": 2
   }
 }
