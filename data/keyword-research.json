@@ -156,10 +156,12 @@
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
+      "chronic memory issues",
       "is there a limit to long term memory",
       "local llm persistent memory",
       "long short term memory meaning",
       "permanent memory example",
+      "permanent memory llm",
       "persistent memory examples",
       "persistent memory for llm",
       "persistent memory in llm",
@@ -2393,7 +2395,7 @@
         "ai ram ji drawing",
         "ai ram ji photo",
         "ai ram ji photo 4k",
-        "ai ram ji photo 4k hd download"
+        "ai ram ji photo hd 4k"
       ]
     },
     {
@@ -3396,9 +3398,11 @@
     {
       "keyword": "chronic memory issues",
       "slug": "chronic-memory-issues",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chronic memory issues"
+      ]
     },
     {
       "keyword": "chub ai long term memory",
@@ -3605,9 +3609,11 @@
     {
       "keyword": "context window llm size",
       "slug": "context-window-llm-size",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm size"
+      ]
     },
     {
       "keyword": "context window management llm",
@@ -7509,9 +7515,11 @@
     {
       "keyword": "permanent memory llm",
       "slug": "permanent-memory-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "permanent memory llm"
+      ]
     },
     {
       "keyword": "persistent ai memory system",
@@ -9155,18 +9163,42 @@
       "matching_suggestions": [
         "llm personal memory"
       ]
+    },
+    {
+      "keyword": "best long term memory llm",
+      "slug": "best-long-term-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best long term memory llm"
+      ]
+    },
+    {
+      "keyword": "extend llm context window",
+      "slug": "extend-llm-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "extend llm context window"
+      ]
+    },
+    {
+      "keyword": "llm decode memory bound",
+      "slug": "llm-decode-memory-bound",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm decode memory bound"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai long term.memory github",
-    "best long term memory llm",
-    "extend llm context window",
-    "llm decode memory bound"
+    "ai long term.memory github"
   ],
   "summary": {
-    "total_keywords": 970,
-    "validated": 887,
-    "low_volume": 83,
-    "new_opportunities_found": 4
+    "total_keywords": 973,
+    "validated": 893,
+    "low_volume": 80,
+    "new_opportunities_found": 1
   }
 }

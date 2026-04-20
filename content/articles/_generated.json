@@ -5851,5 +5851,11 @@
     "generated_at": "2026-04-20T01:02:24.839163",
     "sources": [],
     "quality_score": 65
+  },
+  "extend-llm-context-window": {
+    "keyword": "extend llm context window",
+    "generated_at": "2026-04-20T03:07:24.482840",
+    "sources": [],
+    "quality_score": 65
   }
 }
