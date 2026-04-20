@@ -129,8 +129,8 @@
       "best long term memory ai",
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
-      "can you have good long term memory but bad short term memory",
-      "candy ai long term memory"
+      "building smarter ai agents agentcore long term memory deep dive",
+      "can you have good long term memory but bad short term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -3200,9 +3200,11 @@
     {
       "keyword": "building smarter ai agents agentcore long term memory deep dive",
       "slug": "building-smarter-ai-agents-agentcore-long-term-memory-deep-dive",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "building smarter ai agents agentcore long term memory deep dive"
+      ]
     },
     {
       "keyword": "can you have good long term memory but bad short term memory",
@@ -3760,9 +3762,11 @@
     {
       "keyword": "deepseek ai agent telegram long term memory",
       "slug": "deepseek-ai-agent-telegram-long-term-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "deepseek ai agent telegram long term memory"
+      ]
     },
     {
       "keyword": "deepseek llm context window",
@@ -6811,9 +6815,11 @@
     {
       "keyword": "long term agentic memory with langgraph deeplearning ai",
       "slug": "long-term-agentic-memory-with-langgraph-deeplearning-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term agentic memory with langgraph deeplearning ai"
+      ]
     },
     {
       "keyword": "long term memory ai assistant",
@@ -6872,9 +6878,11 @@
     {
       "keyword": "long term memory deeplearning.ai",
       "slug": "long-term-memory-deeplearning-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory deeplearning.ai"
+      ]
     },
     {
       "keyword": "long term memory for ai",
@@ -9196,8 +9204,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 889,
-    "low_volume": 85,
+    "validated": 893,
+    "low_volume": 81,
     "new_opportunities_found": 1
   }
 }
