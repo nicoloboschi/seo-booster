@@ -7038,29 +7038,23 @@
     {
       "keyword": "mem0 embedding",
       "slug": "mem0-embedding",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 embedding model"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 embedding model",
       "slug": "mem0-embedding-model",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 embedding model"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 episodic memory",
       "slug": "mem0-episodic-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 episodic memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 for rag",
@@ -9204,8 +9198,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 893,
-    "low_volume": 81,
+    "validated": 890,
+    "low_volume": 84,
     "new_opportunities_found": 1
   }
 }
