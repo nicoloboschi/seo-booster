@@ -129,8 +129,8 @@
       "best long term memory ai",
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
-      "building smarter ai agents agentcore long term memory deep dive",
-      "can you have good long term memory but bad short term memory"
+      "can you have good long term memory but bad short term memory",
+      "candy ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -3200,11 +3200,9 @@
     {
       "keyword": "building smarter ai agents agentcore long term memory deep dive",
       "slug": "building-smarter-ai-agents-agentcore-long-term-memory-deep-dive",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "building smarter ai agents agentcore long term memory deep dive"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "can you have good long term memory but bad short term memory",
@@ -3762,11 +3760,9 @@
     {
       "keyword": "deepseek ai agent telegram long term memory",
       "slug": "deepseek-ai-agent-telegram-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "deepseek ai agent telegram long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "deepseek llm context window",
@@ -6815,11 +6811,9 @@
     {
       "keyword": "long term agentic memory with langgraph deeplearning ai",
       "slug": "long-term-agentic-memory-with-langgraph-deeplearning-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term agentic memory with langgraph deeplearning ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory ai assistant",
@@ -6878,11 +6872,9 @@
     {
       "keyword": "long term memory deeplearning.ai",
       "slug": "long-term-memory-deeplearning-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term memory deeplearning.ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory for ai",
@@ -7038,23 +7030,29 @@
     {
       "keyword": "mem0 embedding",
       "slug": "mem0-embedding",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 embedding model"
+      ]
     },
     {
       "keyword": "mem0 embedding model",
       "slug": "mem0-embedding-model",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 embedding model"
+      ]
     },
     {
       "keyword": "mem0 episodic memory",
       "slug": "mem0-episodic-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 episodic memory"
+      ]
     },
     {
       "keyword": "mem0 for rag",
@@ -9198,8 +9196,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 890,
-    "low_volume": 84,
+    "validated": 889,
+    "low_volume": 85,
     "new_opportunities_found": 1
   }
 }
