@@ -301,7 +301,6 @@
       "in memory vector database python",
       "in memory vector database rust",
       "in memory vector database spring ai",
-      "kernel memory vector database",
       "memorydb vector database",
       "python vector database in memory",
       "vector database for llm memory",
@@ -309,7 +308,8 @@
       "vector database in memory",
       "vector database llm long term memory",
       "vector database llm memory",
-      "vector database long term memory"
+      "vector database long term memory",
+      "vector database memory requirements"
     ],
     "context window llm": [
       "1 million context window llm",
@@ -4502,11 +4502,9 @@
     {
       "keyword": "how to get memory better",
       "slug": "how-to-get-memory-better",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to get memory better"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to give ai agents memory",
@@ -5198,11 +5196,9 @@
     {
       "keyword": "kernel memory vector database",
       "slug": "kernel-memory-vector-database",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "kernel memory vector database"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "langchain chatbot with memory github",
@@ -9204,8 +9200,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 893,
-    "low_volume": 81,
+    "validated": 891,
+    "low_volume": 83,
     "new_opportunities_found": 1
   }
 }
