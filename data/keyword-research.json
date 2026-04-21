@@ -281,7 +281,9 @@
       "best ai chatbot memory"
     ],
     "embedding model memory": [
+      "embedded memory meaning",
       "embedding model memory usage",
+      "how images are stored in memory",
       "in memory embedding model",
       "openclaw memory embedding model",
       "what is a memory model",
@@ -3896,9 +3898,11 @@
     {
       "keyword": "embedded memory meaning",
       "slug": "embedded-memory-meaning",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedded memory meaning"
+      ]
     },
     {
       "keyword": "embedded process model of memory",
@@ -4145,9 +4149,11 @@
     {
       "keyword": "how images are stored in memory",
       "slug": "how-images-are-stored-in-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how images are stored in memory"
+      ]
     },
     {
       "keyword": "how llm memory works",
@@ -9198,8 +9204,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 891,
-    "low_volume": 83,
+    "validated": 893,
+    "low_volume": 81,
     "new_opportunities_found": 1
   }
 }
