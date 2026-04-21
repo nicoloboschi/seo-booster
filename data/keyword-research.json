@@ -116,7 +116,6 @@
       "agentic ai implementing long term memory",
       "ai agent chatbot long term memory note storage telegram",
       "ai agents long term and short term memory",
-      "ai and long term memory",
       "ai companion with long term memory",
       "ai girlfriend long term memory",
       "ai long term.memory github",
@@ -130,7 +129,8 @@
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
       "building smarter ai agents agentcore long term memory deep dive",
-      "can you have good long term memory but bad short term memory"
+      "can you have good long term memory but bad short term memory",
+      "candy ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -831,11 +831,9 @@
     {
       "keyword": "ai and long term memory",
       "slug": "ai-and-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai and long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai and memory wall",
@@ -7670,29 +7668,23 @@
     {
       "keyword": "short and long term memory ai",
       "slug": "short-and-long-term-memory-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "short and long term memory ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "short term and long term memory agentic ai",
       "slug": "short-term-and-long-term-memory-agentic-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "short term and long term memory agentic ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "short term memory ai agent",
       "slug": "short-term-memory-ai-agent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "short term memory ai agent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "short term memory aids",
@@ -9204,8 +9196,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 893,
-    "low_volume": 81,
+    "validated": 889,
+    "low_volume": 85,
     "new_opportunities_found": 1
   }
 }
