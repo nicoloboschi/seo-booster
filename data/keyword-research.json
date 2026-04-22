@@ -8195,11 +8195,9 @@
     {
       "keyword": "what is memory database",
       "slug": "what-is-memory-database",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is memory database"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is memory fabric",
@@ -9204,8 +9202,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 893,
-    "low_volume": 81,
+    "validated": 892,
+    "low_volume": 82,
     "new_opportunities_found": 1
   }
 }
