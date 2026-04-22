@@ -8159,16 +8159,20 @@
     {
       "keyword": "what is mean by llm",
       "slug": "what-is-mean-by-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is mean by llm"
+      ]
     },
     {
       "keyword": "what is meant by llm",
       "slug": "what-is-meant-by-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is meant by llm"
+      ]
     },
     {
       "keyword": "what is mem0 ai",
@@ -9200,8 +9204,8 @@
   ],
   "summary": {
     "total_keywords": 974,
-    "validated": 891,
-    "low_volume": 83,
+    "validated": 893,
+    "low_volume": 81,
     "new_opportunities_found": 1
   }
 }
