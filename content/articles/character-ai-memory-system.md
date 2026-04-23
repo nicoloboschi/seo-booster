@@ -49,7 +49,7 @@ faq:
     dialogues.
 slug: character-ai-memory-system
 ---
-
+---
 
 A **character AI memory system** is the technology that allows artificial intelligence characters to recall past interactions, user preferences, and conversational context. This enables them to maintain a consistent persona and deliver more engaging dialogue by remembering crucial details mid-conversation. This is a core component of advanced conversational AI, and understanding the **character ai memory** is key to appreciating its capabilities.
 
