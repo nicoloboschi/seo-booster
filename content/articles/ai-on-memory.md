@@ -78,7 +78,7 @@ Long-term memory allows AI agents to store information for extended periods, ena
 *   **Capacity:** Theoretically vast, limited by storage infrastructure.
 *   **Duration:** Durable, information persists across sessions.
 
-The development of effective [long-term memory AI](/articles/long-term-memory-ai-agent/) is a significant area of research, aiming to overcome the inherent limitations of LLMs and enhance **AI's memory capabilities**.
+The development of effective [long-term memory AI](/articles/long-term-memory-ai-agent/) is a significant area of research, aiming to overcome the limitations of LLMs and enhance **AI's memory capabilities**.
 
 ### Episodic Memory in AI Agents
 

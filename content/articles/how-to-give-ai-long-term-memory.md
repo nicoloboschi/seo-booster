@@ -40,6 +40,9 @@ faq:
     them into more dynamic and evolving entities.
 - question: What are the key evaluation metrics for AI long-term memory systems?
   answer: Key metrics include recall accuracy, retrieval latency, contextual relevance, task completion rate, and adaptability. These help assess how effectively an AI retains and utilizes stored information.
+- question: What are the core challenges in implementing AI long-term memory?
+  answer: Core challenges include managing the sheer volume of data, ensuring efficient and accurate retrieval, integrating memory with real-time decision-making, and preventing information degradation
+    or irrelevance over time.
 slug: how-to-give-ai-long-term-memory
 ---
 
@@ -259,3 +262,6 @@ Giving AI long-term memory allows agents to learn and adapt, maintain context ac
 
 ### What are the key evaluation metrics for AI long-term memory systems?
 Key metrics include recall accuracy, retrieval latency, contextual relevance, task completion rate, and adaptability. These help assess how effectively an AI retains and uses stored information.
+
+### What are the core challenges in implementing AI long-term memory?
+Core challenges include managing the sheer volume of data, ensuring efficient and accurate retrieval, integrating memory with real-time decision-making, and preventing information degradation or irrelevance over time.

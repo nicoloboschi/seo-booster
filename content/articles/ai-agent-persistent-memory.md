@@ -1,6 +1,6 @@
 ---
 title: 'AI Agent Persistent Memory: Enabling Stateful Agents with Long-Term Recall'
-description: Explore AI agent persistent memory and how it enables stateful AI agents. Learn about memory types, challenges, architectures, and practical implementation with c...
+description: Explore AI agent persistent memory and how it enables stateful AI agents. Learn about memory types, challenges, architectures, and practical implementation with e...
 date: 2026-03-25
 lastmod: 2026-03-25
 tags:

@@ -27,21 +27,21 @@ keywords:
 - local LLMs with large context windows
 faq:
 - question: What does 'anything LLM context window' refer to?
-  answer: It describes the aspirational goal for Large Language Models (LLMs) to process and retain information from virtually any amount of input text, overcoming current context window limitations and enabling unbounded AI comprehension.
+  answer: "It describes the aspirational goal for Large Language Models (LLMs) to process and retain information from virtually any amount of input text, overcoming current context window limitations and enabling unbounded AI comprehension."
 - question: Why are LLM context windows limited?
-  answer: Current transformer architectures have quadratic computational complexity with input length, making extremely large context windows computationally expensive and memory-intensive, thus limiting the effective LLM context window.
+  answer: "Current transformer architectures have quadratic computational complexity with input length, making extremely large context windows computationally expensive and memory-intensive, thus limiting the effective LLM context window."
 - question: How can we overcome LLM context window limits?
-  answer: Techniques include using larger context window models, retrieval-augmented generation (RAG), memory consolidation, specialized agent architectures, and exploring new model designs beyond the standard LLM context window.
+  answer: "Techniques include using larger context window models, retrieval-augmented generation (RAG), memory consolidation, specialized agent architectures, and exploring new model designs beyond the standard LLM context window."
 - question: What's the difference between a large context window and an AI memory system?
-  answer: A large context window is a temporary buffer within an LLM that holds immediate input for processing. An AI memory system is a persistent storage and retrieval mechanism that allows an agent to retain and recall information over extended periods, independent of the LLM's context window.
+  answer: "A large context window is a temporary buffer within an LLM that holds immediate input for processing. An AI memory system is a persistent storage and retrieval mechanism that allows an agent to retain and recall information over extended periods, independent of the LLM's context window."
 - question: Can RAG truly simulate an 'anything LLM context window'?
-  answer: RAG effectively *accesses* vast amounts of information, simulating the *effect* of an unlimited context window by retrieving relevant data on demand. However, the LLM itself still operates within its fixed context window for generation. It's a powerful workaround, not a literal unbounded window.
+  answer: "RAG effectively *accesses* vast amounts of information, simulating the *effect* of an unlimited context window by retrieving relevant data on demand. However, the LLM itself still operates within its fixed context window for generation. It's a powerful workaround, not a literal unbounded window."
 - question: How does temporal reasoning play a role in large context LLMs?
-  answer: For very long contexts, maintaining the order and understanding the temporal relationships between events becomes critical. Advanced techniques in [temporal reasoning AI memory](/articles/temporal-reasoning-ai-memory/) are necessary to ensure models can accurately interpret timelines and causality across extensive input sequences, a challenge for any LLM context window.
+  answer: "For very long contexts, maintaining the order and understanding the temporal relationships between events becomes critical. Advanced techniques in [temporal reasoning AI memory](/articles/temporal-reasoning-ai-memory/) are necessary to ensure models can accurately interpret timelines and causality across extensive input sequences, a challenge for any LLM context window."
 - question: What are the benefits of an 'anything LLM context window' for AI agents?
-  answer: An 'anything LLM context window' would allow AI agents to possess true long-term memory, understand complex narratives, maintain consistent personas, and perform sophisticated reasoning over vast amounts of information, leading to more capable and human-like AI.
+  answer: "An 'anything LLM context window' would allow AI agents to possess true long-term memory, understand complex narratives, maintain consistent personas, and perform sophisticated reasoning over vast amounts of information, leading to more capable and human-like AI."
 - question: What is the significance of 'anything LLM long-term memory'?
-  answer: 'Anything LLM long-term memory' refers to the capability of AI agents to retain and recall information indefinitely, much like human memory. This is a crucial step towards creating truly intelligent and autonomous AI systems that can learn and evolve over time, moving beyond the transient nature of a standard LLM context window.
+  answer: "'Anything LLM long-term memory' refers to the capability of AI agents to retain and recall information indefinitely, much like human memory. This is a crucial step towards creating truly intelligent and autonomous AI systems that can learn and evolve over time, moving beyond the transient nature of a standard LLM context window."
 slug: anything-llm-context-window
 ---
 

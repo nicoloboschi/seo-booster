@@ -59,6 +59,9 @@ faq:
 - question: What are the primary drivers for a potential memory price decrease in AI?
   answer: The primary drivers for a potential memory price decrease in AI include advancements in hardware efficiency, increased competition among AI solution providers, standardization of AI memory technologies,
     and the development of more optimized AI agent architectures that require less computational resources.
+- question: What are the current trends impacting memory prices in AI?
+  answer: Current trends show a significant **AI memory price spike** due to high demand for GPUs and escalating cloud compute costs. However, the future outlook suggests potential stabilization and even
+    a **memory price decrease** driven by technological advancements and increased competition.
 slug: ai-memory-price-spike
 ---
 ---

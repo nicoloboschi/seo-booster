@@ -43,6 +43,9 @@ faq:
 - question: How does CrewAI's AI agent memory contribute to its overall intelligence?
   answer: CrewAI's AI agent memory, particularly its long-term capabilities, allows agents to build a persistent knowledge base. This enables them to learn from past interactions, adapt their strategies,
     and make more informed decisions, thereby increasing their overall intelligence and autonomy.
+- question: What are the key components of CrewAI long term memory?
+  answer: Key components include mechanisms for storing information (like vector databases), retrieval systems to access relevant data, and integration strategies that allow agents to leverage this memory
+    effectively within their workflows.
 slug: crewai-long-term-memory
 ---
 
@@ -255,3 +258,6 @@ AI agent memory in CrewAI refers to the systems and techniques that enable agent
 
 ### How does CrewAI's AI agent memory contribute to its overall intelligence?
 CrewAI's AI agent memory, particularly its long-term capabilities, allows agents to build a persistent knowledge base. This enables them to learn from past interactions, adapt their strategies, and make more informed decisions, thereby increasing their overall intelligence and autonomy.
+
+### What are the key components of CrewAI long term memory?
+Key components include mechanisms for storing information (like vector databases), retrieval systems to access relevant data, and integration strategies that allow agents to use this memory effectively within their workflows.

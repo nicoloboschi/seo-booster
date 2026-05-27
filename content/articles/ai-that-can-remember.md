@@ -39,6 +39,9 @@ faq:
 - question: How does an AI remember past interactions?
   answer: AI remembers through various memory systems. These can range from short-term buffers for immediate context to sophisticated long-term storage like vector databases or knowledge graphs, enabling
     recall of past data and interactions.
+- question: What are the core components of AI memory systems?
+  answer: Core components of AI memory systems include storage mechanisms (like vector databases and knowledge graphs), retrieval strategies (such as similarity search and graph traversal), and consolidation
+    processes to manage information over time.
 ---
 
 What if your AI assistant could recall every conversation you've ever had, remembering your preferences, past requests, and even subtle nuances? This isn't science fiction; it's the promise of **AI that can remember**. The ability for an **AI that can remember** is not just a futuristic concept; it's a critical requirement for building truly intelligent and useful agents. This persistent recall capability transforms AI from a simple tool into a contextual partner. The development of **AI memory systems** is central to this evolution.
@@ -139,7 +142,7 @@ This cycle allows the agent to learn and adapt, forming the core of **agentic AI
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG is a powerful technique that enhances Large Language Models (LLMs) by augmenting their generation process with external knowledge retrieved from a memory store. This is a critical component for **augmented general intelligence**.
+RAG is a powerful technique that enhances Large Language Models (LLMs) by augmenting their generation process with external knowledge retrieved from a memory store. This is a key component for **augmented general intelligence**.
 
 * **How it Works**: When a query is received, RAG first retrieves relevant documents or data snippets from a knowledge base (often a vector database). These retrieved snippets are then added to the LLM's prompt, providing context. The LLM then generates a response based on both its internal knowledge and the provided context.
 * **Benefits**: RAG significantly improves the factual accuracy and relevance of LLM outputs, making it a key enabler for **AI that remembers conversations** and factual recall. It also helps overcome the context window limitations of LLMs by dynamically injecting relevant information.
@@ -239,3 +242,5 @@ The future will likely see more sophisticated memory architectures, improved con
  **Answer**: Agentic memory architectures integrate memory systems into the AI's operational loop (perceive, plan, act, update). This allows the AI to continuously access and update its memory, enabling coherent behavior and informed decision-making over extended periods, crucial for **persistent memory AI**.
 * **Question**: What is augmented general intelligence?
  **Answer**: Augmented general intelligence refers to AI systems that enhance human capabilities by providing advanced cognitive support, learning, and decision-making assistance, often using sophisticated memory systems for context and knowledge.
+* **Question**: What are the core components of AI memory systems?
+ **Answer**: Core components of AI memory systems include storage mechanisms (like vector databases and knowledge graphs), retrieval strategies (such as similarity search and graph traversal), and consolidation processes to manage information over time.

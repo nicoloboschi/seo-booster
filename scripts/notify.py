@@ -56,18 +56,33 @@ def format_health_report(report: dict) -> str:
         lines.append(f"📈 GA (7d): {s['ga_users_7d']} users, {s.get('ga_pageviews_7d', 0)} pageviews, {s.get('ga_sessions_7d', 0)} sessions")
 
     if "gsc_impressions_7d" in s:
-        lines.append(f"📊 GSC (7d): {s['gsc_impressions_7d']} imp, {s['gsc_clicks_7d']} clicks")
+        lines.append(
+            f"📊 GSC (7d): {s['gsc_impressions_7d']} imp, "
+            f"{s['gsc_clicks_7d']} clicks ({s.get('gsc_pages_reporting', 0)} pages)"
+        )
+    elif checks.get("gsc_connected") is False:
+        lines.append("📊 GSC: unavailable")
 
     if "scraped_age_hours" in s:
         lines.append(f"📡 Scraped: {s.get('scraped_items', '?')} items ({s['scraped_age_hours']}h ago)")
 
-    # GA top pages if available
+    # GA top pages, annotated with GSC impressions when we have them
     ga_report = report.get("ga_report", {})
     top_pages = ga_report.get("last_7_days", {}).get("top_pages", [])
+    gsc_pages = report.get("gsc_pages", {})
     if top_pages:
         lines.append(f"\n<b>Top pages (7d):</b>")
         for p in top_pages[:5]:
-            lines.append(f"  • {p['path']} — {p['pageviews']} views")
+            path = p["path"]
+            # Match against both trailing-slash variants since GA and GSC
+            # don't always agree on the canonical form.
+            gsc = (
+                gsc_pages.get(path)
+                or gsc_pages.get(path.rstrip("/"))
+                or gsc_pages.get(path + "/")
+            )
+            imp_str = f", {gsc['impressions']} imp" if gsc else ""
+            lines.append(f"  • {path} — {p['pageviews']} views{imp_str}")
 
     # Top ranking queries (the "winning keywords")
     top_queries = report.get("top_queries", [])

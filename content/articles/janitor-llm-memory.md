@@ -47,11 +47,14 @@ faq:
 - question: How does Janitor LLM memory contribute to effective AI recall?
   answer: By intelligently curating the information within the LLM's context window, Janitor LLM memory ensures that the most relevant past interactions and data are readily accessible. This direct access
     to pertinent information significantly enhances the AI agent's ability to recall and utilize it for accurate and timely responses.
+- question: What are the key challenges in implementing Janitor LLM memory?
+  answer: Key challenges include accurately assessing information relevance for pruning, balancing information retention with context window limits, and avoiding the loss of critical context. Sophisticated
+    algorithms are needed to effectively manage the AI agent's context window.
 slug: janitor-llm-memory
 ---
 ---
 
-What happens when an AI agent "forgets" crucial details mid-conversation? **Janitor LLM memory** is a technique for AI agents that prunes and summarizes their conversational history. It ensures only the most relevant information stays within the LLM's limited context window, preventing data overload and improving recall for better decision-making. This **janitor LLM memory** strategy is crucial for agents to maintain coherence in extended interactions.
+What happens when an AI agent "forgets" crucial details mid-conversation? **Janitor LLM memory** is a technique for AI agents that prunes and summarizes their conversational history. It ensures only the most relevant information stays within the LLM's limited context window, preventing data overload and improving recall for better decision-making. This **janitor LLM memory** strategy is crucial for agents to maintain coherence in extended interactions and effective **context window management**.
 
 ## What is Janitor LLM Memory?
 
@@ -174,3 +177,10 @@ class ConversationManager:
  print("Pruning complete.")
 
 ##
+```
+
+This conceptual code demonstrates how a `ConversationManager` might implement basic recency-based pruning to manage the **AI agent context** within its token limits, a core function of **janitor LLM memory**.
+
+## Conclusion
+
+**Janitor LLM memory** is an essential technique for building robust and capable AI agents. By intelligently managing the LLM's limited context window, it ensures that agents can maintain coherence, recall critical information, and perform effectively over extended interactions. As AI agents become more sophisticated, mastering **context window management** through techniques like janitor memory will be paramount for their success. The ongoing development in **LLM context window management** promises even more efficient and powerful AI agents in the future.

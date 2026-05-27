@@ -49,6 +49,10 @@
     {
       "question": "What are the primary challenges in LLM memory development on GitHub?",
       "answer": "Key challenges in LLM memory development on GitHub include ensuring scalability for large datasets, improving contextual relevance in memory retrieval, managing memory decay and pruning effectively, and optimizing the computational costs associated with embedding generation and querying."
+    },
+    {
+      "question": "What are the most popular LLM memory GitHub repositories?",
+      "answer": "Some of the most popular LLM memory GitHub repositories include frameworks like LangChain and LlamaIndex, as well as specialized vector databases like Weaviate and ChromaDB. These projects offer robust tools for implementing AI memory and agent memory solutions."
     }
   ],
   "slug": "llm-memory-github"
@@ -272,3 +276,6 @@ Agent memory refers to the specialized memory systems designed for AI agents. Th
 
 ### What are the primary challenges in LLM memory development on GitHub?
 Key challenges in LLM memory development on GitHub include ensuring scalability for large datasets, improving contextual relevance in memory retrieval, managing memory decay and pruning effectively, and optimizing the computational costs associated with embedding generation and querying.
+
+### What are the most popular LLM memory GitHub repositories?
+Some of the most popular LLM memory GitHub repositories include frameworks like LangChain and LlamaIndex, as well as specialized vector databases like Weaviate and ChromaDB. These projects offer robust tools for implementing AI memory and agent memory solutions.

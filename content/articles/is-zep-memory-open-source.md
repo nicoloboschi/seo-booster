@@ -47,6 +47,9 @@ faq:
 - question: What is the primary function of Zep Memory?
   answer: The primary function of Zep Memory is to provide a persistent, searchable memory layer for AI agents and LLMs, enabling them to recall past interactions and information for more coherent and context-aware
     responses.
+- question: How does Zep Memory ensure AI agent persistence?
+  answer: Zep Memory ensures AI agent persistence by providing a dedicated layer for storing and retrieving conversational history and contextual information. This allows AI agents to maintain state and
+    recall past interactions, preventing them from "forgetting" crucial details.
 slug: is-zep-memory-open-source
 ---
 
@@ -181,3 +184,5 @@ Zep Memory's core components, including its architecture for storing and indexin
 Zep Memory's open-source nature provides transparency, allowing developers to inspect the code. It fosters community contributions, leading to faster development and bug fixes. It also offers flexibility for customization and avoids vendor lock-in, making it a cost-effective and adaptable solution for AI development.
 ### What is the primary function of Zep Memory?
 The primary function of Zep Memory is to provide a persistent, searchable memory layer for AI agents and LLMs, enabling them to recall past interactions and information for more coherent and context-aware responses.
+### How does Zep Memory ensure AI agent persistence?
+Zep Memory ensures AI agent persistence by providing a dedicated layer for storing and retrieving conversational history and contextual information. This allows AI agents to maintain state and recall past interactions, preventing them from "forgetting" crucial details.

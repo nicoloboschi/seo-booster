@@ -36,15 +36,16 @@ faq:
     widespread fame and entered into subsequent relationships.
 - question: What was the name of Ai Ai delas Alas's first husband?
   answer: The **first husband of Ai Ai delas Alas** was **Jayr Sillona**.
+- question: What was the approximate year of Ai Ai delas Alas's first marriage?
+  answer: Ai Ai delas Alas's first marriage to Jayr Sillona is believed to have taken place around 1991 or 1992.
 slug: first-husband-of-ai-ai-delas-alas
 ---
-
 
 **Jayr Sillona** was the **first husband of Ai Ai delas Alas**, the acclaimed Filipina actress and comedian. They married in the early 1990s, marking her initial venture into marriage. This union represents a significant, albeit private, chapter in her personal history before subsequent relationships. Understanding who was the **first husband of Ai Ai delas Alas** provides context to her life story and her journey as a public figure.
 
 ## The First Husband of Ai Ai delas Alas: Jayr Sillona and Their Early Marriage
 
-The identity of the **first husband of Ai Ai delas Alas** is **Jayr Sillona**. Their marriage in the early 1990s was a significant personal milestone for the then-emerging comedian. While details surrounding their courtship and wedding are not extensively publicized, this union marked the beginning of Ai Ai delas Alas's marital journey. It's a key piece of information for anyone interested in the personal life of the beloved Filipina actress and her **early marriage**.
+The identity of the **first husband of Ai Ai delas Alas** is **Jayr Sillona**. Their marriage in the early 1990s was a significant personal milestone for the then-emerging comedian. While details surrounding their courtship and wedding are not extensively publicized, this union marked the beginning of Ai Ai delas Alas's marital journey. It's a key piece of information for anyone interested in the personal life of the beloved Filipina actress and her **early marriage**. This **Ai Ai delas Alas first marriage** was a private affair that preceded her rise to widespread fame.
 
 ### What is episodic memory in AI agents?
 
@@ -58,7 +59,7 @@ Her path to superstardom was paved with dedication and perseverance, overcoming 
 
 ## Ai Ai delas Alas's First Marriage to Jayr Sillona
 
-Ai Ai delas Alas's first marriage to **Jayr Sillona** took place in the early 1990s. Both were quite young at the time, and specific details about their courtship and wedding remain largely private. This union was a pivotal moment for the actress, signifying her first marital commitment. It was a key event in the life of the **first husband of Ai Ai delas Alas**.
+Ai Ai delas Alas's first marriage to **Jayr Sillona** took place in the early 1990s. Both were quite young at the time, and specific details about their courtship and wedding remain largely private. This union was a pivotal moment for the actress, signifying her first marital commitment. It was a key event in the life of the **first husband of Ai Ai delas Alas**. This **Ai Ai delas Alas Jayr Sillona marriage** is a notable part of her personal history.
 
 ### Wedding Ceremony Details for Ai Ai delas Alas's First Marriage
 

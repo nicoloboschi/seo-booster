@@ -48,6 +48,10 @@ faq:
 - question: How can an AI memory dump help in understanding the agent's internal state?
   answer: An AI memory dump provides a detailed snapshot of an agent's internal memory, including working memory, short-term recall, and state variables. By examining this frozen state, developers can trace
     the exact data and logic that influenced the AI's decisions, offering deep insights into its internal workings and reasoning processes.
+- question: What is an AI state dump and how does it differ from a general AI memory dump?
+  answer: An AI state dump is essentially a type of AI memory dump that specifically focuses on capturing the operational state of an AI agent at a particular point in time. While "AI memory dump" is a
+    broader term that can encompass various aspects of an AI's memory, an "AI state dump" emphasizes the dynamic, current condition and configuration of the agent, making it particularly useful for debugging
+    transient issues and understanding immediate decision-making processes.
 slug: ai-memory-dump
 ---
 ---

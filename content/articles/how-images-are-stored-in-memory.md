@@ -44,6 +44,10 @@ faq:
   answer: The primary challenge lies in the sheer complexity and volume of visual data. Raw image pixels are computationally expensive to process and search. AI memory solutions overcome this by converting
     images into compact, semantically rich numerical representations called embeddings, which are then efficiently stored and searched using specialized vector databases. This process is fundamental to
     how images are stored in memory for AI.
+- question: How are image embeddings used for AI visual recall?
+  answer: Image embeddings are numerical representations of images that capture their semantic and visual essence. For AI visual recall, these embeddings are stored in vector databases. When an AI needs
+    to recall an image, it generates an embedding for a query (text or another image) and searches the vector database for the most similar stored embeddings. The database then returns the closest matches,
+    allowing the AI to retrieve the corresponding original images. This process is central to how images are stored in memory for effective recall.
 slug: how-images-are-stored-in-memory
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Hermes Agent Memory: Unpacking Its Layers, Providers, and Troubleshooting'
-description: Dive deep into Hermes agent memory, its four distinct layers, common issues like 'Hermes memory not working,' and the advantages of external memory providers for ...
+description: Dive deep into Hermes agent memory, its four distinct layers, common issues like 'Hermes memory not working,' and the advantages of external memory providers for robust AI recall.
 date: 2026-04-07
 lastmod: 2026-04-07
 tags:
@@ -48,8 +48,10 @@ faq:
 - question: How does the Hermes Agent AI framework architecture support advanced memory capabilities?
   answer: The **Hermes Agent AI framework architecture** is designed with a modular, multi-layered approach to memory. This includes prompt memory for immediate context, a session archive for episodic recall,
     a skills system for procedural knowledge, and a pluggable architecture for external memory providers, all contributing to robust **hermes agent ai memory** management.
-slug: hermes-agent-memory
+- question: What is the role of MEMORY.md and USER.md in Hermes Agent memory?
+  answer: MEMORY.md stores durable facts, project conventions, and lessons learned, while USER.md holds user profile details like preferences and communication style. Both are loaded as a frozen snapshot into the system prompt at the start of each session, forming the agent's immediate working knowledge.
 ---
+
 
 
 When your Hermes agent seems to forget crucial details or fails to recall past interactions, it's often not a bug but a misunderstanding of its layered memory architecture. Understanding the distinct functions of its internal memory, session archives, skills, and external providers is key to unlocking more effective agent recall and improving **hermes agent memory**.

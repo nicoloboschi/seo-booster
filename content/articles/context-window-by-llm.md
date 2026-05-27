@@ -227,6 +227,18 @@ This aligns with the broader research into [AI agent memory systems](/articles/a
 
 ## FAQ
 
+### What is the context window of a Large Language Model?
+
+The context window by LLM refers to the maximum amount of text, measured in tokens, that a language model can consider at any one time when processing input and generating output. This defines the LLM's immediate working memory and is a fundamental aspect of its **context window size**.
+
+### How does the context window affect an LLM's performance?
+
+A larger context window allows an LLM to retain more information from previous interactions or documents, leading to better coherence, understanding of complex instructions, and improved performance on tasks requiring long-range dependencies. It enhances the LLM's recall and is crucial for understanding the **LLM context window**'s impact.
+
+### What are the main limitations of current LLM context windows?
+
+The primary limitations include computational cost, memory requirements, and the 'lost in the middle' phenomenon, where LLMs sometimes struggle to recall information placed in the middle of very long contexts. The **context window size** presents significant challenges, and understanding the **context window limit** is key.
+
 ### What is the difference between a context window and long-term memory for an LLM?
 
 The context window is the **short-term memory** of an LLM, holding information for the current interaction. Long-term memory, often implemented through external databases or specialized memory systems, allows an AI to retain and recall information across multiple sessions or over extended periods, going beyond the immediate context window. This distinction is vital for understanding **LLM context window** limitations.

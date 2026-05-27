@@ -48,6 +48,9 @@ faq:
 - question: What are the key components of giving an AI memory?
   answer: The key components typically involve a method for storing information (like a database), a mechanism for retrieving relevant information based on current context, and a way to inject that retrieved
     information back into the AI's input or processing. This allows for **how to give AI memory** to systems.
+- question: What is the difference between short-term and long-term AI memory?
+  answer: Short-term AI memory typically refers to information held within the model's immediate context window, useful for ongoing conversations. Long-term AI memory involves storing and retrieving information
+    from external sources, enabling persistent recall across multiple sessions and interactions.
 slug: how-to-give-chatgpt-memory
 ---
 ---

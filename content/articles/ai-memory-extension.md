@@ -47,6 +47,10 @@ faq:
 - question: What are some alternatives to Mem0 for AI memory extension?
   answer: While Mem0 is a notable solution, several alternatives offer robust AI memory extension capabilities. These include Zep Memory AI, which provides a specialized memory store for LLMs, and various
     open-source libraries and vector databases that can be integrated to build custom memory solutions. The choice often depends on specific project needs regarding scalability, features, and ease of integration.
+- question: What are Mem0 and Zep Memory AI in the context of AI memory extension?
+  answer: Mem0 and Zep Memory AI are prominent examples of specialized platforms designed to provide AI agents with persistent memory capabilities. Mem0 focuses on offering a robust, scalable memory solution
+    for LLM applications, while Zep Memory AI provides a dedicated memory store optimized for conversational AI and LLM interactions, enabling sophisticated context management and recall. Both aim to address
+    the limitations of fixed context windows by offering external, long-term memory solutions.
 slug: ai-memory-extension
 ---
 ---

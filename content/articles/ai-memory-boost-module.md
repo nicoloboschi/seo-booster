@@ -50,6 +50,9 @@ faq:
 - question: How does an AI memory boost module specifically improve AI recall?
   answer: An AI memory boost module improves AI recall by providing structured methods for storing, indexing, and retrieving past information. This allows agents to access relevant data more efficiently,
     reducing the likelihood of forgetting crucial details and enhancing the accuracy of their responses.
+- question: What are the core functions of an AI memory boost module?
+  answer: The core functions of an AI memory boost module include enhancing an AI agent's ability to store, retrieve, and effectively utilize information, thereby improving its overall performance and recall
+    capabilities.
 slug: ai-memory-boost-module
 ---
 
@@ -210,3 +213,7 @@ Key benefits include improved task completion rates, enhanced user experience th
 ### How does an AI memory boost module specifically improve AI recall?
 
 An AI memory boost module improves AI recall by providing structured methods for storing, indexing, and retrieving past information. This allows agents to access relevant data more efficiently, reducing the likelihood of forgetting crucial details and enhancing the accuracy of their responses.
+
+### What are the core functions of an AI memory boost module?
+
+The core functions of an AI memory boost module include enhancing an AI agent's ability to store, retrieve, and effectively use information, thereby improving its overall performance and recall capabilities.

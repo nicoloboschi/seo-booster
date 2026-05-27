@@ -64,6 +64,10 @@
     {
       "question": "Can AI agents forget photos they have 'seen'?",
       "answer": "Yes, AI memory systems can be designed with **forgetting mechanisms**. This can involve prioritizing newer or more frequently accessed memories, discarding redundant or low-importance information, or using techniques like **memory decay** to manage memory capacity and relevance, similar to concepts discussed in [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/). This is crucial for managing AI memory photo effectively."
+    },
+    {
+      "question": "What are the key components of AI visual memory?",
+      "answer": "Key components of AI visual memory include AI photo storage mechanisms, AI object recognition memory for identifying specific items, AI scene memory for understanding context, and AI image recall for retrieving past visual data. Together, these enable AI visual understanding."
     }
   ],
   "slug": "ai-memory-photo"
@@ -270,3 +274,7 @@ AI object recognition memory refers to an AI agent's ability to identify, store,
 ### How does AI scene memory differ from object recognition?
 
 While AI object recognition focuses on individual items, AI scene memory involves understanding the broader context and relationships within an image, such as \"a park on a sunny day\" or \"an indoor office.\" It captures the overall environment and its elements.
+
+### What are the key components of AI visual memory?
+
+Key components of AI visual memory include AI photo storage mechanisms, AI object recognition memory for identifying specific items, AI scene memory for understanding context, and AI image recall for retrieving past visual data. Together, these enable AI visual understanding.

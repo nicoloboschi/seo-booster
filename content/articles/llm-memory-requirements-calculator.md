@@ -29,7 +29,7 @@ faq:
 - question: What is the primary bottleneck for LLM memory requirements?
   answer: The primary bottleneck is typically **VRAM (Video RAM)** due to the need to load massive model weights and the KV cache for attention mechanisms. Insufficient VRAM prevents the model from running or severely degrades performance.
 - question: How does quantization affect LLM memory needs?
-  answer: **Quantization** reduces the precision of model weights (e.g. from 16-bit to 8-bit or 4-bit integers). This drastically shrinks the model's memory footprint, allowing larger models to run on less VRAM, though it can sometimes lead to a slight decrease in accuracy.
+  answer: '**Quantization** reduces the precision of model weights (e.g. from 16-bit to 8-bit or 4-bit integers). This drastically shrinks the model''s memory footprint, allowing larger models to run on less VRAM, though it can sometimes lead to a slight decrease in accuracy.'
 - question: Can I run a large LLM on a standard consumer GPU?
   answer: It depends on the LLM's size and the GPU's VRAM. Smaller models (e.g. 7B parameters) quantized to 4-bit or 8-bit might run on GPUs with 12GB-24GB of VRAM. However, larger models (70B+) typically require professional-grade GPUs with 40GB or more of VRAM.
 slug: llm-memory-requirements-calculator

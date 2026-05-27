@@ -52,6 +52,9 @@ faq:
 - question: How is the AI chip shortage impacting the broader semiconductor market?
   answer: The AI chip shortage is creating ripple effects across the semiconductor market, driving up prices for related components, increasing lead times for various chip types, and forcing companies to
     re-evaluate their supply chain strategies to secure essential AI hardware.
+- question: What are the primary challenges in AI chip manufacturing?
+  answer: Primary challenges in AI chip manufacturing include the immense capital investment required for advanced fabrication plants, the complexity of producing specialized AI memory like HBM, the long
+    lead times for new facilities, and the need for highly skilled labor.
 slug: ai-memory-chip-shortage
 ---
 

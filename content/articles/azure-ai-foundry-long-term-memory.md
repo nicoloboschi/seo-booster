@@ -42,6 +42,9 @@ faq:
 - question: How does Azure AI Foundry ensure persistent memory for its agents?
   answer: Azure AI Foundry ensures persistent memory by integrating robust Azure services like Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for efficient
     retrieval, enabling comprehensive agent recall.
+- question: What is Azure AI Foundry agent memory and why is it important?
+  answer: Azure AI Foundry agent memory refers to the capability of AI agents built on the Azure AI Foundry platform to store, retrieve, and utilize information from past interactions. This persistent memory
+    is crucial for enabling agents to maintain context, learn over time, and provide more personalized and coherent responses, significantly enhancing their utility and intelligence.
 slug: azure-ai-foundry-long-term-memory
 ---
 

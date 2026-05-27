@@ -52,6 +52,9 @@ faq:
 - question: What are the top AI vendors with durable cross-session memory?
   answer: Identifying the absolute "top" vendors is dynamic, but companies focusing on enterprise AI solutions, personalized assistants, and robust data management are leading the way. Look for vendors
     specializing in LLM integration, vector databases, and context-aware AI. Many cloud providers and AI-focused startups are actively developing and offering these capabilities.
+- question: What are the key features of an AI app with good memory?
+  answer: An AI app with good memory typically features personalized responses, maintains conversational context, remembers user preferences, and supports complex, multi-turn tasks by recalling relevant
+    details without explicit re-prompting. It moves beyond stateless queries to build trust and efficiency.
 slug: best-ai-app-with-good-memory
 ---
 ---
@@ -215,5 +218,3 @@ retrieved_memories = mock_db.query(user_query)
 print("\nRetrieved memories:")
 for memory, score in retrieved_memories:
  print(f"- {memory} (Score: {score:.4f})")
-
-```

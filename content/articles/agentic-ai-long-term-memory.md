@@ -1,6 +1,6 @@
 {
   "title": "Agentic AI: Implementing Long-Term Memory for Autonomous Operation",
-  "description": "Explore how agentic AI implements long-term memory, enabling autonomous agents to learn, adapt, and retain information over extended periods. Discover architectural approaches, memory types, and challenges in persistent AI memory.",
+  "description": "Explore how agentic AI implements long-term memory, enabling autonomous agents to learn, adapt, and retain information over extended periods. Discover architectural approaches, memory types, and challenges in persistent AI memory, including implementing short-term and long-term memory.",
   "date": "2026-03-25",
   "lastmod": "2026-03-25",
   "tags": [

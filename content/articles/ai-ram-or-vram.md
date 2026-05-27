@@ -49,6 +49,9 @@ faq:
 - question: Why does AI use VRAM instead of RAM for intensive tasks?
   answer: AI uses VRAM instead of RAM for intensive tasks because VRAM is specifically designed for the high-speed, parallel processing that AI computations demand. RAM, while essential for general computing,
     lacks the necessary bandwidth and parallel architecture to efficiently handle tasks like neural network training and inference.
+- question: What is the role of RAM in AI?
+  answer: RAM, or system memory, plays a crucial role in AI by handling the operating system, AI agent logic, data buffering, and managing tasks that don't require the parallel processing power of the GPU.
+    It acts as the general workspace for the AI system.
 slug: ai-ram-or-vram
 ---
 
@@ -237,3 +240,6 @@ For its core computations, AI heavily relies on VRAM. While system RAM handles g
 
 ### Why does AI use VRAM instead of RAM for intensive tasks?
 AI uses VRAM instead of RAM for intensive tasks because VRAM is specifically designed for the high-speed, parallel processing that AI computations demand. RAM, while essential for general computing, lacks the necessary bandwidth and parallel architecture to efficiently handle tasks like neural network training and inference.
+
+### What is the role of RAM in AI?
+RAM, or system memory, plays a crucial role in AI by handling the operating system, AI agent logic, data buffering, and managing tasks that don't require the parallel processing power of the GPU. It acts as the general workspace for the AI system.

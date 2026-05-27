@@ -51,6 +51,9 @@ faq:
 - question: How does an AI memory developer contribute to overcoming LLM context window limitations?
   answer: AI memory developers implement external memory systems, such as vector databases, that LLMs can query. This allows LLMs to access and utilize information beyond their immediate context window,
     effectively extending their memory and enabling more complex, long-term interactions.
+- question: What are the key differences between AI memory developers and traditional software developers?
+  answer: While both roles require strong programming skills, AI memory developers possess specialized knowledge in AI/ML concepts, LLMs, vector databases, and agent architectures. They focus on the unique
+    challenges of creating persistent, contextual memory for AI, which goes beyond the scope of general software development.
 slug: ai-memory-developer-job
 ---
 

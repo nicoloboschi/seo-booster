@@ -64,11 +64,14 @@ def apply_optimizations(report_path: str, content_dir: str):
 
         instructions = []
 
-        if page["impressions"] > 100 and page["ctr"] < 3.0:
+        # AEO strategy: CTR 0 is expected — we target AI agents, not human clicks.
+        # Optimize for position improvement instead of CTR.
+        if page["impressions"] > 100 and page["position"] > 10:
             instructions.append(
-                f"Title/description optimization: {page['impressions']} impressions "
-                f"but only {page['ctr']}% CTR. Make the title more compelling and "
-                f"ensure the meta description includes the primary keyword."
+                f"Position optimization: {page['impressions']} impressions "
+                f"but position {page['position']}. Strengthen content depth, "
+                f"add definition blocks and structured data for AI extraction, "
+                f"ensure primary keyword in first 100 words and first H2."
             )
 
         if 4 <= page["position"] <= 15:

@@ -49,6 +49,9 @@ faq:
 - question: How does AI memory impact chatbot personalization?
   answer: AI memory allows chatbots to store and recall user preferences, past interactions, and contextual information. This enables them to provide highly personalized responses, recommendations, and
     conversational experiences, making the interaction feel more tailored and relevant.
+- question: What are the primary types of AI memory used in chatbots?
+  answer: The primary types of AI memory used in chatbots include short-term memory (context window), long-term memory (external storage like vector databases), episodic memory (recalling specific events),
+    and semantic memory (general knowledge).
 slug: chatbots-to-talk-to
 ---
 
@@ -222,3 +225,6 @@ Key components of AI memory for chatbots include short-term memory (context wind
 
 ### How does AI memory impact chatbot personalization?
 AI memory allows chatbots to store and recall user preferences, past interactions, and contextual information. This enables them to provide highly personalized responses, recommendations, and conversational experiences, making the interaction feel more tailored and relevant.
+
+### What are the primary types of AI memory used in chatbots?
+The primary types of AI memory used in chatbots include short-term memory (context window), long-term memory (external storage like vector databases), episodic memory (recalling specific events), and semantic memory (general knowledge).

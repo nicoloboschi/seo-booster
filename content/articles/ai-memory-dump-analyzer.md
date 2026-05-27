@@ -49,6 +49,9 @@ faq:
 - question: What is an "AI dump" and how is it used?
   answer: An "AI dump" is a colloquial term referring to the output or snapshot of an AI agent's memory or internal state at a specific moment. This data, often referred to as a memory dump, is then analyzed
     using an AI memory dump analyzer to understand the agent's behavior, diagnose issues, or gain insights into its decision-making process.
+- question: What is the difference between an AI memory dump and a traditional memory dump?
+  answer: While both are snapshots of memory, an AI memory dump is specifically tailored to the complex, often semantic and contextual, data structures used by AI agents. Traditional memory dumps are more
+    focused on raw program state and memory addresses, whereas an AI dump aims to capture and interpret the agent's knowledge, interactions, and decision-making context.
 slug: ai-memory-dump-analyzer
 ---
 

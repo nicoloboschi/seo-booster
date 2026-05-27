@@ -55,6 +55,10 @@
     {
       "question": "What are the implications of an AI that remembers everything?",
       "answer": "The implications are vast, including enhanced AI assistants, improved customer service, personalized education, and accelerated complex problem-solving. However, these advancements also bring significant ethical considerations regarding privacy, bias, and security."
+    },
+    {
+      "question": "What are the key components of an AI memory system?",
+      "answer": "Key components include short-term memory (like an LLM's context window), long-term memory for persistent storage, and sophisticated retrieval mechanisms. Advanced systems also incorporate episodic memory for events and semantic memory for facts, along with temporal reasoning and memory consolidation."
     }
   ],
   "slug": "ai-that-remembers-everything"
@@ -261,3 +265,6 @@ Persistent memory in AI is achieved through external memory systems that store i
 
 ### What are the implications of an AI that remembers everything?
 The implications are vast, including enhanced AI assistants, improved customer service, personalized education, and accelerated complex problem-solving. However, these advancements also bring significant ethical considerations regarding privacy, bias, and security.
+
+### What are the key components of an AI memory system?
+Key components include short-term memory (like an LLM's context window), long-term memory for persistent storage, and sophisticated retrieval mechanisms. Advanced systems also incorporate episodic memory for events and semantic memory for facts, along with temporal reasoning and memory consolidation.

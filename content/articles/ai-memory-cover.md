@@ -58,6 +58,10 @@
     {
       "question": "What are the benefits of AI memory cover for AI agents?",
       "answer": "The benefits include improved AI recall, enhanced contextual understanding, personalized interactions, better decision-making, and the ability to learn and adapt over time. This leads to more sophisticated and useful AI agents."
+    },
+    {
+      "question": "What are the core functions of AI memory systems?",
+      "answer": "The core functions include storing, retrieving, updating, and sometimes forgetting information. These processes enable AI agents to maintain context, learn from experience, and perform tasks more intelligently."
     }
   ],
   "slug": "ai-memory-cover"
@@ -180,7 +184,7 @@ The overall **AI agent architecture** dictates how memory components are integra
 *   **Hierarchical Memory:** A tiered system where information moves from fast, limited short-term storage to slower, more capacious long-term storage.
 *   **Integrated Memory:** Memory is tightly interwoven with the agent's reasoning and action selection modules, allowing for dynamic memory updates and retrieval based on immediate needs, enhancing **contextual understanding**.
 
-These architectural choices significantly impact an agent's ability to manage its memory effectively. Understanding these patterns is key to building scalable and performant AI systems. Explore [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) for more details on designing effective **ai memory cover**.
+These architectural choices significantly impact an agent's ability to manage its memory effectively. Explore [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) for more details on designing effective **ai memory cover**.
 
 ## Key Components of AI Memory Cover
 
@@ -270,3 +274,6 @@ AI memory cover ensures AI knowledge retention by providing robust systems for s
 
 ### What are the benefits of AI memory cover for AI agents?
 The benefits include improved AI recall, enhanced contextual understanding, personalized interactions, better decision-making, and the ability to learn and adapt over time. This leads to more sophisticated and useful AI agents.
+
+### What are the core functions of AI memory systems?
+The core functions include storing, retrieving, updating, and sometimes forgetting information. These processes enable AI agents to maintain context, learn from experience, and perform tasks more intelligently.

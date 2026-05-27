@@ -38,6 +38,8 @@ faq:
 - question: What is the "lost in the middle" phenomenon in LLMs?
   answer: The "lost in the middle" phenomenon refers to the tendency of LLMs, even with large context windows, to struggle with effectively utilizing information located in the middle of a very long input.
     They may prioritize information at the beginning and end of the context.
+- question: What are the computational costs associated with high context window LLMs?
+  answer: Processing extremely long contexts requires significant computational resources, leading to higher costs for training and running these models, and potentially increased latency in response generation.
 slug: high-context-window-llm
 ---
 
@@ -234,3 +236,7 @@ Key innovations include efficient attention mechanisms (sparse, linear, dilated 
 ### What is the "lost in the middle" phenomenon in LLMs?
 
 The "lost in the middle" phenomenon refers to the tendency of LLMs, even with large context windows, to struggle with effectively using information located in the middle of a very long input. They may prioritize information at the beginning and end of the context.
+
+### What are the computational costs associated with high context window LLMs?
+
+Processing extremely long contexts requires significant computational resources, leading to higher costs for training and running these models, and potentially increased latency in response generation.

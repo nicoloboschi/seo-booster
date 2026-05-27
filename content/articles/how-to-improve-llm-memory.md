@@ -51,6 +51,9 @@ faq:
 - question: What are the primary challenges in improving LLM memory?
   answer: Key challenges in improving LLM memory include the computational cost of processing large datasets, ensuring data privacy and security with external memory, and developing more sophisticated memory
     architectures that incorporate temporal reasoning and self-correction.
+- question: How do external memory systems contribute to improving LLM memory?
+  answer: External memory systems, such as vector databases and knowledge graphs, store vast amounts of information outside the LLM's limited context window. This allows LLMs to access and retrieve relevant
+    data on demand, effectively extending their memory capacity and enabling more informed responses.
 slug: how-to-improve-llm-memory
 ---
 
@@ -182,3 +185,6 @@ AI agents can achieve long-term memory through techniques like Retrieval-Augment
 
 ### What are the primary challenges in improving LLM memory?
 Key challenges in improving LLM memory include the computational cost of processing large datasets, ensuring data privacy and security with external memory, and developing more sophisticated memory architectures that incorporate temporal reasoning and self-correction.
+
+### How do external memory systems contribute to improving LLM memory?
+External memory systems, such as vector databases and knowledge graphs, store vast amounts of information outside the LLM's limited context window. This allows LLMs to access and retrieve relevant data on demand, effectively extending their memory capacity and enabling more informed responses.

@@ -54,6 +54,10 @@ faq:
 - question: What is the primary goal of AI memory consolidation techniques?
   answer: The primary goal of AI memory consolidation techniques is to transform raw, often unstructured and transient, data into stable, organized, and efficiently retrievable knowledge. This enhances
     an AI agent's ability to learn, recall, and make consistent decisions over time, overcoming limitations of raw data storage.
+- question: How does AI agent memory differ from human memory consolidation?
+  answer: While AI memory consolidation is inspired by biological processes, it differs in its implementation. AI systems use computational techniques like summarization, compression, and hierarchical structuring
+    to process and store information, whereas human memory consolidation involves complex neurobiological mechanisms of synaptic plasticity and systems consolidation. The goal of creating stable, retrievable
+    knowledge is shared.
 slug: memory-consolidation-ai-agents
 ---
 ---

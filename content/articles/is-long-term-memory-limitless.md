@@ -49,6 +49,9 @@ faq:
 - question: What defines the capacity of AI long-term memory?
   answer: The capacity of **AI long-term memory** is defined not just by raw storage but by the efficiency of retrieval, computational resources available for processing, and the cost-effectiveness of maintaining
     and accessing the data. Practical limits are more significant than theoretical storage potential.
+- question: What does "persistent memory AI" mean?
+  answer: Persistent memory AI refers to AI systems designed to retain information over extended periods, often across multiple sessions or even indefinitely. This allows the AI to build a continuous understanding
+    and recall past interactions or learned knowledge, differentiating it from ephemeral, session-based memory. This concept is central to understanding **AI memory limits**.
 slug: is-long-term-memory-limitless
 ---
 
@@ -147,3 +150,7 @@ The practical implications of **AI memory limits** include the need for efficien
 ### What defines the capacity of AI long-term memory?
 
 The capacity of **AI long-term memory** is defined not just by raw storage but by the efficiency of retrieval, computational resources available for processing, and the cost-effectiveness of maintaining and accessing the data. Practical limits are more significant than theoretical storage potential.
+
+### What does "persistent memory AI" mean?
+
+Persistent memory AI refers to AI systems designed to retain information over extended periods, often across multiple sessions or even indefinitely. This allows the AI to build a continuous understanding and recall past interactions or learned knowledge, differentiating it from ephemeral, session-based memory. This concept is central to understanding **AI memory limits**.

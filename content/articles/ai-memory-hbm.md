@@ -68,7 +68,6 @@
   "slug": "ai-memory-hbm"
 }
 ```
-
 ---
 
 **AI Memory HBM: Revolutionizing AI Agent Recall and Performance with High Bandwidth Memory**

@@ -55,6 +55,9 @@ faq:
 - question: What is the role of vector databases in AI memory?
   answer: Vector databases are fundamental for AI memory because they are specifically designed to store, index, and query high-dimensional vector embeddings. These embeddings capture the semantic meaning
     of data, enabling AI agents to perform fast and accurate similarity searches for recall and understanding.
+- question: What is the difference between vector databases and traditional databases for AI memory?
+  answer: Traditional databases are optimized for structured data and exact matches, while vector databases are designed for high-dimensional vector data and similarity searches. This makes vector databases
+    far more efficient for tasks like semantic search and AI agent recall, which rely on understanding the meaning and context of data rather than just exact keywords.
 slug: best-database-for-ai-memory
 ---
 

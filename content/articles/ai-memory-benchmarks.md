@@ -71,6 +71,14 @@
     {
       "question": "What are the primary goals of AI memory benchmarks?",
       "answer": "The primary goals of **AI memory benchmarks** are to standardize the evaluation of AI memory systems, enable objective comparison between different architectures and techniques, identify areas for improvement in **AI agent memory**, and ultimately contribute to the development of more capable and reliable AI agents."
+    },
+    {
+      "question": "What makes a good AI memory benchmark?",
+      "answer": "A good **AI memory benchmark** should be comprehensive, covering various aspects of memory performance such as accuracy, speed, and scalability. It should also be representative of real-world AI agent tasks, adaptable to different memory architectures, and provide clear, quantifiable metrics for **evaluating AI memory** systems."
+    },
+    {
+      "question": "What are the key considerations when comparing memory architectures in LLM agents?",
+      "answer": "When **comparing memory architectures in LLM agents**, key considerations include their ability to handle long-term context, the efficiency of information retrieval, the cost of integration and maintenance, and their scalability. Benchmarks are crucial for objectively assessing these factors across different architectures."
     }
   ]
 }
@@ -126,6 +134,10 @@ faq:
   answer: The choice of AI memory benchmark depends on the specific requirements of your AI agent. Consider the types of tasks it will perform, the importance of long-term context, real-time performance needs, and the complexity of the data it will process. Evaluating existing benchmarks against these criteria will help you select the most appropriate one for **evaluating AI memory**.
 - question: What are the primary goals of AI memory benchmarks?
   answer: The primary goals of **AI memory benchmarks** are to standardize the evaluation of AI memory systems, enable objective comparison between different architectures and techniques, identify areas for improvement in **AI agent memory**, and ultimately contribute to the development of more capable and reliable AI agents.
+- question: What makes a good AI memory benchmark?
+  answer: A good **AI memory benchmark** should be comprehensive, covering various aspects of memory performance such as accuracy, speed, and scalability. It should also be representative of real-world AI agent tasks, adaptable to different memory architectures, and provide clear, quantifiable metrics for **evaluating AI memory** systems.
+- question: What are the key considerations when comparing memory architectures in LLM agents?
+  answer: When **comparing memory architectures in LLM agents**, key considerations include their ability to handle long-term context, the efficiency of information retrieval, the cost of integration and maintenance, and their scalability. Benchmarks are crucial for objectively assessing these factors across different architectures.
 ---
 
 ## AI Memory Benchmarks: Evaluating Performance and Quality of AI Agent Memory Systems

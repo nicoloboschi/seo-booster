@@ -41,6 +41,9 @@ faq:
 - question: What are the benefits of using a vector database for AI memory?
   answer: Vector databases excel at handling high-dimensional vector embeddings, enabling efficient semantic search and similarity matching. This is crucial for AI agents to quickly retrieve contextually
     relevant information, enhancing AI recall and supporting persistent AI memory.
+- question: What is the role of semantic search in an AI memory database?
+  answer: Semantic search allows an AI memory database to retrieve information based on the meaning and context of a query, rather than just matching keywords. This is achieved through the use of vector
+    embeddings, enabling more nuanced and relevant recall for AI agents.
 slug: ai-memory-database
 ---
 

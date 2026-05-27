@@ -112,7 +112,7 @@ RAG is distinct from native LLM memory. While LLMs have internal context, RAG ex
 
 ### Vector Databases for AI Memory and Persistent Storage
 
-**Vector databases** are central to many modern AI memory systems. They store data as numerical vectors (embeddings) that capture semantic meaning. This allows for similarity searches, meaning the system can find information that is conceptually similar to the user's query, even if the keywords don't match exactly.
+**Vector databases** are central to many modern AI memory systems. They store data as numerical vectors (embeddings) that capture semantic meaning. This allows for similarity searches, meaning the system can find information that is conceptually similar to the user' user's query, even if the keywords don't match exactly.
 
 Tools such as **Hindsight**, an open-source AI memory system, often use vector databases for efficient storage and retrieval of conversational data. This is a critical component for enabling sophisticated **long-term memory for AI chat**. For example, the paper "[Retrieval-Augmented Generation for Large Language Models](https://arxiv.org/abs/2005.11401)" by Lewis et al. (2020) details the foundational concepts of RAG. This technology is what allows for **persistent memory AI**.
 

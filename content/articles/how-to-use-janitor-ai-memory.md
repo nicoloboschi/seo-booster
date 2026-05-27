@@ -1,6 +1,6 @@
 ---
-title: 'How to Use Janitor AI Memory: A Practical Guide for Agents'
-description: Master Janitor AI memory for your AI agents. This comprehensive guide covers setup, integration, storing/retrieving data, advanced techniques, and FAQs for persis...
+title: 'Mastering Janitor AI Memory: A Comprehensive Guide for AI Agents'
+description: Unlock the full potential of your AI agents with Janitor AI memory. This guide details setup, integration, data management, advanced techniques, and FAQs for pers...
 date: 2026-04-03
 lastmod: 2026-04-03
 tags:
@@ -13,6 +13,7 @@ tags:
 - Janitor AI chat
 - AI agent memory
 - Janitor AI chat memory
+- Janitor AI lorebook memory
 keywords:
 - how to use janitor ai memory
 - Janitor AI memory
@@ -23,6 +24,8 @@ keywords:
 - Janitor AI chat
 - Janitor AI chat memory
 - AI chat memory janitor ai
+- Janitor AI lorebook memory
+- Janitor AI memory feature
 faq:
 - question: What is the primary benefit of using Janitor AI memory?
   answer: The primary benefit is enabling AI agents to possess long-term memory, allowing them to retain information across multiple interactions. This leads to more consistent, personalized, and capable
@@ -46,6 +49,13 @@ faq:
 - question: How does Janitor AI chat memory differ from standard LLM context?
   answer: Standard LLM context is ephemeral, limited to the current conversation window. Janitor AI chat memory provides persistent storage that extends beyond a single session, allowing agents to recall
     past interactions, user preferences, and learned information over extended periods, crucial for truly engaging AI chat.
+- question: What is the Janitor AI lorebook memory feature?
+  answer: The Janitor AI lorebook memory feature is a specialized component designed to store and retrieve structured or unstructured narrative information, akin to a world-building bible or character backstory.
+    This allows AI agents to maintain consistent knowledge about fictional worlds, characters, or complex domains, enhancing their ability to generate coherent and contextually rich responses in narrative-heavy
+    applications or role-playing scenarios. It's a powerful extension of general AI agent memory.
+- question: How does Janitor AI memory help with AI chat memory?
+  answer: Janitor AI memory is crucial for AI chat memory because it provides the underlying persistent storage mechanism. Without it, AI chatbots would forget previous turns in a conversation, user preferences,
+    or even the overall topic. Janitor AI memory allows these agents to build a continuous understanding of the user and the dialogue, leading to more natural, personalized, and effective conversations.
 slug: how-to-use-janitor-ai-memory
 ---
 

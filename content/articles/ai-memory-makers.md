@@ -43,6 +43,9 @@ faq:
     effectively extending their memory and improving response accuracy for persistent AI memory needs.
 - question: What are the key components of an AI memory system?
   answer: Key components of AI memory systems include storage mechanisms (like vector databases), retrieval mechanisms (semantic and keyword search), and processes for memory consolidation and forgetting.
+- question: How do AI memory makers contribute to stateful AI?
+  answer: AI memory makers are fundamental to creating stateful AI by enabling agents to retain information from previous interactions. This allows AI to maintain context, learn from experience, and provide
+    personalized and consistent responses over time, moving beyond stateless, one-off interactions.
 slug: ai-memory-makers
 ---
 

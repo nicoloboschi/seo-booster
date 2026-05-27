@@ -87,16 +87,47 @@ def _scrape_web(url: str, selector: str) -> list[dict]:
     soup = BeautifulSoup(resp.text, "html.parser")
 
     items = []
+    seen_urls = set()
     for el in soup.select(selector):
         title_el = el.select_one("h1, h2, h3, a")
-        link_el = el.select_one("a[href]")
+
+        # If the selected element is itself an <a>, use its href directly
+        if el.name == "a" and el.get("href"):
+            link = el["href"]
+        else:
+            link_el = el.select_one("a[href]")
+            link = link_el["href"] if link_el else url
 
         title = title_el.get_text(strip=True) if title_el else ""
-        link = link_el["href"] if link_el else url
         if not link.startswith("http"):
-            link = url.rstrip("/") + "/" + link.lstrip("/")
+            from urllib.parse import urljoin
+            link = urljoin(url, link)
+
+        # Deduplicate (multiple <a> tags can point to the same article)
+        if link in seen_urls:
+            continue
+        seen_urls.add(link)
 
         content = el.get_text(separator="\n", strip=True)
+
+        # Follow link to fetch full article body if listing content is thin
+        if len(content) < 200 and link != url:
+            try:
+                article_resp = httpx.get(link, follow_redirects=True, timeout=30)
+                article_soup = BeautifulSoup(article_resp.text, "html.parser")
+                # Try common article body selectors
+                body_el = (
+                    article_soup.select_one("article")
+                    or article_soup.select_one("[class*='prose']")
+                    or article_soup.select_one("main")
+                )
+                if body_el:
+                    content = body_el.get_text(separator="\n", strip=True)
+                    if not title:
+                        h1 = article_soup.select_one("h1")
+                        title = h1.get_text(strip=True) if h1 else title
+            except Exception:
+                pass  # Keep listing-page content as fallback
 
         items.append({
             "title": title,

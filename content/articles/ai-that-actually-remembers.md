@@ -47,6 +47,9 @@ faq:
 - question: What is the role of vector databases in AI memory?
   answer: Vector databases store data as numerical vectors (embeddings) that capture semantic meaning. This allows AI to retrieve information based on conceptual similarity rather than just keywords, which
     is crucial for advanced AI recall and contextual understanding.
+- question: How does an AI agent's persistent memory differ from its working memory?
+  answer: An AI agent's working memory is akin to its short-term or immediate processing capacity, similar to a context window, holding information relevant to the current task. Persistent memory, on the
+    other hand, is long-term storage that allows the AI to recall information and experiences across multiple sessions and interactions, enabling true learning and adaptation.
 slug: ai-that-actually-remembers
 ---
 ---
@@ -218,3 +221,6 @@ Key components include data storage (like vector databases or knowledge graphs),
 
 ### What is the role of vector databases in AI memory?
 Vector databases store data as numerical vectors (embeddings) that capture semantic meaning. This allows AI to retrieve information based on conceptual similarity rather than just keywords, which is crucial for advanced AI recall and contextual understanding.
+
+### How does an AI agent's persistent memory differ from its working memory?
+An AI agent's working memory is akin to its short-term or immediate processing capacity, similar to a context window, holding information relevant to the current task. Persistent memory, on the other hand, is long-term storage that allows the AI to recall information and experiences across multiple sessions and interactions, enabling true learning and adaptation.

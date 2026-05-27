@@ -51,9 +51,11 @@ faq:
 - question: How does CHUB AI's long-term memory differ from traditional AI memory?
   answer: Traditional AI memory is often limited to short-term context windows, meaning information is lost quickly. CHUB AI's long-term memory provides persistent storage and recall capabilities, allowing
     AI agents to build upon past interactions and knowledge over extended periods, leading to more coherent and intelligent behavior.
+- question: What are the key components of an AI long-term memory system?
+  answer: Key components include memory storage mechanisms (like vector databases), retrieval and recall strategies (such as semantic search), memory consolidation processes, and potentially forgetting
+    mechanisms to manage information overload.
 slug: chub-ai-long-term-memory
 ---
-
 
 Imagine an AI that forgets your name mid-conversation. This frustrating reality is being overcome by **CHUB AI's long-term memory** systems, which enable agents to retain and recall information, improving coherence and task performance. **CHUB AI long-term memory** provides AI agents with the crucial ability to retain and recall information across extended periods, moving beyond the limitations of short-term context windows. This persistent recall is foundational for building more capable, adaptive, and contextually aware artificial intelligence systems.
 

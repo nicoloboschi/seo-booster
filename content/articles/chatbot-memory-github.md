@@ -41,6 +41,12 @@ faq:
 - question: What is the primary goal of chatbot memory projects on GitHub?
   answer: The primary goal is to create open-source tools and frameworks that enable AI chatbots to retain, recall, and effectively use information from past interactions, thereby improving conversation
     quality, context understanding, and user experience.
+- question: How do vector databases contribute to chatbot memory?
+  answer: Vector databases allow for semantic search, enabling chatbots to retrieve relevant past information based on meaning rather than exact keywords. This is crucial for handling diverse user queries
+    and recalling contextually similar information, a key aspect of many advanced memory implementations.
+- question: Can GitHub projects help my chatbot remember conversations long-term?
+  answer: Yes, many **chatbot memory GitHub** repositories offer solutions for long-term memory, including integrations with vector databases, summarization techniques, and frameworks designed for persistent
+    storage of conversational data. These go beyond the limited context windows of standard LLMs.
 slug: chatbot-memory-github
 ---
 

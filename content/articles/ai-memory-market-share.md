@@ -41,6 +41,8 @@ faq:
 - question: How does the current landscape of AI memory systems influence market share?
   answer: The diverse current landscape of AI memory systems, with its various segments and rapid innovation, directly shapes market share. Established players leverage existing infrastructure, while specialized
     startups drive niche adoption. Open-source contributions democratize access, influencing overall market dynamics and the competitive positioning of different solutions.
+- question: What are the primary components of the AI memory market?
+  answer: The AI memory market is primarily segmented by LLM memory, agent memory, conversational memory, and enterprise AI memory. Each segment addresses specific needs for AI persistence and recall.
 ---
 
 

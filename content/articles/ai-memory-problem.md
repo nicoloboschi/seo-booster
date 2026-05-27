@@ -54,6 +54,11 @@ faq:
 - question: How does the AI context window limit an AI's memory?
   answer: The AI context window is a fixed-size buffer that an LLM uses to process information for generating its next output. Any information that falls outside this window is effectively lost unless explicitly
     stored elsewhere. This limitation directly contributes to the AI memory problem, as it restricts the AI's ability to recall details from earlier parts of a long conversation or document.
+- question: What are the primary limitations of current AI memory systems and how do they contribute to the AI memory problem?
+  answer: The primary limitations of current AI memory systems include the finite context window of Large Language Models (LLMs), which restricts the amount of information they can process at once; the
+    computational overhead and complexity associated with storing and retrieving vast datasets for long-term memory; and the inherent difficulty in discerning truly pertinent information from irrelevant
+    noise, leading to inefficient or inaccurate retrieval. These factors collectively contribute to the overall AI memory problem by hindering an AI's ability to maintain consistent context, learn from
+    past interactions, and access relevant information efficiently.
 slug: ai-memory-problem
 ---
 

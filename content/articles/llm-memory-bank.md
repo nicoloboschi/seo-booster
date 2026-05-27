@@ -1,5 +1,5 @@
 ---
-title: 'LLM Memory Bank: Enhancing AI's Recall and Contextual Understanding'
+title: "LLM Memory Bank: Enhancing AI's Recall and Contextual Understanding"
 description: 'Explore the concept of an LLM memory bank, its types, architectures, and implementation. Learn how AI memory, context windows, and agent recall are enhanced for more intelligent AI.'
 date: 2026-04-05
 lastmod: 2026-04-05
@@ -33,7 +33,7 @@ faq:
 - question: How do vector databases contribute to LLM memory?
   answer: Vector databases are essential for modern **LLM memory banks** because they store numerical representations (embeddings) of text. This allows for efficient semantic search, enabling the LLM to quickly find and retrieve past information that is contextually relevant to its current query or task.
 - question: What is the difference between episodic and semantic memory in AI?
-  answer: **Episodic memory** refers to recalling specific events or experiences (e.g., "what happened in our last chat"). **Semantic memory** stores general knowledge and facts (e.g., "what is the capital of France"). Both are crucial for a comprehensive **LLM memory bank** to provide nuanced and informed responses.
+  answer: '**Episodic memory** refers to recalling specific events or experiences (e.g., "what happened in our last chat"). **Semantic memory** stores general knowledge and facts (e.g., "what is the capital of France"). Both are crucial for a comprehensive **LLM memory bank** to provide nuanced and informed responses.'
 slug: llm-memory-bank
 ---
 

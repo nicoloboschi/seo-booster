@@ -48,6 +48,9 @@ faq:
 - question: How do AI memory labs contribute to improving agent recall?
   answer: AI memory labs are essential for advancing agent recall by providing controlled environments to test and refine various memory architectures, retrieval mechanisms, and data storage strategies.
     This allows researchers to systematically improve an AI's ability to access and utilize past information effectively.
+- question: What are the primary goals of an AI memory lab?
+  answer: The primary goals of an AI memory lab are to architect, develop, and rigorously test advanced memory systems for AI agents. This includes enhancing agent recall, improving long-term learning capabilities,
+    and enabling AI to adapt and perform complex tasks over extended interactions.
 slug: ai-memory-lab
 ---
 ---
@@ -196,7 +199,7 @@ def retrieve_from_memory(query, embeddings, documents, top_n=2):
  query_embedding = model.encode([query])
  similarities = cosine_similarity(query_embedding, embeddings)[0]
 
- # Get indices of top_n most similar documents
+ ## Get indices of top_n most similar documents
  top_indices = np.argsort(similarities)[::-1][:top_n]
 
  retrieved_docs = [documents[i] for i in top_indices]

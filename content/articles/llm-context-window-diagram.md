@@ -1,5 +1,5 @@
 ---
-title: 'LLM Context Window Diagram: Visualizing AI's Working Memory and Token Limits'
+title: "LLM Context Window Diagram: Visualizing AI's Working Memory and Token Limits"
 description: Explore an LLM context window diagram to understand how AI models process information, manage their limited working memory, and the impact of token limits. Learn about visualization, attention, and strategies to overcome limitations.
 date: 2026-04-04
 lastmod: 2026-04-04

@@ -55,6 +55,9 @@ faq:
 - question: What are the ethical considerations when implementing AI in memory care?
   answer: Key ethical considerations include ensuring robust data privacy and security, maintaining transparency in AI decision-making, preventing algorithmic bias, and ensuring that AI complements rather
     than replaces human interaction and empathy.
+- question: How does AI contribute to early detection of cognitive changes?
+  answer: AI can analyze subtle changes in speech patterns, behavior, and cognitive test results to identify early signs of cognitive decline or conditions like MCI, enabling timely intervention and personalized
+    support strategies.
 slug: ai-in-memory-care
 ---
 

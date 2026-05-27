@@ -19,6 +19,8 @@ keywords:
 - strategies for LLM memory
 - augmenting LLM context
 - overcoming context window limitations
+- RAG for LLM memory
+- LLM context window size
 faq:
 - question: What is the primary limitation of LLM memory?
   answer: The primary limitation of LLM memory is the fixed context window size, which restricts the amount of information an LLM can process at any given time, leading to forgetting past interactions.
@@ -38,6 +40,9 @@ faq:
 - question: What are the key challenges in LLM memory expansion?
   answer: Key challenges in LLM memory expansion include the computational cost associated with larger context windows, the potential for information overload even with expanded windows, and the need for
     efficient retrieval mechanisms to access relevant past information. Overcoming these challenges is crucial for effective context window solutions and improved AI recall.
+- question: How does LLM context window size impact AI recall?
+  answer: The LLM context window size directly limits how much information an AI can process at once. A larger context window allows the LLM to retain more of the conversation or document, leading to better
+    AI recall and a reduced need for immediate memory expansion strategies. However, even large windows have limits, necessitating other methods for long-term memory.
 slug: how-to-increase-llm-memory
 ---
 

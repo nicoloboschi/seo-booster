@@ -1,6 +1,6 @@
 ---
 title: 'LLM Memory with Google: Enhancing AI Recall and Context with Google AI'
-description: 'Explore LLM memory with Google AI. Learn how Google's infrastructure, search, and AI technologies enhance LLM recall, context, and AI agent memory with practical examples and insights.'
+description: "Explore LLM memory with Google AI. Learn how Google's infrastructure, search, and AI technologies enhance LLM recall, context, and AI agent memory with practical examples and insights."
 date: 2026-04-06
 lastmod: 2026-04-06
 tags:

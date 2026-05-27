@@ -1,6 +1,6 @@
 ---
-title: 'Understanding LLM Context Windows: OpenAI's Innovations & AI Memory'
-description: 'Explore the LLM context window, OpenAI's advancements like GPT-4 Turbo, and its impact on AI memory and agent capabilities. Learn about tokens, limitations, and solutions.'
+title: "Understanding LLM Context Windows: OpenAI's Innovations & AI Memory"
+description: "Explore the LLM context window, OpenAI's advancements like GPT-4 Turbo, and its impact on AI memory and agent capabilities. Learn about tokens, limitations, and solutions."
 date: 2026-03-31
 lastmod: 2026-03-31
 tags:

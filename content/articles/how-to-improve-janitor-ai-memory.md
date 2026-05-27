@@ -44,6 +44,9 @@ faq:
 - question: How can I effectively manage Janitor AI's context window size?
   answer: Managing Janitor AI's context window size involves intelligent summarization of past interactions, prioritizing information based on relevance, and employing dynamic sliding window techniques
     to ensure the most critical data remains accessible.
+- question: What are the implications of a small Janitor AI context size?
+  answer: A small Janitor AI context size can lead to the AI forgetting crucial details from earlier in a conversation, resulting in repetitive questions, irrelevant responses, and a degraded user experience.
+    It limits the AI's ability to maintain long-term conversational coherence and perform complex, multi-turn tasks effectively.
 slug: how-to-improve-janitor-ai-memory
 ---
 
@@ -68,7 +71,7 @@ Improving Janitor AI memory involves a multi-faceted approach, covering data sto
 
 ### Understanding and Managing Janitor AI Context Size
 
-The **context window** defines the text an LLM can process at once. Janitor AI's core function often involves managing this **Janitor AI context size** effectively. Optimizing the **Janitor AI context window** is a primary concern for efficient operation.
+The **context window** defines the text an LLM can process at once. Janitor AI's core function often involves managing this **Janitor AI context size** effectively. Optimizing the **Janitor AI context window** is a primary concern for efficient operation. A well-managed **Janitor AI context size** is fundamental to preventing information loss and ensuring coherent interactions.
 
 * **Intelligent Summarization:** Implement sophisticated summarization techniques. Instead of simple truncation, use LLMs to condense past interactions into concise summaries that retain key information. This allows the AI to "remember" more by storing less raw data.
 * **Information Prioritization:** Develop algorithms that score the importance of conversational turns or data points. This ensures the most relevant information stays within the active context window.
@@ -209,3 +212,6 @@ Janitor AI context size refers to the amount of information (measured in tokens)
 
 ### How can I effectively manage Janitor AI's context window size?
 Managing Janitor AI's context window size involves intelligent summarization of past interactions, prioritizing information based on relevance, and employing dynamic sliding window techniques to ensure the most critical data remains accessible.
+
+### What are the implications of a small Janitor AI context size?
+A small Janitor AI context size can lead to the AI forgetting crucial details from earlier in a conversation, resulting in repetitive questions, irrelevant responses, and a degraded user experience. It limits the AI's ability to maintain long-term conversational coherence and perform complex, multi-turn tasks effectively.

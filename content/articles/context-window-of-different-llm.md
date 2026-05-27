@@ -44,6 +44,10 @@ faq:
 - question: How do attention mechanisms impact the LLM context window?
   answer: Attention mechanisms allow LLMs to weigh the importance of different tokens within the context window. A larger context window provides more tokens for the attention mechanism to consider, potentially
     leading to more nuanced and contextually relevant outputs. This is a critical factor in **understanding context window** capabilities.
+- question: What is the primary function of the context window in LLMs?
+  answer: The primary function of the context window in LLMs is to define the maximum amount of text (measured in tokens) that the model can process and consider at any single moment. This directly influences
+    the LLM's ability to maintain conversational coherence, recall previous information, and understand complex instructions or lengthy documents. A larger context window generally leads to more robust
+    performance in these areas.
 slug: context-window-of-different-llm
 ---
 

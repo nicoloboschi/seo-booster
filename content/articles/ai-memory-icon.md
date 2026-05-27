@@ -48,6 +48,9 @@ faq:
 - question: How can an AI memory icon help users understand data persistence?
   answer: An AI memory icon can visually indicate that an AI system is designed to retain information over time. This might be shown through static, solid designs or icons that suggest continuous storage,
     reassuring users that their data or the AI's learned context will not be lost.
+- question: What are the primary functions of an AI memory icon?
+  answer: The primary functions of an AI memory icon are to visually represent an AI's ability to store and retrieve information, communicate data persistence, and provide users with cues about the agent's
+    recall capabilities.
 slug: ai-memory-icon
 ---
 

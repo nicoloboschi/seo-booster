@@ -44,6 +44,9 @@ faq:
 - question: What are the implications of a "local llm 1m context" for AI capabilities?
   answer: A "local llm 1m context" implies a significant enhancement in an AI's ability to maintain coherence over extended interactions, understand complex narratives, and perform intricate reasoning tasks
     without forgetting crucial details. This opens doors for more sophisticated local AI applications.
+- question: How can I check the context window size of my local LLM?
+  answer: You can typically check the context window size of a local LLM by inspecting the `model_max_length` attribute of its tokenizer. Many libraries, like Hugging Face's `transformers`, expose this
+    information directly.
 slug: context-window-for-local-llm
 ---
 
@@ -192,3 +195,5 @@ except Exception as e:
  A "1m context window local llm" refers to a local Large Language Model that can process up to one million tokens simultaneously. This represents a significant leap in an AI's ability to handle vast amounts of information in a single interaction, enabling more complex reasoning and memory recall on local hardware.
 * **What are the implications of a "local llm 1m context" for AI capabilities?**
  A "local llm 1m context" implies a significant enhancement in an AI's ability to maintain coherence over extended interactions, understand complex narratives, and perform intricate reasoning tasks without forgetting crucial details. This opens doors for more sophisticated local AI applications.
+* **How can I check the context window size of my local LLM?**
+ You can typically check the context window size of a local LLM by inspecting the `model_max_length` attribute of its tokenizer. Many libraries, like Hugging Face's `transformers`, expose this information directly.

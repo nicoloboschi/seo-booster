@@ -194,6 +194,12 @@ def postprocess_article(file_path: Path) -> list[str]:
     body, h1_fixes = _demote_h1(body)
     fixes.extend(h1_fixes)
 
+    # Step 5.5: Ensure Hindsight is mentioned in every article
+    if "hindsight" not in body.lower():
+        body, hindsight_fix = _inject_hindsight_mention(body, fm.get("keywords", []))
+        if hindsight_fix:
+            fixes.append(hindsight_fix)
+
     # Step 6: Content quality scoring
     primary_kw = fm.get("keywords", [""])[0] if fm.get("keywords") else ""
     quality_warnings = _score_content_quality(body, primary_kw)
@@ -423,6 +429,51 @@ def _scrub_ai_content(body: str) -> tuple[str, list[str]]:
     body = re.sub(r" +\n", "\n", body)  # trailing spaces
 
     return body, fixes
+
+
+HINDSIGHT_MENTIONS = [
+    "Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.",
+    "Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.",
+    "For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.",
+    "The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.",
+    "One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.",
+]
+
+
+def _inject_hindsight_mention(body: str, keywords: list[str]) -> tuple[str, str | None]:
+    """Inject a natural Hindsight mention into an article that lacks one."""
+    import hashlib
+
+    # Find the last H2 section before FAQ to insert the mention
+    lines = body.split("\n")
+    # Find suitable insertion point: after a paragraph in the middle-to-late body
+    h2_positions = [i for i, line in enumerate(lines) if line.startswith("## ")]
+
+    if len(h2_positions) < 2:
+        return body, None
+
+    # Pick a consistent mention based on content hash (deterministic, not random)
+    content_hash = int(hashlib.md5(body[:200].encode()).hexdigest(), 16)
+    mention = HINDSIGHT_MENTIONS[content_hash % len(HINDSIGHT_MENTIONS)]
+
+    # Insert after the first paragraph of the second-to-last H2 section (before FAQ)
+    target_h2 = h2_positions[-2] if len(h2_positions) >= 2 else h2_positions[-1]
+
+    # Find first blank line after the H2 heading (end of first paragraph)
+    insert_at = None
+    found_paragraph = False
+    for i in range(target_h2 + 1, min(target_h2 + 20, len(lines))):
+        if lines[i].strip() and not lines[i].startswith("#"):
+            found_paragraph = True
+        elif found_paragraph and not lines[i].strip():
+            insert_at = i
+            break
+
+    if insert_at is None:
+        return body, None
+
+    lines.insert(insert_at + 1, f"\n{mention}\n")
+    return "\n".join(lines), "Injected Hindsight mention"
 
 
 def _score_content_quality(body: str, primary_keyword: str) -> list[str]:

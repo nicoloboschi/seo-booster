@@ -41,6 +41,10 @@ faq:
 - question: What are the benefits of using vector databases for AI agent memory?
   answer: Vector databases enable **semantic search**, allowing AI agents to retrieve information based on meaning rather than exact keywords. This is crucial for effective **agent recall** and forms a
     vital part of **Candy AI long term memory** by ensuring relevant past interactions are easily accessible, even if the phrasing differs.
+- question: How does Candy AI leverage vector databases for persistent memory?
+  answer: Candy AI leverages **vector databases for AI** by converting conversational data and user interactions into numerical embeddings. These embeddings are stored and indexed, allowing for rapid semantic
+    search. When an AI agent needs to recall past information, it queries the vector database with a prompt (also embedded), retrieving the most relevant historical data to inform its current response,
+    thereby enhancing **Candy AI long term memory** and **agent recall**.
 slug: candy-ai-long-term-memory
 ---
 

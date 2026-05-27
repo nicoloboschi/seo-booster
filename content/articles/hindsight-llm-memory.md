@@ -41,6 +41,9 @@ faq:
 - question: How does Hindsight LLM Memory contribute to scalable AI memory?
   answer: Hindsight LLM Memory achieves scalability by leveraging efficient storage and retrieval mechanisms, such as vector databases, which can handle vast amounts of data and complex queries, ensuring
     that the AI's memory can grow alongside its experience without performance degradation.
+- question: What is the role of vector databases in Hindsight LLM Memory?
+  answer: Vector databases are crucial for Hindsight LLM Memory as they store information as numerical vectors (embeddings), enabling fast and efficient similarity searches. This allows AI agents to quickly
+    retrieve semantically relevant past experiences or knowledge, which is essential for effective agent recall and persistent AI recall.
 slug: hindsight-llm-memory
 ---
 

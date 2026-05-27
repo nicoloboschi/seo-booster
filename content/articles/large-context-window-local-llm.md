@@ -61,6 +61,10 @@ faq:
 - question: What is the significance of LongNet for large context window AI?
   answer: LongNet is a groundbreaking architecture that enables Transformer models to handle context windows of up to 2 million tokens. By using dilated and sliding window attention, it significantly improves
     computational efficiency for processing very long sequences, making it a key development for **large context window AI**.
+- question: What is the impact of LongNet on scaling Transformer context windows?
+  answer: LongNet is a pivotal architecture that enables Transformer models to extend their context window capabilities to an impressive 2 million tokens. This is achieved through a novel combination of
+    dilated attention and a sliding window attention mechanism, which drastically improves computational efficiency when processing extremely long sequences. This breakthrough is fundamental for the development
+    of **large context window local LLMs** and advanced **large context window AI**.
 slug: large-context-window-local-llm
 ---
 
@@ -126,7 +130,7 @@ The standard **self-attention** mechanism in Transformers has a computational co
 
 1. **Sparse Attention:** Instead of every token attending to every other token, sparse attention mechanisms restrict the connections, focusing on specific patterns or local windows. Examples include **Longformer** and **BigBird**.
 2. **Linear Attention:** These methods aim to reduce complexity to O(n) by reformulating the attention mechanism. Models like **Performer** and **Linformer** explore this.
-3. **LongNet:** A significant advancement in this area, **LongNet** is an architecture designed to scale Transformer context windows to unprecedented lengths, such as 2 million tokens. It achieves this by employing a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This innovation is crucial for developing **large context window local LLMs** and contributes significantly to **large context window AI**.
+3. **LongNet:** A significant advancement in this area, **LongNet** is an architecture designed to scale Transformer context windows to unprecedented lengths, such as 2 million tokens. It achieves this by employing a combination of dilated attention and a sliding window attention mechanism, making it more computationally efficient for processing very long sequences. This innovation is crucial for developing **large context window local LLMs** and contributes significantly to **large context window AI**. The research on **LongNet** scaling Transformer context windows to 2 million tokens is a key development.
 4. **Recurrent Memory Transformers:** These combine Transformer architectures with recurrent mechanisms to maintain a state that summarizes past information, effectively extending memory without a quadratic cost.
 
 ### Retrieval-Augmented Generation (RAG)
@@ -261,3 +265,6 @@ The future likely involves a hybrid approach: using the inherent large context w
 
 * **Q: What is the significance of LongNet for large context window AI?**
  A: LongNet is a groundbreaking architecture that enables Transformer models to handle context windows of up to 2 million tokens. By using dilated and sliding window attention, it significantly improves computational efficiency for processing very long sequences, making it a key development for **large context window AI**.
+
+* **Q: What is the impact of LongNet on scaling Transformer context windows?**
+ A: LongNet is a pivotal architecture that enables Transformer models to extend their context window capabilities to an impressive 2 million tokens. This is achieved through a novel combination of dilated attention and a sliding window attention mechanism, which drastically improves computational efficiency when processing extremely long sequences. This breakthrough is fundamental for the development of **large context window local LLMs** and advanced **large context window AI**.

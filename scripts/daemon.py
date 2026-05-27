@@ -225,7 +225,7 @@ def run_daemon():
                     try:
                         from scripts.distribute import distribute_articles
                         print(f"\n[{ts}] Distributing new articles...")
-                        distribute_articles("content/articles", max_articles=5)
+                        distribute_articles("content/articles", max_articles=15)
                     except Exception as e:
                         print(f"  Distribution failed: {e}")
 

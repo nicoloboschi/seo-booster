@@ -256,7 +256,7 @@ You can find active discussions on AI memory through several online platforms:
 
 *   **Reddit:** Subreddits like r/artificialintelligence, r/MachineLearning, and specific subreddits focused on LLMs and agent development often have threads dedicated to memory systems.
 *   **Discord Servers:** Many AI communities and open-source projects host dedicated Discord servers where real-time discussions and Q&A sessions occur.
-*   **GitHub Discussions:** For specific open-source memory systems, the "Discussions" tab on their GitHub repositories serves as a valuable forum.
+*   **GitHub Discussions:** For specific open-source memory systems, the \"Discussions\" tab on their GitHub repositories serves as a valuable forum.
 *   **Specialized Forums:** Some academic or professional organizations may host dedicated forums for AI research.
 
 When looking for the best AI memory systems, these forums are invaluable resources. You can also find comparisons on sites like [Vectorize.io's guide to best AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems). An active **AI memory forum** is a treasure trove of information.

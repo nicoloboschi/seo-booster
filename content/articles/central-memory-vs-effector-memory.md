@@ -44,8 +44,14 @@ faq:
 - question: How does central memory differ from effector memory in terms of scope?
   answer: Central memory has a broad scope, encompassing general knowledge, beliefs, and environmental context. Effector memory has a narrow, specialized scope, focusing specifically on the details of actions
     and their execution.
+- question: What is the role of central memory in AI reasoning?
+  answer: Central memory provides the foundational knowledge and context that AI agents use to reason about their environment, make decisions, and plan future actions. It holds beliefs, goals, and understanding
+    of the world.
+- question: How does effector memory support AI task execution?
+  answer: Effector memory directly supports AI task execution by storing learned motor commands, action sequences, and procedural knowledge, allowing agents to perform tasks efficiently and effectively.
 slug: central-memory-vs-effector-memory
 ---
+
 
 What separates an AI that can reason from one that can flawlessly execute tasks? The fundamental distinction lies in **central memory vs. effector memory**. Central memory stores broad knowledge and context, enabling understanding, while effector memory focuses on specific actions and their execution, crucial for task performance. This **central memory vs. effector memory** difference is key to building capable AI.
 
@@ -77,5 +83,3 @@ Consider an agent assembling a product. Its effector memory stores the precise o
 
 | Feature | Central Memory | Effector Memory |
 | :
-
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.

@@ -45,7 +45,12 @@ faq:
 - question: What is the core function of Gemini's memory?
   answer: The core function of Gemini's memory is to enable it to retain and recall information from previous turns within a conversation, allowing for more coherent, contextually relevant, and personalized
     responses. This is primarily achieved through its context window and can be extended with external memory systems.
+- question: How does Gemini's memory function when dealing with complex instructions?
+  answer: Gemini's memory function for complex instructions relies heavily on its context window and the clarity of the input. For intricate or multi-part instructions, the model may struggle to retain
+    all details if they exceed the context window or if subsequent turns don't reinforce them. Techniques like RAG and explicit summarization are vital for ensuring Gemini accurately processes and remembers
+    complex instructions, preventing it from forgetting key directives.
 slug: gemini-chatbot-memory
+---
 ---
 
 **Gemini chatbot memory** refers to the AI's capacity to retain and recall information from past interactions. This allows Google's Gemini to maintain conversational context, personalize responses, and provide a coherent user experience by remembering previous queries and AI outputs, making interactions more natural and helpful.
@@ -196,3 +201,4 @@ def retrieve_from_memory(query_text: str, top_k: int = 3) -> list[str]:
 
 ## Example usage
 print("
+

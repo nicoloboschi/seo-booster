@@ -53,6 +53,10 @@
     {
       "question": "How does persistent recall work in AI?",
       "answer": "Persistent recall in AI involves storing conversational data and learned information in external memory stores (like vector databases) that can be accessed and retrieved by the AI model, allowing it to remember details beyond its immediate context window."
+    },
+    {
+      "question": "What are the key components of a chatbot with infinite memory?",
+      "answer": "A chatbot with infinite memory typically relies on robust AI memory systems, including vector databases for semantic search, hybrid memory architectures for long-term storage, and Retrieval-Augmented Generation (RAG) for dynamic information retrieval."
     }
   ],
   "slug": "chatbot-with-infinite-memory"
@@ -77,7 +81,7 @@ Creating a **chatbot with infinite memory** requires moving beyond the LLM's inh
 
 **Vector databases** are fundamental to achieving **long-term memory** for AI. They store information as **embeddings**, which are numerical representations of meaning. This allows for **semantic search**, enabling the chatbot to find information based on its meaning rather than exact keywords.
 
-For example, if a user previously mentioned their pet's name was "Whiskers," even if they ask \"What's my cat's name?\" weeks later, a vector database can retrieve the relevant embedding and recall \"Whiskers.\" Tools like Pinecone, Weaviate, or ChromaDB are commonly used for this purpose. Building a **chatbot with infinite memory** heavily relies on efficient vector storage and retrieval for its **AI memory**.
+For example, if a user previously mentioned their pet's name was \"Whiskers,\" even if they ask \"What's my cat's name?\" weeks later, a vector database can retrieve the relevant embedding and recall \"Whiskers.\" Tools like Pinecone, Weaviate, or ChromaDB are commonly used for this purpose. Building a **chatbot with infinite memory** heavily relies on efficient vector storage and retrieval for its **AI memory**.
 
 ### Hybrid Memory Systems for Long-Term Memory
 

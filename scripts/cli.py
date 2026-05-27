@@ -149,18 +149,16 @@ def audit(content_dir, port):
 
 @cli.command()
 @click.option("--content-dir", default="content/articles", help="Content directory")
-@click.option("--platforms", default="devto,hashnode", help="Comma-separated platforms (devto, hashnode)")
 @click.option("--max", "max_articles", default=5, help="Max articles to distribute per run")
 @click.option("--dry-run", is_flag=True, help="Preview without posting")
 @click.option("--status", is_flag=True, help="Show distribution status only")
-def distribute(content_dir, platforms, max_articles, dry_run, status):
-    """Cross-post articles to Dev.to and Hashnode for backlinks."""
+def distribute(content_dir, max_articles, dry_run, status):
+    """Cross-post articles to Hashnode for backlinks."""
     from scripts.distribute import distribute_articles, distribution_status
     if status:
         distribution_status(content_dir)
     else:
-        platform_list = [p.strip() for p in platforms.split(",")]
-        distribute_articles(content_dir, platform_list, max_articles, dry_run)
+        distribute_articles(content_dir, max_articles, dry_run)
 
 
 @cli.command()

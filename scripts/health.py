@@ -133,22 +133,54 @@ def run_health_check() -> dict:
         from datetime import timedelta
         end = datetime.now() - timedelta(days=3)
         start = end - timedelta(days=7)
-        response = service.searchanalytics().query(
+
+        # Site-wide totals (no dimensions = single aggregated row)
+        totals_response = service.searchanalytics().query(
+            siteUrl="https://aiagentmemory.org/",
+            body={
+                "startDate": start.strftime("%Y-%m-%d"),
+                "endDate": end.strftime("%Y-%m-%d"),
+            },
+        ).execute()
+        totals_rows = totals_response.get("rows", [])
+        if totals_rows:
+            total_impressions = int(totals_rows[0]["impressions"])
+            total_clicks = int(totals_rows[0]["clicks"])
+        else:
+            total_impressions = 0
+            total_clicks = 0
+
+        # Per-page breakdown — fetch enough rows to cover the whole site
+        pages_response = service.searchanalytics().query(
             siteUrl="https://aiagentmemory.org/",
             body={
                 "startDate": start.strftime("%Y-%m-%d"),
                 "endDate": end.strftime("%Y-%m-%d"),
                 "dimensions": ["page"],
-                "rowLimit": 5,
+                "rowLimit": 1000,
             },
         ).execute()
-        rows = response.get("rows", [])
-        total_impressions = sum(r["impressions"] for r in rows)
-        total_clicks = sum(r["clicks"] for r in rows)
+        page_rows = pages_response.get("rows", [])
+
         report["checks"]["gsc_connected"] = True
         report["stats"]["gsc_impressions_7d"] = total_impressions
         report["stats"]["gsc_clicks_7d"] = total_clicks
-        report["stats"]["gsc_pages_reporting"] = len(rows)
+        report["stats"]["gsc_pages_reporting"] = len(page_rows)
+
+        # Build path → metrics lookup so notify.py can show per-page impressions.
+        # Strip the site prefix so paths match the GA pagePath format.
+        site_prefix = "https://aiagentmemory.org"
+        gsc_pages = {}
+        for r in page_rows:
+            url = r["keys"][0]
+            path = url[len(site_prefix):] if url.startswith(site_prefix) else url
+            gsc_pages[path] = {
+                "impressions": int(r["impressions"]),
+                "clicks": int(r["clicks"]),
+                "position": round(r["position"], 1),
+            }
+        report["gsc_pages"] = gsc_pages
+
         if total_impressions == 0:
             report["issues"].append("GSC shows 0 impressions — Google may not have indexed yet")
 

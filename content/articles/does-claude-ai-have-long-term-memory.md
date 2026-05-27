@@ -51,8 +51,12 @@ faq:
 - question: Does Claude AI remember code from previous sessions?
   answer: Claude AI's ability to "remember" code from previous sessions is limited by its context window. If code snippets or entire codebases are within the current conversation's context, Claude can reference
     them. For persistent code memory across sessions, external storage and retrieval mechanisms, often referred to as "Claude code long-term memory" solutions, are necessary.
+- question: What is the primary limitation of Claude AI's memory?
+  answer: The primary limitation of Claude AI's memory is its reliance on a finite context window for recalling information within a single conversation. It does not inherently store or recall details from
+    past, separate conversations without the implementation of external memory systems.
 slug: does-claude-ai-have-long-term-memory
 ---
+
 
 Can your AI assistant truly remember your last conversation, or is it a digital stranger every time? The question of **does Claude AI have long-term memory** centers on this very distinction. Currently, Claude's recall is largely confined to its immediate context window, meaning it doesn't possess persistent memory across separate interactions without external tools. This is a crucial point when considering **claude ai long term memory features**.
 
@@ -139,5 +143,19 @@ class LLMClient:
  def generate_response(self, prompt, context):
  # Simulate Claude's response generation
  full_prompt = context + "\nUser: " + prompt
- print(f"
+ print(f"Simulating Claude's response to: '{prompt}' with context.")
+ # In a real implementation, this would return Claude's actual output
+ return f"Claude's simulated response based on context: {prompt}"
 
+class SimpleMemory:
+ def __init__(self):
+ self.history = []
+
+ def add_message(self, role, message):
+ self.history.append({"role": role, "message": message})
+
+ def get_context(self, max_length=10):
+ # Simple context retrieval, just returns recent messages
+ return "\n".join([f"{item['role'].capitalize()}: {item['message']}" for item in self.history[-max_length:]])
+
+## 

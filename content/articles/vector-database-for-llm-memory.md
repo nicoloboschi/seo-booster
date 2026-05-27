@@ -43,6 +43,9 @@ faq:
 - question: How does Retrieval-Augmented Generation (RAG) work with vector databases for LLM memory?
   answer: RAG uses vector databases to retrieve relevant information from an external knowledge base. This retrieved information is then augmented with the LLM's prompt, allowing it to generate more informed
     and contextually accurate responses, effectively enhancing LLM memory.
+- question: How do vector embeddings contribute to LLM memory?
+  answer: Vector embeddings capture the semantic meaning of data, allowing vector databases to perform similarity searches based on meaning rather than keywords. This enables LLMs to retrieve contextually
+    relevant past information, forming the basis of persistent LLM memory.
 slug: vector-database-for-llm-memory
 ---
 

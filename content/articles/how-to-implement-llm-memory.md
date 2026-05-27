@@ -42,6 +42,9 @@ faq:
 - question: What are the benefits of implementing persistent memory for AI agents?
   answer: Persistent memory allows AI agents to recall past interactions, learn from data, and maintain context across sessions, leading to more coherent, personalized, and adaptive responses. This is crucial
     for building advanced AI capabilities.
+- question: What are the essential components of an LLM memory system?
+  answer: Essential components include storage mechanisms for past interactions, efficient retrieval methods, integration processes to feed memory into the LLM, and management strategies for updating and
+    organizing memory.
 slug: how-to-implement-llm-memory
 ---
 

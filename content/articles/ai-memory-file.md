@@ -50,6 +50,9 @@ faq:
     information is quickly and accurately accessed.
 - question: What is agent memory storage?
   answer: Agent memory storage refers to the systems and methods used by AI agents to store and manage their knowledge, experiences, and contextual information over time, enabling them to learn and adapt.
+- question: How does an AI memory file contribute to long-term memory in AI?
+  answer: An AI memory file provides the persistent storage necessary for an AI agent to retain information across multiple interactions and sessions, forming the basis of its long-term memory. This allows
+    the AI to build upon past experiences and knowledge, leading to more sophisticated and adaptive behavior.
 slug: ai-memory-file
 ---
 ---
@@ -132,7 +135,7 @@ Several open-source projects provide building blocks for creating and managing A
 
 * **Hindsight:** An open-source framework designed to simplify the implementation of long-term memory for AI agents. It offers tools for managing memory storage and retrieval, making it easier to build agents that remember. You can find it on [GitHub](https://github.com/vectorize-io/hindsight).
 * **LangChain & LlamaIndex:** These popular frameworks offer modules and abstractions for integrating various memory backends, including vector stores and databases, into AI agent architectures. They provide a flexible way to manage memory.
-* **Zep:** An open-source LLM memory platform designed for building stateful, context-aware AI applications. It offers features for managing conversational history and relevant documents. Explore the [Zep AI Guide](/articles/zep-memory-ai-guide/).
+* **Zep:** An open-source LLM memory platform designed for building stateful, context-aware AI applications. It offers features for managing conversational history and relevant documents. Explore the [Zep Memory AI Guide](/articles/zep-memory-ai-guide/).
 
 ### Implementing a Simple AI Memory File
 

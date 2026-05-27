@@ -48,6 +48,9 @@ faq:
 - question: What is retrieval-augmented generation (RAG) in the context of AI memory?
   answer: Retrieval-Augmented Generation (RAG) is a technique that enhances LLM responses by retrieving relevant information from an external knowledge source (like an LLM agent's memory) before generating
     an answer. This improves accuracy and reduces hallucinations.
+- question: What are the main types of memory in LLM agents?
+  answer: LLM agents utilize short-term memory (context window), working memory for active processing, and long-term memory (LTM) which includes episodic memory for specific events and semantic memory for
+    general knowledge.
 slug: llm-agent-memory-systems
 ---
 ---
@@ -236,3 +239,6 @@ Vector databases are crucial for storing and retrieving information based on sem
 
 ### What is retrieval-augmented generation (RAG) in the context of AI memory?
 Retrieval-Augmented Generation (RAG) is a technique that enhances LLM responses by retrieving relevant information from an external knowledge source (like an LLM agent's memory) before generating an answer. This improves accuracy and reduces hallucinations.
+
+### What are the main types of memory in LLM agents?
+LLM agents use short-term memory (context window), working memory for active processing, and long-term memory (LTM) which includes episodic memory for specific events and semantic memory for general knowledge.

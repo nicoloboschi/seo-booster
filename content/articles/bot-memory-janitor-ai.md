@@ -1,5 +1,5 @@
 ---
-title: 'Bot Memory Janitor AI: Optimizing Your Agent's Recall and Performance'
+title: "Bot Memory Janitor AI: Optimizing Your Agent's Recall and Performance"
 description: Discover Bot Memory Janitor AI, the essential process for cleaning and organizing AI agent memory. Learn how it improves recall, speed, and decision-making, and how to make janitor AI faster.
 date: 2026-03-30
 lastmod: 2026-03-30
@@ -36,7 +36,7 @@ faq:
 - question: How can I make my bot memory janitor AI faster?
   answer: To make your bot memory janitor AI faster, focus on efficient data structures, optimized pruning algorithms, leveraging similarity search with efficient indexing, and implementing policy-based management for proactive cleanup.
 - question: What is "janitor AI memory" in the context of AI agents?
-  answer: "Janitor AI memory" refers to the specific memory components and processes within an AI agent that are dedicated to cleaning, organizing, and optimizing its overall memory store. This includes the mechanisms for removing redundant or outdated information to ensure efficient recall.
+  answer: '"Janitor AI memory" refers to the specific memory components and processes within an AI agent that are dedicated to cleaning, organizing, and optimizing its overall memory store. This includes the mechanisms for removing redundant or outdated information to ensure efficient recall.'
 - question: How does memory storage for bots impact their performance?
   answer: The way a bot's memory is stored significantly impacts its performance. Inefficient storage can lead to slow retrieval, increased computational costs, and degraded decision-making. Effective memory storage, managed by a bot memory janitor AI, is crucial for speed and accuracy.
 - question: When will Janitor AI be back up?

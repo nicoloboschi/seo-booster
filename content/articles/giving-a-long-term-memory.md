@@ -14,6 +14,7 @@ tags:
 - vector databases for AI memory
 - summarization for AI memory
 - episodic vs semantic AI memory
+- how do AI agents store and retrieve long-term memory
 keywords:
 - giving a long term memory
 - AI agent long-term memory
@@ -24,6 +25,7 @@ keywords:
 - vector databases for AI memory
 - summarization for AI memory
 - episodic vs semantic AI memory
+- how do AI agents store and retrieve long-term memory
 faq:
 - question: What is the primary challenge in giving AI agents long-term memory?
   answer: The main challenge is overcoming the inherent limitations of context windows in Large Language Models (LLMs), which restrict the amount of information an agent can process at any given time, necessitating
@@ -46,6 +48,9 @@ faq:
 - question: How can AI agents utilize past interactions for better performance?
   answer: AI agents can utilize past interactions by storing them as memories. This allows them to recall context, user preferences, and previous problem-solving steps, leading to more personalized, efficient,
     and contextually aware responses in future interactions. This is a core aspect of giving an AI agent long-term memory.
+- question: How do AI agents store and retrieve long-term memory?
+  answer: AI agents store long-term memory by using external databases (like vector databases or key-value stores) to persist information beyond their immediate context window. Retrieval involves querying
+    these databases, often using semantic similarity (for vector databases) or direct lookups (for key-value stores), to find relevant past data that informs current decision-making.
 slug: giving-a-long-term-memory
 ---
 
@@ -63,7 +68,7 @@ Large Language Models (LLMs) typically operate with a fixed **context window**. 
 
 Several architectural patterns exist for implementing long-term memory in AI agents. These often involve external storage systems that complement the LLM's inherent limitations. Understanding these **AI memory architectures** is key to developing agents that can truly remember and effectively use persistent AI memory.
 
-### Vector Databases for Semantic Recall
+### How AI Agents Store and Retrieve Long-Term Memory: Vector Databases for Semantic Recall
 
 A popular approach involves using **vector databases for AI memory** to store and retrieve information. Information is first converted into numerical representations called **embeddings** using models like Sentence-BERT or OpenAI's embedding API. These embeddings capture the semantic meaning of the text.
 

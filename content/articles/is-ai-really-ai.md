@@ -55,7 +55,7 @@ faq:
   answer: Human intelligence involves consciousness, subjective experience, and broad adaptability. Current AI excels at specific tasks through vast data processing but lacks these human attributes.
 - question: Will AI ever achieve true sentience?
   answer: The possibility of AI achieving true sentience remains a theoretical debate. It depends on future technological advancements and our understanding of consciousness itself.
-- question: What is the primary difference between current AI and current AI capabilities?
+- question: What is the primary difference between current AI and human intelligence?
   answer: Current AI excels at specific, data-intensive tasks through advanced pattern recognition and computation. Human intelligence is characterized by consciousness, subjective experience, broad adaptability,
     and a deep, intuitive understanding of the world that AI has not yet replicated.
 - question: Can AI truly be creative?
@@ -70,6 +70,9 @@ faq:
 - question: What are the key limitations of current AI systems?
   answer: Current AI systems face significant limitations, including context window constraints (short-term memory issues), a lack of subjective experience or sentience, and the "black box" problem, which
     hinders transparency in their decision-making processes. These limitations are central to the debate of whether AI is truly AI.
+- question: What is the difference between AI sentience and AI consciousness?
+  answer: AI sentience refers to the capacity for subjective experience and feeling, while AI consciousness involves self-awareness and the ability to be aware of one's own existence and thoughts. Both
+    are currently theoretical concepts for AI, not realized capabilities.
 slug: is-ai-really-ai
 ---
 
@@ -244,3 +247,7 @@ Effective AI agent memory systems are crucial for creating agents that can maint
 ### What are the key limitations of current AI systems?
 
 Current AI systems face significant limitations, including context window constraints (short-term memory issues), a lack of subjective experience or sentience, and the "black box" problem, which hinders transparency in their decision-making processes. These limitations are central to the debate of whether AI is truly AI.
+
+### What is the difference between AI sentience and AI consciousness?
+
+AI sentience refers to the capacity for subjective experience and feeling, while AI consciousness involves self-awareness and the ability to be aware of one's own existence and thoughts. Both are currently theoretical concepts for AI, not realized capabilities.

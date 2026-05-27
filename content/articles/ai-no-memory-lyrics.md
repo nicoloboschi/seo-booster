@@ -53,8 +53,8 @@ faq:
   answer: ' "Letta ai agent memory" refers to the concept of memory within AI agents, particularly focusing on how these agents store, retrieve, and utilize information over time. It encompasses various
     AI memory systems and strategies designed to give agents a form of recall.'
 - question: How does "letta ai agent memory" differ from general AI memory?
-  answer: "Letta ai agent memory" specifically focuses on the practical implementation and strategies for enabling memory within autonomous AI agents. It emphasizes how these agents leverage various memory
-    systems to maintain context, learn from interactions, and perform tasks over extended periods, going beyond just storing data to actively using it for agentic behavior.
+  answer: '"Letta ai agent memory" specifically focuses on the practical implementation and strategies for enabling memory within autonomous AI agents. It emphasizes how these agents use various memory
+    systems to maintain context, learn from interactions, and perform tasks over extended periods, going beyond just storing data to actively using it for agentic behavior.'
 - question: What are the key components of "letta ai agent memory"?
   answer: Key components of "letta ai agent memory" include short-term memory (context windows), long-term memory (vector databases, knowledge graphs), memory consolidation techniques, and temporal reasoning capabilities, all integrated into the AI agent's architecture.
 slug: ai-no-memory-lyrics

@@ -47,6 +47,9 @@ faq:
 - question: How can vector databases help prevent AI losing context?
   answer: Vector databases store conversation snippets as semantic embeddings. This allows AI to query for semantically similar past interactions, retrieving relevant context even from distant parts of
     a conversation, thus preventing AI losing context.
+- question: What are the primary causes of AI losing context in conversations?
+  answer: The primary causes of AI losing context include limitations in the LLM's context window, the stateless nature of LLMs, and challenges in effectively retrieving relevant information from past interactions.
+    These factors contribute to AI forgetting conversations and AI's memory gaps.
 slug: chatbot-memory-loss
 ---
 ---
@@ -160,6 +163,3 @@ conversation_stateless = ConversationChain(
 )
 
 print("
-
-What to optimize:
-Content depth: Position 6.8. Ranking queries: . Add more depth around these terms, add an FAQ entry, ensure keywords appear in H2/H3 headings.

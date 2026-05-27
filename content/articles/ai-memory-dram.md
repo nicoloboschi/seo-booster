@@ -37,6 +37,9 @@ faq:
 - question: What are the performance implications of using AI SDRAM?
   answer: AI SDRAM significantly enhances AI performance by providing higher bandwidth and lower latency. This translates to faster AI model training, quicker inference, and the ability for AI agents to
     handle more complex tasks and larger datasets with greater efficiency.
+- question: What is AI SDRAM specifically?
+  answer: AI SDRAM refers to Synchronous Dynamic Random-Access Memory that has been specifically engineered or selected for its suitability in AI applications. This means it prioritizes high bandwidth,
+    low latency, and sufficient capacity to meet the intensive demands of AI workloads, such as deep learning training and inference.
 slug: ai-memory-dram
 ---
 
@@ -202,3 +205,6 @@ This code uses `psutil` to check available memory, simulating how an AI applicat
 
 * **Question:** What are the performance implications of using AI SDRAM?
  **Answer:** AI SDRAM significantly enhances AI performance by providing higher bandwidth and lower latency. This translates to faster AI model training, quicker inference, and the ability for AI agents to handle more complex tasks and larger datasets with greater efficiency.
+
+* **Question:** What is AI SDRAM specifically?
+ **Answer:** AI SDRAM refers to Synchronous Dynamic Random-Access Memory that has been specifically engineered or selected for its suitability in AI applications. This means it prioritizes high bandwidth, low latency, and sufficient capacity to meet the intensive demands of AI workloads, such as deep learning training and inference.

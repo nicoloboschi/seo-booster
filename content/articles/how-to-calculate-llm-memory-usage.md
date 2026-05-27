@@ -45,10 +45,14 @@ faq:
 - question: What are the benefits of using quantization for LLM memory usage?
   answer: Quantization reduces the precision of model weights (e.g., from FP16 to INT8 or INT4), significantly decreasing memory usage and often speeding up inference with minimal accuracy loss. This is
     a key technique when considering how to calculate LLM memory usage and then reduce it.
+- question: What is an LLM total memory calculation?
+  answer: An LLM total memory calculation is an estimation of the combined memory required for model parameters, input/output tokens, context window, and intermediate computations like the KV cache. It's
+    a crucial step for effective LLM resource management.
 slug: how-to-calculate-llm-memory-usage
 ---
+---
 
-Imagine your cutting-edge LLM application crashing mid-sentence due to a memory overflow. Understanding how to calculate LLM memory usage is the critical first step to preventing such costly failures, ensuring your AI runs smoothly and efficiently by accounting for parameters, tokens, and intermediate states. This guide will delve into the practical aspects of LLM resource management.
+Imagine your cutting-edge LLM application crashing mid-sentence due to a memory overflow. Understanding how to calculate LLM memory usage is the critical first step to preventing such costly failures, ensuring your AI runs smoothly and efficiently by accounting for parameters, tokens, and intermediate states. This guide will delve into the practical aspects of LLM resource management and provide a comprehensive approach to LLM total memory calculation.
 
 ## What is LLM Memory Usage?
 
@@ -249,3 +253,6 @@ Increasing the batch size means processing more inputs simultaneously, which lin
 
 ### What are the benefits of using quantization for LLM memory usage?
 Quantization reduces the precision of model weights (e.g., from FP16 to INT8 or INT4), significantly decreasing memory usage and often speeding up inference with minimal accuracy loss. This is a key technique when considering how to calculate LLM memory usage and then reduce it.
+
+### What is an LLM total memory calculation?
+An LLM total memory calculation is an estimation of the combined memory required for model parameters, input/output tokens, context window, and intermediate computations like the KV cache. It's a crucial step for effective LLM resource management.

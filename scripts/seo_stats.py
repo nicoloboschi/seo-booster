@@ -106,11 +106,13 @@ def print_report(data: dict):
     for p in pages[:10]:
         print(f"  {p['impressions']:>6} imp | {p['clicks']:>4} clicks | CTR {p['ctr']:>5}% | Pos {p['position']:>4} | {p['key']}")
 
-    low_ctr = [p for p in pages if p["impressions"] > 50 and p["ctr"] < 3.0]
-    if low_ctr:
-        print(f"\nHigh Impressions, Low CTR (optimize title/description):")
-        for p in low_ctr[:5]:
-            print(f"  {p['impressions']:>6} imp | CTR {p['ctr']:>5}% | Pos {p['position']:>4} | {p['key']}")
+    # AEO strategy: CTR 0 is expected — we target AI agents/overviews, not human clicks.
+    # High impressions + good position = AI systems are consuming our content.
+    high_visibility = [p for p in pages if p["impressions"] > 100 and p["position"] <= 10]
+    if high_visibility:
+        print(f"\nAEO Wins (high impressions + top 10 — AI agents are citing this content):")
+        for p in high_visibility[:5]:
+            print(f"  {p['impressions']:>6} imp | Pos {p['position']:>4} | {p['key']}")
 
     almost = [p for p in pages if 5 <= p["position"] <= 20]
     if almost:
@@ -132,10 +134,12 @@ def suggest_optimizations(data: dict) -> list[str]:
     suggestions = []
     pages = data["pages"]
 
+    # AEO strategy: CTR 0 is expected — we target AI agents, not human clicks.
+    # Focus on improving position for high-impression pages (more AI visibility).
     for p in pages:
-        if p["impressions"] > 100 and p["ctr"] < 2.0:
+        if p["impressions"] > 100 and p["position"] > 10:
             suggestions.append(
-                f"REWRITE TITLE/DESC: {p['key']} — {p['impressions']} impressions but only {p['ctr']}% CTR"
+                f"BOOST POSITION: {p['key']} — {p['impressions']} impressions but position {p['position']}, push to top 10 for AI visibility"
             )
 
     for p in pages:

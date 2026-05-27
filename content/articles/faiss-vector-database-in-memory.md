@@ -53,6 +53,9 @@ faq:
 - question: How can I implement a FAISS DB for AI memory?
   answer: Implementing a FAISS DB for AI memory involves generating vector embeddings of your data, choosing an appropriate FAISS index type (e.g., `IndexFlatL2` for exact search, `IndexIVFFlat` or `IndexHNSW`
     for approximate search), adding the vectors to the index, and then loading the index into memory for fast querying. Libraries like `faiss-cpu` or `faiss-gpu` in Python can be used for this purpose.
+- question: What are the primary use cases for a FAISS DB in AI applications?
+  answer: The primary use cases for a FAISS DB include semantic search, recommendation systems, image and audio retrieval, anomaly detection, and powering the memory systems of AI agents. Its ability to
+    perform fast similarity searches on vector embeddings makes it invaluable for any application requiring efficient data retrieval based on meaning rather than keywords.
 slug: faiss-vector-database-in-memory
 ---
 

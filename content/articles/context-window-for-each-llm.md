@@ -47,6 +47,9 @@ faq:
 - question: What is the "lost in the middle" phenomenon in LLMs?
   answer: The "lost in the middle" phenomenon refers to LLMs struggling to recall information located in the middle of long texts, even with large context windows. Models tend to focus more on information
     at the beginning and end of the context.
+- question: What is the difference between LLM context window and AI context windows?
+  answer: An LLM's context window is the technical term for its token processing limit. "AI context windows" is a broader term referring to the context window sizes of various LLMs, emphasizing the practical
+    application for AI agents.
 slug: context-window-for-each-llm
 ---
 ---
@@ -203,3 +206,6 @@ Compaction strategies are techniques used to reduce the token count of input dat
 
 ### What is the "lost in the middle" phenomenon in LLMs?
 The "lost in the middle" phenomenon refers to LLMs struggling to recall information located in the middle of long texts, even with large context windows. Models tend to focus more on information at the beginning and end of the context.
+
+### What is the difference between LLM context window and AI context windows?
+An LLM's context window is the technical term for its token processing limit. "AI context windows" is a broader term referring to the context window sizes of various LLMs, emphasizing the practical application for AI agents.

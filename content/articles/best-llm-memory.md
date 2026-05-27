@@ -45,6 +45,9 @@ faq:
 - question: What makes an LLM memory system "the best"?
   answer: The "best" LLM memory system is one that effectively addresses the specific needs of an AI agent, balancing scalability, retrieval accuracy, integration ease, and cost. It typically involves a
     combination of short-term, medium-term, and long-term memory strategies.
+- question: What are the core components of a robust AI agent memory system?
+  answer: A robust AI agent memory system typically comprises short-term memory (LLM's context window), medium-term memory (caching recent interactions), and long-term memory (persistent storage like vector
+    databases or structured logs) to ensure comprehensive recall and statefulness.
 slug: best-llm-memory
 ---
 
@@ -213,4 +216,3 @@ prompt = PromptTemplate(input_variables=["human_input", "chat_history"], templat
 
 ## Conceptual demonstration of memory usage:
 print("
-```

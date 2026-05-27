@@ -49,6 +49,9 @@ faq:
 - question: What does "AI that never forgets" imply for user experience?
   answer: An AI that never forgets can lead to a significantly improved user experience by providing consistent, personalized, and context-aware interactions. Users won't have to repeat information, and
     the AI can proactively offer relevant assistance based on its complete history with the user.
+- question: What are the core principles behind achieving unlimited AI memory?
+  answer: The core principles involve decoupling an AI's reasoning from its memory, utilizing external persistent storage, and employing efficient retrieval mechanisms. This allows for a virtually unbounded
+    capacity to store and recall information, moving beyond the limitations of internal model states.
 slug: ai-infinite-memory
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'LLM Memory Icon: Visualizing AI's Recall Capabilities and Agent Memory'
+title: "LLM Memory Icon: Visualizing AI's Recall Capabilities and Agent Memory"
 description: Explore the LLM memory icon, representing how large language models store and retrieve information. Understand its role in AI memory visualization and agent recall, crucial for advanced AI agent functionality.
 date: 2026-04-06
 lastmod: 2026-04-06

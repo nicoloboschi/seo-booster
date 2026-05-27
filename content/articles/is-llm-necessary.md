@@ -46,6 +46,9 @@ faq:
 - question: What are the core AI memory functions that don't require an LLM?
   answer: Core AI memory functions such as storage, retrieval, organization, and forgetting/pruning can be implemented using specialized data structures and algorithms without the need for a full LLM. Vector
     databases and knowledge graphs are prime examples of systems that handle these functions efficiently.
+- question: What are the primary components of an AI agent's memory system?
+  answer: The primary components of an AI agent's memory system are storage (how information is saved), retrieval (how it's accessed), organization (how it's structured), and forgetting/pruning (how irrelevant
+    data is managed). These functions are critical for an agent's intelligence and can be implemented with or without an LLM.
 slug: is-llm-necessary
 ---
 
@@ -215,4 +218,6 @@ The trend in advanced AI agent development is towards **hybrid memory systems** 
  The core functions of AI agent memory include storage, retrieval, organization, and forgetting/pruning. These functions are essential for any intelligent system to retain and use information effectively.
 * **What are the core AI memory functions that don't require an LLM?**
  Core AI memory functions such as storage, retrieval, organization, and forgetting/pruning can be implemented using specialized data structures and algorithms without the need for a full LLM. Vector databases and knowledge graphs are prime examples of systems that handle these functions efficiently.
+* **What are the primary components of an AI agent's memory system?**
+ The primary components of an AI agent's memory system are storage (how information is saved), retrieval (how it's accessed), organization (how it's structured), and forgetting/pruning (how irrelevant data is managed). These functions are critical for an agent's intelligence and can be implemented with or without an LLM.
 ---

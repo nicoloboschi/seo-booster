@@ -113,13 +113,13 @@ A study by the Stanford AI Lab in 2023 found that AI agents equipped with robust
 
 Zep's architecture is built around several key components that contribute to its powerful memory capabilities. Understanding these features helps clarify its value proposition, whether you're using the free or paid version. For many, the core question remains, **is Zep Memory free** for their specific use case.
 
-### Semantic Search and Vector Embeddings
+### Semantic Search and Vector Embeddings for Zep AI Memory Platform
 
 At its heart, Zep uses **vector embeddings** to represent the meaning of text. It stores these embeddings in a **vector database**, allowing for incredibly fast and accurate **semantic search**. This means Zep doesn't just recall keywords; it understands the *meaning* behind queries and retrieves the most contextually relevant memories. This capability is crucial for building effective **long-term memory AI agents**.
 
-A 2024 study published on arXiv demonstrated that retrieval-augmented generation (RAG) systems, which heavily rely on semantic search and embeddings, showed a **34% improvement in task completion accuracy** compared to baseline models. This highlights the practical impact of such memory technologies, and Zep's architecture directly supports these advancements.
+A 2024 study published on arXiv demonstrated that retrieval-augmented generation (RAG) systems, which heavily rely on semantic search and embeddings, showed a **34% improvement in task completion accuracy** compared to baseline models. This highlights the practical impact of such memory technologies, and Zep's architecture directly supports these advancements. The **Zep AI memory platform** uses these technologies to provide robust recall.
 
-### Memory Types Supported
+### Memory Types Supported by Zep
 
 Zep supports various forms of memory, catering to different AI needs. This variety ensures that whether you're using the free or paid option, you can effectively manage your AI's recall.
 

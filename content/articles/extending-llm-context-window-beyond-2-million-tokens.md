@@ -45,7 +45,11 @@ faq:
 - question: How does a large context window improve AI memory?
   answer: A larger context window allows LLMs to retain and recall information from a much greater span of input, effectively enhancing their 'memory' within a single interaction or processing task. This
     enables more coherent and contextually aware responses by preventing information loss over long sequences.
+- question: What are the limitations of current LLM context windows?
+  answer: Current LLM context windows are often limited by computational costs and the quadratic scaling of the Transformer's attention mechanism, typically ranging from a few thousand to tens of thousands
+    of tokens, making it challenging to process very large datasets efficiently.
 slug: extending-llm-context-window-beyond-2-million-tokens
+---
 ---
 
 **Extending LLM context window beyond 2 million tokens** refers to the capability of Large Language Models to process and retain information from extremely long sequences, significantly surpassing typical limits. This advancement enables deeper analysis and more accurate reasoning over vast datasets, unlocking new AI applications and revolutionizing **AI memory systems**.
@@ -170,3 +174,4 @@ def simple_long_context_processing(data_sequence, window_size=1000):
 long_sequence = np.random.rand(5000) # A sequence of 5000 tokens
 
 print("
+

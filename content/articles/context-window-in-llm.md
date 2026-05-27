@@ -41,7 +41,7 @@ faq:
     in the middle of a long context is less effectively used. The optimal size depends on the specific application and task requirements. According to a 2023 study by [Stanford AI Lab](https://arxiv.org/abs/2309.00901),
     performance on certain tasks can degrade with extremely long contexts if not managed properly, even with a large **context length**.
 - question: What is context engineering?
-  answer: **Context engineering** is the practice of strategically designing and managing the input provided to an LLM to maximize its effectiveness. This involves carefully crafting prompts, selecting relevant information, and employing techniques to overcome the limitations of the LLM's **context window**, ensuring the model has the necessary information to perform a task accurately.
+  answer: '**Context engineering** is the practice of strategically designing and managing the input provided to an LLM to maximize its effectiveness. This involves carefully crafting prompts, selecting relevant information, and employing techniques to overcome the limitations of the LLM''s **context window**, ensuring the model has the necessary information to perform a task accurately.'
 slug: context-window-in-llm
 ---
 

@@ -48,6 +48,9 @@ faq:
 - question: How does AI reasoning contribute to AI getting smarter?
   answer: AI reasoning enables AI to move beyond simple data processing to making logical deductions, inferences, and solving problems. This capability allows AI agents to understand cause-and-effect, plan,
     and make more informed decisions, significantly enhancing their perceived intelligence and overall AI capabilities.
+- question: How do AI memory systems and AI reasoning work together to enhance AI capabilities?
+  answer: AI memory systems provide the data and context that AI reasoning processes. By recalling past experiences and factual knowledge, AI reasoning can make more informed deductions, predictions, and
+    decisions, leading to a synergistic increase in overall AI capabilities and perceived intelligence.
 slug: is-ai-getting-smarter
 ---
 
@@ -186,4 +189,3 @@ print(agent.process_input("I'm thinking about AI memory."))
 
 print("\n")
 print(agent.recall_recent_interactions())
-```

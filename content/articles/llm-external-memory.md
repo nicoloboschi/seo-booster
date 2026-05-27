@@ -1,5 +1,5 @@
 ---
-title: 'LLM External Memory: Expanding AI's Knowledge Beyond Context Windows'
+title: "LLM External Memory: Expanding AI's Knowledge Beyond Context Windows"
 description: Explore LLM external memory systems, their importance for AI agents, and how they overcome context window limitations for enhanced recall and reasoning. Learn about RAG, vector databases, and implementation strategies.
 date: 2026-04-04
 lastmod: 2026-04-04

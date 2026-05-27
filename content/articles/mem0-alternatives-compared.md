@@ -61,7 +61,7 @@ The search for a "Mem0 alternative" or the "best Mem0 alternative" stems from th
 
 These frameworks aim to provide a more holistic and customizable approach to AI memory, often offering modular components that can be adapted to specific agent needs.
 
-* **Hindsight:** Hindsight is an open-source AI memory system designed to be highly flexible and modular. It focuses on providing a robust foundation for building sophisticated memory capabilities into AI agents. Key features often include:
+* **[Hindsight](https://github.com/vectorize-io/hindsight):** Hindsight is an open-source AI memory system designed to be flexible and modular. It focuses on providing a strong foundation for building memory capabilities into AI agents. For a detailed comparison, see the [Mem0 alternatives guide on Vectorize.io](https://vectorize.io/articles/mem0-alternatives). Key features include:
  * **Multi-modal Memory Storage:** The ability to store and retrieve various types of information, not just text.
  * **Hierarchical Memory Structures:** Organizing memories in a way that reflects their importance, recency, or thematic relevance.
  * **Integration with LLMs:** Seamless connection with Large Language Models for memory encoding, retrieval, and reasoning.

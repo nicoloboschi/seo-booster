@@ -45,6 +45,9 @@ faq:
 - question: How do transformer context limits impact LLM performance?
   answer: Transformer context limits, defined by the context window size, directly affect an LLM's ability to retain information. A smaller context window means the model can process less input at once,
     potentially leading to a loss of crucial details in longer interactions or documents, thus impacting overall LLM performance and the relevance of its outputs.
+- question: What is the importance of LLM context window ranking?
+  answer: LLM context window ranking is crucial because it helps users and developers understand and compare the memory capabilities of different LLMs. This allows for better selection of models for tasks
+    that require processing long texts or maintaining context in extended conversations, ultimately leading to improved AI application performance.
 slug: context-window-llm-ranking
 ---
 

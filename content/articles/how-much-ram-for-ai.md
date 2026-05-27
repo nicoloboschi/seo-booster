@@ -50,6 +50,10 @@ faq:
 - question: What is the difference between RAM and VRAM for AI?
   answer: RAM (system memory) is used by the CPU for general computing tasks, including loading data and managing processes. VRAM (GPU memory) is dedicated to the GPU and is critical for storing AI model
     parameters and performing rapid parallel computations. Both are essential, but VRAM is often the primary bottleneck for deep learning, directly impacting GPU RAM for AI.
+- question: How does AI agent memory affect RAM usage?
+  answer: An AI agent's memory system, whether it's a short-term buffer for conversations or a long-term knowledge store like those discussed in [long-term memory for AI agents](/articles/long-term-memory-ai-agent/),
+    contributes to overall **AI memory usage**. Storing embeddings, conversation histories, or retrieved information requires system RAM and potentially VRAM if integrated into the model's processing pipeline.
+    Memory consolidation techniques also add to computational and memory overhead.
 slug: how-much-ram-for-ai
 ---
 

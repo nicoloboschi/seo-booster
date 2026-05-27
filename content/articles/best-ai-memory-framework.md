@@ -51,6 +51,9 @@ faq:
 - question: How does an AI memory framework contribute to an agent's long-term coherence?
   answer: By providing persistent storage and efficient retrieval of past interactions, knowledge, and experiences, an AI memory framework allows agents to maintain context, learn from past actions, and
     exhibit consistent behavior over time, leading to improved long-term coherence.
+- question: What are the benefits of using an AI memory framework for LLM agents?
+  answer: AI memory frameworks provide LLM agents with the ability to retain information beyond their limited context window, enabling them to learn from past interactions, maintain context across extended
+    conversations, and perform more complex, stateful tasks. This leads to more coherent and intelligent agent behavior.
 slug: best-ai-memory-framework
 ---
 
