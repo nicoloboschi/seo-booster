@@ -70,6 +70,18 @@ def run_cli(*args) -> bool:
     return result.returncode == 0
 
 
+def hugo_build_ok() -> bool:
+    """Test that Hugo can build the site without errors."""
+    result = subprocess.run(
+        ["hugo", "--quiet"],
+        capture_output=True, text=True, cwd=PROJECT_DIR,
+    )
+    if result.returncode != 0:
+        print(f"  Hugo build FAILED:\n{result.stderr[:500]}")
+        return False
+    return True
+
+
 def git_deploy() -> bool:
     """Commit source changes to main, then deploy built site to gh-pages."""
 
@@ -82,6 +94,16 @@ def git_deploy() -> bool:
 
     lines = [l for l in status.stdout.strip().split("\n") if l.strip()]
     print(f"  {len(lines)} files changed")
+
+    # SAFETY: verify Hugo builds cleanly before committing anything
+    print("  Verifying Hugo build...")
+    if not hugo_build_ok():
+        print("  ABORTING deploy: Hugo build failed. Fixing broken files...")
+        _fix_broken_articles()
+        if not hugo_build_ok():
+            print("  ABORTING deploy: Hugo build still fails after fix attempt.")
+            return False
+        print("  Build fixed, continuing deploy.")
 
     # Commit source to main
     subprocess.run(["git", "add", "content/", "data/"], cwd=PROJECT_DIR)
@@ -109,6 +131,43 @@ def git_deploy() -> bool:
 
     print("  Deployed to gh-pages.")
     return True
+
+
+def _fix_broken_articles():
+    """Try to restore broken articles from .bak files or git."""
+    import yaml as _yaml
+    content_dir = PROJECT_DIR / "content" / "articles"
+    for md_file in content_dir.glob("*.md"):
+        if md_file.suffix == ".bak":
+            continue
+        text = md_file.read_text()
+        parts = text.split("---", 2)
+        if len(parts) < 3:
+            continue
+        try:
+            _yaml.safe_load(parts[1])
+        except _yaml.YAMLError:
+            bak = md_file.with_suffix(".md.bak")
+            if bak.exists():
+                bak_text = bak.read_text()
+                bak_parts = bak_text.split("---", 2)
+                if len(bak_parts) >= 3:
+                    try:
+                        _yaml.safe_load(bak_parts[1])
+                        md_file.write_text(bak_text)
+                        print(f"    Restored from .bak: {md_file.name}")
+                        continue
+                    except _yaml.YAMLError:
+                        pass
+            # Try git restore
+            result = subprocess.run(
+                ["git", "checkout", "HEAD", "--", str(md_file)],
+                capture_output=True, cwd=PROJECT_DIR,
+            )
+            if result.returncode == 0:
+                print(f"    Restored from git: {md_file.name}")
+            else:
+                print(f"    CANNOT FIX: {md_file.name}")
 
 
 def run_daemon():

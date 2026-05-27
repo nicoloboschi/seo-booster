@@ -31,6 +31,20 @@ What to optimize:
 """
 
 
+def _validate_front_matter(content: str) -> bool:
+    """Check that content has valid YAML front matter."""
+    import re
+    import yaml
+    fm_match = re.match(r"^---\n(.*?\n)---\n", content, re.DOTALL)
+    if not fm_match:
+        return False
+    try:
+        fm = yaml.safe_load(fm_match.group(1))
+        return isinstance(fm, dict)
+    except yaml.YAMLError:
+        return False
+
+
 def _get_client() -> genai.Client:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -112,6 +126,11 @@ def apply_optimizations(report_path: str, content_dir: str):
             if optimized.startswith("```"):
                 optimized = optimized.split("\n", 1)[1].rsplit("```", 1)[0]
 
+            # Validate YAML front matter before writing
+            if not _validate_front_matter(optimized):
+                print(f"  ✗ Skipped: LLM returned invalid YAML front matter")
+                continue
+
             backup_file = content_path / f"{slug}.md.bak"
             backup_file.write_text(article_content)
 
@@ -122,6 +141,13 @@ def apply_optimizations(report_path: str, content_dir: str):
             pp_fixes = postprocess_article(article_file)
             if pp_fixes:
                 print(f"    Post-processed: {len(pp_fixes)} fixes")
+
+            # Validate again after post-processing
+            final_content = article_file.read_text()
+            if not _validate_front_matter(final_content):
+                print(f"  ✗ Rolled back: post-processing broke YAML")
+                article_file.write_text(article_content)
+                continue
 
             optimized_count += 1
             print(f"  → Optimized and saved. Backup at {backup_file}")

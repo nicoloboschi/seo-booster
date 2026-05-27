@@ -491,6 +491,13 @@ Existing articles on the site (link to these where relevant using /articles/slug
                 print(f"    Final score={score} after {MAX_REVISIONS} revisions (accepting)")
 
             article_file = output_path / f"{slug}.md"
+
+            # Validate YAML front matter before saving
+            from scripts.optimize import _validate_front_matter
+            if not _validate_front_matter(article_content):
+                print(f"    ✗ Skipped: generated article has invalid YAML")
+                continue
+
             article_file.write_text(article_content)
 
             generated[slug] = {
