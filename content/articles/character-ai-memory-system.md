@@ -74,7 +74,6 @@ The effectiveness of any AI character hinges on its ability to remember. This is
 
 Character AI likely employs a multi-layered approach to memory. This typically involves a combination of short-term, working, and long-term memory components, each serving a distinct purpose in managing conversational data within the **character AI memory system**.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Short-Term and Working Memory Details

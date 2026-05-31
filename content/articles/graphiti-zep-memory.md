@@ -1,6 +1,6 @@
 ---
 title: 'Graphiti Zep Memory: Enhancing AI Recall with Vector Databases and Zep'
-description: "Explore Graphiti Zep Memory, a powerful AI memory solution combining Zep's structured data with vector databases for superior AI recall. Learn about Zep Memory, practical examples, and code snippets."
+description: Explore Graphiti Zep Memory, a powerful AI memory solution combining Zep's structured data with vector databases for superior AI recall. Learn about Zep Memory, p...
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:
@@ -29,13 +29,18 @@ faq:
 - question: Can Graphiti Zep Memory be used for long-term AI memory?
   answer: Yes, Graphiti Zep Memory is designed to facilitate long-term AI memory by storing vast amounts of data and enabling efficient retrieval, overcoming the limitations of short-term context windows.
 - question: What is Zep Memory in the context of AI?
-  answer: Zep Memory is a specialized memory store designed for Large Language Model (LLM) applications. It excels at storing and retrieving conversational data, user profiles, and other structured information, providing a robust foundation for AI agents to maintain context and recall past interactions effectively.
+  answer: Zep Memory is a specialized memory store designed for Large Language Model (LLM) applications. It excels at storing and retrieving conversational data, user profiles, and other structured information,
+    providing a robust foundation for AI agents to maintain context and recall past interactions effectively.
 - question: What are the core components of Graphiti Zep Memory?
-  answer: The core components of Graphiti Zep Memory are Zep, which handles structured conversational data, and a vector database, which manages semantic search through vector embeddings. This combination allows for comprehensive AI recall.
+  answer: The core components of Graphiti Zep Memory are Zep, which handles structured conversational data, and a vector database, which manages semantic search through vector embeddings. This combination
+    allows for comprehensive AI recall.
 - question: How does Zep contribute to Graphiti Zep Memory?
-  answer: Zep acts as the structured data layer within Graphiti Zep Memory, specifically designed to store and retrieve conversational data, user profiles, and other structured information. Its ability to maintain the chronological and thematic order of interactions is crucial for providing context to AI agents.
+  answer: Zep acts as the structured data layer within Graphiti Zep Memory, specifically designed to store and retrieve conversational data, user profiles, and other structured information. Its ability
+    to maintain the chronological and thematic order of interactions is crucial for providing context to AI agents.
 - question: What are the benefits of using Zep for AI memory?
-  answer: Zep offers structured storage for conversational data, user profiles, and other LLM-specific information. It excels at maintaining the chronological and thematic order of interactions, providing a robust foundation for AI agents to recall past dialogues and user preferences effectively, which is a key component of **Zep Memory**.
+  answer: Zep offers structured storage for conversational data, user profiles, and other LLM-specific information. It excels at maintaining the chronological and thematic order of interactions, providing
+    a robust foundation for AI agents to recall past dialogues and user preferences effectively, which is a key component of **Zep Memory**.
+slug: graphiti-zep-memory
 ---
 
 **Graphiti Zep Memory** enhances AI recall by integrating Zep's structured conversational data with vector database semantic search. This fusion allows AI agents to efficiently retrieve relevant past information, significantly improving contextual understanding and response accuracy. It's a key architecture for AI that remembers.

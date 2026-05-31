@@ -49,6 +49,7 @@ faq:
     information directly.
 slug: context-window-for-local-llm
 ---
+---
 
 The **context window for local LLM** is the maximum number of tokens an AI model can process simultaneously, acting as its immediate working memory. This constraint dictates how much information an AI model can 'see' when processing input and generating output, directly impacting its understanding and performance on complex tasks.
 

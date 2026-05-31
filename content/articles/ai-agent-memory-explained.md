@@ -66,7 +66,6 @@ These functions map directly to the memory types described below. Understanding 
 
 Most **AI agent memory systems architecture** draws from cognitive science, organizing memory into three categories. Real systems often combine all three, but the distinctions matter for design decisions.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Episodic Memory: What Happened

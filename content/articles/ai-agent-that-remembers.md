@@ -99,7 +99,6 @@ For agents that require understanding complex relationships between entities, kn
 
 As AI agents become more sophisticated, **AI agent memory management** becomes paramount. This discipline focuses on optimizing the storage, retrieval, and consolidation of information.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### The Importance of AI Agent Memory Management

@@ -1,6 +1,6 @@
 ---
 title: 'AI Foundry Memory: Architecting Persistent Recall for Smarter AI Agents'
-description: Explore AI Foundry memory, a system designed for persistent recall in AI agents. Learn about its architecture, key components, and how it enhances agent capabilities with long-term memory.
+description: Explore AI Foundry memory, a system designed for persistent recall in AI agents. Learn about its architecture, key components, and how it enhances agent capabilit...
 date: 2026-03-26
 lastmod: 2026-03-26
 tags:
@@ -42,8 +42,8 @@ faq:
   answer: Unlike traditional databases that store structured data and rely on exact matches, **AI Foundry memory systems** often leverage vector databases. These systems store data as embeddings, enabling
     semantic search and retrieval based on meaning and context, which is crucial for **AI agent recall**.
 - question: What is the role of vector databases in AI Foundry memory?
-  answer: '**Vector databases** are crucial for **AI Foundry memory systems** as they enable efficient semantic search and retrieval. By storing data as vector embeddings, these databases allow agents to find information
-    based on meaning and context, rather than exact keyword matches, significantly improving **agent recall** and the overall effectiveness of **persistent memory for AI**.'
+  answer: '**Vector databases** are crucial for **AI Foundry memory systems** as they enable efficient semantic search and retrieval. By storing data as vector embeddings, these databases allow agents to
+    find information based on meaning and context, rather than exact keyword matches, significantly improving **agent recall** and the overall effectiveness of **persistent memory for AI**.'
 slug: ai-foundry-memory
 ---
 
