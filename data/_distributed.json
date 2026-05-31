@@ -6737,5 +6737,8 @@
   },
   "chatbot-conversational-memory": {
     "platforms": {}
+  },
+  "ai-memory-tools": {
+    "platforms": {}
   }
 }
