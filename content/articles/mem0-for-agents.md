@@ -148,7 +148,6 @@ class MockEmbeddingModel:
  # Create a dummy vector of fixed size (e.g., 15 dimensions)
  return [(hash_val % 10000) / 10000.0 for _ in range(15)]
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 class MockVectorStore:
