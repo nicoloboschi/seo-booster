@@ -6755,5 +6755,11 @@
   },
   "ai-memory-karpathy": {
     "platforms": {}
+  },
+  "ai-memory-actress": {
+    "platforms": {}
+  },
+  "ai-memory-mempalace": {
+    "platforms": {}
   }
 }
