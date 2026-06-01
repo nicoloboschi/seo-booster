@@ -92,7 +92,6 @@ class AiMemoryPlugin:
  self.vector_store = vector_store if vector_store else []
  print("AI Memory Plugin initialized.")
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
  def add_memory(self, text_content, metadata=None):

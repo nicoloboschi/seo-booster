@@ -49,7 +49,7 @@ faq:
     and utilize information from longer conversations or documents. Exceeding these window limits means older information is effectively discarded.
 slug: context-window-of-llm
 ---
----
+
 
 What if an AI could recall every word you've ever said to it? The **context window of an LLM** is the current barrier to that perfect memory. The **context window of an LLM** defines its immediate memory, dictating how much prior text it can process simultaneously. This finite capacity, measured in tokens, is crucial for AI's ability to understand context and generate relevant responses. Understanding this limitation is key to building effective AI.
 
