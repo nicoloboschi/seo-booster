@@ -5995,5 +5995,11 @@
     "generated_at": "2026-06-01T13:22:11.149006",
     "sources": [],
     "quality_score": 65
+  },
+  "ai-memory-plugin": {
+    "keyword": "ai memory plugin",
+    "generated_at": "2026-06-01T17:29:58.628093",
+    "sources": [],
+    "quality_score": 65
   }
 }
