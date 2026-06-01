@@ -133,7 +133,6 @@ class SimpleVectorStore:
 if os.path.exists('vector_store.json'):
  os.remove('vector_store.json')
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 vector_store = SimpleVectorStore(storage_path='vector_store.json')
