@@ -6749,5 +6749,11 @@
   },
   "ai-memory-infrastructure": {
     "platforms": {}
+  },
+  "ai-memory-core": {
+    "platforms": {}
+  },
+  "ai-memory-karpathy": {
+    "platforms": {}
   }
 }
