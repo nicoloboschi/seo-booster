@@ -136,7 +136,6 @@ palace.add_memory("User mentioned liking dogs yesterday", location3)
 query_vector = np.array([0.12, 0.23, 0.31])
 retrieved = palace.retrieve_memory(query_vector, radius=0.2)
 
-
 For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
 
 print("\nRetrieved memories:")
