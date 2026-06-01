@@ -6761,5 +6761,8 @@
   },
   "ai-memory-mempalace": {
     "platforms": {}
+  },
+  "ai-memory-knowledge-graph": {
+    "platforms": {}
   }
 }
