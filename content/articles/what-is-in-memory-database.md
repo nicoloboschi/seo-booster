@@ -111,7 +111,6 @@ These systems offer flexibility, allowing certain data sets or parts of datasets
 
 Despite their advantages, in-memory databases aren't a universal solution. Several challenges need careful consideration when evaluating **what is an in-memory database**.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Cost
