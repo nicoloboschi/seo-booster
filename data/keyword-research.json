@@ -9249,26 +9249,162 @@
       "matching_suggestions": [
         "what's an ai memory system"
       ]
+    },
+    {
+      "keyword": "ai memory actress",
+      "slug": "ai-memory-actress",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory actress"
+      ]
+    },
+    {
+      "keyword": "ai memory core",
+      "slug": "ai-memory-core",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory core"
+      ]
+    },
+    {
+      "keyword": "ai memory infrastructure",
+      "slug": "ai-memory-infrastructure",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory infrastructure"
+      ]
+    },
+    {
+      "keyword": "ai memory karpathy",
+      "slug": "ai-memory-karpathy",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory karpathy"
+      ]
+    },
+    {
+      "keyword": "ai memory knowledge graph",
+      "slug": "ai-memory-knowledge-graph",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory knowledge graph"
+      ]
+    },
+    {
+      "keyword": "ai memory mempalace",
+      "slug": "ai-memory-mempalace",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory mempalace"
+      ]
+    },
+    {
+      "keyword": "ai memory plugin",
+      "slug": "ai-memory-plugin",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory plugin"
+      ]
+    },
+    {
+      "keyword": "ai ram hoarding",
+      "slug": "ai-ram-hoarding",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram hoarding"
+      ]
+    },
+    {
+      "keyword": "best ai companion ever deep memory feels real",
+      "slug": "best-ai-companion-ever-deep-memory-feels-real",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai companion ever deep memory feels real"
+      ]
+    },
+    {
+      "keyword": "best ai long term memory",
+      "slug": "best-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai long term memory"
+      ]
+    },
+    {
+      "keyword": "best unified memory pc for ai",
+      "slug": "best-unified-memory-pc-for-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best unified memory pc for ai"
+      ]
+    },
+    {
+      "keyword": "claude ai conversation memory",
+      "slug": "claude-ai-conversation-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "claude ai conversation memory"
+      ]
+    },
+    {
+      "keyword": "context window size for llm",
+      "slug": "context-window-size-for-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window size for llm"
+      ]
+    },
+    {
+      "keyword": "context window size per llms",
+      "slug": "context-window-size-per-llms",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window size per llms"
+      ]
+    },
+    {
+      "keyword": "github llm persistent memory",
+      "slug": "github-llm-persistent-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "github llm persistent memory"
+      ]
+    },
+    {
+      "keyword": "google ai long term memory",
+      "slug": "google-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google ai long term memory"
+      ]
+    },
+    {
+      "keyword": "great long term memory bad short term",
+      "slug": "great-long-term-memory-bad-short-term",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "great long term memory bad short term"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory actress",
-    "ai memory core",
-    "ai memory infrastructure",
-    "ai memory karpathy",
-    "ai memory knowledge graph",
-    "ai memory mempalace",
-    "ai memory plugin",
-    "ai ram hoarding",
-    "best ai companion ever deep memory feels real",
-    "best ai long term memory",
-    "best unified memory pc for ai",
-    "claude ai conversation memory",
-    "context window size for llm",
-    "context window size per llms",
-    "github llm persistent memory",
-    "google ai long term memory",
-    "great long term memory bad short term",
     "how to give a long term memory",
     "how to give llm long term memory",
     "how to import ai memory to claude",
@@ -9290,9 +9426,9 @@
     "zep cloud memory"
   ],
   "summary": {
-    "total_keywords": 988,
-    "validated": 867,
+    "total_keywords": 1005,
+    "validated": 884,
     "low_volume": 121,
-    "new_opportunities_found": 36
+    "new_opportunities_found": 19
   }
 }
