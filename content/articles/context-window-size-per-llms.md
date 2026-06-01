@@ -127,7 +127,6 @@ class VectorDB:
  # In a real scenario, these would be embeddings
  self.embeddings = {k: self._embed(v) for k, v in self.documents.items()}
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
  def _embed(self, text):
