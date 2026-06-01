@@ -5935,5 +5935,17 @@
     "generated_at": "2026-06-01T05:01:44.214011",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-memory-palace": {
+    "keyword": "llm memory palace",
+    "generated_at": "2026-06-01T07:04:50.004338",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ai-memory-infrastructure": {
+    "keyword": "ai memory infrastructure",
+    "generated_at": "2026-06-01T07:08:51.158269",
+    "sources": [],
+    "quality_score": 65
   }
 }
