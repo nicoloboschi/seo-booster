@@ -182,7 +182,6 @@ This approach ensures the agent's behavior is informed by its past experiences. 
 
 **Zep Cloud Memory** operates within a broader ecosystem of AI memory solutions. Understanding its place helps in choosing the right tool for a given task.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Vector Databases

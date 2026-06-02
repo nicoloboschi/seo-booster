@@ -34,7 +34,6 @@ The distinction between **short term memory vs long term memory AI** is fundamen
 
 **Short term memory** in AI agents refers to the temporary storage of information, typically related to the immediate task or conversation. **Long term memory** pertains to the persistent storage and retrieval of information over extended periods, allowing agents to retain knowledge and recall past experiences.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### Defining Short Term Memory (Context Window)
