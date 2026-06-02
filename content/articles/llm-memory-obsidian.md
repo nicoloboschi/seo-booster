@@ -107,7 +107,6 @@ from typing import List, Dict
 
 OBSIDIAN_VAULT_PATH = "/path/to/your/obsidian/vault"
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 def get_markdown_files(directory: str) -> List[str]:
