@@ -70,7 +70,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 ## Simulate a vector database with a list of tuples (id, embedding)
 vector_db = []
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 def store_embedding(text, embedding_id):

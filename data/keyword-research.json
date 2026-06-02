@@ -9402,33 +9402,162 @@
       "matching_suggestions": [
         "great long term memory bad short term"
       ]
+    },
+    {
+      "keyword": "how to give a long term memory",
+      "slug": "how-to-give-a-long-term-memory",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give a long term memory",
+        "how to give a long term memory"
+      ]
+    },
+    {
+      "keyword": "how to give llm long term memory",
+      "slug": "how-to-give-llm-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to give llm long term memory"
+      ]
+    },
+    {
+      "keyword": "how to import ai memory to claude",
+      "slug": "how-to-import-ai-memory-to-claude",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to import ai memory to claude"
+      ]
+    },
+    {
+      "keyword": "how to keep long term memory",
+      "slug": "how-to-keep-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to keep long term memory"
+      ]
+    },
+    {
+      "keyword": "how to turn on claude ai memory",
+      "slug": "how-to-turn-on-claude-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to turn on claude ai memory"
+      ]
+    },
+    {
+      "keyword": "llm low memory",
+      "slug": "llm-low-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm low memory"
+      ]
+    },
+    {
+      "keyword": "llm memory local",
+      "slug": "llm-memory-local",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory local"
+      ]
+    },
+    {
+      "keyword": "llm memory obsidian",
+      "slug": "llm-memory-obsidian",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory obsidian"
+      ]
+    },
+    {
+      "keyword": "llm neural memory",
+      "slug": "llm-neural-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm neural memory"
+      ]
+    },
+    {
+      "keyword": "llm prompt context window",
+      "slug": "llm-prompt-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm prompt context window"
+      ]
+    },
+    {
+      "keyword": "mem0 hermes agent",
+      "slug": "mem0-hermes-agent",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "mem0 hermes agent"
+      ]
+    },
+    {
+      "keyword": "open source ai memory system",
+      "slug": "open-source-ai-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "open source ai memory system"
+      ]
+    },
+    {
+      "keyword": "short term memory vs long term memory ai",
+      "slug": "short-term-memory-vs-long-term-memory-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory vs long term memory ai"
+      ]
+    },
+    {
+      "keyword": "what is ai memories app",
+      "slug": "what-is-ai-memories-app",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is ai memories app"
+      ]
+    },
+    {
+      "keyword": "what is context window in ai llm",
+      "slug": "what-is-context-window-in-ai-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is context window in ai llm"
+      ]
+    },
+    {
+      "keyword": "what is memory management in llm",
+      "slug": "what-is-memory-management-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory management in llm"
+      ]
     }
   ],
   "new_opportunities": [
-    "how to give a long term memory",
-    "how to give llm long term memory",
-    "how to import ai memory to claude",
-    "how to keep long term memory",
-    "how to turn on claude ai memory",
-    "llm low memory",
-    "llm memory local",
-    "llm memory obsidian",
-    "llm neural memory",
-    "llm prompt context window",
-    "mem0 hermes agent",
-    "open source ai memory system",
-    "short term memory vs long term memory ai",
-    "what is ai memories app",
-    "what is context window in ai llm",
-    "what is memory management in llm",
     "which ai has best long term memory",
     "why is character ai memory so bad",
     "zep cloud memory"
   ],
   "summary": {
-    "total_keywords": 1005,
-    "validated": 884,
+    "total_keywords": 1021,
+    "validated": 900,
     "low_volume": 121,
-    "new_opportunities_found": 19
+    "new_opportunities_found": 3
   }
 }
