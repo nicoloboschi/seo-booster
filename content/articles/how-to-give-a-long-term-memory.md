@@ -62,7 +62,6 @@ def add_memory(text_content, metadata=None):
  embedding = embedding_model.encode(text_content)
  vector_store.add(embedding, text_content, metadata) # Stores embedding, original text, and optional metadata
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 def retrieve_memories(query_text, k=5):
