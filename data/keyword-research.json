@@ -9547,17 +9547,40 @@
       "matching_suggestions": [
         "what is memory management in llm"
       ]
+    },
+    {
+      "keyword": "which ai has best long term memory",
+      "slug": "which-ai-has-best-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which ai has best long term memory"
+      ]
+    },
+    {
+      "keyword": "why is character ai memory so bad",
+      "slug": "why-is-character-ai-memory-so-bad",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "why is character ai memory so bad"
+      ]
+    },
+    {
+      "keyword": "zep cloud memory",
+      "slug": "zep-cloud-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep cloud memory"
+      ]
     }
   ],
-  "new_opportunities": [
-    "which ai has best long term memory",
-    "why is character ai memory so bad",
-    "zep cloud memory"
-  ],
+  "new_opportunities": [],
   "summary": {
-    "total_keywords": 1021,
-    "validated": 900,
+    "total_keywords": 1024,
+    "validated": 903,
     "low_volume": 121,
-    "new_opportunities_found": 3
+    "new_opportunities_found": 0
   }
 }
