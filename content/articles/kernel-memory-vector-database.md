@@ -49,7 +49,7 @@ faq:
     open-source AI memory solutions.
 slug: kernel-memory-vector-database
 ---
----
+
 
 What if your AI agent could remember every conversation, every lesson, and every detail from its past interactions, not just for a few minutes, but indefinitely? This is the promise of the **kernel memory vector database**, acting as the foundational recall engine for sophisticated AI agents. It provides a structured yet flexible way to store and access information beyond the immediate context window, forming a crucial part of an **AI agent memory** system.
 

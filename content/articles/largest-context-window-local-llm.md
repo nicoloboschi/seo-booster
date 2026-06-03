@@ -49,7 +49,7 @@ faq:
     optimized positional encodings, and techniques like RoPE scaling. These allow models to handle significantly longer sequences, pushing the boundaries for the **largest context window local LLM**.
 slug: largest-context-window-local-llm
 ---
-
+---
 
 ## What is the Largest Context Window Local LLM?
 
