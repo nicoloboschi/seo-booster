@@ -49,7 +49,7 @@ faq:
     information and allow AI to handle more intricate tasks that require synthesizing information from extensive inputs.
 slug: llm-context-window-over-time
 ---
-
+---
 
 ## The Evolution of LLM Context Windows: A Journey of Growth
 
