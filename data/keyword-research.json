@@ -7990,9 +7990,11 @@
     {
       "keyword": "what is chatbot example",
       "slug": "what-is-chatbot-example",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is chatbot example"
+      ]
     },
     {
       "keyword": "what is chatbot in healthcare",
@@ -9577,8 +9579,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 902,
-    "low_volume": 122,
+    "validated": 903,
+    "low_volume": 121,
     "new_opportunities_found": 0
   }
 }
