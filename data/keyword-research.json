@@ -396,7 +396,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 192,
+      "autocomplete_matches": 188,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -5722,11 +5722,9 @@
     {
       "keyword": "llm in memory",
       "slug": "llm-in-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm in memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm inference memory bound",
@@ -5765,29 +5763,23 @@
     {
       "keyword": "llm inference memory calculator",
       "slug": "llm-inference-memory-calculator",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm inference memory calculator"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm inference memory requirements",
       "slug": "llm-inference-memory-requirements",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm inference memory requirements"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm infinite memory",
       "slug": "llm-infinite-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm infinite memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm international law syllabus",
@@ -6250,29 +6242,23 @@
     {
       "keyword": "llm memory icon",
       "slug": "llm-memory-icon",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory icon"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory implementation",
       "slug": "llm-memory-implementation",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory implementation"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory improvement research",
       "slug": "llm-memory-improvement-research",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory improvement research"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory injection",
@@ -6284,11 +6270,9 @@
     {
       "keyword": "llm memory issue",
       "slug": "llm-memory-issue",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory issue"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory knowledge graph",
@@ -8888,11 +8872,9 @@
     {
       "keyword": "llm inference memory bandwidth",
       "slug": "llm-inference-memory-bandwidth",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm inference memory bandwidth"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how does llm memory work",
@@ -9579,8 +9561,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 903,
-    "low_volume": 121,
+    "validated": 894,
+    "low_volume": 130,
     "new_opportunities_found": 0
   }
 }
