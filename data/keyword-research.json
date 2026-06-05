@@ -7823,11 +7823,9 @@
     {
       "keyword": "what are the best ai tools",
       "slug": "what-are-the-best-ai-tools",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what are the best ai tools"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what are the components of an ai system",
@@ -8378,9 +8376,10 @@
     {
       "keyword": "which is the best ai in the world",
       "slug": "which-is-the-best-ai-in-the-world",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "which is the best ai in the world",
         "which is the best ai in the world"
       ]
     },
@@ -9578,8 +9577,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 903,
-    "low_volume": 121,
+    "validated": 902,
+    "low_volume": 122,
     "new_opportunities_found": 0
   }
 }
