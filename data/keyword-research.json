@@ -7712,11 +7712,9 @@
     {
       "keyword": "top brain foods improve memory",
       "slug": "top-brain-foods-improve-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "top brain foods improve memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "vector database for llm memory",
@@ -7823,9 +7821,11 @@
     {
       "keyword": "what are the best ai tools",
       "slug": "what-are-the-best-ai-tools",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what are the best ai tools"
+      ]
     },
     {
       "keyword": "what are the components of an ai system",
