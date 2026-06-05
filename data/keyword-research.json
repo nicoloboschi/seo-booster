@@ -279,8 +279,8 @@
       "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "ai meeting summary",
-      "character ai chat memory limit",
-      "chub ai chat memory not working"
+      "best ai chat memory",
+      "best ai chatbot memory"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -915,14 +915,14 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 35,
+      "autocomplete_matches": 36,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
         "best ai chat memory",
         "ai chat memory",
         "ai chat memory reddit",
-        "character ai chat memory limit"
+        "best ai chat memory"
       ]
     },
     {
@@ -1015,7 +1015,7 @@
     {
       "keyword": "ai chatbot memory",
       "slug": "ai-chatbot-memory",
-      "autocomplete_matches": 7,
+      "autocomplete_matches": 8,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory",
@@ -2770,9 +2770,11 @@
     {
       "keyword": "best ai conversation app",
       "slug": "best-ai-conversation-app",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai conversation app"
+      ]
     },
     {
       "keyword": "best ai for long term memory",
@@ -7312,9 +7314,11 @@
     {
       "keyword": "most advanced conversational ai",
       "slug": "most-advanced-conversational-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "most advanced conversational ai"
+      ]
     },
     {
       "keyword": "most intelligent chatbot",
@@ -9575,8 +9579,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 901,
-    "low_volume": 123,
+    "validated": 903,
+    "low_volume": 121,
     "new_opportunities_found": 0
   }
 }
