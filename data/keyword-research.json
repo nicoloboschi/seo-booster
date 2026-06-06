@@ -7712,9 +7712,11 @@
     {
       "keyword": "top brain foods improve memory",
       "slug": "top-brain-foods-improve-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "top brain foods improve memory"
+      ]
     },
     {
       "keyword": "vector database for llm memory",
@@ -9577,8 +9579,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 902,
-    "low_volume": 122,
+    "validated": 903,
+    "low_volume": 121,
     "new_opportunities_found": 0
   }
 }
