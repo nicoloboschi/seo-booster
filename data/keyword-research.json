@@ -219,8 +219,6 @@
       "how to make c ai memory better",
       "how to make character ai memory better",
       "how to make janitor ai memory better",
-      "how to memory",
-      "how to use memory",
       "limited memory ai examples",
       "openai plans to give ai infinite memory by 2026",
       "what data does ai collect",
@@ -285,6 +283,7 @@
     "embedding model memory": [
       "embedded memory meaning",
       "embedding model memory usage",
+      "how images are stored in memory",
       "in memory embedding model",
       "memory embedding model",
       "openclaw memory embedding model",
@@ -4134,9 +4133,11 @@
     {
       "keyword": "how images are stored in memory",
       "slug": "how-images-are-stored-in-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how images are stored in memory"
+      ]
     },
     {
       "keyword": "how llm memory works",
@@ -4658,10 +4659,9 @@
     {
       "keyword": "how to memory",
       "slug": "how-to-memory",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "how to memory",
         "how to memory"
       ]
     },
@@ -4730,11 +4730,9 @@
     {
       "keyword": "how to use memory",
       "slug": "how-to-use-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to use memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to wipe chatgpt memory",
