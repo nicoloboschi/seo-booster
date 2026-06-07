@@ -285,7 +285,6 @@
     "embedding model memory": [
       "embedded memory meaning",
       "embedding model memory usage",
-      "how images are stored in memory",
       "in memory embedding model",
       "memory embedding model",
       "openclaw memory embedding model",
@@ -4135,11 +4134,9 @@
     {
       "keyword": "how images are stored in memory",
       "slug": "how-images-are-stored-in-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how images are stored in memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how llm memory works",
@@ -9579,8 +9576,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 903,
-    "low_volume": 121,
+    "validated": 902,
+    "low_volume": 122,
     "new_opportunities_found": 0
   }
 }
