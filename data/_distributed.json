@@ -6764,5 +6764,20 @@
   },
   "ai-memory-knowledge-graph": {
     "platforms": {}
+  },
+  "ai-memory-crisis": {
+    "platforms": {}
+  },
+  "ai-memory-hbm": {
+    "platforms": {}
+  },
+  "ai-memory-palace": {
+    "platforms": {}
+  },
+  "ai-memory-pendant": {
+    "platforms": {}
+  },
+  "ai-memory-photo": {
+    "platforms": {}
   }
 }
