@@ -49,7 +49,7 @@ faq:
     improved task completion, and a more natural, human-like conversational flow. It's crucial for building sophisticated AI agents that learn and adapt over time.
 slug: dify-chatbot-memory
 ---
-
+---
 
 **Dify chatbot memory** is the system that allows Dify-powered AI to store, recall, and use past conversational data. This persistent recall enables AI to remember user preferences, context, and previous interactions, leading to more intelligent, personalized, and coherent conversations beyond simple transactional exchanges. This capability is crucial for building AI agents that engage intelligently.
 
