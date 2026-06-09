@@ -1,3 +1,15 @@
+---
+title: AI Memory HBM
+description: '{ "title": "AI Memory HBM: Revolutionizing AI Agent Recall and Performance with High Bandwidth Memory", "description": "Explore how AI Memory HBM...'
+date: '2026-03-28'
+lastmod: '2026-06-09'
+tags:
+- ai memory hbm
+keywords:
+- ai memory hbm
+slug: ai-memory-hbm
+---
+
 {
   "title": "AI Memory HBM: Revolutionizing AI Agent Recall and Performance with High Bandwidth Memory",
   "description": "Explore how AI Memory HBM, leveraging High Bandwidth Memory, dramatically enhances AI agent recall, processing speed, and complex task execution. Discover its critical role in AI accelerators and future trends.",
@@ -218,3 +230,4 @@ print(agent.recall("HBM"))
 print(agent.recall())
 
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+

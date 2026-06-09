@@ -1,3 +1,15 @@
+---
+title: Graffiti AI That Remembers Stuff
+description: '{ "title": "Graffiti AI That Remembers Stuff: Building Persistent Agent Recall with AI Memory", "description": "Explore Graffiti AI, a system enabling AI...'
+date: '2026-04-01'
+lastmod: '2026-06-09'
+tags:
+- graffiti ai that remembers stuff
+keywords:
+- graffiti ai that remembers stuff
+slug: graffiti-ai-that-remembers-stuff
+---
+
 {
   "title": "Graffiti AI That Remembers Stuff: Building Persistent Agent Recall with AI Memory",
   "description": "Explore Graffiti AI, a system enabling AI agents to remember information persistently. Understand its architecture, how it overcomes memory limitations, and its k... (This description is truncated in the original prompt, so I'll keep it as is for now, but ideally it would be completed to be more descriptive.)",
@@ -88,3 +100,4 @@ Traditional AI memory often relies on short-term context windows or simple keywo
 ## Key Components of a Graffiti AI Memory System
 
 To achieve persistent recall, a **graffiti AI that remembers stuff** typically integrates several key components. These include a robust memory storage solution, often a vector database, capable of handling large volumes of data. Crucially, sophisticated indexing and retrieval mechanisms, such as semantic search, are employed to ensure that information can be found based on meaning rather than just exact keywords. Furthermore, memory management processes, including consolidation and summarization, are vital for maintaining an efficient and relevant knowledge base. Finally, seamless integration with the core LLM is essential for providing context and storing new experiences, making the **graffiti memory** an active part of the agent's workflow.
+

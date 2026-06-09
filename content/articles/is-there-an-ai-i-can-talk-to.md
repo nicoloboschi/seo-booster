@@ -1,3 +1,15 @@
+---
+title: Is There An AI I Can Talk To
+description: '{ "title": "Is There an AI I Can Talk To That Remembers? Understanding Conversational AI Memory", "description": "Explore if there''s an AI you can talk to...'
+date: '2026-04-03'
+lastmod: '2026-06-09'
+tags:
+- is there an ai i can talk to
+keywords:
+- is there an ai i can talk to
+slug: is-there-an-ai-i-can-talk-to
+---
+
 {
   "title": "Is There an AI I Can Talk To That Remembers? Understanding Conversational AI Memory",
   "description": "Explore if there's an AI you can talk to that remembers past interactions. Learn about conversational AI memory, its capabilities, limitations, and how AI remembers conversations for more personalized dialogue.",
@@ -166,3 +178,4 @@ def query_ai_with_memory(user_query, vector_db, embedding_model, llm):
 ## user_question = "What was our last project about?"
 ## answer = query_ai_with_memory(user_question, my_vector_db, my_embedding_model, my_llm)
 ## print(answer)
+

@@ -1,3 +1,15 @@
+---
+title: AI Memory Palace
+description: 'The AI Memory Palace: Enhancing Agent Recall and Reasoning with Spatial Memory'
+date: '2026-04-03'
+lastmod: '2026-06-09'
+tags:
+- ai memory palace
+keywords:
+- ai memory palace
+slug: ai-memory-palace
+---
+
 The AI Memory Palace: Enhancing Agent Recall and Reasoning with Spatial Memory
 
 Explore the AI memory palace concept, a novel approach to agent recall and reasoning that mimics human cognitive structures for enhanced performance and contextual understanding. Discover how spatial memory boosts AI capabilities.
