@@ -4966,7 +4966,7 @@ keywords:
   related: []
   role: supporting
   slug: zep-cloud-memory
-- cluster: ai-agent-memory
+- cluster: rag-and-retrieval
   instructions: Compare agent memory systems with RAG. When to use each, how they differ, how they combine. Comparison table.
   primary: agent memory vs RAG
   related:
@@ -4983,7 +4983,7 @@ keywords:
   - agent memory frameworks
   role: supporting
   slug: letta-vs-langchain-memory
-- cluster: memory-architecture
+- cluster: rag-and-retrieval
   instructions: How vector databases power AI memory and retrieval. Embeddings, similarity search, options.
   primary: vector databases for AI
   related:
@@ -4992,7 +4992,7 @@ keywords:
   - semantic search
   role: supporting
   slug: vector-databases-for-ai
-- cluster: memory-architecture
+- cluster: rag-and-retrieval
   instructions: Explain retrieval-augmented generation for AI agents. How RAG works, pipeline, role in memory.
   primary: retrieval augmented generation
   related:
@@ -5017,7 +5017,7 @@ keywords:
   - Letta memory
   role: supporting
   slug: mem0-vs-letta
-- cluster: memory-architecture
+- cluster: rag-and-retrieval
   instructions: How vector databases enable semantic search for AI memory. Embeddings, ANN, use cases.
   primary: vector databases for semantic search
   related:
