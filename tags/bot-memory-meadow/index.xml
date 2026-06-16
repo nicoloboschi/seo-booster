@@ -85,7 +85,7 @@
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;How does retrieval-augmented generation (RAG) contribute to AI agent memory?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Retrieval-Augmented Generation (RAG) is a foundational technology for bot memory meadows. It allows AI agents to retrieve relevant information from an external knowledge base (like a memory meadow) before generating a response, significantly enhancing their ability to access and utilize long-term memory.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Retrieval-Augmented Generation (RAG) is a foundational technology for bot memory meadows. It allows AI agents to retrieve relevant information from an external knowledge base (like a memory meadow) before generating a response, significantly enhancing their ability to access and use long-term memory.&amp;rdquo;
 }
 ],
 &amp;ldquo;slug&amp;rdquo;: &amp;ldquo;bot-memory-meadow&amp;rdquo;

@@ -38,7 +38,7 @@
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;How do techniques like RAG and vector databases contribute to AI memory?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;RAG enhances LLMs by retrieving external information for generation, while vector databases store data embeddings for semantic search. These are crucial components used in building more advanced AI memory systems, providing methods for agents to access and utilize external knowledge, thereby approximating aspects of a more perfect recall.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;RAG enhances LLMs by retrieving external information for generation, while vector databases store data embeddings for semantic search. These are crucial components used in building more advanced AI memory systems, providing methods for agents to access and use external knowledge, thereby approximating aspects of a more perfect recall.&amp;rdquo;
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;What are the primary challenges in building advanced AI memory systems?&amp;rdquo;,

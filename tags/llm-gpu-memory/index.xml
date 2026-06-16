@@ -48,7 +48,7 @@
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;What are the key hardware considerations for LLM GPU memory?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Key hardware considerations include the amount of VRAM available, memory bandwidth, and the type of GPU (consumer vs. datacenter). Multi-GPU setups are also crucial for models exceeding single-GPU capacity, utilizing techniques like data and model parallelism.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Key hardware considerations include the amount of VRAM available, memory bandwidth, and the type of GPU (consumer vs. datacenter). Multi-GPU setups are also crucial for models exceeding single-GPU capacity, using techniques like data and model parallelism.&amp;rdquo;
 }
 ],
 &amp;ldquo;slug&amp;rdquo;: &amp;ldquo;llm-gpu-memory&amp;rdquo;

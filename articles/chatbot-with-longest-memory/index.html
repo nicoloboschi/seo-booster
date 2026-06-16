@@ -66,10 +66,10 @@
 </span></span><span class=line><span class=ln> 5</span><span class=cl><span class=c1>## Assume you have a list of past conversation turns (strings)</span>
 </span></span><span class=line><span class=ln> 6</span><span class=cl><span class=c1>## This list represents the &#39;memory&#39; the chatbot can access.</span>
 </span></span><span class=line><span class=ln> 7</span><span class=cl><span class=n>past_conversations</span> <span class=o>=</span> <span class=p>[</span>
-</span></span><span class=line><span class=ln> 8</span><span class=cl>    <span class=s2>&#34;User: Hi, I&#39;m interested in learning about AI memory systems.&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=ln> 9</span><span class=cl>    <span class=s2>&#34;Bot: Hello! AI memory systems are fascinating. What specifically would you like to know?&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=ln>10</span><span class=cl>    <span class=s2>&#34;User: Tell me about episodic memory.&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=ln>11</span><span class=cl>    <span class=s2>&#34;Bot: Episodic memory in AI is like remembering specific events or experiences.&#34;</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl> <span class=s2>&#34;User: Hi, I&#39;m interested in learning about AI memory systems.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl> <span class=s2>&#34;Bot: Hello! AI memory systems are fascinating. What specifically would you like to know?&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl> <span class=s2>&#34;User: Tell me about episodic memory.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl> <span class=s2>&#34;Bot: Episodic memory in AI is like remembering specific events or experiences.&#34;</span>
 </span></span><span class=line><span class=ln>12</span><span class=cl><span class=p>]</span>
 </span></span><span class=line><span class=ln>13</span><span class=cl>
 </span></span><span class=line><span class=ln>14</span><span class=cl><span class=c1>## Initialize an embedding model. This model converts text into numerical vectors.</span>
@@ -79,25 +79,25 @@
 </span></span><span class=line><span class=ln>18</span><span class=cl><span class=n>past_embeddings</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=n>past_conversations</span><span class=p>)</span>
 </span></span><span class=line><span class=ln>19</span><span class=cl>
 </span></span><span class=line><span class=ln>20</span><span class=cl><span class=k>def</span> <span class=nf>get_relevant_context</span><span class=p>(</span><span class=n>user_query</span><span class=p>,</span> <span class=n>num_results</span><span class=o>=</span><span class=mi>2</span><span class=p>):</span>
-</span></span><span class=line><span class=ln>21</span><span class=cl>    <span class=s2>&#34;&#34;&#34;
-</span></span></span><span class=line><span class=ln>22</span><span class=cl><span class=s2>    Retrieves the most relevant past conversation turns for a user query.
-</span></span></span><span class=line><span class=ln>23</span><span class=cl><span class=s2>    This simulates searching through the chatbot&#39;s long-term memory.
-</span></span></span><span class=line><span class=ln>24</span><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
-</span></span><span class=line><span class=ln>25</span><span class=cl>    <span class=c1># Embed the current user query.</span>
-</span></span><span class=line><span class=ln>26</span><span class=cl>    <span class=n>query_embedding</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>encode</span><span class=p>([</span><span class=n>user_query</span><span class=p>])[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl> <span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=ln>22</span><span class=cl><span class=s2> Retrieves the most relevant past conversation turns for a user query.
+</span></span></span><span class=line><span class=ln>23</span><span class=cl><span class=s2> This simulates searching through the chatbot&#39;s long-term memory.
+</span></span></span><span class=line><span class=ln>24</span><span class=cl><span class=s2> &#34;&#34;&#34;</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl> <span class=c1># Embed the current user query.</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl> <span class=n>query_embedding</span> <span class=o>=</span> <span class=n>model</span><span class=o>.</span><span class=n>encode</span><span class=p>([</span><span class=n>user_query</span><span class=p>])[</span><span class=mi>0</span><span class=p>]</span>
 </span></span><span class=line><span class=ln>27</span><span class=cl>
-</span></span><span class=line><span class=ln>28</span><span class=cl>    <span class=c1># Calculate cosine similarity between the query embedding and all past embeddings.</span>
-</span></span><span class=line><span class=ln>29</span><span class=cl>    <span class=c1># Higher similarity means the past conversation is more relevant to the current query.</span>
-</span></span><span class=line><span class=ln>30</span><span class=cl>    <span class=n>similarities</span> <span class=o>=</span> <span class=n>cosine_similarity</span><span class=p>([</span><span class=n>query_embedding</span><span class=p>],</span> <span class=n>past_embeddings</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>28</span><span class=cl> <span class=c1># Calculate cosine similarity between the query embedding and all past embeddings.</span>
+</span></span><span class=line><span class=ln>29</span><span class=cl> <span class=c1># Higher similarity means the past conversation is more relevant to the current query.</span>
+</span></span><span class=line><span class=ln>30</span><span class=cl> <span class=n>similarities</span> <span class=o>=</span> <span class=n>cosine_similarity</span><span class=p>([</span><span class=n>query_embedding</span><span class=p>],</span> <span class=n>past_embeddings</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
 </span></span><span class=line><span class=ln>31</span><span class=cl>
-</span></span><span class=line><span class=ln>32</span><span class=cl>    <span class=c1># Get the indices of the top N most similar turns.</span>
-</span></span><span class=line><span class=ln>33</span><span class=cl>    <span class=n>top_indices</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>argsort</span><span class=p>(</span><span class=n>similarities</span><span class=p>)[::</span><span class=o>-</span><span class=mi>1</span><span class=p>][:</span><span class=n>num_results</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>32</span><span class=cl> <span class=c1># Get the indices of the top N most similar turns.</span>
+</span></span><span class=line><span class=ln>33</span><span class=cl> <span class=n>top_indices</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>argsort</span><span class=p>(</span><span class=n>similarities</span><span class=p>)[::</span><span class=o>-</span><span class=mi>1</span><span class=p>][:</span><span class=n>num_results</span><span class=p>]</span>
 </span></span><span class=line><span class=ln>34</span><span class=cl>
-</span></span><span class=line><span class=ln>35</span><span class=cl>    <span class=c1># Retrieve the actual conversation turns corresponding to the top indices.</span>
-</span></span><span class=line><span class=ln>36</span><span class=cl>    <span class=n>relevant_context</span> <span class=o>=</span> <span class=p>[</span><span class=n>past_conversations</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>top_indices</span><span class=p>]</span>
+</span></span><span class=line><span class=ln>35</span><span class=cl> <span class=c1># Retrieve the actual conversation turns corresponding to the top indices.</span>
+</span></span><span class=line><span class=ln>36</span><span class=cl> <span class=n>relevant_context</span> <span class=o>=</span> <span class=p>[</span><span class=n>past_conversations</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>top_indices</span><span class=p>]</span>
 </span></span><span class=line><span class=ln>37</span><span class=cl>
-</span></span><span class=line><span class=ln>38</span><span class=cl>    <span class=c1># Return the retrieved context as a single string.</span>
-</span></span><span class=line><span class=ln>39</span><span class=cl>    <span class=k>return</span> <span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=n>relevant_context</span><span class=p>)</span>
+</span></span><span class=line><span class=ln>38</span><span class=cl> <span class=c1># Return the retrieved context as a single string.</span>
+</span></span><span class=line><span class=ln>39</span><span class=cl> <span class=k>return</span> <span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=n>relevant_context</span><span class=p>)</span>
 </span></span><span class=line><span class=ln>40</span><span class=cl>
 </span></span><span class=line><span class=ln>41</span><span class=cl><span class=c1>## Simulate a new user query that requires recalling past information.</span>
 </span></span><span class=line><span class=ln>42</span><span class=cl><span class=n>user_input</span> <span class=o>=</span> <span class=s2>&#34;What is episodic memory again?&#34;</span>

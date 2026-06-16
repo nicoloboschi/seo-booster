@@ -54,7 +54,7 @@
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;What are the core components of effective LLM memory management?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Effective LLM memory management involves understanding the LLM&amp;rsquo;s context window limitations, implementing strategies for short-term and long-term memory, and leveraging tools like vector stores and embedding models for efficient storage and retrieval.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Effective LLM memory management involves understanding the LLM&amp;rsquo;s context window limitations, implementing strategies for short-term and long-term memory, and using tools like vector stores and embedding models for efficient storage and retrieval.&amp;rdquo;
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;How do LLM memory best practices differ for short-term vs. long-term memory?&amp;rdquo;,

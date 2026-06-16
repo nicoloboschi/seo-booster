@@ -37,11 +37,11 @@
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;What is an &amp;lsquo;agent memory bench&amp;rsquo;?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;An agent memory bench is a specialized type of LLM memory bench designed to specifically assess the memory capabilities of AI agents. It focuses on how well an agent can store, recall, and utilize information within the context of its tasks and interactions, crucial for robust agent performance.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;An agent memory bench is a specialized type of LLM memory bench designed to specifically assess the memory capabilities of AI agents. It focuses on how well an agent can store, recall, and use information within the context of its tasks and interactions, crucial for robust agent performance.&amp;rdquo;
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;What are key memoryagentbench evaluation metrics?&amp;rdquo;,
-&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Key memoryagentbench evaluation metrics include accuracy, precision, latency in information retrieval, effective context window utilization, and the degree of information drift over time. These metrics help quantify an agent&amp;rsquo;s recall and retention capabilities.&amp;rdquo;
+&amp;ldquo;answer&amp;rdquo;: &amp;ldquo;Key memoryagentbench evaluation metrics include accuracy, precision, latency in information retrieval, effective context window use, and the degree of information drift over time. These metrics help quantify an agent&amp;rsquo;s recall and retention capabilities.&amp;rdquo;
 },
 {
 &amp;ldquo;question&amp;rdquo;: &amp;ldquo;How does an LLM memory bench contribute to the development of agent memory bench?&amp;rdquo;,

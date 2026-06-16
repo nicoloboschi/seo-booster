@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LongMemEval on Agent Memory — AI Memory Systems Explained</title><link>https://aiagentmemory.org/tags/longmemeval/</link><description>Recent content in LongMemEval on Agent Memory — AI Memory Systems Explained</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://aiagentmemory.org/tags/longmemeval/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Memory Benchmarks</title><link>https://aiagentmemory.org/articles/ai-memory-benchmarks/</link><pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate><guid>https://aiagentmemory.org/articles/ai-memory-benchmarks/</guid><description>&lt;h2 id="heading"&gt;{
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LongMemEval on Agent Memory — AI Memory Systems Explained</title><link>https://aiagentmemory.org/tags/longmemeval/</link><description>Recent content in LongMemEval on Agent Memory — AI Memory Systems Explained</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://aiagentmemory.org/tags/longmemeval/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Memory Benchmarks</title><link>https://aiagentmemory.org/articles/ai-memory-benchmarks/</link><pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate><guid>https://aiagentmemory.org/articles/ai-memory-benchmarks/</guid><description>&lt;p&gt;{
 &amp;ldquo;title&amp;rdquo;: &amp;ldquo;AI Memory Benchmarks: Evaluating Performance and Quality of AI Agent Memory Systems&amp;rdquo;,
 &amp;ldquo;description&amp;rdquo;: &amp;ldquo;Explore AI memory benchmarks for evaluating AI agent memory systems. Learn about memory system evaluation, key metrics, LongMemEval, and practical implementation for AI agent memory.&amp;rdquo;,
 &amp;ldquo;date&amp;rdquo;: &amp;ldquo;2026-03-25&amp;rdquo;,
@@ -81,9 +81,4 @@
 &amp;ldquo;answer&amp;rdquo;: &amp;ldquo;When &lt;strong&gt;comparing memory architectures in LLM agents&lt;/strong&gt;, key considerations include their ability to handle long-term context, the efficiency of information retrieval, the cost of integration and maintenance, and their scalability. Benchmarks are crucial for objectively assessing these factors across different architectures.&amp;rdquo;
 }
 ]
-}&lt;/h2&gt;
-&lt;p&gt;title: &amp;lsquo;AI Memory Benchmarks: Evaluating Performance and Quality of AI Agent Memory Systems&amp;rsquo;
-description: Explore AI memory benchmarks for evaluating AI agent memory systems. Learn about memory system evaluation, key metrics, LongMemEval, and practical implementation for AI agent memory.
-date: 2026-03-25
-lastmod: 2026-03-25
-tags:&lt;/p&gt;</description></item></channel></rss>
+}&lt;/p&gt;</description></item></channel></rss>
