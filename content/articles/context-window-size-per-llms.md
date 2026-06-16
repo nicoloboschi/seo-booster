@@ -105,7 +105,7 @@ While increasing the inherent **context window size** is a primary goal, several
 
 ### Retrieval-Augmented Generation (RAG)
 
-**Retrieval-Augmented Generation (RAG)** is a powerful approach that augments an LLM's knowledge base by retrieving relevant information from an external data source. Instead of fitting all information into the **context window**, RAG dynamically fetches snippets of data that are most relevant to the current query. This is a cornerstone of [effective RAG implementation](/articles/rag-implementation-strategies/).
+**Retrieval-Augmented Generation (RAG)** is a powerful approach that augments an LLM's knowledge base by retrieving relevant information from an external data source. Instead of fitting all information into the **context window**, RAG dynamically fetches snippets of data that are most relevant to the current query. This is a cornerstone of effective RAG implementation.
 
 The process typically involves:
 1. **Embedding:** Converting text data into numerical vectors using **embedding models for RAG**.

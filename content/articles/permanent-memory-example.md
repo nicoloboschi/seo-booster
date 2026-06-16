@@ -107,7 +107,7 @@ Efficiently getting the right information out is as important as storing it.
 * **Keyword Search:** Traditional search methods for exact matches.
 * **Graph Traversal:** Navigating relationships in a knowledge graph.
 
-The effectiveness of retrieval is a key factor in the overall performance of AI agents with long-term memory. This is a core challenge addressed by [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+The effectiveness of retrieval is a key factor in the overall performance of AI agents with long-term memory. This is a core challenge addressed by [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## The Role of Embeddings in Permanent Memory
 

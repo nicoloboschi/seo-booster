@@ -43,7 +43,7 @@ faq:
     maintaining coherent multi-turn conversations, and enabling AI agents to perform more sophisticated reasoning without losing track of crucial details.
 - question: How does a large context window improve AI agent memory?
   answer: A large context window significantly enhances an AI agent's immediate working memory. It allows the agent to retain more information from ongoing interactions and data within a single processing
-    cycle, leading to more coherent and contextually relevant responses without needing to constantly re-access external memory. This is a key component of effective [AI agent memory](/articles/ai-agent-memory/).
+    cycle, leading to more coherent and contextually relevant responses without needing to constantly re-access external memory. This is a key component of effective [AI agent memory](/articles/ai-agent-and-memory/).
 - question: What are the latest advancements in local LLM context window expansion?
   answer: Recent advancements in **LLM context expansion** for local deployments include architectural innovations like efficient attention mechanisms (e.g., sparse attention, sliding window attention),
     optimized positional encodings, and techniques like RoPE scaling. These allow models to handle significantly longer sequences, pushing the boundaries for the **largest context window local LLM**.
@@ -105,7 +105,7 @@ For **AI that remembers conversations**, larger context windows are transformati
 
 ### Improved Reasoning and Problem-Solving with Extended Local LLM Context
 
-Complex tasks, such as debugging code, analyzing lengthy documents, or planning multi-step processes, require an agent to hold and process a large amount of information simultaneously. A **local LLM with a large context window** can keep more variables, constraints, and intermediate results in its working memory, leading to more accurate and effective problem-solving. This capability is crucial for [agent long-term memory](/articles/agent-long-term-memory/), and a large context window greatly enhances short-term working memory.
+Complex tasks, such as debugging code, analyzing lengthy documents, or planning multi-step processes, require an agent to hold and process a large amount of information simultaneously. A **local LLM with a large context window** can keep more variables, constraints, and intermediate results in its working memory, leading to more accurate and effective problem-solving. This capability is crucial for [agent long-term memory](/articles/ai-agent-long-term-memory/), and a large context window greatly enhances short-term working memory.
 
 ### Personalized Experiences Through Persistent AI Memory
 

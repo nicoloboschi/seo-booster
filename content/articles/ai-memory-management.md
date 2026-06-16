@@ -136,7 +136,7 @@ Frameworks are emerging to abstract the complexities of memory handling for AI d
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG is a powerful technique that augments LLMs with external knowledge. It involves retrieving relevant information from a knowledge base (often a vector store) and feeding it into the LLM's prompt. This dramatically enhances the AI's ability to provide accurate and contextually relevant answers, acting as a form of dynamic **ai memory management**. According to a 2024 study published on [arxiv by researchers at Google](https://arxiv.org/abs/2401.00001), RAG-based agents demonstrated a 28% improvement in factual accuracy compared to base LLMs. This is a key area where [agent memory vs RAG](/articles/agent-memory-vs-rag/) is a critical distinction for overall **ai memory management**.
+RAG is a powerful technique that augments LLMs with external knowledge. It involves retrieving relevant information from a knowledge base (often a vector store) and feeding it into the LLM's prompt. This dramatically enhances the AI's ability to provide accurate and contextually relevant answers, acting as a form of dynamic **ai memory management**. According to a 2024 study published on [arxiv by researchers at Google](https://arxiv.org/abs/2401.00001), RAG-based agents demonstrated a 28% improvement in factual accuracy compared to base LLMs. This is a key area where agent memory vs RAG is a critical distinction for overall **ai memory management**.
 
 ## Integrating AI Memory Management into Agent Architectures
 

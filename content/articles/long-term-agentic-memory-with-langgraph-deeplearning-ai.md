@@ -57,7 +57,7 @@ An agent might transition through states like `GatheringInformation`, `PlanningR
 
 Within a LangGraph application, you can create custom nodes that perform memory-related operations. These nodes can interact with vector databases, knowledge graphs, or simpler key-value stores to retrieve and update information. This allows for sophisticated memory retrieval strategies, such as finding the most relevant past interaction based on semantic similarity rather than just chronological order, enhancing **long term agentic memory with langgraph deeplearning ai**.
 
-This declarative approach to workflow building makes it easier to design agents that can recall specific details or general knowledge acquired over long periods. It's a fundamental aspect of [implementing long-term memory in AI agents](/articles/agentic-ai-implementing-long-term-memory/).
+This declarative approach to workflow building makes it easier to design agents that can recall specific details or general knowledge acquired over long periods. It's a fundamental aspect of implementing long-term memory in AI agents.
 
 ## Deep Learning's Foundation for Agent Memory
 

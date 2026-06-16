@@ -80,7 +80,7 @@ Short-term memory is primarily managed by the underlying LLM's context window. H
 
 For true persistence, agents need external memory stores. The Microsoft Agent Framework can integrate with these solutions to enhance **microsoft agent framework memory management**:
 
-**Vector Databases** store information as **embeddings**, which are numerical representations of text meaning. This allows for efficient semantic searching. Agents can embed new information and query the database to retrieve relevant past experiences or knowledge. This is a core technology behind many [best AI agent memory systems](/articles/best-ai-agent-memory-systems/). Vector databases excel at semantic similarity.
+**Vector Databases** store information as **embeddings**, which are numerical representations of text meaning. This allows for efficient semantic searching. Agents can embed new information and query the database to retrieve relevant past experiences or knowledge. This is a core technology behind many [best AI agent memory systems](/articles/best-ai-memory-systems/). Vector databases excel at semantic similarity.
 
 **Relational Databases** can store structured data or specific facts, offering a more organized approach to **microsoft agent framework memory management**. Relational databases are ideal for tabular data.
 

@@ -52,7 +52,7 @@ Transformer models, the architecture behind most LLMs, process input sequences i
 
 The **self-attention mechanism** enables LLMs to understand relationships between words, even if they are far apart in the input. For instance, in the sentence "The cat, which was playing with a ball, chased the mouse," attention allows the model to connect "cat" with "chased." This mechanism is a cornerstone of the **context window LLM definition**.
 
-However, applying this attention across thousands of tokens becomes computationally intensive. This computational bottleneck is a significant factor driving research into more efficient attention mechanisms and alternative architectures like [Perceiver IO](/articles/perceiver-io-explained/). It also highlights the difference between a model's processing window and true [long-term memory AI agents](/articles/long-term-memory-ai-agent/) possess. The **LLM context window definition** is thus tied to computational feasibility.
+However, applying this attention across thousands of tokens becomes computationally intensive. This computational bottleneck is a significant factor driving research into more efficient attention mechanisms and alternative architectures like Perceiver IO. It also highlights the difference between a model's processing window and true [long-term memory AI agents](/articles/long-term-memory-ai-agent/) possess. The **LLM context window definition** is thus tied to computational feasibility.
 
 ## Why Context Window Size Matters
 

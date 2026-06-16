@@ -47,7 +47,7 @@ This definition highlights the core components: Langchain as the framework, chat
 
 Imagine asking a chatbot for a recommendation and then, in the next breath, having to re-explain your preferences. It's frustrating and inefficient. **AI agent memory** is the solution. It allows an agent to store and retrieve information from past interactions. This creates a more natural and personalized user experience.
 
-This is particularly vital for complex applications like customer support and virtual assistants. The ability for an AI to remember is not just about recalling facts. It's about understanding the flow of a conversation and the user's evolving needs. Without it, chatbots remain superficial. Exploring [building AI agents with memory](/articles/building-ai-agents-with-memory/) is a fundamental step for any serious AI developer seeking **AI conversation memory**.
+This is particularly vital for complex applications like customer support and virtual assistants. The ability for an AI to remember is not just about recalling facts. It's about understanding the flow of a conversation and the user's evolving needs. Without it, chatbots remain superficial. Exploring building AI agents with memory is a fundamental step for any serious AI developer seeking **AI conversation memory**.
 
 ## Implementing Memory in Langchain Chatbots
 

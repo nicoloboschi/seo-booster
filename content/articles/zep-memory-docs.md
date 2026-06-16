@@ -41,7 +41,7 @@ ZeP Memory documentation outlines the architecture and usage of ZeP Memory, a sy
 
 AI agents, especially those powered by LLMs, often operate with limited context windows. This constraint means they can only "remember" a small fraction of recent interactions. Without a strong memory system, agents forget crucial details, leading to repetitive questions and a lack of continuity. This limitation significantly hampers their usefulness in real-world applications like customer service bots or personalized assistants.
 
-Developing effective [AI agent memory](/articles/ai-agent-memory/) is a primary challenge in creating truly intelligent systems. It’s not just about storing data; it’s about enabling the AI to access and use that data contextually. This is where frameworks like ZeP Memory come into play, offering structured solutions for this persistent challenge, all detailed within the **zep memory docs**.
+Developing effective [AI agent memory](/articles/ai-agent-and-memory/) is a primary challenge in creating truly intelligent systems. It’s not just about storing data; it’s about enabling the AI to access and use that data contextually. This is where frameworks like ZeP Memory come into play, offering structured solutions for this persistent challenge, all detailed within the **zep memory docs**.
 
 ## Core Concepts Explained in ZeP Memory Documentation
 

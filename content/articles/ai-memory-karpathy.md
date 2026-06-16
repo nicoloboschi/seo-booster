@@ -40,7 +40,7 @@ Imagine an AI assistant helping you plan a complex trip. Without persistent memo
 
 ### Beyond the Context Window
 
-The limitations of fixed context windows are significant. While techniques like Retrieval-Augmented Generation (RAG) offer a way to inject external knowledge, they don't inherently provide the AI with a personal, continuously evolving memory. Karpathy's ideas point towards systems that integrate external information into an agent's own evolving knowledge graph. This is a key distinction from how many current systems operate; for more on this, see [understanding agent memory versus RAG](/articles/agent-memory-vs-rag).
+The limitations of fixed context windows are significant. While techniques like Retrieval-Augmented Generation (RAG) offer a way to inject external knowledge, they don't inherently provide the AI with a personal, continuously evolving memory. Karpathy's ideas point towards systems that integrate external information into an agent's own evolving knowledge graph. This is a key distinction from how many current systems operate; for more on this, see understanding agent memory versus RAG.
 
 Developing AI that truly remembers requires more than just storing data. It involves structuring that data for easy access and interpretation, much like how humans access their own memories. This is where the concept of an **ai agent's memory** truly comes into play. The **ai memory Karpathy** perspective focuses on this deeper integration.
 
@@ -80,7 +80,7 @@ Several architectural patterns and technologies are emerging to support the deve
 
 **Vector databases** have become indispensable for AI memory systems. They store information as high-dimensional vectors, representing their semantic meaning. This allows for fast and accurate similarity searches, enabling the AI to find related pieces of information even if they aren't explicitly linked.
 
-These databases are crucial for implementing **long-term memory AI chat** and other conversational agents. They provide the underlying infrastructure for retrieving contextually relevant information, powering advanced **ai memory karpathy** aspirations. For practical implementations, see [best AI agent memory systems](/articles/best-ai-agent-memory-systems).
+These databases are crucial for implementing **long-term memory AI chat** and other conversational agents. They provide the underlying infrastructure for retrieving contextually relevant information, powering advanced **ai memory karpathy** aspirations. For practical implementations, see [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 Here's a simple Python example demonstrating a basic vector storage concept using NumPy:
 
@@ -162,7 +162,7 @@ Techniques like **memory consolidation** and replay mechanisms are being develop
 
 Raw data recall is insufficient. AI agents need to integrate their memories with their reasoning and decision-making processes. This means not just retrieving information but understanding its implications and applying it appropriately.
 
-Developing AI that can perform **temporal reasoning AI memory** tasks, understanding the sequence and causality of events, is a crucial future direction. This allows agents to learn from past experiences in a more profound way. Research on [causal inference in AI](/articles/causal-inference-in-ai) is highly relevant here.
+Developing AI that can perform **temporal reasoning AI memory** tasks, understanding the sequence and causality of events, is a crucial future direction. This allows agents to learn from past experiences in a more profound way. Research on causal inference in AI is highly relevant here.
 
 ### Ethical Considerations
 

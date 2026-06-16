@@ -173,7 +173,7 @@ As agents interact more and accumulate vast amounts of memory, **scalability** b
 
 ### Privacy and Security
 
-Storing extensive user interaction data raises critical **privacy and security** concerns. Effective measures are needed to ensure that sensitive information is protected, anonymized where appropriate, and accessed only under strict protocols. This is paramount for building trust in AI systems that remember everything. Building an [AI agent that remembers everything](/articles/ai-agent-remembers-everything/) responsibly requires careful consideration of these ethical aspects.
+Storing extensive user interaction data raises critical **privacy and security** concerns. Effective measures are needed to ensure that sensitive information is protected, anonymized where appropriate, and accessed only under strict protocols. This is paramount for building trust in AI systems that remember everything. Building an [AI agent that remembers everything](/articles/ai-that-remembers-everything/) responsibly requires careful consideration of these ethical aspects.
 
 ### Dynamic Learning and Adaptation
 

@@ -16,6 +16,49 @@ MIN_DESCRIPTION_LENGTH = 140
 MAX_DESCRIPTION_LENGTH = 165
 MIN_FAQ_COUNT = 2
 
+ARTICLES_DIR = Path(__file__).resolve().parent.parent / "content" / "articles"
+_SLUG_CACHE: set[str] | None = None
+_INTERNAL_LINK_RE = re.compile(r"\[([^\]]+)\]\(/articles/([a-z0-9-]+)/?\)")
+
+
+def _existing_slugs(refresh: bool = False) -> set[str]:
+    """Set of slugs for which an article file actually exists."""
+    global _SLUG_CACHE
+    if _SLUG_CACHE is None or refresh:
+        _SLUG_CACHE = {p.stem for p in ARTICLES_DIR.glob("*.md") if not p.name.startswith("_")}
+    return _SLUG_CACHE
+
+
+def _fix_internal_links(body: str, existing: set[str]) -> tuple[str, list[str]]:
+    """Stop generated articles from linking to article slugs that don't exist
+    (the #1 source of 404s). Links to a missing slug are remapped to the closest
+    existing slug when the match is unambiguous, otherwise the link is unwrapped
+    to plain text so no 404 is emitted."""
+    import difflib
+
+    fixes = []
+    remapped = unwrapped = 0
+    candidates = sorted(existing)
+
+    def repl(m):
+        nonlocal remapped, unwrapped
+        anchor, slug = m.group(1), m.group(2)
+        if slug in existing:
+            return m.group(0)
+        match = difflib.get_close_matches(slug, candidates, n=1, cutoff=0.86)
+        if match:
+            remapped += 1
+            return f"[{anchor}](/articles/{match[0]}/)"
+        unwrapped += 1
+        return anchor
+
+    new_body = _INTERNAL_LINK_RE.sub(repl, body)
+    if remapped:
+        fixes.append(f"Remapped {remapped} internal link(s) to existing articles")
+    if unwrapped:
+        fixes.append(f"Unwrapped {unwrapped} broken internal link(s) to avoid 404s")
+    return new_body, fixes
+
 # --- AI Content Scrubbing ---
 
 # Invisible Unicode characters that AI watermarking tools insert
@@ -199,6 +242,18 @@ def postprocess_article(file_path: Path) -> list[str]:
         body, hindsight_fix = _inject_hindsight_mention(body, fm.get("keywords", []))
         if hindsight_fix:
             fixes.append(hindsight_fix)
+
+    # Step 5.7: Fix internal links pointing to non-existent articles (404 source).
+    # Covers both the body and FAQ answers/questions (links appear in both).
+    slugs = _existing_slugs()
+    body, link_fixes = _fix_internal_links(body, slugs)
+    fixes.extend(link_fixes)
+    if isinstance(fm.get("faq"), list):
+        for item in fm["faq"]:
+            if isinstance(item, dict):
+                for k in ("question", "answer"):
+                    if isinstance(item.get(k), str):
+                        item[k], _ = _fix_internal_links(item[k], slugs)
 
     # Step 6: Content quality scoring
     primary_kw = fm.get("keywords", [""])[0] if fm.get("keywords") else ""

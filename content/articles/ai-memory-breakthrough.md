@@ -148,7 +148,7 @@ Frameworks like LangChain and LlamaIndex explore various memory modules. These r
 
 The open-source community actively develops specialized memory systems. Projects like [Hindsight](https://github.com/vectorize-io/hindsight) aim to provide more structured and queryable memory for AI agents, allowing for richer recall and reasoning over past interactions. Comparing these tools, as seen in [open-source memory systems compared](/articles/open-source-memory-systems-compared/), reveals a rapidly evolving landscape.
 
-Tools like LlamaIndex offer powerful connectors to various vector databases and RAG patterns. This facilitates the implementation of sophisticated memory retrieval. [Lett a AI Guide](/articles/letta-ai-guide/) also explores specific approaches to memory for AI agents. Understanding the trade-offs, as discussed in [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), is crucial for developers.
+Tools like LlamaIndex offer powerful connectors to various vector databases and RAG patterns. This facilitates the implementation of sophisticated memory retrieval. [Lett a AI Guide](/articles/letta-ai-guide/) also explores specific approaches to memory for AI agents. Understanding the trade-offs, as discussed in [best AI agent memory systems](/articles/best-ai-memory-systems/), is crucial for developers.
 
 ### Benchmarking and Evaluation for AI Memory Advancements
 

@@ -180,7 +180,7 @@ Vector databases are central to many advanced AI memory systems. They store data
 
 These databases are fundamental for implementing **long-term memory for AI agents**, enabling them to recall past interactions and knowledge effectively.
 
-Comparing **RAG vs. agent memory** highlights different strategies for achieving recall. RAG excels at factual recall from documents, while agent memory systems focus on remembering interaction history and agent state. Understanding [how LLMs store information](/articles/how-llms-store-information/) can further illuminate these distinctions.
+Comparing **RAG vs. agent memory** highlights different strategies for achieving recall. RAG excels at factual recall from documents, while agent memory systems focus on remembering interaction history and agent state. Understanding how LLMs store information can further illuminate these distinctions.
 
 ### Long-Term Memory Solutions for AI Agents
 
@@ -203,7 +203,7 @@ While starting a new chat is effective for immediate context reset, you might ne
 3. **Personalized AI assistants:** Creating agents that learn and adapt to individual users over time requires robust memory.
 4. **Knowledge accumulation:** Building systems that continuously gather and recall information from numerous interactions necessitates advanced memory structures.
 
-For such scenarios, looking into [LLM memory systems](/articles/llm-memory-systems/) and understanding **how to give AI memory** becomes paramount. Tools like **Letta AI (Letta AI Guide)** and comparing [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) can offer practical starting points for implementation.
+For such scenarios, looking into [LLM memory systems](/articles/llm-memory-system/) and understanding **how to give AI memory** becomes paramount. Tools like **Letta AI (Letta AI Guide)** and comparing Letta vs. Langchain memory can offer practical starting points for implementation.
 
 ## Conclusion
 

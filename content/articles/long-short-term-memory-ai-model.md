@@ -70,11 +70,11 @@ LSTMs are foundational for AI agents needing to understand and react to dynamic,
 
 ### Natural Language Processing (NLP)
 
-In NLP, LSTMs are widely used for language modeling, machine translation, sentiment analysis, and text generation. For an AI agent, this means it can understand conversation nuances, remember previous turns, and generate coherent responses. For example, an AI assistant could recall a user's preference mentioned earlier in a long chat session. This is a key aspect of [AI agent conversation memory](/articles/ai-conversation-memory/).
+In NLP, LSTMs are widely used for language modeling, machine translation, sentiment analysis, and text generation. For an AI agent, this means it can understand conversation nuances, remember previous turns, and generate coherent responses. For example, an AI assistant could recall a user's preference mentioned earlier in a long chat session. This is a key aspect of [AI agent conversation memory](/articles/spring-ai-conversation-memory/).
 
 ### Time-Series Analysis and Prediction
 
-LSTMs excel at predicting future values in time-series data. This is invaluable for AI agents in finance, weather forecasting, or system monitoring. An agent could use an LSTM to predict equipment failure based on a long history of sensor readings. This relates to the broader topic of [AI agent temporal reasoning](/articles/ai-temporal-reasoning/). According to a 2022 study in *Nature Communications*, LSTM-based models achieved state-of-the-art performance in predicting complex climate patterns, outperforming traditional statistical methods by up to 15%. Another 2023 arXiv paper found that LSTMs in financial forecasting models showed a 12% improvement in accuracy over ARIMA models.
+LSTMs excel at predicting future values in time-series data. This is invaluable for AI agents in finance, weather forecasting, or system monitoring. An agent could use an LSTM to predict equipment failure based on a long history of sensor readings. This relates to the broader topic of AI agent temporal reasoning. According to a 2022 study in *Nature Communications*, LSTM-based models achieved state-of-the-art performance in predicting complex climate patterns, outperforming traditional statistical methods by up to 15%. Another 2023 arXiv paper found that LSTMs in financial forecasting models showed a 12% improvement in accuracy over ARIMA models.
 
 ### Speech Recognition
 

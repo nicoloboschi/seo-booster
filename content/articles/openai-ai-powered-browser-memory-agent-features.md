@@ -198,7 +198,7 @@ While dedicated systems offer flexibility for developers, an AI-powered browser 
 
 RAG is a technique, not a user-facing product in itself. An AI browser memory agent *uses* RAG. The agent's memory acts as the knowledge base that the RAG system queries. The "features" of the agent are the user-facing manifestations of this underlying RAG architecture combined with LLM capabilities. The **openai ai powered browser memory agent features** are built upon RAG.
 
-The primary distinction lies in the application. RAG is a method for improving LLM responses with external data. An AI browser memory agent is a product that *employs* RAG to provide a persistent, personalized browsing experience. For a deeper dive into the nuances, understanding [agent memory vs. RAG](/articles/agent-memory-vs-rag) is beneficial. The **OpenAI agent features** showcase RAG in a practical context.
+The primary distinction lies in the application. RAG is a method for improving LLM responses with external data. An AI browser memory agent is a product that *employs* RAG to provide a persistent, personalized browsing experience. For a deeper dive into the nuances, understanding agent memory vs. RAG is beneficial. The **OpenAI agent features** showcase RAG in a practical context.
 
 ### Browser Memory vs. Traditional Browser Features
 

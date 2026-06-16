@@ -141,7 +141,7 @@ This process allows the chatbot to "look up" relevant information before answeri
 For more sophisticated memory management, consider integrating n8n with specialized AI memory systems or frameworks. These systems offer structured approaches to memory, often with built-in features for summarization, retrieval, and context management.
 
 * **Hindsight:** An open-source AI memory system designed for LLM applications. You can integrate Hindsight into your n8n workflows by calling its API or running it locally and connecting via n8n's HTTP Request node. This provides a structured way to manage and query agent memories. Check out [Hindsight on GitHub](https://github.com/vectorize-io/hindsight) for more details.
-* **Other Frameworks:** Tools like LangChain or LlamaIndex offer memory modules that can be potentially integrated if they expose APIs or can be run alongside your n8n instance. [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) offers insight into different memory management approaches. These frameworks abstract away much of the complexity involved in building custom memory solutions.
+* **Other Frameworks:** Tools like LangChain or LlamaIndex offer memory modules that can be potentially integrated if they expose APIs or can be run alongside your n8n instance. Letta vs. Langchain memory offers insight into different memory management approaches. These frameworks abstract away much of the complexity involved in building custom memory solutions.
 
 ## Challenges and Considerations for n8n Chatbot Memory
 

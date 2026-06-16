@@ -202,7 +202,7 @@ Several libraries and frameworks simplify building LLM memory systems. Understan
 
 * **Vector Databases:** Services like Pinecone, Weaviate, ChromaDB, and Milvus are essential backend components for storing and searching embeddings. A 2024 report on vector database performance indicated that modern solutions can achieve sub-100ms retrieval times for millions of vectors.
 
-Choosing the right tools depends on project complexity and developer familiarity. For a deep dive into options, [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can offer guidance.
+Choosing the right tools depends on project complexity and developer familiarity. For a deep dive into options, [best AI agent memory systems](/articles/best-ai-memory-systems/) can offer guidance.
 
 ## Challenges and Considerations in LLM Memory Construction
 

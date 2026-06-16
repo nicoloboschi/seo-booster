@@ -138,7 +138,7 @@ Beyond external storage, architectural choices within the AI agent's design play
 
 **Retrieval-Augmented Generation (RAG)** is a powerful technique that enhances LLMs by retrieving relevant information from an external knowledge base before generating a response. In the context of memory, this knowledge base can be the conversation history itself, helping to prevent **AI losing context**.
 
-A RAG system queries a memory store (like a vector database) for relevant past interactions based on the current user input. The retrieved information is then combined with the prompt and fed to the LLM, providing it with the necessary context to avoid **chatbot memory loss**. This is distinct from how [agent memory vs RAG](/articles/agent-memory-vs-rag/) approaches differ in their primary focus, with RAG being a core mechanism for providing context to combat **AI forgetting conversations**.
+A RAG system queries a memory store (like a vector database) for relevant past interactions based on the current user input. The retrieved information is then combined with the prompt and fed to the LLM, providing it with the necessary context to avoid **chatbot memory loss**. This is distinct from how agent memory vs RAG approaches differ in their primary focus, with RAG being a core mechanism for providing context to combat **AI forgetting conversations**.
 
 #### Specialized Agent Memory Architectures: Designing for Recall
 

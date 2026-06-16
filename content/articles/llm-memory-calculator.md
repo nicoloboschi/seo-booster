@@ -137,7 +137,7 @@ While custom scripts like the one above are effective, dedicated tools and libra
 
 Many AI development frameworks offer built-in or pluggable memory management tools. Libraries like LangChain and LlamaIndex, for instance, provide abstractions for handling conversation memory. These abstractions often include token counting mechanisms to keep track of usage.
 
-For example, LangChain's `ConversationBufferMemory` can be configured to track token usage and even truncate older messages when limits are approached. This is a form of **limited memory AI** management, preventing unexpected failures. You can explore comparisons of such tools in guides like [LangChain vs. LlamaIndex memory management](/articles/langchain-vs-llama-index-memory-management/).
+For example, LangChain's `ConversationBufferMemory` can be configured to track token usage and even truncate older messages when limits are approached. This is a form of **limited memory AI** management, preventing unexpected failures. You can explore comparisons of such tools in guides like LangChain vs. LlamaIndex memory management.
 
 ### Specialized Libraries and Online Calculators
 

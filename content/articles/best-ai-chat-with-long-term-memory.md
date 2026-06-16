@@ -125,7 +125,7 @@ Several frameworks and platforms are enabling the development of AI chats with a
 * **Open-Source Memory Systems:** Various open-source projects, such as [Hindsight](https://github.com/vectorize-io/hindsight), offer dedicated memory management components that can be integrated into custom agent architectures. Comparing [open-source memory systems](/articles/open-source-memory-systems-compared/) can reveal powerful, adaptable options for **AI agent memory**.
 * **Commercial Platforms:** Some AI platforms are emerging with built-in long-term memory features, aiming for easier adoption of **persistent AI memory**.
 
-The choice between building a custom solution or using a managed platform depends on your technical expertise and specific needs for **AI chat long term memory**. For developers, exploring [Vectorize.io's best AI agent memory systems](/articles/best-ai-agent-memory-systems/) offers insights into powerful backend solutions.
+The choice between building a custom solution or using a managed platform depends on your technical expertise and specific needs for **AI chat long term memory**. For developers, exploring [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-systems/) offers insights into powerful backend solutions.
 
 ## Practical Applications
 

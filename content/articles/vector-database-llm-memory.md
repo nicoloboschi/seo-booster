@@ -135,7 +135,7 @@ The choice of vector database depends on factors like scalability, performance, 
 * **Managed Services:** Pinecone, Weaviate (cloud), Zilliz Cloud. These offer ease of use and scalability.
 * **Self-Hosted/Open Source:** Weaviate (self-hosted), Chroma, Qdrant, Milvus, and open-source tools like [Hindsights](https://github.com/vectorize-io/hindsight). These provide more control and can be cost-effective.
 
-For developers looking to compare options, resources like [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can offer valuable insights.
+For developers looking to compare options, resources like [best AI agent memory systems](/articles/best-ai-memory-systems/) can offer valuable insights.
 
 ## Benefits of Vector Database LLM Memory
 

@@ -147,7 +147,7 @@ An agent tasked with scientific research or market analysis can use Mem0 AI to s
 
 ## Comparing Mem0 AI with Other Memory Solutions
 
-The landscape of AI memory systems is diverse, with various approaches and tools available. Mem0 AI stands out as a specialized framework, but it's important to understand how it compares to other options. A [guide to AI memory frameworks](/articles/ai-memory-frameworks-comparison/) can provide broader context.
+The landscape of AI memory systems is diverse, with various approaches and tools available. Mem0 AI stands out as a specialized framework, but it's important to understand how it compares to other options. A guide to AI memory frameworks can provide broader context.
 
 ### Specialized vs. General-Purpose Memory
 

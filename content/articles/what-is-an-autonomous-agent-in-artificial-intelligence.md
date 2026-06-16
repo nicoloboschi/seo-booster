@@ -245,7 +245,7 @@ Understanding why an autonomous agent makes a particular decision can be difficu
 
 ### Generalization and Robustness
 
-Current autonomous agents often perform well within training domains but struggle to generalize to new, unseen situations. Enhancing their adaptability and ability to handle novel environments remains a key challenge. Research into [few-shot-learning-for-ai-agents](/articles/few-shot-learning-for-ai-agents/) aims to address this.
+Current autonomous agents often perform well within training domains but struggle to generalize to new, unseen situations. Enhancing their adaptability and ability to handle novel environments remains a key challenge. Research into few-shot-learning-for-ai-agents aims to address this.
 
 ### Ethical Considerations
 

@@ -206,7 +206,7 @@ The choice between an in-memory and a disk-based vector database for your Node.j
 * **Cost-Effectiveness:** Disk storage is generally cheaper than RAM.
 * **Guaranteed Persistence:** When data loss is unacceptable.
 
-For comparisons of memory systems, explore resources like [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) and [open-source memory systems compared](/articles/open-source-memory-systems-compared/). Understanding [the differences between vector databases and vector indexes](/articles/vector-database-vs-vector-index/) is also beneficial for choosing the right solution for your **in memory vector database node js** needs.
+For comparisons of memory systems, explore resources like [best AI agent memory systems](/articles/best-ai-memory-systems/) and [open-source memory systems compared](/articles/open-source-memory-systems-compared/). Understanding the differences between vector databases and vector indexes is also beneficial for choosing the right solution for your **in memory vector database node js** needs.
 
 ## Alternatives and Related Technologies for Node.js AI Agents
 

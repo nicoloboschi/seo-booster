@@ -131,7 +131,7 @@ LLMs themselves can be used for summarization. The AI can be prompted to condens
 
 **Memory consolidation** is the process of organizing and storing memories for long-term retention. In LLM chatbots, this involves intelligently deciding what information is important enough to be moved from the short-term context to long-term storage.
 
-This process might involve identifying key decisions, user preferences, or recurring themes. By consolidating memories effectively, the chatbot can build a richer, more accurate profile of the user and the ongoing interaction, improving the overall **llm chatbot memory** system. [AI agents that consolidate memory](/articles/ai-agents-consolidating-memory/) are crucial for this.
+This process might involve identifying key decisions, user preferences, or recurring themes. By consolidating memories effectively, the chatbot can build a richer, more accurate profile of the user and the ongoing interaction, improving the overall **llm chatbot memory** system. AI agents that consolidate memory are crucial for this.
 
 ### Context Window Management for AI Agents
 

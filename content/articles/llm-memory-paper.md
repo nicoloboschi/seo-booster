@@ -215,7 +215,7 @@ Examples include:
 * **LlamaIndex:** Focuses on connecting LLMs to external data, including memory.
 * **Lettä AI:** Provides specialized vector database solutions for AI memory.
 
-Comparing these tools, such as in [Lettä AI vs. LangChain memory](/articles/letta-vs-langchain-memory/), helps developers choose the right solution. Many **LLM memory papers** analyze the effectiveness of these frameworks in real-world applications.
+Comparing these tools, such as in Lettä AI vs. LangChain memory, helps developers choose the right solution. Many **LLM memory papers** analyze the effectiveness of these frameworks in real-world applications.
 
 ### Integrating Memory into Agent Architectures
 

@@ -106,7 +106,7 @@ Several strategies can be employed for RAM offloading, each with varying complex
 
 The most basic form is **paging** or **swapping**, managed by the operating system. When RAM is full, inactive data pages move to a swap file on disk. When needed, they swap back.
 
-While functional for general computing, OS-level swapping is often too slow for real-time AI applications. The latency from disk I/O operations is frequently unacceptable for interactive agents or high-throughput inference. Understanding [operating system memory management](/articles/os-memory-management/) is key here.
+While functional for general computing, OS-level swapping is often too slow for real-time AI applications. The latency from disk I/O operations is frequently unacceptable for interactive agents or high-throughput inference. Understanding [operating system memory management](/articles/ai-memory-management/) is key here.
 
 ### Custom Memory Management with Disk Caching
 

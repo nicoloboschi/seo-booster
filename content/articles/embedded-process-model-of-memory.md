@@ -43,7 +43,7 @@ Finally, **memory formation and modification are continuous**. New experiences d
 
 AI agents employing an **embedded process model of memory** can achieve remarkable adaptability. Instead of querying a separate database, the agent's internal mechanisms access and update its memory as a natural extension of its thinking process. This allows for **rapid, contextually relevant recall**, vital for complex tasks. The **embedded process model** makes recall an immediate part of cognition.
 
-Consider an agent navigating a simulated environment. With an embedded memory, it doesn't just store a map; it recalls specific pathways, dangers encountered, or successful strategies *as it plans its next move*. This direct integration means memory recall is fast and already informed by the agent's current situation, showcasing the power of the **embedded process model**. This exemplifies advanced [agent architecture](/articles/agent-architecture/) design.
+Consider an agent navigating a simulated environment. With an embedded memory, it doesn't just store a map; it recalls specific pathways, dangers encountered, or successful strategies *as it plans its next move*. This direct integration means memory recall is fast and already informed by the agent's current situation, showcasing the power of the **embedded process model**. This exemplifies advanced agent architecture design.
 
 ### Enhancing Real-Time Recall
 
@@ -67,7 +67,7 @@ This is akin to how humans learn from experience. Repeated actions that lead to 
 
 Implementing an **embedded process model of memory** often involves sophisticated AI architectures. These aren't just about storing data; they are about how the data is processed and integrated into the agent's ongoing operations. Architectures might combine elements of neural networks, symbolic reasoning, and specialized memory structures.
 
-One approach involves using **recurrent neural networks (RNNs)** or their variants like LSTMs and GRUs. The internal state of these networks can be seen as a form of evolving memory. However, for more complex agents and a true **embedded process model of memory**, this often needs to be augmented with more explicit memory management. Understanding [cognitive architectures](/articles/cognitive-architectures/) provides further context.
+One approach involves using **recurrent neural networks (RNNs)** or their variants like LSTMs and GRUs. The internal state of these networks can be seen as a form of evolving memory. However, for more complex agents and a true **embedded process model of memory**, this often needs to be augmented with more explicit memory management. Understanding cognitive architectures provides further context.
 
 ### Hybrid Memory Systems
 

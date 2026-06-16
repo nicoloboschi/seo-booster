@@ -49,7 +49,7 @@ Flavonoids in berries, such as anthocyanins, are believed to enhance memory by i
 
 #### Fatty Fish: Essential for Brain Structure
 
-DHA constitutes a significant portion of the brain's gray matter and plays a crucial role in neuronal membrane fluidity and function. Adequate intake of omega-3s is linked to better memory, learning ability, and a reduced risk of cognitive decline. A meta-analysis published in *Nutritional Neuroscience* in 2022 concluded that omega-3 supplementation could lead to significant improvements in memory recall. This highlights the profound [omega-3 benefits for memory](/articles/omega-3-benefits-for-memory/).
+DHA constitutes a significant portion of the brain's gray matter and plays a crucial role in neuronal membrane fluidity and function. Adequate intake of omega-3s is linked to better memory, learning ability, and a reduced risk of cognitive decline. A meta-analysis published in *Nutritional Neuroscience* in 2022 concluded that omega-3 supplementation could lead to significant improvements in memory recall. This highlights the profound omega-3 benefits for memory.
 
 #### Plant-Based Omega-3 Sources
 

@@ -164,7 +164,7 @@ For AI agents that need to operate over extended periods or across multiple sess
 
 ### Modular AI Architectures: Building Blocks of Intelligence
 
-Modern AI systems often employ **modular AI architectures**, where different components handle specific functions like perception, reasoning, and action. This modularity allows for greater flexibility and the development of more specialized AI capabilities. Exploring [modular AI architectures](/articles/modular-ai-systems/) can provide insight into complex agent designs.
+Modern AI systems often employ **modular AI architectures**, where different components handle specific functions like perception, reasoning, and action. This modularity allows for greater flexibility and the development of more specialized AI capabilities. Exploring modular AI architectures can provide insight into complex agent designs.
 
 ## The Philosophical Underpinnings: Is AI Really AI?
 

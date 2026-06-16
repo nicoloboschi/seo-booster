@@ -163,7 +163,7 @@ When AI agents tackle complex problems, they often need to access a wide range o
 
 ### Domain-Specific Knowledge Augmentation via LLM Memory
 
-In specialized fields, LLMs may lack sufficient domain knowledge. Memory injection allows developers to inject curated knowledge bases, technical manuals, or expert insights directly into the AI's working memory. This effectively \"upskills\" the LLM for specific tasks without requiring full model retraining. This is related to how RAG enhances LLMs, as discussed in [Differentiating agent memory from RAG](/articles/agent-memory-vs-rag/).
+In specialized fields, LLMs may lack sufficient domain knowledge. Memory injection allows developers to inject curated knowledge bases, technical manuals, or expert insights directly into the AI's working memory. This effectively \"upskills\" the LLM for specific tasks without requiring full model retraining. This is related to how RAG enhances LLMs, as discussed in Differentiating agent memory from RAG.
 
 ### Maintaining Context in Long-Term Interactions with AI Agents
 
@@ -193,7 +193,7 @@ The ability for AI to \"remember\" and inject personal information raises ethica
 
 The field of AI memory is rapidly evolving. Techniques for LLM memory injection are becoming more advanced, moving beyond simple prompt augmentation to more integrated internal memory mechanisms. Research into more efficient **memory consolidation** and retrieval algorithms will continue to push the boundaries of what AI agents can remember and how they can use that memory.
 
-As AI agents become more autonomous and integrated into our lives, their ability to recall and use information effectively will be a key differentiator. Memory injection represents a significant step towards creating AI systems that are not only intelligent but also contextually aware and truly helpful. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems) can provide insights into current advancements in LLM memory injection.
+As AI agents become more autonomous and integrated into our lives, their ability to recall and use information effectively will be a key differentiator. Memory injection represents a significant step towards creating AI systems that are not only intelligent but also contextually aware and truly helpful. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide insights into current advancements in LLM memory injection.
 
 ## Conclusion
 

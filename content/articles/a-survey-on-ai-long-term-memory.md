@@ -92,7 +92,7 @@ print(f"Similarity score: {most_similar_score:.4f}")
 
 Beyond unstructured text embeddings, **knowledge graphs** offer another powerful way to represent long-term memory. Knowledge graphs store information as a network of entities and their relationships. This structured approach allows for more complex reasoning and retrieval of factual information.
 
-For instance, an AI agent could use a knowledge graph to remember that "Paris is the capital of France" and "France is a country in Europe." This allows for multi-hop reasoning, where the agent can infer relationships not explicitly stated in a single fact. This is particularly useful for domains requiring precise factual recall and logical deduction. A foundational concept in this area is discussed in [graph neural networks for AI reasoning](/articles/graph-neural-networks-ai-reasoning/).
+For instance, an AI agent could use a knowledge graph to remember that "Paris is the capital of France" and "France is a country in Europe." This allows for multi-hop reasoning, where the agent can infer relationships not explicitly stated in a single fact. This is particularly useful for domains requiring precise factual recall and logical deduction. A foundational concept in this area is discussed in graph neural networks for AI reasoning.
 
 ### Hybrid Memory Systems
 

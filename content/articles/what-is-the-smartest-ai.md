@@ -87,7 +87,7 @@ The development of **LLM memory systems** is an ongoing effort to overcome their
 
 The ultimate goal for many is AGI. This is an AI that can understand, learn, and apply its intelligence to solve any problem a human can. This requires not just vast knowledge but also common sense, creativity, and the ability to generalize learning across domains. Achieving AGI is the benchmark for defining **what is the smartest ai**.
 
-Achieving AGI might involve breakthroughs in areas like **temporal reasoning in AI memory**. This allows AI to understand cause and effect over time. Entirely new architectural paradigms may also be necessary. The path to AGI is complex. It involves overcoming significant scientific and engineering hurdles. Research into [AI cognitive architectures](/articles/ai-cognitive-architectures/) is central to this endeavor.
+Achieving AGI might involve breakthroughs in areas like **temporal reasoning in AI memory**. This allows AI to understand cause and effect over time. Entirely new architectural paradigms may also be necessary. The path to AGI is complex. It involves overcoming significant scientific and engineering hurdles. Research into AI cognitive architectures is central to this endeavor.
 
 ## The Limitations and Future of "Smartest AI"
 
@@ -187,7 +187,7 @@ The development of **LLM memory systems** is an ongoing effort to overcome their
 
 The ultimate goal for many is AGI. This is an AI that can understand, learn, and apply its intelligence to solve any problem a human can. This requires not just vast knowledge but also common sense, creativity, and the ability to generalize learning across domains. Achieving AGI is the benchmark for defining **what is the smartest ai**.
 
-Achieving AGI might involve breakthroughs in areas like **temporal reasoning in AI memory**. This allows AI to understand cause and effect over time. Entirely new architectural paradigms may also be necessary. The path to AGI is complex. It involves overcoming significant scientific and engineering hurdles. Research into [AI cognitive architectures](/articles/ai-cognitive-architectures/) is central to this endeavor.
+Achieving AGI might involve breakthroughs in areas like **temporal reasoning in AI memory**. This allows AI to understand cause and effect over time. Entirely new architectural paradigms may also be necessary. The path to AGI is complex. It involves overcoming significant scientific and engineering hurdles. Research into AI cognitive architectures is central to this endeavor.
 
 ## The Limitations and Future of "Smartest AI"
 

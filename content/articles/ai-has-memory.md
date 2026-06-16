@@ -67,7 +67,7 @@ While internal memory mechanisms are crucial, **AI has memory** capabilities sig
 
 ### Vector Databases and Embeddings
 
-**Vector databases** are instrumental in RAG and other memory-intensive AI applications. They store data, such as text, images, or audio, as **embeddings**, numerical representations that capture semantic meaning. This allows for rapid similarity searches. When an AI needs to recall information, it converts its query into an embedding and searches the vector database for the most similar stored embeddings. This process is fundamental to how many modern AI systems can access and use vast stores of information, demonstrating that **AI has memory** through efficient data indexing. Understanding [vector embeddings](/articles/vector-embeddings) is key to grasping modern AI memory.
+**Vector databases** are instrumental in RAG and other memory-intensive AI applications. They store data, such as text, images, or audio, as **embeddings**, numerical representations that capture semantic meaning. This allows for rapid similarity searches. When an AI needs to recall information, it converts its query into an embedding and searches the vector database for the most similar stored embeddings. This process is fundamental to how many modern AI systems can access and use vast stores of information, demonstrating that **AI has memory** through efficient data indexing. Understanding vector embeddings is key to grasping modern AI memory.
 
 ### Vectorize.io and Memory Management
 
@@ -149,7 +149,7 @@ Autonomous vehicles, robots, and drones rely heavily on memory to navigate, lear
 
 ### Complex Problem Solving
 
-AI systems with robust memory can tackle more complex problems. They can retain intermediate results, track logical steps, and draw upon a wider range of learned information to find solutions. This is particularly important in scientific research and complex simulations, as detailed in advancements in [agent memory architectures](/articles/agent-memory-architectures). The continuous evolution in how **AI has memory** promises more capable and integrated AI systems across all domains. According to a 2023 report by Gartner, 70% of enterprises are exploring or implementing AI memory solutions to enhance their applications.
+AI systems with robust memory can tackle more complex problems. They can retain intermediate results, track logical steps, and draw upon a wider range of learned information to find solutions. This is particularly important in scientific research and complex simulations, as detailed in advancements in [agent memory architectures](/articles/ai-memory-architecture/). The continuous evolution in how **AI has memory** promises more capable and integrated AI systems across all domains. According to a 2023 report by Gartner, 70% of enterprises are exploring or implementing AI memory solutions to enhance their applications.
 
 ## FAQ
 

@@ -71,7 +71,7 @@ This involves techniques like:
 2. **Prioritization:** Identifying high-value information that is frequently accessed or critical for user experience.
 3. **Contextual Retrieval:** Ensuring that retrieved memories are relevant to the current interaction and not just semantically similar.
 
-The **best AI memory systems** expertly balance these storage and retrieval mechanisms to provide a seamless user experience. Understanding [how AI agents learn](/articles/ai-agent-learning/) is also critical to appreciating memory's role.
+The **best AI memory systems** expertly balance these storage and retrieval mechanisms to provide a seamless user experience. Understanding how AI agents learn is also critical to appreciating memory's role.
 
 ### The Role of Knowledge Graphs
 
@@ -101,7 +101,7 @@ Imagine a support bot that remembers you've already contacted them about a speci
 
 AI tools for writing, coding, or design can benefit immensely from memory. An AI writing assistant could remember your established style, characters, or plot points across multiple writing sessions. A coding assistant could recall previous code snippets, project requirements, and debugging history.
 
-This allows for more coherent and productive creative workflows. The AI becomes a consistent collaborator, not just a tool that resets with each new prompt. This is central to the concept of [agentic AI long-term memory](/articles/agentic-ai-memory/).
+This allows for more coherent and productive creative workflows. The AI becomes a consistent collaborator, not just a tool that resets with each new prompt. This is central to the concept of agentic AI long-term memory.
 
 ## Evaluating the Best AI App with Long Memory
 

@@ -107,7 +107,7 @@ For more persistence, agents can use lightweight **key-value stores** like Redis
 
 #### Specialized Memory Systems
 
-More advanced agents might integrate with dedicated **AI memory systems**. While not all systems focus specifically on "keep-alive" functionality, frameworks like Hindsight offer flexible ways to manage and retrieve agent states. [Hindsight](https://github.com/vectorize-io/hindsight) is an open-source tool that can be adapted to store and retrieve various types of agent state, including short-term operational data. Other systems, like those discussed in [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), offer different trade-offs in terms of speed, persistence, and complexity.
+More advanced agents might integrate with dedicated **AI memory systems**. While not all systems focus specifically on "keep-alive" functionality, frameworks like Hindsight offer flexible ways to manage and retrieve agent states. [Hindsight](https://github.com/vectorize-io/hindsight) is an open-source tool that can be adapted to store and retrieve various types of agent state, including short-term operational data. Other systems, like those discussed in [best AI agent memory systems](/articles/best-ai-memory-systems/), offer different trade-offs in terms of speed, persistence, and complexity.
 
 ### Benefits of Effective Keep-Alive Memory
 

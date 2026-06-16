@@ -85,7 +85,7 @@ This makes exploring LLMs like those with 100K+ tokens more accessible than manu
 
 Running LLMs with very large context windows locally demands substantial hardware. The primary bottleneck is **VRAM (Video Random Access Memory)** on your GPU. A model with a 128K context window requires significantly more memory to load its weights and process inputs compared to a model with a 4K window.
 
-A 2024 report by Hugging Face indicated that models with context windows exceeding 32K tokens often require GPUs with 24GB of VRAM or more for efficient inference. Insufficient VRAM will force the model to use slower system RAM, drastically reducing performance. Therefore, choosing the right hardware is as crucial as selecting the right model when aiming for the largest context window LLM with Ollama. Understanding [GPU memory management for LLMs](/articles/gpu-memory-management-for-llms/) can be beneficial here.
+A 2024 report by Hugging Face indicated that models with context windows exceeding 32K tokens often require GPUs with 24GB of VRAM or more for efficient inference. Insufficient VRAM will force the model to use slower system RAM, drastically reducing performance. Therefore, choosing the right hardware is as crucial as selecting the right model when aiming for the largest context window LLM with Ollama. Understanding GPU memory management for LLMs can be beneficial here.
 
 ## Choosing Ollama Large Models for Maximum Context
 
@@ -111,7 +111,7 @@ Simply having a large context window available doesn't automatically mean your L
 
 Crafting effective prompts is essential. For tasks requiring deep context recall, your prompts should clearly guide the LLM on what information to focus on. This might involve summarizing lengthy documents, answering questions based on extensive prior text, or maintaining character consistency in a narrative.
 
-For example, instead of a vague instruction, a more effective prompt might be: "Based on the entire conversation history provided, summarize the key decisions made regarding Project Alpha and identify any outstanding action items for the marketing team." This explicitly directs the LLM to use its full context, making the largest context window LLM more effective. Mastering these [advanced prompt engineering for long context LLMs](/articles/advanced-prompt-engineering-for-long-context-llms/) is crucial.
+For example, instead of a vague instruction, a more effective prompt might be: "Based on the entire conversation history provided, summarize the key decisions made regarding Project Alpha and identify any outstanding action items for the marketing team." This explicitly directs the LLM to use its full context, making the largest context window LLM more effective. Mastering these advanced prompt engineering for long context LLMs is crucial.
 
 ### Retrieval-Augmented Generation (RAG) and Large Context
 

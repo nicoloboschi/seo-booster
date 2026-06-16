@@ -138,7 +138,7 @@ Frameworks such as LangChain and LlamaIndex offer abstractions for building LLM 
 * **LangChain:** Provides various memory types, such as `ConversationBufferMemory` and `ConversationSummaryMemory`, which can be easily integrated into chains. It also supports vector store integration for more advanced memory solutions.
 * **LlamaIndex:** Primarily focuses on data indexing and retrieval, making it exceptionally well-suited for building RAG pipelines that power sophisticated memory systems.
 
-These frameworks abstract away significant complexity, allowing developers to concentrate on application logic. For a deeper understanding, explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems).
+These frameworks abstract away significant complexity, allowing developers to concentrate on application logic. For a deeper understanding, explore [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### Vector Databases: The Backbone of Persistent Recall
 

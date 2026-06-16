@@ -145,7 +145,7 @@ Several tools and frameworks are emerging to help developers build AI agents wit
 
 The open-source community is actively developing solutions for AI memory. Systems like **Hindsight** (available on GitHub at [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)) offer developers tools to manage and query memory for their AI agents. These platforms often provide abstractions for interacting with various storage backends, such as vector databases, facilitating **ai ram ji implementation**.
 
-Other notable open-source projects include [LangChain](/articles/langchain-agents/) and LlamaIndex, along with specific database solutions like ChromaDB or Weaviate. These tools facilitate the implementation of **agentic AI long-term memory**, directly supporting the **ai ram ji** vision.
+Other notable open-source projects include LangChain and LlamaIndex, along with specific database solutions like ChromaDB or Weaviate. These tools facilitate the implementation of **agentic AI long-term memory**, directly supporting the **ai ram ji** vision.
 
 ### Specialized AI Memory Solutions
 

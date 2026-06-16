@@ -128,7 +128,7 @@ Creating **LLM memory awesome** systems involves designing architectures that ca
 3. **Augmentation:** Retrieved chunks are combined with the original query to form an augmented prompt.
 4. **Generation:** The LLM generates a response based on the augmented prompt.
 
-This approach significantly expands the LLM's effective memory capacity, making it a cornerstone of "LLM memory awesome" solutions. For a deeper dive, explore [the intricacies of agent memory versus RAG](/articles/agent-memory-vs-rag).
+This approach significantly expands the LLM's effective memory capacity, making it a cornerstone of "LLM memory awesome" solutions. For a deeper dive, explore the intricacies of agent memory versus RAG.
 
 ### Exploring Vector Database Architectures for LLM Memory
 

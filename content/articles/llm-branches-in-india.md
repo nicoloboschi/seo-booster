@@ -52,7 +52,7 @@ Criminal Law focuses on offenses against the state and society. An LLM in this a
 
 ### Intellectual Property (IP) Law: Protecting Innovation
 
-Intellectual Property Law deals with creations of the mind, such as inventions, literary and artistic works, designs, and symbols. An LLM in IP Law prepares lawyers to protect patents, trademarks, copyrights, and trade secrets. This is increasingly important in a knowledge-based economy. The rise of AI also introduces new IP challenges, requiring specialized legal minds. Many find that specializing via an [LLM specialization](/articles/choosing-an-llm-specialization/) directly translates to career advancement in this dynamic field.
+Intellectual Property Law deals with creations of the mind, such as inventions, literary and artistic works, designs, and symbols. An LLM in IP Law prepares lawyers to protect patents, trademarks, copyrights, and trade secrets. This is increasingly important in a knowledge-based economy. The rise of AI also introduces new IP challenges, requiring specialized legal minds. Many find that specializing via an LLM specialization directly translates to career advancement in this dynamic field.
 
 ### Constitutional Law: Foundation of Governance
 

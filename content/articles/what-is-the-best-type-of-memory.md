@@ -34,7 +34,7 @@ The "best" type of memory for AI agents isn't a single solution, but rather a dy
 
 There isn't a single "best" type of memory for all AI agents; the optimal choice depends on the agent's specific purpose, architecture, and the tasks it performs. Effective AI memory systems often integrate multiple types, such as episodic, semantic, and short-term memory, to achieve high performance across diverse scenarios.
 
-The concept of **AI memory** is central to creating agents that can learn, adapt, and act intelligently over time. Unlike static programs, intelligent agents need to retain information from past interactions and experiences to inform future decisions. This capability is what differentiates a simple script from a truly agentic system capable of complex reasoning and long-term planning. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is fundamental to building sophisticated AI.
+The concept of **AI memory** is central to creating agents that can learn, adapt, and act intelligently over time. Unlike static programs, intelligent agents need to retain information from past interactions and experiences to inform future decisions. This capability is what differentiates a simple script from a truly agentic system capable of complex reasoning and long-term planning. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is fundamental to building sophisticated AI.
 
 ### The Spectrum of AI Memory
 

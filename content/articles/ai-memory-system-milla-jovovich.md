@@ -50,7 +50,7 @@ Crafting effective **AI memory systems** requires more than just selecting a sto
 
 A pivotal advancement in **AI memory systems** is the use of **embedding models for memory**. These models translate data, like text, into numerical vectors that capture semantic meaning. Storing these vectors in a **vector database** facilitates efficient similarity searches, a core component of many **AI memory solutions**.
 
-This capability allows an AI to find information based on conceptual relevance, not just keywords. An agent can query its memory with a current situation, and the vector database will return the most semantically similar past experiences, enhancing **AI memory recall**. The design of these databases is critical; for example, understanding [vector database scaling challenges](/articles/vector-database-scaling-challenges/) is important for large-scale applications.
+This capability allows an AI to find information based on conceptual relevance, not just keywords. An agent can query its memory with a current situation, and the vector database will return the most semantically similar past experiences, enhancing **AI memory recall**. The design of these databases is critical; for example, understanding vector database scaling challenges is important for large-scale applications.
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -86,7 +86,7 @@ This memory type is often derived from vast datasets, focusing on generalized in
 
 Understanding and reasoning about time is critical for many AI applications. **Temporal reasoning in AI memory** allows agents to grasp event order, durations, and causal links. This is particularly important for AI planning, scheduling, and analyzing time-series data.
 
-An AI might need to know that event A preceded event B, which then led to outcome C. Without effective temporal reasoning, an AI’s memory would be a jumbled collection of facts lacking a coherent timeline, hindering its **AI long-term memory** capabilities. For more on how AI models process sequences, explore [Transformer architecture basics](/articles/transformer-architecture-basics/).
+An AI might need to know that event A preceded event B, which then led to outcome C. Without effective temporal reasoning, an AI’s memory would be a jumbled collection of facts lacking a coherent timeline, hindering its **AI long-term memory** capabilities. For more on how AI models process sequences, explore Transformer architecture basics.
 
 ## Implementing AI Memory Systems
 

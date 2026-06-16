@@ -181,7 +181,7 @@ The mechanisms for integrating information from the long-term memory module into
 
 ### The Role of Temporal Reasoning
 
-For agents that need to understand sequences of events or causality over time, **temporal reasoning** capabilities add another layer of complexity and memory demand. Storing and processing temporal relationships requires specialized data structures and computational resources, increasing overall **LLM memory consumption**. This is crucial for AI assistants that need to remember conversations over extended periods, enabling them to act like an [how AI assistants remember conversations](/articles/ai-assistant-remembers-conversations/). Effective temporal reasoning is key to advanced, yet manageable, **LLM memory consumption**.
+For agents that need to understand sequences of events or causality over time, **temporal reasoning** capabilities add another layer of complexity and memory demand. Storing and processing temporal relationships requires specialized data structures and computational resources, increasing overall **LLM memory consumption**. This is crucial for AI assistants that need to remember conversations over extended periods, enabling them to act like an [how AI assistants remember conversations](/articles/ai-that-remembers-conversations/). Effective temporal reasoning is key to advanced, yet manageable, **LLM memory consumption**.
 
 ## Future Directions and Considerations
 

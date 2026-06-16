@@ -179,7 +179,7 @@ Specialized vector databases like Pinecone, Weaviate, and Chroma are designed fo
 
 ### Vectorize.io and Memory Systems for AI Agents
 
-Platforms like Vectorize.io offer insights and tools for managing AI memory. Their guides on [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) and comparisons like [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) highlight the diverse landscape of memory solutions available for a bot in memory meadow.
+Platforms like Vectorize.io offer insights and tools for managing AI memory. Their guides on [best AI agent memory systems](/articles/best-ai-memory-systems/) and comparisons like Letta vs. Langchain memory highlight the diverse landscape of memory solutions available for a bot in memory meadow.
 
 ### Open-Source Memory Systems for AI Development
 

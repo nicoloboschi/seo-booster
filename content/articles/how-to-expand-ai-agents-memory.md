@@ -57,7 +57,7 @@ The process typically involves:
 2. **Similarity Search:** When information is needed, the agent generates an embedding for its query and searches the indexed data for similar chunks.
 3. **Augmenting the Prompt:** The retrieved information is added to the agent's prompt, providing context for generating a response.
 
-RAG effectively extends an agent's knowledge beyond training data, acting as a form of long-term memory. It's a key component when discussing [agent memory vs RAG](/articles/agent-memory-vs-rag/).
+RAG effectively extends an agent's knowledge beyond training data, acting as a form of long-term memory. It's a key component when discussing agent memory vs RAG.
 
 #### How RAG Expands Memory
 

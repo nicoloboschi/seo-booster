@@ -212,7 +212,7 @@ The ultimate vision of "memory cloth" is closely tied to creating truly **person
 
 ### The Role of Human-Like Cognition in AI Memory
 
-Achieving "memory cloth" might require AI to develop more human-like cognitive processes. This includes not just recall but also abstraction, inference, and self-reflection. Advances in **agent architecture patterns** that better mimic human cognition will be key. Understanding the nuances of [human memory vs AI memory](/articles/human-memory-vs-ai-memory/) can offer valuable insights. Emulating human cognitive flexibility is a long-term goal.
+Achieving "memory cloth" might require AI to develop more human-like cognitive processes. This includes not just recall but also abstraction, inference, and self-reflection. Advances in **agent architecture patterns** that better mimic human cognition will be key. Understanding the nuances of human memory vs AI memory can offer valuable insights. Emulating human cognitive flexibility is a long-term goal.
 
 While we don't have "memory cloth" today, the journey towards it is reshaping the capabilities of artificial intelligence. The ongoing research into [AI agent persistent memory](/articles/ai-agent-persistent-memory/) and [AI agents' memory types](/articles/ai-agents-memory-types/) promises a future where AI can recall and apply knowledge with unprecedented depth and relevance. The concept of memory cloth serves as a guiding star for this evolution.
 

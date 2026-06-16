@@ -221,7 +221,7 @@ While Zep offers a powerful, integrated solution, it's part of a broader ecosyst
 
 General-purpose **vector databases** like Pinecone or Weaviate store embeddings and perform vector searches. However, the **Zep Memory API** is purpose-built for AI conversational memory. It includes features like message ordering, role attribution, and built-in summarization, not standard in most vector databases.
 
-Zep often uses an underlying vector database but adds a crucial layer of AI-specific logic and convenience. This makes implementing conversational memory more straightforward than building the same functionality from scratch using a generic vector store. For more, see [vector databases for AI memory](/articles/vector-databases-for-ai-memory/).
+Zep often uses an underlying vector database but adds a crucial layer of AI-specific logic and convenience. This makes implementing conversational memory more straightforward than building the same functionality from scratch using a generic vector store. For more, see [vector databases for AI memory](/articles/vector-database-for-memory/).
 
 ### Integration with LLM Frameworks
 

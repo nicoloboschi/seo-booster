@@ -46,7 +46,7 @@ The concept of **short-term memory in AI** is closely related to the **working m
 
 A defining feature of **AI short-term memory** is its **limited capacity**. Just as human working memory can only hold about 7±2 chunks of information, AI short-term memory systems have constraints. In Large Language Models (LLMs), this is often represented by the **context window size**. This window dictates how much recent text the model can consider at any given moment.
 
-Information in **AI short-term memory** also experiences **decay**. If not actively refreshed or attended to, the information gradually fades or becomes inaccessible. For AI agents, this means that without specific mechanisms to retain or transfer important details, they might "forget" earlier parts of a conversation or task. This is a primary challenge addressed by more advanced [AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+Information in **AI short-term memory** also experiences **decay**. If not actively refreshed or attended to, the information gradually fades or becomes inaccessible. For AI agents, this means that without specific mechanisms to retain or transfer important details, they might "forget" earlier parts of a conversation or task. This is a primary challenge addressed by more advanced [AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## How AI Short-Term Memory Differs from Other Memory Types
 

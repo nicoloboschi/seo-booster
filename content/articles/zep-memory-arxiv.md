@@ -41,7 +41,7 @@ Zeep Memory's contribution lies in offering structured, queryable memory for AI 
 
 ### The Need for Advanced Agent Memory
 
-Current large language models (LLMs) often struggle with long-term memory and maintaining context across extended conversations. Their inherent **context window limitations** mean that information from earlier in an interaction can be lost. This severely impacts an agent's ability to perform complex tasks or exhibit consistent behavior. This is where specialized memory systems like Zeep Memory become essential. They act as external memory modules. These allow agents to access and process information far beyond the immediate input. Understanding [LLM context windows](/articles/llm-context-windows/) is key to appreciating this challenge.
+Current large language models (LLMs) often struggle with long-term memory and maintaining context across extended conversations. Their inherent **context window limitations** mean that information from earlier in an interaction can be lost. This severely impacts an agent's ability to perform complex tasks or exhibit consistent behavior. This is where specialized memory systems like Zeep Memory become essential. They act as external memory modules. These allow agents to access and process information far beyond the immediate input. Understanding [LLM context windows](/articles/llm-api-context-window/) is key to appreciating this challenge.
 
 ### Zeep Memory's Architectural Approach
 

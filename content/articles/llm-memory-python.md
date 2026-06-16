@@ -171,7 +171,7 @@ conversation.predict(input="What is my name?")
 print(memory.load_memory_variables({}))
 ```
 
-This LangChain example shows how memory is automatically managed and used by the `ConversationChain`. This is a common pattern for [AI agent memory architecture patterns](/articles/agent-memory-architecture-patterns/), central to **llm memory python** applications.
+This LangChain example shows how memory is automatically managed and used by the `ConversationChain`. This is a common pattern for AI agent memory architecture patterns, central to **llm memory python** applications.
 
 ### LlamaIndex for Data Integration
 
@@ -221,7 +221,7 @@ The Python ecosystem offers a wealth of tools for implementing **llm memory pyth
 * **Hindsight:** An open-source framework specifically designed for building agent memory. ([https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight))
 * **Zep:** An open-source vector database and memory store optimized for LLM applications. ([https://vectorize.io/articles/zep-memory-ai-guide](/articles/zep-memory-ai-guide))
 
-Choosing the right tools depends on application complexity, data scale, and performance requirements. For instance, when comparing [Lettа vs Langchain memory](/articles/letta-vs-langchain-memory/), developers can assess which framework better suits their needs for **llm memory python**.
+Choosing the right tools depends on application complexity, data scale, and performance requirements. For instance, when comparing Lettа vs Langchain memory, developers can assess which framework better suits their needs for **llm memory python**.
 
 ## Challenges and Future Directions
 

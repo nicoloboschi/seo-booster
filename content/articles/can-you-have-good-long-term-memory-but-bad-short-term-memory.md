@@ -63,7 +63,7 @@ Common mechanisms for long-term memory include:
 
 The architectural separation between short-term and long-term memory systems creates the potential for imbalance. If an agent's design prioritizes retrieval from its persistent archive over its immediate working memory, it can exhibit the described behavior, leading to an AI with good long-term but bad short-term memory.
 
-Consider an agent built for historical analysis. Its core function might be querying a vast archive of historical documents, demanding excellent long-term recall of facts and dates. However, if its conversational interface has a very small context window, it might forget the user's specific research question from one turn to the next, a common pitfall in [conversational AI design](/articles/conversational-ai-design-principles/). This scenario directly illustrates the possibility of an AI having good long-term memory but bad short-term memory.
+Consider an agent built for historical analysis. Its core function might be querying a vast archive of historical documents, demanding excellent long-term recall of facts and dates. However, if its conversational interface has a very small context window, it might forget the user's specific research question from one turn to the next, a common pitfall in conversational AI design. This scenario directly illustrates the possibility of an AI having good long-term memory but bad short-term memory.
 
 #### Case Study: Retrieval-Augmented Generation (RAG) Systems
 

@@ -68,7 +68,7 @@ LangGraph builds upon the LangChain expression language (LCEL) to enable the cre
 
 When Zep memory is integrated, it becomes a crucial component of the agent's state or a tool accessible within the graph. A node in the LangGraph might be responsible for deciding whether to answer a question directly or to first retrieve relevant context from Zep. This dynamic retrieval process allows the agent to adapt its behavior based on its historical knowledge.
 
-Consider a scenario where an agent needs to book a flight. The LangGraph might have nodes for "Gathering Requirements," "Searching Flights," and "Confirming Booking." If the agent needs to know the user's preferred airline, a node could query Zep memory. If the information isn't there, it might transition to a "Asking for Preference" node. This iterative process, informed by memory, leads to more sophisticated agent behavior within the **zep memory LangGraph** framework. Understanding [LangGraph's state management for AI agents](/articles/langgraph-state-management/) is essential for implementing this.
+Consider a scenario where an agent needs to book a flight. The LangGraph might have nodes for "Gathering Requirements," "Searching Flights," and "Confirming Booking." If the agent needs to know the user's preferred airline, a node could query Zep memory. If the information isn't there, it might transition to a "Asking for Preference" node. This iterative process, informed by memory, leads to more sophisticated agent behavior within the **zep memory LangGraph** framework. Understanding LangGraph's state management for AI agents is essential for implementing this.
 
 ### Zep as a Memory Tool in LangGraph
 

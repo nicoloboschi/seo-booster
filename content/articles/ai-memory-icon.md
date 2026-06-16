@@ -84,7 +84,7 @@ Other common icons depict **data storage** or **data flow**. This can include:
 * **Cloud icons**: Suggesting cloud-based memory or vast storage capacity.
 * **Stacked blocks or files**: Symbolizing discrete pieces of information being held, reinforcing **data persistence**.
 
-These symbols are less anthropomorphic and more directly represent the technical function of memory systems in AI. For instance, an icon showing data being written into and read from a repository clearly conveys [persistent memory in AI](/articles/persistent-memory-ai). This visual feedback is crucial for [AI agent recall](/articles/ai-agent-recall) and understanding **data persistence**.
+These symbols are less anthropomorphic and more directly represent the technical function of memory systems in AI. For instance, an icon showing data being written into and read from a repository clearly conveys [persistent memory in AI](/articles/persistent-memory-ai). This visual feedback is crucial for AI agent recall and understanding **data persistence**.
 
 ### Abstract and Geometric Designs for AI Memory
 
@@ -191,7 +191,7 @@ As with any UI element, **AI memory icons** benefit from user testing. Observing
 
 ## Future Trends in AI Memory Visualization
 
-As AI systems become more complex and integrated into daily life, the way their memory is visualized will likely evolve. We might see more dynamic icons that change based on the type of memory being accessed or the amount of data stored. The field of [AI memory management](/articles/ai-memory-management-strategies) is constantly advancing.
+As AI systems become more complex and integrated into daily life, the way their memory is visualized will likely evolve. We might see more dynamic icons that change based on the type of memory being accessed or the amount of data stored. The field of AI memory management is constantly advancing.
 
 The development of more advanced [AI agent memory patterns](/articles/ai-agent-architecture-patterns) will necessitate clearer visual feedback. This could include indicators for different memory stores, such as short-term buffers, long-term knowledge graphs, or even specialized memory for [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory). These advancements will further refine the **AI memory visualization** and its role in conveying **agent recall** and **data persistence**.
 

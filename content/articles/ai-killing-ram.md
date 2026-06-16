@@ -71,7 +71,7 @@ The development of **AI agents** that can perform complex tasks over extended pe
 * **Semantic Memory:** Storing general knowledge and facts is crucial for agent reasoning. This often involves knowledge graphs or large databases, which need to be accessible, potentially impacting RAM.
 * **Working Memory:** Agents need a fast-access buffer for current tasks and immediate context, similar to human short-term memory. This directly consumes active RAM.
 
-Systems like **Hindsight** (open source AI memory system) are designed to manage these diverse memory types efficiently, but the underlying data storage and retrieval still require significant system resources. The more an agent needs to "remember," the more memory it will likely consume, contributing to the "ai killing ram" perception. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight). Understanding [AI hardware requirements](/articles/ai-hardware-requirements/) is essential when considering these memory systems.
+Systems like **Hindsight** (open source AI memory system) are designed to manage these diverse memory types efficiently, but the underlying data storage and retrieval still require significant system resources. The more an agent needs to "remember," the more memory it will likely consume, contributing to the "ai killing ram" perception. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight). Understanding AI hardware requirements is essential when considering these memory systems.
 
 ## Hardware Implications: The Need for More RAM and Better Memory Management
 
@@ -129,7 +129,7 @@ New memory technologies are being developed that promise higher density, faster 
 
 ### The Role of AI in Memory Management: Self-Optimization
 
-Ironically, AI itself is being used to optimize memory management. Machine learning algorithms can predict memory access patterns, pre-fetch data, and dynamically allocate resources more efficiently. This **AI-driven memory management** could become critical for handling the complexity of future AI workloads. The effectiveness of these techniques is detailed in research on [memory management in AI systems](/articles/memory-management-in-ai-systems/).
+Ironically, AI itself is being used to optimize memory management. Machine learning algorithms can predict memory access patterns, pre-fetch data, and dynamically allocate resources more efficiently. This **AI-driven memory management** could become critical for handling the complexity of future AI workloads. The effectiveness of these techniques is detailed in research on memory management in AI systems.
 
 ### Sustainable AI: Balancing Performance and Resources
 

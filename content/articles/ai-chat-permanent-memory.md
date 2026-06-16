@@ -55,7 +55,7 @@ The primary method involves using **external memory stores**, databases designed
 
 **Retrieval-Augmented Generation (RAG)** is a key technique that bridges external memory and the LLM, essential for AI chat permanent memory. When a query arrives, the system first retrieves relevant information from external memory. This retrieved data is then fed into the LLM's prompt alongside the original query. The LLM uses this augmented context to generate a more informed response.
 
-This process allows the LLM to access information beyond its inherent context window, effectively granting it a form of long-term AI recall. Understanding [agent memory and RAG for AI chat](/articles/agent-memory-vs-rag) clarifies how these approaches enable AI chat permanent memory.
+This process allows the LLM to access information beyond its inherent context window, effectively granting it a form of long-term AI recall. Understanding agent memory and RAG for AI chat clarifies how these approaches enable AI chat permanent memory.
 
 ### Memory Consolidation and Organization Strategies
 
@@ -99,7 +99,7 @@ Some architectures prioritize memory as a primary component. These systems might
 
 ### Integrating with LLM Frameworks
 
-Frameworks like LangChain and LlamaIndex offer abstractions and tools for building LLM applications, including memory management for AI chat permanent memory. They provide pre-built components for various memory types and RAG pipelines, simplifying development. Comparing memory solutions like [Letta vs Langchain memory](/articles/letta-vs-langchain-memory) highlights different implementation strategies for AI chat permanent memory.
+Frameworks like LangChain and LlamaIndex offer abstractions and tools for building LLM applications, including memory management for AI chat permanent memory. They provide pre-built components for various memory types and RAG pipelines, simplifying development. Comparing memory solutions like Letta vs Langchain memory highlights different implementation strategies for AI chat permanent memory.
 
 Here's a Python example demonstrating storing a conversation snippet in a simple in-memory dictionary, simulating a very basic form of long-term AI recall:
 

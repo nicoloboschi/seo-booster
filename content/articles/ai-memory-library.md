@@ -161,7 +161,7 @@ Developing agents that can autonomously decide what to store, what to forget, an
 ### Cross-Agent Memory Sharing
 Exploring secure and efficient ways for different AI agents to share and learn from collective experiences, fostering collaborative intelligence.
 
-As AI agents become more autonomous and capable, the sophistication and importance of their **AI memory libraries** will only increase. They are not just storage systems but active components of an agent's intelligence. For a deeper dive into options, explore the [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+As AI agents become more autonomous and capable, the sophistication and importance of their **AI memory libraries** will only increase. They are not just storage systems but active components of an agent's intelligence. For a deeper dive into options, explore the [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ---
 

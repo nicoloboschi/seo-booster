@@ -20,7 +20,7 @@ faq:
     consistency, character development, and world-state updates without overwhelming the AI's processing capabilities or exceeding its context window limitations.
 - question: How can I improve the memory of an AI agent for roleplay?
   answer: You can improve an AI agent's memory by utilizing advanced techniques like Retrieval-Augmented Generation (RAG), integrating external vector databases, and employing memory consolidation strategies.
-    Selecting AI frameworks that prioritize long-term memory and episodic recall, such as those found in some [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), is also crucial.
+    Selecting AI frameworks that prioritize long-term memory and episodic recall, such as those found in some [best AI agent memory systems](/articles/best-ai-memory-systems/), is also crucial.
 - question: Are there specific AI models known for better memory in roleplay?
   answer: While specific models are constantly evolving, those with larger context windows and architectures designed for efficient memory management tend to perform better. Models that are fine-tuned for
     conversational tasks and integrated with robust external memory systems, like vector databases, are generally more effective for roleplay that requires deep recall.
@@ -67,7 +67,7 @@ The effectiveness of an AI agent's memory isn't accidental; it's engineered. Sev
 
 Modern AI memory systems often rely on **embedding models for memory**. These models convert text, images, or other data into numerical vectors. **Vector databases for AI memory** then store these embeddings, allowing for rapid similarity searches. When an agent needs to recall something relevant, it can query the vector database with a prompt, and the system returns the most semantically similar stored memories.
 
-This approach is fundamental to many **best AI memory systems** and is crucial for enabling agents to find relevant past events or details. The quality of the embedding model directly impacts the relevance of retrieved memories, directly contributing to the perceived intelligence and memory of the AI in roleplay scenarios. Understanding [LLM context window management](/articles/llm-context-window-management/) is also vital here.
+This approach is fundamental to many **best AI memory systems** and is crucial for enabling agents to find relevant past events or details. The quality of the embedding model directly impacts the relevance of retrieved memories, directly contributing to the perceived intelligence and memory of the AI in roleplay scenarios. Understanding [LLM context window management](/articles/context-window-management-llm/) is also vital here.
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -168,7 +168,7 @@ The primary challenge lies in effectively storing, retrieving, and applying vast
 
 ### How can I improve the memory of an AI agent for roleplay?
 
-You can improve an AI agent's memory by using advanced techniques like Retrieval-Augmented Generation (RAG), integrating external vector databases, and employing memory consolidation strategies. Selecting AI frameworks that prioritize long-term memory and episodic recall, such as those found in some [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), is also crucial.
+You can improve an AI agent's memory by using advanced techniques like Retrieval-Augmented Generation (RAG), integrating external vector databases, and employing memory consolidation strategies. Selecting AI frameworks that prioritize long-term memory and episodic recall, such as those found in some [best AI agent memory systems](/articles/best-ai-memory-systems/), is also crucial.
 
 ### Are there specific AI models known for better memory in roleplay?
 

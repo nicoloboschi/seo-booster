@@ -135,7 +135,7 @@ estimated_vram = estimate_llm_vram(num_parameters_billions, precision_bytes_per_
 print(f"Estimated VRAM needed: {estimated_vram:.2f} GB")
 ```
 
-This code provides a starting point, but real-world usage often requires more nuanced calculations. This is especially true when considering different inference engines and optimization techniques. Understanding [GPU VRAM optimization](/articles/gpu-vram-optimization/) is crucial.
+This code provides a starting point, but real-world usage often requires more nuanced calculations. This is especially true when considering different inference engines and optimization techniques. Understanding GPU VRAM optimization is crucial.
 
 ## Optimizing LLM Inference Memory Usage
 

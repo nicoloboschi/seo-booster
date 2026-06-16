@@ -185,7 +185,7 @@ LLMs have a finite **context window**. Information outside this window is effect
 
 ### Information Overload and Noise
 
-Agents can accumulate vast amounts of data. Distinguishing relevant memories from noise or outdated information is difficult. Effective [memory consolidation for AI agents](/articles/memory-consolidation-for-ai-agents/) is needed to prune and organize this data.
+Agents can accumulate vast amounts of data. Distinguishing relevant memories from noise or outdated information is difficult. Effective [memory consolidation for AI agents](/articles/memory-consolidation-ai-agents/) is needed to prune and organize this data.
 
 ### Retrieval Efficiency and Accuracy
 
@@ -197,7 +197,7 @@ For agents that evolve over time, maintaining a consistent state and persona can
 
 ### Temporal Reasoning
 
-Understanding the sequence and timing of events is crucial for many tasks. Integrating effective [temporal reasoning in AI memory](/articles/temporal-memory-ai-memory/) allows agents to grasp causality and plan actions more effectively.
+Understanding the sequence and timing of events is crucial for many tasks. Integrating effective temporal reasoning in AI memory allows agents to grasp causality and plan actions more effectively.
 
 ## Emerging Trends and Future Directions
 

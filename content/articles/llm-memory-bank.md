@@ -88,7 +88,7 @@ Building an effective **LLM memory bank** involves careful architectural design.
 
 ### Vector Database Implementation for LLM Memory
 
-A dominant approach for modern **LLM memory banks** involves using **embedding models for memory**. These models convert text (like past conversations or documents) into numerical vectors, capturing their semantic meaning. This is a cornerstone of [retrieval-augmented generation (RAG)](/articles/retrieval-augmented-generation/).
+A dominant approach for modern **LLM memory banks** involves using **embedding models for memory**. These models convert text (like past conversations or documents) into numerical vectors, capturing their semantic meaning. This is a cornerstone of retrieval-augmented generation (RAG).
 
 These vectors are then stored in **vector databases**. When an LLM needs to recall information, the current query is also embedded into a vector. The database then retrieves the most semantically similar vectors (and their associated text) to the query. This process is fundamental to enhancing **LLM memory**.
 

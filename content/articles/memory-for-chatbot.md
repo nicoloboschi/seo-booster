@@ -189,7 +189,7 @@ Effective chatbots often need to integrate both. Recalling a specific past conve
 
 Developing advanced memory capabilities for chatbots often requires specialized tools and frameworks. These systems abstract away much of the complexity, allowing developers to focus on the conversational logic.
 
-The landscape of AI memory systems is rapidly evolving, with new solutions emerging regularly. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems) can provide valuable insights into building powerful **memory for chatbot** solutions.
+The landscape of AI memory systems is rapidly evolving, with new solutions emerging regularly. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide valuable insights into building powerful **memory for chatbot** solutions.
 
 ### Frameworks for Memory Management
 

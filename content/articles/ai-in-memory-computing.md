@@ -161,7 +161,7 @@ Seamlessly integrating these new memory technologies into existing computing inf
 
 While **AI in memory computing** refers to hardware, it has significant implications for **AI memory systems**. These software layers manage how AI agents store, retrieve, and use information. Faster, more efficient hardware can dramatically enhance the performance of sophisticated memory architectures.
 
-For instance, systems that rely on rapid retrieval of information, such as those using **Retrieval-Augmented Generation (RAG)**, could see substantial benefits. The ability to quickly access and process vast knowledge bases stored in memory would improve response times and accuracy. Understanding [how in-memory computing enhances RAG performance](/articles/rag-performance-enhancement/) is crucial for optimizing these systems.
+For instance, systems that rely on rapid retrieval of information, such as those using **Retrieval-Augmented Generation (RAG)**, could see substantial benefits. The ability to quickly access and process vast knowledge bases stored in memory would improve response times and accuracy. Understanding how in-memory computing enhances RAG performance is crucial for optimizing these systems.
 
 The development of **long-term memory for AI agents** also benefits. Storing and recalling experiences efficiently is crucial for agents that need to learn and adapt over time. **In-memory computing hardware** could make persistent memory solutions more practical and performant. Consider the potential for **AI agents that remember conversations** with unprecedented speed and depth.
 

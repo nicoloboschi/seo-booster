@@ -55,7 +55,7 @@ Imagine an AI assistant that forgets your preferences after a single conversatio
 
 An **LLM memory agent** is an AI system that incorporates external memory mechanisms to provide **persistent recall** for Large Language Models (LLMs). It enables agents to store, retrieve, and use information beyond the immediate context window, fostering continuity and learning across interactions.
 
-This capability is transformative. LLMs, by themselves, have a finite **context window**. Once information falls outside this window, it's effectively lost to the model for that specific interaction. A memory agent acts as an external repository for the AI, ensuring critical data isn't discarded. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is fundamental to grasping this concept.
+This capability is transformative. LLMs, by themselves, have a finite **context window**. Once information falls outside this window, it's effectively lost to the model for that specific interaction. A memory agent acts as an external repository for the AI, ensuring critical data isn't discarded. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is fundamental to grasping this concept.
 
 ### The Problem of Limited Context in LLMs
 
@@ -82,10 +82,10 @@ The effectiveness of an **LLM memory agent** hinges on its ability to manage and
 
 Memory can be stored in various forms, depending on the required persistence and access speed.
 
-* **Short-Term Memory:** Often mimics the LLM's own context window, holding recent interactions. This can be managed through techniques like [strategies for overcoming context window limitations](/articles/strategies-for-overcoming-context-window-limitations/).
+* **Short-Term Memory:** Often mimics the LLM's own context window, holding recent interactions. This can be managed through techniques like strategies for overcoming context window limitations.
 * **Long-Term Memory:** This is where the persistent recall happens. It can be implemented using:
  * **Databases:** Relational or NoSQL databases can store structured facts or conversation logs.
- * **Vector Stores:** These are crucial for semantic recall. [Embedding models for AI memory](/articles/embedding-models-for-ai-memory/) are used to convert text into numerical vectors, allowing for similarity searches. This is a core technique in many [LLM memory systems](/articles/llm-memory-systems/).
+ * **Vector Stores:** These are crucial for semantic recall. [Embedding models for AI memory](/articles/embedding-models-for-memory/) are used to convert text into numerical vectors, allowing for similarity searches. This is a core technique in many [LLM memory systems](/articles/llm-memory-system/).
  * **Knowledge Graphs:** Representing information as entities and relationships, enabling complex reasoning.
 
 ### Retrieval Mechanisms for Memory Access
@@ -103,7 +103,7 @@ Efficiently retrieving relevant information from memory is as critical as storin
 
 While RAG typically focuses on external documents for answering specific queries, an **LLM memory agent** often incorporates RAG principles to access its *own* learned experiences and past interactions. A 2024 study published on arxiv showed that RAG-based agents improved task completion accuracy by 34% compared to standard LLMs (Source: [arxiv preprint server](https://arxiv.org/)).
 
-The distinction lies in the source of information. RAG usually pulls from a static corpus, whereas agent memory draws from the agent's own history and evolving knowledge. For a deeper dive, compare [RAG versus Agent Memory](/articles/rag-versus-agent-memory/).
+The distinction lies in the source of information. RAG usually pulls from a static corpus, whereas agent memory draws from the agent's own history and evolving knowledge. For a deeper dive, compare [RAG versus Agent Memory](/articles/rag-vs-agent-memory/).
 
 ### Memory Consolidation and Forgetting
 
@@ -116,7 +116,7 @@ Techniques for memory consolidation in AI include:
 3. **Pruning:** Removing outdated or irrelevant memories to maintain efficiency and prevent information overload.
 4. **Hierarchical Memory:** Organizing memories into different levels of detail or abstraction.
 
-These processes ensure the **LLM memory agent** remains performant and its recall is relevant. This is a key aspect discussed in [Memory Consolidation for AI Agents](/articles/memory-consolidation-for-ai-agents/).
+These processes ensure the **LLM memory agent** remains performant and its recall is relevant. This is a key aspect discussed in [Memory Consolidation for AI Agents](/articles/memory-consolidation-ai-agents/).
 
 ## Key Features and Benefits of LLM Memory Agents
 
@@ -128,7 +128,7 @@ By remembering past interactions, preferences, and user-specific details, agents
 
 ### Improved Task Completion and Reasoning
 
-When an agent can recall previous steps in a complex task or relevant past experiences, its ability to reason and complete multi-stage objectives improves significantly. This is particularly important for agents designed for complex problem-solving or long-running processes. The concept of [long-term memory AI agents](/articles/long-term-memory-ai-agents/) directly addresses this.
+When an agent can recall previous steps in a complex task or relevant past experiences, its ability to reason and complete multi-stage objectives improves significantly. This is particularly important for agents designed for complex problem-solving or long-running processes. The concept of [long-term memory AI agents](/articles/long-term-memory-ai-agent/) directly addresses this.
 
 ### Continuous Learning and Adaptation
 
@@ -159,7 +159,7 @@ For highly specialized needs, developers might opt for custom solutions. This co
 * **Custom Vector Databases:** Implementing or fine-tuning vector search capabilities for semantic recall.
 * **Hybrid Approaches:** Combining different storage mechanisms (e.g., a database for structured state and a vector store for semantic recall).
 
-The selection of tools impacts the overall complexity and performance of the **LLM memory agent**. Evaluating [Open Source AI Memory Systems Compared](/articles/open-source-ai-memory-systems-compared/) can guide this decision.
+The selection of tools impacts the overall complexity and performance of the **LLM memory agent**. Evaluating [Open Source AI Memory Systems Compared](/articles/open-source-memory-systems-compared/) can guide this decision.
 
 ### Considerations for Building Memory Systems
 
@@ -170,7 +170,7 @@ When designing an **LLM memory agent**, several factors are critical:
 * **Cost:** Storing and processing large amounts of data can incur significant computational costs.
 * **Privacy and Security:** Sensitive user data stored in memory must be protected.
 
-Choosing the right architecture and tools is key to building an effective and efficient [AI agent persistent memory](/articles/ai-agent-persistent-memory/) solution. For guidance on selecting the best systems, check out [Best AI Agent Memory Systems](/articles/best-ai-agent-memory-systems/).
+Choosing the right architecture and tools is key to building an effective and efficient [AI agent persistent memory](/articles/ai-agent-persistent-memory/) solution. For guidance on selecting the best systems, check out [Best AI Agent Memory Systems](/articles/best-ai-memory-systems/).
 
 ## Advanced Concepts in LLM Memory
 

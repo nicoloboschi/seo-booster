@@ -79,7 +79,7 @@ RAG allows LLMs to access up-to-date or specialized information not present in t
 
 **Vector databases** are specialized databases designed to store and query high-dimensional vectors, which are numerical representations of data like text or images. In AI memory systems, vector databases are used to store embeddings of past experiences or knowledge. These embeddings capture the semantic meaning of the data.
 
-When an AI needs to recall information, it converts its current query into a vector and searches the database for similar vectors. This allows for efficient retrieval of semantically related past data. **Embedding models for memory** are crucial for creating these vector representations. This is a core technology behind many [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+When an AI needs to recall information, it converts its current query into a vector and searches the database for similar vectors. This allows for efficient retrieval of semantically related past data. **Embedding models for memory** are crucial for creating these vector representations. This is a core technology behind many [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 A simple Python example using a hypothetical vector store might look like this:
 
@@ -153,7 +153,7 @@ Other notable open-source options include libraries that integrate with LLM fram
 
 Commercial platforms often provide managed services for AI memory, simplifying deployment and scaling. These solutions typically offer features like managed vector databases, pre-trained embedding models, and integration APIs. Examples include services that focus on [LLM memory systems](/articles/llm-memory-system/).
 
-These platforms can accelerate development by abstracting away much of the underlying infrastructure complexity. However, they may offer less flexibility than open-source alternatives. Exploring guides on [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can help navigate these options.
+These platforms can accelerate development by abstracting away much of the underlying infrastructure complexity. However, they may offer less flexibility than open-source alternatives. Exploring guides on [best AI agent memory systems](/articles/best-ai-memory-systems/) can help navigate these options.
 
 ## The Future of AI Memory Models
 

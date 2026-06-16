@@ -91,7 +91,7 @@ These specialized databases are designed to store and query high-dimensional vec
 * **Pros**: Excellent for semantic search, similarity matching, and handling unstructured data.
 * **Cons**: Can be complex to set up and manage, performance can depend heavily on indexing strategies.
 
-[Vector databases](/articles/what-is-a-vector-database/) are becoming a cornerstone of modern AI memory systems, especially when combined with retrieval-augmented generation (RAG) approaches. Understanding **what is a memory database** today often means understanding vector databases.
+Vector databases are becoming a cornerstone of modern AI memory systems, especially when combined with retrieval-augmented generation (RAG) approaches. Understanding **what is a memory database** today often means understanding vector databases.
 
 ### Hybrid Approaches and Integrated Solutions
 
@@ -177,11 +177,11 @@ Future **memory databases** will likely incorporate more sophisticated retrieval
 
 ### Integration with Agent Architectures
 
-As AI agent architectures become more complex, **memory databases** will need to integrate seamlessly. Concepts like the **context window limitations** of LLMs are driving the need for external memory systems that can store and retrieve relevant information beyond the LLM's immediate processing capacity. Learning about [building advanced AI agents with memory](/articles/building-ai-agents/) helps contextualize the need for effective memory.
+As AI agent architectures become more complex, **memory databases** will need to integrate seamlessly. Concepts like the **context window limitations** of LLMs are driving the need for external memory systems that can store and retrieve relevant information beyond the LLM's immediate processing capacity. Learning about building advanced AI agents with memory helps contextualize the need for effective memory.
 
 ### Democratization of Memory Systems
 
-Open-source projects and managed cloud services are making powerful **memory database** solutions more accessible. This allows developers to build more sophisticated AI agents without needing deep expertise in database engineering. Examining [exploring AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide insights into current offerings.
+Open-source projects and managed cloud services are making powerful **memory database** solutions more accessible. This allows developers to build more sophisticated AI agents without needing deep expertise in database engineering. Examining [exploring AI agent memory systems](/articles/best-ai-memory-systems/) can provide insights into current offerings.
 
 The ongoing research into topics like [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) will further shape how these databases are designed and used, leading to AI systems that remember and learn more effectively than ever before. The evolution of the **memory database** is critical to AI progress.
 

@@ -39,7 +39,7 @@ This system allows AI agents to build a persistent understanding of visual envir
 
 Imagine an AI assistant tasked with cataloging a vast library of images. Each image needs to be associated with descriptive text, and the AI must be able to recall specific images based on textual queries. The **LLM vision memory file path** acts as the index, pointing the AI to the exact location of each visual asset within its storage. This structured approach is fundamental to building [long-term memory for AI agents](/articles/long-term-memory-for-ai-agents/).
 
-This organization is not just about storage; it's about efficient retrieval. When an AI needs to reference a visual detail from a past interaction or experience, it uses the stored file path to quickly access the relevant data. This capability is vital for applications ranging from image recognition to autonomous navigation systems. Understanding [how AI agents manage memory](/articles/ai-agent-memory-management/) is critical here.
+This organization is not just about storage; it's about efficient retrieval. When an AI needs to reference a visual detail from a past interaction or experience, it uses the stored file path to quickly access the relevant data. This capability is vital for applications ranging from image recognition to autonomous navigation systems. Understanding [how AI agents manage memory](/articles/llm-agent-memory-management/) is critical here.
 
 ## How LLMs Process and Store Visual Data
 
@@ -81,7 +81,7 @@ Retrieving visual memories involves using the stored **LLM vision memory file pa
 
 When a user asks a question that requires visual recall, the AI first processes the query to understand what information is needed. It then searches its memory index for relevant entries. If a visual component is identified, the AI retrieves the associated **LLM vision memory file path**.
 
-For example, if the query is "Show me the product I was looking at earlier today," the AI would search for recent visual interactions. It would then use the file path to load the specific product image. This is a core function of [AI assistants that remember conversations](/articles/ai-conversational-memory/).
+For example, if the query is "Show me the product I was looking at earlier today," the AI would search for recent visual interactions. It would then use the file path to load the specific product image. This is a core function of [AI assistants that remember conversations](/articles/chatbot-conversational-memory/).
 
 ### Integrating with Retrieval-Augmented Generation (RAG)
 

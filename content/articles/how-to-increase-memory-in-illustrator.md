@@ -83,7 +83,7 @@ Beyond artwork complexity, file structure plays a role in managing Illustrator m
 
 ## Understanding System Resources and Illustrator
 
-Illustrator doesn't operate in a vacuum. Its performance is intrinsically linked to your computer's overall hardware capabilities and what else is running. Ensuring your system is optimized is as important as tweaking Illustrator's settings to increase Illustrator memory. For optimal performance, consider [optimizing your system's overall performance](/articles/system-performance-optimization/).
+Illustrator doesn't operate in a vacuum. Its performance is intrinsically linked to your computer's overall hardware capabilities and what else is running. Ensuring your system is optimized is as important as tweaking Illustrator's settings to increase Illustrator memory. For optimal performance, consider optimizing your system's overall performance.
 
 ### RAM Requirements and Upgrades
 
@@ -94,7 +94,7 @@ Adobe officially lists system requirements for Illustrator. Meeting or exceeding
 
 ### Closing Unnecessary Applications
 
-When you're working on a demanding Illustrator project, close any other applications you don't actively need. Web browsers with many tabs open, other Adobe Creative Suite applications, or background utilities can consume significant amounts of RAM, leaving less for Illustrator. This is a crucial step in freeing up system resources and improving Illustrator's ability to access memory. Understanding [how applications impact system resources](/articles/application-resource-management/) can help.
+When you're working on a demanding Illustrator project, close any other applications you don't actively need. Web browsers with many tabs open, other Adobe Creative Suite applications, or background utilities can consume significant amounts of RAM, leaving less for Illustrator. This is a crucial step in freeing up system resources and improving Illustrator's ability to access memory. Understanding how applications impact system resources can help.
 
 Think of your computer's RAM as a workspace. The more applications you have open, the more cluttered your workspace becomes, making it harder for Illustrator to find the space it needs.
 

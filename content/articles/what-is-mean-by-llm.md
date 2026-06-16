@@ -129,7 +129,7 @@ LLMs can be enhanced to exhibit different forms of memory, mirroring human cogni
 
 ### Episodic Memory in LLMs
 
-Simulating **episodic memory** allows AI agents to recall specific past interactions or events. This is crucial for personalized user experiences and maintaining continuity in conversations. For example, remembering a user's previous preference or a specific detail from an earlier turn in a dialogue. This is a key area explored in [episodic memory in AI agents](/articles/episodic-memory-ai-agents/).
+Simulating **episodic memory** allows AI agents to recall specific past interactions or events. This is crucial for personalized user experiences and maintaining continuity in conversations. For example, remembering a user's previous preference or a specific detail from an earlier turn in a dialogue. This is a key area explored in [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
 
 ### Semantic Memory and Knowledge Graphs
 

@@ -38,13 +38,13 @@ Helping AI have long-term memory means equipping artificial intelligence agents 
 
 ## What is Long-Term Memory in AI Agents?
 
-Long-term memory in AI agents refers to their capacity to store and access information beyond immediate conversational turns or task cycles. It allows agents to build a persistent knowledge base, learn from past interactions, and maintain context across extended periods, significantly enhancing their utility and autonomy. This persistent recall is what truly defines [AI long-term memory](/articles/ai-long-term-memory/).
+Long-term memory in AI agents refers to their capacity to store and access information beyond immediate conversational turns or task cycles. It allows agents to build a persistent knowledge base, learn from past interactions, and maintain context across extended periods, significantly enhancing their utility and autonomy. This persistent recall is what truly defines [AI long-term memory](/articles/n8n-ai-long-term-memory/).
 
 ## The Need for AI Long-Term Memory
 
 Current large language models (LLMs) often operate with a fixed **context window**. This window dictates how much information the model can consider at any given moment. Once information falls outside this window, it's effectively forgotten, hindering tasks that require remembering prior events or vast datasets. Imagine an AI assistant trying to plan a complex trip. Without long-term memory, it would forget your initial preferences with every new request.
 
-This limitation necessitates strategies for **helping AI have long-term memory**. These strategies aim to store information externally and retrieve it as needed, mimicking human memory functions. Understanding [agent recall capabilities](/articles/agent-recall-capabilities/) and [semantic memory in AI](/articles/semantic-memory-ai-agents/) provides a foundation for building these systems, essential for effective AI recall.
+This limitation necessitates strategies for **helping AI have long-term memory**. These strategies aim to store information externally and retrieve it as needed, mimicking human memory functions. Understanding agent recall capabilities and [semantic memory in AI](/articles/semantic-memory-ai-agents/) provides a foundation for building these systems, essential for effective AI recall.
 
 ### Overcoming Context Window Limitations with Memory Systems
 

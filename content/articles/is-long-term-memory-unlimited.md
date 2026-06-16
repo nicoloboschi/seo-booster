@@ -52,7 +52,7 @@ Several factors impose practical limits on an AI's ability to use its long-term 
 
 ## Types of AI Long-Term Memory
 
-Understanding how AI agents store information requires looking at different memory types. This aligns with the broader discussion in our [guide to various AI memory types and their functions](/articles/ai-memory-types/). The design of these types directly influences whether long-term memory is unlimited.
+Understanding how AI agents store information requires looking at different memory types. This aligns with the broader discussion in our [guide to various AI memory types and their functions](/articles/ai-memory-notes/). The design of these types directly influences whether long-term memory is unlimited.
 
 ### Episodic Memory Details
 
@@ -90,7 +90,7 @@ This process ensures that the most critical information is retained and easily r
 
 **Retrieval-Augmented Generation (RAG)** is a powerful technique that significantly enhances an AI's ability to access and use external knowledge, effectively extending its memory. When an AI needs information it doesn't have readily available, RAG systems query a knowledge base (which can include the agent's long-term memory) and use the retrieved information to formulate a response. This is a practical way to imbue AI with a form of long-term memory, allowing it to recall facts or past conversations, thereby addressing the query: is long term memory unlimited?
 
-RAG systems bridge the gap between an LLM's fixed training data and the need for up-to-date or context-specific information. It’s a common approach in [comparing agent memory systems with Retrieval-Augmented Generation](/articles/agent-memory-vs-rag/).
+RAG systems bridge the gap between an LLM's fixed training data and the need for up-to-date or context-specific information. It’s a common approach in comparing agent memory systems with Retrieval-Augmented Generation.
 
 ### Vector Databases and Embeddings
 

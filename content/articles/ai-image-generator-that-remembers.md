@@ -181,7 +181,7 @@ Even with memory systems, the underlying generative models often have finite con
 
 ### Ethical Considerations of AI Memory
 
-As these generators become more personalized, questions around data privacy and ownership of learned styles arise. Ensuring responsible development and deployment is essential for AI image generators that remember user data. The [ethical considerations of AI memory](/articles/ethical-considerations-ai-memory/) are paramount.
+As these generators become more personalized, questions around data privacy and ownership of learned styles arise. Ensuring responsible development and deployment is essential for AI image generators that remember user data. The ethical considerations of AI memory are paramount.
 
 ## Future of AI Image Generation
 

@@ -125,7 +125,7 @@ This ability to handle complexity is a hallmark of sophisticated AI. It allows f
 
 ## Technologies Powering Advanced AI Memory
 
-Several technological advancements contribute to the development of AI roleplay systems with superior memory. These include sophisticated **LLM memory systems**, vector databases, and specialized architectures designed for long-term information storage. These are all crucial for achieving **AI roleplay that remembers well**. Exploring [advanced AI chatbots for conversation](/articles/advanced-ai-chatbots-for-conversation) can reveal platforms using these technologies.
+Several technological advancements contribute to the development of AI roleplay systems with superior memory. These include sophisticated **LLM memory systems**, vector databases, and specialized architectures designed for long-term information storage. These are all crucial for achieving **AI roleplay that remembers well**. Exploring advanced AI chatbots for conversation can reveal platforms using these technologies.
 
 ### Retrieval-Augmented Generation (RAG) for Roleplay
 
@@ -197,7 +197,7 @@ This basic example illustrates the core concept of storing and retrieving inform
 
 ## Choosing the Right AI Roleplay Companion
 
-When selecting an AI for roleplaying, prioritize those that explicitly highlight their memory capabilities. Look for platforms that allow for long-term character persistence and demonstrate an understanding of past interactions. This ensures you find the **best AI roleplay with good memory** for your needs. Exploring [how to build AI memory into applications](/articles/how-to-build-ai-memory-into-applications) can guide your choices.
+When selecting an AI for roleplaying, prioritize those that explicitly highlight their memory capabilities. Look for platforms that allow for long-term character persistence and demonstrate an understanding of past interactions. This ensures you find the **best AI roleplay with good memory** for your needs. Exploring how to build AI memory into applications can guide your choices.
 
 ### Features to Look For in AI Roleplay Apps
 
@@ -213,7 +213,7 @@ Many platforms are emerging that offer enhanced memory functions. Some focus on 
 
 Evaluating the memory of an AI roleplay companion requires testing. Engage in extended conversations, introduce specific details, and then refer back to them later. Observe how consistently the AI retains and uses this information to determine if it offers the **best AI roleplay with good memory**.
 
-Benchmarking tools and **AI memory benchmarks** are also becoming available, offering more objective measures of an AI's recall capabilities. For instance, comparing different [best AI agent memory systems](/articles/best-ai-agent-memory-systems) can reveal significant differences in performance for **AI roleplay that remembers well**.
+Benchmarking tools and **AI memory benchmarks** are also becoming available, offering more objective measures of an AI's recall capabilities. For instance, comparing different [best AI agent memory systems](/articles/best-ai-memory-systems/) can reveal significant differences in performance for **AI roleplay that remembers well**.
 
 ## The Future of AI Roleplay and Memory
 

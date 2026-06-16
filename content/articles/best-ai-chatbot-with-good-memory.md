@@ -185,7 +185,7 @@ AI assistants designed for productivity and personal organization often feature 
 
 ### Customer Support Bots Using AI Memory
 
-For complex customer service scenarios, chatbots must remember past interactions with a customer. This includes previous issues, resolutions, and account details. **Retrieval-augmented generation** is heavily used here to provide accurate, context-aware support. This application demands an AI that remembers context to resolve issues efficiently. You can explore [AI agent memory vs. RAG for chatbots](/articles/agent-memory-vs-rag/) for more insights.
+For complex customer service scenarios, chatbots must remember past interactions with a customer. This includes previous issues, resolutions, and account details. **Retrieval-augmented generation** is heavily used here to provide accurate, context-aware support. This application demands an AI that remembers context to resolve issues efficiently. You can explore AI agent memory vs. RAG for chatbots for more insights.
 
 ### Specialized AI Applications Requiring Deep Memory
 

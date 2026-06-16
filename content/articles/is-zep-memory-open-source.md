@@ -152,7 +152,7 @@ for result in search_results.get("messages", []):
 ## print("\nFull conversation history:", history)
 ```
 
-This workflow is essential for overcoming **context window limitations** in LLMs, allowing them to access a much larger history of interactions. For detailed guidance, resources like [Zep Memory AI Guide](https://vectorize.io/articles/zep-memory-ai-guide/) can be invaluable, especially when confirming that Zep Memory is open source. Learning about [AI agent memory best practices](/articles/ai-agent-memory-best-practices/) can further enhance the effectiveness of these systems, especially when using an open-source solution like Zep Memory.
+This workflow is essential for overcoming **context window limitations** in LLMs, allowing them to access a much larger history of interactions. For detailed guidance, resources like [Zep Memory AI Guide](https://vectorize.io/articles/zep-memory-ai-guide/) can be invaluable, especially when confirming that Zep Memory is open source. Learning about AI agent memory best practices can further enhance the effectiveness of these systems, especially when using an open-source solution like Zep Memory.
 
 ## The Future of Open Source AI Memory
 

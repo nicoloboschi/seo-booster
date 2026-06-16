@@ -114,7 +114,7 @@ The ability of an LLM to perform **temporal reasoning in AI memory** is heavily 
 
 ### Understanding Agent State
 
-An AI agent's **state** often needs to be maintained and updated over time. The context window serves as the immediate scratchpad for this state. However, for long-running tasks, this immediate state must be summarized or offloaded to external memory. How this state is managed within and beyond the context window is a core question in **[AI agent design](/articles/ai-agent-design/)** and a common thread in **context window LLM paper** discussions.
+An AI agent's **state** often needs to be maintained and updated over time. The context window serves as the immediate scratchpad for this state. However, for long-running tasks, this immediate state must be summarized or offloaded to external memory. How this state is managed within and beyond the context window is a core question in **AI agent design** and a common thread in **context window LLM paper** discussions.
 
 ## Future Directions for Context in LLMs
 

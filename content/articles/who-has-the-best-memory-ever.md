@@ -37,7 +37,7 @@ The "best memory ever" depends entirely on the criteria. For raw data storage an
 
 Human memory is a complex biological system, enabling recall of events, skills, and knowledge. It's not a perfect recording; memories are reconstructive and can be influenced by emotions, attention, and subsequent experiences. This plasticity is a defining characteristic.
 
-Forgetting is an inherent biological process for humans. Studies show significant information loss within hours of learning. This selective forgetting helps prioritize and manage cognitive load, a stark contrast to AI's persistent data retention. This fallibility is a key aspect when considering **who has the best memory ever**. Understanding [human memory limits](/articles/human-memory-limits/) is essential for this comparison.
+Forgetting is an inherent biological process for humans. Studies show significant information loss within hours of learning. This selective forgetting helps prioritize and manage cognitive load, a stark contrast to AI's persistent data retention. This fallibility is a key aspect when considering **who has the best memory ever**. Understanding human memory limits is essential for this comparison.
 
 ## AI's Evolving Memory Capabilities
 
@@ -49,7 +49,7 @@ Recent advancements in [long-term memory AI agents](/articles/ai-agent-long-term
 
 AI agents employ several core methods for memory management. **Vector databases** are critical, storing information as numerical embeddings that capture semantic meaning. This facilitates rapid, similarity-based retrieval, a form of semantic recall that is a hallmark of modern **AI recall**.
 
-**Retrieval-Augmented Generation (RAG)** is a prominent technique where AI retrieves relevant external data before generating responses. This enhances accuracy and factual grounding, differentiating it from internal memory augmentation. This contrasts with systems focused solely on [agent memory vs. RAG](/articles/agent-memory-vs-rag/).
+**Retrieval-Augmented Generation (RAG)** is a prominent technique where AI retrieves relevant external data before generating responses. This enhances accuracy and factual grounding, differentiating it from internal memory augmentation. This contrasts with systems focused solely on agent memory vs. RAG.
 
 **Episodic memory** simulation is also advancing in AI. Agents can record interactions, tasks, and outcomes, creating a chronological record of their operational history. This enables learning from past experiences, mirroring human adaptation. Exploring [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is key to developing adaptive AI.
 

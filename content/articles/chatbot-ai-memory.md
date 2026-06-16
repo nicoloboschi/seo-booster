@@ -212,7 +212,7 @@ These systems abstract away much of the complexity, allowing developers to focus
 Several commercial platforms offer managed memory solutions for chatbots, often integrated into broader AI development platforms. These can provide ease of use and scalability for enterprise applications requiring reliable **chatbot AI memory** for **stateful chatbots**.
 
 * **Zep:** An open-source platform focused on providing a dedicated, production-ready memory layer for LLM applications, including chatbots. It offers features like session management and context retrieval, enhancing **chatbot AI memory**. See the [Zep Memory AI Guide](/articles/zep-memory-ai-guide/).
-* **Letta AI:** Another platform offering strong memory solutions for AI agents and chatbots, aiming to provide persistent, context-aware recall. Explore guides on [Vectorize.io](/articles/best-ai-agent-memory-systems) for comparisons of various **chatbot AI memory** solutions.
+* **Letta AI:** Another platform offering strong memory solutions for AI agents and chatbots, aiming to provide persistent, context-aware recall. Explore guides on [Vectorize.io](/articles/best-ai-memory-systems/) for comparisons of various **chatbot AI memory** solutions.
 
 ### Choosing the Right Approach for Conversational Memory
 

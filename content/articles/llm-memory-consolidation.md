@@ -58,7 +58,7 @@ This encoded information is typically stored in a **long-term memory** component
 
 ## Types of Information Consolidated in AI Agents
 
-Not all information is equally valuable for consolidation. Effective **LLM memory consolidation** prioritizes data likely to be relevant for future interactions or crucial for maintaining coherence. Different types of memory contribute to an AI agent's overall knowledge base. This ties into understanding [AI agents' memory types](/articles/ai-agent-memory-types).
+Not all information is equally valuable for consolidation. Effective **LLM memory consolidation** prioritizes data likely to be relevant for future interactions or crucial for maintaining coherence. Different types of memory contribute to an AI agent's overall knowledge base. This ties into understanding [AI agents' memory types](/articles/ai-agents-memory-types/).
 
 ### Episodic Memory: Recalling Past Events
 
@@ -70,7 +70,7 @@ For instance, if an LLM helped a user plan a trip last week, consolidating that 
 
 **Semantic memory** encompasses general knowledge, facts, and concepts not tied to a specific event. This includes information learned during training, as well as facts acquired through ongoing interactions or external data sources. Consolidating semantic memories helps the LLM build a more robust understanding of the world and specific domains.
 
-An example would be an LLM learning a new technical term or a factual update from a news article. This information, once consolidated, becomes part of its general knowledge base, accessible for answering questions or generating text on related topics. This forms the foundation of **long-term memory AI** capabilities. Exploring [how semantic memory is structured in AI agents](/articles/semantic-memory-ai) reveals its organization.
+An example would be an LLM learning a new technical term or a factual update from a news article. This information, once consolidated, becomes part of its general knowledge base, accessible for answering questions or generating text on related topics. This forms the foundation of **long-term memory AI** capabilities. Exploring how semantic memory is structured in AI agents reveals its organization.
 
 ### Procedural Memory: Learned Skills and Actions
 
@@ -94,7 +94,7 @@ Even with consolidation, memory systems can suffer from "forgetting" or knowledg
 
 ### Integration with LLM Architecture
 
-Seamlessly integrating the memory system with the LLM's core architecture is complex. The retrieved information must be presented to the LLM in a way that it can effectively use, often requiring sophisticated prompt engineering or modifications to the LLM's inference process. This is a core concern in [AI agent architecture patterns](/articles/agent-architecture-patterns).
+Seamlessly integrating the memory system with the LLM's core architecture is complex. The retrieved information must be presented to the LLM in a way that it can effectively use, often requiring sophisticated prompt engineering or modifications to the LLM's inference process. This is a core concern in [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
 
 ## Techniques and Approaches for LLM Memory Consolidation
 
@@ -149,6 +149,6 @@ Tools like **Hindsight** offer an open-source framework for managing AI agent me
 
 The field of **LLM memory consolidation** is rapidly evolving. Future advancements will likely focus on creating more efficient, scalable, and adaptable memory systems. This will unlock new possibilities for AI agents, enabling them to perform more complex tasks and engage in deeper, more meaningful interactions. Ultimately, this research contributes to the broader goal of creating more capable and intelligent AI.
 
-As context window limitations are pushed and memory architectures become more sophisticated, LLMs will move closer to exhibiting true long-term learning and recall. This evolution is critical for applications ranging from personalized education to advanced scientific research. Understanding the role of **[vector databases for AI](/articles/vector-databases-for-ai)** will continue to be important as these systems develop. The ongoing work in **AI memory architecture** is laying the groundwork for this future. According to a 2024 study published on [arXiv](https://arxiv.org/abs/2401.04370), retrieval-augmented agents showed a 34% improvement in task completion compared to baseline models.
+As context window limitations are pushed and memory architectures become more sophisticated, LLMs will move closer to exhibiting true long-term learning and recall. This evolution is critical for applications ranging from personalized education to advanced scientific research. Understanding the role of **vector databases for AI** will continue to be important as these systems develop. The ongoing work in **AI memory architecture** is laying the groundwork for this future. According to a 2024 study published on [arXiv](https://arxiv.org/abs/2401.04370), retrieval-augmented agents showed a 34% improvement in task completion compared to baseline models.
 
 ---

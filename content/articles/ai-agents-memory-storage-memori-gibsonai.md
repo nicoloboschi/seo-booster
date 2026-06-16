@@ -122,7 +122,7 @@ This approach allows for **persistent memory AI** that is both data-rich and con
 
 ### Agent Memory vs. RAG
 
-It's important to distinguish between general **agent memory** and **Retrieval-Augmented Generation (RAG)**. RAG is a specific technique that uses an external knowledge base to augment an LLM's responses. While RAG is a powerful tool for providing agents with access to information, it's often a component *within* a broader AI agents memory storage architecture. Agent memory can encompass more than just RAG, including internal state, learned behaviors, and episodic recall. Understanding [agent memory vs RAG](/articles/agent-memory-vs-rag/) clarifies their relationship within the **AI memory systems** ecosystem and contributes to robust **AI recall systems**.
+It's important to distinguish between general **agent memory** and **Retrieval-Augmented Generation (RAG)**. RAG is a specific technique that uses an external knowledge base to augment an LLM's responses. While RAG is a powerful tool for providing agents with access to information, it's often a component *within* a broader AI agents memory storage architecture. Agent memory can encompass more than just RAG, including internal state, learned behaviors, and episodic recall. Understanding agent memory vs RAG clarifies their relationship within the **AI memory systems** ecosystem and contributes to robust **AI recall systems**.
 
 ## Future Directions in AI Memory Storage
 

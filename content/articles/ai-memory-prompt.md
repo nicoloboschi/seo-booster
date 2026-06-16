@@ -59,7 +59,7 @@ The ability to differentiate and target these memory types through prompts is fu
 
 Designing an effective **AI memory prompt** requires understanding both the capabilities of the LLM and the structure of the memory system it interacts with. It's a blend of prompt engineering and knowledge of how the agent stores and retrieves information.
 
-A good memory prompt is clear, specific, and actionable. It avoids ambiguity and provides sufficient context for the LLM to understand what information is being requested and why. This is where techniques from [prompt engineering](/articles/prompt-engineering-for-ai-agents/) become critical.
+A good memory prompt is clear, specific, and actionable. It avoids ambiguity and provides sufficient context for the LLM to understand what information is being requested and why. This is where techniques from prompt engineering become critical.
 
 ### Key Components of a Memory Prompt
 

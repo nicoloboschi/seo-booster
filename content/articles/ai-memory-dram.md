@@ -92,7 +92,7 @@ This directly translates to handling larger context windows, meaning the AI can 
 
 Beyond inference, DRAM is also critical during AI model training. Training involves repeatedly processing massive datasets and updating model weights. The speed at which training data can be fed to processors and intermediate results stored heavily relies on DRAM performance.
 
-Faster **ai memory dram** can significantly reduce the time required to train complex models, making the development cycle more efficient. This allows researchers and developers to iterate faster, experiment with more architectures, and bring more capable AI systems to market sooner. You can learn more about the [hardware components of AI systems](/articles/ai-hardware-components/) to understand these dependencies better.
+Faster **ai memory dram** can significantly reduce the time required to train complex models, making the development cycle more efficient. This allows researchers and developers to iterate faster, experiment with more architectures, and bring more capable AI systems to market sooner. You can learn more about the hardware components of AI systems to understand these dependencies better.
 
 ## Types of DRAM for AI Applications
 

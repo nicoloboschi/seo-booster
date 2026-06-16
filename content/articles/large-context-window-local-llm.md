@@ -94,7 +94,7 @@ Historically, LLMs have been constrained by relatively small context windows, of
 
 A **token** is a piece of a word or punctuation. For example, "context window" might be tokenized into "context" and "window". Most LLMs have token limits for their context windows, meaning they can only process a finite number of tokens at once. Exceeding this limit forces older information out, causing the model to "forget."
 
-Researchers have developed various techniques to expand this capacity. These include architectural innovations like sparse attention mechanisms and efficient transformer variants. For instance, models like [Mistral 7B](/articles/mistral-7b-fine-tuning/) and [Llama 2](/articles/llama-2-fine-tuning/) are often fine-tuned to support larger context lengths than their base versions.
+Researchers have developed various techniques to expand this capacity. These include architectural innovations like sparse attention mechanisms and efficient transformer variants. For instance, models like Mistral 7B and Llama 2 are often fine-tuned to support larger context lengths than their base versions.
 
 ### Innovations for Extended Context: Towards a Large Context Local AI
 

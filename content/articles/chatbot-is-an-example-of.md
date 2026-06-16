@@ -108,7 +108,7 @@ This state can be managed in various ways, from simple session variables to soph
 
 When a chatbot is an example of a system designed for sustained interaction, **long-term memory** becomes a critical feature. This allows the AI to build a profile of the user, understand their evolving needs, and provide increasingly personalized assistance. This moves the chatbot from a tool to a helpful assistant. A chatbot is an example of how memory enhances user experience.
 
-Think of an AI assistant that remembers your dietary restrictions, your preferred communication style, or recurring tasks. This level of recall dramatically enhances the user experience and makes the AI feel more like a knowledgeable companion. This is the domain of [long-term memory AI agents](/articles/long-term-memory-ai-agents/).
+Think of an AI assistant that remembers your dietary restrictions, your preferred communication style, or recurring tasks. This level of recall dramatically enhances the user experience and makes the AI feel more like a knowledgeable companion. This is the domain of [long-term memory AI agents](/articles/long-term-memory-ai-agent/).
 
 ### Memory-Augmented Architectures
 

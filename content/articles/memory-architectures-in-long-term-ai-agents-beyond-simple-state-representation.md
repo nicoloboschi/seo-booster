@@ -90,7 +90,7 @@ Just as humans consolidate memories from short-term to long-term storage, AI age
 
 ### Temporal Reasoning in Memory
 
-For agents operating over extended periods, **temporal reasoning** is paramount. This involves understanding the sequence of events, their duration, and their causal relationships. Memory architectures that explicitly model time allow agents to track changes, predict future states, and understand historical context. This capability is explored in [temporal reasoning AI memory](/articles/temporal-memory-ai-memory/).
+For agents operating over extended periods, **temporal reasoning** is paramount. This involves understanding the sequence of events, their duration, and their causal relationships. Memory architectures that explicitly model time allow agents to track changes, predict future states, and understand historical context. This capability is explored in temporal reasoning AI memory.
 
 * **Capability:** Understanding event order, causality, and change over time.
 * **Importance:** Crucial for planning, prediction, and understanding dynamic environments.

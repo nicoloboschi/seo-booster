@@ -133,7 +133,7 @@ This encompasses knowledge and experiences that persist over extended periods, p
 
 ### Episodic Memory Logging with LLM APIs
 
-Episodic memory stores specific events or experiences, including the context in which they occurred (time, place, associated entities). For an AI agent, this could mean remembering a specific instance of a user asking a question, the answer provided, and the outcome. The **LLM memory API** might support `log_event(event_details)` or `recall_specific_event(event_id)`. This is key for [episodic memory in AI agents](/articles/episodic-memory-ai-agents/).
+Episodic memory stores specific events or experiences, including the context in which they occurred (time, place, associated entities). For an AI agent, this could mean remembering a specific instance of a user asking a question, the answer provided, and the outcome. The **LLM memory API** might support `log_event(event_details)` or `recall_specific_event(event_id)`. This is key for [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
 
 ### Semantic Memory Organization via LLM APIs
 

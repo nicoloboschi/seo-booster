@@ -189,7 +189,7 @@ This example shows the practical application of the authenticated client, enabli
 
 ## Zep Memory API Key vs. Other Memory Solutions
 
-While Zep offers a powerful solution for persistent AI memory, it's helpful to understand how its API key management fits into the broader landscape of AI memory frameworks. Different systems have varying authentication and management approaches. Comparing Zep's key system to alternatives like [vector databases](/articles/vector-databases-for-ai/) or conceptual needs addressed by systems like [Hindsight](https://github.com/vectorize-io/hindsight) highlights the common challenges in managing **AI agent memory**.
+While Zep offers a powerful solution for persistent AI memory, it's helpful to understand how its API key management fits into the broader landscape of AI memory frameworks. Different systems have varying authentication and management approaches. Comparing Zep's key system to alternatives like vector databases or conceptual needs addressed by systems like [Hindsight](https://github.com/vectorize-io/hindsight) highlights the common challenges in managing **AI agent memory**.
 
 ### Authentication Methods in Memory Systems
 

@@ -53,7 +53,7 @@ For example, an agent might serialize its current belief state or a summary of i
 
 Persistent memory often involves more than just simple storage. **Memory consolidation** techniques, similar to those in human cognition, can be applied to organize and condense long-term memories, making retrieval more efficient and relevant. This prevents the memory store from becoming an unmanageable deluge of information.
 
-Retrieval mechanisms are then employed to fetch relevant data from persistent storage. This can range from direct lookups (e.g. by ID) to complex semantic searches, especially when using vector databases. The effectiveness of persistent memory hinges on both the ability to store information reliably and to retrieve the *right* information at the *right* time. This is a core challenge addressed by many [best AI agent memory systems](/articles/best-ai-agent-memory-systems).
+Retrieval mechanisms are then employed to fetch relevant data from persistent storage. This can range from direct lookups (e.g. by ID) to complex semantic searches, especially when using vector databases. The effectiveness of persistent memory hinges on both the ability to store information reliably and to retrieve the *right* information at the *right* time. This is a core challenge addressed by many [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## Why Persistent Memory Matters for AI
 
@@ -98,7 +98,7 @@ The integration of persistent memory typically involves modifying the AI agent's
 * **Storage Layer:** The actual database or file system where the data resides.
 * **Serialization/Deserialization Logic:** Code that handles the conversion of the AI's state into a storable format and vice-versa.
 
-Many modern [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) explicitly incorporate persistent memory as a key component. Frameworks like LangChain and LlamaIndex provide abstractions that simplify the integration of various memory backends, including persistent ones. For example, comparing memory solutions like [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory) often highlights differences in their persistent storage capabilities.
+Many modern [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) explicitly incorporate persistent memory as a key component. Frameworks like LangChain and LlamaIndex provide abstractions that simplify the integration of various memory backends, including persistent ones. For example, comparing memory solutions like Letta vs. Langchain memory often highlights differences in their persistent storage capabilities.
 
 ### Data Management Strategies
 

@@ -105,7 +105,7 @@ Consider training an AI model.
 5. Gradients and updated weights are computed in VRAM and then transferred back to system RAM.
 6. This cycle repeats.
 
-This constant shuttling of data underscores why having adequate amounts of both system RAM and VRAM is crucial for smooth and efficient AI development and deployment. For AI agents that need to retain information over time, effective memory management strategies are key, as explored in [AI agent memory management strategies](/articles/ai-agent-memory-management/).
+This constant shuttling of data underscores why having adequate amounts of both system RAM and VRAM is crucial for smooth and efficient AI development and deployment. For AI agents that need to retain information over time, effective memory management strategies are key, as explored in [AI agent memory management strategies](/articles/llm-agent-memory-management/).
 
 ## When Does VRAM Matter More Than System RAM for AI?
 

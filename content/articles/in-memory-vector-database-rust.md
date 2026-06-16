@@ -60,7 +60,7 @@ Rust's unique features are particularly beneficial for in-memory vector database
 
 ### Why In-Memory for AI Agents?
 
-AI agents, especially those involved in real-time interactions or complex decision-making, need to access their memories instantaneously. Disk-based databases introduce latency that can cripple an agent's responsiveness. Storing embeddings in RAM allows for near-instantaneous retrieval, directly impacting the agent's ability to process information and act. This is a cornerstone for effective [high-performance AI agent memory systems](/articles/ai-agent-memory-systems/). An **in-memory vector database rust** solution directly addresses this need for speed.
+AI agents, especially those involved in real-time interactions or complex decision-making, need to access their memories instantaneously. Disk-based databases introduce latency that can cripple an agent's responsiveness. Storing embeddings in RAM allows for near-instantaneous retrieval, directly impacting the agent's ability to process information and act. This is a cornerstone for effective [high-performance AI agent memory systems](/articles/llm-agent-memory-systems/). An **in-memory vector database rust** solution directly addresses this need for speed.
 
 ## Implementing an In-Memory Vector Database in Rust
 
@@ -279,7 +279,7 @@ Several excellent Rust libraries provide the building blocks or full implementat
 * **`lance-db`:** A modern, high-performance columnar format that can operate in-memory or on disk.
 * **`pgvector-rust`:** A Rust client for PostgreSQL's `pgvector` extension.
 
-These libraries allow developers to integrate powerful vector search capabilities into their Rust applications. For a broader overview of memory solutions, consider [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+These libraries allow developers to integrate powerful vector search capabilities into their Rust applications. For a broader overview of memory solutions, consider [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## Conclusion: The Future of Fast AI Recall
 

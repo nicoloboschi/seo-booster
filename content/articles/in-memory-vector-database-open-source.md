@@ -90,9 +90,9 @@ Modern AI systems, especially those involved in complex tasks like advanced reas
 
 ## How Vector Databases Work for AI Retrieval
 
-Vector databases store **vector embeddings**, which are numerical representations of data capturing semantic meaning. Two sentences with similar meanings will have embeddings that are "close" in a high-dimensional space. A vector database allows you to perform a **similarity search**, finding the embeddings closest to a given query embedding. This capability is foundational for many AI tasks, including **retrieval-augmented generation (RAG)** and building [AI memory systems](/articles/ai-memory-systems-explained/).
+Vector databases store **vector embeddings**, which are numerical representations of data capturing semantic meaning. Two sentences with similar meanings will have embeddings that are "close" in a high-dimensional space. A vector database allows you to perform a **similarity search**, finding the embeddings closest to a given query embedding. This capability is foundational for many AI tasks, including **retrieval-augmented generation (RAG)** and building AI memory systems.
 
-The core of a vector database's functionality lies in its indexing capabilities. Instead of brute-force comparison, it uses specialized **Approximate Nearest Neighbor (ANN)** algorithms. These algorithms trade perfect accuracy for significant speed improvements. Popular ANN algorithms include Hierarchical Navigable Small Worlds (HNSW) and Inverted File Index (IVF). For example, understanding [vector embedding generation](/articles/vector-embedding-generation/) is a prerequisite for using these databases effectively for **AI retrieval**.
+The core of a vector database's functionality lies in its indexing capabilities. Instead of brute-force comparison, it uses specialized **Approximate Nearest Neighbor (ANN)** algorithms. These algorithms trade perfect accuracy for significant speed improvements. Popular ANN algorithms include Hierarchical Navigable Small Worlds (HNSW) and Inverted File Index (IVF). For example, understanding vector embedding generation is a prerequisite for using these databases effectively for **AI retrieval**.
 
 ### The Advantage of In-Memory Architecture for Fast AI Memory
 
@@ -206,7 +206,7 @@ Personalized recommendations are another major application. By embedding user pr
 
 ### Semantic Search and Knowledge Management with Vector Databases
 
-Beyond RAG, **in-memory vector databases open source** power general semantic search engines. Instead of keyword matching, these systems understand the *meaning* behind queries. This is invaluable for searching large document repositories, internal knowledge bases, or codebases. Understanding [semantic search principles](/articles/semantic-search-explained/) is key here.
+Beyond RAG, **in-memory vector databases open source** power general semantic search engines. Instead of keyword matching, these systems understand the *meaning* behind queries. This is invaluable for searching large document repositories, internal knowledge bases, or codebases. Understanding semantic search principles is key here.
 
 ## Performance Considerations and Benchmarks for Vector Databases
 
@@ -239,7 +239,7 @@ Combining traditional keyword search with vector similarity search (hybrid searc
 
 ### Persistence and Durability in In-Memory Stores
 
-While in-memory offers speed, it’s volatile. Data is lost if the system crashes or restarts. Many **in-memory vector databases open source** offer options for persistence, periodically saving their state to disk or supporting snapshotting. Balancing in-memory speed with data durability remains a key challenge for any **in-memory vector store open source**. You can learn more about [persistent AI memory](/articles/persistent-ai-memory/) to understand these challenges further.
+While in-memory offers speed, it’s volatile. Data is lost if the system crashes or restarts. Many **in-memory vector databases open source** offer options for persistence, periodically saving their state to disk or supporting snapshotting. Balancing in-memory speed with data durability remains a key challenge for any **in-memory vector store open source**. You can learn more about persistent AI memory to understand these challenges further.
 
 ### Memory Consolidation and Forgetting in AI Agents
 

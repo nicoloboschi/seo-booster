@@ -56,7 +56,7 @@ Addressing these **context window limitations** is a primary driver for developi
 
 Common approaches include:
 
-1. **Vector Databases:** Storing information (like past conversations, documents, or user profiles) as **embeddings**. These are numerical representations that capture semantic meaning. When a new query comes in, the system searches the vector database for the most semantically similar stored information. This is a core component of [an overview of Retrieval-Augmented Generation (RAG)](/articles/rag-overview).
+1. **Vector Databases:** Storing information (like past conversations, documents, or user profiles) as **embeddings**. These are numerical representations that capture semantic meaning. When a new query comes in, the system searches the vector database for the most semantically similar stored information. This is a core component of an overview of Retrieval-Augmented Generation (RAG).
 2. **Structured Databases:** Using traditional databases (SQL or NoSQL) to store specific pieces of information in a structured format, such as user IDs, preferences, or task statuses. This allows for precise lookups.
 3. **Knowledge Graphs:** Representing information as a network of entities and their relationships, enabling complex reasoning and inference.
 4. **Hybrid Approaches:** Combining multiple methods, such as using a vector database for semantic search and a structured database for specific data points.
@@ -136,7 +136,7 @@ The process typically involves:
 
 RAG is highly effective for providing agents with access to factual information and past conversations, making it a cornerstone of **long-term memory AI agents**. Compared to traditional LLM usage, RAG can significantly improve accuracy and reduce hallucinations. According to a 2024 study published on arxiv, RAG-based agents demonstrated a 34% improvement in task completion accuracy for knowledge-intensive tasks.
 
-For more on RAG, explore [Agent Memory vs RAG](/articles/agent-memory-vs-rag). This is a critical pattern for any **dify llm memory** implementation.
+For more on RAG, explore Agent Memory vs RAG. This is a critical pattern for any **dify llm memory** implementation.
 
 ### Memory Consolidation and Management in DiFY Systems
 

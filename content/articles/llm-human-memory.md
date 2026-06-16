@@ -61,7 +61,7 @@ To overcome the context window limitations, researchers are integrating external
 
 Popular approaches include:
 
-* **Retrieval-Augmented Generation (RAG):** This is a widely adopted pattern where an LLM's knowledge is augmented by retrieving relevant information from an external knowledge base. While RAG improves factual accuracy and access to up-to-date information, it's not a direct replica of human memory's dynamic recall. It's more akin to consulting a library than remembering a personal experience. Understand [agent memory versus RAG for LLM recall](/articles/agent-memory-vs-rag) for deeper insights into **llm human memory** strategies.
+* **Retrieval-Augmented Generation (RAG):** This is a widely adopted pattern where an LLM's knowledge is augmented by retrieving relevant information from an external knowledge base. While RAG improves factual accuracy and access to up-to-date information, it's not a direct replica of human memory's dynamic recall. It's more akin to consulting a library than remembering a personal experience. Understand agent memory versus RAG for LLM recall for deeper insights into **llm human memory** strategies.
 * **Dedicated Memory Architectures:** More advanced systems aim to build richer memory structures. These might include separate modules for short-term, long-term, and even **building episodic memory in AI agents** (/articles/episodic-memory-in-ai-agents/). These architectures are key to achieving robust **llm human memory**.
 
 These external systems allow AI to maintain a persistent state, enabling them to remember interactions, user preferences, and learned facts over time. This is a significant step towards achieving **LLM human memory**.

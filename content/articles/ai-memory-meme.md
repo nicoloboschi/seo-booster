@@ -69,7 +69,7 @@ Achieving effective semantic and episodic memory without overwhelming the system
 
 To overcome context window limitations and enable long-term memory, many AI systems employ **Retrieval-Augmented Generation (RAG)**. RAG combines a generative model with an external knowledge retrieval mechanism, often a **vector database**. When an AI needs information, it queries this database to retrieve relevant data, then uses that data to inform its generation.
 
-This approach allows AI to access information far beyond its immediate context window. **Embedding models for memory** are used to convert text into numerical vectors, enabling efficient similarity searches within the vector database. This is a key technique for building **AI agents with memory**, allowing them to recall past conversations or access external documentation. The effectiveness of RAG is a hot topic, with ongoing comparisons to other agent memory approaches, such as those found in [understanding agent memory vs RAG](/articles/agent-memory-vs-rag) discussions.
+This approach allows AI to access information far beyond its immediate context window. **Embedding models for memory** are used to convert text into numerical vectors, enabling efficient similarity searches within the vector database. This is a key technique for building **AI agents with memory**, allowing them to recall past conversations or access external documentation. The effectiveness of RAG is a hot topic, with ongoing comparisons to other agent memory approaches, such as those found in understanding agent memory vs RAG discussions.
 
 ## How AI Memory Systems Work
 
@@ -111,7 +111,7 @@ These systems, alongside open-source solutions like **Hindsight** ([https://gith
 
 Frameworks like LangChain and LlamaIndex offer tools to integrate memory systems into AI applications. They provide pre-built components for managing conversation history, interacting with vector databases, and implementing RAG pipelines.
 
-These frameworks simplify building agents that can remember. For example, they offer different memory types, such as `ConversationBufferMemory` for short-term recall and more complex approaches for long-term storage. Discussions comparing these frameworks, such as [comparing LangChain and LlamaIndex memory frameworks](/articles/comparing-langchain-llamaindex-memory-frameworks), highlight innovation in **agent memory architecture patterns**.
+These frameworks simplify building agents that can remember. For example, they offer different memory types, such as `ConversationBufferMemory` for short-term recall and more complex approaches for long-term storage. Discussions comparing these frameworks, such as comparing LangChain and LlamaIndex memory frameworks, highlight innovation in **agent memory architecture patterns**.
 
 ### Specialized Memory Architectures
 

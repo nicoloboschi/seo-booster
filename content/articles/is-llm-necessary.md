@@ -142,7 +142,7 @@ Beyond general-purpose storage, AI agents can employ **specialized memory module
 
 #### Episodic Memory Systems
 
-Mimicking human episodic memory, these systems store specific events with their temporal and contextual details. This is crucial for agents that need to recall past events in sequence, such as understanding the progression of a multi-turn conversation or a complex task. [Episodic memory in AI agents](/articles/episodic-memory-in-ai-explained/) is vital for agents requiring a sense of personal history, and its implementation doesn't inherently require an LLM.
+Mimicking human episodic memory, these systems store specific events with their temporal and contextual details. This is crucial for agents that need to recall past events in sequence, such as understanding the progression of a multi-turn conversation or a complex task. Episodic memory in AI agents is vital for agents requiring a sense of personal history, and its implementation doesn't inherently require an LLM.
 
 #### Working Memory Buffers
 

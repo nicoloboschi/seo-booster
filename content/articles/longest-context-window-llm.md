@@ -122,7 +122,7 @@ While a large context window allows an LLM to *see* more information, it doesn't
 
 ### Overfitting and Catastrophic Forgetting
 
-There's a risk that models trained on extremely long sequences might overfit to specific patterns or, conversely, suffer from **catastrophic forgetting** where learning new information erases old knowledge, even within the same long context. Balancing the ability to recall vast amounts of information with the capacity for continuous learning is a complex challenge. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) and [semantic memory in AI agents](/articles/semantic-memory-in-ai-agents/) helps in designing systems that can manage different types of recalled information effectively.
+There's a risk that models trained on extremely long sequences might overfit to specific patterns or, conversely, suffer from **catastrophic forgetting** where learning new information erases old knowledge, even within the same long context. Balancing the ability to recall vast amounts of information with the capacity for continuous learning is a complex challenge. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) and [semantic memory in AI agents](/articles/semantic-memory-ai-agents/) helps in designing systems that can manage different types of recalled information effectively.
 
 ### Practical Implementation
 

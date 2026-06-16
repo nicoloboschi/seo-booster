@@ -118,7 +118,7 @@ An agent tasked with assisting developers in writing code needs to remember proj
 2. **API Documentation**: Key API documentation and usage examples can be stored in a **vector database** or a dedicated knowledge base for rapid lookup.
 3. **Developer Style**: Preferred coding styles or common patterns used by the developer can be stored in a **semantic memory** or a structured format.
 
-This enables the agent to generate code that aligns with the project's existing structure and the developer's habits, moving beyond simple code completion. This is a practical application for [long-term memory AI](/articles/long-term-memory-ai/).
+This enables the agent to generate code that aligns with the project's existing structure and the developer's habits, moving beyond simple code completion. This is a practical application for [long-term memory AI](/articles/long-term-memory-aids/).
 
 #### Example 3: Educational Chatbot
 

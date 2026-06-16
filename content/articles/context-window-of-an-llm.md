@@ -49,7 +49,7 @@ The **context window of an LLM** functions as its immediate, short-term memory. 
 
 ### Short-Term Memory Limitations
 
-LLMs inherently possess a limited form of short-term memory, defined by their context window. To achieve true long-term memory, AI agents must implement external mechanisms. These include techniques like Retrieval-Augmented Generation (RAG) or specialized memory modules, as detailed in our [guide to RAG and retrieval](/articles/rag-and-retrieval-for-ai-agents/). Without these, an LLM effectively "forgets" everything outside its current context window. The **LLM context window** is not a long-term storage solution.
+LLMs inherently possess a limited form of short-term memory, defined by their context window. To achieve true long-term memory, AI agents must implement external mechanisms. These include techniques like Retrieval-Augmented Generation (RAG) or specialized memory modules, as detailed in our guide to RAG and retrieval. Without these, an LLM effectively "forgets" everything outside its current context window. The **LLM context window** is not a long-term storage solution.
 
 ### Impact on Conversational Flow
 

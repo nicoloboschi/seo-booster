@@ -130,7 +130,7 @@ The integration of **llm memory graphs** with other AI memory techniques, such a
 
 **LLM memory graphs** represent a significant advancement in how AI agents store, retrieve, and reason with information. By structuring knowledge as interconnected entities and relationships, they unlock deeper contextual understanding and enable complex reasoning capabilities. While challenges remain in scalability and maintenance, the potential for creating more intelligent and capable AI agents makes the **llm memory graph** a critical component of future AI architectures.
 
-For those looking to implement advanced memory solutions, exploring [evaluating the best AI agent memory systems](/articles/best-ai-agent-memory-systems) is a good starting point, with graph-based approaches offering a powerful option.
+For those looking to implement advanced memory solutions, exploring [evaluating the best AI agent memory systems](/articles/best-ai-memory-systems/) is a good starting point, with graph-based approaches offering a powerful option.
 
 ---
 

@@ -23,8 +23,8 @@ faq:
   answer: Mem0 supports the storage and retrieval of various memory types, including **episodic memory** (specific events) and **semantic memory** (general knowledge). This allows agents to build a rich
     and accessible knowledge base, enhancing their ability to understand context and respond intelligently.
 - question: Where can I find more information on comparing AI memory systems like Mem0?
-  answer: You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, [Mem0 vs. Cognees](/articles/mem0-vs-cognee) and [Mem0 vs. LLaMA
-    Index](/articles/mem0-vs-letta) offer detailed insights into their features and use cases.
+  answer: You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, Mem0 vs. Cognees and Mem0 vs. LLaMA
+    Index offer detailed insights into their features and use cases.
 slug: mem0-building-production-ready-ai-agents
 ---
 
@@ -171,7 +171,7 @@ Mem0 competes in a growing market of AI memory frameworks. Understanding its pos
 * **Zep:** Known for its focus on conversational memory and semantic search capabilities, Zep provides a strong platform for agents that need to recall nuanced dialogue.
 * **LLaMA Index (LlamaHub):** A broader data framework for LLM applications, LlamaHub offers tools for connecting LLMs to external data sources, including various vector databases and memory modules. It's more of a toolkit than a single memory system.
 
-Mem0 differentiates itself by aiming for a balance of simplicity, performance, and features tailored for **persistent memory AI** applications. It's important to consult resources like [Mem0 vs. Cognees](/articles/mem0-vs-cognee) or [Mem0 vs. LLaMA Index](/articles/mem0-vs-letta) for detailed comparisons on **AI memory frameworks**.
+Mem0 differentiates itself by aiming for a balance of simplicity, performance, and features tailored for **persistent memory AI** applications. It's important to consult resources like Mem0 vs. Cognees or Mem0 vs. LLaMA Index for detailed comparisons on **AI memory frameworks**.
 
 ### Considerations for Production Deployment
 
@@ -212,4 +212,4 @@ Mem0 supports the storage and retrieval of various memory types, including **epi
 
 ### Where can I find more information on comparing AI memory systems like Mem0?
 
-You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, [Mem0 vs. Cognees](/articles/mem0-vs-cognee) and [Mem0 vs. LLaMA Index](/articles/mem0-vs-letta) offer detailed insights into their features and use cases.
+You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, Mem0 vs. Cognees and Mem0 vs. LLaMA Index offer detailed insights into their features and use cases.

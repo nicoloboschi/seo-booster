@@ -63,7 +63,7 @@ Why do most chatbots forget crucial details within minutes? It's because they of
 
 A chatbot with improved memory can:
 
-* **Personalize interactions:** Recall user preferences, past issues, or previous successful solutions. This is a key benefit of effective [personalization in chatbot applications](/articles/personalization-in-chatbot-applications/).
+* **Personalize interactions:** Recall user preferences, past issues, or previous successful solutions. This is a key benefit of effective personalization in chatbot applications.
 * **Maintain context:** Follow multi-turn conversations without losing track of the topic.
 * **Reduce user frustration:** Avoid asking repetitive questions.
 * **Increase efficiency:** Quickly access relevant information from past dialogues.
@@ -108,7 +108,7 @@ A 2024 study published in *arxiv* showed that RAG-enhanced conversational agents
 
 ### Vector Databases and Embeddings: The Backbone of Modern Memory
 
-At the heart of many modern memory systems are **vector databases** and **embeddings**. These are crucial for efficient [vector databases for chatbots](/articles/vector-databases-for-chatbots/).
+At the heart of many modern memory systems are **vector databases** and **embeddings**. These are crucial for efficient vector databases for chatbots.
 
 * **Embeddings:** Numerical representations (vectors) of text that capture semantic meaning. Similar concepts have vectors that are close in multi-dimensional space.
 * **Vector Databases:** Specialized databases optimized for storing and querying these high-dimensional vectors. They enable fast similarity searches.
@@ -119,11 +119,11 @@ At the heart of many modern memory systems are **vector databases** and **embedd
 2. **Efficient Storage:** Embeddings provide a compact way to represent large amounts of text.
 3. **Contextual Relevance:** By embedding user queries and searching against stored conversation embeddings, the system can retrieve the most relevant past interactions.
 
-This approach is fundamental to many [best AI agent memory systems](/articles/best-ai-agent-memory-systems/). The effectiveness of [embedding models for memory](/articles/embedding-models-for-memory/) is a cornerstone of modern AI.
+This approach is fundamental to many [best AI agent memory systems](/articles/best-ai-memory-systems/). The effectiveness of [embedding models for memory](/articles/embedding-models-for-memory/) is a cornerstone of modern AI.
 
 ## Strategies to Implement and Improve Chatbot Memory
 
-Implementing effective memory for chatbots involves careful consideration of architecture, data management, and retrieval strategies. This section provides a [guide to choosing a memory layer](/articles/guide-to-choosing-a-memory-layer/) that best suits your needs, significantly impacting [personalization in chatbot applications](/articles/personalization-in-chatbot-applications/).
+Implementing effective memory for chatbots involves careful consideration of architecture, data management, and retrieval strategies. This section provides a guide to choosing a memory layer that best suits your needs, significantly impacting personalization in chatbot applications.
 
 ### 1. Define Memory Scope and Persistence Needs
 
@@ -212,7 +212,7 @@ Frameworks and libraries can simplify the implementation of complex memory syste
 * **LlamaIndex:** Focuses on data indexing and retrieval for LLMs, including conversational data.
 * **Hindsight:** An open-source AI memory system designed for agents, providing robust tools for managing and retrieving conversational history. You can explore it on [GitHub](https://github.com/vectorize-io/hindsight).
 
-Many developers compare tools like [Letta vs Langchain memory](/articles/letta-vs-langchain-memory/) to find the best fit.
+Many developers compare tools like Letta vs Langchain memory to find the best fit.
 
 ## Case Study: Improving a Customer Support Chatbot
 

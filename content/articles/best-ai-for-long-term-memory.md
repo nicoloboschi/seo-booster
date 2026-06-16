@@ -169,7 +169,7 @@ This capability is essential for building **AI assistants that remember everythi
 
 Personalized AI agents that learn user habits, preferences, and even emotional states over time rely heavily on robust long-term memory. This allows them to offer proactive suggestions, tailor responses, and build a stronger user relationship. These agents aim for **persistent memory AI**.
 
-Such personalization requires storing and analyzing a wealth of user interaction data. The agent must not only remember facts but also understand the nuances of the user's behavior and intent. This is a significant step towards truly adaptive AI companions. Understanding [agent memory in personalized AI](/articles/agent-memory-in-personalized-ai/) is crucial here for finding the **best AI for long-term memory**.
+Such personalization requires storing and analyzing a wealth of user interaction data. The agent must not only remember facts but also understand the nuances of the user's behavior and intent. This is a significant step towards truly adaptive AI companions. Understanding agent memory in personalized AI is crucial here for finding the **best AI for long-term memory**.
 
 ### Autonomous Systems and Robotics
 
@@ -201,7 +201,7 @@ The primary challenge lies in efficiently storing, retrieving, and updating vast
 
 ### How does Retrieval-Augmented Generation (RAG) contribute to AI long-term memory?
 
-RAG systems enhance AI's ability to access external knowledge bases, which act as a form of long-term memory. By retrieving relevant information before generating a response, RAG allows LLMs to access data beyond their training set, effectively extending their memory and knowledge for the best AI for long-term memory. This is a key technique for [agent memory vs RAG](/articles/agent-memory-vs-rag/).
+RAG systems enhance AI's ability to access external knowledge bases, which act as a form of long-term memory. By retrieving relevant information before generating a response, RAG allows LLMs to access data beyond their training set, effectively extending their memory and knowledge for the best AI for long-term memory. This is a key technique for agent memory vs RAG.
 
 ### Can AI agents forget information, and why is that important?
 

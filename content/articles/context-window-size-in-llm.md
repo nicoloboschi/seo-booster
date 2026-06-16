@@ -77,7 +77,7 @@ This code snippet demonstrates how text is broken down into manageable units for
 
 A larger context window allows an LLM to process and understand more information at once. This translates to better performance in several areas. For example, it can maintain a more coherent conversation over extended dialogues, understand complex instructions with many details, and analyze longer documents without losing crucial information. This is a key aspect when considering **context window sizes of modern LLMs**.
 
-Conversely, a small context window can lead to an AI "forgetting" earlier parts of a conversation. This results in repetitive responses, a lack of situational awareness, and an inability to grasp the full scope of a user's intent. It's a significant hurdle for applications requiring deep contextual understanding and a core challenge for [LLM context window](/articles/llm-context-window/) limitations.
+Conversely, a small context window can lead to an AI "forgetting" earlier parts of a conversation. This results in repetitive responses, a lack of situational awareness, and an inability to grasp the full scope of a user's intent. It's a significant hurdle for applications requiring deep contextual understanding and a core challenge for [LLM context window](/articles/llm-api-context-window/) limitations.
 
 ## Why is Context Window Size a Critical Factor for LLMs?
 

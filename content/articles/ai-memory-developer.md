@@ -81,7 +81,7 @@ The role of an **AI memory developer** is multifaceted, demanding a blend of sof
 
 A key responsibility involves designing the overall structure of the AI's memory. This includes deciding which types of memory are needed, such as **episodic memory** for specific events, **semantic memory** for general knowledge, or **short-term memory** for immediate context. They must consider how these different memory components will interact and contribute to the agent's decision-making process.
 
-This architectural design often involves selecting appropriate technologies, like vector databases or specialized memory frameworks. It's about creating a blueprint for how information will be encoded, stored, and accessed. Understanding [ai-agent-memory-architecture](/articles/ai-agent-memory-architecture/) is fundamental to this process. The design of an [ai-agent-memory-architecture-2025](/articles/ai-agent-memory-architecture-2025/) is increasingly complex, requiring consideration of emergent AI capabilities.
+This architectural design often involves selecting appropriate technologies, like vector databases or specialized memory frameworks. It's about creating a blueprint for how information will be encoded, stored, and accessed. Understanding [ai-agent-memory-architecture](/articles/ai-memory-architecture/) is fundamental to this process. The design of an ai-agent-memory-architecture-2025 is increasingly complex, requiring consideration of emergent AI capabilities.
 
 ### Implementing Memory Storage and Retrieval
 

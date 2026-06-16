@@ -79,7 +79,7 @@ Many projects within the **chatbot memory GitHub** space prioritize the storage 
 
 A significant trend observable in **chatbot memory GitHub** repositories is the adoption of **vector databases**. These databases represent information as numerical vectors, facilitating semantic search and retrieval. This method is highly effective for recalling information based on conceptual meaning, not just keywords, and is a cornerstone for robust **AI agent memory**.
 
-Projects frequently integrate popular vector databases such as Pinecone, Weaviate, Chroma, or FAISS. These tools enable highly efficient similarity searches, allowing chatbots to locate relevant past information even when user queries are phrased differently. This capability is a cornerstone of many [Retrieval Augmented Generation (RAG) systems](/articles/agent-memory-vs-rag/).
+Projects frequently integrate popular vector databases such as Pinecone, Weaviate, Chroma, or FAISS. These tools enable highly efficient similarity searches, allowing chatbots to locate relevant past information even when user queries are phrased differently. This capability is a cornerstone of many Retrieval Augmented Generation (RAG) systems.
 
 A 2024 study published on [arXiv](https://arxiv.org/abs/2401.02400) demonstrated that RAG-based memory systems can boost conversational task completion rates by up to 34% compared to models lacking external memory. Also, user engagement with chatbots equipped with memory has reportedly risen by an average of 20%, according to a 2023 industry survey by AI Trends.
 

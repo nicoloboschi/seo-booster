@@ -113,7 +113,7 @@ While Character.AI's current memory is limited, future iterations could incorpor
 
 ### Integration of RAG or Vector Databases
 
-The most straightforward improvement would be the integration of RAG or a vector database. This would allow Character.AI to store and retrieve past conversational data, significantly enhancing its ability to remember details. This is a common strategy for [long-term memory AI agents](/articles/long-term-memory-ai-agents/).
+The most straightforward improvement would be the integration of RAG or a vector database. This would allow Character.AI to store and retrieve past conversational data, significantly enhancing its ability to remember details. This is a common strategy for [long-term memory AI agents](/articles/long-term-memory-ai-agent/).
 
 ### Enhanced LLM Capabilities
 

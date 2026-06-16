@@ -98,7 +98,7 @@ The framework should integrate seamlessly with the existing AI agent architectur
 
 #### Customization and Flexibility in Agent Memory
 
-The ability to **customize** storage, retrieval, and management policies is crucial. Frameworks that offer good integration minimize development time and complexity. Understanding [ai-agent-data-ingestion](/articles/ai-agent-data-ingestion/) can illuminate how specific tools approach this integration, impacting the choice of the **best agentic memory system**.
+The ability to **customize** storage, retrieval, and management policies is crucial. Frameworks that offer good integration minimize development time and complexity. Understanding ai-agent-data-ingestion can illuminate how specific tools approach this integration, impacting the choice of the **best agentic memory system**.
 
 ## Top Agent Memory Framework Approaches
 

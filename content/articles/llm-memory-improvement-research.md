@@ -122,7 +122,7 @@ Several techniques are being explored to give LLMs **long-term memory**. These i
 3. **Experience Replay Buffers:** Similar to reinforcement learning, storing past experiences to be sampled and used for training or inference.
 4. **Fine-tuning:** Periodically fine-tuning the LLM on new data or summarized interactions to incorporate new knowledge.
 
-These methods aim to create a persistent memory for AI agents that can inform future decisions and interactions, moving beyond the limitations of **short-term memory in AI agents**. Research into [memory consolidation in AI agents](/articles/memory-consolidation-in-ai-agents/) is crucial for enabling AI assistants that remember everything.
+These methods aim to create a persistent memory for AI agents that can inform future decisions and interactions, moving beyond the limitations of **short-term memory in AI agents**. Research into [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) is crucial for enabling AI assistants that remember everything.
 
 ### Dynamic Memory Management
 

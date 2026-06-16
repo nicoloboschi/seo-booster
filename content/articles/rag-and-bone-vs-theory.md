@@ -96,7 +96,7 @@ This code demonstrates the core idea of embedding text and finding similar piece
 
 The "Theory" aspect of AI memory refers to the underlying **conceptual models** and **architectural principles**. These guide how an AI agent's memory is designed, functions, and evolves. This isn't about a specific implementation like RAG. It's about broader ideas for AI knowledge representation, learning, recall, and reasoning. This theoretical side is crucial for understanding the full scope of AI memory.
 
-Theoretical considerations include representing different knowledge types. **Episodic memory** stores events with temporal and contextual details. **Semantic memory** handles general world facts. Theories also explore how AI agents form and update their internal world models. This includes efficient storage and avoiding catastrophic forgetting. Research into [different types of AI agent memory](/articles/agent-memory-types/) and **persistent memory** stems from these explorations.
+Theoretical considerations include representing different knowledge types. **Episodic memory** stores events with temporal and contextual details. **Semantic memory** handles general world facts. Theories also explore how AI agents form and update their internal world models. This includes efficient storage and avoiding catastrophic forgetting. Research into [different types of AI agent memory](/articles/ai-agents-memory-types/) and **persistent memory** stems from these explorations.
 
 ### Key Theoretical Concepts in AI Memory
 
@@ -124,7 +124,7 @@ A well-designed AI memory system might integrate RAG with internal **episodic me
 
 The future of advanced AI memory likely involves integrating practical retrieval mechanisms like RAG with sound theoretical frameworks. This means developing AI agents that can retrieve information and integrate it meaningfully into their knowledge structures. Reasoning over it and learning from it are essential. This rag and bone vs theory synthesis is where true intelligence emerges.
 
-For instance, an AI could use RAG to access real-time stock market data. A theoretical framework would enable it to understand the data's implications. This understanding would stem from learned models of economic principles and its own past trading experiences. This allows for more nuanced decision-making. The [context window limitations](/articles/llm-context-windows/) of LLMs highlight why sophisticated RAG and theoretical memory designs are critical. This rag and bone vs theory discussion continues to evolve.
+For instance, an AI could use RAG to access real-time stock market data. A theoretical framework would enable it to understand the data's implications. This understanding would stem from learned models of economic principles and its own past trading experiences. This allows for more nuanced decision-making. The [context window limitations](/articles/llm-api-context-window/) of LLMs highlight why sophisticated RAG and theoretical memory designs are critical. This rag and bone vs theory discussion continues to evolve.
 
 ## The Importance of AI Memory Systems
 

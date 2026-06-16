@@ -172,7 +172,7 @@ When processing lengthy documents, a small context window means the LLM can only
 
 ### Complex Reasoning Failures
 
-Tasks requiring the LLM to reason over multiple pieces of information that are spatially separated within an input are particularly challenging. The model may fail to connect relevant facts if they fall outside its active context. This is a key area where advanced [types of AI memory](/articles/ai-memory-types/) become vital to augment the **context window size** for **large context window LLM** applications.
+Tasks requiring the LLM to reason over multiple pieces of information that are spatially separated within an input are particularly challenging. The model may fail to connect relevant facts if they fall outside its active context. This is a key area where advanced [types of AI memory](/articles/ai-memory-notes/) become vital to augment the **context window size** for **large context window LLM** applications.
 
 ## Strategies to Overcome Context Window Limitations
 

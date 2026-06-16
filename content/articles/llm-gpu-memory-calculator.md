@@ -103,7 +103,7 @@ This provides a baseline for model weights. However, it doesn't account for acti
 
 Activations are intermediate outputs from each layer. Their size depends on the batch size, sequence length, and model architecture. The KV cache size is roughly `2 * Number of Layers * Number of Heads * Head Dimension * Batch Size * Sequence Length * Bytes per Element`.
 
-A more practical approach often involves using pre-built calculators or libraries. Many open-source projects and research papers provide tools or formulas that integrate these complex factors. For instance, some tools might use a rule of thumb, like adding an additional 20-50% overhead for activations and other runtime buffers on top of the weight memory. Understanding [LLM inference optimization](/articles/llm-inference-optimization/) techniques can further refine these calculations.
+A more practical approach often involves using pre-built calculators or libraries. Many open-source projects and research papers provide tools or formulas that integrate these complex factors. For instance, some tools might use a rule of thumb, like adding an additional 20-50% overhead for activations and other runtime buffers on top of the weight memory. Understanding LLM inference optimization techniques can further refine these calculations.
 
 ### Using Python for Estimation
 
@@ -184,7 +184,7 @@ While VRAM capacity is crucial, **GPU memory bandwidth** also plays a significan
 
 ### Model Parallelism and Pipeline Parallelism
 
-When a model's parameters exceed the VRAM of a single GPU, **model parallelism** can be employed. This splits the model's layers across multiple GPUs. **Pipeline parallelism** takes this further by dividing layers into stages, allowing different GPUs to process different micro-batches concurrently. Both require careful orchestration and add communication overhead. You can learn more about [distributed training strategies](/articles/distributed-training-strategies/) to understand these concepts.
+When a model's parameters exceed the VRAM of a single GPU, **model parallelism** can be employed. This splits the model's layers across multiple GPUs. **Pipeline parallelism** takes this further by dividing layers into stages, allowing different GPUs to process different micro-batches concurrently. Both require careful orchestration and add communication overhead. You can learn more about distributed training strategies to understand these concepts.
 
 ### Quantization-Aware Training
 
@@ -192,7 +192,7 @@ For maximum efficiency with quantization (like INT8), **quantization-aware train
 
 ### Efficient Inference Engines
 
-Using optimized inference engines like NVIDIA's TensorRT, Hugging Face's Optimum, or vLLM can significantly reduce memory overhead and improve throughput. These engines often implement techniques such as kernel fusion, optimized KV cache management, and efficient batching strategies. Exploring these is key to understanding [optimizing LLM inference](/articles/llm-inference-optimization/). NVIDIA's documentation on GPU memory management provides further details: [NVIDIA GPU Memory Management](https://developer.nvidia.com/blog/how-inference-performance-scales-with-memory-bandwidth/).
+Using optimized inference engines like NVIDIA's TensorRT, Hugging Face's Optimum, or vLLM can significantly reduce memory overhead and improve throughput. These engines often implement techniques such as kernel fusion, optimized KV cache management, and efficient batching strategies. Exploring these is key to understanding optimizing LLM inference. NVIDIA's documentation on GPU memory management provides further details: [NVIDIA GPU Memory Management](https://developer.nvidia.com/blog/how-inference-performance-scales-with-memory-bandwidth/).
 
 ## LLM GPU Memory Calculator vs. Real-World Usage
 

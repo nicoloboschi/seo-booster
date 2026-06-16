@@ -68,7 +68,7 @@ The integration of DeepSeek AI with Telegram for long-term memory aims to overco
 
 Memory is fundamental to intelligence. For AI agents, it's the backbone of their ability to learn, adapt, and perform complex tasks. Without memory, an agent cannot build upon previous experiences or understand the progression of events. This is particularly true for agents interacting through platforms like Telegram, where conversations can span days, weeks, or even months. A **long-term memory AI chat** assistant, for instance, can provide a far richer user experience than one that forgets everything after a session ends.
 
-Consider the difference between interacting with a chatbot that asks for your name every time versus one that greets you by name and remembers your last request. This distinction highlights the critical role of memory in making AI interactions feel natural and efficient. For DeepSeek AI agents on Telegram, this translates to a more engaging and effective user experience. Understanding [different types of AI memory](/articles/ai-memory-types/) is key to appreciating this.
+Consider the difference between interacting with a chatbot that asks for your name every time versus one that greets you by name and remembers your last request. This distinction highlights the critical role of memory in making AI interactions feel natural and efficient. For DeepSeek AI agents on Telegram, this translates to a more engaging and effective user experience. Understanding [different types of AI memory](/articles/ai-memory-notes/) is key to appreciating this.
 
 ## Understanding Long-Term Memory for AI Agents
 

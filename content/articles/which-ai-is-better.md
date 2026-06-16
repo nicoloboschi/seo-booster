@@ -159,7 +159,7 @@ print(f"Updated preference: {preference}")
 ## agent_memory.clear_memory()
 ```
 
-This example illustrates how an agent can store, retrieve, and update simple pieces of information. More advanced systems would use vector databases for semantic search and more complex memory management strategies to determine which AI is better equipped for nuanced interactions. For a deeper dive into advanced memory implementations, consider exploring [advanced AI memory system guides](/articles/vector-databases-for-ai/).
+This example illustrates how an agent can store, retrieve, and update simple pieces of information. More advanced systems would use vector databases for semantic search and more complex memory management strategies to determine which AI is better equipped for nuanced interactions. For a deeper dive into advanced memory implementations, consider exploring advanced AI memory system guides.
 
 ## FAQ
 

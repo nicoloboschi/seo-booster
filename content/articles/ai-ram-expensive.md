@@ -73,7 +73,7 @@ A 2023 report from TechInsights indicated that HBM memory can cost upwards of **
 
 Much of the intense memory demand in AI is concentrated on **Graphics Processing Units (GPUs)**, which are the workhorses for deep learning. GPUs require their own dedicated, high-speed memory (often HBM). The cost of high-end GPUs is heavily influenced by the amount and type of onboard memory they possess. This onboard memory is a significant factor in the overall AI RAM expense.
 
-For example, a top-tier AI training GPU might feature 80GB of HBM2e or HBM3 memory. This onboard memory is critical for keeping model parameters and intermediate calculations close to the processing cores, minimizing latency. Understanding [GPU memory architecture](/articles/gpu-memory-architecture/) and its impact on AI costs is key to grasping these costs associated with expensive AI RAM.
+For example, a top-tier AI training GPU might feature 80GB of HBM2e or HBM3 memory. This onboard memory is critical for keeping model parameters and intermediate calculations close to the processing cores, minimizing latency. Understanding [GPU memory architecture](/articles/zep-memory-architecture/) and its impact on AI costs is key to grasping these costs associated with expensive AI RAM.
 
 ### Inference vs. Training Memory Needs: Driving Demand for High RAM for AI
 
@@ -109,7 +109,7 @@ Given the high cost, optimizing how AI systems use memory is crucial for cost-ef
 
 The way an AI agent is designed significantly impacts its memory footprint. Architectures that efficiently manage and retrieve information can reduce the need for vast amounts of constant RAM. For example, systems that use **retrieval-augmented generation (RAG)** can offload some knowledge to external databases, reducing the model's direct memory dependency and the need for as much expensive AI RAM.
 
-Exploring different [AI agent memory strategies](/articles/ai-agent-memory-strategies/) like **episodic memory** or **semantic memory** can also lead to more efficient storage and retrieval mechanisms, lessening the reliance on raw RAM capacity and thereby reducing the impact of expensive AI RAM.
+Exploring different AI agent memory strategies like **episodic memory** or **semantic memory** can also lead to more efficient storage and retrieval mechanisms, lessening the reliance on raw RAM capacity and thereby reducing the impact of expensive AI RAM.
 
 ### Memory Consolidation Techniques for AI
 

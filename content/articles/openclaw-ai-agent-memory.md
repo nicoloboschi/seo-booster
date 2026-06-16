@@ -63,7 +63,7 @@ The cumulative effect of these limitations is a degradation in memory quality ov
 
 To overcome the inherent limitations of its default memory system, OpenClaw can be extended with specialized plugins. These plugins automate the capture and recall of information, significantly improving an agent's ability to remember and act upon past experiences. Three prominent solutions for OpenClaw AI agent memory are Hindsight, Supermemory, and Mem0.
 
-These plugins differ in their approaches to privacy, cost, accuracy, and ease of setup. Understanding these differences is key to choosing the right solution for your specific needs. For instance, if you're looking for a quick setup, you might jump directly to the [Hindsight setup](/articles/hindsight-setup/) or [Mem0 setup](/articles/mem0-setup/) sections, but the underlying trade-offs for OpenClaw AI agent memory are important.
+These plugins differ in their approaches to privacy, cost, accuracy, and ease of setup. Understanding these differences is key to choosing the right solution for your specific needs. For instance, if you're looking for a quick setup, you might jump directly to the Hindsight setup or Mem0 setup sections, but the underlying trade-offs for OpenClaw AI agent memory are important.
 
 ### Hindsight: Automated Memory Capture
 
@@ -142,7 +142,7 @@ Hermes Agent, on the other hand, features a more layered architecture. It includ
 
 The external memory ecosystems for both frameworks are evolving. While OpenClaw can integrate with plugins like Hindsight, Supermemory, and Mem0, Hermes has a pluggable memory provider system. This system allows for greater flexibility in choosing how external memory is managed.
 
-A comparison of these frameworks, particularly concerning their memory handling, can be found in resources like the [OpenClaw vs Hermes Agent: Memory Compared](/articles/openclaw-vs-hermes-agent-memory-compared/) article. For a broader overview of available solutions, consulting [Open-source memory systems compared](/articles/open-source-memory-systems-compared/) is beneficial. The choice between them often depends on whether you prioritize OpenClaw's file-based transparency or Hermes's structured, multi-layered memory approach for OpenClaw AI agent memory.
+A comparison of these frameworks, particularly concerning their memory handling, can be found in resources like the [OpenClaw vs Hermes Agent: Memory Compared](/articles/openclaw-vs-hermes-agent-memory/) article. For a broader overview of available solutions, consulting [Open-source memory systems compared](/articles/open-source-memory-systems-compared/) is beneficial. The choice between them often depends on whether you prioritize OpenClaw's file-based transparency or Hermes's structured, multi-layered memory approach for OpenClaw AI agent memory.
 
 ## Choosing the Right Memory Solution for OpenClaw
 

@@ -183,7 +183,7 @@ Developing and implementing effective **AI memory maps** presents several challe
 
 As the amount of data an agent needs to remember grows, the memory map can become massive. Efficient storage, indexing, and retrieval become paramount. Techniques like memory consolidation and hierarchical organization are being explored to manage this.
 
-A 2024 study published on [arxiv](https://arxiv.org/) indicated that agents employing optimized memory retrieval strategies showed a **34% improvement in task completion rates** compared to baseline agents. Also, research into [efficient AI memory retrieval](/articles/efficient-ai-memory-retrieval/) is ongoing. The AI memory market is also projected to grow significantly, with some reports estimating its value to reach billions by 2030.
+A 2024 study published on [arxiv](https://arxiv.org/) indicated that agents employing optimized memory retrieval strategies showed a **34% improvement in task completion rates** compared to baseline agents. Also, research into efficient AI memory retrieval is ongoing. The AI memory market is also projected to grow significantly, with some reports estimating its value to reach billions by 2030.
 
 ### Context Window Limitations
 

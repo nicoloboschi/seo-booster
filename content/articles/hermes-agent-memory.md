@@ -106,7 +106,7 @@ When **Hermes memory not working** becomes an issue, it typically falls into a f
 **How to fix it:**
 1. **Adjust `nudge_interval`:** Reduce this value in your `config.yaml` for more frequent reflection prompts, especially during shorter sessions.
 2. **Ensure proper exit:** In gateway mode, avoid force-quitting the process before the proactive flush before idle timeout can occur.
-3. **Implement an external provider:** For automatic capture regardless of session length or agent judgment, integrating an external provider is the most reliable solution. Tools like [Hindsight](/articles/hindsight-ai-memory/) or Mem0 capture everything in the background, ensuring **long-term memory in AI agents** is consistently captured.
+3. **Implement an external provider:** For automatic capture regardless of session length or agent judgment, integrating an external provider is the most reliable solution. Tools like [Hindsight](/articles/hindsight-llm-memory/) or Mem0 capture everything in the background, ensuring **long-term memory in AI agents** is consistently captured.
 
 ### Problem 2: Hermes Asks for Information It Should Know
 

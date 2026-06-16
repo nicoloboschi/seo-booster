@@ -144,7 +144,7 @@ For instance, when storing conversation snippets as embeddings, use Pydantic to 
 
 The vector database stores the embedding and this Pydantic-validated metadata. You can perform hybrid searches, combining vector similarity with metadata filters. This is a powerful approach for building **AI that remembers conversations**.
 
-Libraries like LangChain and LlamaIndex integrate with Pydantic for memory management. You might define a Pydantic schema for `ChatMessage` and use it within a memory module persisting messages to a vector store. This ensures data integrity. For more, explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+Libraries like LangChain and LlamaIndex integrate with Pydantic for memory management. You might define a Pydantic schema for `ChatMessage` and use it within a memory module persisting messages to a vector store. This ensures data integrity. For more, explore [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### Pydantic with Traditional Databases
 

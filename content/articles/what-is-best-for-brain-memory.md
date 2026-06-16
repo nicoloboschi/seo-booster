@@ -136,7 +136,7 @@ Assessing the effectiveness of AI memory requires standardized benchmarks and co
 
 ### AI Memory Benchmarks
 
-**AI memory benchmarks** are crucial for quantitatively evaluating different memory systems and techniques. These benchmarks typically involve tasks that test an AI's ability to recall specific facts, answer questions based on long documents, or maintain conversational coherence. They also assess complex reasoning requiring information integration. Organizations like Vectorize.io provide resources and comparisons for [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), aiding in selection and evaluation of **AI memory solutions**.
+**AI memory benchmarks** are crucial for quantitatively evaluating different memory systems and techniques. These benchmarks typically involve tasks that test an AI's ability to recall specific facts, answer questions based on long documents, or maintain conversational coherence. They also assess complex reasoning requiring information integration. Organizations like Vectorize.io provide resources and comparisons for [best AI agent memory systems](/articles/best-ai-memory-systems/), aiding in selection and evaluation of **AI memory solutions**.
 
 ### Comparison of Memory Approaches
 

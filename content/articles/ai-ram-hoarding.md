@@ -149,7 +149,7 @@ This snippet uses the `@profile` decorator to show memory usage line by line. It
 
 Choosing the right data structures is critical. For large-scale memory, consider specialized solutions:
 
-* **Vector Databases**: Optimized for storing and querying high-dimensional embeddings, these databases (like Pinecone, Weaviate, or Chroma) manage memory efficiently. They are a good alternative to storing vast embeddings in agent RAM. Learn more about [vector database performance](/articles/vector-database-performance/).
+* **Vector Databases**: Optimized for storing and querying high-dimensional embeddings, these databases (like Pinecone, Weaviate, or Chroma) manage memory efficiently. They are a good alternative to storing vast embeddings in agent RAM. Learn more about vector database performance.
 * **In-Memory Data Grids**: For caching and distributed data, these can offer better performance and memory control than simple Python collections.
 * **Optimized Collections**: Libraries like `collections.deque` in Python can be more memory-efficient for certain queue-like operations than standard lists, reducing the risk of excessive RAM usage by AI.
 

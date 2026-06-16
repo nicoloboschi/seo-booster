@@ -60,7 +60,7 @@ Disk-based storage, while persistent, introduces inherent latency. Each read ope
 
 ### Impact of Latency on Agent Performance and Contextual Awareness
 
-This challenge is a core reason why approaches like Retrieval Augmented Generation (RAG) are so popular. RAG frameworks aim to augment LLMs with external knowledge, and the speed at which this knowledge can be retrieved directly impacts the LLM's performance. You can learn more about the nuances of RAG versus agent memory in our [enhancing AI agent memory with Spring AI and in-memory vector databases](/articles/enhancing-ai-agent-memory-with-spring-ai/) guide. An **in-memory vector database for Spring AI** directly addresses this latency issue, significantly improving an AI agent's ability to maintain context and recall information quickly.
+This challenge is a core reason why approaches like Retrieval Augmented Generation (RAG) are so popular. RAG frameworks aim to augment LLMs with external knowledge, and the speed at which this knowledge can be retrieved directly impacts the LLM's performance. You can learn more about the nuances of RAG versus agent memory in our enhancing AI agent memory with Spring AI and in-memory vector databases guide. An **in-memory vector database for Spring AI** directly addresses this latency issue, significantly improving an AI agent's ability to maintain context and recall information quickly.
 
 ## Spring AI's Role in Modern AI Development: Simplifying Vector Database Integration
 

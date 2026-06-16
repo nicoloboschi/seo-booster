@@ -170,7 +170,7 @@ Implementing a strong long-term memory system requires careful planning. These s
 5. **Integration with LLM:** Ensure seamless integration between the memory system and the LLM's inference pipeline.
 6. **Maintenance:** Plan for ongoing maintenance, including data updates, pruning, and model retraining.
 
-For many developers, frameworks like LangChain or LlamaIndex provide abstractions to build these systems more easily. Tools like [Letta AI guide](/articles/letta-ai-guide/) offer specialized solutions for managing persistent memory. You can compare these in our guide on [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+For many developers, frameworks like LangChain or LlamaIndex provide abstractions to build these systems more easily. Tools like [Letta AI guide](/articles/letta-ai-guide/) offer specialized solutions for managing persistent memory. You can compare these in our guide on [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 Here's a Python example demonstrating basic embedding generation and storage:
 

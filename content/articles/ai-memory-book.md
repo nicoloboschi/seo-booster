@@ -124,7 +124,7 @@ The development of advanced AI agents hinges on their ability to remember and us
 
 Context is king for intelligent agents. An **ai memory book** provides the historical data necessary to understand current situations more deeply. By referencing past interactions, the AI can infer user intent, recall previous preferences, or understand the ongoing state of a task. This prevents the agent from treating every interaction as a novel event, significantly improving **contextual understanding**.
 
-For instance, an AI assistant using a memory book can recall that a user previously expressed a dislike for a certain type of notification. When a new notification arises, the AI can proactively suppress it. This demonstrates a level of understanding that goes beyond simple command execution. This is a core aspect of [agent memory systems](/articles/agent-memory-systems/).
+For instance, an AI assistant using a memory book can recall that a user previously expressed a dislike for a certain type of notification. When a new notification arises, the AI can proactively suppress it. This demonstrates a level of understanding that goes beyond simple command execution. This is a core aspect of [agent memory systems](/articles/llm-agent-memory-systems/).
 
 ### Improving Decision-Making and Learning
 

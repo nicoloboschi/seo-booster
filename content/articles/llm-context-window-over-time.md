@@ -79,7 +79,7 @@ Working within a few thousand tokens presented several significant challenges:
 * **Document Comprehension:** Summarizing or analyzing lengthy documents was impossible without breaking them into small, manageable chunks, often losing critical context.
 * **Complex Reasoning:** Tasks requiring the synthesis of information from disparate parts of a text were severely hampered.
 
-These issues spurred research into increasing the context window size and exploring more sophisticated [AI agent memory](/articles/ai-agent-memory/) techniques, driving the **LLM context window over time** forward and highlighting the need for larger **LLM context window sizes**.
+These issues spurred research into increasing the context window size and exploring more sophisticated [AI agent memory](/articles/ai-agent-and-memory/) techniques, driving the **LLM context window over time** forward and highlighting the need for larger **LLM context window sizes**.
 
 ## The Leap Forward: Tens and Hundreds of Thousands of Tokens
 

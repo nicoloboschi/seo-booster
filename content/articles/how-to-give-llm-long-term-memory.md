@@ -59,7 +59,7 @@ These embeddings are stored in a **vector database** (e.g., Pinecone, Weaviate, 
 
 #### Benefits of Vector Stores for Memory
 
-This approach effectively decouples memory from the LLM's fixed context window. It allows for potentially infinite memory storage, a crucial aspect of giving LLM long term memory. For a deeper dive into these systems, explore [effective AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+This approach effectively decouples memory from the LLM's fixed context window. It allows for potentially infinite memory storage, a crucial aspect of giving LLM long term memory. For a deeper dive into these systems, explore [effective AI agent memory systems](/articles/best-ai-memory-systems/).
 
 Consider an AI assistant helping users with complex coding projects. To provide long-term memory, it could store each user's project details, code snippets discussed, and problem-solving steps as embeddings in a vector store. When the user returns days later, the assistant can retrieve relevant past discussions to understand the project's current state, a practical example of how to give LLM long term memory.
 
@@ -149,7 +149,7 @@ RAG typically involves:
 
 This pattern is effective for question-answering systems or agents needing access to a large corpus. It directly addresses how to give LLM long term memory by making past information available for current tasks.
 
-Imagine an LLM as a customer support agent. It can use RAG to access a knowledge base of past tickets, product manuals, and FAQs. When a user asks a question, the RAG system retrieves pertinent information and feeds it to the LLM, enabling accurate, contextually relevant answers. This is a core technique for [AI agent memory vs RAG](/articles/agent-memory-vs-rag/).
+Imagine an LLM as a customer support agent. It can use RAG to access a knowledge base of past tickets, product manuals, and FAQs. When a user asks a question, the RAG system retrieves pertinent information and feeds it to the LLM, enabling accurate, contextually relevant answers. This is a core technique for AI agent memory vs RAG.
 
 ### 3. Memory Consolidation and Summarization
 

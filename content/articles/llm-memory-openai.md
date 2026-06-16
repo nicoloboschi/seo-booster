@@ -66,7 +66,7 @@ Here are the typical steps in a RAG pipeline:
 3. **Context Augmentation:** The most relevant retrieved documents or conversation snippets are added to the LLM's prompt, expanding its immediate context.
 4. **LLM Generation:** The augmented prompt is sent to the OpenAI LLM, which generates a response informed by both the original query and the retrieved context.
 
-This approach allows LLMs to access and use information far beyond their inherent context window, effectively giving them access to a vast, searchable memory. [Comparing agent memory and RAG architectures](/articles/agent-memory-vs-rag/) for enhanced recall offers a deeper dive into this architecture, crucial for **llm memory openai**.
+This approach allows LLMs to access and use information far beyond their inherent context window, effectively giving them access to a vast, searchable memory. Comparing agent memory and RAG architectures for enhanced recall offers a deeper dive into this architecture, crucial for **llm memory openai**.
 
 #### Key Components of RAG
 
@@ -74,7 +74,7 @@ A functional RAG system relies on several interconnected components. The **embed
 
 #### Choosing the Right Vector Database
 
-Selecting an appropriate **vector database** is essential for RAG performance. Factors to consider include scalability, query speed, cost, and ease of integration. Popular options like Pinecone, Weaviate, ChromaDB, and Qdrant offer different trade-offs. Some databases are cloud-hosted, while others can be deployed on-premises. Understanding [vector database selection criteria](/articles/vector-database-selection-criteria/) can significantly impact your **llm memory openai** implementation.
+Selecting an appropriate **vector database** is essential for RAG performance. Factors to consider include scalability, query speed, cost, and ease of integration. Popular options like Pinecone, Weaviate, ChromaDB, and Qdrant offer different trade-offs. Some databases are cloud-hosted, while others can be deployed on-premises. Understanding vector database selection criteria can significantly impact your **llm memory openai** implementation.
 
 ### Episodic and Semantic Memory Integration
 

@@ -131,7 +131,7 @@ For example, an Azure Function can process incoming messages. It captures the te
 
 Azure AI Search is central to advanced AI memory. Its ability to index and query both text and vectors makes it ideal for **agent recall**.
 
-You can store vector embeddings of your data within Azure AI Search. When a user query arrives, its embedding is generated and used for a vector similarity search against your indexed memory. This retrieves semantically relevant information, forming the basis of the agent's recall. This pattern is common in [RAG implementations](/articles/rag-implementation-guide/) and a core aspect of **Azure AI Foundry long-term memory**.
+You can store vector embeddings of your data within Azure AI Search. When a user query arrives, its embedding is generated and used for a vector similarity search against your indexed memory. This retrieves semantically relevant information, forming the basis of the agent's recall. This pattern is common in RAG implementations and a core aspect of **Azure AI Foundry long-term memory**.
 
 ```python
 ## Example: Storing and retrieving embeddings using Azure AI Search for agent memory

@@ -101,7 +101,7 @@ RAG systems offer a practical way to overcome context window limits. Instead of 
 Beyond architectural changes and RAG, several techniques maximize the utility of existing context windows.
 1. **Sliding Window Attention**: This method processes text in overlapping chunks, passing information between them.
 2. **Summarization**: For very long texts, LLMs can summarize sections, feeding these summaries into subsequent processing. This is where **4:1 summarization targets for LLMs** might be applied to reduce token count.
-3. **Positional Embeddings**: Techniques like **RoPE (Rotary Positional Embedding)** and **ALiBi (Attention with Linear Biases)** help models extrapolate to sequence lengths beyond those seen during training. Research on [positional encoding in transformers](/articles/positional-encoding-in-transformers/) offers deeper insights.
+3. **Positional Embeddings**: Techniques like **RoPE (Rotary Positional Embedding)** and **ALiBi (Attention with Linear Biases)** help models extrapolate to sequence lengths beyond those seen during training. Research on positional encoding in transformers offers deeper insights.
 
 ### The Rise of Large Context Models
 

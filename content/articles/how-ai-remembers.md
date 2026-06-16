@@ -163,7 +163,7 @@ Different AI applications require different memory structures. Understanding the
 
 ### Agent Memory Architectures
 
-**AI agent memory architectures** are designed to support autonomous agents that interact with their environment and learn over time. These architectures often combine short-term working memory with long-term storage, allowing agents to plan, reason, and adapt. Understanding these [AI agent memory frameworks](/articles/ai-agent-memory-frameworks/) is crucial for advanced AI.
+**AI agent memory architectures** are designed to support autonomous agents that interact with their environment and learn over time. These architectures often combine short-term working memory with long-term storage, allowing agents to plan, reason, and adapt. Understanding these [AI agent memory frameworks](/articles/ai-memory-frameworks/) is crucial for advanced AI.
 
 Various tools and frameworks exist to aid in managing complex memory structures within agents, including open-source options like Hindsight. Such frameworks facilitate the implementation of persistent memory, enabling agents to build a continuous understanding of their operational context. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
 

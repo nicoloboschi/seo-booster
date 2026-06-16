@@ -45,7 +45,7 @@ Consider an AI assistant planning a multi-day trip. Without robust long-term mem
 
 Mem0 tackles the memory problem by implementing a specialized memory management system. It acts as an external, persistent storage layer, rather than solely relying on the LLM's inherent, short-term recall. This layer is designed to efficiently store and retrieve relevant memories based on the current context.
 
-The **Mem0 long-term memory** system often involves techniques like **vector embeddings** to represent memories numerically. This allows for fast and semantically relevant retrieval. When an agent needs information, Mem0 can query this memory store and present the most pertinent past data to the LLM, effectively extending its perceived memory. For a deeper dive into how agents remember, see [understanding AI agent memory systems](/articles/ai-agent-memory-systems/).
+The **Mem0 long-term memory** system often involves techniques like **vector embeddings** to represent memories numerically. This allows for fast and semantically relevant retrieval. When an agent needs information, Mem0 can query this memory store and present the most pertinent past data to the LLM, effectively extending its perceived memory. For a deeper dive into how agents remember, see [understanding AI agent memory systems](/articles/llm-agent-memory-systems/).
 
 ## Storing and Retrieving Memories with Mem0
 

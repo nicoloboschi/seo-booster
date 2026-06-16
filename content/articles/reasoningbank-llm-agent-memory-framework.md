@@ -69,7 +69,7 @@ This approach allows agents to maintain a coherent understanding of ongoing dial
 
 **Retrieval-Augmented Generation (RAG)** is a key technique often employed within reasoningbank frameworks. RAG involves retrieving relevant documents or data snippets from an external knowledge base and using them to augment the LLM's prompt before generation. This allows LLMs to access up-to-date or domain-specific information they weren't originally trained on.
 
-While RAG is powerful for external knowledge, a reasoningbank specifically focuses on the AI agent's *own* history and learned experiences. It's about the agent remembering its past interactions and internal states, not just external facts. Understanding the nuances between [understanding agent memory versus RAG](/articles/agent-memory-vs-rag/) is crucial here for effective **reasoningbank llm agent memory framework** design.
+While RAG is powerful for external knowledge, a reasoningbank specifically focuses on the AI agent's *own* history and learned experiences. It's about the agent remembering its past interactions and internal states, not just external facts. Understanding the nuances between understanding agent memory versus RAG is crucial here for effective **reasoningbank llm agent memory framework** design.
 
 ### Storing and Retrieving Agent Experiences
 
@@ -134,7 +134,7 @@ The effectiveness of semantic search is a major advantage over traditional keywo
 
 Seamless integration is paramount. The reasoningbank needs to communicate efficiently with the LLM agent's control loop. This often involves **prompt engineering** to include retrieved memories effectively or using **function calling** to allow the LLM to explicitly query the memory system.
 
-The agent's architecture must be designed to accommodate these memory interactions. Frameworks like LangChain or LlamaIndex provide tools that can facilitate this integration, though custom solutions are also common. Exploring [effective AI agent memory system architectures](/articles/best-ai-agent-memory-systems/) can provide further insights into effective integration patterns for a **reasoningbank llm agent memory framework**.
+The agent's architecture must be designed to accommodate these memory interactions. Frameworks like LangChain or LlamaIndex provide tools that can facilitate this integration, though custom solutions are also common. Exploring [effective AI agent memory system architectures](/articles/best-ai-memory-systems/) can provide further insights into effective integration patterns for a **reasoningbank llm agent memory framework**.
 
 ## Benefits of a ReasoningBank Approach
 

@@ -98,7 +98,7 @@ Developing effective **backyard AI long term memory** systems presents several s
 
 The sheer volume of data an agent might encounter over time is immense. Storing and retrieving relevant information from petabytes of data efficiently is a major engineering feat. Traditional database indexing methods often fall short. According to industry reports, the potential data volume for advanced agents could reach exabytes by 2030.
 
-Vector databases and specialized indexing techniques are improving retrieval speeds. However, ensuring low latency for real-time agent responses remains an active area of development. This is where systems like [Vectorize.io's best AI agent memory systems](/articles/best-ai-agent-memory-systems/) offer solutions.
+Vector databases and specialized indexing techniques are improving retrieval speeds. However, ensuring low latency for real-time agent responses remains an active area of development. This is where systems like [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-systems/) offer solutions.
 
 ### Memory Accuracy and Relevance
 

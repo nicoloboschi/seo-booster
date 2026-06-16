@@ -62,7 +62,7 @@ For instance, if an LLM has a context window of 4,000 tokens, and a conversation
 
 ### The Impact on AI Agent Memory
 
-The **limited memory AI** problem is directly tied to the context window. Without mechanisms to extend or manage this window, AI agents struggle with tasks requiring long-term recall. This is where sophisticated memory architectures become essential. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is key to overcoming these inherent LLM constraints.
+The **limited memory AI** problem is directly tied to the context window. Without mechanisms to extend or manage this window, AI agents struggle with tasks requiring long-term recall. This is where sophisticated memory architectures become essential. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is key to overcoming these inherent LLM constraints.
 
 Consider an AI assistant designed to manage your schedule. If the conversation about setting up a meeting exceeds the LLM's context window, the agent might forget the attendees you initially listed or the specific time constraints discussed earlier. This necessitates advanced solutions to provide AI with persistent, long-term memory.
 

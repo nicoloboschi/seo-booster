@@ -178,8 +178,8 @@ Implement caching for frequently accessed data or computation results. This can 
 Several tools and frameworks can assist in building memory-aware LLM applications.
 
 * **Vector Databases:** Pinecone, Weaviate, Milvus, and ChromaDB are popular choices for managing vector embeddings. Their performance and memory efficiency vary, so choosing the right one based on your needs is important.
-* **Agent Frameworks:** LangChain, LlamaIndex, and AutoGen provide abstractions for memory management. Understanding their capabilities and limitations is crucial. For instance, comparing [Langchain memory management strategies](/articles/langchain-memory-management-strategies/) can reveal architectural differences.
-* **Open-Source Memory Systems:** Projects like [Hindsight](https://github.com/vectorize-io/hindsight) offer tools for managing agent memory. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide further insights.
+* **Agent Frameworks:** LangChain, LlamaIndex, and AutoGen provide abstractions for memory management. Understanding their capabilities and limitations is crucial. For instance, comparing Langchain memory management strategies can reveal architectural differences.
+* **Open-Source Memory Systems:** Projects like [Hindsight](https://github.com/vectorize-io/hindsight) offer tools for managing agent memory. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide further insights.
 
 ## Conclusion
 

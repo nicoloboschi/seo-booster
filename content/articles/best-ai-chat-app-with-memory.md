@@ -80,7 +80,7 @@ Consider asking an AI about "that book we discussed last week." An AI with memor
 
 Memory allows AI chat apps to **personalize the user experience**. By remembering your preferences, such as preferred tone, topics of interest, or even your profession, the AI can tailor its responses. Interactions feel more individual and less generic.
 
-An AI remembering you prefer concise answers or are interested in astrophysics can proactively offer relevant information. This adaptive behavior is a hallmark of advanced **agentic AI long-term memory**. This ability to personalize is a core aspect of [AI Personalization](/articles/ai-personalization/).
+An AI remembering you prefer concise answers or are interested in astrophysics can proactively offer relevant information. This adaptive behavior is a hallmark of advanced **agentic AI long-term memory**. This ability to personalize is a core aspect of AI Personalization.
 
 ### Long-Term Information Storage for AI Assistants That Remember Everything
 
@@ -218,7 +218,7 @@ How deeply does the AI personalize its responses based on memory? Does it feel l
 
 ### Data Privacy and Security
 
-With AI remembering your conversations, data privacy becomes a critical concern. Understand how your data is stored, used, and protected. Look for apps with clear privacy policies. [Vectorize.io's guide to secure AI development](/articles/secure-ai-development/) offers insights into protecting sensitive data.
+With AI remembering your conversations, data privacy becomes a critical concern. Understand how your data is stored, used, and protected. Look for apps with clear privacy policies. Vectorize.io's guide to secure AI development offers insights into protecting sensitive data.
 
 ### Integration and Ecosystem
 

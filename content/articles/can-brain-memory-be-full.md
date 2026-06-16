@@ -107,7 +107,7 @@ Developers employ various techniques to mitigate AI memory limitations and creat
 
 ### Vector Databases and Embeddings
 
-Modern AI memory systems heavily rely on **vector databases** and **embedding models**. Text and other data are converted into numerical vectors (embeddings) that capture semantic meaning. Vector databases efficiently store and search these embeddings, allowing AI agents to retrieve contextually relevant information even from vast datasets. This is a cornerstone of many [best AI memory systems](/articles/best-ai-agent-memory-systems/) and helps manage the sheer volume of data without the system feeling "full."
+Modern AI memory systems heavily rely on **vector databases** and **embedding models**. Text and other data are converted into numerical vectors (embeddings) that capture semantic meaning. Vector databases efficiently store and search these embeddings, allowing AI agents to retrieve contextually relevant information even from vast datasets. This is a cornerstone of many [best AI memory systems](/articles/best-ai-memory-systems/) and helps manage the sheer volume of data without the system feeling "full."
 
 ### Memory Consolidation in AI
 

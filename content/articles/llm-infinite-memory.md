@@ -106,7 +106,7 @@ Building an **LLM infinite memory** system involves choosing the right technolog
 
 Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. These databases allow for fast **semantic search**, finding information based on meaning rather than just keywords. The choice of vector database can significantly impact retrieval speed and scalability for **LLM infinite memory**.
 
-For developers looking for managed solutions, platforms like Vectorize.io offer services that simplify the integration of vector search into AI applications. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide an overview of available tools.
+For developers looking for managed solutions, platforms like Vectorize.io offer services that simplify the integration of vector search into AI applications. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide an overview of available tools.
 
 ### Memory Management with Agent Frameworks
 
@@ -119,7 +119,7 @@ They often offer pre-built components for:
 * **Vector store integration:** Connecting to databases.
 * **Prompt engineering:** Constructing effective prompts with retrieved context.
 
-These frameworks are crucial for orchestrating the various components that contribute to **LLM infinite memory**. Comparing [Langchain vs. LlamaIndex memory](/articles/langchain-vs-llamacindex-memory/) can offer insights into framework capabilities.
+These frameworks are crucial for orchestrating the various components that contribute to **LLM infinite memory**. Comparing Langchain vs. LlamaIndex memory can offer insights into framework capabilities.
 
 ### Python Code Example: Embedding and Storing Data
 

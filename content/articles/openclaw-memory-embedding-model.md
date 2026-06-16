@@ -55,7 +55,7 @@ For instance, "dog" and "canine" would have similar **embeddings**, while "dog" 
 
 Once data is converted into **embeddings**, it needs efficient storage and indexing. OpenClaw's **embeddings** work seamlessly with **vector databases** or specialized indexing structures. These systems allow fast searches across millions or billions of **embeddings**.
 
-This rapid indexing and retrieval enable AI agents to appear to have near-instantaneous recall. Without an effective embedding model, searching a large memory store would be prohibitively slow. This is a key differentiator when considering [embedding models for AI memory](/articles/embedding-models-for-ai-memory/). The **OpenClaw memory embedding model** facilitates this efficient data management.
+This rapid indexing and retrieval enable AI agents to appear to have near-instantaneous recall. Without an effective embedding model, searching a large memory store would be prohibitively slow. This is a key differentiator when considering [embedding models for AI memory](/articles/embedding-models-for-memory/). The **OpenClaw memory embedding model** facilitates this efficient data management.
 
 ## OpenClaw's Advantages for AI Agents
 
@@ -77,7 +77,7 @@ This scalability ensures an agent's memory capabilities don't become a bottlenec
 
 OpenClaw is designed to be compatible with popular AI frameworks and vector databases. This allows developers to integrate it into existing AI agent architectures with relative ease. It can work alongside other components, such as [large language models (LLMs)](https://arxiv.org/abs/1706.03762) and retrieval mechanisms, forming a cohesive memory system.
 
-This interoperability is significant for adoption, reducing the complexity and cost of implementing advanced memory solutions. For those exploring alternatives, checking out [comparing open-source AI memory systems](/articles/comparing-open-source-ai-memory-systems) provides valuable context. The **OpenClaw memory embedding model** integrates smoothly.
+This interoperability is significant for adoption, reducing the complexity and cost of implementing advanced memory solutions. For those exploring alternatives, checking out comparing open-source AI memory systems provides valuable context. The **OpenClaw memory embedding model** integrates smoothly.
 
 ## Integrating OpenClaw into AI Memory Systems
 

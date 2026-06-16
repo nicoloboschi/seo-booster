@@ -157,7 +157,7 @@ These tools are essential for efficiently storing and retrieving contextual info
 
 ### Integration with LLM Orchestration Frameworks
 
-Frameworks like LangChain and LlamaIndex provide abstractions for memory management, simplifying the integration of different memory types and storage solutions into AI agents. They offer pre-built memory modules that can be easily swapped or customized. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide further insights into building a robust **ai memory assistant**.
+Frameworks like LangChain and LlamaIndex provide abstractions for memory management, simplifying the integration of different memory types and storage solutions into AI agents. They offer pre-built memory modules that can be easily swapped or customized. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide further insights into building a robust **ai memory assistant**.
 
 Here's a conceptual Python example of storing and recalling information in a hypothetical memory system:
 

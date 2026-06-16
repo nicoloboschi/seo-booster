@@ -208,7 +208,7 @@ This structure allows for immediate querying of relationships within the AI's ex
 
 ### Integration with Other Memory Systems
 
-AI memory graphs don't operate in isolation. They often complement other memory mechanisms. For example, **episodic memory in AI agents** might store specific events as nodes, while the graph provides the relational context for these events. Similarly, vector embeddings can be used to represent the semantic content of nodes or edges, enabling hybrid retrieval strategies. Understanding [agent architecture overview](/articles/agent-architecture-overview/) is key to integrating these components.
+AI memory graphs don't operate in isolation. They often complement other memory mechanisms. For example, **episodic memory in AI agents** might store specific events as nodes, while the graph provides the relational context for these events. Similarly, vector embeddings can be used to represent the semantic content of nodes or edges, enabling hybrid retrieval strategies. Understanding agent architecture overview is key to integrating these components.
 
 ## AI Memory Graphs vs. Other Memory Architectures
 
@@ -218,7 +218,7 @@ Understanding how **AI memory graphs** differ from other approaches highlights t
 
 **Vector databases** store data as high-dimensional vectors, enabling efficient similarity searches based on semantic meaning. AI memory graphs, conversely, store explicit relationships between discrete entities. While vector databases excel at finding "similar" information, memory graphs are better for understanding "connected" information.
 
-A powerful architecture might combine both: using vector embeddings to find relevant entities and then using the memory graph to explore their explicit relationships. This hybrid approach is central to many advanced [AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+A powerful architecture might combine both: using vector embeddings to find relevant entities and then using the memory graph to explore their explicit relationships. This hybrid approach is central to many advanced [AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### Memory Graphs vs. Traditional Databases
 

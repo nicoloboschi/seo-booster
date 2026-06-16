@@ -98,7 +98,7 @@ A significant advancement in chatbot memory has been the adoption of **vector da
 
 ### Retrieval-Augmented Generation (RAG): Enhancing AI That Remembers Conversations
 
-**Retrieval-Augmented Generation (RAG)** is a powerful technique that combines a retrieval system (often a vector database) with a large language model (LLM). Before generating a response, the RAG system retrieves relevant information from its memory stores. This retrieved context is then fed to the LLM along with the user's current query. This allows the LLM to ground its responses in factual, up-to-date information from the memory, reducing hallucinations and improving accuracy. **Retrieval-augmented generation** is a significant improvement over standard LLM prompting and is crucial for building chatbots that can access and use external knowledge. It's a key area where [agent memory vs RAG](/articles/agent-memory-vs-rag/) is often discussed.
+**Retrieval-Augmented Generation (RAG)** is a powerful technique that combines a retrieval system (often a vector database) with a large language model (LLM). Before generating a response, the RAG system retrieves relevant information from its memory stores. This retrieved context is then fed to the LLM along with the user's current query. This allows the LLM to ground its responses in factual, up-to-date information from the memory, reducing hallucinations and improving accuracy. **Retrieval-augmented generation** is a significant improvement over standard LLM prompting and is crucial for building chatbots that can access and use external knowledge. It's a key area where agent memory vs RAG is often discussed.
 
 ```python
 ## Example RAG-like flow (simplified)

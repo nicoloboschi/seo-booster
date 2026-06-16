@@ -161,7 +161,7 @@ Several tools assist in managing and integrating AI memory. While they don't off
 
 ### LangChain and LlamaIndex Ecosystems
 
-Frameworks like LangChain and LlamaIndex offer modules for memory management, vector store integration, and RAG pipelines. These help build the retrieval and injection logic for providing memory context to Claude. The [LLM Agent Guide](/articles/llm-agent-guide/) touches upon managing memory within agentic workflows, which is analogous to how to import AI memory to Claude. Comparing these tools is important; see [LangChain vs. LlamaIndex memory](/articles/langchain-vs-llamaindex-memory/) for more detail.
+Frameworks like LangChain and LlamaIndex offer modules for memory management, vector store integration, and RAG pipelines. These help build the retrieval and injection logic for providing memory context to Claude. The LLM Agent Guide touches upon managing memory within agentic workflows, which is analogous to how to import AI memory to Claude. Comparing these tools is important; see LangChain vs. LlamaIndex memory for more detail.
 
 ### Vector Databases for Scalable Memory
 
@@ -175,7 +175,7 @@ Effectively importing AI memory into Claude requires careful planning and execut
 2. **Summarize and Condense:** Before injecting memory, summarize or condense it. This maximizes information density within the context window. This is a form of **memory consolidation**. See [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/).
 3. **Manage Context Window:** Be aware of Claude's context window limitations. Implement strategies to prune or archive older, less relevant memories. Techniques for overcoming [context window limitations in LLMs](/articles/context-window-limitations-solutions/) are vital for long-term memory integration.
 4. **Iterative Refinement:** Continuously monitor memory integration performance. Refine your retrieval strategies and data formatting based on observed outcomes. This iterative process ensures continuous improvement in how to import AI memory to Claude.
-5. **Consider Temporal Reasoning:** For tasks requiring understanding of sequences or time, ensure your memory system supports **temporal reasoning**. This involves storing and retrieving information while preserving chronological order. See [temporal memory in AI memory](/articles/temporal-memory-ai-memory/).
+5. **Consider Temporal Reasoning:** For tasks requiring understanding of sequences or time, ensure your memory system supports **temporal reasoning**. This involves storing and retrieving information while preserving chronological order. See temporal memory in AI memory.
 
 ## Conclusion
 

@@ -152,7 +152,7 @@ This code snippet illustrates the core idea of finding semantically similar docu
 
 ### Handling Memory Retrieval and Relevance
 
-Ensuring that the most relevant memories are retrieved is paramount for effective **llm memory long term**. This involves sophisticated retrieval algorithms that move beyond simple similarity search. Advanced techniques consider context, recency, and importance. Re-ranking mechanisms can re-order retrieved items by relevance after initial retrieval. User feedback loops, incorporating explicit or implicit feedback, further refine these retrieval strategies. This is a key differentiator compared to simpler [agent memory vs RAG](/articles/agent-memory-vs-rag/) approaches.
+Ensuring that the most relevant memories are retrieved is paramount for effective **llm memory long term**. This involves sophisticated retrieval algorithms that move beyond simple similarity search. Advanced techniques consider context, recency, and importance. Re-ranking mechanisms can re-order retrieved items by relevance after initial retrieval. User feedback loops, incorporating explicit or implicit feedback, further refine these retrieval strategies. This is a key differentiator compared to simpler agent memory vs RAG approaches.
 
 ## Case Studies and Examples
 

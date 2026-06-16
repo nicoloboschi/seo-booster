@@ -175,7 +175,7 @@ Despite advances, significant challenges remain. Ensuring accuracy, managing com
 
 Emerging approaches focus on more dynamic and adaptive memory. Instead of static storage, future chatbots might have memory systems that learn what information is important to retain and how to best access it. Systems like Hindsight, an open-source AI memory system, are exploring novel ways to manage and query agent memories. You can find it on [GitHub](https://github.com/vectorize-io/hindsight).
 
-The quest for **long-term memory AI agents** continues, aiming to create truly intelligent and context-aware conversational AI. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide insights into current state-of-the-art solutions. The role of **memory in chatbot** design will only grow.
+The quest for **long-term memory AI agents** continues, aiming to create truly intelligent and context-aware conversational AI. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide insights into current state-of-the-art solutions. The role of **memory in chatbot** design will only grow.
 
 ## FAQ
 

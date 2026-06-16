@@ -35,7 +35,7 @@ AI chatbot memory refers to the capability of an artificial intelligence system 
 
 ### Storing and Retrieving Information
 
-Memory in AI chatbots isn't a single monolithic entity. It's often a combination of different mechanisms designed to store and retrieve information efficiently. These systems aim to mimic aspects of human memory, allowing agents to learn, adapt, and recall relevant details when needed. The effectiveness of an AI chatbot's memory directly impacts its utility and user experience. Understanding [AI memory capabilities](/articles/ai-memory-capabilities) is essential for evaluating AI agents and discerning which AI chatbot has memory.
+Memory in AI chatbots isn't a single monolithic entity. It's often a combination of different mechanisms designed to store and retrieve information efficiently. These systems aim to mimic aspects of human memory, allowing agents to learn, adapt, and recall relevant details when needed. The effectiveness of an AI chatbot's memory directly impacts its utility and user experience. Understanding AI memory capabilities is essential for evaluating AI agents and discerning which AI chatbot has memory.
 
 ## How Do AI Chatbots Remember?
 
@@ -139,7 +139,7 @@ Tools like **Hindsight**, an open-source AI memory system, offer developers a fr
 
 **Retrieval-Augmented Generation (RAG)** is a powerful technique that enhances LLMs by enabling them to access external knowledge bases. While not strictly a memory system itself, RAG architectures often incorporate vector databases as a form of long-term memory. The LLM queries the knowledge base (acting as memory) to retrieve relevant information before generating a response.
 
-RAG systems are particularly effective for chatbots that need to answer questions based on a specific corpus of documents or maintain knowledge about a particular domain. The distinction between RAG and dedicated agent memory is important; RAG primarily augments factual recall, while agent memory can store more nuanced conversational history and learned behaviors. For a deeper dive, see our guide on [agent memory vs. RAG](/articles/agent-memory-vs-rag). Understanding RAG helps answer which AI chatbot has memory.
+RAG systems are particularly effective for chatbots that need to answer questions based on a specific corpus of documents or maintain knowledge about a particular domain. The distinction between RAG and dedicated agent memory is important; RAG primarily augments factual recall, while agent memory can store more nuanced conversational history and learned behaviors. For a deeper dive, see our guide on agent memory vs. RAG. Understanding RAG helps answer which AI chatbot has memory.
 
 ### Memory Consolidation and Organization
 

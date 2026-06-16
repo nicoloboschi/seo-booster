@@ -182,7 +182,7 @@ Solutions like Zep Memory Cloud represent a significant step towards more capabl
 
 The trend towards more autonomous and context-aware agents will only increase the demand for sophisticated memory solutions. Zep's open-source and self-hosted nature makes it an attractive option for developers and organizations looking to build advanced AI applications. It provides a solid foundation for **agentic AI long-term memory**.
 
-For those exploring different memory frameworks, understanding the strengths of vector databases like Zep is crucial. This is especially true when comparing approaches like **RAG vs. agent memory**, as Zep directly enhances the agent's internal memory capabilities. For more on this, refer to [agent memory vs. rag](/articles/agent-memory-vs-rag/). While Zep Memory Cloud offers a strong solution, other approaches like [Hindsight](https://github.com/vectorize-io/hindsight) also contribute to enhancing AI recall. The future of AI memory is bright with tools like the Zep Memory Cloud.
+For those exploring different memory frameworks, understanding the strengths of vector databases like Zep is crucial. This is especially true when comparing approaches like **RAG vs. agent memory**, as Zep directly enhances the agent's internal memory capabilities. For more on this, refer to agent memory vs. rag. While Zep Memory Cloud offers a strong solution, other approaches like [Hindsight](https://github.com/vectorize-io/hindsight) also contribute to enhancing AI recall. The future of AI memory is bright with tools like the Zep Memory Cloud.
 
 ## FAQ
 

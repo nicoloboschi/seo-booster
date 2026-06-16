@@ -99,7 +99,7 @@ Several technical approaches are being investigated and developed to create more
 
 Modern AI memory heavily relies on **embedding models for memory**. These models convert text, images, or other data into numerical vectors. These vectors capture semantic meaning. **Vector databases** then store and efficiently query these embeddings. This allows AI to retrieve information based on conceptual similarity.
 
-This is a foundational element for many advanced AI memory solutions. It's a key component in understanding how AI can access vast amounts of information quickly. You can learn more about these concepts in our guide on [how vector databases enhance AI memory](/articles/vector-databases-for-ai). This is a focus for **google titans give ai human-like memory**.
+This is a foundational element for many advanced AI memory solutions. It's a key component in understanding how AI can access vast amounts of information quickly. You can learn more about these concepts in our guide on how vector databases enhance AI memory. This is a focus for **google titans give ai human-like memory**.
 
 ### External Memory Modules for Persistent AI Memory
 
@@ -185,7 +185,7 @@ If AI remembers everything, what happens to data privacy? Ensuring that AI memor
 
 ### Computational Cost of Advanced Memory Systems
 
-Implementing and running sophisticated memory systems can be computationally expensive. This requires significant processing power and memory resources. Research into [LLM memory systems](/articles/llm-memory-systems) aims to optimize these costs. This is an ongoing effort for **google titans give ai human-like memory**.
+Implementing and running sophisticated memory systems can be computationally expensive. This requires significant processing power and memory resources. Research into [LLM memory systems](/articles/llm-memory-system/) aims to optimize these costs. This is an ongoing effort for **google titans give ai human-like memory**.
 
 ### The Quest for True Understanding in AI
 

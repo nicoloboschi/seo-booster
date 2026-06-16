@@ -178,7 +178,7 @@ Future AI memory systems aim to mimic human cognitive abilities more closely, in
 
 ### What is the difference between RAG and agent memory?
 
-RAG (Retrieval-Augmented Generation) is a technique where an LLM retrieves relevant information from an external knowledge source before generating a response. Agent memory is a broader concept encompassing various systems and mechanisms an AI uses to store and recall information over time, which can include RAG as a component for accessing long-term knowledge. [Agent memory vs. RAG](/articles/agent-memory-vs-rag) highlights these distinctions, contributing to the definition of [what is ai memory called](/articles/ai-agent-memory-explained/).
+RAG (Retrieval-Augmented Generation) is a technique where an LLM retrieves relevant information from an external knowledge source before generating a response. Agent memory is a broader concept encompassing various systems and mechanisms an AI uses to store and recall information over time, which can include RAG as a component for accessing long-term knowledge. Agent memory vs. RAG highlights these distinctions, contributing to the definition of [what is ai memory called](/articles/ai-agent-memory-explained/).
 
 ### How do AI agents handle continuous learning with memory?
 

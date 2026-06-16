@@ -49,7 +49,7 @@ Character AI memory refers to the AI's ability to retain and recall information 
 
 **Character AI memory is its capacity to store and retrieve details from interactions, enabling it to maintain context, recall user information, and exhibit consistent behavior over time. It's a critical component for creating engaging and personalized AI dialogues.**
 
-Character AI, like many large language models (LLMs), primarily relies on its **context window** to manage memory during an active conversation. This window is a finite buffer that holds recent conversational turns. Once information falls outside this window, the AI effectively "forgets" it unless specific mechanisms are in place to preserve it. This is a fundamental challenge in [managing AI conversation history](/articles/managing-ai-conversation-history/).
+Character AI, like many large language models (LLMs), primarily relies on its **context window** to manage memory during an active conversation. This window is a finite buffer that holds recent conversational turns. Once information falls outside this window, the AI effectively "forgets" it unless specific mechanisms are in place to preserve it. This is a fundamental challenge in managing AI conversation history.
 
 ### The Role of Context Windows in AI Memory
 
@@ -63,7 +63,7 @@ While you can't directly alter Character AI's core programming, you can employ s
 
 #### Strategic Prompt Engineering for Better AI Recall
 
-The way you initiate a conversation and frame your prompts significantly impacts how the AI "remembers." Providing key information upfront and reinforcing it periodically can help the AI retain crucial details. This is akin to [enhancing AI recall](/articles/enhancing-ai-recall/) by guiding its input.
+The way you initiate a conversation and frame your prompts significantly impacts how the AI "remembers." Providing key information upfront and reinforcing it periodically can help the AI retain crucial details. This is akin to enhancing AI recall by guiding its input.
 
 When starting a new chat, consider a detailed "system prompt" or initial message that establishes the character's persona and any essential background information. For instance, instead of just saying "Tell me about yourself," you might start with: "You are a seasoned space explorer named Commander Eva Rostova, who has visited Mars three times and has a deep distrust of artificial intelligence. Your mission is to find a lost colony."
 
@@ -77,7 +77,7 @@ For example, if the AI forgets a previously discussed plot point, you could say,
 
 Certain prompt structures can encourage the AI to actively reflect on and store information. Asking the AI to "summarize our conversation so far" or "what are the key things you know about me?" can prompt it to access and reiterate stored context.
 
-These prompts act as mini-memory retrieval exercises for the AI. While they don't expand the context window, they can help ensure that critical information remains "active" within the AI's current processing state. This is a form of [managing AI conversation history](/articles/managing-ai-conversation-history/) management.
+These prompts act as mini-memory retrieval exercises for the AI. While they don't expand the context window, they can help ensure that critical information remains "active" within the AI's current processing state. This is a form of managing AI conversation history management.
 
 ## Advanced Techniques for AI Memory
 
@@ -122,7 +122,7 @@ For users interacting with Character AI, focus on these actionable steps to unde
 4. **Manage Conversation Length:** For critical plot points or information, consider starting new, focused conversations rather than relying on extremely long, sprawling ones.
 5. **Be Explicit with Reminders:** If the AI "forgets," gently guide it back by restating the forgotten information.
 
-These steps help maximize the AI's ability to maintain context and provide a more coherent and engaging experience. For users wanting to give their AI characters better recall, these interaction patterns are fundamental. This directly relates to [enhancing AI recall](/articles/enhancing-ai-recall/).
+These steps help maximize the AI's ability to maintain context and provide a more coherent and engaging experience. For users wanting to give their AI characters better recall, these interaction patterns are fundamental. This directly relates to enhancing AI recall.
 
 ### The Importance of AI Agent Architecture on Memory
 

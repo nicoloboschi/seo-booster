@@ -185,7 +185,7 @@ As agents accumulate more data, memory systems must scale efficiently. Storing a
 
 ### Continual Learning and Adaptation for Augmented General Intelligence
 
-Agents need to not only store but also learn and adapt from their memories. This involves updating existing knowledge, resolving conflicting information, and forming new generalizations. This area is closely related to [temporal reasoning in AI memory](/articles/temporal-reasoning-in-ai-memory/), understanding how information evolves over time. True continual learning means agents can integrate new knowledge without forgetting critical past information, a hallmark of effective **agent long-term memory** and a step towards true **augmented general intelligence**.
+Agents need to not only store but also learn and adapt from their memories. This involves updating existing knowledge, resolving conflicting information, and forming new generalizations. This area is closely related to [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/), understanding how information evolves over time. True continual learning means agents can integrate new knowledge without forgetting critical past information, a hallmark of effective **agent long-term memory** and a step towards true **augmented general intelligence**.
 
 ### Ethical Considerations for Persistent AI Memory
 
@@ -193,7 +193,7 @@ Agents need to not only store but also learn and adapt from their memories. This
 
 ### Open-Source Memory Systems for Agent Memory
 
-The development of **open-source memory systems** is fostering innovation. Projects like [Hindsight](https://github.com/vectorize-io/hindsight) provide accessible building blocks for developers to experiment with and deploy sophisticated agent memory capabilities. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can guide choices here, aiding in the development of **agent long-term memory**. The availability of such tools democratizes access to advanced AI memory techniques, supporting the goal of **building long term memory in agentic ai**.
+The development of **open-source memory systems** is fostering innovation. Projects like [Hindsight](https://github.com/vectorize-io/hindsight) provide accessible building blocks for developers to experiment with and deploy sophisticated agent memory capabilities. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can guide choices here, aiding in the development of **agent long-term memory**. The availability of such tools democratizes access to advanced AI memory techniques, supporting the goal of **building long term memory in agentic ai**.
 
 ## Frequently Asked Questions
 

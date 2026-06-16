@@ -92,7 +92,7 @@ When a user sends a message on Telegram that the AI identifies as a note or inst
 
 ## Implementing Note Storage Mechanisms for AI
 
-Several strategies exist for storing and retrieving notes for AI agents. The choice depends on the desired complexity, scalability, and retrieval precision for your **[AI agent memory system](/articles/ai-agent-memory-system/)**. Effective **ai agent chatbot long term memory note storage telegram** requires careful selection to ensure robust **ai agent recall**.
+Several strategies exist for storing and retrieving notes for AI agents. The choice depends on the desired complexity, scalability, and retrieval precision for your **[AI agent memory system](/articles/llm-agent-memory-systems/)**. Effective **ai agent chatbot long term memory note storage telegram** requires careful selection to ensure robust **ai agent recall**.
 
 ### Structured Databases for Persistent Data
 
@@ -224,7 +224,7 @@ Each user on Telegram possesses a unique ID. This ID is critical for isolating m
 
 ## Advanced Concepts in AI Memory for Chatbots
 
-Beyond basic note storage, advanced techniques can further enhance an AI's memory capabilities, making it more akin to human recall. These concepts are vital for sophisticated **ai agent memory systems** and **[AI agent persistence](/articles/ai-agent-persistence/)**, contributing to a more capable **AI long-term memory bot**.
+Beyond basic note storage, advanced techniques can further enhance an AI's memory capabilities, making it more akin to human recall. These concepts are vital for sophisticated **ai agent memory systems** and **AI agent persistence**, contributing to a more capable **AI long-term memory bot**.
 
 ### Episodic vs. Semantic Memory in AI
 

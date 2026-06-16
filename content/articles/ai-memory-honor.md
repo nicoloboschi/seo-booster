@@ -119,7 +119,7 @@ Several strategies and technologies are being developed to improve the **AI memo
 
 The development of specialized **AI agent architecture patterns** is crucial. This includes integrating dedicated memory modules that go beyond the transient memory of LLMs. Systems that use a combination of short-term working memory and long-term persistent storage are showing promise.
 
-Architectures like those found in [best AI agent memory systems](/articles/best-ai-agent-memory-systems) often employ a layered approach, ensuring that different types of information are managed appropriately. This layered approach helps maintain **AI agent persistent memory**.
+Architectures like those found in [best AI agent memory systems](/articles/best-ai-memory-systems/) often employ a layered approach, ensuring that different types of information are managed appropriately. This layered approach helps maintain **AI agent persistent memory**.
 
 ### Retrieval-Augmented Generation (RAG) for Enhanced Memory
 

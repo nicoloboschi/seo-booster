@@ -184,7 +184,7 @@ Various architectural patterns and tools exist for building effective AI memory 
 
 RAG is a prominent architecture that combines LLMs with an external knowledge retrieval system. The **AI memory device** acts as this retrieval system. When an LLM needs to answer a query, it first queries the memory to retrieve relevant context. This context is then fed into the LLM's prompt, allowing it to generate a more informed and accurate response.
 
-RAG is particularly effective for tasks requiring factual accuracy and up-to-date information, as it allows the LLM to access knowledge beyond its training data. The relationship between RAG and agent memory is a key topic in [agent memory vs RAG](/articles/agent-memory-vs-rag). Integrating a powerful **ai memory device** is key to a successful RAG implementation.
+RAG is particularly effective for tasks requiring factual accuracy and up-to-date information, as it allows the LLM to access knowledge beyond its training data. The relationship between RAG and agent memory is a key topic in agent memory vs RAG. Integrating a powerful **ai memory device** is key to a successful RAG implementation.
 
 ### Specialized Agent Memory Systems and Persistent Memory AI
 

@@ -170,7 +170,7 @@ While memory plugins aim to reduce hallucinations by providing factual grounding
 
 ### Dynamic Memory Management
 
-Future memory systems will likely become more dynamic, automatically prioritizing, summarizing, and pruning information based on its relevance and recency. This moves towards more sophisticated **memory consolidation AI agents** that actively manage their knowledge base. The interplay between LLM capabilities and external memory systems, as discussed in [agent memory vs RAG](/articles/agent-memory-vs-rag), will continue to define the capabilities of future AI.
+Future memory systems will likely become more dynamic, automatically prioritizing, summarizing, and pruning information based on its relevance and recency. This moves towards more sophisticated **memory consolidation AI agents** that actively manage their knowledge base. The interplay between LLM capabilities and external memory systems, as discussed in agent memory vs RAG, will continue to define the capabilities of future AI.
 
 ## FAQ
 

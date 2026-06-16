@@ -92,7 +92,7 @@ The importance of an **AI memory cleaner** extends beyond simple organization. I
 
 One of the most immediate benefits of **AI memory cleanup** is a significant boost in agent performance. When an agent's memory is streamlined through **AI memory pruning**, it can access relevant information much faster. This reduces latency and speeds up task completion. For complex tasks, this speed difference can be dramatic, leading to better overall **AI performance optimization**.
 
-Consider an AI customer service agent. If its memory is cluttered with old interaction logs or irrelevant product details, it might take longer to find the correct answer to a customer's query. An **ai memory cleaner** would prune these old logs, ensuring the agent prioritizes current, relevant customer data. This leads to quicker, more accurate responses and happier customers. This is a key aspect of effective [agent memory management](/articles/agent-memory-management/).
+Consider an AI customer service agent. If its memory is cluttered with old interaction logs or irrelevant product details, it might take longer to find the correct answer to a customer's query. An **ai memory cleaner** would prune these old logs, ensuring the agent prioritizes current, relevant customer data. This leads to quicker, more accurate responses and happier customers. This is a key aspect of effective [agent memory management](/articles/llm-agent-memory-management/).
 
 ### Cost Reduction Strategies with AI Optimization Tools
 

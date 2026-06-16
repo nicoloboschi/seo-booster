@@ -80,7 +80,7 @@ The choice of components heavily influences the system's performance, scalabilit
 Just as humans have different types of memory, AI agents benefit from varied memory structures. These include short-term, episodic, semantic, and **long-term memory**.
 
 * **Short-Term Memory (STM):** Analogous to the immediate conversational context. This is often handled by the LLM's native context window or a small, rapidly accessible buffer. [Short-term memory in AI agents](/articles/short-term-memory-ai-agents/) is critical for immediate task execution.
-* **Episodic Memory:** Stores specific events or experiences in chronological order. This allows agents to recall past interactions or specific moments. Understanding [episodic memory in AI agents](/articles/episodic-memory-ai-agents/) is vital for building agents that learn from specific past occurrences.
+* **Episodic Memory:** Stores specific events or experiences in chronological order. This allows agents to recall past interactions or specific moments. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for building agents that learn from specific past occurrences.
 * **Semantic Memory:** Stores general knowledge, facts, and concepts. This is crucial for an LLM's ability to understand and reason about the world. [Semantic memory in AI agents](/articles/semantic-memory-ai-agents/) provides the factual grounding.
 * **Long-Term Memory (LTM):** A persistent store for accumulated knowledge, user preferences, and past interactions that need to be recalled over extended periods. **LLM long-term memory** capabilities are a hallmark of advanced AI.
 
@@ -184,7 +184,7 @@ Building AI that remembers conversations is a specific application of memory eng
 
 **Agentic AI long-term memory** aims to create autonomous agents that can learn, plan, and act over extended periods, driven by persistent memory. These agents don't just respond; they proactively pursue goals, update their understanding of the world, and adapt their strategies based on accumulated experience.
 
-This often involves hierarchical memory structures, self-reflection mechanisms, and goal-directed memory retrieval. Tools like [Letta AI Guide](/articles/letta-ai-guide/) and comparisons in [Best AI Agent Memory Systems](/articles/best-ai-agent-memory-systems/) on Vectorize.io can help explore different approaches to building such persistent agents.
+This often involves hierarchical memory structures, self-reflection mechanisms, and goal-directed memory retrieval. Tools like [Letta AI Guide](/articles/letta-ai-guide/) and comparisons in [Best AI Agent Memory Systems](/articles/best-ai-memory-systems/) on Vectorize.io can help explore different approaches to building such persistent agents.
 
 ## Evaluating LLM Memory Systems
 

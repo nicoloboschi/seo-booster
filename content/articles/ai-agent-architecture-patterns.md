@@ -156,7 +156,7 @@ The Plan-and-Execute (P&E) architecture is a more traditional AI **planning** pa
  * If the plan is no longer valid or achievable, the planner is invoked again to create a new plan from the current state.
 5. **Termination:** The process continues until the goal is achieved or it's determined to be unachievable.
 
-**Memory Integration in P&E:** In P&E, memory is crucial for maintaining the agent's internal state and understanding of the world. This includes storing the current state, the generated plan, and the outcomes of executed actions. This memory is essential for the planner to generate a valid plan and for the executor to track progress and detect deviations. This forms a basis for [state-based memory in AI agents](/articles/state-based-memory-in-ai-agents/) and is a key differentiator in **AI agent memory architecture patterns**.
+**Memory Integration in P&E:** In P&E, memory is crucial for maintaining the agent's internal state and understanding of the world. This includes storing the current state, the generated plan, and the outcomes of executed actions. This memory is essential for the planner to generate a valid plan and for the executor to track progress and detect deviations. This forms a basis for state-based memory in AI agents and is a key differentiator in **AI agent memory architecture patterns**.
 
 ## Understanding Core Agent Concepts: Loop, Native, and Replanning Architectures
 

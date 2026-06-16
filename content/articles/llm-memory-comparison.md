@@ -176,7 +176,7 @@ Platforms like Zep, Weaviate, and Pinecone offer specialized databases and servi
 
 ### Framework Integrations (LangChain, LlamaIndex)
 
-Frameworks like LangChain and LlamaIndex provide abstractions and tools that simplify integrating various memory components into LLM applications. They often support multiple memory backends, including vector stores, RAG pipelines, and custom solutions. Examining [LangChain vs. LlamaIndex memory features](/articles/langchain-vs-llamaindex-memory-features/) can highlight differences.
+Frameworks like LangChain and LlamaIndex provide abstractions and tools that simplify integrating various memory components into LLM applications. They often support multiple memory backends, including vector stores, RAG pipelines, and custom solutions. Examining LangChain vs. LlamaIndex memory features can highlight differences.
 
 ## Challenges in LLM Memory Implementation
 

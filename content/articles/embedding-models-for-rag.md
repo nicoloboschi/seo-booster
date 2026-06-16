@@ -31,7 +31,7 @@ slug: embedding-models-for-rag
 
 **Embedding models for RAG** are fundamental components that enable retrieval augmented generation (RAG) systems to perform effective semantic search. These models convert text into high-dimensional numerical vectors, known as embeddings, where semantically similar pieces of text are located closer to each other in the vector space. This allows RAG systems to find relevant information from a knowledge base to augment the context provided to a Large Language Model (LLM), thereby improving the accuracy and relevance of generated responses. Choosing the right embedding model is critical for the performance of any RAG pipeline, directly impacting the quality of retrieved documents and the LLM's ability to synthesize accurate answers.
 
-The core challenge in RAG is retrieving the most pertinent information from a potentially vast corpus of documents. This is where embedding models shine. By mapping text to a continuous vector space, they facilitate efficient similarity searches. When a user query is processed, it is also converted into an embedding, and then compared against the embeddings of all documents in the knowledge base. The documents with the closest vector representations to the query embedding are deemed most relevant and are retrieved. This process underlies the effectiveness of [semantic search](/articles/semantic-search/) within RAG architectures.
+The core challenge in RAG is retrieving the most pertinent information from a potentially vast corpus of documents. This is where embedding models shine. By mapping text to a continuous vector space, they facilitate efficient similarity searches. When a user query is processed, it is also converted into an embedding, and then compared against the embeddings of all documents in the knowledge base. The documents with the closest vector representations to the query embedding are deemed most relevant and are retrieved. This process underlies the effectiveness of semantic search within RAG architectures.
 
 ## How Embedding Models Work for RAG
 
@@ -39,7 +39,7 @@ At a high level, an **embedding model** is a neural network trained to understan
 
 ### Indexing Documents
 
-During the indexing phase, all documents within the RAG system's knowledge base are processed by the chosen embedding model. Each document, or relevant chunks of it, is converted into a vector embedding. These embeddings are then stored, often in a specialized [vector database](/articles/vector-databases/), alongside the original text or a reference to it. This pre-computation step ensures that retrieval can be performed quickly at query time. The quality of these stored embeddings directly influences the accuracy of future retrievals.
+During the indexing phase, all documents within the RAG system's knowledge base are processed by the chosen embedding model. Each document, or relevant chunks of it, is converted into a vector embedding. These embeddings are then stored, often in a specialized vector database, alongside the original text or a reference to it. This pre-computation step ensures that retrieval can be performed quickly at query time. The quality of these stored embeddings directly influences the accuracy of future retrievals.
 
 ### Querying and Retrieval
 

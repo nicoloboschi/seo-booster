@@ -51,7 +51,7 @@ At the heart of many modern AI memory systems lies the concept of **vector embed
 
 **Retrieval-Augmented Generation (RAG)** is a powerful technique that merges the capabilities of large language models (LLMs) with external knowledge retrieval. Instead of relying solely on an LLM's pre-trained knowledge, RAG systems first retrieve relevant information from a knowledge base, often powered by a vector database. This retrieved context is then fed to the LLM to generate a more informed and accurate response. This approach significantly reduces hallucinations and improves factual accuracy.
 
-A 2024 study published on [arxiv](https://arxiv.org/abs/2401.01953) demonstrated that RAG systems can improve LLM factuality by up to 40% in specific domains. This makes RAG a critical component for any AI requiring accurate, up-to-date information. RAG is a key differentiator when comparing [agent memory vs RAG](/articles/agent-memory-vs-rag/) systems.
+A 2024 study published on [arxiv](https://arxiv.org/abs/2401.01953) demonstrated that RAG systems can improve LLM factuality by up to 40% in specific domains. This makes RAG a critical component for any AI requiring accurate, up-to-date information. RAG is a key differentiator when comparing agent memory vs RAG systems.
 
 ### Structured vs. Unstructured Memory Management
 
@@ -155,7 +155,7 @@ Are you looking for a free open-source solution, or do you have a budget for man
 
 Will your chosen solution accommodate growth in data volume and user base? Consider the long-term maintenance and evolution of the tool.
 
-By systematically addressing these points, you can narrow down the options and identify the **best AI memory tool** for your specific project. This decision is crucial for building intelligent, context-aware AI agents that can perform complex tasks reliably. For a broader overview of memory systems, refer to our [AI memory systems overview](/articles/ai-memory-systems-overview/).
+By systematically addressing these points, you can narrow down the options and identify the **best AI memory tool** for your specific project. This decision is crucial for building intelligent, context-aware AI agents that can perform complex tasks reliably. For a broader overview of memory systems, refer to our AI memory systems overview.
 
 ## Frequently Asked Questions
 

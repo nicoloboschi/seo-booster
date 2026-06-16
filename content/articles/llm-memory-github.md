@@ -124,7 +124,7 @@ Several distinct architectural patterns and techniques are prevalent in the **LL
 One of the most popular methods involves using **vector databases**. These databases store data as **embeddings**, which are numerical representations of text. LLMs can generate these embeddings, and similar pieces of text will have similar numerical representations. This is a foundational concept in many **LLM memory GitHub** projects, crucial for efficient **AI memory GitHub** implementations.
 
 * **How it works:** When new information is processed, it's converted into an embedding and stored. When the LLM needs to recall something, a query is also converted into an embedding. The vector database then finds the embeddings most similar to the query, retrieving the associated original text. This retrieval is a crucial part of **LLM memory GitHub** solutions for **LLM recall GitHub**.
-* **Popular Libraries:** Projects like `FAISS` (Facebook AI Similarity Search) and `ChromaDB` are frequently integrated into LLM memory solutions found on GitHub. These libraries offer efficient ways to index and search large collections of embeddings, making them common components in **LLM memory GitHub** toolkits. Understanding [how to use vector databases](/articles/introduction-to-vector-databases/) is beneficial for anyone exploring **open-source LLM memory**.
+* **Popular Libraries:** Projects like `FAISS` (Facebook AI Similarity Search) and `ChromaDB` are frequently integrated into LLM memory solutions found on GitHub. These libraries offer efficient ways to index and search large collections of embeddings, making them common components in **LLM memory GitHub** toolkits. Understanding how to use vector databases is beneficial for anyone exploring **open-source LLM memory**.
 
 **Example Python Code (Conceptual using FAISS):**
 
@@ -278,7 +278,7 @@ print(response)
 ## The agent will use the query engine to find relevant info and chat_memory to track conversation
 ```
 
-This example demonstrates how readily available tools on **LLM memory GitHub** simplify the creation of context-aware agents, showcasing the power of **github agent memory**. Exploring [building AI agents](/articles/building-ai-agents/) can provide further context.
+This example demonstrates how readily available tools on **LLM memory GitHub** simplify the creation of context-aware agents, showcasing the power of **github agent memory**. Exploring building AI agents can provide further context.
 
 ### Challenges and the Future of LLM Memory on GitHub
 

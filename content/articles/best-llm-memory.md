@@ -133,7 +133,7 @@ These managed services simplify the deployment and scaling of vector search capa
 Some platforms are designed end-to-end for building AI agents with memory.
 
 * **Zep AI**: Offers a specialized platform for building LLM applications with long-term memory, focusing on conversational context and state management. The [Zep Memory AI Guide](/articles/zep-memory-ai-guide/) provides detailed insights.
-* **Letta AI**: A platform that simplifies building AI agents, including effective memory management features. Comparing [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) can be insightful.
+* **Letta AI**: A platform that simplifies building AI agents, including effective memory management features. Comparing Letta vs. Langchain memory can be insightful.
 
 ## Evaluating the Best LLM Memory Solutions
 
@@ -149,7 +149,7 @@ How easy is it to integrate the memory system with your existing LLM and applica
 
 ### Retrieval Accuracy and Relevance for Optimal LLM Memory
 
-Does the memory system consistently retrieve the most relevant information for the LLM's current task? This is where the quality of embedding models and the sophistication of the retrieval algorithm play a significant role. [Understanding vector search algorithms](/articles/vector-search-algorithms/) can help here.
+Does the memory system consistently retrieve the most relevant information for the LLM's current task? This is where the quality of embedding models and the sophistication of the retrieval algorithm play a significant role. Understanding vector search algorithms can help here.
 
 ### Cost Considerations for LLM Memory Solutions
 

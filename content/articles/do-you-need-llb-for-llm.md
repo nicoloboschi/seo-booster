@@ -43,7 +43,7 @@ LLMs like GPT-3, BERT, and LLaMA form the backbone of many AI-driven services. T
 
 ### LLM Applications in Practice
 
-LLMs have revolutionized natural language processing. Their ability to generate coherent and contextually relevant text has enabled breakthroughs in areas like automated customer service, content generation, and complex data analysis. The development of LLMs has also spurred advancements in related fields, such as [AI agent architecture](/articles/ai-agent-architecture/), which defines how these models interact with their environment and make decisions. Understanding how LLMs function is paramount, unlike any consideration of an LLB.
+LLMs have revolutionized natural language processing. Their ability to generate coherent and contextually relevant text has enabled breakthroughs in areas like automated customer service, content generation, and complex data analysis. The development of LLMs has also spurred advancements in related fields, such as AI agent architecture, which defines how these models interact with their environment and make decisions. Understanding how LLMs function is paramount, unlike any consideration of an LLB.
 
 ## Clarifying the "LLB" Misconception
 

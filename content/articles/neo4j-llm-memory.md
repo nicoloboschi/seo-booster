@@ -94,7 +94,7 @@ In a RAG system, the LLM doesn't directly access the external memory. Instead, a
 3. **Context Augmentation:** The retrieved information is formatted and added to the original prompt for the LLM.
 4. **Response Generation:** The LLM uses this augmented context to generate a more informed and accurate response.
 
-This process is more sophisticated than standard RAG which often relies on [embedding models for RAG](/articles/embedding-models-rag/). Neo4j provides structured, relational retrieval.
+This process is more sophisticated than standard RAG which often relies on [embedding models for RAG](/articles/embedding-models-for-rag/). Neo4j provides structured, relational retrieval.
 
 ### Using Cypher for Queries
 

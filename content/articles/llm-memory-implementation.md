@@ -126,7 +126,7 @@ In complex agent systems, memory isn't just a passive store; it's actively manag
 
 ### 2. Episodic vs. Semantic Memory in LLMs
 
-Distinguishing between different types of memory is crucial for effective **LLM memory implementation**. **Episodic memory** refers to the recall of specific past events or experiences, often with temporal and contextual details. For an LLM, this could mean remembering a specific user request from a prior session. Implementing [episodic memory in AI agents](/articles/episodic-memory-ai-agents/) allows for more personalized and context-aware interactions. **Semantic memory** is general knowledge about the world, concepts, and facts, independent of personal experience. LLMs inherently possess a vast amount of semantic knowledge from their training data, but external semantic memory stores can augment this with domain-specific or real-time information.
+Distinguishing between different types of memory is crucial for effective **LLM memory implementation**. **Episodic memory** refers to the recall of specific past events or experiences, often with temporal and contextual details. For an LLM, this could mean remembering a specific user request from a prior session. Implementing [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) allows for more personalized and context-aware interactions. **Semantic memory** is general knowledge about the world, concepts, and facts, independent of personal experience. LLMs inherently possess a vast amount of semantic knowledge from their training data, but external semantic memory stores can augment this with domain-specific or real-time information.
 
 ### 3. Long-Term vs. Short-Term Memory
 

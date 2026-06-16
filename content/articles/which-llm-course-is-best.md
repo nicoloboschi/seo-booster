@@ -164,7 +164,7 @@ Different educational platforms offer distinct approaches to LLM instruction. On
 
 Traditional university courses often offer a more profound theoretical grounding. They typically involve longer study periods and a deeper dive into foundational principles.
 
-For individuals seeking practical, production-ready insights, exploring resources on [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) or detailed guides on [LLM memory systems](/articles/llm-memory-system/) can be highly beneficial. These resources complement formal LLM training by focusing on specific application architectures.
+For individuals seeking practical, production-ready insights, exploring resources on [best AI agent memory systems](/articles/best-ai-memory-systems/) or detailed guides on [LLM memory systems](/articles/llm-memory-system/) can be highly beneficial. These resources complement formal LLM training by focusing on specific application architectures.
 
 ### The Evolving Landscape of LLM Education
 

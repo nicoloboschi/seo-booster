@@ -66,7 +66,7 @@ Even if data is stored indefinitely, if it can't be retrieved effectively, it's 
 
 #### System Architecture Integration and AI Agent Memory Persistence
 
-The overall design of the AI agent, including its interaction with external memory modules, affects memory longevity. A well-integrated system ensures memories are consistently maintained and accessible when needed. Understanding [AI agent architecture](/articles/ai-agent-architecture/) is key to designing effective memory systems and controlling **how long does long-term memory last**. This integration ensures that memory isn't an afterthought but a core component for robust **AI agent memory persistence**.
+The overall design of the AI agent, including its interaction with external memory modules, affects memory longevity. A well-integrated system ensures memories are consistently maintained and accessible when needed. Understanding AI agent architecture is key to designing effective memory systems and controlling **how long does long-term memory last**. This integration ensures that memory isn't an afterthought but a core component for robust **AI agent memory persistence**.
 
 ## How Long Can AI Long-Term Memory Persist? Understanding AI Memory Duration
 
@@ -130,7 +130,7 @@ To ensure AI memories remain accessible and useful over time, developers employ 
 
 #### Optimized Indexing Solutions for AI Memory Duration
 
-Using efficient indexing structures, such as those found in **vector databases**, allows for rapid searching of vast memory stores. This is a key component in modern [retrieval-augmented generation (RAG)](/articles/retrieval-augmented-generation/) systems. A well-maintained index is critical for fast and accurate recall and contributes to efficient **AI memory duration**.
+Using efficient indexing structures, such as those found in **vector databases**, allows for rapid searching of vast memory stores. This is a key component in modern retrieval-augmented generation (RAG) systems. A well-maintained index is critical for fast and accurate recall and contributes to efficient **AI memory duration**.
 
 #### Semantic Search Capabilities for AI Recall Lifespan
 

@@ -181,7 +181,7 @@ Some databases offer hybrid modes, storing frequently accessed data or indices i
 
 ### Using Vectorize.io and Similar Services
 
-For developers seeking managed solutions or exploring different memory strategies, platforms like Vectorize.io offer tools and services. Understanding the trade-offs between various [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) is key, as is comparing approaches like [agent memory versus RAG](/articles/agent-memory-vs-rag/).
+For developers seeking managed solutions or exploring different memory strategies, platforms like Vectorize.io offer tools and services. Understanding the trade-offs between various [best AI agent memory systems](/articles/best-ai-memory-systems/) is key, as is comparing approaches like agent memory versus RAG.
 
 ### Specialized JavaScript Solutions
 

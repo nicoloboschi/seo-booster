@@ -113,7 +113,7 @@ LLMs can sometimes generate plausible-sounding but incorrect information, a phen
 
 ### Bias in Training Data
 
-AI models learn from the data they are trained on. If this data contains biases (e.g., racial, gender, or cultural), the AI may perpetuate these biases in its responses. Addressing [bias in AI memory](/articles/bias-in-ai-memory/) is an ongoing effort for developers of **ai apps to talk to**.
+AI models learn from the data they are trained on. If this data contains biases (e.g., racial, gender, or cultural), the AI may perpetuate these biases in its responses. Addressing bias in AI memory is an ongoing effort for developers of **ai apps to talk to**.
 
 ### Privacy and Data Security
 

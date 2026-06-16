@@ -272,7 +272,7 @@ AI memory forums are not just about current challenges; they are also about shap
 
 ### Advanced Reasoning with Integrated AI Memory Systems
 
-As AI systems become more sophisticated, the role of memory in enabling complex reasoning becomes paramount. Forums explore how agents can use their memories to perform multi-step reasoning, plan future actions, and adapt their strategies based on past experiences. This includes exploring topics like [temporal reasoning in AI memory systems](/articles/temporal-reasoning-in-ai-memory-systems/).
+As AI systems become more sophisticated, the role of memory in enabling complex reasoning becomes paramount. Forums explore how agents can use their memories to perform multi-step reasoning, plan future actions, and adapt their strategies based on past experiences. This includes exploring topics like temporal reasoning in AI memory systems.
 
 The goal is to move beyond simple information retrieval towards AI systems that can truly understand and use their past to make informed decisions in novel situations. This is a key aspect of achieving more general artificial intelligence, and it's a popular topic on the **AI memory forum**.
 
@@ -292,7 +292,7 @@ This capability is vital for agents that need to perform long-running tasks, ada
 
 The design of an AI's **agent architecture patterns** is deeply intertwined with its memory system. Discussions in AI memory forums often explore how memory components are integrated into larger agent frameworks. This includes how memory interacts with perception modules, decision-making processes, and action execution systems.
 
-Understanding these architectural considerations is crucial for building cohesive and effective AI agents. It's about ensuring that the memory system is not an isolated component but a seamlessly integrated part of the agent's cognitive architecture. Learning about [designing effective AI agent architectures](/articles/designing-effective-ai-agent-architectures/) is often a related topic of discussion in an **AI memory forum**.
+Understanding these architectural considerations is crucial for building cohesive and effective AI agents. It's about ensuring that the memory system is not an isolated component but a seamlessly integrated part of the agent's cognitive architecture. Learning about designing effective AI agent architectures is often a related topic of discussion in an **AI memory forum**.
 
 ## Finding and Participating in AI Memory Forums
 

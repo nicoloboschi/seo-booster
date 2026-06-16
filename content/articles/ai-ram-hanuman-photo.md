@@ -57,7 +57,7 @@ Creating a convincing **AI Ram Hanuman photo** isn't just about visual synthesis
 
 ### Episodic Memory for Visual Narratives
 
-**Episodic memory in AI agents** helps recall specific instances or sequences. When generating a scene involving Hanuman and Lord Ram, the AI might draw upon episodic memory to recall specific narrative moments or visual compositions from its training data. This allows for more contextually relevant and story-driven images. Understanding [episodic memory for AI art generation](/articles/episodic-memory-for-ai-art-generation/) is key to appreciating how AI can depict narrative scenes for an **AI Ram Hanuman photo**.
+**Episodic memory in AI agents** helps recall specific instances or sequences. When generating a scene involving Hanuman and Lord Ram, the AI might draw upon episodic memory to recall specific narrative moments or visual compositions from its training data. This allows for more contextually relevant and story-driven images. Understanding episodic memory for AI art generation is key to appreciating how AI can depict narrative scenes for an **AI Ram Hanuman photo**.
 
 ### Semantic Memory for Character Attributes
 

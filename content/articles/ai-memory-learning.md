@@ -125,7 +125,7 @@ The field is constantly evolving, with researchers developing more sophisticated
 
 This approach significantly enhances the factual accuracy and relevance of AI-generated content. According to a 2024 study published on arXiv by researchers at Stanford University, RAG-based agents demonstrated a 34% improvement in task completion accuracy compared to standard LLMs on knowledge-intensive benchmarks. This is a significant step forward for [AI memory learning](/articles/ai-memory-learning/).
 
-RAG systems dynamically access external knowledge. However, the external knowledge base can be updated, allowing the *system* to learn and incorporate new information over time. This differs from true [agent memory vs RAG](/articles/agent-memory-vs-rag) approaches but is a vital part of the broader AI memory landscape.
+RAG systems dynamically access external knowledge. However, the external knowledge base can be updated, allowing the *system* to learn and incorporate new information over time. This differs from true agent memory vs RAG approaches but is a vital part of the broader AI memory landscape.
 
 ### Memory Consolidation and Forgetting in AI Learning
 

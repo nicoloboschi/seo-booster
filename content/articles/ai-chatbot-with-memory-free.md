@@ -80,7 +80,7 @@ Many AI development platforms and chatbot builders offer free tiers that include
 * **Hugging Face:** Hosts numerous open-source models and tools that can be used to build memory-enabled chatbots, often with free inference options for smaller models.
 * **Specific Chatbot Builders:** Platforms like ManyChat or Chatfuel sometimes offer free plans with limited conversational history storage for building automated customer service or marketing bots.
 
-It's crucial to check the specific terms and limitations of each platform's free offering, as these can change. Understanding the differences between [agent memory vs. RAG](/articles/agent-memory-vs-rag/) is also important when selecting a solution.
+It's crucial to check the specific terms and limitations of each platform's free offering, as these can change. Understanding the differences between agent memory vs. RAG is also important when selecting a solution.
 
 ### Building Your Own with Vector Databases
 

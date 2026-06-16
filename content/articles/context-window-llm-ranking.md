@@ -92,7 +92,7 @@ Efficient architectural innovations, such as sparse attention mechanisms or recu
 
 ### Architectural Innovations for Extended Context
 
-New architectures and techniques are constantly pushing the boundaries of context window sizes. For instance, models like those discussed in [models with a 1 million token context window](/articles/1-million-context-window-llm/) and [models with a 10 million token context window](/articles/10-million-context-llm/) represent significant leaps. These often involve modifications to the attention mechanism or the integration of external memory systems.
+New architectures and techniques are constantly pushing the boundaries of context window sizes. For instance, models like those discussed in [models with a 1 million token context window](/articles/1-million-context-window-llm/) and [models with a 10 million token context window](/articles/10-million-context-window-llm/) represent significant leaps. These often involve modifications to the attention mechanism or the integration of external memory systems.
 
 Techniques like **retrieval-augmented generation (RAG)**, which we explored in our [guide to RAG and agent memory](/articles/rag-vs-agent-memory/), offer a way to extend an LLM's effective knowledge base beyond its inherent context window. RAG systems retrieve relevant information from external documents and inject it into the LLM's prompt, effectively increasing the amount of information the model can act upon. This is a crucial strategy when dealing with **AI memory limitations**.
 

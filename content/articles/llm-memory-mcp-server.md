@@ -69,7 +69,7 @@ Vector databases typically consist of an **embedding model** to convert data int
 
 The RAG process typically involves several steps. First, the agent's current input is converted into a vector embedding. This vector is then used to query the vector database managed by the **MCP server for LLM memory**. The most relevant memories, represented as vectors, are retrieved.
 
-Finally, these retrieved memories are added to the LLM's prompt as context. The LLM then generates a response that incorporates both the original query and the retrieved memories. This significantly enhances the agent's ability to provide contextually relevant and informed responses. For instance, an agent could retrieve past customer service interactions to better understand a recurring issue, as discussed in [how LLM memory MCP servers enhance RAG](/articles/agent-memory-vs-rag).
+Finally, these retrieved memories are added to the LLM's prompt as context. The LLM then generates a response that incorporates both the original query and the retrieved memories. This significantly enhances the agent's ability to provide contextually relevant and informed responses. For instance, an agent could retrieve past customer service interactions to better understand a recurring issue, as discussed in how LLM memory MCP servers enhance RAG.
 
 #### Steps in the RAG Process
 

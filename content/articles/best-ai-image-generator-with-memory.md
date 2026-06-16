@@ -40,7 +40,7 @@ These advanced tools are crucial for workflows demanding continuity. Without mem
 
 Traditional AI image generators operate on a stateless principle, processing each prompt independently without inherent knowledge of previous requests. While efficient for generating novel images, this approach poses a significant challenge for iterative design tasks.
 
-When you need a character to appear in multiple scenes or a product to have a consistent look, this lack of recall becomes a major bottleneck. The ability to store and retrieve visual information or prompt parameters is what truly defines a generator with memory. This concept is closely related to [understanding AI agent memory capabilities](/articles/understanding-ai-agent-memory/).
+When you need a character to appear in multiple scenes or a product to have a consistent look, this lack of recall becomes a major bottleneck. The ability to store and retrieve visual information or prompt parameters is what truly defines a generator with memory. This concept is closely related to understanding AI agent memory capabilities.
 
 ## How AI Image Generators Implement Memory
 
@@ -60,7 +60,7 @@ For true persistence and long-term recall, generators can integrate with **exter
 * **Relational databases**: These can keep track of user preferences, generated assets, and specific style parameters, providing structured memory.
 * **Specialized AI memory frameworks**: Tools like [Hindsight](https://vectorize.io/hindsight/) can manage complex agent states, offering a foundation that could be adapted for sophisticated image generation workflows.
 
-These systems allow the AI to access a much larger and more permanent repository of information than what typically fits within a standard LLM context window. This approach mirrors how [AI agents with long-term memory](/articles/ai-agents-long-term-memory/) operate.
+These systems allow the AI to access a much larger and more permanent repository of information than what typically fits within a standard LLM context window. This approach mirrors how [AI agents with long-term memory](/articles/ai-agent-long-term-memory/) operate.
 
 ### Fine-tuning and LoRAs
 
@@ -216,7 +216,7 @@ Ensuring the AI prioritizes relevant memories and avoids **catastrophic forgetti
 
 Providing users with fine-grained control over what the AI remembers and how it uses that information is an ongoing area of development. Understanding [types of AI memory](/articles/ai-agents-memory-types/) helps in designing more intuitive and effective user interfaces.
 
-The future of AI image generation will likely involve more sophisticated memory architectures, potentially drawing inspiration from human cognitive processes. This evolution will enable AI image generators to become even more powerful and indispensable creative partners. Exploring options like [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can offer valuable insights into advanced memory management techniques.
+The future of AI image generation will likely involve more sophisticated memory architectures, potentially drawing inspiration from human cognitive processes. This evolution will enable AI image generators to become even more powerful and indispensable creative partners. Exploring options like [best AI agent memory systems](/articles/best-ai-memory-systems/) can offer valuable insights into advanced memory management techniques.
 
 ## Conclusion: The Evolution of Creative AI
 

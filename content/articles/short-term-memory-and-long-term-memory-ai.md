@@ -111,7 +111,7 @@ Open-source projects like [Hindsight](https://github.com/vectorize-io/hindsight)
 
 ### Commercial and Managed Memory Services
 
-Various platforms offer managed AI memory services, abstracting away the complexities of vector databases and memory management. These can provide quick integration for developers looking to add memory capabilities to their AI applications. For a selection of these, see [best AI agent memory systems](/articles/best-ai-agent-memory-systems/). The choice of system impacts how **short term memory and long term memory AI** is implemented.
+Various platforms offer managed AI memory services, abstracting away the complexities of vector databases and memory management. These can provide quick integration for developers looking to add memory capabilities to their AI applications. For a selection of these, see [best AI agent memory systems](/articles/best-ai-memory-systems/). The choice of system impacts how **short term memory and long term memory AI** is implemented.
 
 ## The Future of AI Memory
 

@@ -72,7 +72,7 @@ Vector databases are particularly adept at storing and retrieving certain types 
 
 **Episodic memory** refers to specific events or experiences, including the context in which they occurred. For an AI agent, this means remembering past interactions, conversations, and the sequence of events. Vector databases can store embeddings of these specific moments, creating a timeline of experiences within the **vector database long term memory**.
 
-When an agent needs to recall a past interaction, it can query the database with details from the current situation. The database then returns embeddings representing similar past events, allowing the agent to reference or learn from that specific experience. This is essential for creating an [AI agent that remembers conversations](/articles/ai-agent-that-remembers-conversations/) using **vector database long term memory**.
+When an agent needs to recall a past interaction, it can query the database with details from the current situation. The database then returns embeddings representing similar past events, allowing the agent to reference or learn from that specific experience. This is essential for creating an [AI agent that remembers conversations](/articles/ai-that-remembers-conversations/) using **vector database long term memory**.
 
 ### Semantic Memory Acquisition
 

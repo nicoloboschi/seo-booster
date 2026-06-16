@@ -46,7 +46,7 @@ This is a significant hurdle for applications that require long-term understandi
 
 Langchain offers a modular approach to memory management, allowing developers to choose and combine different strategies based on their application's needs. These components act as wrappers around LLMs, intercepting inputs and outputs to manage the conversation history. The core idea is to pass relevant past interactions back into the LLM's prompt for subsequent turns.
 
-This allows the LLM to access information that would otherwise be lost. Langchain simplifies this process, abstracting away much of the complexity involved in managing state. You can explore various approaches in [advanced AI agent memory techniques](/articles/advanced-ai-agent-memory-strategies). This modularity is a key advantage of **llm memory langchain**.
+This allows the LLM to access information that would otherwise be lost. Langchain simplifies this process, abstracting away much of the complexity involved in managing state. You can explore various approaches in advanced AI agent memory techniques. This modularity is a key advantage of **llm memory langchain**.
 
 ## Types of Memory in Langchain
 

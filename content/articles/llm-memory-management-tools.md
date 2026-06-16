@@ -92,7 +92,7 @@ Vector databases, such as Pinecone, Weaviate, or ChromaDB, are fundamental to ma
 
 ### Framework-Specific Memory Modules
 
-Libraries like LangChain and LlamaIndex offer built-in memory modules that abstract away much of the complexity. These modules provide pre-built solutions for managing conversation history, summarizing past interactions, and integrating with various storage backends. Comparing these can be complex; for example, [Letta vs. LangChain memory](/articles/letta-vs-langchain-memory) highlights some differences in their implementation of **memory management for LLMs**.
+Libraries like LangChain and LlamaIndex offer built-in memory modules that abstract away much of the complexity. These modules provide pre-built solutions for managing conversation history, summarizing past interactions, and integrating with various storage backends. Comparing these can be complex; for example, Letta vs. LangChain memory highlights some differences in their implementation of **memory management for LLMs**.
 
 ### Specialized Memory Systems
 

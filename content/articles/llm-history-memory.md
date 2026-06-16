@@ -74,7 +74,7 @@ A 2024 study published in *arXiv* demonstrated that RAG-enhanced LLMs achieved a
 
 Vector databases have become a cornerstone of modern LLM memory systems. They store information as **vector embeddings**, which are numerical representations capturing the semantic meaning of text. This allows for efficient similarity searches, enabling LLMs to quickly find semantically related information.
 
-These databases act as a persistent, searchable memory. When an LLM needs to recall past information, it can query the vector database using an embedding of its current query. The database returns the most relevant historical data, which is then fed back into the LLM's context. This approach underpins many [top AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+These databases act as a persistent, searchable memory. When an LLM needs to recall past information, it can query the vector database using an embedding of its current query. The database returns the most relevant historical data, which is then fed back into the LLM's context. This approach underpins many [top AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### Semantic and Episodic Memory in LLMs: A New Frontier
 
@@ -118,7 +118,7 @@ The availability of such tools democratizes the development of sophisticated AI 
 
 Libraries like LangChain and LlamaIndex offer abstractions for managing LLM memory. They provide pre-built components for different memory types, such as `ConversationBufferMemory`, `ConversationSummaryMemory`, and `VectorStoreRetrieverMemory`. These frameworks simplify the process of giving AI memory, making it accessible to a broader range of developers and accelerating progress in **LLM history memory**.
 
-The choice of framework often depends on the specific application requirements. For instance, building an AI that remembers conversations might benefit from a `ConversationBufferMemory`, while a knowledge retrieval system would lean towards `VectorStoreRetrieverMemory`. Comparing options like [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory) is often part of this decision for **conversational AI memory**.
+The choice of framework often depends on the specific application requirements. For instance, building an AI that remembers conversations might benefit from a `ConversationBufferMemory`, while a knowledge retrieval system would lean towards `VectorStoreRetrieverMemory`. Comparing options like Letta vs. Langchain memory is often part of this decision for **conversational AI memory**.
 
 ## Implementing LLM Memory with Python
 

@@ -46,7 +46,7 @@ This is where **zep chat memory** becomes indispensable. It provides an external
 
 The fixed size of LLM context windows is a significant bottleneck. A 2023 analysis of LLM performance indicated that task completion rates dropped by up to 40% when critical information fell outside the model's immediate context. Persistent memory systems like those enabled by Zep directly combat this issue.
 
-By offloading conversational history to a dedicated memory store, agents can access relevant past information on demand. This retrieval process augments the LLM's current understanding, ensuring continuity and depth in conversations. It’s a key component in developing [AI agents with persistent conversational recall](/articles/ai-agents-with-persistent-conversational-recall/).
+By offloading conversational history to a dedicated memory store, agents can access relevant past information on demand. This retrieval process augments the LLM's current understanding, ensuring continuity and depth in conversations. It’s a key component in developing AI agents with persistent conversational recall.
 
 ## How Zep Chat Memory Works
 

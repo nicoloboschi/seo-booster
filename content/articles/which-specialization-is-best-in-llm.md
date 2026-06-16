@@ -204,10 +204,10 @@ For many applications, a combination of prompt engineering with a well-chosen, p
 
 The "best" specialization is context-dependent. Here's a breakdown to guide your decision on **which specialization is best in LLM** deployment.
 
-1. **For broad, general-purpose applications:** Consider state-of-the-art generalist LLMs for tasks like content creation or general Q&A. Focus on effective prompt engineering and perhaps using [AI memory systems](/articles/best-ai-agent-memory-systems/) to maintain conversational context.
+1. **For broad, general-purpose applications:** Consider state-of-the-art generalist LLMs for tasks like content creation or general Q&A. Focus on effective prompt engineering and perhaps using [AI memory systems](/articles/best-ai-memory-systems/) to maintain conversational context.
 2. **For industry-specific tasks:** A **domain-specific LLM** is essential for applications like medical advice or legal document review. Look for models pre-trained on relevant corpora or prepare to fine-tune a general model with your domain data. The [Transformer architecture](https://arxiv.org/abs/1706.03762) is fundamental to many of these models.
 3. **For highly defined, repetitive tasks:** A **task-specific LLM** or a fine-tuned generalist model optimized for that function will yield the best results. Examples include automated summarization of news articles or customer support ticket categorization.
-4. **For rapid prototyping:** Start with prompt engineering on a powerful generalist model. This allows for quick iteration before committing to more resource-intensive fine-tuning. You can also explore [vector databases for LLM memory](/articles/vector-databases-for-llm-memory/).
+4. **For rapid prototyping:** Start with prompt engineering on a powerful generalist model. This allows for quick iteration before committing to more resource-intensive fine-tuning. You can also explore [vector databases for LLM memory](/articles/vector-database-for-llm-memory/).
 
 Consider exploring existing [LLM memory systems](/articles/llm-memory-system/) and [open-source memory systems compared](/articles/open-source-memory-systems-compared/) to enhance any LLM's ability to retain and recall information. This is crucial for specialized applications.
 

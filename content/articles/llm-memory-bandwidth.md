@@ -132,7 +132,7 @@ The overall architecture of an AI agent significantly impacts its memory access 
 
 * **Modularity:** Breaking down the AI into smaller, specialized modules can sometimes lead to more localized memory access, reducing the need to traverse slow interconnects.
 * **Decentralized vs. Centralized Memory:** A centralized memory system might face higher contention and bandwidth demands compared to a more distributed approach.
-* **Retrieval Strategies:** The sophistication of the retrieval mechanism in [agent memory vs. RAG](/articles/agent-memory-vs-rag/) systems directly influences how much data needs to be transferred and how often.
+* **Retrieval Strategies:** The sophistication of the retrieval mechanism in agent memory vs. RAG systems directly influences how much data needs to be transferred and how often.
 
 ## Impact of LLM Memory Bandwidth on Agent Capabilities
 

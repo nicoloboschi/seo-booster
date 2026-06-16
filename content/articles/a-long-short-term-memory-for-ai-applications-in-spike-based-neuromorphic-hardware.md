@@ -86,12 +86,12 @@ The unique capabilities of LSTMs adapted for spike-based neuromorphic systems op
 ### Advanced Sensory Processing
 
 * **Event-Based Vision:** Neuromorphic cameras generate data only when pixel intensity changes, producing streams of "events." Spiking LSTMs can process these event streams in real-time for tasks like object tracking, activity recognition, and scene understanding, with significantly lower power than traditional frame-based video processing. This is a key area for **a long short-term memory for AI applications in spike-based neuromorphic hardware**.
-* **Auditory Processing:** Similar to visual processing, neuromorphic auditory sensors can capture sound as events. Spiking LSTMs are ideal for real-time speech recognition, speaker identification, and sound event detection in noisy environments. This allows for more responsive [AI agent auditory processing](/articles/ai-agent-auditory-processing/). The efficient **agent memory** in SLSTMs is critical here.
+* **Auditory Processing:** Similar to visual processing, neuromorphic auditory sensors can capture sound as events. Spiking LSTMs are ideal for real-time speech recognition, speaker identification, and sound event detection in noisy environments. This allows for more responsive AI agent auditory processing. The efficient **agent memory** in SLSTMs is critical here.
 
 ### Robotics and Control Systems
 
 * **Motor Control:** Robots can use neuromorphic sensors and spiking LSTMs to learn complex motor sequences and adapt to dynamic environments. This allows for more fluid and responsive control, mimicking biological reflexes and learned movements. This application demands **a long short-term memory for AI applications in spike-based neuromorphic hardware**.
-* **Navigation:** For autonomous robots, processing sensor data (e.g. from event-based cameras or lidar) to understand surroundings and navigate requires efficient temporal reasoning. Spiking LSTMs can provide this capability with reduced power budgets, essential for mobile platforms. This directly supports [AI navigation systems](/articles/ai-navigation-systems/) and efficient **agent memory**.
+* **Navigation:** For autonomous robots, processing sensor data (e.g. from event-based cameras or lidar) to understand surroundings and navigate requires efficient temporal reasoning. Spiking LSTMs can provide this capability with reduced power budgets, essential for mobile platforms. This directly supports AI navigation systems and efficient **agent memory**.
 
 ### Edge AI and IoT
 

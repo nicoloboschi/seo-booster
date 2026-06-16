@@ -100,7 +100,7 @@ Choosing a lower precision format is a primary strategy for reducing **LLM GPU m
 
 The **context window** of an LLM, the maximum number of tokens it can process at once, also influences memory usage. Longer context windows mean more tokens need to be processed, leading to larger activation tensors.
 
-This is particularly true for transformer-based architectures, where the memory complexity of the self-attention mechanism scales quadratically with sequence length. Running models with very large context windows, such as those exceeding 32k or 128k tokens, can quickly become VRAM-intensive. Solutions for managing [long context windows in LLMs](/articles/long-context-windows-in-llms/) are vital here, directly impacting **LLM GPU memory requirements**.
+This is particularly true for transformer-based architectures, where the memory complexity of the self-attention mechanism scales quadratically with sequence length. Running models with very large context windows, such as those exceeding 32k or 128k tokens, can quickly become VRAM-intensive. Solutions for managing long context windows in LLMs are vital here, directly impacting **LLM GPU memory requirements**.
 
 ## Factors Influencing LLM VRAM Consumption
 
@@ -195,7 +195,7 @@ Libraries like TensorRT (NVIDIA), ONNX Runtime, or vLLM are designed to optimize
 
 ### 7. Embrace Parameter-Efficient Fine-Tuning (PEFT)
 
-If you need to fine-tune a model, PEFT methods are a game-changer. They drastically lower the **LLM GPU memory requirements** for fine-tuning, making it feasible on less powerful hardware. Resources like [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) often discuss how efficient memory handling is crucial for agent performance.
+If you need to fine-tune a model, PEFT methods are a game-changer. They drastically lower the **LLM GPU memory requirements** for fine-tuning, making it feasible on less powerful hardware. Resources like [best AI agent memory systems](/articles/best-ai-memory-systems/) often discuss how efficient memory handling is crucial for agent performance.
 
 ## Choosing the Right Hardware for Your LLM Needs
 

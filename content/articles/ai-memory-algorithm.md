@@ -168,7 +168,7 @@ The [Neural Turing Machine](https://deepmind.google/discover/blog/the-neural-tur
 
 RAG systems combine large language models (LLMs) with external knowledge retrieval. Before generating a response, the LLM retrieves relevant information from a knowledge base (often a vector database). This grounds the LLM's output in factual data, reducing hallucinations and improving accuracy.
 
-RAG is a practical application of sophisticated **ai memory algorithm** principles, allowing LLMs to access and use vast amounts of information dynamically. Understanding [how RAG works](/articles/retrieval-augmented-generation-explained/) is key to building modern AI applications.
+RAG is a practical application of sophisticated **ai memory algorithm** principles, allowing LLMs to access and use vast amounts of information dynamically. Understanding how RAG works is key to building modern AI applications.
 
 ## The Future of AI Memory
 

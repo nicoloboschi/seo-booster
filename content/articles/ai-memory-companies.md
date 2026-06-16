@@ -92,7 +92,7 @@ Larger cloud providers and AI infrastructure companies are also integrating adva
 The open-source community plays a significant role, providing foundational tools and frameworks that **AI memory companies** and individual developers can build upon. These initiatives democratize access to advanced AI memory techniques.
 
 * **Hindsight:** An open-source Python library designed to provide AI agents with robust, persistent memory capabilities. It offers a flexible framework for managing different types of memory, including episodic and semantic recall. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
-* **LangChain and LlamaIndex:** While not exclusively memory companies, these popular frameworks offer modules and abstractions for integrating various memory backends, including vector stores and conversational memory. They are essential tools for developers building agentic AI. [Explore LangChain's memory integration options](/articles/letta-vs-langchain-memory/).
+* **LangChain and LlamaIndex:** While not exclusively memory companies, these popular frameworks offer modules and abstractions for integrating various memory backends, including vector stores and conversational memory. They are essential tools for developers building agentic AI. Explore LangChain's memory integration options.
 
 ## Architectures for AI Memory
 

@@ -157,8 +157,8 @@ Build a strong foundation in the following areas to qualify for **memory AI jobs
 * **Programming Proficiency:** Master Python and relevant AI libraries (TensorFlow, PyTorch).
 * **Data Management:** Gain expertise in databases, especially vector databases, and data structures.
 * **LLM Architectures:** Familiarize yourself with transformer models and how LLMs work.
-* **AI Memory Frameworks:** Learn to use tools like LangChain, LlamaIndex, or explore [comparisons of open-source memory systems](/articles/open-source-memory-systems-comparison/).
-* **Understanding of Memory Types:** Study [types of AI agent memory](/articles/types-of-ai-agent-memory), including episodic, semantic, and working memory.
+* **AI Memory Frameworks:** Learn to use tools like LangChain, LlamaIndex, or explore [comparisons of open-source memory systems](/articles/open-source-memory-systems-compared/).
+* **Understanding of Memory Types:** Study types of AI agent memory, including episodic, semantic, and working memory.
 
 ### Gaining Practical Experience
 
@@ -246,7 +246,7 @@ similar_memories_project = agent_memory.find_similar_memories(query_project, top
 print(f"Most relevant memory to '{query_project}': {similar_memories_project[0]}")
 ```
 
-This enhanced example demonstrates storing text along with simulated embeddings and performing a basic similarity search. This is closer to how real vector-based memory systems work, enabling more context-aware recall. For practical applications, you would integrate this with actual embedding models and vector databases, as often facilitated by frameworks like LangChain or LlamaIndex. Exploring [advanced AI memory techniques](/articles/advanced-ai-memory-techniques/) can provide deeper insights into these implementations.
+This enhanced example demonstrates storing text along with simulated embeddings and performing a basic similarity search. This is closer to how real vector-based memory systems work, enabling more context-aware recall. For practical applications, you would integrate this with actual embedding models and vector databases, as often facilitated by frameworks like LangChain or LlamaIndex. Exploring advanced AI memory techniques can provide deeper insights into these implementations.
 
 ### Networking and Job Searching
 

@@ -73,7 +73,7 @@ While LSTMs represent a significant advancement in handling sequential data, the
 
 ### LSTMs vs. Basic RNNs: A Clear Distinction
 
-The primary difference between LSTMs and basic RNNs is their ability to handle long-range dependencies. Basic RNNs struggle to remember information from distant past inputs due to the vanishing gradient problem. LSTMs, with their gating mechanisms, can retain relevant information for much longer sequences. This makes LSTMs far more effective for tasks where context needs to be maintained over extended periods, such as in [AI chat with long-term memory](/articles/ai-chat-long-term-memory/) applications. The **meaning of long short-term memory** is best understood by contrasting it with the limitations of simpler models.
+The primary difference between LSTMs and basic RNNs is their ability to handle long-range dependencies. Basic RNNs struggle to remember information from distant past inputs due to the vanishing gradient problem. LSTMs, with their gating mechanisms, can retain relevant information for much longer sequences. This makes LSTMs far more effective for tasks where context needs to be maintained over extended periods, such as in [AI chat with long-term memory](/articles/ai-agent-long-term-memory/) applications. The **meaning of long short-term memory** is best understood by contrasting it with the limitations of simpler models.
 
 ### LSTMs and the Rise of Transformers
 

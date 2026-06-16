@@ -214,7 +214,7 @@ Comparing these tools, as seen in guides like [Open-source memory systems compar
 
 ### Vectorize.io and AI Memory
 
-Vectorize.io offers resources and tools that are relevant to building sophisticated AI memory capabilities. Understanding the differences between approaches, such as [Agent Memory vs. RAG](/articles/agent-memory-vs-rag/), is crucial for designing effective systems. Comparisons like [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) can guide technology choices. These are valuable supplements to **llm memory pdf** materials.
+Vectorize.io offers resources and tools that are relevant to building sophisticated AI memory capabilities. Understanding the differences between approaches, such as Agent Memory vs. RAG, is crucial for designing effective systems. Comparisons like Letta vs. Langchain memory can guide technology choices. These are valuable supplements to **llm memory pdf** materials.
 
 ## Challenges and Future Directions
 

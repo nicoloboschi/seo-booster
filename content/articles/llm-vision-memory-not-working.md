@@ -23,7 +23,7 @@ faq:
     image embedding, where visual features aren't accurately translated into a format the LLM can understand and retain.
 - question: How does RAG relate to LLM vision memory issues?
   answer: RAG (Retrieval-Augmented Generation) can be used to store and retrieve visual information. If RAG components, such as the embedding model for images or the vector database, are not properly configured
-    or perform poorly, it can lead to failures in LLM vision memory. This is similar to discussions on [agent memory vs. RAG](/articles/agent-memory-vs-rag).
+    or perform poorly, it can lead to failures in LLM vision memory. This is similar to discussions on agent memory vs. RAG.
 slug: llm-vision-memory-not-working
 ---
 
@@ -140,7 +140,7 @@ Several tools and frameworks can aid in building vision-aware memory systems and
 * **Open Source Memory Solutions:** Projects like **Hindsight** ([https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)) offer flexible memory management. These can be adapted for multimodal data. These systems aim to provide more sophisticated [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/) and can help mitigate **LLM vision memory issues**.
 * **Specialized Libraries:** Libraries like OpenCV for image processing and Pillow for image manipulation are essential preprocessing steps. They are needed before data can be used for **LLM vision memory**.
 
-When comparing memory solutions, consider how well they handle multimodal data. For instance, a look at [AI agent memory systems](/articles/best-ai-agent-memory-systems/) can guide your choice. Some systems, like Zep AI ([zep-memory-ai-guide](/articles/zep-memory-ai-guide)), offer features that could be extended for vision.
+When comparing memory solutions, consider how well they handle multimodal data. For instance, a look at [AI agent memory systems](/articles/best-ai-memory-systems/) can guide your choice. Some systems, like Zep AI ([zep-memory-ai-guide](/articles/zep-memory-ai-guide)), offer features that could be extended for vision.
 
 ### The Limitations of Current Vision Memory
 
@@ -170,4 +170,4 @@ Future advancements will likely focus on more efficient multimodal architectures
  A: The most frequent culprits for **LLM vision memory not working** are **context window limitations**, where the combined size of text and visual data exceeds the model's processing capacity, and **ineffective image embedding**, where visual features aren't accurately translated into a format the LLM can understand and retain.
 
 * **Q: How does RAG relate to LLM vision memory issues?**
- A: RAG (Retrieval-Augmented Generation) can be used to store and retrieve visual information. If RAG components, such as the embedding model for images or the vector database, are not properly configured or perform poorly, it can lead to failures in **LLM vision memory**. This is similar to discussions on [agent memory vs. RAG](/articles/agent-memory-vs-rag).
+ A: RAG (Retrieval-Augmented Generation) can be used to store and retrieve visual information. If RAG components, such as the embedding model for images or the vector database, are not properly configured or perform poorly, it can lead to failures in **LLM vision memory**. This is similar to discussions on agent memory vs. RAG.

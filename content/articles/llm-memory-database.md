@@ -53,7 +53,7 @@ An **LLM memory database** is a specialized data storage system engineered to st
 
 Large language models, by default, operate with a limited **context window**. This window allows the model to consider a specific amount of text at any given moment during a conversation or task. Once information falls outside this window, it's effectively forgotten. This limitation severely restricts their ability to engage in long-term dialogue, recall specific details from previous sessions, or build upon a cumulative understanding of a user or a domain.
 
-A **llm memory database** acts as an external, long-term memory. It stores data in a format that the LLM can query and retrieve. This is essential for applications like customer service bots that need to remember past support tickets, personal assistants tracking user habits, or AI agents collaborating on complex projects over time. Without such a system, the **large language model memory** capability is fundamentally capped. Understanding [how AI agents remember](/articles/ai-agents-remember-how/) is key to appreciating this need for robust **agent memory storage**.
+A **llm memory database** acts as an external, long-term memory. It stores data in a format that the LLM can query and retrieve. This is essential for applications like customer service bots that need to remember past support tickets, personal assistants tracking user habits, or AI agents collaborating on complex projects over time. Without such a system, the **large language model memory** capability is fundamentally capped. Understanding how AI agents remember is key to appreciating this need for robust **agent memory storage**.
 
 ### Types of Data Stored in LLM Memory Databases
 
@@ -85,7 +85,7 @@ This efficiency is vital. A slow memory lookup would bottleneck the LLM, defeati
 
 ## Popular Approaches and Architectures for LLM Memory
 
-Building a suitable **llm memory database** involves choosing the right tools and architectural patterns. Several approaches have emerged, each with its own strengths and weaknesses for managing **large language model memory**. This forms the backbone of any advanced [AI agent architecture](/articles/ai-agent-architecture/).
+Building a suitable **llm memory database** involves choosing the right tools and architectural patterns. Several approaches have emerged, each with its own strengths and weaknesses for managing **large language model memory**. This forms the backbone of any advanced AI agent architecture.
 
 ### Dedicated Vector Databases for LLMs
 
@@ -99,7 +99,7 @@ Some traditional databases, like PostgreSQL with the `pgvector` extension, or El
 
 ### Knowledge Graphs as Complementary Memory
 
-**Knowledge graphs** represent information as a network of entities and their relationships. While not strictly an **llm memory database** in the vector sense, they can be integrated with LLMs to provide structured, relational context. An LLM can query a knowledge graph to retrieve factual information or understand complex relationships between entities, complementing its vector-based memory. This offers a different dimension to [AI knowledge representation](/articles/ai-knowledge-representation/).
+**Knowledge graphs** represent information as a network of entities and their relationships. While not strictly an **llm memory database** in the vector sense, they can be integrated with LLMs to provide structured, relational context. An LLM can query a knowledge graph to retrieve factual information or understand complex relationships between entities, complementing its vector-based memory. This offers a different dimension to AI knowledge representation.
 
 ### Open-Source Memory Systems for Agent Development
 
@@ -107,7 +107,7 @@ Several open-source projects aim to simplify the implementation of AI memory. **
 
 ## Implementing an LLM Memory Database: A Practical Guide
 
-The implementation of an **llm memory database** depends heavily on the specific requirements of the AI agent or application. Key considerations include the volume of data, the required retrieval speed, and the complexity of the information being stored. This is a core aspect of [AI agent development](/articles/ai-agent-development/).
+The implementation of an **llm memory database** depends heavily on the specific requirements of the AI agent or application. Key considerations include the volume of data, the required retrieval speed, and the complexity of the information being stored. This is a core aspect of AI agent development.
 
 ### Choosing the Right Storage Solution for Your LLM Memory
 

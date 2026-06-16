@@ -89,7 +89,7 @@ The distinction between **AI Foundry memory** and standard LLM context windows i
 
 Standard LLM context windows have a finite capacity, typically measured in tokens. Information outside this window is effectively forgotten by the model for that specific interaction. This limitation restricts the agent's ability to recall past conversations or learn over time, a problem **AI Foundry memory** addresses.
 
-AI Foundry memory, conversely, acts as a more permanent repository. It allows agents to accumulate knowledge, build a history of interactions, and access this information on demand, irrespective of the current context window size. This enables [stateful AI agents](/articles/building-stateful-ai-agents/) that can engage in long-term dialogue and complex task execution.
+AI Foundry memory, conversely, acts as a more permanent repository. It allows agents to accumulate knowledge, build a history of interactions, and access this information on demand, irrespective of the current context window size. This enables stateful AI agents that can engage in long-term dialogue and complex task execution.
 
 ### The Limitations of Transient Context
 
@@ -181,7 +181,7 @@ Different models excel at capturing different nuances of language. For instance,
 
 An AI memory system isn't a set-and-forget component. It requires continuous evaluation and refinement. Monitoring retrieval accuracy, assessing the impact of memory on task completion, and periodically retraining embedding models are all part of this process for **AI Foundry memory**.
 
-This iterative approach ensures that the memory system evolves with the agent's needs and the data it encounters. It's part of a broader strategy for developing [stateful AI agents](/articles/building-stateful-ai-agents/).
+This iterative approach ensures that the memory system evolves with the agent's needs and the data it encounters. It's part of a broader strategy for developing stateful AI agents.
 
 ### Ethical Considerations and Data Privacy
 

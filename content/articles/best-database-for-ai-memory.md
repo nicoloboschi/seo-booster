@@ -70,7 +70,7 @@ The **best database for AI memory** is typically a **vector database**, optimize
 
 ### The Evolving Landscape of AI Memory Storage and Retrieval
 
-AI agents don't possess biological memory; instead, they rely on external storage systems to maintain context, learn from interactions, and execute tasks. This system, often referred to as **AI agent memory**, needs to be more than just a passive repository. It must actively support the agent's cognitive processes. The choice of the underlying database significantly impacts an agent's ability to remember conversations, learn from experiences, and adapt to new situations. Understanding [AI agent memory](/articles/ai-agent-memory/) is the first step toward selecting the **best database for AI memory**.
+AI agents don't possess biological memory; instead, they rely on external storage systems to maintain context, learn from interactions, and execute tasks. This system, often referred to as **AI agent memory**, needs to be more than just a passive repository. It must actively support the agent's cognitive processes. The choice of the underlying database significantly impacts an agent's ability to remember conversations, learn from experiences, and adapt to new situations. Understanding [AI agent memory](/articles/ai-agent-and-memory/) is the first step toward selecting the **best database for AI memory**.
 
 ### Why Traditional Databases Fall Short for Effective AI Memory
 

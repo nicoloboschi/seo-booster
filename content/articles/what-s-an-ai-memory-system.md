@@ -35,7 +35,7 @@ An **AI memory system** is the architecture and methodology enabling an AI agent
 
 AI agents, especially those designed for complex tasks or extended interactions, require a mechanism to remember. Think about a chatbot helping you plan a trip; it needs to recall your destination, budget, and preferences from earlier in the conversation to provide relevant suggestions. This ability to recall past information is a cornerstone of effective AI performance. Without a memory system, each interaction would be a fresh start, severely limiting an AI's utility in applications requiring continuity or personalized experiences. The question of what's an AI memory system becomes critical here for agent functionality.
 
-AI agents would struggle to maintain coherence or learn from their past actions without memory. Imagine an AI tutor that forgets a student's learning progress. Or a customer service bot that repeatedly asks the same questions. These scenarios highlight why persistent memory is not a luxury but a necessity for sophisticated AI applications. The development of effective [AI recall mechanisms](/articles/ai-recall-mechanisms/) is an active area of research, directly impacting the perceived intelligence of an AI memory system.
+AI agents would struggle to maintain coherence or learn from their past actions without memory. Imagine an AI tutor that forgets a student's learning progress. Or a customer service bot that repeatedly asks the same questions. These scenarios highlight why persistent memory is not a luxury but a necessity for sophisticated AI applications. The development of effective AI recall mechanisms is an active area of research, directly impacting the perceived intelligence of an AI memory system.
 
 ### Architectures of AI Memory
 

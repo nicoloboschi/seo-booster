@@ -94,7 +94,7 @@ Beyond RAG's real-time retrieval, dedicated **external memory systems** provide 
  * **Graph Databases:** Represent relationships between entities, useful for complex knowledge graphs.
  * **Hybrid Approaches:** Combining multiple storage mechanisms.
 
-These systems are essential for building **AI agent persistent memory** capabilities, allowing agents to build a continuous history and learn over extended periods. For a deeper understanding, explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+These systems are essential for building **AI agent persistent memory** capabilities, allowing agents to build a continuous history and learn over extended periods. For a deeper understanding, explore [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### 3. Memory Consolidation and Summarization for Efficient Recall
 

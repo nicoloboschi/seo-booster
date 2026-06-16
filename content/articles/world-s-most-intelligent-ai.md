@@ -119,7 +119,7 @@ The pursuit of the **world's most intelligent AI** will likely involve:
 3. **Continual Learning:** Developing AI systems that can learn continuously from new data without forgetting previously learned information, a critical aspect of true intelligence and adaptability.
 4. **Explainable AI (XAI):** Ensuring that the decision-making processes of intelligent AI systems are transparent and understandable to humans, fostering trust and enabling better debugging.
 
-The **world's most intelligent AI** won't be defined by a single score, but by its capacity to understand, adapt, and interact with the world in a manner that is increasingly indistinguishable from human-level cognition. This journey is deeply intertwined with the development of sophisticated and versatile AI memory systems. The [Transformer architecture](/articles/transformer-architecture-explained/), foundational to many modern LLMs, continues to evolve, paving the way for even more advanced AI capabilities.
+The **world's most intelligent AI** won't be defined by a single score, but by its capacity to understand, adapt, and interact with the world in a manner that is increasingly indistinguishable from human-level cognition. This journey is deeply intertwined with the development of sophisticated and versatile AI memory systems. The Transformer architecture, foundational to many modern LLMs, continues to evolve, paving the way for even more advanced AI capabilities.
 
 Here's a Python code example demonstrating a simple memory retrieval process using vector embeddings. This is a basic illustration of how an AI might access its stored knowledge.
 

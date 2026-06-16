@@ -53,7 +53,7 @@ The impact of **LLM memory loss** extends beyond mere inconvenience. It directly
 
 For AI agents tasked with complex projects, memory loss is a critical impediment. If an agent forgets the initial instructions, intermediate results, or specific constraints, its ability to complete the task accurately diminishes significantly. This can lead to errors, wasted resources, and ultimately, project failure. The problem of **LLM memory loss** directly impacts AI efficacy.
 
-For instance, an AI project manager that forgets the budget allocated for a specific task cannot make appropriate resource allocation decisions. Similarly, an AI researcher that forgets previous experimental findings cannot build upon that knowledge effectively. This highlights the need for [long-term memory in AI agents](/articles/long-term-memory-ai-agents/) to prevent **large language model forgetting**.
+For instance, an AI project manager that forgets the budget allocated for a specific task cannot make appropriate resource allocation decisions. Similarly, an AI researcher that forgets previous experimental findings cannot build upon that knowledge effectively. This highlights the need for [long-term memory in AI agents](/articles/long-term-memory-ai-agent/) to prevent **large language model forgetting**.
 
 ### Erosion of User Trust and Experience
 

@@ -61,7 +61,7 @@ At its core, memory infrastructure needs a place to store data. The choice of st
 
 #### Vector Databases
 
-These are specialized databases designed to store and query high-dimensional vectors, which are numerical representations of data like text, images, or audio. They are fundamental for [semantic search](/articles/semantic-search-explained/), allowing AI to find information based on meaning rather than exact keywords. Examples include Pinecone, Weaviate, and Milvus.
+These are specialized databases designed to store and query high-dimensional vectors, which are numerical representations of data like text, images, or audio. They are fundamental for semantic search, allowing AI to find information based on meaning rather than exact keywords. Examples include Pinecone, Weaviate, and Milvus.
 
 #### Key-Value Stores
 
@@ -97,7 +97,7 @@ Before data can be stored and retrieved, it needs to be transformed into a forma
 
 #### Embedding Generation
 
-This is the process of converting raw data (text, images, etc.) into dense numerical vectors. [Large Language Models (LLMs)](/articles/large-language-models-explained/) and specialized embedding models (like those from OpenAI, Cohere, or Sentence-Transformers) are used for this. The quality of embeddings directly impacts the effectiveness of semantic search within the **agent memory infrastructure**.
+This is the process of converting raw data (text, images, etc.) into dense numerical vectors. Large Language Models (LLMs) and specialized embedding models (like those from OpenAI, Cohere, or Sentence-Transformers) are used for this. The quality of embeddings directly impacts the effectiveness of semantic search within the **agent memory infrastructure**.
 
 #### Serialization and Deserialization
 
@@ -145,7 +145,7 @@ A subset of long-term memory, episodic memory stores specific past events or exp
 
 * **Characteristics:** Stores specific instances and their temporal/spatial context.
 * **Purpose:** Recalling specific past interactions, learning from unique events, and providing detailed historical context.
-* **Implementation:** Often implemented using vector databases where each entry represents a distinct event or interaction, indexed by its embedding. [Understanding how agents recall specific events](/articles/agent-recall-systems/) is vital here for a robust **AI memory infrastructure**.
+* **Implementation:** Often implemented using vector databases where each entry represents a distinct event or interaction, indexed by its embedding. Understanding how agents recall specific events is vital here for a robust **AI memory infrastructure**.
 
 ### Semantic Memory
 
@@ -249,7 +249,7 @@ Modern AI systems can generate and consume vast amounts of data at high speeds. 
 
 ### Maintaining Data Quality and Relevance
 
-As agents interact and learn, their memory stores can accumulate outdated, irrelevant, or even erroneous information. Keeping the memory clean and ensuring that the most relevant data is prioritized for retrieval is a continuous challenge. This often involves sophisticated **data lifecycle management** and [re-ranking mechanisms](/articles/re-ranking-for-retrieval/).
+As agents interact and learn, their memory stores can accumulate outdated, irrelevant, or even erroneous information. Keeping the memory clean and ensuring that the most relevant data is prioritized for retrieval is a continuous challenge. This often involves sophisticated **data lifecycle management** and re-ranking mechanisms.
 
 ### Contextual Understanding and Retrieval
 

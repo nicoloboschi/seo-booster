@@ -109,7 +109,7 @@ The most direct approach is to build LLMs with inherently larger context windows
 
 ### 2. Retrieval-Augmented Generation (RAG) for Extended Context
 
-RAG is a powerful technique that circumvents the need to fit all information into the LLM's direct context window. It works by retrieving relevant information from an external knowledge base and injecting it into the prompt. This is a core concept for building effective AI memory, as explored in [advanced RAG strategies for managing LLM context](/articles/rag-implementation-strategies/).
+RAG is a powerful technique that circumvents the need to fit all information into the LLM's direct context window. It works by retrieving relevant information from an external knowledge base and injecting it into the prompt. This is a core concept for building effective AI memory, as explored in advanced RAG strategies for managing LLM context.
 
 **How RAG works:**
 

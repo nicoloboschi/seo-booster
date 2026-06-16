@@ -118,11 +118,11 @@ Hindsight's approach may differ in its specific indexing strategies, retrieval a
 
 Beyond Zep and Hindsight, the landscape of AI memory solutions is diverse:
 
-* **LangChain Memory Modules:** LangChain itself offers a variety of built-in memory types, such as `ConversationBufferMemory`, `ConversationBufferWindowMemory`, and `ConversationSummaryMemory`. These are often simpler and integrated directly within the LangChain ecosystem, though they might not scale to the same extent as dedicated systems like Zep for very long-term or complex memory needs. A comparison between LangChain and other systems can be found in [Lett.ai vs. Langchain Memory](/articles/letta-vs-langchain-memory).
+* **LangChain Memory Modules:** LangChain itself offers a variety of built-in memory types, such as `ConversationBufferMemory`, `ConversationBufferWindowMemory`, and `ConversationSummaryMemory`. These are often simpler and integrated directly within the LangChain ecosystem, though they might not scale to the same extent as dedicated systems like Zep for very long-term or complex memory needs. A comparison between LangChain and other systems can be found in Lett.ai vs. Langchain Memory.
 * **Vector Databases with Custom Logic:** Developers can forgo dedicated memory frameworks and build their own memory systems by directly using vector databases (like Chroma, Weaviate, Pinecone) and implementing custom logic for storing, indexing, and retrieving conversational data. This offers maximum control but requires significant engineering effort.
 * **Specialized Memory Systems:** Projects like Mem0 aim to provide efficient memory management, often focusing on specific aspects like summarization or efficient storage. Comparing these can be done in articles like [Mem0 Alternatives Compared](/articles/mem0-alternatives-compared).
 
-The choice between Zep, Hindsight, or other solutions often depends on factors such as the required scale, complexity of memory management, preferred backend technologies, and the development team's familiarity with specific frameworks. Understanding the trade-offs between [agent memory versus RAG](/articles/agent-memory-vs-rag) is also a critical consideration.
+The choice between Zep, Hindsight, or other solutions often depends on factors such as the required scale, complexity of memory management, preferred backend technologies, and the development team's familiarity with specific frameworks. Understanding the trade-offs between agent memory versus RAG is also a critical consideration.
 
 ## Advanced Concepts in Zep and AI Memory
 

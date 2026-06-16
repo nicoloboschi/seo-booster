@@ -110,7 +110,7 @@ AI agents can benefit from different types of memory. **Episodic memory in AI ag
 
 ### Open-Source Memory Solutions
 
-Several **open-source memory systems** are emerging to address these needs. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer frameworks for managing and retrieving information, acting as an external memory for AI agents. Exploring [comparisons of open-source memory systems](/articles/open-source-memory-systems-comparison/) can help developers choose the right tools for their projects.
+Several **open-source memory systems** are emerging to address these needs. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer frameworks for managing and retrieving information, acting as an external memory for AI agents. Exploring [comparisons of open-source memory systems](/articles/open-source-memory-systems-compared/) can help developers choose the right tools for their projects.
 
 These systems often integrate with LLMs, providing a way to store conversation history, user profiles, and learned knowledge. They help overcome the inherent limitations of the **llm context window input output** by offering a persistent, queryable knowledge base.
 

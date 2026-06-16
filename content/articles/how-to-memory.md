@@ -66,7 +66,7 @@ One of the most powerful techniques for improving AI memory is **Retrieval-Augme
 
 In a RAG setup, when an AI agent receives a query, it first searches an external data source (like a vector database) for relevant information. This retrieved context is then fed into the LLM along with the original query. The LLM uses this augmented input to generate a more informed and accurate response.
 
-This process significantly overcomes the limitations of LLMs' static training data. It allows agents to access real-time information and a broader knowledge base than their internal parameters alone can provide. Understanding [how RAG enhances AI memory](/articles/rag-enhances-ai-memory/) highlights how RAG acts as a powerful external memory augmentation.
+This process significantly overcomes the limitations of LLMs' static training data. It allows agents to access real-time information and a broader knowledge base than their internal parameters alone can provide. Understanding how RAG enhances AI memory highlights how RAG acts as a powerful external memory augmentation.
 
 ### Benefits of RAG for AI Memory
 

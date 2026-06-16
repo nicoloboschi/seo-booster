@@ -65,7 +65,7 @@ The effectiveness of long term memory in Character AI hinges on what information
 
 ### Episodic Memory: Recalling Specific Events
 
-**Episodic memory** in Character AI captures specific events or interactions that have occurred. Think of it as the character’s personal diary. It records moments like "User X told me about their dog, Buster, on Tuesday" or "We discussed the plot of 'Dune' last week." This allows the AI to reference past conversations, shared experiences, and specific details provided by the user. For instance, if a user mentions a pet, the AI can later ask about that pet, demonstrating it remembers and cares about the user's life. This level of recall significantly enhances personalization and user engagement. This is a key component of [episodic memory for character AI](/articles/episodic-memory-ai-agents/).
+**Episodic memory** in Character AI captures specific events or interactions that have occurred. Think of it as the character’s personal diary. It records moments like "User X told me about their dog, Buster, on Tuesday" or "We discussed the plot of 'Dune' last week." This allows the AI to reference past conversations, shared experiences, and specific details provided by the user. For instance, if a user mentions a pet, the AI can later ask about that pet, demonstrating it remembers and cares about the user's life. This level of recall significantly enhances personalization and user engagement. This is a key component of [episodic memory for character AI](/articles/episodic-memory-in-ai-agents/).
 
 ### Semantic Memory: Storing Factual Knowledge and Traits
 
@@ -73,7 +73,7 @@ The effectiveness of long term memory in Character AI hinges on what information
 
 ### Procedural Memory: Learned Behaviors and Skills
 
-While less common in simple chatbot architectures, **procedural memory** can enable AI characters to learn and execute complex sequences of actions or behaviors. This is akin to learning a skill, like how to play a game or perform a specific task. For example, a character might learn a particular dialogue pattern or a strategy for guiding a user through a complex process. This type of memory contributes to the AI's capability to perform tasks and adapt its interaction style based on learned experience, moving beyond simple information recall. Mastering procedural recall is an advanced aspect of [AI agent memory systems](/articles/ai-agent-memory-systems/).
+While less common in simple chatbot architectures, **procedural memory** can enable AI characters to learn and execute complex sequences of actions or behaviors. This is akin to learning a skill, like how to play a game or perform a specific task. For example, a character might learn a particular dialogue pattern or a strategy for guiding a user through a complex process. This type of memory contributes to the AI's capability to perform tasks and adapt its interaction style based on learned experience, moving beyond simple information recall. Mastering procedural recall is an advanced aspect of [AI agent memory systems](/articles/llm-agent-memory-systems/).
 
 ## Implementing Long Term Memory for Character AI
 
@@ -210,7 +210,7 @@ The open-source community offers powerful solutions for managing AI memory. Proj
 
 ### LLM Memory Frameworks
 
-Frameworks like LangChain and LlamaIndex offer abstractions for managing LLM memory. They provide pre-built components for short-term memory (like conversational buffers) and integrations with vector databases for long term memory. These frameworks simplify the process of connecting different memory types and retrieval mechanisms to LLMs, accelerating development. For instance, [LangChain versus LlamaIndex memory](/articles/langchain-vs-llama-index-memory/) highlights how different frameworks approach memory management. These tools are essential for building effective **long term memory character ai**.
+Frameworks like LangChain and LlamaIndex offer abstractions for managing LLM memory. They provide pre-built components for short-term memory (like conversational buffers) and integrations with vector databases for long term memory. These frameworks simplify the process of connecting different memory types and retrieval mechanisms to LLMs, accelerating development. For instance, LangChain versus LlamaIndex memory highlights how different frameworks approach memory management. These tools are essential for building effective **long term memory character ai**.
 
 ## The Future of Long Term Memory in Character AI
 

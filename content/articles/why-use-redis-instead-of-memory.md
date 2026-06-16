@@ -135,7 +135,7 @@ While Redis is powerful, it's often used as a component within a broader AI memo
 * **Relational/NoSQL Databases:** Offer strong consistency or complex querying but may lack the speed of Redis for real-time access.
 * **Specialized AI Memory Frameworks:** Like those discussed in [letta-ai-guide](/articles/letta-ai-guide) or [zep-memory-ai-guide](/articles/zep-memory-ai-guide), provide tailored tools for memory management.
 
-Redis often complements these by serving as a fast, persistent cache, a message broker, or a primary store for structured agent state. It's a versatile tool for [AI assistant that remembers everything](/articles/ai-assistant-remembers-everything/) scenarios. Understanding [agent memory vs RAG](/articles/agent-memory-vs-rag/) helps clarify where Redis fits in the landscape of AI memory solutions.
+Redis often complements these by serving as a fast, persistent cache, a message broker, or a primary store for structured agent state. It's a versatile tool for [AI assistant that remembers everything](/articles/ai-assistant-remembers-everything/) scenarios. Understanding agent memory vs RAG helps clarify where Redis fits in the landscape of AI memory solutions.
 
 ## Conclusion: The Advantage of Redis for AI Memory
 

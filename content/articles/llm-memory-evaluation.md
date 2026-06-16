@@ -129,7 +129,7 @@ This involves crafting inputs designed to confuse or break the agent's memory. E
 * **Conflicting Information:** Providing contradictory details to observe how the agent handles inconsistencies.
 * **Temporal Probes:** Asking about events in a specific chronological order to test temporal reasoning.
 
-Adversarial testing pushes the boundaries of **llm memory evaluation**, uncovering subtle failure modes. The concept of adversarial attacks is also explored in the context of [AI security vulnerabilities](/articles/ai-security-vulnerabilities/).
+Adversarial testing pushes the boundaries of **llm memory evaluation**, uncovering subtle failure modes. The concept of adversarial attacks is also explored in the context of AI security vulnerabilities.
 
 ### Simulation Environments for Evaluating Memory in LLM Agents
 
@@ -153,7 +153,7 @@ AI memory systems, especially those using retrieval-augmented generation (RAG) o
 
 ### Subjectivity and Nuance in Evaluating Memory in AI Agents
 
-Human memory is not perfectly accurate; it's reconstructive and prone to biases. Evaluating AI memory often involves deciding how closely it needs to mimic human recall, which can introduce subjective elements. For instance, understanding sarcasm or implied meaning requires sophisticated memory and reasoning, making objective **llm memory evaluation** difficult. Understanding these nuances is part of building more human-aligned AI, a topic explored in [human-aligned AI development](/articles/human-aligned-ai-development/).
+Human memory is not perfectly accurate; it's reconstructive and prone to biases. Evaluating AI memory often involves deciding how closely it needs to mimic human recall, which can introduce subjective elements. For instance, understanding sarcasm or implied meaning requires sophisticated memory and reasoning, making objective **llm memory evaluation** difficult. Understanding these nuances is part of building more human-aligned AI, a topic explored in human-aligned AI development.
 
 ## Tools and Frameworks for LLM Memory Evaluation
 

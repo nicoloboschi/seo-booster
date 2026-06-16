@@ -91,7 +91,7 @@ The **Janitor LLM context window** is the maximum amount of text, measured in to
 
 Large Language Models (LLMs) process text as sequences of **tokens**, which are words or parts of words. The **context window** is the limit on how many tokens the model can actively consider at any given time. This is essentially the AI's short-term memory. Conversations that exceed this limit risk losing older information.
 
-This limitation is fundamental to most transformer-based models. For instance, OpenAI's GPT-3.5 models offer context windows ranging from 4,000 to 16,000 tokens. GPT-4 can handle 32,000 or even 128,000 tokens. However, even these large windows can quickly become insufficient for complex, long-running tasks. Understanding [AI agent memory management](/articles/ai-agent-memory-management/) is vital for navigating these challenges. The **LLM context window** size is a critical factor in an AI's performance.
+This limitation is fundamental to most transformer-based models. For instance, OpenAI's GPT-3.5 models offer context windows ranging from 4,000 to 16,000 tokens. GPT-4 can handle 32,000 or even 128,000 tokens. However, even these large windows can quickly become insufficient for complex, long-running tasks. Understanding [AI agent memory management](/articles/llm-agent-memory-management/) is vital for navigating these challenges. The **LLM context window** size is a critical factor in an AI's performance.
 
 ### Tokenization Basics
 
@@ -117,11 +117,11 @@ Imagine an AI assistant managing a complex project over several days. A small **
 
 Increasing the context window size dramatically raises computational needs. Processing more tokens requires substantially more memory and processing power. This leads to slower inference times and higher operational costs for the AI system. This inherent trade-off prevents the possibility of infinitely large context windows in practice.
 
-Processing millions of tokens is computationally intensive. Research papers on models with [LLMs featuring 1 million token context windows](/articles/1m-token-context-window-llms/) capabilities, such as those explored on platforms like arXiv, highlight the significant computational demands. Many applications therefore prefer smaller, manageable windows, necessitating workarounds. The **Janitor LLM context window**'s size is a key design decision balancing capability and cost.
+Processing millions of tokens is computationally intensive. Research papers on models with LLMs featuring 1 million token context windows capabilities, such as those explored on platforms like arXiv, highlight the significant computational demands. Many applications therefore prefer smaller, manageable windows, necessitating workarounds. The **Janitor LLM context window**'s size is a key design decision balancing capability and cost.
 
 ### Practical Implications for AI Agents
 
-Consider an AI agent designed for customer support. A customer's long, evolving issue requires access to the entire history within its **Janitor LLM context window**. A small window means the agent might ask repetitive questions or fail to grasp the full problem scope, leading to user frustration. This impacts the effectiveness of [AI agents with long-term memory](/articles/ai-agents-with-long-term-memory/) solutions. The **Janitor LLM context window** is a practical constraint on immediate interaction quality.
+Consider an AI agent designed for customer support. A customer's long, evolving issue requires access to the entire history within its **Janitor LLM context window**. A small window means the agent might ask repetitive questions or fail to grasp the full problem scope, leading to user frustration. This impacts the effectiveness of [AI agents with long-term memory](/articles/ai-agent-long-term-memory/) solutions. The **Janitor LLM context window** is a practical constraint on immediate interaction quality.
 
 ## Strategies to Mitigate Context Window Limitations
 
@@ -133,7 +133,7 @@ Fortunately, several techniques exist to help AI agents overcome **Janitor LLM c
 
 * **Process:** User query → Embed query → Search vector database → Retrieve top-k documents → Prepend documents to user query → Feed combined prompt to LLM → LLM generates response.
 
-RAG is a cornerstone of modern AI development. It provides LLMs with up-to-date, relevant information without requiring costly retraining. This technique bypasses the direct reliance on the **Janitor LLM context window**. This is a key differentiator compared to [agent memory vs RAG](/articles/agent-memory-vs-rag/). The effectiveness of RAG critically depends on the quality of the [embedding models used in RAG](/articles/embedding-models-used-in-rag/).
+RAG is a cornerstone of modern AI development. It provides LLMs with up-to-date, relevant information without requiring costly retraining. This technique bypasses the direct reliance on the **Janitor LLM context window**. This is a key differentiator compared to agent memory vs RAG. The effectiveness of RAG critically depends on the quality of the embedding models used in RAG.
 
 ### Memory Summarization and Compression
 
@@ -150,7 +150,7 @@ AI agents can also use dedicated external memory systems. These systems can incl
 * **Vector Databases:** These databases store information as numerical vectors, known as embeddings. They enable efficient semantic searching based on meaning. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer open-source solutions for building robust agent memory systems.
 * **Knowledge Graphs:** These represent information as interconnected entities and their relationships. They enable complex reasoning and inference.
 
-These systems act as a long-term memory store. The AI agent retrieves information from them as needed. This effectively bypasses **Janitor LLM context window** constraints for historical data. This is essential for [AI agents with long-term conversational memory](/articles/ai-agents-with-long-term-conversational-memory/). Managing the **Janitor LLM context window** is key for immediate interactions.
+These systems act as a long-term memory store. The AI agent retrieves information from them as needed. This effectively bypasses **Janitor LLM context window** constraints for historical data. This is essential for AI agents with long-term conversational memory. Managing the **Janitor LLM context window** is key for immediate interactions.
 
 ## Comparing Solutions for Extended Context
 

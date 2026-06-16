@@ -49,7 +49,7 @@ A prevalent architecture relies on **embedding models for memory**. Information,
 
 The **long term memory for AI agents** then becomes a **vector database**, such as Pinecone, Weaviate, or Chroma. When an agent needs to recall information, it generates an embedding for its current query. The system then performs a similarity search within the vector database to find the most relevant stored embeddings. This allows for semantic retrieval, meaning the agent can find information even if the query's wording differs from the stored content.
 
-This method is particularly effective for retrieving factual information or past conversational turns that are semantically similar to the current context. It forms the backbone of many Retrieval-Augmented Generation (RAG) systems, as discussed in [how AI agent memory differs from RAG](/articles/agent-memory-vs-rag/).
+This method is particularly effective for retrieving factual information or past conversational turns that are semantically similar to the current context. It forms the backbone of many Retrieval-Augmented Generation (RAG) systems, as discussed in how AI agent memory differs from RAG.
 
 ### Knowledge Graphs
 
@@ -120,7 +120,7 @@ Memory is not static. Information can become outdated, irrelevant, or corrupted 
 
 ### Integration with Reasoning and Action
 
-The true power of **long term memory for AI agents** lies in its seamless integration with the agent's reasoning engine and action-selection mechanisms. The agent must be able to not only recall information but also understand its implications and act upon it appropriately. Research in [AI agent reasoning capabilities](/articles/agent-reasoning-capabilities/) highlights this dependency.
+The true power of **long term memory for AI agents** lies in its seamless integration with the agent's reasoning engine and action-selection mechanisms. The agent must be able to not only recall information but also understand its implications and act upon it appropriately. Research in AI agent reasoning capabilities highlights this dependency.
 
 ### Cost of Storage and Computation
 
@@ -253,7 +253,7 @@ for mem in retrieved_weather:
  print(f"- {mem['content']} (Context: {mem['context']}, Similarity: {similarity_score:.4f})")
 ```
 
-This code provides a basic illustration of how an agent might store and retrieve information using semantic similarity. Real-world **long term memory for AI agents** systems are far more complex, employing advanced indexing, specialized vector databases, and often distributed computing. For a deeper dive into vector databases, check out [Vectorize.io's guide on vector databases](/articles/vector-databases/).
+This code provides a basic illustration of how an agent might store and retrieve information using semantic similarity. Real-world **long term memory for AI agents** systems are far more complex, employing advanced indexing, specialized vector databases, and often distributed computing. For a deeper dive into vector databases, check out Vectorize.io's guide on vector databases.
 
 ## Future Directions
 

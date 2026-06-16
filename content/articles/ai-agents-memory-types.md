@@ -106,7 +106,7 @@ The choice and implementation of memory types depend heavily on the specific app
 * **Historical Analysis:** Recalling and reasoning about past events or interactions to inform current decisions.
 * **Building AI Personas:** Developing a consistent identity and backstory for an AI agent.
 
-Effectively managing both **AI agents long term and short term memory** is essential for creating intelligent systems that are not only functional but also capable of exhibiting complex behaviors, learning, and providing personalized experiences. The ongoing development in **AI memory systems** and **agentic AI** continues to push the boundaries of what's possible, enabling agents to remember, learn, and interact with the world in increasingly sophisticated ways. For a comprehensive overview of available solutions, consider exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems).
+Effectively managing both **AI agents long term and short term memory** is essential for creating intelligent systems that are not only functional but also capable of exhibiting complex behaviors, learning, and providing personalized experiences. The ongoing development in **AI memory systems** and **agentic AI** continues to push the boundaries of what's possible, enabling agents to remember, learn, and interact with the world in increasingly sophisticated ways. For a comprehensive overview of available solutions, consider exploring [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## FAQ
 

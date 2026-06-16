@@ -108,7 +108,7 @@ To excel in an **ai memory developer job**, a strong foundation in computer scie
 ### Technical Proficiencies
 
 * **Programming Languages:** Mastery of **Python** is nearly universal, given its prevalence in AI development. Knowledge of other languages like Go or Rust can also be beneficial for performance-critical components.
-* **LLM Frameworks:** Familiarity with frameworks like LangChain, LlamaIndex, or Haystack is often required. Understanding how these frameworks manage memory and context is key. Developers often compare [LangChain memory management](/articles/langchain-memory-management/) capabilities.
+* **LLM Frameworks:** Familiarity with frameworks like LangChain, LlamaIndex, or Haystack is often required. Understanding how these frameworks manage memory and context is key. Developers often compare LangChain memory management capabilities.
 * **Vector Databases:** Experience with **vector databases** such as Pinecone, Weaviate, Chroma, or Milvus is critical. These databases are optimized for storing and searching high-dimensional vector embeddings. Proficiency here is a hallmark of an **ai memory developer job**.
 * **Embedding Models:** Understanding how **embedding models for memory** work, including models like Sentence-BERT or OpenAI's text-embedding-ada-002, is crucial for converting text into searchable vectors.
 * **Data Structures and Algorithms:** A solid grasp of fundamental data structures (hash maps, trees, graphs) and algorithms is necessary for efficient data management and retrieval. This knowledge underpins effective memory system design.
@@ -119,7 +119,7 @@ To excel in an **ai memory developer job**, a strong foundation in computer scie
 * **LLM Architectures:** A deep understanding of **transformer architectures**, like those described in the seminal [Attention Is All You Need paper](https://arxiv.org/abs/1706.03762), and how LLMs process information is vital.
 * **Memory Types:** Knowledge of different **AI agents' memory types**, including episodic, semantic, and short-term memory, and their respective use cases. Understanding these distinctions is key for an **ai memory developer job**.
 * **Retrieval-Augmented Generation (RAG):** Understanding **RAG vs. agent memory** and how RAG systems use external knowledge bases to augment LLM responses is important, as memory systems often complement RAG.
-* **AI Agent Architecture:** Familiarity with various **AI agent architecture patterns** and how memory fits into the broader system design is essential. Exploring [agentic AI architectures](/articles/agentic-ai-architectures/) helps inform memory system design.
+* **AI Agent Architecture:** Familiarity with various **AI agent architecture patterns** and how memory fits into the broader system design is essential. Exploring agentic AI architectures helps inform memory system design.
 
 ## The Growing Demand for AI Memory Expertise
 

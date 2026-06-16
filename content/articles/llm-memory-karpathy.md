@@ -48,7 +48,7 @@ For example, an AI assistant needing to recall past conversation topics or user 
 
 To overcome the limitations of an LLM's fixed context window and static training data, developers integrate external memory systems. These can range from simple key-value stores to sophisticated vector databases. They provide agents with a persistent record of interactions and learned information, crucial for practical **llm memory karpathy** applications.
 
-These external stores serve as an agent's explicit memory, supplementing the LLM's implicit recall. This hybrid approach is fundamental for building AI that remembers conversations and performs consistently across extended interactions. Understanding these architectures is key to [building AI memory systems](/articles/building-ai-memory-systems/).
+These external stores serve as an agent's explicit memory, supplementing the LLM's implicit recall. This hybrid approach is fundamental for building AI that remembers conversations and performs consistently across extended interactions. Understanding these architectures is key to building AI memory systems.
 
 ## Context Window Limitations and Solutions
 

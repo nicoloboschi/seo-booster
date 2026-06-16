@@ -57,7 +57,7 @@ Several **AI memory architectures** facilitate long-term memory for AI, each wit
 
 One of the most prevalent approaches involves **vector databases**. These databases store information as **vector embeddings**, which are numerical representations of data capturing semantic meaning. When an AI needs to recall information, it converts its current query into an embedding and searches the vector database for the most semantically similar stored embeddings.
 
-This method is highly effective for retrieving relevant snippets of information from large bodies of text. It forms the backbone of many [Retrieval-Augmented Generation (RAG) systems for AI memory](/articles/retrieval-augmented-generation/). For instance, an AI could store entire documents or past conversation logs as embeddings. When asked a question, it retrieves the most relevant passages from these stored records to inform its response. According to a 2024 study published in *arXiv*, RAG systems with effective vector retrieval showed a 34% improvement in task completion compared to baseline LLMs.
+This method is highly effective for retrieving relevant snippets of information from large bodies of text. It forms the backbone of many Retrieval-Augmented Generation (RAG) systems for AI memory. For instance, an AI could store entire documents or past conversation logs as embeddings. When asked a question, it retrieves the most relevant passages from these stored records to inform its response. According to a 2024 study published in *arXiv*, RAG systems with effective vector retrieval showed a 34% improvement in task completion compared to baseline LLMs.
 
 #### Key Features of Vector Databases
 

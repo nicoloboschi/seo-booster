@@ -108,7 +108,7 @@ Memory consolidation in AI agents ensures that the most important data is retain
 
 ## Overcoming AI Context Window Limitations with Advanced Memory
 
-One of the most significant challenges in AI memory is the limited context window of many large language models. This limitation means that AI agents can only process and "remember" a finite amount of data at any given time. This is a practical manifestation of "AI no memory lyrics." Effectively managing this [AI context management](/articles/ai-context-management/) is key to enabling robust "letta ai agent memory."
+One of the most significant challenges in AI memory is the limited context window of many large language models. This limitation means that AI agents can only process and "remember" a finite amount of data at any given time. This is a practical manifestation of "AI no memory lyrics." Effectively managing this AI context management is key to enabling robust "letta ai agent memory."
 
 ### Strategies for Extended AI Memory in Agents
 

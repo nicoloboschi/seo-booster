@@ -93,7 +93,7 @@ The **llm context window paradox** underscores the importance of sophisticated *
 
 ### Beyond the Context Window: The Need for External AI Memory Systems
 
-For AI agents to exhibit robust, long-term recall, they need more than just a large context window. They require structured ways to store, retrieve, and integrate information over time. This is a core challenge addressed by various **AI memory systems**. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is crucial here.
+For AI agents to exhibit robust, long-term recall, they need more than just a large context window. They require structured ways to store, retrieve, and integrate information over time. This is a core challenge addressed by various **AI memory systems**. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is crucial here.
 
 When an LLM encounters a prompt that exceeds its context window, or when information from a previous interaction needs to be recalled, an external memory system can act as a bridge. This allows the agent to effectively "remember" past events or data, overcoming the inherent limitations of the LLM's immediate processing capacity. Understanding [understanding AI agent memory systems](/articles/ai-agent-memory-explained/) is key.
 

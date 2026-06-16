@@ -95,7 +95,7 @@ Tools like [Hindsight](https://github.com/vectorize-io/hindsight), an open-sourc
 
 ### RAG vs. Dedicated Agent Memory for Claude
 
-While RAG enhances Claude's ability to access information, it's important to distinguish it from true **agent memory**. RAG primarily retrieves relevant snippets to inform the current generation. Dedicated **AI agent memory** systems often involve more complex reasoning and state management. This allows agents to learn and adapt over time. This is an ongoing area of research, as highlighted in [agent memory vs RAG comparisons](/articles/agent-memory-vs-rag/).
+While RAG enhances Claude's ability to access information, it's important to distinguish it from true **agent memory**. RAG primarily retrieves relevant snippets to inform the current generation. Dedicated **AI agent memory** systems often involve more complex reasoning and state management. This allows agents to learn and adapt over time. This is an ongoing area of research, as highlighted in agent memory vs RAG comparisons.
 
 For chatbots aiming for persistent recall, combining Claude's powerful language understanding with a robust memory solution is key. This approach is fundamental to building AI that can truly remember conversations.
 

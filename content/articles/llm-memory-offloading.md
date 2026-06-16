@@ -129,7 +129,7 @@ class AdvancedAgent:
 
 ```
 
-This conceptual code illustrates how short-term and long-term memory components might interact, with a mechanism to offload older data. Building such systems requires understanding [advanced AI agent memory systems](/articles/advanced-ai-agent-memory-systems/).
+This conceptual code illustrates how short-term and long-term memory components might interact, with a mechanism to offload older data. Building such systems requires understanding advanced AI agent memory systems.
 
 ### Evaluating Offloading Performance
 

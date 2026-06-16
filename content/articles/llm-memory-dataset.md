@@ -134,7 +134,7 @@ Raw data often needs significant cleaning and structuring before it can be used 
 * **Normalization:** Standardizing formats, correcting typos, and resolving ambiguities.
 * **Structuring:** Organizing data into formats that the LLM can easily process, such as sequences of events or dialogue turns. For example, converting a raw chat log into a structured format where each message is tagged with a speaker and timestamp.
 
-This structured data allows the LLM to learn patterns and relationships more effectively, which is critical for [agent memory vs. RAG](/articles/agent-memory-vs-rag) scenarios where explicit memory structures are beneficial.
+This structured data allows the LLM to learn patterns and relationships more effectively, which is critical for agent memory vs. RAG scenarios where explicit memory structures are beneficial.
 
 ### Augmenting Datasets for Specific Tasks
 

@@ -224,7 +224,7 @@ while True:
 ## print(memory.buffer)
 ```
 
-This code snippet shows how `ConversationBufferMemory` automatically stores and recalls previous turns, effectively giving the LLM a short-term memory of the current dialogue. This is a foundational step towards more complex **AI agent long-term memory** implementations. For a more advanced example, consider exploring [how to use vector stores in LangChain](/articles/langchain-vector-stores/) for persistent memory.
+This code snippet shows how `ConversationBufferMemory` automatically stores and recalls previous turns, effectively giving the LLM a short-term memory of the current dialogue. This is a foundational step towards more complex **AI agent long-term memory** implementations. For a more advanced example, consider exploring how to use vector stores in LangChain for persistent memory.
 
 ## Advanced Memory Concepts for AI Systems
 
@@ -244,4 +244,4 @@ While the goal is often to give AI unlimited memory, understanding and working w
 
 ## Conclusion
 
-Giving LLMs memory is not a single solution but a collection of techniques and architectural patterns. From simple context management and RAG with vector databases to sophisticated agentic architectures, the methods for **how to make LLM have memory** are diverse and rapidly advancing. By choosing the right approach, developers can build AI systems that are more context-aware, capable, and useful, moving beyond stateless interactions towards truly intelligent agents. The field of AI memory is rapidly growing, with new research and tools emerging regularly, such as advancements in [vector embeddings for AI](/articles/vector-embeddings-for-ai/).
+Giving LLMs memory is not a single solution but a collection of techniques and architectural patterns. From simple context management and RAG with vector databases to sophisticated agentic architectures, the methods for **how to make LLM have memory** are diverse and rapidly advancing. By choosing the right approach, developers can build AI systems that are more context-aware, capable, and useful, moving beyond stateless interactions towards truly intelligent agents. The field of AI memory is rapidly growing, with new research and tools emerging regularly, such as advancements in vector embeddings for AI.

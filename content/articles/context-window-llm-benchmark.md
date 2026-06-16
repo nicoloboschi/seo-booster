@@ -214,7 +214,7 @@ The drive to improve LLM **context windows** is fueled by the demand for more ca
 
 New model architectures are being developed to more efficiently process long sequences. Techniques like **sparse attention mechanisms** and **recurrent memory modules** aim to reduce the quadratic complexity of traditional self-attention, making longer contexts feasible.
 
-Transformers, the backbone of most modern LLMs, traditionally have an attention mechanism that scales quadratically with sequence length. Innovations like sparse attention or linear attention aim to break this bottleneck, allowing for significantly larger context windows without prohibitive computational costs. You can learn more about these advancements in [understanding LLM architecture](/articles/understanding-llm-architecture/). These architectural shifts are critical for pushing the limits tested by any **context window LLM benchmark**.
+Transformers, the backbone of most modern LLMs, traditionally have an attention mechanism that scales quadratically with sequence length. Innovations like sparse attention or linear attention aim to break this bottleneck, allowing for significantly larger context windows without prohibitive computational costs. You can learn more about these advancements in understanding LLM architecture. These architectural shifts are critical for pushing the limits tested by any **context window LLM benchmark**.
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -261,7 +261,7 @@ As LLMs continue to evolve, the methods for **benchmarking LLM context windows**
 
 The ultimate goal is to build AI agents that can maintain context over extended periods and across multiple interactions. This requires not only large context windows but also sophisticated memory management systems. Evaluating these emergent capabilities will necessitate new benchmark designs.
 
-The development of agent architectures is a rapidly evolving field. Understanding how agents manage their memory, including their **context window** limitations, is key to building more sophisticated and reliable AI systems. You can explore more about [agent memory systems](/articles/agent-memory-systems/) on our platform. Future **context window LLM benchmarks** will likely focus on these agentic behaviors.
+The development of agent architectures is a rapidly evolving field. Understanding how agents manage their memory, including their **context window** limitations, is key to building more sophisticated and reliable AI systems. You can explore more about [agent memory systems](/articles/llm-agent-memory-systems/) on our platform. Future **context window LLM benchmarks** will likely focus on these agentic behaviors.
 
 ### Benchmarking for Specific Domains
 

@@ -63,7 +63,7 @@ Understanding different memory types is crucial for building effective AI agents
 ### Episodic vs. Semantic Memory
 
 * **Episodic Memory:** This stores specific events and experiences, including when and where they occurred. For an AI agent, this could be remembering a particular conversation with a user at a specific time. This type of memory is vital for personalizing interactions and maintaining conversational continuity. You can learn more about [episodic memory for AI agents](/articles/episodic-memory-in-ai-agents/). This is a key area of interest for **long term memory AI reddit** users seeking more personalized AI interactions.
-* **Semantic Memory:** This stores general knowledge, facts, and concepts, independent of personal experience. For an AI, this includes understanding language, facts about the world, and learned skills. [Semantic memory capabilities in AI agents](/articles/semantic-agent-memory/) allow them to reason and understand abstract information. The interplay between episodic and semantic memory is a nuanced topic within **long term memory AI reddit**.
+* **Semantic Memory:** This stores general knowledge, facts, and concepts, independent of personal experience. For an AI, this includes understanding language, facts about the world, and learned skills. Semantic memory capabilities in AI agents allow them to reason and understand abstract information. The interplay between episodic and semantic memory is a nuanced topic within **long term memory AI reddit**.
 
 These memory types are foundational to the broader concept of [AI agent memory types](/articles/ai-agents-memory-types/).
 

@@ -47,7 +47,7 @@ AI memory is often perceived as bad due to fundamental limitations in how curren
 
 ### The Illusion of Perfect Recall
 
-Unlike human memory, which is reconstructive and prone to errors, AI memory is often expected to be precise. When it fails to retrieve specific data points or confuses similar pieces of information, it appears "bad." This is not necessarily a failing of the underlying AI but rather a reflection of the current architectural and algorithmic constraints. Understanding [AI agent memory limitations](/articles/ai-agent-memory-limitations/) is crucial to appreciating why AI memory is so bad. The AI recall problems are significant.
+Unlike human memory, which is reconstructive and prone to errors, AI memory is often expected to be precise. When it fails to retrieve specific data points or confuses similar pieces of information, it appears "bad." This is not necessarily a failing of the underlying AI but rather a reflection of the current architectural and algorithmic constraints. Understanding AI agent memory limitations is crucial to appreciating why AI memory is so bad. The AI recall problems are significant.
 
 ## Key Challenges: Understanding Why AI Memory is So Bad
 
@@ -57,7 +57,7 @@ Large Language Models (LLMs), the backbone of many AI agents, operate with a **c
 
 1. **Analogy:** Imagine trying to remember a long phone number. If you can only hold seven digits at a time, you'll forget the earlier ones as you try to recall the later ones.
 2. **Impact:** For AI agents, this means they can't recall details from early in a long conversation or from documents processed long ago. This severely limits their ability to maintain coherent, contextually aware interactions over extended periods.
-3. **Mitigation:** Techniques like summarization and external memory stores aim to overcome this, but they introduce their own complexities and potential for information loss. The challenges around [overcoming context window limitations](/articles/overcoming-context-window-limitations/) are a major focus in AI development, directly addressing why AI memory is so bad.
+3. **Mitigation:** Techniques like summarization and external memory stores aim to overcome this, but they introduce their own complexities and potential for information loss. The challenges around overcoming context window limitations are a major focus in AI development, directly addressing why AI memory is so bad.
 
 ### Catastrophic Forgetting: The Forgetting Curve in AI
 

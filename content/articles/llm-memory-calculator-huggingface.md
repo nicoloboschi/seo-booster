@@ -60,7 +60,7 @@ This estimation is a fundamental step in managing **LLM inference** and ensuring
 
 Estimating token counts is paramount when working with **large language models (LLMs)**. Each LLM has a fixed **context window**, which is the maximum number of tokens it can process simultaneously. Exceeding this limit results in truncated input, information loss, and degraded performance. Hugging Face's `transformers` library and its tokenizers are central to this process for any **LLM memory calculator Hugging Face** implementation.
 
-For example, calculating tokens for a prompt plus a predicted response allows you to foresee if the interaction fits within a model's context. This is critical for applications requiring **long-term memory** or maintaining coherent conversations. The efficiency of [retrieval-augmented generation (RAG) systems](/articles/retrieval-augmented-generation-rag-systems) relies heavily on precise token management. A well-implemented **LLM memory calculator Hugging Face** tool can prevent costly errors.
+For example, calculating tokens for a prompt plus a predicted response allows you to foresee if the interaction fits within a model's context. This is critical for applications requiring **long-term memory** or maintaining coherent conversations. The efficiency of retrieval-augmented generation (RAG) systems relies heavily on precise token management. A well-implemented **LLM memory calculator Hugging Face** tool can prevent costly errors.
 
 ### The Role of Hugging Face in LLM Memory Management
 

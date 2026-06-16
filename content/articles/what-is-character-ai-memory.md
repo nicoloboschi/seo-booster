@@ -91,7 +91,7 @@ These user-side strategies help manage the inherent **short-term memory AI agent
 
 ### When to Seek More Advanced Memory Solutions
 
-If your application requires an AI that remembers significant details across multiple sessions or has complex reasoning needs, Character AI's built-in memory might not suffice. You would look towards AI systems designed for **long-term memory AI agent** capabilities. Platforms and libraries that offer **persistent memory AI** features often integrate with external **vector databases**, allowing for a much richer and more enduring memory. These systems are better suited for tasks demanding true contextual awareness and historical recall. You can compare some of these in our [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) guide.
+If your application requires an AI that remembers significant details across multiple sessions or has complex reasoning needs, Character AI's built-in memory might not suffice. You would look towards AI systems designed for **long-term memory AI agent** capabilities. Platforms and libraries that offer **persistent memory AI** features often integrate with external **vector databases**, allowing for a much richer and more enduring memory. These systems are better suited for tasks demanding true contextual awareness and historical recall. You can compare some of these in our [best AI agent memory systems](/articles/best-ai-memory-systems/) guide.
 
 ## Character AI Memory vs. Other AI Memory Systems
 

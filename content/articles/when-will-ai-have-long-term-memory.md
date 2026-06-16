@@ -215,7 +215,7 @@ final_response = generate_response_with_memory(user_query, conversation_history,
 print(final_response)
 ```
 
-This code illustrates how an AI agent might query an external memory store to gather context before generating a response. The effectiveness of this approach relies heavily on the quality of the embedding model and the vector database's ability to store and retrieve relevant information efficiently. Understanding [agent memory recall](/articles/agent-memory-recall/) is key to building these systems.
+This code illustrates how an AI agent might query an external memory store to gather context before generating a response. The effectiveness of this approach relies heavily on the quality of the embedding model and the vector database's ability to store and retrieve relevant information efficiently. Understanding agent memory recall is key to building these systems.
 
 ### The Future: Agents That Truly Remember
 

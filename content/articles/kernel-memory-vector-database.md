@@ -122,7 +122,7 @@ For AI assistants and chatbots, maintaining **long-term memory** is paramount. A
 
 ### Knowledge Management and Retrieval with Vector Databases
 
-In enterprise settings, kernel memory can act as a dynamic knowledge base. Agents can ingest large volumes of internal documentation, research papers, and customer support logs. When a new query arises, the agent can quickly retrieve the most relevant information, acting as an intelligent search engine or a tireless research assistant. This is especially relevant when discussing [retrieval-augmented generation (RAG) techniques](/articles/retrieval-augmented-generation) and its role in enhancing LLMs. A **kernel memory vector database** enhances these RAG systems significantly.
+In enterprise settings, kernel memory can act as a dynamic knowledge base. Agents can ingest large volumes of internal documentation, research papers, and customer support logs. When a new query arises, the agent can quickly retrieve the most relevant information, acting as an intelligent search engine or a tireless research assistant. This is especially relevant when discussing retrieval-augmented generation (RAG) techniques and its role in enhancing LLMs. A **kernel memory vector database** enhances these RAG systems significantly.
 
 ### Personalized Learning and Training with AI Memory
 

@@ -51,7 +51,7 @@ Without memory, LLMs are essentially powerful but forgetful tools. Persistent me
 * **Track task progress**: Managing complex, multi-step operations over extended periods.
 * **Learn and adapt**: Incorporating new information into their knowledge base.
 
-This capability is fundamental for creating truly **agentic AI** systems. [Learn about AI agent memory concepts](/articles/ai-agent-memory-concepts/) provides a foundational view of these concepts. Effective **GitHub LLM persistent memory** is key here.
+This capability is fundamental for creating truly **agentic AI** systems. Learn about AI agent memory concepts provides a foundational view of these concepts. Effective **GitHub LLM persistent memory** is key here.
 
 ## Implementing LLM Persistent Memory on GitHub
 
@@ -101,7 +101,7 @@ The RAG process is a standard method for integrating external knowledge with LLM
 4. **LLM Generation**: The LLM processes this augmented context to generate a response.
 5. **Memory Update (Optional)**: The current interaction or generated response can be stored back into the persistent memory for future use.
 
-This process is a key differentiator from standard LLM usage, where only the limited context window is available. Understand [RAG vs. agent memory differences](/articles/rag-vs-agent-memory-distinctions/) to clarify these approaches to **GitHub LLM persistent memory**.
+This process is a key differentiator from standard LLM usage, where only the limited context window is available. Understand RAG vs. agent memory differences to clarify these approaches to **GitHub LLM persistent memory**.
 
 ### Code Example: Basic Memory Storage and Retrieval for GitHub LLM Persistent Memory
 

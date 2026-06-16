@@ -166,7 +166,7 @@ Despite these challenges, the foundational technologies provided by Google offer
 
 The integration of LLM memory with Google's technology stack is poised to unlock new capabilities for AI. Imagine AI assistants that can recall your preferences from months ago, customer service bots that remember every detail of your past issues, or research agents that can synthesize information from a vast, ever-growing corpus of documents.
 
-As Google continues to innovate in AI and cloud infrastructure, we can expect even more powerful and seamless solutions for **LLM memory Google**. This evolution will be critical for developing more intelligent, personalized, and effective AI agents across a wide range of applications. The ongoing advancements in [retrieval augmented generation](/articles/retrieval-augmented-generation/) are directly benefiting from these memory capabilities.
+As Google continues to innovate in AI and cloud infrastructure, we can expect even more powerful and seamless solutions for **LLM memory Google**. This evolution will be critical for developing more intelligent, personalized, and effective AI agents across a wide range of applications. The ongoing advancements in retrieval augmented generation are directly benefiting from these memory capabilities.
 
 ## FAQ
 

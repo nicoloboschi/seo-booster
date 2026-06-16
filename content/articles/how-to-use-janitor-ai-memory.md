@@ -152,7 +152,7 @@ According to a 2023 report by AI Research Labs, agents using semantic search for
 
 ### Semantic Search Mechanisms for AI Chat Memory
 
-Janitor AI memory typically employs vector databases for efficient semantic search. When a query is made, it's converted into an embedding vector. The system then finds the vectors in the database that are closest to the query vector. These represent the most semantically relevant memories. This relies heavily on the quality of the [embedding models for AI](/articles/embedding-models-for-ai/). This retrieval capability is central to **how to use Janitor AI memory**, especially for **Janitor AI chat memory**.
+Janitor AI memory typically employs vector databases for efficient semantic search. When a query is made, it's converted into an embedding vector. The system then finds the vectors in the database that are closest to the query vector. These represent the most semantically relevant memories. This relies heavily on the quality of the [embedding models for AI](/articles/embedding-models-for-rag/). This retrieval capability is central to **how to use Janitor AI memory**, especially for **Janitor AI chat memory**.
 
 ### Example: Retrieving User Preferences
 

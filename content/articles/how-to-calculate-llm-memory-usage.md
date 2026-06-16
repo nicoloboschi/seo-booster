@@ -72,7 +72,7 @@ A lengthy prompt with many tokens demands more memory for processing than a shor
 
 The **context window** sets the maximum number of tokens an LLM can consider simultaneously. A larger context window allows the model to retain more information, leading to more coherent responses. However, it directly increases memory requirements for how to calculate LLM memory usage.
 
-As the context window grows, the model needs more memory to store and access token representations. This is a primary reason larger context windows necessitate more powerful hardware. Exploring solutions for [optimizing context window management](/articles/optimizing-context-window-management/) can help manage this aspect of LLM memory usage and AI memory optimization.
+As the context window grows, the model needs more memory to store and access token representations. This is a primary reason larger context windows necessitate more powerful hardware. Exploring solutions for optimizing context window management can help manage this aspect of LLM memory usage and AI memory optimization.
 
 * **Short context windows:** Require less memory but limit the model's ability to understand long-range dependencies.
 * **Long context windows:** Demand more memory but enable richer understanding of extended texts and conversations.
@@ -200,7 +200,7 @@ Processing multiple inputs simultaneously (batching) increases memory requiremen
 
 ### Inference vs. Training Memory Demands
 
-**Training** LLMs is vastly more memory-intensive than inference. It requires storing parameters, activations, gradients, and optimizer states, often several times the memory needed for inference alone. Understanding the [differences between LLM inference and training](/articles/llm-inference-vs-training/) is crucial for resource planning.
+**Training** LLMs is vastly more memory-intensive than inference. It requires storing parameters, activations, gradients, and optimizer states, often several times the memory needed for inference alone. Understanding the differences between LLM inference and training is crucial for resource planning.
 
 ### Model Parallelism and Distribution
 
@@ -216,7 +216,7 @@ Efficiently managing LLM memory is key to cost-effective and performant AI syste
 
 1. **Choose the Right Model Size:** Select the smallest model meeting performance needs. Smaller models inherently use less memory, simplifying how to calculate LLM memory usage.
 2. **Use Quantization:** Employ techniques like INT8 or INT4 to reduce model weight memory footprint.
-3. **Optimize Context Window:** Use the smallest effective context window. For long context needs, explore [retrieval-augmented generation (RAG)](/articles/rag-vs-agent-memory-comparison/) which can offload some context management.
+3. **Optimize Context Window:** Use the smallest effective context window. For long context needs, explore retrieval-augmented generation (RAG) which can offload some context management.
 4. **Efficient KV Caching:** Implement efficient KV caching strategies or use libraries that optimize it.
 5. **Batching Wisely:** Tune batch sizes to balance throughput and memory usage.
 6. **Monitor and Profile:** Regularly monitor memory usage during development and deployment.

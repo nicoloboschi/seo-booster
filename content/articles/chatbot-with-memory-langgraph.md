@@ -220,7 +220,7 @@ are essential for maintaining a responsive **AI assistant remembers everything**
 
 LangGraph's explicit state machine model makes complex memory management more intuitive than traditional frameworks. While libraries like LangChain offer memory components, LangGraph's graph-based approach provides a more structured way to define state evolution. It's a powerful alternative to simpler **LLM memory systems**.
 
-Comparing [LangGraph to LangChain memory](/articles/langgraph-vs-langchain-memory/) highlights LangGraph's strength in defining intricate, stateful workflows. It allows dynamic memory manipulation within a structured execution graph, key for **persistent memory AI** applications needing intelligent behavior over extended periods. This makes it an excellent choice for developing a **chatbot with memory LangGraph**.
+Comparing LangGraph to LangChain memory highlights LangGraph's strength in defining intricate, stateful workflows. It allows dynamic memory manipulation within a structured execution graph, key for **persistent memory AI** applications needing intelligent behavior over extended periods. This makes it an excellent choice for developing a **chatbot with memory LangGraph**.
 
 ## Conclusion
 

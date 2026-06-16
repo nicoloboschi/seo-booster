@@ -33,7 +33,7 @@ Imagine an AI that forgets your name mid-conversation. This isn't science fictio
 
 The **zep memory paper** details a specialized architecture for building persistent, long-term memory systems for AI agents. It focuses on structuring and retrieving conversational history and learned information efficiently, allowing agents to recall relevant past events and data beyond their immediate context window.
 
-This architectural innovation addresses a critical bottleneck in AI development. Without effective long-term memory, agents struggle to maintain consistent personas, learn from repeated interactions, or perform complex tasks requiring historical context. The Zep approach aims to bridge this gap with a system designed for scalability and performance. This is a key contribution to understanding [agent memory architecture](/articles/ai-agent-memory-architecture/).
+This architectural innovation addresses a critical bottleneck in AI development. Without effective long-term memory, agents struggle to maintain consistent personas, learn from repeated interactions, or perform complex tasks requiring historical context. The Zep approach aims to bridge this gap with a system designed for scalability and performance. This is a key contribution to understanding [agent memory architecture](/articles/ai-memory-architecture/).
 
 ## The Problem: AI's Fleeting Memory
 

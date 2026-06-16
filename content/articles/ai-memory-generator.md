@@ -168,7 +168,7 @@ Just as humans forget, AI agents may need mechanisms for forgetting irrelevant o
 
 The data used to train and populate AI memory can contain biases, which can then be perpetuated by the AI agent. Ensuring fairness and mitigating bias in AI memory is an important ethical consideration for any AI memory generator. A 2024 study published on arXiv indicated that biased memory recall in AI agents could lead to a 15-20% increase in unfair outcomes.
 
-The future of AI memory generators likely involves even more sophisticated integration with LLMs, advanced retrieval techniques, and improved mechanisms for memory management, leading to AI agents that are more capable, adaptable, and human-like in their interactions. Exploring [best-ai-agent-memory-systems](/articles/best-ai-agent-memory-systems/) can provide insight into current leading solutions for AI memory generation.
+The future of AI memory generators likely involves even more sophisticated integration with LLMs, advanced retrieval techniques, and improved mechanisms for memory management, leading to AI agents that are more capable, adaptable, and human-like in their interactions. Exploring [best-ai-agent-memory-systems](/articles/best-ai-memory-systems/) can provide insight into current leading solutions for AI memory generation.
 
 Here's a comparison of common memory storage approaches used by AI memory generators:
 

@@ -42,7 +42,7 @@ Many existing solutions focus on external databases or vector stores. While effe
 
 The memory palace technique, also known as the method of loci, has been used for centuries by humans to memorize vast amounts of information. Orators and scholars would visualize familiar places, like their homes or streets, and mentally place items or facts at specific points within these environments. To recall the information, they would mentally retrace their steps through the familiar space. The average human working memory capacity is around 7 +/- 2 items, according to Miller's 1956 study.
 
-This spatial anchoring provides a powerful mnemonic device. By mapping information onto a familiar structure, the brain creates strong associative links, making recall more robust and less prone to error. Applying this concept to AI seeks to imbue artificial agents with a similar, albeit digital, form of structured recall. This approach is foundational to understanding [advanced agent memory](/articles/advanced-agent-memory/).
+This spatial anchoring provides a powerful mnemonic device. By mapping information onto a familiar structure, the brain creates strong associative links, making recall more robust and less prone to error. Applying this concept to AI seeks to imbue artificial agents with a similar, albeit digital, form of structured recall. This approach is foundational to understanding advanced agent memory.
 
 ## Building a Virtual Memory Palace for LLMs
 

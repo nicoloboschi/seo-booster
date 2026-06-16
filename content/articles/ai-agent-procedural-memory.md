@@ -135,7 +135,7 @@ For tasks that aren't easily broken into distinct skills, agents might store **a
 
 ### Reactive Policies
 
-In simpler scenarios, procedural memory might exist as a **reactive policy**. This is a direct mapping from sensory input or current state to an immediate action. While less sophisticated than skill libraries, reactive policies are efficient for agents operating in well-defined environments with predictable inputs. This is a foundational concept in [AI agent control architectures](/articles/agent-control-architectures/).
+In simpler scenarios, procedural memory might exist as a **reactive policy**. This is a direct mapping from sensory input or current state to an immediate action. While less sophisticated than skill libraries, reactive policies are efficient for agents operating in well-defined environments with predictable inputs. This is a foundational concept in AI agent control architectures.
 
 ## Procedural Memory vs. Other Memory Types
 
@@ -181,7 +181,7 @@ These tools often integrate with vector databases and LLMs to create rich memory
 
 ### Commercial AI Memory Platforms
 
-Commercial platforms are also developing specialized solutions for AI agent memory. These often offer managed services, advanced analytics, and enterprise-grade scalability. Exploring options like [Vectorize.io's best AI agent memory systems](/articles/best-ai-agent-memory-systems) can provide insight into the current market offerings.
+Commercial platforms are also developing specialized solutions for AI agent memory. These often offer managed services, advanced analytics, and enterprise-grade scalability. Exploring options like [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-systems/) can provide insight into the current market offerings.
 
 ## The Future of AI Procedural Memory
 

@@ -153,7 +153,7 @@ These features define an AI that truly remembers and can be a reliable partner.
 
 ### Vectorize.io and Memory Systems
 
-Platforms like Vectorize.io offer solutions and guides for building advanced AI memory systems. Their resources can help developers understand and implement techniques for creating AI that remembers, including best practices for vector databases and RAG. Explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) on Vectorize.io.
+Platforms like Vectorize.io offer solutions and guides for building advanced AI memory systems. Their resources can help developers understand and implement techniques for creating AI that remembers, including best practices for vector databases and RAG. Explore [best AI agent memory systems](/articles/best-ai-memory-systems/) on Vectorize.io.
 
 ## Conclusion: The Future of AI That Remembers
 

@@ -68,7 +68,7 @@ The constraints imposed by context windows directly affect an AI agent's usefuln
 
 ## Techniques for LLM Memory Compression
 
-Several innovative techniques are being developed to compress the memory used by LLMs. These methods aim to retain essential information while discarding or summarizing less critical data. Effective **LLM memory compression** is key to unlocking advanced AI capabilities and improving [AI agent development](/articles/ai-agent-development/).
+Several innovative techniques are being developed to compress the memory used by LLMs. These methods aim to retain essential information while discarding or summarizing less critical data. Effective **LLM memory compression** is key to unlocking advanced AI capabilities and improving AI agent development.
 
 ### Summarization as a Compression Strategy for AI Memory
 
@@ -129,13 +129,13 @@ By distilling knowledge from a large LLM into a smaller one, we can create a mor
 
 Beyond compressing the LLM's internal state, researchers are developing **specialized memory architectures**. These architectures are designed to store and retrieve information more efficiently than a simple context window. This is a crucial area for advancing **LLM memory compression** and **agent recall**.
 
-**Vector databases** are a prime example. They store information as numerical vectors. Searching for relevant information then becomes a matter of finding vectors that are close to each other in the vector space. This allows for efficient retrieval of semantically similar information, even across vast amounts of data. Understanding [vector databases](/articles/vector-databases/) is key to **efficient AI memory**.
+**Vector databases** are a prime example. They store information as numerical vectors. Searching for relevant information then becomes a matter of finding vectors that are close to each other in the vector space. This allows for efficient retrieval of semantically similar information, even across vast amounts of data. Understanding vector databases is key to **efficient AI memory**.
 
 Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer open-source solutions for managing and querying LLM memory, often using vector embeddings for efficient recall. These systems act as an external memory for AI agents, allowing them to access and use information beyond their immediate context window, greatly aiding **LLM memory compression**.
 
 ## Impact of LLM Memory Compression on AI Systems
 
-Effective **LLM memory compression** offers significant advantages across various AI applications. It directly contributes to creating more capable and efficient AI agents and improving overall [AI agent recall](/articles/ai-agent-recall/).
+Effective **LLM memory compression** offers significant advantages across various AI applications. It directly contributes to creating more capable and efficient AI agents and improving overall AI agent recall.
 
 ### Enhanced Agent Capabilities Through Compression
 
@@ -157,7 +157,7 @@ Imagine an AI tutor that remembers a student's learning progress across multiple
 
 ## Challenges and Future Directions in Memory Compression
 
-Despite its promise, **LLM memory compression** faces several challenges. Ongoing research aims to overcome these hurdles and further improve AI memory systems and [LLM performance](/articles/llm-performance/).
+Despite its promise, **LLM memory compression** faces several challenges. Ongoing research aims to overcome these hurdles and further improve AI memory systems and LLM performance.
 
 ### Balancing Compression and Fidelity in AI Memory
 

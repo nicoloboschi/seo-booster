@@ -123,7 +123,7 @@ The size of an LLM's context window isn't just a technical specification; it's a
 * **Understand Nuance:** Grasp subtle shifts in tone or topic over extended interactions.
 * **Perform Multi-Turn Reasoning:** Engage in dialogues that require recalling information from many previous turns.
 
-Without sufficient **llm context window memory**, an AI agent might repeatedly ask for information it was already given, or its responses could become irrelevant to the ongoing discussion. This limitation highlights the challenge in building truly conversational AI and effective [AI agent architecture](/articles/ai-agent-architecture/).
+Without sufficient **llm context window memory**, an AI agent might repeatedly ask for information it was already given, or its responses could become irrelevant to the ongoing discussion. This limitation highlights the challenge in building truly conversational AI and effective AI agent architecture.
 
 ### Impact on User Experience
 
@@ -135,7 +135,7 @@ A 2023 study from Stanford University indicated that LLMs with context windows b
 
 LLMs, particularly those based on the **Transformer architecture**, use **self-attention mechanisms** to weigh the importance of different tokens within the context window. This allows the model to focus on the most relevant parts of the input when generating output. However, the computational cost of self-attention grows quadratically with the sequence length (context window size). This is a primary reason why context windows have historically been limited in their **llm context window memory**.
 
-The **Transformer paper** published in 2017, "Attention Is All You Need," laid the foundation for this approach. While incredibly effective, its scaling properties present a challenge for ever-expanding context. Researchers are exploring various techniques to overcome this computational bottleneck. Understanding [Transformer models](/articles/transformer-models/) is key to grasping these limitations.
+The **Transformer paper** published in 2017, "Attention Is All You Need," laid the foundation for this approach. While incredibly effective, its scaling properties present a challenge for ever-expanding context. Researchers are exploring various techniques to overcome this computational bottleneck. Understanding Transformer models is key to grasping these limitations.
 
 ### Innovations Expanding Context Capacity
 
@@ -238,7 +238,7 @@ Despite progress, significant challenges remain in managing and enhancing **llm 
 
 ### Cost and Efficiency of Large Contexts
 
-Larger context windows, while powerful, come with increased computational costs. Processing millions of tokens requires substantial computing resources, making it expensive for both training and inference. Efficient algorithms and hardware are necessary to make these large contexts practical for widespread use. This is a key area for ongoing research in [prompt engineering techniques](/articles/prompt-engineering-techniques/).
+Larger context windows, while powerful, come with increased computational costs. Processing millions of tokens requires substantial computing resources, making it expensive for both training and inference. Efficient algorithms and hardware are necessary to make these large contexts practical for widespread use. This is a key area for ongoing research in prompt engineering techniques.
 
 ### Information Overload and Recency Bias in LLMs
 

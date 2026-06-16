@@ -139,7 +139,7 @@ Implementing these memory types requires specific architectural designs. The cho
 
 Modern AI memory systems heavily rely on **vector databases** and **embedding models**. Embedding models convert information (text, images, etc.) into numerical vector representations. These vectors capture the semantic meaning of the data.
 
-Vector databases then store and index these embeddings, allowing for rapid similarity searches. This enables AI agents to quickly retrieve relevant information based on the semantic meaning of a query, rather than exact keyword matches. This is a core component in many [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) for enhanced **AI recall**. Learn more about [embedding models for memory](/articles/embedding-models-for-memory/).
+Vector databases then store and index these embeddings, allowing for rapid similarity searches. This enables AI agents to quickly retrieve relevant information based on the semantic meaning of a query, rather than exact keyword matches. This is a core component in many [best AI agent memory systems](/articles/best-ai-memory-systems/) for enhanced **AI recall**. Learn more about [embedding models for memory](/articles/embedding-models-for-memory/).
 
 #### Generating Embeddings with Sentence Transformers for AI Recall
 

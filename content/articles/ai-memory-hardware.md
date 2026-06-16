@@ -109,7 +109,7 @@ PCM is being investigated for its potential in AI hardware due to its ability to
 
 **Resistive RAM (ReRAM)**, also known as memristor technology, stores data by changing the resistance of a dielectric material. ReRAM devices are highly scalable and can achieve very high densities, offering a promising path for denser **AI memory hardware**.
 
-The memristive nature of ReRAM makes it particularly interesting for [neuromorphic computing](/articles/neuromorphic-computing-explained/). These devices can mimic the behavior of biological synapses, potentially enabling the creation of hardware that learns and processes information in a brain-like manner. This is a critical area for future **AI memory solutions**.
+The memristive nature of ReRAM makes it particularly interesting for neuromorphic computing. These devices can mimic the behavior of biological synapses, potentially enabling the creation of hardware that learns and processes information in a brain-like manner. This is a critical area for future **AI memory solutions**.
 
 ### Magnetic RAM (MRAM) Advantages
 

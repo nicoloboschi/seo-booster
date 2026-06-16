@@ -189,7 +189,7 @@ The ability for an AI chat to remember past interactions unlocks a wide range of
 
 ### Personalized AI Assistants
 
-An AI assistant that remembers your preferences, past requests, and even your mood can provide a significantly more helpful and engaging experience. It can proactively offer suggestions, manage your schedule with context, and tailor information to your specific needs. This is the promise of an [AI assistant remembers everything](/articles/ai-assistant-remembers-everythings/).
+An AI assistant that remembers your preferences, past requests, and even your mood can provide a significantly more helpful and engaging experience. It can proactively offer suggestions, manage your schedule with context, and tailor information to your specific needs. This is the promise of an [AI assistant remembers everything](/articles/ai-assistant-remembers-everything/).
 
 ### Enhanced Customer Support
 

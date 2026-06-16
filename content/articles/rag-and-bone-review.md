@@ -141,7 +141,7 @@ The LLM might either over-rely on the retrieved text, producing a verbatim or un
 
 ### Scalability and Cost
 
-Managing and querying massive knowledge bases can be computationally expensive and challenging to scale. While solutions like large **context window LLMs** aim to increase the amount of information an LLM can process at once, RAG's retrieval step remains crucial for managing external knowledge effectively. For those looking to run large context models locally, exploring options like a [local LLM with a large context window](/articles/local-llm-large-context/) might be relevant. The operational costs are an important factor in a practical **rag and bone review**.
+Managing and querying massive knowledge bases can be computationally expensive and challenging to scale. While solutions like large **context window LLMs** aim to increase the amount of information an LLM can process at once, RAG's retrieval step remains crucial for managing external knowledge effectively. For those looking to run large context models locally, exploring options like a local LLM with a large context window might be relevant. The operational costs are an important factor in a practical **rag and bone review**.
 
 ## RAG vs. Agent Memory Systems
 

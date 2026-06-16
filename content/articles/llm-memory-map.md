@@ -94,7 +94,7 @@ The billions of parameters in models like GPT-3 represent a complex, often opaqu
 
 ### Dynamic Nature of Contextual Memory
 
-An LLM's immediate "memory" is heavily influenced by its **context window**. This window is finite. As new information enters, older information can be pushed out. Mapping this dynamic aspect requires tracking the LLM's attention mechanisms. It also demands understanding how they prioritize information during generation. This relates directly to [context window limitations and solutions](/articles/context-window-limitations).
+An LLM's immediate "memory" is heavily influenced by its **context window**. This window is finite. As new information enters, older information can be pushed out. Mapping this dynamic aspect requires tracking the LLM's attention mechanisms. It also demands understanding how they prioritize information during generation. This relates directly to context window limitations and solutions.
 
 ### The Forgetting Curve in LLMs
 
@@ -138,7 +138,7 @@ Techniques for optimizing the **context window** directly manage the LLM's immed
 
 ### External Memory Systems for LLMs
 
-For true long-term recall, **LLM memory systems** often use external storage. Vector databases store and retrieve embeddings, acting as an extended knowledge base. These systems, coupled with the LLM's internal processing, create a more comprehensive memory architecture. You can explore various [LLM memory systems](/articles/llm-memory-systems) and compare their effectiveness.
+For true long-term recall, **LLM memory systems** often use external storage. Vector databases store and retrieve embeddings, acting as an extended knowledge base. These systems, coupled with the LLM's internal processing, create a more comprehensive memory architecture. You can explore various [LLM memory systems](/articles/llm-memory-system/) and compare their effectiveness.
 
 ### Specialized Libraries for LLM Memory
 

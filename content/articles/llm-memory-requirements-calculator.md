@@ -99,7 +99,7 @@ Model precision refers to the number of bits used to represent each parameter's 
 * **INT8 (8-bit integer)**: Significantly smaller, requires quantization techniques.
 * **INT4 (4-bit integer)**: Smallest footprint, more aggressive quantization.
 
-A **llm memory requirements calculator** will allow users to select the desired precision to see its impact on VRAM and RAM demands. For instance, switching from FP16 to INT8 can reduce memory requirements by roughly half. Understanding these trade-offs is key to [optimizing LLM inference speed](/articles/optimizing-llm-inference-speed/).
+A **llm memory requirements calculator** will allow users to select the desired precision to see its impact on VRAM and RAM demands. For instance, switching from FP16 to INT8 can reduce memory requirements by roughly half. Understanding these trade-offs is key to optimizing LLM inference speed.
 
 ## Context Window Size and Its Memory Implications for LLMs
 
@@ -220,4 +220,4 @@ As LLMs continue to grow in size and capability, efficient memory management bec
 
 Techniques like **memory consolidation** and improved attention mechanisms are constantly being developed. Also, the rise of specialized hardware and optimized inference engines promises to make LLMs more accessible. Understanding the **llm memory requirements calculator** is a foundational step in navigating this evolving landscape. It empowers developers to make informed decisions about hardware procurement and model deployment strategies.
 
-For more in-depth comparisons of memory solutions, explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) and understand the trade-offs between different approaches like [Retrieval-Augmented Generation (RAG) vs. agent memory](/articles/rag-vs-agent-memory/). The evolution of these systems will undoubtedly lead to more sophisticated **llm memory requirements calculator** tools in the future.
+For more in-depth comparisons of memory solutions, explore [best AI agent memory systems](/articles/best-ai-memory-systems/) and understand the trade-offs between different approaches like [Retrieval-Augmented Generation (RAG) vs. agent memory](/articles/rag-vs-agent-memory/). The evolution of these systems will undoubtedly lead to more sophisticated **llm memory requirements calculator** tools in the future.

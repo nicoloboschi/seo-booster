@@ -274,7 +274,7 @@ As AI agents interact with more data and over longer periods, their memory store
 Effective memory isn't just about remembering everything; it's about remembering the *right* things. AI agents need mechanisms to forget irrelevant or outdated information, a process known as **selective forgetting**. This prevents memory overload and ensures that the most pertinent data is readily accessible, a core challenge in **AI memory management**.
 
 * **Challenge:** Determining what information is truly irrelevant can be complex and context-dependent.
-* **Approaches:** Algorithms that score memory relevance based on usage frequency, recency, and task importance are employed. Research in [AI memory management strategies](/articles/ai-memory-management-strategies/) explores these techniques.
+* **Approaches:** Algorithms that score memory relevance based on usage frequency, recency, and task importance are employed. Research in AI memory management strategies explores these techniques.
 
 ### Contextual Drift and Consistency in AI Agents
 

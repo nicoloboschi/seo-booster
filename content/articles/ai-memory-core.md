@@ -120,7 +120,7 @@ A basic memory core might involve storing conversation logs in a text file or a 
 
 More sophisticated AI memory cores often adopt a layered approach. They might use a combination of fast, volatile memory (like an in-memory cache or LLM context window) for immediate tasks, a vector database for semantic retrieval of long-term knowledge, and potentially a graph database for storing complex relationships.
 
-**Letta AI** and systems like **Zep Memory** offer specialized solutions for managing and querying agent memory, often focusing on efficient storage and retrieval of conversational history and learned states. Comparing these [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) can provide insights into different architectural choices for an AI memory core.
+**Letta AI** and systems like **Zep Memory** offer specialized solutions for managing and querying agent memory, often focusing on efficient storage and retrieval of conversational history and learned states. Comparing these [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide insights into different architectural choices for an AI memory core.
 
 #### Example: Vector-Based Memory Retrieval
 

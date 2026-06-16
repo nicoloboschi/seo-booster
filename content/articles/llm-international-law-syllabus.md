@@ -98,7 +98,7 @@ According to a 2025 report by the International Bar Association, AI tools are pr
 
 The sheer volume of international legal scholarship, case law, and diplomatic records makes comprehensive research a daunting task. LLMs drastically speed up this process. They identify relevant precedents, legal arguments, and scholarly opinions with remarkable speed and accuracy.
 
-This enhanced research capability is vital for **international dispute resolution**. Lawyers quickly gather supporting evidence and legal arguments, strengthening their positions in international courts or arbitration tribunals. This also aids in understanding the evolution of [international legal principles](/articles/principles-of-international-law/). Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer advanced capabilities for analyzing complex legal documents, aiding in tasks such as treaty interpretation.
+This enhanced research capability is vital for **international dispute resolution**. Lawyers quickly gather supporting evidence and legal arguments, strengthening their positions in international courts or arbitration tribunals. This also aids in understanding the evolution of international legal principles. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer advanced capabilities for analyzing complex legal documents, aiding in tasks such as treaty interpretation.
 
 ### Drafting and Negotiating International Agreements
 
@@ -120,7 +120,7 @@ For example, an AI trained on historical legal texts might exhibit biases agains
 
 International law often deals with sensitive cross-border data. Using LLMs requires careful consideration of data privacy regulations, such as GDPR, and how they apply to international legal contexts. Ensuring the secure and ethical handling of data is paramount.
 
-This challenge is particularly acute when dealing with information exchanged between sovereign states. An **LLM international law syllabus** would explore frameworks for secure data handling in international legal AI applications. This is a critical aspect of any [legal AI framework](/articles/legal-ai-frameworks/).
+This challenge is particularly acute when dealing with information exchanged between sovereign states. An **LLM international law syllabus** would explore frameworks for secure data handling in international legal AI applications. This is a critical aspect of any legal AI framework.
 
 ### Accountability and Transparency
 
@@ -134,7 +134,7 @@ An **LLM international law syllabus** is not static; it must evolve alongside AI
 
 ### Continuous Learning and Skill Development
 
-As LLMs become more sophisticated, continuous learning is essential for legal professionals. An effective **LLM international law syllabus** emphasizes the need for ongoing skill development and adaptation to new AI tools and methodologies. This includes understanding [agentic AI concepts](/articles/agentic-ai-explained/) if agents are used for legal tasks.
+As LLMs become more sophisticated, continuous learning is essential for legal professionals. An effective **LLM international law syllabus** emphasizes the need for ongoing skill development and adaptation to new AI tools and methodologies. This includes understanding agentic AI concepts if agents are used for legal tasks.
 
 Skills such as prompt engineering for legal queries, critically evaluating AI outputs, and understanding the ethical implications of AI will become standard competencies. This proactive approach ensures the legal community remains leading technological advancements, preparing them for a future where AI is a constant companion.
 

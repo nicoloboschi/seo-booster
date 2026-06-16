@@ -119,7 +119,7 @@ AI memory systems are not monolithic; they comprise several interconnected compo
 
 Modern **ai in memory** heavily relies on **vector databases**. These databases store information as high-dimensional vectors, allowing for **semantic search**. Instead of exact keyword matches, retrieval is based on meaning and context. This is particularly useful for large language models (LLMs) that process and generate text based on nuanced understanding.
 
-For example, when an AI agent needs to recall a past conversation, a vector database can find the most semantically similar past interactions, even if the exact phrasing differs. This capability underpins many advanced AI applications and is central to effective **ai in memory**. You can learn more about [vector databases and their applications](/articles/vector-databases-for-ai/) on our site.
+For example, when an AI agent needs to recall a past conversation, a vector database can find the most semantically similar past interactions, even if the exact phrasing differs. This capability underpins many advanced AI applications and is central to effective **ai in memory**. You can learn more about vector databases and their applications on our site.
 
 ## Types of Memory in AI Agents
 
@@ -179,7 +179,7 @@ This helps prevent memory decay and improves the reliability of recalled informa
 
 The ability to understand and reason about time is a crucial aspect of advanced **ai in memory**. **Temporal reasoning in AI memory** allows agents to not only recall events but also understand their order, duration, and causal relationships over time.
 
-This is vital for applications like planning, scheduling, and understanding narratives. For instance, an AI needs to know that event B happened after event A to understand a sequence of actions or a story. This requires memory systems that can explicitly represent and query temporal information, as explored in [temporal reasoning in AI](/articles/temporal-reasoning-in-ai/).
+This is vital for applications like planning, scheduling, and understanding narratives. For instance, an AI needs to know that event B happened after event A to understand a sequence of actions or a story. This requires memory systems that can explicitly represent and query temporal information, as explored in temporal reasoning in AI.
 
 ### Memory Integration in AI Agent Architectures
 
@@ -199,4 +199,4 @@ The development of **AI that remembers conversations** and user preferences over
 
 ### Ethical Considerations and AI Memory
 
-As AI memory becomes more advanced, ethical considerations come to the forefront. Questions around data privacy, the potential for biased memory recall, and the implications of AI agents having persistent, detailed records of interactions need careful examination. Ensuring transparency and user control over AI memory is paramount for responsible **ai in memory** development. The [ethical considerations of AI memory](/articles/ethical-considerations-of-ai-memory/) are a growing area of focus.
+As AI memory becomes more advanced, ethical considerations come to the forefront. Questions around data privacy, the potential for biased memory recall, and the implications of AI agents having persistent, detailed records of interactions need careful examination. Ensuring transparency and user control over AI memory is paramount for responsible **ai in memory** development. The ethical considerations of AI memory are a growing area of focus.

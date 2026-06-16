@@ -82,7 +82,7 @@ Many advanced chatbots and virtual assistants now use LLMs to understand user qu
 
 ### Translation and Language Understanding
 
-LLMs have significantly advanced machine translation quality. They can also be used for sentiment analysis, topic modeling, and extracting information from unstructured text. The ability to process and translate languages so effectively is a direct result of understanding what is meant by LLM. Exploring [natural language processing techniques](/articles/natural-language-processing-techniques/) can provide further context.
+LLMs have significantly advanced machine translation quality. They can also be used for sentiment analysis, topic modeling, and extracting information from unstructured text. The ability to process and translate languages so effectively is a direct result of understanding what is meant by LLM. Exploring natural language processing techniques can provide further context.
 
 ### Code Generation and Assistance
 

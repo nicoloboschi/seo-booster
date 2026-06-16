@@ -196,7 +196,7 @@ These databases are optimized for storing and querying high-dimensional vectors.
 
 These libraries provide abstractions and pre-built components for managing LLM memory, often integrating with LLMs and vector stores.
 
-* **LangChain:** Offers various memory types (e.g., `ConversationBufferMemory`, `VectorStoreRetrieverMemory`) and integrations. [Vectorize.io offers a guide comparing LangChain memory options](/articles/letta-vs-langchain-memory).
+* **LangChain:** Offers various memory types (e.g., `ConversationBufferMemory`, `VectorStoreRetrieverMemory`) and integrations. Vectorize.io offers a guide comparing LangChain memory options.
 * **LlamaIndex:** Focuses on data indexing and retrieval for LLM applications, providing robust tools for building knowledge bases.
 * **Hindsight:** An open-source AI memory system designed for LLM agents, simplifying the management of conversational history and knowledge retrieval.
 
@@ -220,4 +220,4 @@ Implementing effective LLM memory management involves more than just choosing th
 5. **Monitor and Evaluate:** Regularly assess the performance of your memory system. Are agents forgetting crucial information? Is retrieval slow or inaccurate? Use [AI memory benchmarks](/articles/ai-memory-benchmarks/) to gauge performance.
 6. **Iterate:** Memory management is an ongoing process. Continuously refine your strategies based on observed performance and evolving LLM capabilities.
 
-By thoughtfully implementing these strategies, you can build AI agents that don't just process information but truly remember and learn, leading to more sophisticated and helpful interactions. Understanding the difference between [agent memory and RAG](/articles/agent-memory-vs-rag/) is also key to designing effective systems.
+By thoughtfully implementing these strategies, you can build AI agents that don't just process information but truly remember and learn, leading to more sophisticated and helpful interactions. Understanding the difference between agent memory and RAG is also key to designing effective systems.

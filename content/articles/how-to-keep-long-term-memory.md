@@ -144,5 +144,5 @@ For example, [Hindsight](https://github.com/vectorize-io/hindsight) offers a fle
 
 ## Conclusion
 
-Effectively maintaining **long-term memory** is a cornerstone of building intelligent AI agents. By strategically employing vector databases, memory consolidation, distinct memory types like episodic and semantic recall, hierarchical structures, and temporal reasoning, developers can create agents that learn, adapt, and remember over time. These approaches, often supported by [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), are paving the way for more capable and context-aware artificial intelligence.
+Effectively maintaining **long-term memory** is a cornerstone of building intelligent AI agents. By strategically employing vector databases, memory consolidation, distinct memory types like episodic and semantic recall, hierarchical structures, and temporal reasoning, developers can create agents that learn, adapt, and remember over time. These approaches, often supported by [best AI agent memory systems](/articles/best-ai-memory-systems/), are paving the way for more capable and context-aware artificial intelligence.
 

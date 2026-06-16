@@ -56,7 +56,7 @@ AI that can remember refers to artificial intelligence systems designed with mec
 
 AI memory in agents refers to the systems and processes that allow artificial intelligence agents to store, access, and recall information over time. This enables them to build a persistent understanding of their environment, past interactions, and learned knowledge, facilitating coherent behavior and improved decision-making.
 
-**AI memory systems** are the backbone of agents that can remember. They provide the mechanism for an **AI that can remember** by storing information and making it available for future use. Without these systems, an AI agent would essentially be stateless, losing all context with each new interaction. Understanding [how AI agents use memory](/articles/how-ai-agents-use-memory/) is key to building effective systems.
+**AI memory systems** are the backbone of agents that can remember. They provide the mechanism for an **AI that can remember** by storing information and making it available for future use. Without these systems, an AI agent would essentially be stateless, losing all context with each new interaction. Understanding how AI agents use memory is key to building effective systems.
 
 ### Types of AI Memory
 
@@ -154,7 +154,7 @@ A 2024 study published in arXiv demonstrated that retrieval-augmented agents sho
 **Memory consolidation in AI agents** is the process of transferring information from a volatile, short-term store to a more stable, long-term store. This mimics biological memory consolidation.
 
 * **Purpose**: It helps prevent forgetting, reduces redundancy, and makes memory more efficient. For an **AI agent persistent memory** to be effective, consolidation is vital.
-* **Techniques**: This can involve summarization, abstraction, or prioritizing important information for long-term storage. Research into [memory decay in AI](/articles/memory-decay-in-ai/) explores related challenges.
+* **Techniques**: This can involve summarization, abstraction, or prioritizing important information for long-term storage. Research into memory decay in AI explores related challenges.
 
 ## Advanced Capabilities of AI That Can Remember
 

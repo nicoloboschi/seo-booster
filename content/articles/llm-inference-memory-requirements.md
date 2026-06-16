@@ -101,7 +101,7 @@ The **context window** defines the maximum number of tokens an LLM can consider 
 
 ### Inference Framework and Optimizations
 
-The software framework used for inference (e.g. PyTorch, TensorFlow, TensorRT, vLLM) and specific optimizations implemented within it can significantly affect memory requirements. Optimized inference engines like NVIDIA's TensorRT or projects like vLLM are designed to minimize memory overhead, improve memory allocation strategies (e.g. PagedAttention), and reduce fragmentation, leading to more efficient memory use. Understanding [optimizing AI model performance](/articles/optimizing-ai-model-performance/) is key to managing these factors.
+The software framework used for inference (e.g. PyTorch, TensorFlow, TensorRT, vLLM) and specific optimizations implemented within it can significantly affect memory requirements. Optimized inference engines like NVIDIA's TensorRT or projects like vLLM are designed to minimize memory overhead, improve memory allocation strategies (e.g. PagedAttention), and reduce fragmentation, leading to more efficient memory use. Understanding optimizing AI model performance is key to managing these factors.
 
 ## Optimizing LLM Inference Memory
 
@@ -170,7 +170,7 @@ When an agent needs to access its memory, the retrieved information is often enc
 
 ## Memory Requirements vs. Training
 
-It's important to distinguish LLM inference memory requirements from LLM training memory requirements. Training is significantly more memory-intensive because it requires storing not only model parameters and activations but also gradients, optimizer states, and potentially multiple copies of the model for techniques like data parallelism and pipeline parallelism. Inference, on the other hand, primarily needs to hold the model's weights and the activations for a given input sequence. While still substantial, it's generally an order of magnitude less demanding than full training. For deeper insights into training, you might explore [GPU memory usage for deep learning training](/articles/gpu-memory-usage-for-deep-learning-training/).
+It's important to distinguish LLM inference memory requirements from LLM training memory requirements. Training is significantly more memory-intensive because it requires storing not only model parameters and activations but also gradients, optimizer states, and potentially multiple copies of the model for techniques like data parallelism and pipeline parallelism. Inference, on the other hand, primarily needs to hold the model's weights and the activations for a given input sequence. While still substantial, it's generally an order of magnitude less demanding than full training. For deeper insights into training, you might explore GPU memory usage for deep learning training.
 
 ## Conclusion
 

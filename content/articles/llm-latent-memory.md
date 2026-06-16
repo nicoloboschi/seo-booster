@@ -63,7 +63,7 @@ For instance, an LLM trained on vast amounts of text implicitly understands that
 
 While **llm latent memory** forms the bedrock of an LLM's capabilities, AI agents often require more structured forms of recall. This is where **explicit memory** systems come into play, offering distinct advantages for task-oriented AI. Explicit memory stores information in a format that is directly retrievable and manageable, such as a conversation history or a dedicated knowledge base.
 
-This distinction is vital for building sophisticated AI agents. Explicit memory systems allow agents to recall specific past interactions, user preferences, or task-specific data. This contrasts with latent memory, which is more about the general knowledge an LLM possesses. We can see this difference highlighted when comparing the [differences between agent memory and RAG systems](/articles/agent-memory-vs-rag), where RAG systems explicitly retrieve external information.
+This distinction is vital for building sophisticated AI agents. Explicit memory systems allow agents to recall specific past interactions, user preferences, or task-specific data. This contrasts with latent memory, which is more about the general knowledge an LLM possesses. We can see this difference highlighted when comparing the differences between agent memory and RAG systems, where RAG systems explicitly retrieve external information.
 
 ### Key Differences Summarized: Latent vs. Explicit Memory
 

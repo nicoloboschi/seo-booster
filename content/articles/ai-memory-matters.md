@@ -81,7 +81,7 @@ A common approach for LTM involves **vector databases**. Information is converte
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG is a powerful technique that augments LLM capabilities by retrieving relevant information from an external knowledge base (often a vector database) before generating a response. This allows LLMs to access up-to-date or domain-specific information they weren't originally trained on. RAG is a key enabler for agents that need to access and act upon vast amounts of data, and it's often compared to dedicated [agent memory vs. RAG](/articles/agent-memory-vs-rag/) systems.
+RAG is a powerful technique that augments LLM capabilities by retrieving relevant information from an external knowledge base (often a vector database) before generating a response. This allows LLMs to access up-to-date or domain-specific information they weren't originally trained on. RAG is a key enabler for agents that need to access and act upon vast amounts of data, and it's often compared to dedicated agent memory vs. RAG systems.
 
 A 2024 study published on arXiv found that RAG-based agents demonstrated a **34% improvement in task completion accuracy** compared to standard LLMs on complex question-answering benchmarks. This statistic underscores why **AI memory matters** for task performance. Another report from Gartner predicts that by 2026, over 70% of new enterprise applications will use RAG or similar techniques to access real-time data.
 
@@ -156,7 +156,7 @@ Despite significant progress, building truly effective AI memory systems present
 
 The future of AI memory likely involves several advancements. **Hierarchical Memory Systems** may mimic human memory, with agents employing multiple tiers of memory (e.g., ultra-short-term, short-term, long-term, and archival) with different access speeds and capacities. **Self-Improving Memory** will allow agents to actively refine their memory organization, prune irrelevant data, and consolidate important information without explicit human intervention. **Multimodal Memory** will integrate memory for different data types, such as text, images, audio, and video, to create richer and more comprehensive agent understanding. **Neuromorphic Computing** hardware designed to mimic the brain's structure may offer more efficient and biologically plausible memory mechanisms.
 
-The development of [best AI agent memory systems](/articles/best-ai-agent-memory-systems) continues to be a driving force behind more capable and human-like AI.
+The development of [best AI agent memory systems](/articles/best-ai-memory-systems/) continues to be a driving force behind more capable and human-like AI.
 
 ## Conclusion: Why AI Memory Truly Matters
 

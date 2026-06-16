@@ -114,7 +114,7 @@ We can broadly categorize memory in AI agents into **short-term memory** and **l
 
 #### What is Long-Term Memory in AI Agents?
 
-**Long-term memory** allows the chatbot to retain information over extended periods, across multiple sessions. This is essential for building a persistent understanding of the user and the subject matter. This is where techniques like [vector databases](/articles/vector-databases-for-ai/) and external knowledge stores become vital for an **AI chatbot that remembers**. This forms the core of **long-term memory AI** and enables **contextual AI**.
+**Long-term memory** allows the chatbot to retain information over extended periods, across multiple sessions. This is essential for building a persistent understanding of the user and the subject matter. This is where techniques like vector databases and external knowledge stores become vital for an **AI chatbot that remembers**. This forms the core of **long-term memory AI** and enables **contextual AI**.
 
 ### Implementing Long-Term Memory for Contextual AI
 
@@ -213,7 +213,7 @@ print(memory.get_history())
 ## {'role': 'user', 'content': 'Can you tell me about AI memory systems?'}]
 ```
 
-This basic implementation shows how an **AI chatbot that remembers** can manage its immediate conversational context. More advanced systems would use vector databases for long-term recall. Understanding [LLM context windows](/articles/llm-context-windows/) is key here for effective **AI context** management.
+This basic implementation shows how an **AI chatbot that remembers** can manage its immediate conversational context. More advanced systems would use vector databases for long-term recall. Understanding [LLM context windows](/articles/llm-api-context-window/) is key here for effective **AI context** management.
 
 ### Memory Consolidation and Pruning for AI Agent Memory
 

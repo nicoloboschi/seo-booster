@@ -205,7 +205,7 @@ When selecting or building a memory system for your **chatbot with memory using 
 * **Cost**: What are the computational and storage costs involved?
 * **Complexity**: How difficult is it to implement and maintain?
 
-Langchain offers many options, from simple buffers to complex RAG pipelines. The best choice depends on the specific requirements of your chatbot. Resources like [best AI agent memory systems available](/articles/best-ai-agent-memory-systems) can help in making informed decisions. Different memory types, like [episodic memory for AI agents](/articles/episodic-memory-in-ai-agents/), serve distinct purposes.
+Langchain offers many options, from simple buffers to complex RAG pipelines. The best choice depends on the specific requirements of your chatbot. Resources like [best AI agent memory systems available](/articles/best-ai-memory-systems/) can help in making informed decisions. Different memory types, like [episodic memory for AI agents](/articles/episodic-memory-in-ai-agents/), serve distinct purposes.
 
 ### Benchmarking Memory Performance
 

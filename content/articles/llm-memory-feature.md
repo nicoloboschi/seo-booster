@@ -154,7 +154,7 @@ Ensuring that the retrieved information is relevant to the current context is cr
 
 ### Data Privacy and Security
 
-When memory stores personal or sensitive information, robust privacy and security measures are non-negotiable. Implementing an **LLM memory feature** requires careful consideration of data encryption, access controls, and compliance with regulations like GDPR. The [importance of data privacy in AI](/articles/data-privacy-in-ai/) cannot be overstated.
+When memory stores personal or sensitive information, robust privacy and security measures are non-negotiable. Implementing an **LLM memory feature** requires careful consideration of data encryption, access controls, and compliance with regulations like GDPR. The importance of data privacy in AI cannot be overstated.
 
 ### Context Window Limitations
 

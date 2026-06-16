@@ -85,7 +85,7 @@ Several approaches are being developed to mitigate this:
 1. **Sparse Attention Mechanisms:** These methods reduce the number of token pairs that need to be attended to, moving towards linear or near-linear scaling.
 2. **Recurrence and State-Space Models:** Architectures like RWKV or Mamba offer linear scaling, making them more efficient for very long sequences.
 3. **Optimized Architectures:** Research into more efficient Transformer variants, such as Longformer or BigBird, continues to push boundaries for **large context LLMs**.
-4. **Efficient Retrieval Augmentation:** Even with a large context window, [advanced Retrieval-Augmented Generation (RAG) techniques](/articles/retrieval-augmented-generation-rag/) remain crucial. Techniques like efficient vector search and optimized **embedding models for RAG** ensure that the most relevant information is retrieved and fed into the large context window, rather than overwhelming it with irrelevant data. Mastering **LLM context management** is key for a **10 million context window LLM**.
+4. **Efficient Retrieval Augmentation:** Even with a large context window, advanced Retrieval-Augmented Generation (RAG) techniques remain crucial. Techniques like efficient vector search and optimized **embedding models for RAG** ensure that the most relevant information is retrieved and fed into the large context window, rather than overwhelming it with irrelevant data. Mastering **LLM context management** is key for a **10 million context window LLM**.
 
 ### Memory Management for Vast Information
 

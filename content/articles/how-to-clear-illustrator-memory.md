@@ -139,7 +139,7 @@ A full system restart is often the most effective way to clear all residual memo
 
 ## Advanced Troubleshooting for Illustrator Memory Leaks
 
-If the basic steps don't resolve persistent issues, consider these more advanced techniques. These often involve system-level checks or specific project-related optimizations for better [Photoshop performance](/articles/photoshop-performance-optimization/). Understanding **how to clear Illustrator memory** at an advanced level requires attention to document structure.
+If the basic steps don't resolve persistent issues, consider these more advanced techniques. These often involve system-level checks or specific project-related optimizations for better Photoshop performance. Understanding **how to clear Illustrator memory** at an advanced level requires attention to document structure.
 
 ### Optimize Your Illustrator Document
 

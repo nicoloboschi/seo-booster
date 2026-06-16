@@ -216,7 +216,7 @@ When comparing **RAG vs. agent memory**, Zep clearly falls into the agent memory
 
 ### Docker Compose for Other Memory Systems
 
-The approach of using Docker Compose to deploy memory systems is not unique to Zep. Many other vector databases and memory frameworks, such as ChromaDB itself or Weaviate, can be deployed similarly. This makes Docker Compose a valuable tool for any developer working with **AI memory systems**. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) will often reveal multiple options deployable with Docker. The **zep memory docker compose** pattern is part of this broader trend.
+The approach of using Docker Compose to deploy memory systems is not unique to Zep. Many other vector databases and memory frameworks, such as ChromaDB itself or Weaviate, can be deployed similarly. This makes Docker Compose a valuable tool for any developer working with **AI memory systems**. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) will often reveal multiple options deployable with Docker. The **zep memory docker compose** pattern is part of this broader trend.
 
 ## Conclusion: Streamlining AI Memory with Zep and Docker Compose
 

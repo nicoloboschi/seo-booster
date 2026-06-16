@@ -131,7 +131,7 @@ While often managed within the agent's immediate processing, an AI memory API ca
 
 ## Integrating AI Memory API with Agent Architectures
 
-The **AI memory API** doesn't exist in isolation; it's a component integrated into a larger AI agent architecture. Its successful implementation depends on how well it communicates with other parts of the agent, making it a critical part of [building modular AI systems](/articles/building-modular-ai/).
+The **AI memory API** doesn't exist in isolation; it's a component integrated into a larger AI agent architecture. Its successful implementation depends on how well it communicates with other parts of the agent, making it a critical part of building modular AI systems.
 
 ### The Role of Embedding Models
 
@@ -153,7 +153,7 @@ Developing AI agents that exhibit persistent memory requires careful considerati
 
 ### Designing for Persistence
 
-**Persistent memory** is the cornerstone of an agent that "remembers." The API must ensure that data stored is durable and available across multiple sessions or restarts of the agent. This often involves backing the API with a persistent database or storage solution, such as those detailed in [vector databases for AI memory](/articles/vector-databases-ai-memory/). An agent that can maintain its state and knowledge over time is far more useful than one that forgets everything upon termination. This is the promise of [agent persistent memory](/articles/ai-agent-persistent-memory/).
+**Persistent memory** is the cornerstone of an agent that "remembers." The API must ensure that data stored is durable and available across multiple sessions or restarts of the agent. This often involves backing the API with a persistent database or storage solution, such as those detailed in [vector databases for AI memory](/articles/vector-database-llm-memory/). An agent that can maintain its state and knowledge over time is far more useful than one that forgets everything upon termination. This is the promise of [agent persistent memory](/articles/ai-agent-persistent-memory/).
 
 ### Memory Consolidation and Forgetting
 

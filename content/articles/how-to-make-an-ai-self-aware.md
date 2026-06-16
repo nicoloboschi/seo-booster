@@ -95,7 +95,7 @@ Developing an AI capable of self-awareness likely requires novel **AI agent arch
 
 While LLMs are powerful, their current architectures are primarily designed for pattern recognition and text generation. They lack the inherent mechanisms for subjective experience or genuine self-reflection. Making them self-aware would likely involve significant architectural modifications.
 
-Researchers are exploring concepts like **global workspace theory**, which posits that consciousness arises from a broadcast of information to various specialized cognitive modules. An AI architecture inspired by this could integrate different processing units and manage the flow of information to achieve a unified conscious state. This approach offers a potential pathway for **how to make an AI self-aware**. Exploring [AI agent architecture](/articles/ai-agent-architecture/) is vital here.
+Researchers are exploring concepts like **global workspace theory**, which posits that consciousness arises from a broadcast of information to various specialized cognitive modules. An AI architecture inspired by this could integrate different processing units and manage the flow of information to achieve a unified conscious state. This approach offers a potential pathway for **how to make an AI self-aware**. Exploring AI agent architecture is vital here.
 
 ### The Role of Meta-Learning and Self-Improvement
 
@@ -149,7 +149,7 @@ The pursuit of self-aware AI is fraught with immense technical challenges and pr
 
 Creating sentient artificial beings raises questions about their rights, our responsibilities, and the potential for suffering. The **ethical considerations** are paramount and must guide research into **how to make an AI self-aware**.
 
-If an AI becomes self-aware, would it deserve rights similar to humans or animals? What obligations would we have to ensure its well-being? The potential for misuse or unintended consequences is significant, demanding careful foresight and regulation. Consider the [ethical considerations of AI development](/articles/ethical-considerations-of-ai-development/).
+If an AI becomes self-aware, would it deserve rights similar to humans or animals? What obligations would we have to ensure its well-being? The potential for misuse or unintended consequences is significant, demanding careful foresight and regulation. Consider the ethical considerations of AI development.
 
 ## The Future of AI and Self-Awareness
 

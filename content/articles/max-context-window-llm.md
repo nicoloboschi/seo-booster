@@ -67,7 +67,7 @@ The advantages offered by LLMs equipped with substantial context windows are far
 
 ### Enhanced Conversational Coherence
 
-An LLM featuring a large context window can retain a greater portion of a conversation's history. This capability facilitates more natural, coherent dialogues where the AI doesn't "forget" crucial details discussed minutes or hours prior. This feature is particularly vital for [AI systems with persistent memory](/articles/ai-systems-with-persistent-memory/). This capability is a hallmark of a **max context window LLM**.
+An LLM featuring a large context window can retain a greater portion of a conversation's history. This capability facilitates more natural, coherent dialogues where the AI doesn't "forget" crucial details discussed minutes or hours prior. This feature is particularly vital for AI systems with persistent memory. This capability is a hallmark of a **max context window LLM**.
 
 ### Improved Task Performance
 
@@ -115,7 +115,7 @@ Implementing LLMs with large context windows requires careful consideration of t
 
 ### Choosing the Right Model
 
-When selecting an LLM for a project, its context window size should be a primary factor, especially for applications demanding extensive memory capabilities. Models like Claude 2.1 (200k tokens), GPT-4 Turbo (128k tokens), and Gemini 1.5 Pro (up to 1 million tokens) offer significantly larger windows compared to their predecessors. For users exploring local deployment, resources for [running large context window LLMs locally](/articles/running-large-context-window-llms-locally/) are increasingly becoming available. This showcases the practical side of a **max context window LLM**.
+When selecting an LLM for a project, its context window size should be a primary factor, especially for applications demanding extensive memory capabilities. Models like Claude 2.1 (200k tokens), GPT-4 Turbo (128k tokens), and Gemini 1.5 Pro (up to 1 million tokens) offer significantly larger windows compared to their predecessors. For users exploring local deployment, resources for running large context window LLMs locally are increasingly becoming available. This showcases the practical side of a **max context window LLM**.
 
 ### Prompt Engineering for Long Contexts
 

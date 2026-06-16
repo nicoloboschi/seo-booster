@@ -49,7 +49,7 @@ Random Access Memory (RAM) is the most critical component for **vector database 
 * **Query Processing:** When an AI agent performs a query, the database searches this in-memory index. The larger the portion of the index that fits into RAM, the faster the search will be.
 * **Performance Bottlenecks:** If the dataset is too large to fit into RAM, the database must resort to fetching data from slower disk storage. This significantly increases query latency and can become a major bottleneck for real-time AI applications.
 
-A common rule of thumb suggests that you should aim to fit at least 70-80% of your vector index into RAM for optimal performance. For example, storing 10 million vectors, each of 768 dimensions with a `float32` data type, requires approximately `10,000,000 * 768 * 4 bytes = 30.72 GB` of RAM just for the vectors themselves, plus overhead for the index structure. This highlights the substantial **vector database memory requirements** for larger datasets. Meeting these demands is crucial for effective [AI recall mechanisms](/articles/ai-recall-mechanisms/).
+A common rule of thumb suggests that you should aim to fit at least 70-80% of your vector index into RAM for optimal performance. For example, storing 10 million vectors, each of 768 dimensions with a `float32` data type, requires approximately `10,000,000 * 768 * 4 bytes = 30.72 GB` of RAM just for the vectors themselves, plus overhead for the index structure. This highlights the substantial **vector database memory requirements** for larger datasets. Meeting these demands is crucial for effective AI recall mechanisms.
 
 ### Disk Storage: The Long-Term Memory
 
@@ -72,7 +72,7 @@ The most direct influence on memory usage is the dimensionality of the embedding
 * **Dimensionality:** Vectors with more dimensions (e.g., 1024 or 1536) require more memory per vector than those with fewer dimensions (e.g., 128 or 256). The choice of **embedding models for RAG** or other AI tasks directly impacts this.
 * **Data Type:** Vectors are typically stored as floating-point numbers. Using `float32` (4 bytes per dimension) is common, but `float16` (2 bytes per dimension) or even quantized formats can reduce memory footprint significantly, sometimes at the cost of a minor reduction in search accuracy.
 
-For instance, 1 million vectors with 768 dimensions using `float32` will occupy roughly `1,000,000 * 768 * 4 bytes = 3.07 GB`. If using `float16`, this reduces to `1.54 GB`. This principle applies across the entire dataset, directly impacting [AI agent memory capacity](/articles/memory-for-ai-agents/). This is a core aspect of **vector database memory requirements**.
+For instance, 1 million vectors with 768 dimensions using `float32` will occupy roughly `1,000,000 * 768 * 4 bytes = 3.07 GB`. If using `float16`, this reduces to `1.54 GB`. This principle applies across the entire dataset, directly impacting [AI agent memory capacity](/articles/memory-os-ai-agent/). This is a core aspect of **vector database memory requirements**.
 
 ### Number of Vectors Stored
 
@@ -109,7 +109,7 @@ As discussed, having sufficient RAM allows the vector database to serve queries 
 * **Real-time Interaction:** For an AI assistant that needs to recall context from a long conversation or access external knowledge instantly, sub-second query times are often necessary. This is only achievable when the relevant index data is in RAM.
 * **Scalability:** As the number of users or the complexity of tasks increases, the demand on the vector database grows. Insufficient memory becomes a scaling bottleneck, limiting the number of agents or users the system can support.
 
-A study published on arXiv in 2023 highlighted that moving data between RAM and disk can increase query latency by orders of magnitude. This underscores the importance of meeting RAM requirements for effective [AI knowledge retrieval](/articles/ai-knowledge-retrieval/). The direct link between memory and speed is a primary concern for **vector database memory requirements**.
+A study published on arXiv in 2023 highlighted that moving data between RAM and disk can increase query latency by orders of magnitude. This underscores the importance of meeting RAM requirements for effective AI knowledge retrieval. The direct link between memory and speed is a primary concern for **vector database memory requirements**.
 
 ### Recall and Accuracy
 

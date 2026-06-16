@@ -101,7 +101,7 @@ A study published on arXiv in 2023 demonstrated that agents employing summarizat
 
 ### Integrating with External Memory for AI Agent Memory
 
-Janitor LLM memory often works in conjunction with **long-term memory** systems. While it manages the immediate context for the LLM, external systems like vector databases or knowledge graphs store vast amounts of information that can be retrieved when needed. The pruning process ensures that the agent only fetches and includes the most pertinent pieces of information from its long-term memory into its active context. This layered approach is crucial for building capable AI agents. For a deeper dive into how different memory systems function, exploring [AI agent memory explained](/articles/ai-agent-memory-explained/) can provide valuable context. Understanding [AI agent reasoning](/articles/ai-agent-reasoning/) is also key to appreciating why curated memory is essential for **janitor LLM memory**.
+Janitor LLM memory often works in conjunction with **long-term memory** systems. While it manages the immediate context for the LLM, external systems like vector databases or knowledge graphs store vast amounts of information that can be retrieved when needed. The pruning process ensures that the agent only fetches and includes the most pertinent pieces of information from its long-term memory into its active context. This layered approach is crucial for building capable AI agents. For a deeper dive into how different memory systems function, exploring [AI agent memory explained](/articles/ai-agent-memory-explained/) can provide valuable context. Understanding AI agent reasoning is also key to appreciating why curated memory is essential for **janitor LLM memory**.
 
 ## Benefits of Janitor LLM Memory
 

@@ -139,7 +139,7 @@ The most robust AI agents often employ **hybrid memory architectures**. These sy
 * **A structured database:** For storing explicit facts, user profiles, or task states.
 * **A long-term memory store:** For accumulating knowledge and experiences over extended periods.
 
-The agent's core logic then orchestrates the flow of information between these components, deciding when to load data into short-term memory, when to query the vector database, and when to update the long-term store. Designing such architectures is a key focus in [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+The agent's core logic then orchestrates the flow of information between these components, deciding when to load data into short-term memory, when to query the vector database, and when to update the long-term store. Designing such architectures is a key focus in [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## Challenges and Future Directions
 

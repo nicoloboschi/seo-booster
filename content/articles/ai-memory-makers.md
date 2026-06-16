@@ -61,7 +61,7 @@ These systems are critical for building more capable and persistent AI agents. W
 
 Memory is not an optional add-on for advanced AI agents; it's a core requirement for **persistent AI memory**. Consider an AI assistant tasked with managing your schedule. It needs to remember your preferences, past appointments, and future commitments. Without a memory system, it would constantly ask for the same information, rendering it inefficient and frustrating to use.
 
-The development of effective **ai memory makers** is directly tied to advancements in areas like **long-term memory AI**, **episodic memory in AI agents**, and **semantic memory AI agents**. These specialized memory types allow agents to recall specific events, understand general knowledge, and integrate new information with existing understanding. Understanding [agent memory systems](/articles/agent-memory-systems/) is key to grasping their function.
+The development of effective **ai memory makers** is directly tied to advancements in areas like **long-term memory AI**, **episodic memory in AI agents**, and **semantic memory AI agents**. These specialized memory types allow agents to recall specific events, understand general knowledge, and integrate new information with existing understanding. Understanding [agent memory systems](/articles/llm-agent-memory-systems/) is key to grasping their function.
 
 ### Evolution from Stateless to Stateful AI
 
@@ -85,7 +85,7 @@ The first step in any memory system is storage. For AI, this can take many forms
 
 Storing information is only half the battle. **AI memory makers** must also efficiently retrieve relevant data when needed. This is where techniques like semantic search and associative recall come into play, crucial for effective **AI recall**.
 
-* **Semantic Search:** Using **embedding models for memory**, AI can convert queries into vectors and find the most similar stored vectors. This enables context-aware retrieval, crucial for understanding user intent. According to [research on vector databases](/articles/vector-database-performance-metrics/), retrieval accuracy can exceed 90% for well-indexed data.
+* **Semantic Search:** Using **embedding models for memory**, AI can convert queries into vectors and find the most similar stored vectors. This enables context-aware retrieval, crucial for understanding user intent. According to research on vector databases, retrieval accuracy can exceed 90% for well-indexed data.
 * **Keyword Search:** While less sophisticated, keyword-based retrieval remains useful for specific, structured queries.
 * **Hybrid Approaches:** Many advanced systems combine semantic and keyword search to offer the best of both worlds.
 
@@ -133,7 +133,7 @@ A 2024 study published on arxiv indicated that RAG-based agents showed a **34% i
 
 Beyond RAG, dedicated **agent memory systems** are being developed to provide more sophisticated memory functionalities. These systems can manage different types of memory (episodic, semantic), handle memory consolidation, and allow agents to proactively access and update their knowledge.
 
-Platforms like **Hindsight** (an open-source AI memory system available on GitHub at [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)) offer developers tools to integrate persistent memory into their AI agents. These systems often build upon vector databases and LLM integrations to create dynamic memory stores. Exploring [comparisons of memory systems](/articles/comparing-ai-memory-systems/) can provide insight into the diverse approaches available.
+Platforms like **Hindsight** (an open-source AI memory system available on GitHub at [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)) offer developers tools to integrate persistent memory into their AI agents. These systems often build upon vector databases and LLM integrations to create dynamic memory stores. Exploring comparisons of memory systems can provide insight into the diverse approaches available.
 
 ### Long-Term Memory Architectures for Stateful AI
 

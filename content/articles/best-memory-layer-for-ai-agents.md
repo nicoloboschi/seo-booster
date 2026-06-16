@@ -127,7 +127,7 @@ Agents designed for dialogue require memory that captures the flow and context o
 * **State Tracking:** Maintaining variables or flags that represent the current status of the dialogue or task.
 * **Summarization:** Condensing lengthy conversations into key takeaways for efficient LTM storage.
 
-Systems like Zep Memory or specialized modules within frameworks like LangChain focus on these aspects. Understanding the differences between [agent memory vs. RAG](/articles/agent-memory-vs-rag/) is crucial here, as conversational agents often need more than just RAG to form the **best memory layer for AI agents**.
+Systems like Zep Memory or specialized modules within frameworks like LangChain focus on these aspects. Understanding the differences between agent memory vs. RAG is crucial here, as conversational agents often need more than just RAG to form the **best memory layer for AI agents**.
 
 ### Memory Consolidation and Forgetting
 
@@ -168,7 +168,7 @@ When evaluating potential memory layers, consider these criteria. These factors 
 * **Contextualization:** Does it provide sufficient context (temporal, situational) with the retrieved data?
 * **Cost:** What are the computational and storage expenses?
 
-Performance benchmarks for AI memory systems are still evolving, but metrics often focus on retrieval speed and relevance scores. For instance, systems designed for [real-time AI applications](/articles/real-time-ai-applications/) will have much stricter latency requirements.
+Performance benchmarks for AI memory systems are still evolving, but metrics often focus on retrieval speed and relevance scores. For instance, systems designed for real-time AI applications will have much stricter latency requirements.
 
 ## Choosing the Right Memory Layer for Your AI Agent
 
@@ -178,7 +178,7 @@ The "best" memory layer for an AI agent is a function of its intended applicatio
 * **For knowledge retrieval agents:** A powerful vector database is often the primary choice, forming the core of their memory.
 * **For agents requiring learning and adaptation:** Focus on LTM, memory consolidation, and potentially episodic recall.
 
-Consider using specialized tools and frameworks that abstract away some of the complexity. For instance, comparing [Letta AI vs. LangChain memory](/articles/letta-vs-langchain-memory/) can highlight differences in their memory management philosophies and features. Ultimately, a well-designed memory system is foundational to creating an intelligent, capable, and truly memorable AI agent. The ongoing development in [AI agent long-term memory](/articles/ai-agent-long-term-memory/) promises even more sophisticated capabilities in the near future, continually refining what constitutes the **best memory layer for AI agents**.
+Consider using specialized tools and frameworks that abstract away some of the complexity. For instance, comparing Letta AI vs. LangChain memory can highlight differences in their memory management philosophies and features. Ultimately, a well-designed memory system is foundational to creating an intelligent, capable, and truly memorable AI agent. The ongoing development in [AI agent long-term memory](/articles/ai-agent-long-term-memory/) promises even more sophisticated capabilities in the near future, continually refining what constitutes the **best memory layer for AI agents**.
 
 ## FAQ
 

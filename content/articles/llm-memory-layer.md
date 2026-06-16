@@ -39,7 +39,7 @@ An **LLM memory layer** is an architectural construct for AI agents to store, re
 
 ### The Role of Memory in AI Agents
 
-**AI agents** are increasingly tasked with complex, multi-step operations and extended, nuanced conversations. This necessitates maintaining a coherent understanding of interactions, recalling relevant past events, and applying learned knowledge. The **LLM memory layer** facilitates this recall, bridging the gap between stateless LLM processing and the need for persistent state and contextual awareness. Without it, agents cannot build upon previous interactions, leading to repetitive queries and a lack of progress. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is fundamental to grasping the importance of these layers.
+**AI agents** are increasingly tasked with complex, multi-step operations and extended, nuanced conversations. This necessitates maintaining a coherent understanding of interactions, recalling relevant past events, and applying learned knowledge. The **LLM memory layer** facilitates this recall, bridging the gap between stateless LLM processing and the need for persistent state and contextual awareness. Without it, agents cannot build upon previous interactions, leading to repetitive queries and a lack of progress. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is fundamental to grasping the importance of these layers.
 
 ### Why Memory is Crucial for Agents
 
@@ -195,7 +195,7 @@ True AI agents capable of tackling complex, real-world problems require effectiv
 
 ### Ethical Considerations and Privacy
 
-As AI agents store more personal information, ethical considerations around data privacy and security become critical. Ensuring that memory layers are secure, that data is anonymized where appropriate, and that users have control over their data is paramount. Discussions around [persistent memory AI](/articles/persistent-memory-ai/) must include these vital aspects. The general principles of [AI ethics and safety](/articles/ai-ethics-and-safety/) are directly applicable here.
+As AI agents store more personal information, ethical considerations around data privacy and security become critical. Ensuring that memory layers are secure, that data is anonymized where appropriate, and that users have control over their data is paramount. Discussions around [persistent memory AI](/articles/persistent-memory-ai/) must include these vital aspects. The general principles of AI ethics and safety are directly applicable here.
 
 The journey towards more capable AI agents hinges on our ability to equip them with effective and intelligent memory systems. The **LLM memory layer** is not just an add-on; it's a fundamental building block for the future of artificial intelligence.
 

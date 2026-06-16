@@ -241,11 +241,11 @@ Building LLM memory from scratch offers ultimate flexibility but comes with sign
 3. You want to use a mature ecosystem and community support.
 4. Your project doesn't demand highly specialized memory functionalities.
 
-For many, exploring existing solutions like those in [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) or comparing options in [open-source memory systems compared](/articles/open-source-memory-systems-compared/) is the pragmatic first step before committing to building LLM memory from scratch.
+For many, exploring existing solutions like those in [best AI agent memory systems](/articles/best-ai-memory-systems/) or comparing options in [open-source memory systems compared](/articles/open-source-memory-systems-compared/) is the pragmatic first step before committing to building LLM memory from scratch.
 
 ## Conclusion
 
-Building LLM memory from scratch is a challenging but rewarding endeavor. It empowers developers to create AI agents with sophisticated, tailored recall capabilities. By carefully designing data structures, implementing efficient retrieval mechanisms, and thoughtfully integrating with the LLM, you can unlock new levels of AI performance and adaptability. This foundational work is key to advancing the capabilities of intelligent agents, moving beyond their inherent limitations towards more dynamic and knowledgeable AI systems. Understanding the broader context of [AI memory architecture](/articles/ai-memory-architecture/) and [AI memory design](/articles/ai-ai-memory-design/) will further inform your custom implementation of building LLM memory from scratch.
+Building LLM memory from scratch is a challenging but rewarding endeavor. It empowers developers to create AI agents with sophisticated, tailored recall capabilities. By carefully designing data structures, implementing efficient retrieval mechanisms, and thoughtfully integrating with the LLM, you can unlock new levels of AI performance and adaptability. This foundational work is key to advancing the capabilities of intelligent agents, moving beyond their inherent limitations towards more dynamic and knowledgeable AI systems. Understanding the broader context of [AI memory architecture](/articles/ai-memory-architecture/) and [AI memory design](/articles/ai-memory-design/) will further inform your custom implementation of building LLM memory from scratch.
 
 ## FAQ
 

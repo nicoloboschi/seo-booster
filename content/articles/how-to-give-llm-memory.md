@@ -137,7 +137,7 @@ A well-designed system might combine these. It allows the LLM to access differen
 
 Many popular LLM frameworks provide built-in support or integrations for memory management. Libraries like LangChain, LlamaIndex, and Haystack offer abstractions. They simplify connecting LLMs to various memory backends, including vector databases and RAG pipelines. This integration is key to how to give LLM memory.
 
-These frameworks abstract away much of the complexity. They allow developers to focus on defining the agent's behavior and the types of memory it needs. For example, LangChain offers various `Memory` classes. These can be attached to chains or agents, automatically managing the conversation history. Exploring options like [LangChain vs. LlamaIndex](/articles/langchain-vs-llamaindex) can also illuminate different integration paths.
+These frameworks abstract away much of the complexity. They allow developers to focus on defining the agent's behavior and the types of memory it needs. For example, LangChain offers various `Memory` classes. These can be attached to chains or agents, automatically managing the conversation history. Exploring options like LangChain vs. LlamaIndex can also illuminate different integration paths.
 
 #### Example: Basic RAG Implementation in Python for LLM Memory
 

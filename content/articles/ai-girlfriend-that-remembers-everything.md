@@ -170,7 +170,7 @@ Storing and retrieving potentially years of conversation data for millions of us
 
 ### Memory Consolidation and Selective Forgetting
 
-While the goal is for the AI to remember everything, perfect recall isn't always desirable or feasible. **Memory consolidation in AI agents** techniques might be needed to prioritize important information and potentially "forget" less relevant details to prevent information overload and maintain focus. This is related to understanding [AI agent memory types](/articles/ai-agent-memory-types/).
+While the goal is for the AI to remember everything, perfect recall isn't always desirable or feasible. **Memory consolidation in AI agents** techniques might be needed to prioritize important information and potentially "forget" less relevant details to prevent information overload and maintain focus. This is related to understanding [AI agent memory types](/articles/ai-agents-memory-types/).
 
 ### The Importance of Temporal Reasoning
 

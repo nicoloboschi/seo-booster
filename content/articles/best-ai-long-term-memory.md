@@ -104,7 +104,7 @@ print("Search Results:", search_results)
  2. It converts the query into an embedding and searches its vector database for relevant past information.
  3. The retrieved information (e.g. relevant past conversations, facts, documents) is combined with the original query.
  4. This augmented prompt is sent to an LLM for generating a contextually informed response.
-* **Impact:** RAG significantly enhances an agent's ability to provide accurate, relevant, and nuanced answers by grounding its generation in factual, retrieved data. This is a critical step towards achieving effective **AI agent long-term memory**. Implementing RAG effectively requires careful prompt engineering and selection of retrieval strategies. Understanding [the role of RAG in AI applications](/articles/retrieval-augmented-generation-explained/) can provide deeper insights.
+* **Impact:** RAG significantly enhances an agent's ability to provide accurate, relevant, and nuanced answers by grounding its generation in factual, retrieved data. This is a critical step towards achieving effective **AI agent long-term memory**. Implementing RAG effectively requires careful prompt engineering and selection of retrieval strategies. Understanding the role of RAG in AI applications can provide deeper insights.
 
 #### Structured Memory and Knowledge Graphs
 
@@ -151,7 +151,7 @@ Measuring the effectiveness of an AI's long-term memory is crucial. This involve
 * **Contextual Relevance:** Are the agent's responses and actions consistently relevant to the ongoing interaction and past history?
 * **Information Accuracy:** Does the agent correctly retrieve and use factual information from its memory?
 
-A 2025 study published on arXiv demonstrated that retrieval-augmented agents exhibited a **28% improvement in complex problem-solving tasks** compared to their non-augmented counterparts, highlighting the practical benefits of effective memory integration. Further research into [understanding vector databases for AI](/articles/vector-databases-for-ai/) can provide deeper insights.
+A 2025 study published on arXiv demonstrated that retrieval-augmented agents exhibited a **28% improvement in complex problem-solving tasks** compared to their non-augmented counterparts, highlighting the practical benefits of effective memory integration. Further research into understanding vector databases for AI can provide deeper insights.
 
 ### Architecting for Long-Term Recall
 

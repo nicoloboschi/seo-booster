@@ -149,7 +149,7 @@ Over time, retrieved information can become outdated or misinterpreted. This **m
 
 ### Data Privacy and Security Concerns
 
-Storing extensive conversational data raises significant privacy and security concerns. Developers must implement robust measures to protect user data, comply with regulations, and ensure that sensitive information is handled appropriately. This is a critical ethical consideration for any AI system designed to remember user interactions, and it intersects with [AI ethics and data privacy](/articles/ai-ethics-data-privacy/).
+Storing extensive conversational data raises significant privacy and security concerns. Developers must implement robust measures to protect user data, comply with regulations, and ensure that sensitive information is handled appropriately. This is a critical ethical consideration for any AI system designed to remember user interactions, and it intersects with AI ethics and data privacy.
 
 ## The Future of AI Conversational Memory
 

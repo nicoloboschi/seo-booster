@@ -103,7 +103,7 @@ Diagnosing **why am I having memory problems** with AI systems requires a system
 
 #### Analyzing Retrieval Failures
 
-Debugging often involves analyzing instances where retrieval failed. This might mean examining the queries the AI made to its memory, the results it received, and the underlying data. Tools and guides can offer insights into how memory is accessed. Understanding [how AI agents store memory](/articles/how-ai-agents-store-memory/) is a good starting point.
+Debugging often involves analyzing instances where retrieval failed. This might mean examining the queries the AI made to its memory, the results it received, and the underlying data. Tools and guides can offer insights into how memory is accessed. Understanding how AI agents store memory is a good starting point.
 
 #### Importance of Data Quality and Consistency
 

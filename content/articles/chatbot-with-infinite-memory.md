@@ -163,7 +163,7 @@ The order and timing of events are critical for understanding context. AI system
 
 Specialized **LLM memory systems** are emerging to streamline the implementation of **long-term memory**. These systems abstract away much of the complexity of managing vector databases and retrieval.
 
-Platforms like LlamaIndex or LangChain offer modules for memory management, integrating with various vector stores and LLMs. These frameworks simplify the process of building an AI that remembers conversations. For developers looking for managed solutions, services like Vectorize.io offer advanced memory capabilities. You can explore [best AI agent memory systems](/articles/best-ai-agent-memory-systems) to find suitable tools for your **chatbot with infinite memory**.
+Platforms like LlamaIndex or LangChain offer modules for memory management, integrating with various vector stores and LLMs. These frameworks simplify the process of building an AI that remembers conversations. For developers looking for managed solutions, services like Vectorize.io offer advanced memory capabilities. You can explore [best AI agent memory systems](/articles/best-ai-memory-systems/) to find suitable tools for your **chatbot with infinite memory**.
 
 ## Challenges and Future Directions
 

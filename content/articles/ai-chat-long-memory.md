@@ -58,7 +58,7 @@ Implementing **ai chat long memory** requires specialized architectures that go 
 
 One of the most prevalent approaches involves using **vector databases** to store conversational history. Each turn or important piece of information is converted into a numerical vector embedding. When the AI needs to recall past context, it searches the vector database for embeddings similar to the current query.
 
-This **semantic search** capability allows the AI to retrieve relevant past information even if the wording isn't identical. For instance, if a user previously expressed interest in "sci-fi books," the AI can retrieve this even if the current query is about "science fiction novels." This is a cornerstone of many [AI agent memory systems](/articles/best-ai-agent-memory-systems).
+This **semantic search** capability allows the AI to retrieve relevant past information even if the wording isn't identical. For instance, if a user previously expressed interest in "sci-fi books," the AI can retrieve this even if the current query is about "science fiction novels." This is a cornerstone of many [AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### Episodic vs. Semantic Memory Integration in AI
 
@@ -132,7 +132,7 @@ for turn in retrieved_context:
 
 ## This simulation can be expanded with vector embeddings for true semantic search.
 ## Libraries like ChromaDB or FAISS are commonly used for this.
-## See resources on [vector databases for AI](/articles/vector-databases-for-ai).
+## See resources on vector databases for AI.
 ```
 
 This example shows how conversation turns can be stored and then searched for relevant information. Real-world applications would employ more sophisticated methods, such as vector embeddings for semantic search, to achieve effective **long memory for AI chat**.

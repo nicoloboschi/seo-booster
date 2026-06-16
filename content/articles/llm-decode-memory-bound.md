@@ -47,7 +47,7 @@ The attention mechanism, while powerful for understanding token relationships, i
 
 ## How the LLM Decode Memory Bound Impacts AI Agents
 
-The **LLM decode memory bound** directly affects AI agent capabilities. Agents designed for complex, long-running tasks or conversations often hit this wall, limiting their effectiveness. When an agent can't reliably recall or process past interactions or relevant external information due to memory constraints during decoding, its performance degrades. This limitation is a key factor in understanding the current state of [advanced agent memory systems](/articles/agent-memory-systems/).
+The **LLM decode memory bound** directly affects AI agent capabilities. Agents designed for complex, long-running tasks or conversations often hit this wall, limiting their effectiveness. When an agent can't reliably recall or process past interactions or relevant external information due to memory constraints during decoding, its performance degrades. This limitation is a key factor in understanding the current state of [advanced agent memory systems](/articles/llm-agent-memory-systems/).
 
 ### Impact on Dialogue Coherence
 
@@ -59,7 +59,7 @@ For AI agents tasked with complex reasoning, planning, or problem-solving, the *
 
 ### Inconsistent Task Performance
 
-When an agent operates under the **LLM decode memory bound**, its performance can become inconsistent. It might perform well on shorter tasks but falter when faced with more demanding ones requiring manipulation of larger information sets during generation. This unpredictability makes reliable deployment difficult. The **LLM decode memory bound** is a persistent challenge in agent development, impacting its overall [AI development lifecycle](/articles/ai-development-lifecycle/).
+When an agent operates under the **LLM decode memory bound**, its performance can become inconsistent. It might perform well on shorter tasks but falter when faced with more demanding ones requiring manipulation of larger information sets during generation. This unpredictability makes reliable deployment difficult. The **LLM decode memory bound** is a persistent challenge in agent development, impacting its overall AI development lifecycle.
 
 ## Strategies to Overcome the LLM Decode Memory Bound
 

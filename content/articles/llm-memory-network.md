@@ -73,7 +73,7 @@ Popular vector databases include Pinecone, Weaviate, and Chroma. For developers 
 
 Retrieval-Augmented Generation (RAG) is a technique closely related to LLM memory networks. RAG systems retrieve relevant external documents or data and inject them into the LLM's prompt to improve response quality for a specific query. While RAG often focuses on document retrieval for immediate query answering, a full LLM memory network typically encompasses a broader, more persistent form of memory.
 
-A key distinction is that RAG often retrieves static documents for immediate query answering. An **LLM memory network** can store and retrieve dynamic interaction histories, user preferences, and learned states, creating a more continuous and personalized experience. Understanding [agent memory vs RAG](/articles/agent-memory-vs-rag) clarifies these nuances in how external knowledge is accessed.
+A key distinction is that RAG often retrieves static documents for immediate query answering. An **LLM memory network** can store and retrieve dynamic interaction histories, user preferences, and learned states, creating a more continuous and personalized experience. Understanding agent memory vs RAG clarifies these nuances in how external knowledge is accessed.
 
 ## Types of Memory in LLM Networks
 
@@ -105,7 +105,7 @@ The architecture can range from simple key-value stores for basic recall to comp
 
 ### Choosing the Right Embedding Models
 
-The quality of the embeddings directly impacts the effectiveness of the memory network's retrieval capabilities. **Embedding models** like Sentence-BERT, OpenAI's Ada embeddings, or Cohere's models are commonly used. The choice depends on factors such as performance, cost, and the specific domain of the LLM's application. Research from [vector databases for AI memory](/articles/vector-databases-for-ai-memory) shows that models optimized for specific tasks can yield up to 15% improvement in retrieval accuracy.
+The quality of the embeddings directly impacts the effectiveness of the memory network's retrieval capabilities. **Embedding models** like Sentence-BERT, OpenAI's Ada embeddings, or Cohere's models are commonly used. The choice depends on factors such as performance, cost, and the specific domain of the LLM's application. Research from [vector databases for AI memory](/articles/vector-database-for-memory/) shows that models optimized for specific tasks can yield up to 15% improvement in retrieval accuracy.
 
 These models map text into a dense vector space where semantically similar phrases are located close to each other. This allows for "semantic search," where queries can find relevant information even if the exact keywords aren't present. Understanding [embedding models for memory](/articles/embedding-models-for-memory) is fundamental to building a capable system.
 
@@ -191,7 +191,7 @@ This proactive capability would move AI closer to human-like cognition, where me
 
 LLM memory networks are transforming large language models from stateless tools into dynamic, context-aware entities. By providing a persistent and searchable repository of information, these networks overcome the inherent limitations of LLM context windows, enabling more coherent conversations, deeper reasoning, and personalized interactions. As research progresses, we can expect even more sophisticated memory systems that push the boundaries of artificial intelligence.
 
-The development of **llm memory network** solutions is critical for building advanced AI applications. Whether for chatbots, virtual assistants, or complex analytical tools, the ability for AI to remember and learn from experience is fundamental to its utility and intelligence. Exploring [vector databases for AI memory](/articles/vector-databases-for-ai-memory) can provide further guidance on current implementations and underlying technologies.
+The development of **llm memory network** solutions is critical for building advanced AI applications. Whether for chatbots, virtual assistants, or complex analytical tools, the ability for AI to remember and learn from experience is fundamental to its utility and intelligence. Exploring [vector databases for AI memory](/articles/vector-database-for-memory/) can provide further guidance on current implementations and underlying technologies.
 
 ---
 

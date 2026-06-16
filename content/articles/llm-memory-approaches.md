@@ -125,7 +125,7 @@ Many sophisticated AI agents employ **hybrid memory systems**. These systems com
 3. **Knowledge Graph or Structured Database:** For precise factual recall and relational queries.
 4. **Summarization/Consolidation Module:** To manage long-term memory size and efficiency.
 
-This layered approach allows agents to handle diverse information needs efficiently. For instance, an agent might use RAG to find a relevant document and then query a knowledge graph for specific details within that document. This mirrors how humans recall information, combining general knowledge with specific event details. Such systems are often discussed in the context of [AI memory system comparisons](/articles/ai-memory-system-comparisons/).
+This layered approach allows agents to handle diverse information needs efficiently. For instance, an agent might use RAG to find a relevant document and then query a knowledge graph for specific details within that document. This mirrors how humans recall information, combining general knowledge with specific event details. Such systems are often discussed in the context of AI memory system comparisons.
 
 ### Key Considerations for LLM Memory Implementation
 

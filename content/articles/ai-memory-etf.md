@@ -99,7 +99,7 @@ A 2024 report by Grand View Research projected the global AI memory market to re
 
 ### The Role of Vector Databases in AI Memory Investment
 
-Vector databases are a cornerstone of modern AI memory, enabling efficient storage and retrieval of high-dimensional data like text embeddings. Companies developing and optimizing these databases are critical to the **AI memory investment** thesis. Their ability to quickly find semantically similar information is vital for advanced AI reasoning. Learning about [vector databases for AI](/articles/vector-databases-for-ai) is crucial for understanding this sector.
+Vector databases are a cornerstone of modern AI memory, enabling efficient storage and retrieval of high-dimensional data like text embeddings. Companies developing and optimizing these databases are critical to the **AI memory investment** thesis. Their ability to quickly find semantically similar information is vital for advanced AI reasoning. Learning about vector databases for AI is crucial for understanding this sector.
 
 ### Context Window Limitations and Solutions for AI Memory
 

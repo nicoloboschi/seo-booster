@@ -94,7 +94,7 @@ def retrieve_from_memory(query: str, vector_db_client, embedding_model, top_k: i
 ## print(relevant_info)
 ```
 
-This logic ensures that the LLM receives contextually relevant information, enhancing its responses. Research from [AI agent memory solutions](/articles/vector-databases-for-ai/) further details the importance of efficient retrieval.
+This logic ensures that the LLM receives contextually relevant information, enhancing its responses. Research from AI agent memory solutions further details the importance of efficient retrieval.
 
 ### Other Storage Solutions for Persistent Memory
 
@@ -159,7 +159,7 @@ Other open-source options include libraries that integrate with vector databases
 For developers who prefer a more managed approach, various services offer persistent memory solutions.
 
 * **Managed Vector Databases:** Services like Pinecone, Weaviate, and Chroma offer cloud-hosted solutions for storing and querying embeddings, simplifying the infrastructure burden.
-* **LLM Memory Frameworks:** Libraries like LangChain and LlamaIndex provide abstractions for memory management, allowing developers to easily integrate various memory backends, including vector databases and traditional storage. [Persistent memory tools for LLMs](/articles/best-ai-agent-memory-systems) offers guides comparing different memory solutions, including [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/).
+* **LLM Memory Frameworks:** Libraries like LangChain and LlamaIndex provide abstractions for memory management, allowing developers to easily integrate various memory backends, including vector databases and traditional storage. [Persistent memory tools for LLMs](/articles/best-ai-memory-systems/) offers guides comparing different memory solutions, including Letta vs. Langchain memory.
 
 These solutions abstract away much of the complexity, allowing developers to focus on building intelligent applications that benefit from **persistent memory for LLMs**.
 

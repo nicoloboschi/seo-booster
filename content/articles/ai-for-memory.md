@@ -69,13 +69,13 @@ This method excels at **semantic search**, allowing retrieval of conceptually re
 
 **Knowledge graphs** offer another powerful way to implement **AI memory**. They represent information as a network of **entities** and their **relationships**. This structured approach is excellent for recalling factual knowledge and understanding complex connections between different pieces of information.
 
-For example, an AI could use a knowledge graph to remember that "Paris is the capital of France" and that "France is a country in Europe." This allows for more precise, logical reasoning compared to purely semantic retrieval. Understanding the [role of knowledge graphs in AI](/articles/knowledge-graphs-in-ai) is key to building sophisticated memory systems.
+For example, an AI could use a knowledge graph to remember that "Paris is the capital of France" and that "France is a country in Europe." This allows for more precise, logical reasoning compared to purely semantic retrieval. Understanding the role of knowledge graphs in AI is key to building sophisticated memory systems.
 
 ### Hybrid Memory Models for Enhanced AI Agents
 
 The most sophisticated **AI for memory** solutions often employ **hybrid memory models**. These systems combine different memory types and retrieval mechanisms to cater to various information needs. They might use a short-term memory buffer for immediate context, a vector database for semantic recall, and a knowledge graph for structured facts.
 
-This layered approach ensures that the AI can access the right type of information efficiently. According to a 2024 study by researchers at Stanford University published on arXiv, hybrid memory architectures demonstrated a 25% improvement in complex task completion rates compared to single-method recall systems. Such systems are crucial for advanced [AI agent memory architectures](/articles/ai-agent-memory-architectures).
+This layered approach ensures that the AI can access the right type of information efficiently. According to a 2024 study by researchers at Stanford University published on arXiv, hybrid memory architectures demonstrated a 25% improvement in complex task completion rates compared to single-method recall systems. Such systems are crucial for advanced [AI agent memory architectures](/articles/ai-memory-architecture/).
 
 ## Types of Memory in AI Agents
 
@@ -164,7 +164,7 @@ for i in top_indices:
 ## and acknowledge the user's past dissatisfaction.
 ```
 
-This code simulates a core component of **AI for memory**: encoding information and retrieving the most semantically relevant pieces based on a query, directly informing an agent's context. It demonstrates how semantic similarity, a key concept in [AI memory retrieval](/articles/ai-memory-retrieval), can be applied to recall past data.
+This code simulates a core component of **AI for memory**: encoding information and retrieving the most semantically relevant pieces based on a query, directly informing an agent's context. It demonstrates how semantic similarity, a key concept in AI memory retrieval, can be applied to recall past data.
 
 ## Challenges and Future Directions in AI Memory
 
@@ -172,7 +172,7 @@ Despite significant advancements, implementing effective **AI for memory** still
 
 ### Scalability and Efficiency in AI Memory Systems
 
-As agents interact over longer periods and gather more data, memory systems must scale efficiently. Storing and retrieving billions of data points quickly is crucial for real-time applications. Research into optimizing vector database performance and developing more efficient **memory consolidation** techniques is ongoing. The efficiency of [vector database indexing](/articles/vector-database-indexing) is key here.
+As agents interact over longer periods and gather more data, memory systems must scale efficiently. Storing and retrieving billions of data points quickly is crucial for real-time applications. Research into optimizing vector database performance and developing more efficient **memory consolidation** techniques is ongoing. The efficiency of vector database indexing is key here.
 
 ### Forgetting and Relevance Filtering for AI Agents
 
@@ -180,7 +180,7 @@ Humans naturally forget irrelevant information. AI memory systems also need mech
 
 ### Ethical Considerations in AI for Memory
 
-Concerns around privacy and data security are paramount when dealing with **AI for memory**. Storing extensive personal interaction data raises ethical questions about consent, data ownership, and potential misuse. Ensuring responsible data handling is critical for user trust. The ethical implications of [long-term AI memory](/articles/long-term-ai-memory) are a significant topic of discussion.
+Concerns around privacy and data security are paramount when dealing with **AI for memory**. Storing extensive personal interaction data raises ethical questions about consent, data ownership, and potential misuse. Ensuring responsible data handling is critical for user trust. The ethical implications of long-term AI memory are a significant topic of discussion.
 
 ### Advancements in Long-Term Memory for AI
 

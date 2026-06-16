@@ -182,7 +182,7 @@ Regularly prune irrelevant or outdated information from active memory. Archive l
 
 ### Using External Memory Stores for LLM Memory
 
-Move beyond the inherent limitations of LLM context windows by integrating external memory solutions. **Vector databases** are excellent for storing and retrieving vast amounts of information based on semantic similarity. This effectively provides an AI with a virtually unlimited long-term memory, expanding **LLM memory** capabilities. [Best AI agent memory systems](/articles/best-ai-agent-memory-systems/) often incorporate these.
+Move beyond the inherent limitations of LLM context windows by integrating external memory solutions. **Vector databases** are excellent for storing and retrieving vast amounts of information based on semantic similarity. This effectively provides an AI with a virtually unlimited long-term memory, expanding **LLM memory** capabilities. [Best AI agent memory systems](/articles/best-ai-memory-systems/) often incorporate these.
 
 Here's a conceptual Python example of storing embeddings in a vector database:
 

@@ -124,7 +124,7 @@ Choosing the right system depends on factors like scalability, ease of integrati
 
 ### Vectorize.io and AI Memory
 
-Vectorize.io provides resources and guides on building advanced AI systems. Our article on [Best AI Agent Memory Systems](/articles/best-ai-agent-memory-systems/) delves into various approaches and tools for **persistent memory AI**. We also offer a comparison of [Letta vs. Langchain Memory](/articles/letta-vs-langchain-memory/), highlighting differences in their memory handling capabilities. Understanding the distinction between [Agent Memory vs. RAG](/articles/agent-memory-vs-rag/) is also crucial for architects seeking the **best AI with persistent memory**.
+Vectorize.io provides resources and guides on building advanced AI systems. Our article on [Best AI Agent Memory Systems](/articles/best-ai-memory-systems/) delves into various approaches and tools for **persistent memory AI**. We also offer a comparison of Letta vs. Langchain Memory, highlighting differences in their memory handling capabilities. Understanding the distinction between Agent Memory vs. RAG is also crucial for architects seeking the **best AI with persistent memory**.
 
 ## Implementing Persistent Memory in AI Agents
 

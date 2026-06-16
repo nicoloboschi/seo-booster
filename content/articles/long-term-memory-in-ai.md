@@ -121,7 +121,7 @@ for mem in relevant_memories:
 
 ### Knowledge Graphs for Relational Memory
 
-**Knowledge graphs** offer another structured way to represent information for AI memory. They model entities and their relationships as nodes and edges. This allows **AI agents to remember** and perform complex reasoning by traversing the graph, inferring new connections, and understanding intricate dependencies. This approach is particularly useful for domains requiring deep relational understanding, such as advanced [knowledge representation techniques in AI](/articles/knowledge-representation-in-ai/).
+**Knowledge graphs** offer another structured way to represent information for AI memory. They model entities and their relationships as nodes and edges. This allows **AI agents to remember** and perform complex reasoning by traversing the graph, inferring new connections, and understanding intricate dependencies. This approach is particularly useful for domains requiring deep relational understanding, such as advanced knowledge representation techniques in AI.
 
 ### Hybrid Memory Architectures
 

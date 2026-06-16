@@ -126,7 +126,7 @@ print(f"Context: {manager.get_context_as_string()}")
 
 ### Beyond the Context Window: Advanced Memory Techniques
 
-While the context window is the primary mechanism for immediate context, more advanced **AI agent memory** systems go further. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer frameworks for managing and retrieving information more effectively, often integrating with external memory stores. These systems aim to provide a more robust form of memory that isn't solely limited by the LLM's inherent context window. They allow agents to build a richer understanding over time, moving beyond simple short-term recall. Exploring [top AI agent memory systems](/articles/best-ai-agent-memory-systems) can reveal these advanced approaches.
+While the context window is the primary mechanism for immediate context, more advanced **AI agent memory** systems go further. Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer frameworks for managing and retrieving information more effectively, often integrating with external memory stores. These systems aim to provide a more robust form of memory that isn't solely limited by the LLM's inherent context window. They allow agents to build a richer understanding over time, moving beyond simple short-term recall. Exploring [top AI agent memory systems](/articles/best-ai-memory-systems/) can reveal these advanced approaches.
 
 ## Measuring Context Memory Performance
 

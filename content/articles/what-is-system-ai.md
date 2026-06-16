@@ -88,7 +88,7 @@ Memory is a cornerstone of any intelligent system, and for System AI, it present
 
 ### Types of Memory in System AI
 
-System AI can use various forms of memory, mirroring human cognitive processes. **Episodic memory** allows agents to recall specific past events or interactions, providing context for current decisions. This is crucial for conversational AI that needs to remember previous turns in a dialogue. [AI agent memory systems](/articles/ai-agent-memory-systems/) are vital for this.
+System AI can use various forms of memory, mirroring human cognitive processes. **Episodic memory** allows agents to recall specific past events or interactions, providing context for current decisions. This is crucial for conversational AI that needs to remember previous turns in a dialogue. [AI agent memory systems](/articles/llm-agent-memory-systems/) are vital for this.
 
 **Semantic memory** stores general knowledge and facts about the world. This might be a shared knowledge base that all agents can query. **Working memory** or short-term memory holds information relevant to the immediate task, allowing agents to process ongoing data streams.
 

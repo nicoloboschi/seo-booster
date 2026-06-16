@@ -68,7 +68,7 @@ Quickly finding existing data is as crucial as storing it. **Mem0 OpenMemory** l
 
 ### Memory Consolidation and Forgetting Processes
 
-Just as humans don't remember everything, effective AI memory systems often require mechanisms for **memory consolidation** and forgetting. This prevents the memory store from becoming unwieldy and ensures that the most relevant information is prioritized. Processes that summarize or strengthen important memories, or selectively de-prioritize outdated information, are crucial for maintaining performance and relevance in dynamic environments. These concepts are explored further in [AI memory consolidation strategies](/articles/ai-memory-consolidation-strategies/).
+Just as humans don't remember everything, effective AI memory systems often require mechanisms for **memory consolidation** and forgetting. This prevents the memory store from becoming unwieldy and ensures that the most relevant information is prioritized. Processes that summarize or strengthen important memories, or selectively de-prioritize outdated information, are crucial for maintaining performance and relevance in dynamic environments. These concepts are explored further in AI memory consolidation strategies.
 
 ### Integration with Agent Architecture
 

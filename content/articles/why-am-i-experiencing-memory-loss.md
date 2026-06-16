@@ -97,7 +97,7 @@ Tools and techniques for **AI agent memory benchmarking** can help identify bott
 
 The choice of memory architecture significantly impacts an agent's ability to retain information. Systems like **Hindsight** (open source AI memory system) offer flexible approaches to managing agent memory, often integrating with vector databases and LLMs.
 
-When an AI experiences memory loss, it's worth re-evaluating the chosen architecture. Is it suitable for the task's complexity and duration? Are there better alternatives, such as dedicated **AI agent persistent memory** solutions or advanced **LLM memory systems** that specifically address long-term recall? Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems) can guide these decisions.
+When an AI experiences memory loss, it's worth re-evaluating the chosen architecture. Is it suitable for the task's complexity and duration? Are there better alternatives, such as dedicated **AI agent persistent memory** solutions or advanced **LLM memory systems** that specifically address long-term recall? Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can guide these decisions.
 
 ### Implementing Memory Augmentation Techniques
 

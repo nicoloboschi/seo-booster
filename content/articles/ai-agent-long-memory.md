@@ -47,7 +47,7 @@ A 2024 study published in arXiv (e.g., [arXiv:2401.01234](https://arxiv.org/abs/
 
 To overcome context window limitations, AI agents employ specialized memory architectures. These systems aim to provide a scalable and efficient way to store and retrieve vast amounts of data. This is where the concept of **AI agent long memory** becomes central to agent development.
 
-The development of effective long-term memory for AI agents is an ongoing research area, impacting everything from conversational AI to autonomous systems. Understanding [how AI agents use memory](/articles/how-ai-agents-use-memory/) is foundational for building intelligent agents that can truly learn and adapt.
+The development of effective long-term memory for AI agents is an ongoing research area, impacting everything from conversational AI to autonomous systems. Understanding how AI agents use memory is foundational for building intelligent agents that can truly learn and adapt.
 
 ## Architectures for AI Agent Long Memory
 

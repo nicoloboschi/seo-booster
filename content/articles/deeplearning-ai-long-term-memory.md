@@ -41,7 +41,7 @@ This persistent knowledge allows AI agents to build upon previous experiences, u
 
 Modern AI agents, particularly those powered by large language models (LLMs), face a fundamental limitation: their **context window**. This window represents the amount of information an LLM can process at any given moment. Once information falls outside this window, it's effectively forgotten. This severely hampers an agent's ability to engage in extended dialogues, learn from past mistakes, or recall crucial details from earlier interactions.
 
-Implementing **deeplearning.ai long term memory** solutions directly addresses this constraint. It allows agents to retain information indefinitely, transforming them from stateless conversationalists into entities capable of building a history and evolving their understanding over time. This is essential for applications like personalized assistants, complex task management, and long-running simulations. Understanding [how agents remember information](/articles/how-ai-agents-remember-information/) is key to appreciating the need for long-term memory.
+Implementing **deeplearning.ai long term memory** solutions directly addresses this constraint. It allows agents to retain information indefinitely, transforming them from stateless conversationalists into entities capable of building a history and evolving their understanding over time. This is essential for applications like personalized assistants, complex task management, and long-running simulations. Understanding how agents remember information is key to appreciating the need for long-term memory.
 
 ## Architectures for Deeplearning.ai Long-Term Memory
 
@@ -61,7 +61,7 @@ At the heart of many RAG systems and other long-term memory solutions are **vect
 
 **Vector databases** are optimized for storing and searching these high-dimensional vectors. When an AI agent needs to recall information, it embeds the current query and then searches the vector database for similar vectors. This similarity search efficiently retrieves semantically related pieces of information from the agent's long-term memory.
 
-Popular vector databases like Pinecone, Weaviate, and Chroma are often integrated into AI agent architectures. The choice of embedding model is critical, as it directly impacts the quality of the semantic search and the relevance of retrieved information. This forms a core component of many **deeplearning.ai long term memory** implementations. Exploring [advanced embedding models for AI memory](/articles/advanced-embedding-models-for-ai-memory/) is essential for optimizing this process.
+Popular vector databases like Pinecone, Weaviate, and Chroma are often integrated into AI agent architectures. The choice of embedding model is critical, as it directly impacts the quality of the semantic search and the relevance of retrieved information. This forms a core component of many **deeplearning.ai long term memory** implementations. Exploring advanced embedding models for AI memory is essential for optimizing this process.
 
 Here's a basic Python example using an in-memory vector store that demonstrates a core concept of **deeplearning.ai long term memory**:
 
@@ -210,7 +210,7 @@ Ensuring that the retrieved information is consistently relevant and not just se
 
 ### Continual Learning and Forgetting
 
-AI agents need to not only remember but also to learn from new experiences and potentially "forget" outdated or incorrect information. This aspect of [strategies for memory consolidation in AI agents](/articles/memory-consolidation-in-ai-agents/) is complex, involving mechanisms for updating existing knowledge and gracefully discarding obsolete data. This is a frontier for **deeplearning.ai long term memory**.
+AI agents need to not only remember but also to learn from new experiences and potentially "forget" outdated or incorrect information. This aspect of [strategies for memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) is complex, involving mechanisms for updating existing knowledge and gracefully discarding obsolete data. This is a frontier for **deeplearning.ai long term memory**.
 
 ### Ethical Considerations
 
@@ -230,4 +230,4 @@ You can implement long-term memory by integrating a **retrieval-augmented genera
 
 ### Are there specific tools or libraries recommended for deeplearning.ai long-term memory implementations?
 
-While deeplearning.ai itself doesn't offer a single product for this, common tools include vector databases (Pinecone, Chroma, Weaviate), LLM orchestration frameworks (LangChain, LlamaIndex), and various embedding models. Exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems) can provide further insights into available solutions for **deeplearning.ai long term memory**.
+While deeplearning.ai itself doesn't offer a single product for this, common tools include vector databases (Pinecone, Chroma, Weaviate), LLM orchestration frameworks (LangChain, LlamaIndex), and various embedding models. Exploring [best AI agent memory systems](/articles/best-ai-memory-systems/) can provide further insights into available solutions for **deeplearning.ai long term memory**.

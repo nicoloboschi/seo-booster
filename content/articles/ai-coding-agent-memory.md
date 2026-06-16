@@ -104,7 +104,7 @@ Imagine an AI agent remembering your project's specific style guide or common ut
 
 ### Learning from Past Code Generations and Debugging Sessions
 
-An AI agent that learns from its previous generations and debugging sessions can improve its performance over time. If a generated function proved inefficient or contained a subtle bug, the memory system can record this feedback. The next time a similar function is requested or a similar bug is encountered, the agent can avoid the prior mistakes. This continuous learning loop is essential for [agentic AI implementing long-term memory](/articles/agentic-ai-implementing-long-term-memory/). This iterative improvement is a hallmark of advanced **ai coding agent memory**.
+An AI agent that learns from its previous generations and debugging sessions can improve its performance over time. If a generated function proved inefficient or contained a subtle bug, the memory system can record this feedback. The next time a similar function is requested or a similar bug is encountered, the agent can avoid the prior mistakes. This continuous learning loop is essential for agentic AI implementing long-term memory. This iterative improvement is a hallmark of advanced **ai coding agent memory**.
 
 ### Understanding Project-Specific Logic with AI Debugging Memory
 

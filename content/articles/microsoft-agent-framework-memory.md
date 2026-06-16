@@ -140,7 +140,7 @@ For example, projects like [Hindsight](https://github.com/vectorize-io/hindsight
 
 Libraries like LangChain and LlamaIndex offer extensive tools for building LLM applications, including robust memory modules. These can often be integrated into agents developed using broader frameworks. This expands the possibilities for **microsoft agent framework memory**.
 
-These libraries provide abstractions for various memory types, such as `ConversationBufferMemory`, `ConversationSummaryMemory`, and `VectorStoreRetrieverMemory`. Understanding the differences, for instance between [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory), is key to choosing the right tools.
+These libraries provide abstractions for various memory types, such as `ConversationBufferMemory`, `ConversationSummaryMemory`, and `VectorStoreRetrieverMemory`. Understanding the differences, for instance between Letta vs. Langchain memory, is key to choosing the right tools.
 
 Here's a basic Python example demonstrating a simple memory component, conceptualized for agent integration within a framework like Microsoft's:
 

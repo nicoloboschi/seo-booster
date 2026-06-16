@@ -200,7 +200,7 @@ print(f"User: {user_query_4}")
 print(f"Agent: {agent_memory.respond_based_on_memory(user_query_4)}\n")
 ```
 
-This example demonstrates how an AI agent might store and retrieve past interactions, a fundamental aspect of building **ai memory**. The improved code shows how memory can influence an agent's response based on context and past turns, moving beyond simple storage. This simulation helps illustrate the concept of [simulating agent memory](/articles/simulating-agent-memory/).
+This example demonstrates how an AI agent might store and retrieve past interactions, a fundamental aspect of building **ai memory**. The improved code shows how memory can influence an agent's response based on context and past turns, moving beyond simple storage. This simulation helps illustrate the concept of simulating agent memory.
 
 ## FAQ
 

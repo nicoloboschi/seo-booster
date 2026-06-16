@@ -71,7 +71,7 @@ AI agents typically employ a combination of memory types. **Short-term memory** 
 
 **Retrieval-Augmented Generation (RAG)** is a prominent approach to mitigate memory bound issues. RAG systems first retrieve relevant information from an external knowledge base. This knowledge base could be a vector database. This information is then injected into the LLM's context before generation. This ensures pertinent data is available to the LLM. It's available even if not within its native context window.
 
-A 2024 study published in arXiv demonstrated that RAG implementations can improve task completion rates by up to 34% in complex reasoning tasks. These tasks require extensive historical data. This improvement directly addresses the **LLM decoding memory bound** by augmenting the model's accessible knowledge. Implementing [retrieval augmented generation (RAG) techniques](/articles/retrieval-augmented-generation/) is a key strategy.
+A 2024 study published in arXiv demonstrated that RAG implementations can improve task completion rates by up to 34% in complex reasoning tasks. These tasks require extensive historical data. This improvement directly addresses the **LLM decoding memory bound** by augmenting the model's accessible knowledge. Implementing retrieval augmented generation (RAG) techniques is a key strategy.
 
 ## Types of AI Memory and Their Impact
 

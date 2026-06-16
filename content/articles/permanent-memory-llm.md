@@ -85,7 +85,7 @@ Once processed, the data is **indexed** for efficient retrieval. Vector database
 3. **Knowledge Graph Querying:** For knowledge graphs, specific queries are constructed to retrieve relevant facts or relationship paths.
 4. **Context Augmentation:** The retrieved information is formatted and added to the LLM's prompt, enriching its current understanding.
 
-This process ensures that the LLM receives the necessary historical context to generate accurate and informed responses. This is a key differentiator from simpler [agent memory vs RAG](/articles/agent-memory-vs-rag/) approaches.
+This process ensures that the LLM receives the necessary historical context to generate accurate and informed responses. This is a key differentiator from simpler agent memory vs RAG approaches.
 
 Here's a Python example demonstrating how you might generate an embedding and perform a simple similarity search using a hypothetical `EmbeddingModel` and `VectorDB` class:
 

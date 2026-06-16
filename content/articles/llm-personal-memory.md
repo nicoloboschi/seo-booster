@@ -56,13 +56,13 @@ A cornerstone of modern **LLM personal memory** is the use of **vector databases
 
 When an AI agent needs to recall information, the current query is also embedded. The system then performs a similarity search within the vector database to find the most relevant past information. This retrieval-augmented generation (RAG) approach significantly enhances an LLM's ability to access specific memories.
 
-For instance, if a user previously asked an AI about their favorite color, this information could be stored as an embedding. Later, when the AI needs to personalize a response, it can retrieve that specific memory by embedding the query "What is the user's favorite color?" and finding the closest match. This is a fundamental aspect of [how to implement AI memory systems](/articles/implementing-ai-memory-systems/).
+For instance, if a user previously asked an AI about their favorite color, this information could be stored as an embedding. Later, when the AI needs to personalize a response, it can retrieve that specific memory by embedding the query "What is the user's favorite color?" and finding the closest match. This is a fundamental aspect of how to implement AI memory systems.
 
 ### Memory Types in LLM Personal Memory
 
 Effective **LLM personal memory** often incorporates different types of memory, mirroring human cognitive functions to some extent. This allows for more nuanced and effective recall.
 
-* **Episodic Memory:** This stores specific events and their context, like "On Tuesday, the user asked about X and I responded with Y." This is crucial for remembering the sequence and details of past interactions. Understanding [different types of AI memory](/articles/types-of-ai-memory/) is key here.
+* **Episodic Memory:** This stores specific events and their context, like "On Tuesday, the user asked about X and I responded with Y." This is crucial for remembering the sequence and details of past interactions. Understanding different types of AI memory is key here.
 * **Semantic Memory:** This stores general knowledge and facts, such as "The user prefers Python over Java for programming tasks." This is more about accumulated knowledge than specific events.
 * **Short-Term Memory (Context Window):** While not strictly "personal" memory, the LLM's inherent context window acts as a very short-term memory for the immediate conversation. Solutions for [overcoming context window limitations](/articles/context-window-limitations-solutions/) often aim to bridge this gap to longer-term personal memory.
 

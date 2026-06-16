@@ -119,7 +119,7 @@ Other influential frameworks like LangChain and LlamaIndex also provide comprehe
 
 #### Vectorize.io's Perspective on AI Chatbot Memory
 
-At Vectorize.io, we focus on developing efficient and scalable AI memory solutions. Our guides offer insights into various approaches, from understanding the core concepts of [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) to comparing specific tools and techniques like [agent memory vs RAG](/articles/agent-memory-vs-rag/). We aim to provide clarity for those seeking to build or understand advanced AI memory capabilities, including the best memory AI chatbot Reddit users are discussing.
+At Vectorize.io, we focus on developing efficient and scalable AI memory solutions. Our guides offer insights into various approaches, from understanding the core concepts of [best AI agent memory systems](/articles/best-ai-memory-systems/) to comparing specific tools and techniques like agent memory vs RAG. We aim to provide clarity for those seeking to build or understand advanced AI memory capabilities, including the best memory AI chatbot Reddit users are discussing.
 
 ### What Reddit Users Look For in Memory AI Chatbots
 

@@ -219,7 +219,7 @@ The field of LLM memory optimization is rapidly advancing. We're seeing a move t
 
 As LLMs become more integrated into our daily lives, their ability to remember and learn will be a primary determinant of their usefulness and trustworthiness. Optimizing LLM memory is not just a technical challenge; it's fundamental to unlocking the full potential of artificial intelligence.
 
-For a deeper dive into choosing the right memory solution, consider exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/). The trade-offs between agent memory and RAG are also a critical consideration, as discussed in [agent memory vs RAG](/articles/agent-memory-vs-rag/).
+For a deeper dive into choosing the right memory solution, consider exploring [best AI agent memory systems](/articles/best-ai-memory-systems/). The trade-offs between agent memory and RAG are also a critical consideration, as discussed in agent memory vs RAG.
 
 ---
 

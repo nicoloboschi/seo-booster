@@ -68,7 +68,7 @@ AI agents often use a combination of memory types. RAM handles immediate, high-s
 
 When an AI creates a piece of art or processes a dataset of images, the final output is typically saved to persistent storage. This allows users to access and review the work later. The AI might use RAM extensively during the creation phase, but the final product needs a permanent home, transforming volatile **ram ai images** into lasting data.
 
-This distinction is also relevant when discussing [AI agent persistent memory](/articles/agent-persistent-memory/). While an agent might use RAM to temporarily hold images it's analyzing, its long-term memory of those images or their content would be stored elsewhere, not within the volatile confines of RAM.
+This distinction is also relevant when discussing [AI agent persistent memory](/articles/ai-agent-persistent-memory/). While an agent might use RAM to temporarily hold images it's analyzing, its long-term memory of those images or their content would be stored elsewhere, not within the volatile confines of RAM.
 
 ## Optimizing RAM Usage for Visual AI Tasks
 
@@ -98,13 +98,13 @@ This is where specialized hardware and optimized software come into play, ensuri
 
 As AI models grow more complex and demands for visual fidelity increase, the importance of efficient memory management will only escalate. We're seeing advancements in both hardware (e.g., higher RAM capacities, faster memory technologies) and software techniques for optimizing memory usage for **ram ai images**.
 
-Newer AI architectures might incorporate novel memory management strategies to better handle the massive datasets associated with high-resolution images and video. This includes exploring more sophisticated forms of [AI agent long-term memory](/articles/agent-long-term-memory/) that can effectively index and retrieve visual information, building upon current RAM capabilities.
+Newer AI architectures might incorporate novel memory management strategies to better handle the massive datasets associated with high-resolution images and video. This includes exploring more sophisticated forms of [AI agent long-term memory](/articles/ai-agent-long-term-memory/) that can effectively index and retrieve visual information, building upon current RAM capabilities.
 
 ### Advanced Memory Architectures
 
 Research into AI memory systems is exploring ways to make them more scalable and efficient. Systems like [Hindsight](https://github.com/vectorize-io/hindsight), an open-source AI memory system, aim to provide agents with robust recall capabilities. While Hindsight primarily focuses on structured data and conversational memory, the principles of efficient recall are applicable to visual data as well.
 
-The goal is to enable AI agents to not just process images but to recall specific visual details or patterns over extended periods, much like humans do with their own memories. Understanding [how AI agents remember](/articles/how-ai-agents-remember/) is central to this evolution, impacting how **ram ai images** are managed and recalled.
+The goal is to enable AI agents to not just process images but to recall specific visual details or patterns over extended periods, much like humans do with their own memories. Understanding how AI agents remember is central to this evolution, impacting how **ram ai images** are managed and recalled.
 
 Here's a Python example demonstrating how one might check available RAM and a simplified concept of handling image data in memory, simulating the lifecycle of **ram ai images**:
 

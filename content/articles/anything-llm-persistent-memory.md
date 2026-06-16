@@ -123,7 +123,7 @@ While vector databases are prevalent, other approaches can contribute to persist
 * **Traditional Databases:** For storing structured metadata or logs associated with memory entries.
 * **File Systems:** For storing raw documents or unstructured data that can be indexed and searched.
 
-Anything LLM's flexibility allows for hybrid approaches, combining multiple storage modalities to create a rich and comprehensive memory system for AI agents. Understanding [how agents use memory](/articles/how-agents-use-memory/) is key to designing effective systems.
+Anything LLM's flexibility allows for hybrid approaches, combining multiple storage modalities to create a rich and comprehensive memory system for AI agents. Understanding how agents use memory is key to designing effective systems.
 
 ## Challenges and Considerations
 

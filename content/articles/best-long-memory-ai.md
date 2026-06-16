@@ -169,4 +169,4 @@ Solutions to **context window limitations** are at the heart of **long memory AI
 * **How does long memory AI differ from traditional databases?**
  While traditional databases excel at structured data storage and retrieval, **long memory AI** systems, especially those using vector embeddings, focus on semantic understanding and contextual relevance. They can retrieve information based on meaning and association, not just exact matches, making them more flexible for conversational AI and complex recall tasks.
 
-For more on AI memory systems, explore our guide on the [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+For more on AI memory systems, explore our guide on the [best AI agent memory systems](/articles/best-ai-memory-systems/).

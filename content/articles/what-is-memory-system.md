@@ -72,7 +72,7 @@ Without a memory system, AI agents would essentially be stateless. Each interact
 
 For conversational AI, memory is paramount. An AI that remembers previous turns in a conversation can provide more coherent and relevant responses. This is the difference between a helpful assistant and a frustrating chatbot. AI that remembers conversations is a direct application of effective **memory systems in AI**.
 
-A study published on arXiv in 2024 found that retrieval-augmented generation (RAG) models, which heavily rely on external memory retrieval, showed a **34% improvement in task completion rates** compared to models without such memory capabilities. This highlights the practical impact of giving AI recall. You can learn more about [retrieval-augmented generation in AI](/articles/retrieval-augmented-generation-in-ai/).
+A study published on arXiv in 2024 found that retrieval-augmented generation (RAG) models, which heavily rely on external memory retrieval, showed a **34% improvement in task completion rates** compared to models without such memory capabilities. This highlights the practical impact of giving AI recall. You can learn more about retrieval-augmented generation in AI.
 
 ### Enabling Learning and Adaptation
 

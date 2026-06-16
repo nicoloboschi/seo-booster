@@ -125,7 +125,7 @@ LLMs can sometimes become overly reliant on specific pieces of information they 
 
 ### Insecure External Memory Integration and Data Leakage LLM
 
-When LLMs are integrated with external memory systems, the security of these integrations becomes critical. If these external stores are not properly secured, they can become direct targets for data breaches, leading to **data leakage LLM**. An attacker might gain unauthorized access to the entire memory store, bypassing the LLM's own security layers. This is why understanding [best AI agent memory systems](/articles/best-ai-agent-memory-systems) includes strong emphasis on security protocols. A weak link in the memory chain invites **LLM memory attacks**.
+When LLMs are integrated with external memory systems, the security of these integrations becomes critical. If these external stores are not properly secured, they can become direct targets for data breaches, leading to **data leakage LLM**. An attacker might gain unauthorized access to the entire memory store, bypassing the LLM's own security layers. This is why understanding [best AI agent memory systems](/articles/best-ai-memory-systems/) includes strong emphasis on security protocols. A weak link in the memory chain invites **LLM memory attacks**.
 
 ## Defending Against LLM Memory Attacks and Data Leakage LLM
 
@@ -189,4 +189,4 @@ Another area of active research is improving the **explainability of LLM memory*
 
 Also, the development of standardized **AI memory benchmarks** is crucial for robust **LLM security**. These benchmarks would allow for consistent evaluation of the security and privacy properties of different LLM memory systems. This aids developers in selecting and implementing secure solutions. Exploring resources like [AI memory benchmarks](/articles/ai-memory-benchmarks/) can provide insights into current evaluation methods. Consistent evaluation is key to addressing **LLM memory attacks**.
 
-The ongoing arms race between attackers and defenders necessitates continuous vigilance and innovation in LLM security. Tools and platforms that offer secure memory management, such as those discussed in guides on [best AI agent memory systems](/articles/best-ai-agent-memory-systems) and [LLM memory systems](/articles/llm-memory-system), will become increasingly important. Addressing **LLM memory attacks** requires a commitment to ongoing security research and development to combat **AI security threats**.
+The ongoing arms race between attackers and defenders necessitates continuous vigilance and innovation in LLM security. Tools and platforms that offer secure memory management, such as those discussed in guides on [best AI agent memory systems](/articles/best-ai-memory-systems/) and [LLM memory systems](/articles/llm-memory-system), will become increasingly important. Addressing **LLM memory attacks** requires a commitment to ongoing security research and development to combat **AI security threats**.

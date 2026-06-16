@@ -197,7 +197,7 @@ When building **CrewAI long term memory** systems, several factors are crucial:
 
 Large Language Models (LLMs) have a finite **context window**, the amount of text they can process at once. This limitation directly impacts an agent's ability to recall information from extended interactions. **CrewAI long term memory** systems are designed to overcome these **context window limitations**.
 
-By storing past information externally, agents retrieve only the most relevant past data snippets. This retrieved information is then injected into the LLM's current prompt, effectively extending the agent's memory beyond its native context window. This is a fundamental technique for creating [AI agents with persistent memory](/articles/ai-agents-with-persistent-memory/).
+By storing past information externally, agents retrieve only the most relevant past data snippets. This retrieved information is then injected into the LLM's current prompt, effectively extending the agent's memory beyond its native context window. This is a fundamental technique for creating [AI agents with persistent memory](/articles/ai-agent-persistent-memory/).
 
 Our article on [context window limitations and solutions](/articles/context-window-limitations-solutions/) details these challenges.
 

@@ -127,7 +127,7 @@ Here's how it works:
 4. **Augment Prompt:** These retrieved chunks are added to the original user query as context.
 5. **Generate Response:** The LLM receives the augmented prompt and generates a response informed by both the immediate query and the retrieved external knowledge.
 
-This approach effectively addresses **llm memory decay** by providing the LLM with necessary context on demand, preventing information from being lost. RAG is a cornerstone of many modern [AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+This approach effectively addresses **llm memory decay** by providing the LLM with necessary context on demand, preventing information from being lost. RAG is a cornerstone of many modern [AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ### 3. External Memory Systems (Vector Databases)
 

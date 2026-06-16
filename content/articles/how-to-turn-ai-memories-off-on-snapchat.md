@@ -138,7 +138,7 @@ To reduce AI's personalization of your Snapchat experience and better understand
 
 1. **Location Services:** Go to your phone's main settings and disable location services for Snapchat, or set it to "While Using the App." This limits location-based AI features.
 2. **Ad Preferences:** Within Snapchat's "Privacy Controls," find "Ad Preferences." Limit ad tracking and personalization based on your activity. This is a direct step toward disabling AI features on Snapchat.
-3. **Third-Party App Permissions:** Review any third-party apps connected to your Snapchat account. Revoke permissions for apps you no longer use or trust. This is part of a broader strategy for [managing app permissions](/articles/managing-app-permissions/).
+3. **Third-Party App Permissions:** Review any third-party apps connected to your Snapchat account. Revoke permissions for apps you no longer use or trust. This is part of a broader strategy for managing app permissions.
 4. **Clear Memories Data:** Periodically review and delete content from your Memories that you no longer wish to store. This is a direct action for managing stored data and is essential for understanding **how to turn off Snapchat AI memories**.
 5. **Managing Snapchat Dreams:** To manage **Snapchat Dreams privacy**, focus on the permissions you grant Snapchat for photo access. If you wish to limit its use, ensure you have disabled features that allow AI to process your photos for creative generation. This might involve reviewing your phone's general privacy settings for app access to your photo library. This is key to learning **how to turn off Snapchat Dreams**.
 
@@ -148,7 +148,7 @@ These steps help ensure AI's involvement in your Snapchat experience is minimize
 
 Snapchat's **privacy policy** provides detailed information on how the company collects, uses, and shares user data, including data processed by AI. Understanding this policy is crucial for users concerned about privacy and wanting to know **how to turn off Snapchat AI memories**. The policy outlines data types collected, such as user-provided information, usage data, and device information.
 
-AI analyzes this data for service improvement, personalization, and security. For instance, AI can help in [understanding user behavior patterns](/articles/understanding-user-behavior-patterns/) on the platform. The policy also details how users can request access to or deletion of their data, further empowering users to control their information.
+AI analyzes this data for service improvement, personalization, and security. For instance, AI can help in understanding user behavior patterns on the platform. The policy also details how users can request access to or deletion of their data, further empowering users to control their information.
 
 ### Key Takeaways from Snapchat's Privacy Policy Regarding AI
 

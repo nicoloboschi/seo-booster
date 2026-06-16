@@ -42,7 +42,7 @@ These systems can process complex queries, generate coherent and relevant respon
 
 At the core of any modern conversational AI lies a powerful **Large Language Model (LLM)**. Models like GPT-4, Claude 3, and Gemini have demonstrated remarkable abilities in understanding and generating human-like text. They are trained on vast datasets, allowing them to grasp grammar, facts, reasoning abilities, and various writing styles.
 
-However, LLMs alone have limitations. Their inherent **context window** restricts how much information they can actively process at any given moment. This is where memory systems become critical for creating truly advanced conversational agents and achieving the most advanced conversational AI. Understanding [LLM limitations and solutions](/articles/llm-limitations-and-solutions/) is key.
+However, LLMs alone have limitations. Their inherent **context window** restricts how much information they can actively process at any given moment. This is where memory systems become critical for creating truly advanced conversational agents and achieving the most advanced conversational AI. Understanding LLM limitations and solutions is key.
 
 ## The Role of AI Memory Systems
 

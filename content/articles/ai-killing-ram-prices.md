@@ -68,7 +68,7 @@ LLMs, for instance, can have billions or even trillions of parameters. Loading t
 
 Modern AI relies heavily on **parallel processing**, especially on GPUs. These processors have thousands of cores designed to perform similar operations simultaneously. To feed these cores effectively, a massive amount of data must be available. This necessitates a memory system that can support thousands of simultaneous read/write operations, a capability where HBM excels over traditional DDR RAM.
 
-The architecture of AI systems often involves intricate memory access patterns. Techniques like [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) or [semantic memory in AI agents](/articles/semantic-memory-in-ai-agents/) aim to store and retrieve information efficiently, but the underlying hardware must still provide the capacity and speed for these systems to function. Even with optimized [understanding AI agent memory systems](/articles/ai-agent-memory-explained/) strategies, the fundamental need for physical RAM remains critical for **AI RAM demand**.
+The architecture of AI systems often involves intricate memory access patterns. Techniques like [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) or [semantic memory in AI agents](/articles/semantic-memory-ai-agents/) aim to store and retrieve information efficiently, but the underlying hardware must still provide the capacity and speed for these systems to function. Even with optimized [understanding AI agent memory systems](/articles/ai-agent-memory-explained/) strategies, the fundamental need for physical RAM remains critical for **AI RAM demand**.
 
 ## The Impact on the Consumer Market
 

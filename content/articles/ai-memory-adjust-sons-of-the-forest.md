@@ -160,7 +160,7 @@ An AI agent in *Sons of the Forest* with strong temporal reasoning might underst
 
 The field of [AI agent memory explained](/articles/ai-agent-memory-explained/) is rapidly evolving. Innovations in **embedding models for memory** and **embedding models for RAG** are leading to more efficient and powerful ways for AI to store and retrieve information. As these technologies mature, we can expect to see increasingly sophisticated AI memory systems integrated into future games, further refining the **ai memory adjust sons of the forest** experience.
 
-This continuous improvement means that the AI in games like *Sons of the Forest* will become more adaptive, learning from player actions in ways that feel less predictable and more organic. The quest for **AI agent long-term memory** remains a central challenge and opportunity. The principles discussed here are foundational for any game aiming for advanced [AI agent behavior](/articles/ai-agent-behavior/).
+This continuous improvement means that the AI in games like *Sons of the Forest* will become more adaptive, learning from player actions in ways that feel less predictable and more organic. The quest for **AI agent long-term memory** remains a central challenge and opportunity. The principles discussed here are foundational for any game aiming for advanced AI agent behavior.
 
 ## FAQ
 

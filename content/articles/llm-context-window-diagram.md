@@ -106,7 +106,7 @@ At the heart of the Transformer architecture lies the **self-attention mechanism
 
 ## Why LLM Context Windows Are Crucial for AI Agents and Token Limits
 
-For **AI agents** designed to perform complex tasks, the context window's size directly impacts their ability to maintain coherence and recall relevant information. An agent that can only "see" a few sentences back will struggle with tasks requiring long-term understanding or multistep reasoning. This is where understanding the **LLM context window diagram** becomes paramount for designing effective [patterns for managing LLM context](/articles/agent-memory-management-patterns/). The **token limits** directly affect an agent's ability to process complex instructions.
+For **AI agents** designed to perform complex tasks, the context window's size directly impacts their ability to maintain coherence and recall relevant information. An agent that can only "see" a few sentences back will struggle with tasks requiring long-term understanding or multistep reasoning. This is where understanding the **LLM context window diagram** becomes paramount for designing effective patterns for managing LLM context. The **token limits** directly affect an agent's ability to process complex instructions.
 
 Without mechanisms to manage information beyond the immediate window, an agent might repeatedly ask for the same information or fail to build upon previous interactions. This limitation is a core challenge in developing truly intelligent and persistent AI agents. It's a key differentiator between simple chatbots and more sophisticated **agentic AI**. The **llm context window diagram** highlights this fundamental difference in **LLM memory**.
 

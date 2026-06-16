@@ -140,7 +140,7 @@ Zep offers both a cloud-managed service and a self-hostable version. The choice 
 * **Pros:** Full control over data and infrastructure, customizable deployments, suitable for strict compliance requirements.
 * **Cons:** Requires significant engineering effort for setup, maintenance, scaling, and monitoring.
 
-For many development teams, particularly those focused on rapid iteration and AI agent development, **Zep Cloud Memory** offers a compelling path to implement advanced memory features without the operational burden. It's an excellent option for those exploring [best AI agent memory systems](/articles/best-ai-agent-memory-systems/).
+For many development teams, particularly those focused on rapid iteration and AI agent development, **Zep Cloud Memory** offers a compelling path to implement advanced memory features without the operational burden. It's an excellent option for those exploring [best AI agent memory systems](/articles/best-ai-memory-systems/).
 
 ## Applications of Zep Cloud Memory
 
@@ -190,7 +190,7 @@ Standalone vector databases like Pinecone or Weaviate can build custom memory sy
 
 ### LLM-Specific Memory Frameworks
 
-Frameworks like LangChain or LlamaIndex offer various memory modules. Some are simpler (e.g. `ConversationBufferMemory`). Others integrate with external stores. **Zep Cloud Memory** can often integrate as a backend for these frameworks. It offers a more specialized and managed solution. For instance, exploring [LettA vs. Langchain memory](/articles/letta-vs-langchain-memory/) highlights different integration patterns.
+Frameworks like LangChain or LlamaIndex offer various memory modules. Some are simpler (e.g. `ConversationBufferMemory`). Others integrate with external stores. **Zep Cloud Memory** can often integrate as a backend for these frameworks. It offers a more specialized and managed solution. For instance, exploring LettA vs. Langchain memory highlights different integration patterns.
 
 ### Specialized Memory Systems
 

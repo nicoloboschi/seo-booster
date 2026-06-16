@@ -39,7 +39,7 @@ This **Vertex AI memory bank** is engineered for scalability and efficient query
 
 AI agents, particularly those using large language models (LLMs), require memory to function effectively in dynamic environments. Without memory, each interaction would be treated as entirely new, severely limiting an agent's ability to understand context, maintain coherence, or learn from past experiences. Memory allows agents to build a history of interactions and accumulated knowledge.
 
-This history can span from short-term recall of the immediate conversation to long-term storage of learned facts and user preferences. The ability to access and process this stored information is what differentiates a simple chatbot from a truly intelligent agent. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) is key to appreciating this critical distinction and the importance of the **Vertex AI Agent Engine memory bank**.
+This history can span from short-term recall of the immediate conversation to long-term storage of learned facts and user preferences. The ability to access and process this stored information is what differentiates a simple chatbot from a truly intelligent agent. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) is key to appreciating this critical distinction and the importance of the **Vertex AI Agent Engine memory bank**.
 
 ### Storing and Retrieving Information
 
@@ -51,7 +51,7 @@ For example, an agent might need to recall a user's preference stated several co
 
 The underlying architecture of the **Vertex AI Agent Engine memory bank** is meticulously designed to handle the unique demands of AI agent operations. It typically integrates seamlessly with other Vertex AI services, such as LLMs and vector search capabilities, to create a cohesive memory solution. The platform emphasizes providing a scalable and performant system for **AI agent memory**.
 
-This architecture likely employs advanced techniques like **vector embeddings** to represent information semantically. This approach allows for more nuanced and accurate retrieval than simple keyword matching. The integration of vector search represents a significant advancement for AI memory systems. Understanding [embedding models for AI memory](/articles/embedding-models-for-ai-memory/) helps explain this sophisticated approach used by the **Vertex AI memory bank**.
+This architecture likely employs advanced techniques like **vector embeddings** to represent information semantically. This approach allows for more nuanced and accurate retrieval than simple keyword matching. The integration of vector search represents a significant advancement for AI memory systems. Understanding [embedding models for AI memory](/articles/embedding-models-for-memory/) helps explain this sophisticated approach used by the **Vertex AI memory bank**.
 
 ### Data Ingestion Pipeline
 
@@ -133,7 +133,7 @@ Consider the types of memory needed: **episodic memory** for specific events or 
 
 ### Choosing the Right Tools
 
-Vertex AI provides tools that simplify memory implementation for AI agents. This includes its LLM APIs for processing information and potential integrations with vector databases for scalable storage. Developers can also explore using [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) guides to inform their choices, alongside the capabilities of the **Vertex AI Agent Engine memory bank**.
+Vertex AI provides tools that simplify memory implementation for AI agents. This includes its LLM APIs for processing information and potential integrations with vector databases for scalable storage. Developers can also explore using [best AI agent memory systems](/articles/best-ai-memory-systems/) guides to inform their choices, alongside the capabilities of the **Vertex AI Agent Engine memory bank**.
 
 Here's a Python example demonstrating how an agent might store and retrieve data using a hypothetical Vertex AI Agent Engine memory bank API, simulating interaction with Vertex AI's vector search capabilities.
 

@@ -145,7 +145,7 @@ FAISS is a specialized tool for vector similarity search. It's often used as a b
 
 ### FAISS as a Component in Larger AI Memory Systems
 
-Many advanced AI memory solutions, such as those discussed in [best AI agent memory systems](/articles/best-ai-agent-memory-systems/), use vector databases like FAISS under the hood. These systems abstract away the complexities of index management and vector storage, providing higher-level APIs for memory operations.
+Many advanced AI memory solutions, such as those discussed in [best AI agent memory systems](/articles/best-ai-memory-systems/), use vector databases like FAISS under the hood. These systems abstract away the complexities of index management and vector storage, providing higher-level APIs for memory operations.
 
 A system might use FAISS to index embeddings of conversation turns. When a user asks a question, the system embeds the question and uses FAISS to find similar past turns, retrieving the associated conversational context. This is a common pattern in advanced **ai episodic memory faiss** applications for maintaining **AI agent context**.
 

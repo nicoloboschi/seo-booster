@@ -139,7 +139,7 @@ Open-source systems like [Hindsight](https://github.com/vectorize-io/hindsight) 
 
 ### Agent Frameworks
 
-Frameworks such as LangChain and LlamaIndex offer modules for memory management and retrieval. While they might not always expose a distinct "decoder" component explicitly, their underlying mechanisms for processing retrieved information from memory stores perform this decoding function. Exploring [alternatives to LangChain memory](/articles/letta-vs-langchain-memory/) can reveal different approaches to this problem, all involving some form of **llm memory decoder** to facilitate **AI recall**.
+Frameworks such as LangChain and LlamaIndex offer modules for memory management and retrieval. While they might not always expose a distinct "decoder" component explicitly, their underlying mechanisms for processing retrieved information from memory stores perform this decoding function. Exploring alternatives to LangChain memory can reveal different approaches to this problem, all involving some form of **llm memory decoder** to facilitate **AI recall**.
 
 ### Vectorize.io Resources
 

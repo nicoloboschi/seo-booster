@@ -90,7 +90,7 @@ Agents often employ reasoning mechanisms to infer new information or predict fut
 
 ### Learning and Adaptation
 
-Many AI agents are designed to learn through **machine learning**. This allows them to improve their performance based on experience, adapt to new data, and refine their decision-making strategies over time. This learning capability is what makes an AI agent truly intelligent. For example, understanding [agent memory recall mechanisms](/articles/agent-memory-recall-mechanisms/) is vital for agents that need to access past information efficiently.
+Many AI agents are designed to learn through **machine learning**. This allows them to improve their performance based on experience, adapt to new data, and refine their decision-making strategies over time. This learning capability is what makes an AI agent truly intelligent. For example, understanding agent memory recall mechanisms is vital for agents that need to access past information efficiently.
 
 ## Applications of AI Agents
 
@@ -102,7 +102,7 @@ Modern virtual assistants like Siri and Alexa are sophisticated AI agents. They 
 
 ### Robotics and Autonomous Systems
 
-In robotics, AI agents control robots in manufacturing, exploration, and healthcare. Autonomous vehicles are a prime example, with agents perceiving traffic and controlling vehicle movements. The development of these systems is closely tied to advancements in understanding [what is an intelligent agent](/articles/what-is-an-intelligent-agent/).
+In robotics, AI agents control robots in manufacturing, exploration, and healthcare. Autonomous vehicles are a prime example, with agents perceiving traffic and controlling vehicle movements. The development of these systems is closely tied to advancements in understanding what is an intelligent agent.
 
 ### Recommendation Systems
 

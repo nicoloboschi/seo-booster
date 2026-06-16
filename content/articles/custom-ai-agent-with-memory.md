@@ -111,7 +111,7 @@ Creating an AI agent with memory involves selecting and integrating appropriate 
 
 **Embedding models** are fundamental to modern AI memory systems. They convert text, images, or other data into numerical vectors that capture semantic meaning. **Vector databases** store these embeddings, enabling similarity searches.
 
-When an agent needs to recall information, it embeds the current query or context and searches the vector database for semantically similar stored embeddings. This allows for efficient retrieval of relevant past data, even if the query isn't an exact match. This approach is central to [Retrieval-Augmented Generation (RAG)](/articles/rag-explained/) systems.
+When an agent needs to recall information, it embeds the current query or context and searches the vector database for semantically similar stored embeddings. This allows for efficient retrieval of relevant past data, even if the query isn't an exact match. This approach is central to Retrieval-Augmented Generation (RAG) systems.
 
 * **Process:** Embed query → Search vector DB for similar embeddings → Retrieve associated data → Use retrieved data to inform LLM.
 * **Tools:** Pinecone, Weaviate, ChromaDB, FAISS.

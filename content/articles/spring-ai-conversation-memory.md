@@ -110,7 +110,7 @@ Beyond the basic implementations, several advanced strategies can enhance **Spri
 
 ### Vector Databases for Memory
 
-Storing conversation turns as embeddings in a **vector database** offers powerful semantic search capabilities. Instead of just chronological recall, agents can retrieve past messages based on their meaning and relevance to the current query. This goes beyond simple [AI agent short-term memory](/articles/ai-agent-short-term-memory/).
+Storing conversation turns as embeddings in a **vector database** offers powerful semantic search capabilities. Instead of just chronological recall, agents can retrieve past messages based on their meaning and relevance to the current query. This goes beyond simple [AI agent short-term memory](/articles/ai-agent-long-term-memory/).
 
 Tools like Chroma, Pinecone, or Weaviate can be integrated. Each user turn (prompt and response) is embedded and stored. When a new query arrives, it's embedded, and similar historical embeddings are retrieved. This allows agents to recall relevant information even if it occurred many turns ago, forming a type of **episodic memory in AI agents**. This is a key technique for **AI agent persistent memory** and a sophisticated approach to **Spring AI conversation memory**. You can learn more at [Wikipedia's Vector Space Model page](https://en.wikipedia.org/wiki/Vector_space_model).
 
@@ -124,7 +124,7 @@ This process mirrors human memory, where we don't recall every single detail of 
 
 While not strictly a conversation memory component, **RAG vs. agent memory** is an important distinction. RAG augments an LLM's knowledge by retrieving relevant information from an external knowledge base. This can be used in conjunction with conversation memory to provide agents with both past dialogue context and factual information.
 
-When a user asks a question, the system might first check conversation memory for direct context. If insufficient, it could then query a RAG system for broader, factual information. This combined approach provides a richer context for the LLM. For more on this, see [Agent Memory vs. RAG](/articles/agent-memory-vs-rag/). Effectively combining RAG with **Spring AI conversation memory** can lead to highly capable agents.
+When a user asks a question, the system might first check conversation memory for direct context. If insufficient, it could then query a RAG system for broader, factual information. This combined approach provides a richer context for the LLM. For more on this, see Agent Memory vs. RAG. Effectively combining RAG with **Spring AI conversation memory** can lead to highly capable agents.
 
 ### Temporal Memory Management
 

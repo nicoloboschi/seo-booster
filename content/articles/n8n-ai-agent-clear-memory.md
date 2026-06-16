@@ -69,7 +69,7 @@ Before clearing an agent's memory, it's important to understand what types of me
 
 Most AI agents, especially those interacting with Large Language Models (LLMs), rely on **short-term memory** that is effectively the LLM's context window. This memory is the immediate history of the conversation fed into the LLM for its next prediction. When this context window is exceeded, older parts of the conversation are typically dropped.
 
-Clearing this type of memory often means starting a new conversation thread or ensuring that previous conversation data isn't passed to the LLM for the next turn. This is fundamental to [how to implement AI memory in n8n](/articles/how-to-implement-ai-memory-in-n8n/), but also how to limit it. Many LLMs, like OpenAI's GPT-4, have context windows up to 128,000 tokens, but managing this effectively still requires clear strategies. The size of the context window doesn't negate the need for explicit memory management.
+Clearing this type of memory often means starting a new conversation thread or ensuring that previous conversation data isn't passed to the LLM for the next turn. This is fundamental to how to implement AI memory in n8n, but also how to limit it. Many LLMs, like OpenAI's GPT-4, have context windows up to 128,000 tokens, but managing this effectively still requires clear strategies. The size of the context window doesn't negate the need for explicit memory management.
 
 ### Long-Term Memory (Vector Databases & State)
 
@@ -79,7 +79,7 @@ For more persistent recall, AI agents can employ **long-term memory** solutions.
 * **Using external databases:** Connecting to databases (SQL, NoSQL, or vector databases) to store and retrieve information. This requires interaction with external services.
 * **Using specialized memory systems:** Integrating with tools like [Hindsight](https://github.com/vectorize-io/hindsight) or other [open-source memory systems compared](/articles/open-source-memory-systems-compared/). These offer dedicated functionalities for AI memory.
 
-**Clearing n8n AI agent memory** requires specific actions directed at these storage mechanisms. For example, deleting records from a database or reinitializing workflow variables. Understanding [managing persistent AI agent memory in n8n](/articles/managing-persistent-ai-agent-memory-in-n8n/) is key to managing these longer-term stores effectively.
+**Clearing n8n AI agent memory** requires specific actions directed at these storage mechanisms. For example, deleting records from a database or reinitializing workflow variables. Understanding managing persistent AI agent memory in n8n is key to managing these longer-term stores effectively.
 
 ## Strategies for Clearing n8n AI Agent Memory
 

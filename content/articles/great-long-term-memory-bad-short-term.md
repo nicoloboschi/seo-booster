@@ -59,7 +59,7 @@ A 2023 study by researchers at [Stanford University](https://arxiv.org/abs/2305.
 
 ### Architectural Patterns Contributing to Memory Imbalance
 
-Several **AI agent architecture patterns** can inadvertently lead to a great long-term memory, bad short-term memory profile. Understanding these patterns is key to [developing effective AI agents](/articles/developing-ai-agents/) with better **AI short term memory** and long-term recall.
+Several **AI agent architecture patterns** can inadvertently lead to a great long-term memory, bad short-term memory profile. Understanding these patterns is key to developing effective AI agents with better **AI short term memory** and long-term recall.
 
 One common pattern involves a strict separation between the LLM's immediate context and its persistent memory store. The LLM processes the current conversation, and at intervals or when prompted, relevant snippets are summarized and stored in a **long-term memory** system, such as a vector database. However, the LLM itself doesn't inherently "remember" what it summarized; it only remembers what's in its current context. This separation is a major reason for the **agent memory imbalance** and the resulting **great long-term memory bad short-term** issue.
 
@@ -73,7 +73,7 @@ The struggle with short-term recall, despite strong long-term memory, has signif
 
 For instance, an AI assistant designed to help users manage their schedules might have perfect recall of all past appointments (**great long-term memory**). However, if it forgets the user's immediate request to "add a meeting for tomorrow at 10 AM," it fails in its primary function. This is a clear example of **limited-memory AI** in action, a direct result of the **great long-term memory bad short-term** issue.
 
-In conversational AI, this imbalance can lead to frustrating user experiences. An agent might repeatedly ask for information that was just provided, fail to follow multi-step instructions, or lose track of the conversation's current topic. This makes interactions feel unnatural and inefficient, undermining the perceived intelligence of the AI. This is a problem addressed by systems aiming for [AI that remembers conversations](/articles/ai-remembers-conversations/), tackling the **poor short-term recall** aspect of the **great long-term memory bad short-term** challenge.
+In conversational AI, this imbalance can lead to frustrating user experiences. An agent might repeatedly ask for information that was just provided, fail to follow multi-step instructions, or lose track of the conversation's current topic. This makes interactions feel unnatural and inefficient, undermining the perceived intelligence of the AI. This is a problem addressed by systems aiming for [AI that remembers conversations](/articles/what-ai-remembers-conversations/), tackling the **poor short-term recall** aspect of the **great long-term memory bad short-term** challenge.
 
 ### Strategies to Mitigate Short-Term Memory Deficits
 

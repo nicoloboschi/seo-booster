@@ -82,7 +82,7 @@ Implementing a **memory cache LLM** offers substantial advantages for both devel
 
 ### Improved Response Times and Reduced Latency
 
-This is the most immediate and noticeable benefit. By serving responses directly from the cache, the system can answer queries in milliseconds rather than seconds or even minutes. This is critical for applications requiring real-time interaction, such as chatbots, virtual assistants, and interactive coding tools. A 2023 study published on arXiv concerning [retrieval-augmented generation (RAG) systems](/articles/retrieval-augmented-generation/), which often incorporate caching, showed a 40% reduction in average response time for frequently asked questions. This demonstrated the power of an effective **LLM cache**.
+This is the most immediate and noticeable benefit. By serving responses directly from the cache, the system can answer queries in milliseconds rather than seconds or even minutes. This is critical for applications requiring real-time interaction, such as chatbots, virtual assistants, and interactive coding tools. A 2023 study published on arXiv concerning retrieval-augmented generation (RAG) systems, which often incorporate caching, showed a 40% reduction in average response time for frequently asked questions. This demonstrated the power of an effective **LLM cache**.
 
 ### Reduced Computational Costs
 

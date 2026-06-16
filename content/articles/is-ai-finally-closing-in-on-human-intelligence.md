@@ -116,7 +116,7 @@ Despite these achievements, AI struggles with generalization and common sense re
 
 ### The Role of Embodiment and Experience
 
-Human intelligence is shaped by physical embodiment and continuous interaction with the world. This embodied experience provides a rich context for learning and understanding that AI currently lacks. Research into [embodied AI](/articles/embodied-ai/) explores how physical interaction can foster more human-like intelligence.
+Human intelligence is shaped by physical embodiment and continuous interaction with the world. This embodied experience provides a rich context for learning and understanding that AI currently lacks. Research into embodied AI explores how physical interaction can foster more human-like intelligence.
 
 | Cognitive Area | AI Capabilities | Human Capabilities |
 | :

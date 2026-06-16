@@ -59,7 +59,7 @@ This difference is not merely quantitative; it's qualitative. A larger window me
 
 ### Impact on AI Capabilities: Beyond Basic Interactions
 
-For AI agents aiming for sophisticated capabilities, a larger context window is paramount. It moves AI closer to the human ability to recall and integrate information over extended periods. This is crucial for applications requiring deep understanding and continuous engagement, such as advanced personal assistants or analytical tools. Understanding [how AI agents manage memory systems](/articles/ai-agent-memory-systems/) is key to appreciating these advancements.
+For AI agents aiming for sophisticated capabilities, a larger context window is paramount. It moves AI closer to the human ability to recall and integrate information over extended periods. This is crucial for applications requiring deep understanding and continuous engagement, such as advanced personal assistants or analytical tools. Understanding [how AI agents manage memory systems](/articles/llm-agent-memory-systems/) is key to appreciating these advancements.
 
 ## How High Context Window LLMs Work: Architectural Innovations
 
@@ -89,7 +89,7 @@ In conversational AI, a limited context window leads to the AI "forgetting" earl
 
 ### Deeper Document Understanding with Large Context LLMs
 
-Analyzing lengthy documents, such as research papers, legal contracts, or financial reports, is a prime use case for **high context window LLMs**. These models can read and understand the entire document without needing to chunk it into smaller, potentially context-losing pieces. This allows for more accurate summarization, detailed analysis, and precise question-answering over the full scope of the text. Exploring [how LLMs process long documents](/articles/llm-long-document-processing/) provides further insight.
+Analyzing lengthy documents, such as research papers, legal contracts, or financial reports, is a prime use case for **high context window LLMs**. These models can read and understand the entire document without needing to chunk it into smaller, potentially context-losing pieces. This allows for more accurate summarization, detailed analysis, and precise question-answering over the full scope of the text. Exploring how LLMs process long documents provides further insight.
 
 ### Improved Reasoning and Problem-Solving with LLM Context Window
 

@@ -144,7 +144,7 @@ Storing historical data, especially personal information, raises significant pri
 
 ### Integration Complexity
 
-Connecting n8n workflows with external memory systems requires careful configuration. Ensuring seamless data flow and error handling between n8n nodes and the memory store is crucial for reliable operation. Exploring [AI agent memory system comparisons](/articles/best-ai-agent-memory-systems) can provide insights into suitable solutions.
+Connecting n8n workflows with external memory systems requires careful configuration. Ensuring seamless data flow and error handling between n8n nodes and the memory store is crucial for reliable operation. Exploring [AI agent memory system comparisons](/articles/best-ai-memory-systems/) can provide insights into suitable solutions.
 
 ## Comparing n8n Memory Approaches
 

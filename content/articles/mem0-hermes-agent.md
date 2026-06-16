@@ -168,7 +168,7 @@ The AI memory landscape is diverse. Understanding how the **Mem0 Hermes agent** 
 
 ### Mem0 vs. Other Frameworks
 
-Mem0 is a specific project or framework, and "Hermes" likely denotes a particular version or architectural focus. When comparing it to other systems, one looks at factors like ease of integration, scalability, retrieval speed, cost, and the types of memory it excels at managing (e.g., episodic vs. semantic). For example, [Mem0 vs. Cognee](/articles/mem0-vs-cognee/) or [Mem0 vs. LLaMA Index](/articles/mem0-alternatives-compared/) analyses would highlight specific strengths and weaknesses.
+Mem0 is a specific project or framework, and "Hermes" likely denotes a particular version or architectural focus. When comparing it to other systems, one looks at factors like ease of integration, scalability, retrieval speed, cost, and the types of memory it excels at managing (e.g., episodic vs. semantic). For example, Mem0 vs. Cognee or [Mem0 vs. LLaMA Index](/articles/mem0-alternatives-compared/) analyses would highlight specific strengths and weaknesses.
 
 ### Vector Databases and LLM Memory Wrappers
 

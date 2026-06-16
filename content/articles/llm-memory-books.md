@@ -60,7 +60,7 @@ The core idea behind **LLM memory books** is to externalize memory. Instead of r
 
 This process typically involves several key components. First, **information ingestion** prepares new data for storage. Next, **indexing and embedding** convert information into numerical representations that capture semantic meaning. Then, the indexed information is stored in a **vector database** or similar knowledge store, forming the "book." Finally, when the LLM needs information, a query is embedded, and the system searches for relevant pieces based on semantic similarity. The retrieved information augments the LLM's context, enhancing **AI agent recall**.
 
-This externalization of memory is a cornerstone of building more capable AI agents. It shares principles with **Retrieval-Augmented Generation (RAG)** but often implies a more structured and persistent form of knowledge organization. You can explore more about [distinguishing agent memory from RAG](/articles/agent-memory-vs-rag) to understand these distinctions.
+This externalization of memory is a cornerstone of building more capable AI agents. It shares principles with **Retrieval-Augmented Generation (RAG)** but often implies a more structured and persistent form of knowledge organization. You can explore more about distinguishing agent memory from RAG to understand these distinctions.
 
 ## Types of Information Stored in LLM Memory Books
 

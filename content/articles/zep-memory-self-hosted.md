@@ -70,7 +70,7 @@ While initial setup might require investment, self-hosting can lead to predictab
 
 #### Customization and Integration Flexibility
 
-A self-hosted instance allows for deep customization. You can tune performance and integrate Zep with your existing internal tools. You can modify its behavior to perfectly suit your specific [AI agent architecture](/articles/ai-agent-architecture/). This level of control is often unavailable with managed solutions when implementing **zep memory self hosted**. Tailoring Zep ensures it fits your unique workflow.
+A self-hosted instance allows for deep customization. You can tune performance and integrate Zep with your existing internal tools. You can modify its behavior to perfectly suit your specific AI agent architecture. This level of control is often unavailable with managed solutions when implementing **zep memory self hosted**. Tailoring Zep ensures it fits your unique workflow.
 
 #### Offline Capabilities and Reduced Latency
 
@@ -139,7 +139,7 @@ def add_message_to_memory(session_id: str, message_text: str, message_role: str 
 ## add_message_to_memory("my-agent-session-123", "What is the capital of France?")
 ```
 
-Retrieving memories would involve similar API calls. These often include search parameters to find semantically relevant past interactions. This process is crucial for [implementing persistent AI memory with Zep](/articles/how-to-implement-persistent-ai-memory/).
+Retrieving memories would involve similar API calls. These often include search parameters to find semantically relevant past interactions. This process is crucial for implementing persistent AI memory with Zep.
 
 Here's an example of how to retrieve messages:
 

@@ -126,13 +126,13 @@ The vector database stores dense vector representations of information chunks, a
 
 Within the LLM itself, **hierarchical attention mechanisms** can be employed. These mechanisms allow the model to focus on different parts of its memory at varying levels of granularity. For example, attention might first be directed to a broad topic in a summary layer, then to specific sentences within a retrieved document.
 
-This internal structuring complements external memory architectures, enabling the LLM to process retrieved information more effectively. Understanding how models process context is key, which is why exploring [context window limitations and solutions](/articles/llm-context-window-solutions/) is so relevant.
+This internal structuring complements external memory architectures, enabling the LLM to process retrieved information more effectively. Understanding how models process context is key, which is why exploring [context window limitations and solutions](/articles/llm-context-window-evolution/) is so relevant.
 
 ### Hybrid Memory Models for Hierarchical AI
 
 Many advanced systems adopt **hybrid AI memory systems** that blend different memory types. A hierarchical approach can integrate short-term, long-term, episodic, and semantic memory into a cohesive, multi-layered structure. This allows the agent to use the strengths of each memory type.
 
-For example, an agent might use a fast, short-term memory for immediate conversational context, a hierarchical long-term memory for general knowledge, and a specialized episodic memory for past interactions. This is the core idea behind many [key agent memory architecture patterns](/articles/agent-memory-architecture-patterns/).
+For example, an agent might use a fast, short-term memory for immediate conversational context, a hierarchical long-term memory for general knowledge, and a specialized episodic memory for past interactions. This is the core idea behind many key agent memory architecture patterns.
 
 Here's a simplified Python example demonstrating a basic hierarchical memory structure that could be used with LLMs:
 
@@ -237,7 +237,7 @@ Ensuring that an agent remembers important past events while not being bogged do
 
 Seamlessly integrating external hierarchical memory systems with the internal workings of LLMs remains an active area of research. The goal is to create a synergistic relationship where the LLM can efficiently access and update its memory, and the memory system can effectively inform the LLM's responses. This is vital for **hierarchical memory systems for LLMs**.
 
-This integration is key to developing truly intelligent agents that can learn, adapt, and reason over extended periods. The ongoing development of [LLM memory systems](/articles/llm-memory-systems/) is pushing these boundaries.
+This integration is key to developing truly intelligent agents that can learn, adapt, and reason over extended periods. The ongoing development of [LLM memory systems](/articles/llm-memory-system/) is pushing these boundaries.
 
 ## Conclusion
 

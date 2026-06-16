@@ -175,7 +175,7 @@ The purpose is also expanding into **multimodal understanding**. LLMs will proce
 
 LLMs will become increasingly **personalized and adaptive**. They will tailor responses to individual users. This promises more effective AI interactions.
 
-The journey of LLMs is continuous innovation. It's driven by enabling machines to interact through language. Exploring [how agents use memory](/articles/how-agents-use-memory/) further illuminates AI's evolving landscape.
+The journey of LLMs is continuous innovation. It's driven by enabling machines to interact through language. Exploring how agents use memory further illuminates AI's evolving landscape.
 
 ## FAQ
 

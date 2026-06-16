@@ -167,7 +167,7 @@ Long-term memory systems, on the other hand, are designed to store information *
 
 The persistent storage and recall of information across interactions is the hallmark of long-term memory. It supports ongoing learning and adaptation of the agent, drawing from the agent's own experiences. Examples include remembering a user's dietary restrictions for future orders, a direct application of **AI agent memory**.
 
-A 2024 study published in arXiv by researchers at Stanford University indicated that retrieval-augmented agents showed a 34% improvement in task completion over baseline models when provided with relevant context, highlighting the power of information access. However, true long-term memory goes beyond immediate retrieval to build a continuous understanding. Understanding [agent memory vs. RAG](/articles/agent-memory-vs-rag/) is crucial for designing effective AI.
+A 2024 study published in arXiv by researchers at Stanford University indicated that retrieval-augmented agents showed a 34% improvement in task completion over baseline models when provided with relevant context, highlighting the power of information access. However, true long-term memory goes beyond immediate retrieval to build a continuous understanding. Understanding agent memory vs. RAG is crucial for designing effective AI.
 
 **Comparison Table: RAG vs. Long-Term Memory**
 

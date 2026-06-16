@@ -231,7 +231,7 @@ Running LLMs and their associated memory systems locally presents unique challen
 * **Performance:** Latency in embedding, retrieval, and LLM inference can impact user experience.
 * **Persistence:** Ensuring that memory data is saved and reloaded correctly when the application restarts.
 
-Choosing lightweight, efficient tools is critical. For example, using a local vector database like ChromaDB or FAISS is often preferred over cloud-based solutions for truly local deployments. Understanding the trade-offs between performance, resource usage, and functionality is key to successful [local LLM memory implementation](/articles/local-llm-memory-implementation/).
+Choosing lightweight, efficient tools is critical. For example, using a local vector database like ChromaDB or FAISS is often preferred over cloud-based solutions for truly local deployments. Understanding the trade-offs between performance, resource usage, and functionality is key to successful [local LLM memory implementation](/articles/llm-memory-implementation/).
 
 ## Enhancing Memory Capabilities
 

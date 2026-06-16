@@ -129,7 +129,7 @@ When memory resides on a user's device, data privacy is inherently enhanced comp
 
 ### Memory Management and Forgetting Mechanisms
 
-An AI agent that remembers everything can become overwhelmed and inefficient. Just as humans forget irrelevant details, AI agents may need mechanisms for **memory consolidation and forgetting**. This involves prioritizing important information, summarizing past experiences, and discarding outdated or redundant data. Without this, the **long-term memory local AI** could become a performance bottleneck. Research in [AI memory consolidation](/articles/ai-memory-consolidation/) explores these mechanisms.
+An AI agent that remembers everything can become overwhelmed and inefficient. Just as humans forget irrelevant details, AI agents may need mechanisms for **memory consolidation and forgetting**. This involves prioritizing important information, summarizing past experiences, and discarding outdated or redundant data. Without this, the **long-term memory local AI** could become a performance bottleneck. Research in [AI memory consolidation](/articles/llm-memory-consolidation/) explores these mechanisms.
 
 ### Retrieval Accuracy and Relevance in Context
 

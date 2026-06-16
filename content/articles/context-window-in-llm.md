@@ -124,7 +124,7 @@ The race to expand **context windows in LLMs** is a major frontier in AI researc
 
 ### Towards Infinite Context
 
-The ultimate goal for some researchers is an "infinite" context window, where an LLM can theoretically process any amount of information. While true infinity is unlikely, advancements in efficient attention mechanisms and memory architectures are bringing us closer to models that can handle vast, practically unlimited amounts of data. This includes exploring [local LLM](/articles/local-llm/) options with larger contexts, like the **1m context window local LLm** initiatives. This quest aims to overcome the inherent **context window in LLM** constraints.
+The ultimate goal for some researchers is an "infinite" context window, where an LLM can theoretically process any amount of information. While true infinity is unlikely, advancements in efficient attention mechanisms and memory architectures are bringing us closer to models that can handle vast, practically unlimited amounts of data. This includes exploring local LLM options with larger contexts, like the **1m context window local LLm** initiatives. This quest aims to overcome the inherent **context window in LLM** constraints.
 
 ### Hybrid Memory Architectures
 

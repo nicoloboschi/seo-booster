@@ -77,7 +77,7 @@ A core component of many modern AI memory systems is the use of **embedding mode
 
 **Vector databases** store these vectors and enable efficient similarity searches. When an agent needs to recall information, it converts its current query into a vector and searches the database for the most similar existing vectors. This allows for contextually relevant retrieval.
 
-This approach is fundamental to **embedding models for memory**. It's also heavily used in Retrieval-Augmented Generation (RAG) systems, which often serve as a form of agent memory. Understanding [vector databases](/articles/vector-databases-explained/) for AI memory is key to grasping how these systems operate.
+This approach is fundamental to **embedding models for memory**. It's also heavily used in Retrieval-Augmented Generation (RAG) systems, which often serve as a form of agent memory. Understanding vector databases for AI memory is key to grasping how these systems operate.
 
 Here's a Python example demonstrating a basic in-memory vector store concept:
 

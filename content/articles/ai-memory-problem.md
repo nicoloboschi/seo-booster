@@ -126,7 +126,7 @@ RAG effectively provides a form of dynamic, external memory. It allows agents to
 
 Beyond RAG, specialized **external memory modules** are being developed. These can range from simple key-value stores to sophisticated vector databases optimized for storing and querying complex data representations. This is a key strategy for the **ai memory problem**.
 
-Vector databases, powered by **embedding models for memory**, are particularly effective. They store information as numerical vectors, allowing for semantic similarity searches. This means an AI can find information that is conceptually similar to its query, even if the exact keywords don't match. This is a cornerstone of many [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) for overcoming the **ai memory problem**.
+Vector databases, powered by **embedding models for memory**, are particularly effective. They store information as numerical vectors, allowing for semantic similarity searches. This means an AI can find information that is conceptually similar to its query, even if the exact keywords don't match. This is a cornerstone of many [best AI agent memory systems](/articles/best-ai-memory-systems/) for overcoming the **ai memory problem**.
 
 Tools like **Hindsight** exemplify this approach, offering a flexible framework for managing and querying agent memory to enable more sophisticated recall capabilities. You can explore it on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight). Hindsight helps directly combat the **ai memory problem** by providing structured access.
 

@@ -82,7 +82,7 @@ Researchers and developers are actively exploring innovative approaches to overc
 
 ### Retrieval-Augmented Generation (RAG) for Long-Term Memory AI
 
-**Retrieval-Augmented Generation (RAG)** is a prominent technique addressing the context window limitation. RAG systems combine a retrieval component with a generative model. When a query is made, relevant information is first retrieved from an external knowledge base (often a [vector database](/articles/vector-database-explained/)) and then fed into the LLM's context window.
+**Retrieval-Augmented Generation (RAG)** is a prominent technique addressing the context window limitation. RAG systems combine a retrieval component with a generative model. When a query is made, relevant information is first retrieved from an external knowledge base (often a vector database) and then fed into the LLM's context window.
 
 This allows LLMs to access and use information far beyond their native context window. For example, RAG can enable an AI assistant to recall specific details from a user manual or previous support tickets without the entire document needing to be in the prompt. According to a 2024 study published in [arxiv](https://arxiv.org/abs/2310.01955), RAG-based agents showed a 34% improvement in task completion for knowledge-intensive tasks compared to baseline LLMs. This approach is crucial for mitigating the **AI memory crisis** and enabling **long-term memory AI**.
 

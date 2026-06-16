@@ -180,7 +180,7 @@ This mirrors human memory, where immediate experiences are processed and potenti
 
 While RAG is often associated with long term memory, its principles can be applied to short term contexts. If an agent needs specific information from its recent history that's no longer in its active window, it could potentially perform a quick retrieval from a recent interaction log.
 
-This allows the agent to "look up" details it might have otherwise forgotten, effectively extending its immediate recall. This contrasts with traditional [comparing agent memory and RAG](/articles/agent-memory-vs-rag/) approaches.
+This allows the agent to "look up" details it might have otherwise forgotten, effectively extending its immediate recall. This contrasts with traditional comparing agent memory and RAG approaches.
 
 ## The Future of Agent Short Term Memory
 

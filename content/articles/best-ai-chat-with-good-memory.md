@@ -148,7 +148,7 @@ The process typically involves:
 4. **Retrieval:** Fetching relevant data based on the current context or query.
 5. **Generation:** Using retrieved information to inform the AI's response.
 
-This entire cycle contributes to the AI's ability to recall and act upon past information, creating a more coherent and personalized interaction. Understanding the differences between [agent memory vs. RAG](/articles/agent-memory-vs-rag/) is also crucial for optimizing this process.
+This entire cycle contributes to the AI's ability to recall and act upon past information, creating a more coherent and personalized interaction. Understanding the differences between agent memory vs. RAG is also crucial for optimizing this process.
 
 ### Python Code Example: Simple Memory Implementation for AI Chat
 

@@ -114,7 +114,7 @@ Vector databases are particularly effective for semantic memory. By embedding te
 Open-source projects often distinguish between **short-term memory in AI agents** (e.g., the last few turns of a conversation) and **long-term memory AI agent** capabilities (e.g., user preferences learned over weeks).
 
 * **Short-term memory** is often managed by conversation buffers that store recent exchanges.
-* **Long-term memory** typically involves more sophisticated storage, like vector databases or specialized knowledge graphs, allowing for information persistence over extended periods. Understanding these distinctions is key to effective [agent memory design](/articles/agent-memory-design).
+* **Long-term memory** typically involves more sophisticated storage, like vector databases or specialized knowledge graphs, allowing for information persistence over extended periods. Understanding these distinctions is key to effective agent memory design.
 
 ## Open-Source AI Memory in Action: Practical Applications
 

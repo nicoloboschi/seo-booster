@@ -141,7 +141,7 @@ Google's use of **AI memory Google** for personalization raises significant priv
 
 ### Temporal Reasoning
 
-Understanding event order and duration is crucial for many AI tasks. Developing AI that performs robust [temporal reasoning in AI memory](/articles/temporal-memory-ai-agents/) systems is an active research area. This capability is key for complex planning and causal understanding.
+Understanding event order and duration is crucial for many AI tasks. Developing AI that performs robust temporal reasoning in AI memory systems is an active research area. This capability is key for complex planning and causal understanding.
 
 ## Python Example: Vector Search for AI Memory
 
@@ -210,10 +210,10 @@ relevant_memories = memory_system.search(query_vector, top_k=2)
 print("Most relevant memories (ID, Similarity):", relevant_memories)
 
 ## This simplified example shows how semantic similarity drives memory retrieval,
-## a core concept in understanding [vector databases for AI memory](/articles/vector-databases-ai-memory/).
+## a core concept in understanding [vector databases for AI memory](/articles/vector-database-llm-memory/).
 ```
 
-This code illustrates how semantic similarity drives memory retrieval, a core concept in understanding [vector databases for AI memory](/articles/vector-databases-ai-memory/). It's fundamental to how **AI memory Google** systems can find relevant past information.
+This code illustrates how semantic similarity drives memory retrieval, a core concept in understanding [vector databases for AI memory](/articles/vector-database-llm-memory/). It's fundamental to how **AI memory Google** systems can find relevant past information.
 
 ## Comparison of AI Memory Techniques
 

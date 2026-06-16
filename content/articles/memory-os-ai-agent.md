@@ -75,7 +75,7 @@ One of the most significant benefits is the creation of **persistent memory for 
 
 ### Overcoming Context Window Limitations
 
-LLMs have finite context windows, limiting how much information they can process simultaneously. A Memory OS acts as an external memory, storing vast amounts of data that can be selectively retrieved and fed into the LLM's context window as needed. This allows agents to handle much longer conversations, complex documents, and extensive histories without losing critical information. This is a key differentiator from simpler RAG implementations, offering a more integrated [agent memory vs RAG](/articles/agent-memory-vs-rag/) solution for complex scenarios.
+LLMs have finite context windows, limiting how much information they can process simultaneously. A Memory OS acts as an external memory, storing vast amounts of data that can be selectively retrieved and fed into the LLM's context window as needed. This allows agents to handle much longer conversations, complex documents, and extensive histories without losing critical information. This is a key differentiator from simpler RAG implementations, offering a more integrated agent memory vs RAG solution for complex scenarios.
 
 ### Facilitating Learning and Adaptation
 

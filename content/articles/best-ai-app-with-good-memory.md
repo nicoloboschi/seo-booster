@@ -153,7 +153,7 @@ The concept of **AI vendors with durable cross-session memory** is crucial for e
 
 ### Tools for Developers and Researchers
 
-Developers and researchers often seek more foundational tools to build their own memory-enabled AI applications. This might involve using LLM memory frameworks, vector database solutions, or agent orchestration tools. Frameworks like Langchain, LlamaIndex, and Vectorize.io's own offerings provide the building blocks for creating AI with advanced memory capabilities. For instance, comparing [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/) can inform this choice.
+Developers and researchers often seek more foundational tools to build their own memory-enabled AI applications. This might involve using LLM memory frameworks, vector database solutions, or agent orchestration tools. Frameworks like Langchain, LlamaIndex, and Vectorize.io's own offerings provide the building blocks for creating AI with advanced memory capabilities. For instance, comparing Letta vs. Langchain memory can inform this choice.
 
 Here's a Python example demonstrating a basic concept of storing and retrieving information using embeddings, conceptually similar to how a memory system might work. This example uses a vector database client for more realistic interaction.
 

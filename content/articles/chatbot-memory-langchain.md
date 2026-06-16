@@ -146,7 +146,7 @@ Consider these factors when selecting a memory component:
 3. **Cost Constraints:** Summarization and RAG can reduce token costs compared to storing raw logs for your **Langchain chatbot memory**.
 4. **Need for External Knowledge:** If the chatbot needs to access a large, external knowledge base, RAG and vector stores are essential.
 
-For a deeper dive into various memory solutions, check out the [best AI agent memory systems](/articles/best-ai-agent-memory-systems/) guide.
+For a deeper dive into various memory solutions, check out the [best AI agent memory systems](/articles/best-ai-memory-systems/) guide.
 
 ## Conclusion
 

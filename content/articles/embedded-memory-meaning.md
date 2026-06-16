@@ -41,7 +41,7 @@ This embedding allows for rapid inference. Because the knowledge is intrinsic, t
 
 The core distinction lies between implicit and explicit knowledge storage. **Embedded memory** is implicit; it's woven into the fabric of the model. In contrast, explicit knowledge storage involves separate systems like vector databases or knowledge graphs, where information is organized and retrieved on demand.
 
-This difference is fundamental to understanding how AI agents retain information. While explicit memory systems aim to provide agents with access to vast, updatable knowledge bases, embedded memory represents what the model has inherently learned. Understanding [AI agent memory systems](/articles/ai-agent-memory-systems/) helps clarify these distinctions.
+This difference is fundamental to understanding how AI agents retain information. While explicit memory systems aim to provide agents with access to vast, updatable knowledge bases, embedded memory represents what the model has inherently learned. Understanding [AI agent memory systems](/articles/llm-agent-memory-systems/) helps clarify these distinctions.
 
 ## How Embedded Memory is Formed
 

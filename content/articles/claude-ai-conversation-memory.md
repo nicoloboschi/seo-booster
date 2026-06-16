@@ -44,11 +44,11 @@ Claude models, particularly newer versions like Claude 3, boast significantly la
 
 When you interact with Claude, your prompts and its responses are processed as a sequence of tokens. Claude's underlying **transformer architecture** uses **attention mechanisms** to weigh the relevance of different tokens in the input sequence. This allows it to focus on the most pertinent parts of the conversation history to generate a contextually appropriate reply.
 
-This process isn't about storing discrete memories like a database. Instead, it's about dynamically processing the entire relevant conversational input at the time of generation. The model learns patterns and relationships from this input, enabling it to simulate recall by referring to information that remains within its active context window. This is a core aspect of [how AI models achieve conversation memory](/articles/how-ai-models-achieve-conversation-memory/).
+This process isn't about storing discrete memories like a database. Instead, it's about dynamically processing the entire relevant conversational input at the time of generation. The model learns patterns and relationships from this input, enabling it to simulate recall by referring to information that remains within its active context window. This is a core aspect of how AI models achieve conversation memory.
 
 ## Limitations of Claude's Inherent Memory
 
-Despite impressive context window sizes, Claude's conversational memory has inherent limitations. The finite nature of the context window means that even with 200,000 tokens, there's a practical limit to how far back in a conversation Claude can reliably recall specific details. This is a common challenge across all LLMs, as explored in [solutions for context window limitations](/articles/solutions-for-context-window-limitations/).
+Despite impressive context window sizes, Claude's conversational memory has inherent limitations. The finite nature of the context window means that even with 200,000 tokens, there's a practical limit to how far back in a conversation Claude can reliably recall specific details. This is a common challenge across all LLMs, as explored in solutions for context window limitations.
 
 ### Session-Specific Recall Dynamics
 

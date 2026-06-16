@@ -82,7 +82,7 @@ According to a 2024 benchmark study on AI memory systems published on [arXiv](ht
 
 Langchain supports various **vector store integrations**, allowing developers to choose the best backend for their needs. These integrations abstract away the complexities of interacting with different database technologies. When you select an in-memory option, Langchain interacts with a system designed for maximum speed, making the **in memory vector database langchain** a natural fit for **fast vector retrieval langchain** applications.
 
-The choice of vector store significantly influences an agent's **context window limitations** and its ability to perform effective [retrieval-augmented generation](/articles/retrieval-augmented-generation). While large datasets might eventually exceed available RAM, for many practical applications, an **in-memory vector database for Langchain** offers the best performance profile. We explore various strategies for understanding context window limitations in AI agents in our article on [context window limitations in AI agents](/articles/context-window-limitations-solutions/).
+The choice of vector store significantly influences an agent's **context window limitations** and its ability to perform effective retrieval-augmented generation. While large datasets might eventually exceed available RAM, for many practical applications, an **in-memory vector database for Langchain** offers the best performance profile. We explore various strategies for understanding context window limitations in AI agents in our article on [context window limitations in AI agents](/articles/context-window-limitations-solutions/).
 
 ## Implementing an In-Memory Vector Database with Langchain
 

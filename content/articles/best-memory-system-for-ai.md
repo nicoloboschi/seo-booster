@@ -70,7 +70,7 @@ For example, an AI analyzing customer feedback might use embeddings to group sim
 
 Often, the **best memory system for AI** is not a single technology but a **hybrid memory system**. This approach combines multiple memory types and retrieval methods to use their respective strengths. For instance, an agent might use a fast, in-memory cache for recent interactions (working memory) and a large-scale vector database for long-term knowledge retrieval.
 
-This hybrid approach can overcome the limitations of any single system. It allows for quick access to immediate context while also providing access to a vast repository of historical data. This pattern is increasingly common in sophisticated [advanced AI agent architectures](/articles/ai-agent-architectures/).
+This hybrid approach can overcome the limitations of any single system. It allows for quick access to immediate context while also providing access to a vast repository of historical data. This pattern is increasingly common in sophisticated advanced AI agent architectures.
 
 ### Memory Consolidation and Forgetting Mechanisms
 
@@ -127,7 +127,7 @@ For instance, **AI memory benchmarks** might compare how quickly different syste
 
 ### The Role of Context Window Limitations
 
-Large Language Models (LLMs) often have **context window limitations**, meaning they can only process a fixed amount of text at a time. Effective memory systems work around this by providing relevant context from long-term storage, ensuring the LLM has the necessary information without exceeding its window. This is where RAG and external memory stores become critical for optimal [LLM agent performance](/articles/llm-agent-performance/).
+Large Language Models (LLMs) often have **context window limitations**, meaning they can only process a fixed amount of text at a time. Effective memory systems work around this by providing relevant context from long-term storage, ensuring the LLM has the necessary information without exceeding its window. This is where RAG and external memory stores become critical for optimal LLM agent performance.
 
 Solutions often involve summarizing past interactions or retrieving only the most pertinent information to fit within the LLM's context window.
 
@@ -195,7 +195,7 @@ This AI would require:
 * **Temporal Reasoning:** To chronologically order events and understand deadlines.
 * **Efficient Retrieval:** To quickly find any piece of information upon user request.
 
-A hybrid architecture, likely incorporating a powerful vector database for semantic search and a structured system for chronological event recall, would be essential. The ability for the AI to **remember conversations** and past actions is paramount for user trust and utility. Understanding [how AI agents learn](/articles/how-ai-agents-learn/) is also key to appreciating memory's role in creating truly intelligent systems.
+A hybrid architecture, likely incorporating a powerful vector database for semantic search and a structured system for chronological event recall, would be essential. The ability for the AI to **remember conversations** and past actions is paramount for user trust and utility. Understanding how AI agents learn is also key to appreciating memory's role in creating truly intelligent systems.
 
 ## Frequently Asked Questions
 

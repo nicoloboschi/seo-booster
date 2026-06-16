@@ -94,7 +94,7 @@ This pattern is central to many [key AI agent architecture patterns for memory i
 
 Most **llm memory plugin** solutions provide APIs or SDKs for integration. Developers can use these tools to connect their applications to the memory backend, define data schemas, and implement retrieval logic. This allows for flexible integration across different programming languages and frameworks.
 
-For developers looking for ready-made solutions, exploring [comparing open-source LLM memory systems](/articles/comparing-open-source-llm-memory-systems/) can provide valuable insights into available tools and their capabilities. Documentation for technologies like LangChain also offers guidance on integrating memory components.
+For developers looking for ready-made solutions, exploring comparing open-source LLM memory systems can provide valuable insights into available tools and their capabilities. Documentation for technologies like LangChain also offers guidance on integrating memory components.
 
 ### Example: A Simple Memory Plugin in Python
 

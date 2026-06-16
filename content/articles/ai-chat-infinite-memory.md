@@ -69,7 +69,7 @@ Achieving the illusion of **ai chat infinite memory** involves sophisticated mem
 The most common strategy is to store conversation history in an **external memory store** separate from the LLM's active context. This store can take various forms, each with its own strengths:
 
 * **Vector Databases:** These databases store information as numerical vectors, allowing for efficient similarity searches. Past conversation turns, summarized key points, or user profile information can be embedded and stored. When a new query comes in, the system searches the vector database for relevant past information to inject into the LLM's prompt. Systems like Pinecone, Weaviate, and ChromaDB are popular choices for **AI memory management**.
-* **Knowledge Graphs:** These structures represent information as entities and relationships. They are excellent for storing structured facts and complex interconnections from conversations, enabling more nuanced reasoning. You can learn more about [how knowledge graphs enhance AI conversations](/articles/knowledge-graph-applications-in-ai/).
+* **Knowledge Graphs:** These structures represent information as entities and relationships. They are excellent for storing structured facts and complex interconnections from conversations, enabling more nuanced reasoning. You can learn more about how knowledge graphs enhance AI conversations.
 * **Chronological Logs:** Simple text files or databases can store conversations sequentially. While less efficient for retrieval, they provide a complete, raw record of **AI conversation history**.
 
 ### Retrieval-Augmented Generation (RAG) for Persistent Memory AI
@@ -113,7 +113,7 @@ Building an AI chat with infinite memory involves several key steps, often using
 
 Several tools and frameworks simplify the development of such systems for **ai chat infinite memory**:
 
-* **LangChain and LlamaIndex:** These popular frameworks provide abstractions for building LLM applications, including integrations with various memory backends and RAG pipelines. They offer pre-built components for managing conversation history and retrieving information. Explore [advanced RAG techniques in LangChain](/articles/advanced-rag-techniques-langchain/).
+* **LangChain and LlamaIndex:** These popular frameworks provide abstractions for building LLM applications, including integrations with various memory backends and RAG pipelines. They offer pre-built components for managing conversation history and retrieving information. Explore advanced RAG techniques in LangChain.
 * **Hindsight:** For Python developers, [Hindsight](https://github.com/vectorize-io/hindsight) offers an open-source solution for building persistent memory into AI agents, enabling them to recall past interactions and learn over time.
 * **Vectorize.io:** Discover advanced memory solutions and guides on [vectorizing AI memory](https://vectorize.io/articles/vector-databases-for-ai-memory/).
 

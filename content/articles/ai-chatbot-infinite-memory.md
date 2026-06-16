@@ -132,7 +132,7 @@ Tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a framew
 
 ### Zep and Letta
 
-**Zep** is an open-source platform designed to provide LLMs with short-term and long-term memory. It focuses on efficient storage and retrieval of conversational context. **Letta** is another promising system aiming to enhance LLM memory capabilities. Comparing these systems, such as [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/), can highlight their different strengths and approaches for building **persistent AI memory**.
+**Zep** is an open-source platform designed to provide LLMs with short-term and long-term memory. It focuses on efficient storage and retrieval of conversational context. **Letta** is another promising system aiming to enhance LLM memory capabilities. Comparing these systems, such as Letta vs. Langchain memory, can highlight their different strengths and approaches for building **persistent AI memory**.
 
 ## Implementing Long-Term Memory in AI Chatbots
 

@@ -45,7 +45,7 @@ Without effective memory mechanisms, agents struggle with:
 * **Limited Personalization:** Inability to build a user profile or adapt to individual preferences over time.
 * **Inability to Learn Long-Term:** Lacking the capacity to integrate new information into a lasting knowledge base.
 
-Frameworks like Mem0 become indispensable for building more capable and autonomous AI agents. Understanding the nuances of [AI agent memory frameworks](/articles/ai-agent-memory-frameworks/) is a prerequisite to appreciating the advancements **mem0 for agents** brings to agent recall.
+Frameworks like Mem0 become indispensable for building more capable and autonomous AI agents. Understanding the nuances of [AI agent memory frameworks](/articles/ai-memory-frameworks/) is a prerequisite to appreciating the advancements **mem0 for agents** brings to agent recall.
 
 ## Mem0's Architectural Approach to Agent Memory
 

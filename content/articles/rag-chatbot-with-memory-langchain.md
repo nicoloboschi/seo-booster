@@ -39,7 +39,7 @@ A **RAG chatbot with memory** is an AI system that enhances Retrieval-Augmented 
 
 ### The Power of Combining RAG and Memory
 
-Retrieval-Augmented Generation (RAG) revolutionized how we build chatbots by allowing them to access and cite external knowledge bases. However, without memory, each query is treated in isolation. Adding memory allows the **rag chatbot with memory langchain** to build a history of the interaction. This is crucial for tasks requiring multi-turn dialogue, personalization, or complex reasoning that spans several exchanges. Understanding [AI agent memory concepts](/articles/ai-agent-memory-concepts/) is fundamental to appreciating this evolution.
+Retrieval-Augmented Generation (RAG) revolutionized how we build chatbots by allowing them to access and cite external knowledge bases. However, without memory, each query is treated in isolation. Adding memory allows the **rag chatbot with memory langchain** to build a history of the interaction. This is crucial for tasks requiring multi-turn dialogue, personalization, or complex reasoning that spans several exchanges. Understanding AI agent memory concepts is fundamental to appreciating this evolution.
 
 ### LangChain's Role in Building Advanced Chatbots
 
