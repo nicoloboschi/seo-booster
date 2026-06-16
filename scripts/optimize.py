@@ -35,7 +35,9 @@ def _clean_llm_article(raw: str) -> str | None:
     """Normalize an LLM article response into a single clean front-matter + body doc.
 
     Handles common Gemini failure modes that previously corrupted files:
-    - leading code fences (```markdown ... ```)
+    - leading code fences (```markdown / ```yaml ... ```)
+    - a front-matter block that omits the opening '---' (the ```yaml fence was
+      used as the delimiter instead)
     - a chatty preamble before the real article ("Here's the updated article...")
     - a stray ' ---' delimiter jammed onto the end of a front-matter value line
     - a duplicate front-matter block emitted after a preamble
@@ -57,6 +59,14 @@ def _clean_llm_article(raw: str) -> str | None:
     preamble = re.search(r"\n*.*updated article.*\n+(?=---\n)", text, re.IGNORECASE)
     if preamble:
         text = text[preamble.end():]
+
+    # Restore a missing opening delimiter: a ```yaml fence often replaces the
+    # leading '---', leaving the doc starting with a front-matter key but still
+    # closed by a '---' before the body.
+    if (not text.startswith("---\n")
+            and re.match(r"(title|description|date|slug|tags|keywords)\s*:", text)
+            and "\n---\n" in text):
+        text = "---\n" + text
 
     # Must start with a front-matter opener.
     if not text.startswith("---\n"):

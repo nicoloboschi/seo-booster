@@ -23,8 +23,8 @@ faq:
   answer: Mem0 supports the storage and retrieval of various memory types, including **episodic memory** (specific events) and **semantic memory** (general knowledge). This allows agents to build a rich
     and accessible knowledge base, enhancing their ability to understand context and respond intelligently.
 - question: Where can I find more information on comparing AI memory systems like Mem0?
-  answer: You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, Mem0 vs. Cognees and Mem0 vs. LLaMA
-    Index offer detailed insights into their features and use cases.
+  answer: You can explore comparisons and guides on various AI memory solutions, including Mem0, on sites like Vectorize.io. For instance, Mem0 vs. Cognees and Mem0 vs. LLaMA Index offer detailed insights
+    into their features and use cases.
 slug: mem0-building-production-ready-ai-agents
 ---
 

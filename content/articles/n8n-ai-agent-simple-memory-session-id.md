@@ -24,8 +24,7 @@ faq:
     to retain memory even if the n8n workflow restarts or the server reboots.
 - question: When should I consider moving beyond simple session memory for my n8n AI agent?
   answer: You should consider advanced memory solutions if your agent needs to recall information across different conversations, learn from a large knowledge base, maintain a complex internal state over
-    long periods, or if the conversation history frequently exceeds LLM context window limits. Solutions like advanced AI memory systems for n8n can guide
-    your choices.
+    long periods, or if the conversation history frequently exceeds LLM context window limits. Solutions like advanced AI memory systems for n8n can guide your choices.
 slug: n8n-ai-agent-simple-memory-session-id
 ---
 

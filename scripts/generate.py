@@ -221,18 +221,30 @@ MIN_QUALITY_SCORE = 70
 
 
 def _generate_text(client: genai.Client, prompt: str, system: str = "") -> str:
-    """Call Gemini and return the text response."""
+    """Call Gemini and return the text response, retrying on transient errors
+    (503 high-demand spikes are common and otherwise kill the whole article)."""
     config = genai.types.GenerateContentConfig(
         system_instruction=system if system else None,
         max_output_tokens=8192,
         temperature=0.7,
     )
-    response = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
-        contents=prompt,
-        config=config,
-    )
-    return response.text
+    last_err = None
+    for attempt in range(4):
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash-lite",
+                contents=prompt,
+                config=config,
+            )
+            return response.text
+        except Exception as e:
+            last_err = e
+            msg = str(e)
+            if any(code in msg for code in ("503", "UNAVAILABLE", "429", "RESOURCE_EXHAUSTED")):
+                time.sleep(5 * (attempt + 1))
+                continue
+            raise
+    raise last_err
 
 
 def _review_article(client: genai.Client, article: str, primary_keyword: str,
@@ -457,12 +469,11 @@ Existing articles on the site (link to these where relevant using /articles/slug
             continue
 
         try:
+            from scripts.optimize import _clean_llm_article, _validate_front_matter
+
             system = SYSTEM_PROMPT.replace("{today}", today)
             article_content = _generate_text(client, prompt, system=system)
-
-            # Strip markdown code fences
-            if article_content.startswith("```"):
-                article_content = article_content.split("\n", 1)[1].rsplit("```", 1)[0]
+            article_content = _clean_llm_article(article_content) or article_content
 
             # Quality review loop — up to MAX_REVISIONS rounds
             related_str = ", ".join(kw.get("related", []))
@@ -483,17 +494,18 @@ Existing articles on the site (link to these where relevant using /articles/slug
                 revised = _revise_article(
                     client, article_content, revision_instructions, target, system,
                 )
-                # Strip markdown code fences from revision
-                if revised.startswith("```"):
-                    revised = revised.split("\n", 1)[1].rsplit("```", 1)[0]
-                article_content = revised
+                # Salvage the revision (strip fences/preamble/duplicate blocks);
+                # if it can't be cleaned, keep the previous good version.
+                cleaned = _clean_llm_article(revised)
+                if cleaned and _validate_front_matter(cleaned):
+                    article_content = cleaned
             else:
                 print(f"    Final score={score} after {MAX_REVISIONS} revisions (accepting)")
 
             article_file = output_path / f"{slug}.md"
 
-            # Validate YAML front matter before saving
-            from scripts.optimize import _validate_front_matter
+            # Final salvage + validate before saving.
+            article_content = _clean_llm_article(article_content) or article_content
             if not _validate_front_matter(article_content):
                 print(f"    ✗ Skipped: generated article has invalid YAML")
                 continue
