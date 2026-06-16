@@ -20,6 +20,13 @@
 {{/* Canonical URL */}}
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{/* Robots — index only the homepage and individual articles. Section lists,
+     taxonomy/term pages, and paginated pages are noindex,follow: they pass link
+     equity to articles but stay out of the index (avoids thin/duplicate pages). */}}
+{{ if and (not .IsHome) (not .IsPage) }}
+<meta name="robots" content="noindex,follow">
+{{ end }}
+
 {{/* Open Graph */}}
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $description | plainify | truncate 160 }}">

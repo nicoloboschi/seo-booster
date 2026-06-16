@@ -22,3 +22,6 @@ content/**/*.bak
 
 # OS
 .DS_Store
+
+# Logs (regeneratable, can grow huge)
+logs/

@@ -99,7 +99,6 @@
       "deepseek llm.memory",
       "dify llm memory",
       "dify llm node memory",
-      "do you need llb for llm",
       "does llm have memory",
       "does llm make you a lawyer",
       "does local llm have memory",
@@ -108,7 +107,8 @@
       "how to build llm memory",
       "how to calculate llm memory usage",
       "how to give llm long term memory",
-      "how to give llm memory"
+      "how to give llm memory",
+      "how to give local llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -269,7 +269,6 @@
       "ai chat long memory",
       "ai chat memory",
       "ai chat memory reddit",
-      "ai chat permanent memory",
       "ai chatbot best memory",
       "ai chatbot for customer service",
       "ai chatbot good memory",
@@ -280,7 +279,8 @@
       "ai chatbot with memory free",
       "ai meeting summary",
       "best ai chat memory",
-      "best ai chatbot memory"
+      "best ai chatbot memory",
+      "best ai conversation app"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -396,7 +396,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 192,
+      "autocomplete_matches": 190,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -915,7 +915,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 36,
+      "autocomplete_matches": 32,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -937,11 +937,9 @@
     {
       "keyword": "ai chat permanent memory",
       "slug": "ai-chat-permanent-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chat permanent memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chat that remembers everything",
@@ -5587,11 +5585,9 @@
     {
       "keyword": "llm course time",
       "slug": "llm-course-time",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm course time"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm decoding memory bound",
@@ -6293,11 +6289,9 @@
     {
       "keyword": "llm memory knowledge graph",
       "slug": "llm-memory-knowledge-graph",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory knowledge graph"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory langchain",
@@ -8990,11 +8984,9 @@
     {
       "keyword": "do you need llb for llm",
       "slug": "do-you-need-llb-for-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "do you need llb for llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "does ai agents have memory",
@@ -9190,11 +9182,9 @@
     {
       "keyword": "llm memory karpathy",
       "slug": "llm-memory-karpathy",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory karpathy"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory palace",
@@ -9579,8 +9569,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1024,
-    "validated": 903,
-    "low_volume": 121,
+    "validated": 898,
+    "low_volume": 126,
     "new_opportunities_found": 0
   }
 }

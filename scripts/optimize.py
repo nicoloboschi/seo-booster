@@ -31,8 +31,53 @@ What to optimize:
 """
 
 
+def _clean_llm_article(raw: str) -> str | None:
+    """Normalize an LLM article response into a single clean front-matter + body doc.
+
+    Handles common Gemini failure modes that previously corrupted files:
+    - leading code fences (```markdown ... ```)
+    - a chatty preamble before the real article ("Here's the updated article...")
+    - a stray ' ---' delimiter jammed onto the end of a front-matter value line
+    - a duplicate front-matter block emitted after a preamble
+
+    Returns the cleaned document, or None if it can't be made well-formed.
+    """
+    import re
+
+    text = raw.strip()
+
+    # Strip surrounding code fences if present.
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else text
+        text = text.rsplit("```", 1)[0]
+        text = text.strip()
+
+    # If the model emitted a chatty preamble followed by a fresh front-matter
+    # block, drop everything up to that block (keep the LAST front-matter block).
+    preamble = re.search(r"\n*.*updated article.*\n+(?=---\n)", text, re.IGNORECASE)
+    if preamble:
+        text = text[preamble.end():]
+
+    # Must start with a front-matter opener.
+    if not text.startswith("---\n"):
+        return None
+
+    # Remove any ' ---' jammed onto the end of a line *inside* the front matter
+    # (delimiter accidentally appended to a value). Only operate before the
+    # real closing delimiter.
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return None
+    fm = re.sub(r" ---(?=\n)", "", text[:end])
+    body = text[end:]
+    text = fm + body
+
+    return text
+
+
 def _validate_front_matter(content: str) -> bool:
-    """Check that content has valid YAML front matter."""
+    """Check that content has exactly one valid YAML front-matter block, a
+    non-empty body, and no duplicate/leftover front-matter delimiters."""
     import re
     import yaml
     fm_match = re.match(r"^---\n(.*?\n)---\n", content, re.DOTALL)
@@ -40,9 +85,23 @@ def _validate_front_matter(content: str) -> bool:
         return False
     try:
         fm = yaml.safe_load(fm_match.group(1))
-        return isinstance(fm, dict)
+        if not isinstance(fm, dict):
+            return False
     except yaml.YAMLError:
         return False
+    body = content[fm_match.end():]
+    # Body must have real content...
+    if len(body.strip()) < 200:
+        return False
+    # ...and must not contain a duplicate front-matter block (a '---' line
+    # followed by front-matter keys) or a chatty LLM preamble. A lone '---'
+    # used as a markdown horizontal rule is fine.
+    if re.search(r"^---\s*\n+(title|description|date|slug|tags|keywords|faq)\s*:",
+                 body, re.MULTILINE):
+        return False
+    if "updated article" in body.lower()[:500]:
+        return False
+    return True
 
 
 def _get_client() -> genai.Client:
@@ -122,13 +181,11 @@ def apply_optimizations(report_path: str, content_dir: str):
                 config=config,
             )
 
-            optimized = response.text
-            if optimized.startswith("```"):
-                optimized = optimized.split("\n", 1)[1].rsplit("```", 1)[0]
+            optimized = _clean_llm_article(response.text or "")
 
             # Validate YAML front matter before writing
-            if not _validate_front_matter(optimized):
-                print(f"  ✗ Skipped: LLM returned invalid YAML front matter")
+            if not optimized or not _validate_front_matter(optimized):
+                print(f"  ✗ Skipped: LLM returned invalid/unsafe article output")
                 continue
 
             backup_file = content_path / f"{slug}.md.bak"

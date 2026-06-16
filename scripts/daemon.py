@@ -70,14 +70,22 @@ def run_cli(*args) -> bool:
     return result.returncode == 0
 
 
-def hugo_build_ok() -> bool:
-    """Test that Hugo can build the site without errors."""
+def hugo_build_error() -> str | None:
+    """Return Hugo's build error output, or None if the build is clean."""
     result = subprocess.run(
         ["hugo", "--quiet"],
         capture_output=True, text=True, cwd=PROJECT_DIR,
     )
     if result.returncode != 0:
-        print(f"  Hugo build FAILED:\n{result.stderr[:500]}")
+        return result.stderr or result.stdout or "unknown build error"
+    return None
+
+
+def hugo_build_ok() -> bool:
+    """Test that Hugo can build the site without errors."""
+    err = hugo_build_error()
+    if err is not None:
+        print(f"  Hugo build FAILED:\n{err[:500]}")
         return False
     return True
 
@@ -133,41 +141,96 @@ def git_deploy() -> bool:
     return True
 
 
-def _fix_broken_articles():
-    """Try to restore broken articles from .bak files or git."""
+def _article_is_wellformed(text: str) -> bool:
+    """True only if the doc has exactly one valid front-matter block, a real
+    body, and no leftover/duplicate delimiters. Mirrors how Hugo parses it, so
+    it catches double-front-matter and jammed-delimiter corruption that a naive
+    `split('---')` check misses."""
+    import re
     import yaml as _yaml
+    m = re.match(r"^---\n(.*?\n)---\n", text, re.DOTALL)
+    if not m:
+        return False
+    try:
+        if not isinstance(_yaml.safe_load(m.group(1)), dict):
+            return False
+    except _yaml.YAMLError:
+        return False
+    body = text[m.end():]
+    if len(body.strip()) < 100:
+        return False
+    # A lone '---' in the body is a legitimate markdown horizontal rule. The
+    # real corruption is a *duplicate front-matter block*: a '---' line quickly
+    # followed by front-matter keys (title:/description:/slug:...).
+    if re.search(r"^---\s*\n+(title|description|date|slug|tags|keywords|faq)\s*:",
+                 body, re.MULTILINE):
+        return False
+    return True
+
+
+def _repair_one_article(md_file) -> bool:
+    """Repair a single corrupted article. Order: in-place clean → .bak → git.
+    Returns True if the file ends up well-formed."""
+    from scripts.optimize import _clean_llm_article
+
+    # 1. Try to salvage the current content (strips preamble + duplicate block).
+    cleaned = _clean_llm_article(md_file.read_text())
+    if cleaned and _article_is_wellformed(cleaned):
+        md_file.write_text(cleaned)
+        print(f"    Cleaned in place: {md_file.name}")
+        return True
+
+    # 2. Restore from .bak if it's well-formed.
+    bak = md_file.with_suffix(".md.bak")
+    if bak.exists():
+        bak_text = bak.read_text()
+        salvaged = bak_text if _article_is_wellformed(bak_text) else _clean_llm_article(bak_text)
+        if salvaged and _article_is_wellformed(salvaged):
+            md_file.write_text(salvaged)
+            print(f"    Restored from .bak: {md_file.name}")
+            return True
+
+    # 3. Restore from git HEAD (clean it too — HEAD may also be corrupt).
+    head = subprocess.run(
+        ["git", "show", f"HEAD:content/articles/{md_file.name}"],
+        capture_output=True, text=True, cwd=PROJECT_DIR,
+    )
+    if head.returncode == 0:
+        salvaged = head.stdout if _article_is_wellformed(head.stdout) else _clean_llm_article(head.stdout)
+        if salvaged and _article_is_wellformed(salvaged):
+            md_file.write_text(salvaged)
+            print(f"    Restored from git: {md_file.name}")
+            return True
+
+    print(f"    CANNOT FIX: {md_file.name}")
+    return False
+
+
+def _fix_broken_articles():
+    """Repair articles that break the Hugo build. Error-driven: ask Hugo which
+    file fails, fix it, repeat. Falls back to a full scan for any remaining
+    malformed files."""
+    import re
     content_dir = PROJECT_DIR / "content" / "articles"
+
+    # Error-driven loop: Hugo names the offending file, fix it, rebuild.
+    for _ in range(50):
+        err = hugo_build_error()
+        if err is None:
+            break
+        m = re.search(r"(content/articles/[\w./-]+\.md)", err)
+        if not m:
+            break
+        md_file = PROJECT_DIR / m.group(1)
+        if not md_file.exists() or not _repair_one_article(md_file):
+            break
+
+    # Backstop: clean any other malformed articles the build hasn't reached yet.
     for md_file in content_dir.glob("*.md"):
-        if md_file.suffix == ".bak":
+        if md_file.suffix == ".bak" or md_file.name.startswith("_"):
             continue
-        text = md_file.read_text()
-        parts = text.split("---", 2)
-        if len(parts) < 3:
-            continue
-        try:
-            _yaml.safe_load(parts[1])
-        except _yaml.YAMLError:
-            bak = md_file.with_suffix(".md.bak")
-            if bak.exists():
-                bak_text = bak.read_text()
-                bak_parts = bak_text.split("---", 2)
-                if len(bak_parts) >= 3:
-                    try:
-                        _yaml.safe_load(bak_parts[1])
-                        md_file.write_text(bak_text)
-                        print(f"    Restored from .bak: {md_file.name}")
-                        continue
-                    except _yaml.YAMLError:
-                        pass
-            # Try git restore
-            result = subprocess.run(
-                ["git", "checkout", "HEAD", "--", str(md_file)],
-                capture_output=True, cwd=PROJECT_DIR,
-            )
-            if result.returncode == 0:
-                print(f"    Restored from git: {md_file.name}")
-            else:
-                print(f"    CANNOT FIX: {md_file.name}")
+        if not _article_is_wellformed(md_file.read_text()):
+            _repair_one_article(md_file)
 
 
 def run_daemon():
