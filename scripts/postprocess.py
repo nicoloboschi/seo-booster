@@ -177,9 +177,12 @@ def postprocess_article(file_path: Path) -> list[str]:
     # Step 3: Fix individual fields
     slug = file_path.stem
 
-    if "slug" not in fm or not fm["slug"]:
+    # The whole pipeline (URLs, internal-link validation, sitemap) treats the
+    # filename as the canonical slug. Force them to agree so a stray/spaced slug
+    # can't create an off-by-one URL that 404s.
+    if fm.get("slug") != slug:
         fm["slug"] = slug
-        fixes.append(f"Added missing slug: {slug}")
+        fixes.append(f"Normalized slug to filename: {slug}")
 
     if "title" not in fm or not fm["title"]:
         fm["title"] = slug.replace("-", " ").title()

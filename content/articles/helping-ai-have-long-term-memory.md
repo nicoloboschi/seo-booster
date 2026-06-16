@@ -31,7 +31,7 @@ faq:
   answer: RAG is an AI architecture that enhances LLMs by retrieving relevant information from an external knowledge base before generating a response, improving accuracy and access to specific data.
 - question: How do vector databases contribute to AI recall?
   answer: Vector databases enable efficient AI recall by storing data as semantic embeddings, allowing for rapid similarity searches to find and retrieve the most relevant past information.
-slug: helping-ai-have-long-memory
+slug: helping-ai-have-long-term-memory
 ---
 
 Helping AI have long-term memory means equipping artificial intelligence agents with the capability to retain and recall information beyond their immediate processing window. This persistent recall is essential for complex tasks, enabling AI to learn from past interactions and maintain context over extended periods for more intelligent and adaptive behavior. It's a critical step in advancing agent capabilities.

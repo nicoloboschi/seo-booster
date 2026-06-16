@@ -23,7 +23,7 @@ faq:
 - question: Can AI truly understand consequence?
   answer: Current AI 'understands' consequence through pattern recognition and reinforcement learning. It identifies correlations between actions and outcomes, but lacks genuine subjective experience or
     moral comprehension of consequences. It's a sophisticated form of learned association.
-slug: ai-remembers-consequence
+slug: the-ai-that-remembers-consequence
 ---
 
 ## The AI That Remembers Consequence: Enabling Smarter Agent Decisions

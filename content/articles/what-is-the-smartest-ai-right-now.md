@@ -32,7 +32,7 @@ faq:
 - question: Can current AI models truly "think" or "understand"?
   answer: Current AI models do not "think" or "understand" in the human sense. They excel at pattern recognition, statistical inference, and complex computation based on vast datasets. They lack consciousness,
     subjective experience, and genuine comprehension. Their intelligence is a product of advanced algorithms, not sentience.
-slug: what-is-the-smartest-ai-right now
+slug: what-is-the-smartest-ai-right-now
 ---
 
 The "smartest AI right now" is not a single entity but a spectrum of advanced models like GPT-4 and Gemini Ultra. These AIs excel in specific tasks such as language processing, complex reasoning, and multimodal understanding, pushing the boundaries of artificial intelligence capabilities and defining current AI excellence.
