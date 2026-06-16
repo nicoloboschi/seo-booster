@@ -235,7 +235,9 @@
       "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "best ai chatbot for memory",
+      "best ai chatbot memory",
       "best chatbot for memory",
+      "best chatbot memory",
       "bot in memory meadow",
       "bot memory janitor ai",
       "chatbot ai memory",
@@ -244,9 +246,7 @@
       "chatbot for customer support",
       "chatbot improve memory",
       "chatbot is an example of",
-      "chatbot memory architecture",
-      "chatbot memory github",
-      "chatbot memory langchain"
+      "chatbot memory architecture"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -266,6 +266,7 @@
       "ai chat bot memory",
       "ai chat good memory",
       "ai chat infinite memory",
+      "ai chat long memory",
       "ai chat memory",
       "ai chat memory reddit",
       "ai chat permanent memory",
@@ -273,14 +274,13 @@
       "ai chatbot for customer service",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
+      "ai chatbot long memory",
       "ai chatbot memory",
       "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "ai meeting summary",
       "best ai chat memory",
-      "best ai chatbot memory",
-      "best ai conversation app",
-      "chub ai chat memory not working"
+      "best ai chatbot memory"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -610,7 +610,7 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 13,
+      "autocomplete_matches": 14,
       "validated": true,
       "matching_suggestions": [
         "example of limited memory ai",
@@ -906,14 +906,16 @@
     {
       "keyword": "ai chat long memory",
       "slug": "ai-chat-long-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat long memory"
+      ]
     },
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 34,
+      "autocomplete_matches": 36,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -1003,23 +1005,24 @@
     {
       "keyword": "ai chatbot long memory",
       "slug": "ai-chatbot-long-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot long memory",
         "ai chatbot long memory"
       ]
     },
     {
       "keyword": "ai chatbot memory",
       "slug": "ai-chatbot-memory",
-      "autocomplete_matches": 7,
+      "autocomplete_matches": 8,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory",
         "ai chatbot memory reddit",
+        "best ai chatbot memory",
         "gemini ai chatbot memory feature",
-        "ai chatbot memory",
-        "ai chatbot memory reddit"
+        "ai chatbot memory"
       ]
     },
     {
@@ -2956,9 +2959,11 @@
     {
       "keyword": "best chatbot memory",
       "slug": "best-chatbot-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best chatbot memory"
+      ]
     },
     {
       "keyword": "best context window llm",
@@ -8242,9 +8247,11 @@
     {
       "keyword": "what is the best ai chatbot",
       "slug": "what-is-the-best-ai-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best ai chatbot"
+      ]
     },
     {
       "keyword": "what is the best type of memory",
@@ -8284,9 +8291,11 @@
     {
       "keyword": "what is the smartest chatbot",
       "slug": "what-is-the-smartest-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the smartest chatbot"
+      ]
     },
     {
       "keyword": "what is zep memory",
@@ -8430,9 +8439,11 @@
     {
       "keyword": "who has the best chatbot",
       "slug": "who-has-the-best-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "who has the best chatbot"
+      ]
     },
     {
       "keyword": "who has the best memory ever",
@@ -9625,8 +9636,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1031,
-    "validated": 902,
-    "low_volume": 129,
+    "validated": 907,
+    "low_volume": 124,
     "new_opportunities_found": 0
   }
 }
