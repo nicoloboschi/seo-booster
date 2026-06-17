@@ -6788,5 +6788,14 @@
   },
   "ai-harness-memory-management": {
     "platforms": {}
+  },
+  "agent-memory-in-ai": {
+    "platforms": {}
+  },
+  "ai-memory-equipment-stocks": {
+    "platforms": {}
+  },
+  "ai-memory-hindsight": {
+    "platforms": {}
   }
 }
