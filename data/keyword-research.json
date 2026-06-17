@@ -283,6 +283,7 @@
       "best ai chatbot memory"
     ],
     "embedding model memory": [
+      "embedded memory meaning",
       "embedding model memory usage",
       "how images are stored in memory",
       "in memory embedding model",
@@ -3883,9 +3884,11 @@
     {
       "keyword": "embedded memory meaning",
       "slug": "embedded-memory-meaning",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedded memory meaning"
+      ]
     },
     {
       "keyword": "embedded process model of memory",
@@ -5069,9 +5072,11 @@
     {
       "keyword": "is long term memory unlimited",
       "slug": "is-long-term-memory-unlimited",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is long term memory unlimited"
+      ]
     },
     {
       "keyword": "is memory cloth real",
@@ -9631,8 +9636,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1031,
-    "validated": 905,
-    "low_volume": 126,
+    "validated": 907,
+    "low_volume": 124,
     "new_opportunities_found": 0
   }
 }
