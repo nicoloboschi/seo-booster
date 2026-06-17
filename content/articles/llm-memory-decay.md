@@ -49,7 +49,7 @@ faq:
     have been lost due to memory decay, enabling more accurate and context-aware responses.
 slug: llm-memory-decay
 ---
----
+
 
 Imagine an AI assistant that perfectly remembers every detail of your conversations for weeks, then suddenly forgets your name and the project you discussed yesterday. This isn't science fiction; it's a common challenge in AI development known as **LLM memory decay**. Understanding why AI agents forget is crucial for building truly intelligent and reliable systems.
 
