@@ -68,13 +68,10 @@
     ],
     "best ai memory": [
       "ai chatbot with best memory",
-      "best ai agent memory",
       "best ai app for memory",
       "best ai app with best memory",
       "best ai app with good memory",
       "best ai app with long memory",
-      "best ai assistant with memory",
-      "best ai chat app with memory",
       "best ai chat for memory",
       "best ai chat memory",
       "best ai chat with best memory",
@@ -86,7 +83,10 @@
       "best ai chatbot with good memory reddit",
       "best ai chatbot with long memory",
       "best ai companion ever deep memory feels real",
-      "best ai companion memory"
+      "best ai companion memory",
+      "best ai for memory",
+      "best ai for memory reddit",
+      "best ai for memory retention"
     ],
     "llm memory": [
       "best llm memory",
@@ -230,7 +230,6 @@
       "ai chatbot best memory",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
-      "ai chatbot long memory",
       "ai chatbot memory",
       "ai chatbot memory reddit",
       "ai chatbot with memory free",
@@ -246,7 +245,8 @@
       "chatbot for customer support",
       "chatbot improve memory",
       "chatbot is an example of",
-      "chatbot memory architecture"
+      "chatbot memory architecture",
+      "chatbot memory github"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -396,7 +396,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 192,
+      "autocomplete_matches": 191,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -409,14 +409,14 @@
     {
       "keyword": "ai that remembers conversations",
       "slug": "ai-that-remembers-conversations",
-      "autocomplete_matches": 12,
+      "autocomplete_matches": 9,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers conversations",
         "best ai that remembers conversations",
         "is there an ai that remembers conversations",
         "ai chatbot with memory free",
-        "chatbot with memory langgraph"
+        "langchain chatbot with memory github"
       ]
     },
     {
@@ -510,12 +510,11 @@
     {
       "keyword": "best ai memory system",
       "slug": "best-ai-memory-systems",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "best ai agent memory",
         "best ai memory system",
-        "best ai agent memory",
         "best ai memory system",
         "best ai memory system"
       ]
@@ -798,11 +797,9 @@
     {
       "keyword": "ai agents examples",
       "slug": "ai-agents-examples",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai agents examples"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai agents memory storage memori gibsonai",
@@ -915,7 +912,7 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 36,
+      "autocomplete_matches": 35,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
@@ -1005,10 +1002,9 @@
     {
       "keyword": "ai chatbot long memory",
       "slug": "ai-chatbot-long-memory",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai chatbot long memory",
         "ai chatbot long memory"
       ]
     },
@@ -1382,11 +1378,10 @@
     {
       "keyword": "ai memory app",
       "slug": "ai-memory-app",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory app",
-        "best ai memory app"
+        "ai memory app"
       ]
     },
     {
@@ -2660,20 +2655,16 @@
     {
       "keyword": "best ai assistant with memory",
       "slug": "best-ai-assistant-with-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai assistant with memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chat app with memory",
       "slug": "best-ai-chat-app-with-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai chat app with memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chat for memory",
@@ -3337,29 +3328,23 @@
     {
       "keyword": "chatbot with longest memory",
       "slug": "chatbot-with-longest-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chatbot with longest memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chatbot with memory langgraph",
       "slug": "chatbot-with-memory-langgraph",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chatbot with memory langgraph"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chatbot with memory using langchain",
       "slug": "chatbot-with-memory-using-langchain",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chatbot with memory using langchain"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chatbots for customer service",
@@ -4442,11 +4427,9 @@
     {
       "keyword": "conversational ai chatbot companies",
       "slug": "conversational-ai-chatbot-companies",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "conversational ai chatbot companies"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "cosa significa context window negli llm",
@@ -4969,10 +4952,9 @@
     {
       "keyword": "best memory system for ai",
       "slug": "best-memory-system-for-ai",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
-        "best memory system for ai agent",
         "best memory system for ai agent",
         "best memory system for ai",
         "best memory system for ai agent"
@@ -5345,11 +5327,9 @@
     {
       "keyword": "llm chatbot memory",
       "slug": "llm-chatbot-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm chatbot memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window accuracy",
@@ -7551,11 +7531,9 @@
     {
       "keyword": "rag chatbot with memory langchain",
       "slug": "rag-chatbot-with-memory-langchain",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "rag chatbot with memory langchain"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "rag review",
@@ -9636,8 +9614,8 @@
   "new_opportunities": [],
   "summary": {
     "total_keywords": 1031,
-    "validated": 907,
-    "low_volume": 124,
+    "validated": 898,
+    "low_volume": 133,
     "new_opportunities_found": 0
   }
 }
