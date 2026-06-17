@@ -6782,5 +6782,11 @@
   },
   "agent-memory-vs-rag": {
     "platforms": {}
+  },
+  "ai-chatbot-with-long-term-memory-reddit": {
+    "platforms": {}
+  },
+  "ai-harness-memory-management": {
+    "platforms": {}
   }
 }
