@@ -6411,5 +6411,35 @@
     "generated_at": "2026-06-18T09:05:14.730143",
     "sources": [],
     "quality_score": 65
+  },
+  "llm-need-ram": {
+    "keyword": "llm need ram",
+    "generated_at": "2026-06-18T11:06:25.882270",
+    "sources": [],
+    "quality_score": 75
+  },
+  "llm-with-2-million-context-window": {
+    "keyword": "llm with 2 million context window",
+    "generated_at": "2026-06-18T11:07:28.792163",
+    "sources": [],
+    "quality_score": 65
+  },
+  "local-ai-long-term-memory": {
+    "keyword": "local ai long term memory",
+    "generated_at": "2026-06-18T11:08:33.053351",
+    "sources": [],
+    "quality_score": 65
+  },
+  "long-term-memory-model-ai": {
+    "keyword": "long term memory model ai",
+    "generated_at": "2026-06-18T11:09:48.835120",
+    "sources": [],
+    "quality_score": 65
+  },
+  "ms-agent-framework-memory": {
+    "keyword": "ms agent framework memory",
+    "generated_at": "2026-06-18T11:10:55.859320",
+    "sources": [],
+    "quality_score": 55
   }
 }
