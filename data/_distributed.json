@@ -6797,5 +6797,8 @@
   },
   "ai-memory-hindsight": {
     "platforms": {}
+  },
+  "ai-memory-chip-supercycle": {
+    "platforms": {}
   }
 }
