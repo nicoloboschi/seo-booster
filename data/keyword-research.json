@@ -9724,25 +9724,145 @@
       "matching_suggestions": [
         "llm memory compaction"
       ]
+    },
+    {
+      "keyword": "ai memory chip supercycle",
+      "slug": "ai-memory-chip-supercycle",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory chip supercycle"
+      ]
+    },
+    {
+      "keyword": "ai memory obsidian",
+      "slug": "ai-memory-obsidian",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory obsidian"
+      ]
+    },
+    {
+      "keyword": "ai organizational memory",
+      "slug": "ai-organizational-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai organizational memory"
+      ]
+    },
+    {
+      "keyword": "ai ram joke",
+      "slug": "ai-ram-joke",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai ram joke"
+      ]
+    },
+    {
+      "keyword": "infinite memory chatbot",
+      "slug": "infinite-memory-chatbot",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "infinite memory chatbot"
+      ]
+    },
+    {
+      "keyword": "llm context window claude",
+      "slug": "llm-context-window-claude",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window claude"
+      ]
+    },
+    {
+      "keyword": "llm context window paper",
+      "slug": "llm-context-window-paper",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window paper"
+      ]
+    },
+    {
+      "keyword": "llm memory hierarchy",
+      "slug": "llm-memory-hierarchy",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory hierarchy"
+      ]
+    },
+    {
+      "keyword": "llm memory name",
+      "slug": "llm-memory-name",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory name"
+      ]
+    },
+    {
+      "keyword": "llm memory provider",
+      "slug": "llm-memory-provider",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory provider"
+      ]
+    },
+    {
+      "keyword": "llm need ram",
+      "slug": "llm-need-ram",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm need ram"
+      ]
+    },
+    {
+      "keyword": "llm with 2 million context window",
+      "slug": "llm-with-2-million-context-window",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm with 2 million context window"
+      ]
+    },
+    {
+      "keyword": "local ai long term memory",
+      "slug": "local-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "local ai long term memory"
+      ]
+    },
+    {
+      "keyword": "long term memory model ai",
+      "slug": "long-term-memory-model-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory model ai"
+      ]
+    },
+    {
+      "keyword": "ms agent framework memory",
+      "slug": "ms-agent-framework-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ms agent framework memory"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory chip supercycle",
-    "ai memory obsidian",
-    "ai organizational memory",
-    "ai ram joke",
     "deepseek llm memory",
-    "infinite memory chatbot",
-    "llm context window claude",
-    "llm context window paper",
-    "llm memory hierarchy",
-    "llm memory name",
-    "llm memory provider",
-    "llm need ram",
-    "llm with 2 million context window",
-    "local ai long term memory",
-    "long term memory model ai",
-    "ms agent framework memory",
     "persistent memory local llm",
     "spring ai conversational memory",
     "what is automatic memory management",
@@ -9751,9 +9871,9 @@
     "zep agent memory github"
   ],
   "summary": {
-    "total_keywords": 1051,
-    "validated": 881,
+    "total_keywords": 1066,
+    "validated": 896,
     "low_volume": 170,
-    "new_opportunities_found": 22
+    "new_opportunities_found": 7
   }
 }

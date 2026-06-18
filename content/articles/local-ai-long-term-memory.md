@@ -92,7 +92,6 @@ print(results)
 ## {'ids': [['event1']], 'distances': [[0.123]], 'metadatas': [[{'source': 'history'}]], 'documents': [['The last meeting was about project Alpha.']], 'uris': [[None]], 'data': [[None]]}
 ```
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 This example demonstrates how easily one can set up a persistent, local vector store for an AI agent's knowledge, forming a core part of its local AI long-term memory.

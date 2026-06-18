@@ -98,7 +98,6 @@ class LongTermMemory:
  # self.vector_db = VectorDB(connection_string="your_db_connection")
  self.memory_store: List[Dict[str, any]] = [] # Simple list for demonstration
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
  def store_memory(self, text: str, metadata: Dict = None):
