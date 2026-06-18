@@ -57,7 +57,6 @@ Building a functional LLM memory system, inspired by Karpathy’s ideas for a **
 
 Designing a system that functions like a **karpathy llm memory wiki** requires careful architectural consideration. It's not just about storing data; it's about enabling intelligent access and integration of that data into the LLM's reasoning process. This often involves a combination of techniques and tools to create a cohesive memory architecture for a **karpathy llm memory wiki**.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Vector Databases and Semantic Search
