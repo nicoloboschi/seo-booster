@@ -241,11 +241,11 @@
       "bot memory janitor ai",
       "chatbot ai memory",
       "chatbot conversational memory",
-      "chatbot explained",
       "chatbot for customer support",
       "chatbot improve memory",
       "chatbot is an example of",
-      "chatbot memory architecture"
+      "chatbot memory architecture",
+      "chatbot memory github"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -9859,21 +9859,69 @@
       "matching_suggestions": [
         "ms agent framework memory"
       ]
+    },
+    {
+      "keyword": "persistent memory local llm",
+      "slug": "persistent-memory-local-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "persistent memory local llm"
+      ]
+    },
+    {
+      "keyword": "spring ai conversational memory",
+      "slug": "spring-ai-conversational-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "spring ai conversational memory"
+      ]
+    },
+    {
+      "keyword": "what is automatic memory management",
+      "slug": "what-is-automatic-memory-management",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is automatic memory management"
+      ]
+    },
+    {
+      "keyword": "what is context window length in llm",
+      "slug": "what-is-context-window-length-in-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is context window length in llm"
+      ]
+    },
+    {
+      "keyword": "what is the best ai memory",
+      "slug": "what-is-the-best-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best ai memory"
+      ]
+    },
+    {
+      "keyword": "zep agent memory github",
+      "slug": "zep-agent-memory-github",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep agent memory github"
+      ]
     }
   ],
   "new_opportunities": [
-    "deepseek llm memory",
-    "persistent memory local llm",
-    "spring ai conversational memory",
-    "what is automatic memory management",
-    "what is context window length in llm",
-    "what is the best ai memory",
-    "zep agent memory github"
+    "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1066,
-    "validated": 896,
+    "total_keywords": 1072,
+    "validated": 902,
     "low_volume": 170,
-    "new_opportunities_found": 7
+    "new_opportunities_found": 1
   }
 }
