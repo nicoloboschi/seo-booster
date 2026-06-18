@@ -49,7 +49,7 @@ faq:
     It limits the AI's ability to maintain long-term conversational coherence and perform complex, multi-turn tasks effectively.
 slug: how-to-improve-janitor-ai-memory
 ---
----
+
 
 Improving Janitor AI memory involves optimizing its ability to retain and recall information from past interactions. This guide details essential strategies, from managing context windows to implementing external storage, to ensure your AI agent maintains coherent and context-aware conversations for enhanced performance.
 
