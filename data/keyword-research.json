@@ -158,7 +158,6 @@
       "anything llm persistent memory",
       "chronic memory issues",
       "github llm persistent memory",
-      "great long term memory bad short term",
       "is there a limit to long term memory",
       "long short term memory meaning",
       "permanent memory example",
@@ -9315,11 +9314,9 @@
     {
       "keyword": "great long term memory bad short term",
       "slug": "great-long-term-memory-bad-short-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "great long term memory bad short term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to give a long term memory",
@@ -9920,8 +9917,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 902,
-    "low_volume": 170,
+    "validated": 901,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
