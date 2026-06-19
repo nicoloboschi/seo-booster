@@ -5028,11 +5028,9 @@
     {
       "keyword": "is long term memory unlimited",
       "slug": "is-long-term-memory-unlimited",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is long term memory unlimited"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is memory cloth real",
@@ -9920,8 +9918,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 902,
-    "low_volume": 170,
+    "validated": 901,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
