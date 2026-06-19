@@ -49,7 +49,7 @@ faq:
     note storage telegram**.
 slug: ai-agent-chatbot-long-term-memory-note-storage-telegram
 ---
-
+---
 
 **AI agent chatbot long-term memory note storage for Telegram** enables AI agents to persistently save and recall user notes and conversation history. This crucial functionality allows for continuous, personalized interactions on Telegram, transforming basic bots into intelligent assistants capable of remembering past details and user preferences. Implementing this **ai agent chatbot long term memory note storage telegram** is key for effective **ai agent recall**.
 
