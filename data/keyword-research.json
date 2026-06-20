@@ -4189,11 +4189,9 @@
     {
       "keyword": "how to create an ai agent",
       "slug": "how-to-create-an-ai-agent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to create an ai agent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to delete chatgpt memory on phone",
@@ -9920,8 +9918,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 902,
-    "low_volume": 170,
+    "validated": 901,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
