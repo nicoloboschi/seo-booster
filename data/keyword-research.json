@@ -8265,11 +8265,9 @@
     {
       "keyword": "which ai chatbot has memory",
       "slug": "which-ai-chatbot-has-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "which ai chatbot has memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "which ai has long term memory",
@@ -9920,8 +9918,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 902,
-    "low_volume": 170,
+    "validated": 901,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
