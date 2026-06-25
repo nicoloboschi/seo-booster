@@ -257,7 +257,8 @@
       "open source agent memory framework",
       "reasoningbank llm agent memory framework",
       "survey of ai agent memory frameworks",
-      "what are the models of memory"
+      "what are the models of memory",
+      "what is fram memory"
     ],
     "ai conversation memory": [
       "ai apps to talk to",
@@ -4544,9 +4545,11 @@
     {
       "keyword": "how to learn memory techniques",
       "slug": "how-to-learn-memory-techniques",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to learn memory techniques"
+      ]
     },
     {
       "keyword": "how to make an ai self-aware",
@@ -4620,16 +4623,21 @@
     {
       "keyword": "how to remember conversations",
       "slug": "how-to-remember-conversations",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "how to remember conversations",
+        "how to remember conversations better"
+      ]
     },
     {
       "keyword": "how to remember conversations better",
       "slug": "how-to-remember-conversations-better",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to remember conversations better"
+      ]
     },
     {
       "keyword": "how to see chatgpt memory",
@@ -4979,9 +4987,11 @@
     {
       "keyword": "is ai really ai",
       "slug": "is-ai-really-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is ai really ai"
+      ]
     },
     {
       "keyword": "is ai really that intelligent",
@@ -7972,9 +7982,11 @@
     {
       "keyword": "what is fram memory",
       "slug": "what-is-fram-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is fram memory"
+      ]
     },
     {
       "keyword": "what is in memory vector database",
@@ -9908,8 +9920,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 897,
-    "low_volume": 175,
+    "validated": 902,
+    "low_volume": 170,
     "new_opportunities_found": 1
   }
 }
