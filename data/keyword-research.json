@@ -2219,9 +2219,11 @@
     {
       "keyword": "ai memory shortage",
       "slug": "ai-memory-shortage",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory shortage"
+      ]
     },
     {
       "keyword": "ai memory stocks",
@@ -9918,8 +9920,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 901,
-    "low_volume": 171,
+    "validated": 902,
+    "low_volume": 170,
     "new_opportunities_found": 1
   }
 }
