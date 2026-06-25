@@ -396,7 +396,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 194,
+      "autocomplete_matches": 203,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -5575,9 +5575,11 @@
     {
       "keyword": "llm external memory",
       "slug": "llm-external-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm external memory"
+      ]
     },
     {
       "keyword": "llm from distance",
@@ -6039,9 +6041,11 @@
     {
       "keyword": "llm memory embedding",
       "slug": "llm-memory-embedding",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory embedding"
+      ]
     },
     {
       "keyword": "llm memory engineering",
@@ -6053,51 +6057,65 @@
     {
       "keyword": "llm memory episodic",
       "slug": "llm-memory-episodic",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory episodic"
+      ]
     },
     {
       "keyword": "llm memory estimator",
       "slug": "llm-memory-estimator",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory estimator"
+      ]
     },
     {
       "keyword": "llm memory evaluation",
       "slug": "llm-memory-evaluation",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory evaluation"
+      ]
     },
     {
       "keyword": "llm memory example",
       "slug": "llm-memory-example",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory example"
+      ]
     },
     {
       "keyword": "llm memory expansion strategies",
       "slug": "llm-memory-expansion-strategies",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory expansion strategies"
+      ]
     },
     {
       "keyword": "llm memory explained",
       "slug": "llm-memory-explained",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory explained"
+      ]
     },
     {
       "keyword": "llm memory extension",
       "slug": "llm-memory-extension",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory extension"
+      ]
     },
     {
       "keyword": "llm memory feature",
@@ -9902,8 +9920,8 @@
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 893,
-    "low_volume": 179,
+    "validated": 902,
+    "low_volume": 170,
     "new_opportunities_found": 1
   }
 }
