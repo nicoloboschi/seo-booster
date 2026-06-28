@@ -4554,11 +4554,9 @@
     {
       "keyword": "how to make an ai self-aware",
       "slug": "how-to-make-an-ai-self-aware",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to make an ai self-aware"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to make c ai memory better",
@@ -9927,8 +9925,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 902,
-    "low_volume": 171,
+    "validated": 901,
+    "low_volume": 172,
     "new_opportunities_found": 1
   }
 }
