@@ -6477,5 +6477,11 @@
     "generated_at": "2026-06-18T19:41:49.153346",
     "sources": [],
     "quality_score": 65
+  },
+  "is-llm-important": {
+    "keyword": "is llm important",
+    "generated_at": "2026-06-28T10:50:06.151975",
+    "sources": [],
+    "quality_score": 75
   }
 }
