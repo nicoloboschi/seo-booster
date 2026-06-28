@@ -128,9 +128,9 @@
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
       "building smarter ai agents agentcore long term memory deep dive",
-      "can you have good long term memory but bad short term memory",
       "candy ai long term memory",
-      "chub ai long term memory"
+      "chub ai long term memory",
+      "claude ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -167,6 +167,7 @@
       "persistent memory in llm",
       "persistent memory in llm agents",
       "persistent memory local llm",
+      "what is long short-term memory",
       "what is persistent memory",
       "what is persistent memory in llm"
     ],
@@ -3168,11 +3169,9 @@
     {
       "keyword": "can you have good long term memory but bad short term memory",
       "slug": "can-you-have-good-long-term-memory-but-bad-short-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "can you have good long term memory but bad short term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "candy ai long term memory",
@@ -4623,21 +4622,18 @@
     {
       "keyword": "how to remember conversations",
       "slug": "how-to-remember-conversations",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "how to remember conversations",
-        "how to remember conversations better"
+        "how to remember conversations"
       ]
     },
     {
       "keyword": "how to remember conversations better",
       "slug": "how-to-remember-conversations-better",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to remember conversations better"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to see chatgpt memory",
@@ -6770,11 +6766,9 @@
     {
       "keyword": "long term memory better than short term",
       "slug": "long-term-memory-better-than-short-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term memory better than short term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory character ai",
@@ -8035,9 +8029,10 @@
     {
       "keyword": "what is long short-term memory",
       "slug": "what-is-long-short-term-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "what is long short-term memory",
         "what is long short-term memory"
       ]
     },
@@ -8478,11 +8473,9 @@
     {
       "keyword": "why llm is important",
       "slug": "why-llm-is-important",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "why llm is important"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "why use redis instead of memory",
@@ -9352,11 +9345,9 @@
     {
       "keyword": "how to keep long term memory",
       "slug": "how-to-keep-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to keep long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to turn on claude ai memory",
@@ -9916,12 +9907,13 @@
     }
   ],
   "new_opportunities": [
-    "deepseek llm memory"
+    "deepseek llm memory",
+    "is llm important"
   ],
   "summary": {
     "total_keywords": 1072,
-    "validated": 902,
-    "low_volume": 170,
-    "new_opportunities_found": 1
+    "validated": 897,
+    "low_volume": 175,
+    "new_opportunities_found": 2
   }
 }
