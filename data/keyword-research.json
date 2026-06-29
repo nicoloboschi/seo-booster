@@ -337,6 +337,8 @@
       "context window limit llm"
     ],
     "mem0": [
+      "best llm for mem0",
+      "best model for mem0",
       "fast memu",
       "how to memo a check",
       "how to memo a component",
@@ -354,9 +356,7 @@
       "mem0 alternatives",
       "mem0 api",
       "mem0 api key",
-      "mem0 architecture",
-      "mem0 arxiv",
-      "mem0 aws"
+      "mem0 architecture"
     ],
     "zep memory": [
       "is zep cleaner safe",
@@ -4916,9 +4916,11 @@
     {
       "keyword": "best llm for mem0",
       "slug": "best-llm-for-mem0",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best llm for mem0"
+      ]
     },
     {
       "keyword": "best memory system for ai",
@@ -9925,8 +9927,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 901,
-    "low_volume": 172,
+    "validated": 902,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
