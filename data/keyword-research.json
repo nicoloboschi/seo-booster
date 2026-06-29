@@ -248,6 +248,7 @@
       "chatbot memory architecture"
     ],
     "agent memory framework": [
+      "agent framework agent memory",
       "ai agent memory framework",
       "best agent memory framework",
       "microsoft agent framework memory",
@@ -4240,9 +4241,11 @@
     {
       "keyword": "agent framework agent memory",
       "slug": "agent-framework-agent-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "agent framework agent memory"
+      ]
     },
     {
       "keyword": "ai agents agentic memory part 9",
@@ -7988,9 +7991,11 @@
     {
       "keyword": "what is in memory vector database",
       "slug": "what-is-in-memory-vector-database",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is in memory vector database"
+      ]
     },
     {
       "keyword": "what is intelligent agent in artificial intelligence",
@@ -9154,9 +9159,11 @@
     {
       "keyword": "what is in memory database",
       "slug": "what-is-in-memory-database",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is in memory database"
+      ]
     },
     {
       "keyword": "what's an ai memory system",
@@ -9920,8 +9927,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 899,
-    "low_volume": 174,
+    "validated": 902,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
