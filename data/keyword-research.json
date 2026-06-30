@@ -3429,7 +3429,7 @@
     {
       "keyword": "context window in llm",
       "slug": "context-window-in-llm",
-      "autocomplete_matches": 8,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
         "context window in llm",
@@ -3632,12 +3632,10 @@
     {
       "keyword": "context window size in llm",
       "slug": "context-window-size-in-llm",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "context window size in llm",
-        "what is context window size in llm",
-        "what is the context window size in llms"
+        "context window size in llm"
       ]
     },
     {
@@ -5182,14 +5180,13 @@
     {
       "keyword": "largest context window llm",
       "slug": "largest-context-window-llm",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "largest context window llm",
         "largest context window llm free",
         "largest context window llm ollama",
-        "largest context window llm open source",
-        "what is the largest context window llm"
+        "largest context window llm open source"
       ]
     },
     {
@@ -7957,11 +7954,9 @@
     {
       "keyword": "what is context window llm",
       "slug": "what-is-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is conversation ai",
@@ -8051,11 +8046,9 @@
     {
       "keyword": "what is meant by llm",
       "slug": "what-is-meant-by-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is meant by llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is mem0 ai",
@@ -9447,11 +9440,9 @@
     {
       "keyword": "what is context window in ai llm",
       "slug": "what-is-context-window-in-ai-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is context window in ai llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is memory management in llm",
@@ -9890,11 +9881,9 @@
     {
       "keyword": "what is context window length in llm",
       "slug": "what-is-context-window-length-in-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is context window length in llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the best ai memory",
@@ -9927,8 +9916,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 902,
-    "low_volume": 171,
+    "validated": 898,
+    "low_volume": 175,
     "new_opportunities_found": 1
   }
 }
