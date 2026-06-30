@@ -283,6 +283,7 @@
       "best ai chatbot memory"
     ],
     "embedding model memory": [
+      "embedded memory meaning",
       "embedding model memory usage",
       "how images are stored in memory",
       "in memory embedding model",
@@ -3851,9 +3852,11 @@
     {
       "keyword": "embedded memory meaning",
       "slug": "embedded-memory-meaning",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "embedded memory meaning"
+      ]
     },
     {
       "keyword": "embedded process model of memory",
@@ -9924,8 +9927,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 901,
-    "low_volume": 172,
+    "validated": 902,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
