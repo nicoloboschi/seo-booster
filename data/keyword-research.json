@@ -2748,9 +2748,11 @@
     {
       "keyword": "best ai conversation app",
       "slug": "best-ai-conversation-app",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai conversation app"
+      ]
     },
     {
       "keyword": "best ai for long term memory",
@@ -7254,9 +7256,11 @@
     {
       "keyword": "most advanced conversational ai",
       "slug": "most-advanced-conversational-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "most advanced conversational ai"
+      ]
     },
     {
       "keyword": "most intelligent chatbot",
@@ -9923,8 +9927,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 900,
-    "low_volume": 173,
+    "validated": 902,
+    "low_volume": 171,
     "new_opportunities_found": 1
   }
 }
