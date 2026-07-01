@@ -4021,11 +4021,9 @@
     {
       "keyword": "helping ai have long term memory",
       "slug": "helping-ai-have-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "helping ai have long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "high context window llm",
@@ -8240,11 +8238,9 @@
     {
       "keyword": "when will ai have long term memory",
       "slug": "when-will-ai-have-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "when will ai have long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "where does memory man take place",
@@ -8274,11 +8270,9 @@
     {
       "keyword": "which ai has long term memory",
       "slug": "which-ai-has-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "which ai has long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "which ai has the best long term memory",
@@ -9927,8 +9921,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 902,
-    "low_volume": 171,
+    "validated": 899,
+    "low_volume": 174,
     "new_opportunities_found": 1
   }
 }
