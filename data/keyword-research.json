@@ -3601,14 +3601,11 @@
     {
       "keyword": "context window of llm",
       "slug": "context-window-of-llm",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "context window of llm",
-        "context window of llm models",
-        "how to extend context window of llm",
-        "how to increase context window of llm",
-        "how to increase context window of llm ollama"
+        "context window of llm models"
       ]
     },
     {
@@ -5584,11 +5581,9 @@
     {
       "keyword": "llm from distance",
       "slug": "llm-from-distance",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm from distance"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm gpu memory",
@@ -6699,11 +6694,9 @@
     {
       "keyword": "long short term memory ai model",
       "slug": "long-short-term-memory-ai-model",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long short term memory ai model"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long short term memory in ai",
@@ -6818,14 +6811,14 @@
     {
       "keyword": "long term memory in ai",
       "slug": "long-term-memory-in-ai",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
         "long term memory in ai",
         "long term memory in ai agents",
-        "short term memory and long term memory in ai",
         "short term vs long term memory in ai agents",
-        "what is long term memory in ai"
+        "what is long term memory in ai",
+        "what is long term memory in ai agents"
       ]
     },
     {
@@ -9429,11 +9422,9 @@
     {
       "keyword": "short term memory vs long term memory ai",
       "slug": "short-term-memory-vs-long-term-memory-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "short term memory vs long term memory ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is ai memories app",
@@ -9927,8 +9918,8 @@
   ],
   "summary": {
     "total_keywords": 1073,
-    "validated": 902,
-    "low_volume": 171,
+    "validated": 899,
+    "low_volume": 174,
     "new_opportunities_found": 1
   }
 }
