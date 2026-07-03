@@ -113,7 +113,6 @@ Controlled forgetting prevents memory overload and ensures that the AI prioritiz
 
 The **perplexity brain AI memory system** is not just theoretical; it underpins many advanced AI applications emerging today.
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 ### AI Agents in Complex Environments
