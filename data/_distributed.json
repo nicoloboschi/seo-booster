@@ -6800,5 +6800,8 @@
   },
   "ai-memory-chip-supercycle": {
     "platforms": {}
+  },
+  "ai-memory-export": {
+    "platforms": {}
   }
 }
