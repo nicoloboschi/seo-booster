@@ -6803,5 +6803,11 @@
   },
   "ai-memory-export": {
     "platforms": {}
+  },
+  "agent-memory-why-your-ai-has-amnesia-and-how-to-fix-it": {
+    "platforms": {}
+  },
+  "ai-memory-akita": {
+    "platforms": {}
   }
 }
