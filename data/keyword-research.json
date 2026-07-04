@@ -10067,27 +10067,123 @@
       "matching_suggestions": [
         "llm holographic memory"
       ]
+    },
+    {
+      "keyword": "ai that does not remember",
+      "slug": "ai-that-does-not-remember",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that does not remember"
+      ]
+    },
+    {
+      "keyword": "how brain keeps memory",
+      "slug": "how-brain-keeps-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how brain keeps memory"
+      ]
+    },
+    {
+      "keyword": "llm in climate change law and policy",
+      "slug": "llm-in-climate-change-law-and-policy",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm in climate change law and policy"
+      ]
+    },
+    {
+      "keyword": "llm memory aws",
+      "slug": "llm-memory-aws",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory aws"
+      ]
+    },
+    {
+      "keyword": "llm memory md",
+      "slug": "llm-memory-md",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory md"
+      ]
+    },
+    {
+      "keyword": "llm memory options",
+      "slug": "llm-memory-options",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory options"
+      ]
+    },
+    {
+      "keyword": "local ai with long-term memory",
+      "slug": "local-ai-with-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "local ai with long-term memory"
+      ]
+    },
+    {
+      "keyword": "supermemory long term ai memory as a service",
+      "slug": "supermemory-long-term-ai-memory-as-a-service",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "supermemory long term ai memory as a service"
+      ]
+    },
+    {
+      "keyword": "system high memory usage",
+      "slug": "system-high-memory-usage",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "system high memory usage"
+      ]
+    },
+    {
+      "keyword": "the highest scoring ai memory system ever benchmarked",
+      "slug": "the-highest-scoring-ai-memory-system-ever-benchmarked",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "the highest scoring ai memory system ever benchmarked"
+      ]
+    },
+    {
+      "keyword": "what is memory in agentic ai system",
+      "slug": "what-is-memory-in-agentic-ai-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory in agentic ai system"
+      ]
+    },
+    {
+      "keyword": "zep graffiti memory",
+      "slug": "zep-graffiti-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep graffiti memory"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai that does not remember",
-    "deepseek llm memory",
-    "how brain keeps memory",
-    "llm in climate change law and policy",
-    "llm memory aws",
-    "llm memory md",
-    "llm memory options",
-    "local ai with long-term memory",
-    "supermemory long term ai memory as a service",
-    "system high memory usage",
-    "the highest scoring ai memory system ever benchmarked",
-    "what is memory in agentic ai system",
-    "zep graffiti memory"
+    "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1097,
-    "validated": 894,
+    "total_keywords": 1109,
+    "validated": 906,
     "low_volume": 203,
-    "new_opportunities_found": 13
+    "new_opportunities_found": 1
   }
 }
