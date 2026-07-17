@@ -103,7 +103,6 @@ embeddings = model.encode(conversations)
 ## For demonstration, we'll just print the number of embeddings and their dimension.
 print(f"Generated {len(embeddings)} embeddings, each of dimension {len(embeddings[0])}")
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ## 
