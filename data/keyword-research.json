@@ -33,6 +33,7 @@
       "ai agent memory architecture",
       "ai agent memory bank",
       "ai agent memory benchmark",
+      "ai agent memory best practices",
       "ai agent memory context",
       "ai agent memory database",
       "ai agent memory db",
@@ -41,21 +42,19 @@
       "ai agent memory framework",
       "ai agent memory github",
       "ai agent memory graph",
-      "ai agent memory helps in",
-      "ai agent memory implementation"
+      "ai agent memory helps in"
     ],
     "ai memory": [
       "ai agent memory knowledge graph",
-      "ai for memory",
       "ai foundry memory",
-      "ai has memory",
       "ai in memory",
       "ai infinite memory",
       "ai killing ram",
+      "ai killing ram prices",
       "ai memory actress",
       "ai memory agent",
       "ai memory akita",
-      "ai memory algorithm",
+      "ai memory and context",
       "ai memory and storage etf",
       "ai memory and storage stocks",
       "ai memory api",
@@ -64,9 +63,11 @@
       "ai memory assistant",
       "ai memory bank",
       "ai memory benchmark",
-      "ai memory book"
+      "ai memory book",
+      "ai memory book generator"
     ],
     "best ai memory": [
+      "ai agent memory best practices",
       "ai chatbot with best memory",
       "best ai agent memory",
       "best ai app for memory",
@@ -75,7 +76,6 @@
       "best ai app with long memory",
       "best ai assistant with memory",
       "best ai chat for memory",
-      "best ai chat memory",
       "best ai chat with best memory",
       "best ai chat with good memory",
       "best ai chat with long memory",
@@ -90,7 +90,6 @@
     ],
     "llm memory": [
       "best llm memory",
-      "best llm memory mcp",
       "best llm memory system",
       "best local llm with memory",
       "best long term memory llm",
@@ -108,12 +107,14 @@
       "how to build llm memory",
       "how to calculate llm memory usage",
       "how to give llm long term memory",
-      "how to give llm memory"
+      "how to give llm memory",
+      "how to give local llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
       "agentic ai implementing long term memory",
       "ai and long term memory",
+      "ai chatbot with long term memory reddit",
       "ai companion with long term memory",
       "ai girlfriend long term memory",
       "ai long term memory github",
@@ -129,8 +130,7 @@
       "building smarter ai agents agentcore long term memory deep dive",
       "can you have good long term memory but bad short term memory",
       "candy ai long term memory",
-      "chub ai long term memory",
-      "claude ai long term memory"
+      "chub ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -160,6 +160,7 @@
       "github llm persistent memory",
       "great long term memory bad short term",
       "is there a limit to long term memory",
+      "long short term memory meaning",
       "permanent memory example",
       "persistent memory examples",
       "persistent memory for llm",
@@ -205,7 +206,7 @@
       "central memory vs effector memory",
       "character ai memory system",
       "example of limited memory ai",
-      "how brain keeps memory",
+      "how does perplexity's brain ai memory system function",
       "how much memory does ai need",
       "how much ram for ai"
     ],
@@ -216,11 +217,11 @@
       "how to give ai agents memory",
       "how to give ai memory",
       "how to give ai persistent memory",
+      "how to learn memory",
       "how to make ai have memory",
       "how to make c ai memory better",
       "how to make character ai memory better",
       "how to make janitor ai memory better",
-      "how to memory",
       "limited memory ai examples",
       "openai plans to give ai infinite memory by 2026",
       "what data does ai collect",
@@ -250,6 +251,7 @@
     ],
     "agent memory framework": [
       "agent framework agent memory",
+      "agent memory framework github",
       "ai agent memory framework",
       "best agent memory framework",
       "microsoft agent framework memory",
@@ -288,7 +290,6 @@
       "embedding model memory usage",
       "how images are stored in memory",
       "in memory embedding model",
-      "memory embedding model",
       "openclaw memory embedding model",
       "what is a memory model",
       "what is memory tagging"
@@ -303,6 +304,7 @@
       "in memory vector database javascript",
       "in memory vector database langchain",
       "in memory vector database node js",
+      "in memory vector database open source",
       "in memory vector database python",
       "in memory vector database rust",
       "in memory vector database spring ai",
@@ -312,8 +314,7 @@
       "vector database for llm memory",
       "vector database for memory",
       "vector database in memory",
-      "vector database llm memory",
-      "vector database long term memory"
+      "vector database llm memory"
     ],
     "context window llm": [
       "1 million context window llm",
@@ -340,10 +341,10 @@
     "mem0": [
       "best llm for mem0",
       "best model for mem0",
-      "fast memu",
       "how to memo a check",
       "how to memo a component",
       "how to memo component react",
+      "how to memo fast",
       "how to memo faster",
       "how to memo format",
       "how to memo record on iphone",
@@ -370,16 +371,16 @@
       "what is zep cleaner used for",
       "what is zep made of",
       "what is zep memory",
+      "where can i find zep",
       "where can i find zep cleaner",
-      "zep ai agent memory",
+      "zep agent memory github",
       "zep chat memory",
       "zep cleaner near me",
       "zep cleaner where to buy",
       "zep cleaning products near me",
       "zep cloud memory",
-      "zep for memory",
-      "zep graffiti memory",
-      "zep memory agent"
+      "zep contact cleaner",
+      "zep for memory"
     ],
     "letta memgpt": [
       "klem in engels",
@@ -388,6 +389,7 @@
       "letta formerly memgpt",
       "letta memgpt github",
       "letta memgpt paper",
+      "letta memgpt reddit",
       "letta vs memgpt",
       "rezept topfennockerl"
     ]
@@ -396,14 +398,14 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 213,
+      "autocomplete_matches": 215,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
         "ai agent memory architecture",
         "ai agent memory bank",
         "ai agent memory benchmark",
-        "ai agent memory context"
+        "ai agent memory best practices"
       ]
     },
     {
@@ -563,7 +565,7 @@
     {
       "keyword": "letta ai",
       "slug": "letta-ai-guide",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 7,
       "validated": true,
       "matching_suggestions": [
         "letta ai memgpt",
@@ -608,14 +610,14 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 13,
+      "autocomplete_matches": 12,
       "validated": true,
       "matching_suggestions": [
         "example of limited memory ai",
         "limited memory ai",
         "limited memory ai examples",
         "example of limited memory ai",
-        "limited memory ai examples"
+        "limited memory ai system"
       ]
     },
     {
@@ -909,14 +911,14 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 36,
+      "autocomplete_matches": 34,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
-        "best ai chat memory",
         "ai chat memory",
         "ai chat memory reddit",
-        "best ai chat memory"
+        "best ai chat memory",
+        "character ai chat memory limit"
       ]
     },
     {
@@ -1110,14 +1112,14 @@
     {
       "keyword": "ai for memory",
       "slug": "ai-for-memory",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
-        "ai for memory",
         "best ai for memory",
         "best ai for memory reddit",
         "best ai for memory retention",
-        "best character ai for memory"
+        "best character ai for memory",
+        "best free ai for memory"
       ]
     },
     {
@@ -1210,11 +1212,9 @@
     {
       "keyword": "ai has memory",
       "slug": "ai-has-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai has memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai human memory",
@@ -1267,18 +1267,21 @@
     {
       "keyword": "ai killing ram",
       "slug": "ai-killing-ram",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai killing ram"
+        "ai killing ram",
+        "ai killing ram prices"
       ]
     },
     {
       "keyword": "ai killing ram prices",
       "slug": "ai-killing-ram-prices",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai killing ram prices"
+      ]
     },
     {
       "keyword": "ai long term memory github",
@@ -1325,9 +1328,11 @@
     {
       "keyword": "ai memory and context",
       "slug": "ai-memory-and-context",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory and context"
+      ]
     },
     {
       "keyword": "ai memory and storage etf",
@@ -1407,21 +1412,18 @@
     {
       "keyword": "ai memory boost module",
       "slug": "ai-memory-boost-module",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory boost module",
-        "ai memory boost module gigabyte"
+        "ai memory boost module"
       ]
     },
     {
       "keyword": "ai memory boost module gigabyte",
       "slug": "ai-memory-boost-module-gigabyte",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory boost module gigabyte"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory bottleneck",
@@ -1435,11 +1437,9 @@
     {
       "keyword": "ai memory box",
       "slug": "ai-memory-box",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory box"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory breakthrough",
@@ -1507,10 +1507,11 @@
     {
       "keyword": "ai memory chips",
       "slug": "ai-memory-chips",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai memory chips"
+        "ai memory chips",
+        "best ai memory chips"
       ]
     },
     {
@@ -1523,10 +1524,12 @@
     {
       "keyword": "ai memory companies",
       "slug": "ai-memory-companies",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "ai memory companies",
+        "ai memory companies to invest in",
+        "best ai memory companies",
         "best ai memory companies"
       ]
     },
@@ -1605,19 +1608,16 @@
     {
       "keyword": "ai memory drive",
       "slug": "ai-memory-drive",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory drive"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory dump",
       "slug": "ai-memory-dump",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory dump",
         "ai memory dump analyzer"
       ]
     },
@@ -1842,11 +1842,9 @@
     {
       "keyword": "ai memory is sold out",
       "slug": "ai-memory-is-sold-out",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory is sold out"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory issues",
@@ -1876,11 +1874,9 @@
     {
       "keyword": "ai memory lane",
       "slug": "ai-memory-lane",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory lane"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory layer",
@@ -1956,11 +1952,9 @@
     {
       "keyword": "ai memory makers",
       "slug": "ai-memory-makers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory makers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory management",
@@ -1984,18 +1978,21 @@
     {
       "keyword": "ai memory market",
       "slug": "ai-memory-market",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai memory market"
+        "ai memory market",
+        "ai memory market share"
       ]
     },
     {
       "keyword": "ai memory market share",
       "slug": "ai-memory-market-share",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory market share"
+      ]
     },
     {
       "keyword": "ai memory matters",
@@ -2211,14 +2208,14 @@
     {
       "keyword": "ai memory stocks",
       "slug": "ai-memory-stocks",
-      "autocomplete_matches": 8,
+      "autocomplete_matches": 9,
       "validated": true,
       "matching_suggestions": [
         "ai memory stocks",
+        "ai memory stocks to buy",
         "best ai memory stocks",
         "best ai memory stocks to buy",
-        "best ai memory stocks to buy now",
-        "best ai memory stocks"
+        "best ai memory stocks to buy now"
       ]
     },
     {
@@ -2347,7 +2344,7 @@
     {
       "keyword": "ai ram ji",
       "slug": "ai-ram-ji",
-      "autocomplete_matches": 7,
+      "autocomplete_matches": 6,
       "validated": true,
       "matching_suggestions": [
         "ai ram ji",
@@ -2385,11 +2382,9 @@
     {
       "keyword": "ai ram overclock",
       "slug": "ai-ram-overclock",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai ram overclock"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai ram owner",
@@ -2453,14 +2448,14 @@
     {
       "keyword": "ai that remembers everything",
       "slug": "ai-that-remembers-everything",
-      "autocomplete_matches": 7,
+      "autocomplete_matches": 8,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers everything",
+        "ai that remembers everything free",
         "ai that remembers everything reddit",
         "an ai that remembers everything",
-        "best ai that remembers everything",
-        "character ai that remembers everything"
+        "best ai that remembers everything"
       ]
     },
     {
@@ -2792,12 +2787,9 @@
     {
       "keyword": "best ai memory reddit",
       "slug": "best-ai-memory-reddit",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai memory reddit",
-        "best ai memory reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai memory stick",
@@ -2815,8 +2807,8 @@
       "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "best ai memory tool",
-        "best ai memory tool"
+        "best ai memory tools",
+        "best ai memory tools"
       ]
     },
     {
@@ -2965,11 +2957,10 @@
     {
       "keyword": "best llm memory",
       "slug": "best-llm-memory",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "best llm memory",
-        "best llm memory mcp",
         "best llm memory system"
       ]
     },
@@ -3274,10 +3265,11 @@
     {
       "keyword": "chatbot memory reddit",
       "slug": "chatbot-memory-reddit",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory reddit",
+        "chatbot memory reddit",
         "ai chatbot memory reddit"
       ]
     },
@@ -3565,20 +3557,20 @@
     {
       "keyword": "context window of an llm",
       "slug": "context-window-of-an-llm",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
-        "context window of an llm"
+        "context window of an llm",
+        "the context window of an llm fundamentally limits",
+        "the context window of an llm refers to"
       ]
     },
     {
       "keyword": "context window of different llm",
       "slug": "context-window-of-different-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window of different llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window of llm",
@@ -3866,16 +3858,20 @@
     {
       "keyword": "extending llm context window",
       "slug": "extending-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "extending llm context window beyond 2 million tokens"
+      ]
     },
     {
       "keyword": "extending llm context window beyond 2 million tokens",
       "slug": "extending-llm-context-window-beyond-2-million-tokens",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "extending llm context window beyond 2 million tokens"
+      ]
     },
     {
       "keyword": "faiss vector database in memory",
@@ -3898,11 +3894,9 @@
     {
       "keyword": "flipped ai chat long term memory",
       "slug": "flipped-ai-chat-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "flipped ai chat long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "flipped ai long term memory",
@@ -3914,11 +3908,9 @@
     {
       "keyword": "free ai that remembers",
       "slug": "free-ai-that-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "free ai that remembers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "gemini ai long term memory",
@@ -4097,10 +4089,9 @@
     {
       "keyword": "how much memory does ai need",
       "slug": "how-much-memory-does-ai-need",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
-        "how much memory does ai need",
         "how much memory does ai need",
         "how much memory does ai need",
         "how much memory does ai need",
@@ -4196,11 +4187,9 @@
     {
       "keyword": "how to find chatgpt memory",
       "slug": "how-to-find-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to find chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to fix character ai memory",
@@ -4255,9 +4244,11 @@
     {
       "keyword": "ai memory dram",
       "slug": "ai-memory-dram",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory dram"
+      ]
     },
     {
       "keyword": "ai memory free",
@@ -4305,11 +4296,9 @@
     {
       "keyword": "artificial intelligence memory her",
       "slug": "artificial-intelligence-memory-her",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "artificial intelligence memory her"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai memory framework",
@@ -4323,18 +4312,18 @@
     {
       "keyword": "best ai that has memory",
       "slug": "best-ai-that-has-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai that has memory"
+      ]
     },
     {
       "keyword": "best memory character ai",
       "slug": "best-memory-character-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best memory character ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best open source llm memory",
@@ -4357,9 +4346,11 @@
     {
       "keyword": "chatbot with infinite memory",
       "slug": "chatbot-with-infinite-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with infinite memory"
+      ]
     },
     {
       "keyword": "context window for local llm",
@@ -4482,9 +4473,11 @@
     {
       "keyword": "how to improve brain memory",
       "slug": "how-to-improve-brain-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve brain memory"
+      ]
     },
     {
       "keyword": "how to improve character ai memory",
@@ -4593,11 +4586,9 @@
     {
       "keyword": "how to memory",
       "slug": "how-to-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to remember conversations",
@@ -4744,9 +4735,11 @@
     {
       "keyword": "in memory vector database open source",
       "slug": "in-memory-vector-database-open-source",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "in memory vector database open source"
+      ]
     },
     {
       "keyword": "in memory vector database python",
@@ -4854,10 +4847,11 @@
     {
       "keyword": "ai memory prompt",
       "slug": "ai-memory-prompt",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai memory prompt"
+        "ai memory prompt",
+        "best ai memory prompt"
       ]
     },
     {
@@ -4972,11 +4966,9 @@
     {
       "keyword": "is ai really that intelligent",
       "slug": "is-ai-really-that-intelligent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is ai really that intelligent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is llm necessary",
@@ -5204,11 +5196,9 @@
     {
       "keyword": "largest context window open llm",
       "slug": "largest-context-window-open-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "largest context window open llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm agent memory management",
@@ -5229,11 +5219,9 @@
     {
       "keyword": "llm api context window",
       "slug": "llm-api-context-window",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm api context window"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm arena context window",
@@ -5326,9 +5314,11 @@
     {
       "keyword": "llm context window chart",
       "slug": "llm-context-window-chart",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window chart"
+      ]
     },
     {
       "keyword": "llm context window compare",
@@ -5546,11 +5536,9 @@
     {
       "keyword": "llm external memory",
       "slug": "llm-external-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm external memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm from distance",
@@ -5846,15 +5834,17 @@
       "validated": true,
       "matching_suggestions": [
         "llm memory bench",
-        "llm memory benchmark"
+        "llm memory benchmarks"
       ]
     },
     {
       "keyword": "llm memory books",
       "slug": "llm-memory-books",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory books"
+      ]
     },
     {
       "keyword": "llm memory bottleneck",
@@ -6145,11 +6135,9 @@
     {
       "keyword": "llm memory golang",
       "slug": "llm-memory-golang",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory golang"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory google",
@@ -6233,11 +6221,9 @@
     {
       "keyword": "llm memory langgraph",
       "slug": "llm-memory-langgraph",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory langgraph"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory layer",
@@ -6325,10 +6311,9 @@
     {
       "keyword": "llm memory mcp",
       "slug": "llm-memory-mcp",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "best llm memory mcp",
         "llm memory mcp"
       ]
     },
@@ -6387,11 +6372,9 @@
     {
       "keyword": "llm memory n8n",
       "slug": "llm-memory-n8n",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory n8n"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory needed",
@@ -6463,7 +6446,7 @@
       "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "llm memory papers"
+        "llm memory paper"
       ]
     },
     {
@@ -6523,11 +6506,9 @@
     {
       "keyword": "llm memory requirements",
       "slug": "llm-memory-requirements",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory requirements"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory requirements calculator",
@@ -6597,20 +6578,16 @@
     {
       "keyword": "llm procedural memory",
       "slug": "llm-procedural-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm procedural memory optimization"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm procedural memory optimization",
       "slug": "llm-procedural-memory-optimization",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm procedural memory optimization"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm ram needed",
@@ -6684,9 +6661,11 @@
     {
       "keyword": "long short term memory meaning",
       "slug": "long-short-term-memory-meaning",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long short term memory meaning"
+      ]
     },
     {
       "keyword": "long term agentic memory with langgraph deeplearning ai",
@@ -6727,11 +6706,9 @@
     {
       "keyword": "long term memory aids",
       "slug": "long-term-memory-aids",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term memory aids"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory better than short term",
@@ -6784,14 +6761,14 @@
     {
       "keyword": "long term memory in ai",
       "slug": "long-term-memory-in-ai",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 6,
       "validated": true,
       "matching_suggestions": [
         "long term memory in ai",
         "long term memory in ai agents",
+        "short term vs long term memory in ai",
         "short term vs long term memory in ai agents",
-        "what is long term memory in ai",
-        "what is long term memory in ai agents"
+        "what is long term memory in ai"
       ]
     },
     {
@@ -6960,11 +6937,9 @@
     {
       "keyword": "mem0 in ai",
       "slug": "mem0-in-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 in ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 in memory",
@@ -6983,11 +6958,10 @@
     {
       "keyword": "mem0 memory",
       "slug": "mem0-memory",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "mem0 memory",
-        "mem0 memory layer",
         "mem0 memory management",
         "mem0 memory types",
         "what is mem0 memory"
@@ -6996,11 +6970,9 @@
     {
       "keyword": "mem0 memory layer",
       "slug": "mem0-memory-layer",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 memory layer"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 memory types",
@@ -7089,11 +7061,9 @@
     {
       "keyword": "memory chatbot langflow",
       "slug": "memory-chatbot-langflow",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "memory chatbot langflow"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "memory for chatbot",
@@ -7128,15 +7098,17 @@
       "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "memory of ai"
+        "memory of ai agent"
       ]
     },
     {
       "keyword": "memory of ai agent",
       "slug": "memory-of-ai-agent",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory of ai agent"
+      ]
     },
     {
       "keyword": "memory os ai agent",
@@ -7265,11 +7237,9 @@
     {
       "keyword": "n8n ai agent window buffer memory",
       "slug": "n8n-ai-agent-window-buffer-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "n8n ai agent window buffer memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "n8n ai long term memory",
@@ -7310,11 +7280,9 @@
     {
       "keyword": "nvidia llm memory",
       "slug": "nvidia-llm-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "nvidia llm memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "open ai long term memory",
@@ -7337,11 +7305,9 @@
     {
       "keyword": "openai agents sdk memory",
       "slug": "openai-agents-sdk-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "openai agents sdk memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "openai ai powered browser memory agent features",
@@ -7568,9 +7534,11 @@
     {
       "keyword": "short term memory and long term memory ai",
       "slug": "short-term-memory-and-long-term-memory-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "short term memory and long term memory ai"
+      ]
     },
     {
       "keyword": "short term memory for ai agents",
@@ -7822,7 +7790,7 @@
     {
       "keyword": "what is ai memory",
       "slug": "what-is-ai-memory",
-      "autocomplete_matches": 9,
+      "autocomplete_matches": 10,
       "validated": true,
       "matching_suggestions": [
         "what is ai memory",
@@ -7860,9 +7828,11 @@
     {
       "keyword": "what is best for brain memory",
       "slug": "what-is-best-for-brain-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is best for brain memory"
+      ]
     },
     {
       "keyword": "what is character ai memory",
@@ -8008,11 +7978,9 @@
     {
       "keyword": "what is meant by llm",
       "slug": "what-is-meant-by-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is meant by llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is mem0 ai",
@@ -8069,11 +8037,9 @@
     {
       "keyword": "what is memory tuning in llm",
       "slug": "what-is-memory-tuning-in-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is memory tuning in llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is persistent memory",
@@ -8318,9 +8284,11 @@
     {
       "keyword": "which specialization is best in llm",
       "slug": "which-specialization-is-best-in-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which specialization is best in llm"
+      ]
     },
     {
       "keyword": "who has the best chatbot",
@@ -8791,11 +8759,9 @@
     {
       "keyword": "ai memory algorithm",
       "slug": "ai-memory-algorithm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory algorithm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory efficiency",
@@ -8812,7 +8778,7 @@
       "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory models"
+        "ai memory model"
       ]
     },
     {
@@ -9055,10 +9021,11 @@
     {
       "keyword": "ai memory tools",
       "slug": "ai-memory-tools",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai memory tools"
+        "best ai memory tools",
+        "best ai memory tools"
       ]
     },
     {
@@ -9091,11 +9058,9 @@
     {
       "keyword": "mem0 for agents",
       "slug": "mem0-for-agents",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "mem0 for agents"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mempalace ai memory system",
@@ -9181,11 +9146,9 @@
     {
       "keyword": "ai memory mempalace",
       "slug": "ai-memory-mempalace",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory mempalace"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory plugin",
@@ -9242,11 +9205,9 @@
     {
       "keyword": "context window size for llm",
       "slug": "context-window-size-for-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window size for llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window size per llms",
@@ -9331,9 +9292,11 @@
     {
       "keyword": "llm low memory",
       "slug": "llm-low-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm low memory"
+      ]
     },
     {
       "keyword": "llm memory local",
@@ -9399,11 +9362,9 @@
     {
       "keyword": "what is ai memories app",
       "slug": "what-is-ai-memories-app",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is ai memories app"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is context window in ai llm",
@@ -9417,11 +9378,9 @@
     {
       "keyword": "what is memory management in llm",
       "slug": "what-is-memory-management-in-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is memory management in llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "which ai has best long term memory",
@@ -9520,9 +9479,11 @@
     {
       "keyword": "ai chatbot with long term memory reddit",
       "slug": "ai-chatbot-with-long-term-memory-reddit",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot with long term memory reddit"
+      ]
     },
     {
       "keyword": "ai harness memory management",
@@ -9552,9 +9513,11 @@
     {
       "keyword": "ai memory local",
       "slug": "ai-memory-local",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory local"
+      ]
     },
     {
       "keyword": "ai memory system benchmark",
@@ -9584,20 +9547,16 @@
     {
       "keyword": "artificial intelligence memory disc",
       "slug": "artificial-intelligence-memory-disc",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "artificial intelligence memory disc"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "dhravya shah supermemory tackles long-term memory issues in ai",
       "slug": "dhravya-shah-supermemory-tackles-long-term-memory-issues-in-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "dhravya shah supermemory tackles long-term memory issues in ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "does ai agent have memory",
@@ -9675,11 +9634,9 @@
     {
       "keyword": "ai memory chip supercycle",
       "slug": "ai-memory-chip-supercycle",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory chip supercycle"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory obsidian",
@@ -9711,20 +9668,16 @@
     {
       "keyword": "infinite memory chatbot",
       "slug": "infinite-memory-chatbot",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "infinite memory chatbot"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window claude",
       "slug": "llm-context-window-claude",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window claude"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window paper",
@@ -9765,9 +9718,11 @@
     {
       "keyword": "llm need ram",
       "slug": "llm-need-ram",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm need ram"
+      ]
     },
     {
       "keyword": "llm with 2 million context window",
@@ -9779,9 +9734,11 @@
     {
       "keyword": "local ai long term memory",
       "slug": "local-ai-long-term-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "local ai long term memory"
+      ]
     },
     {
       "keyword": "long term memory model ai",
@@ -9829,9 +9786,11 @@
     {
       "keyword": "what is context window length in llm",
       "slug": "what-is-context-window-length-in-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is context window length in llm"
+      ]
     },
     {
       "keyword": "what is the best ai memory",
@@ -9845,9 +9804,11 @@
     {
       "keyword": "zep agent memory github",
       "slug": "zep-agent-memory-github",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep agent memory github"
+      ]
     },
     {
       "keyword": "is llm important",
@@ -9902,10 +9863,11 @@
     {
       "keyword": "perplexity brain ai memory system",
       "slug": "perplexity-brain-ai-memory-system",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "perplexity brain ai memory system"
+        "perplexity brain ai memory system",
+        "perplexity brain ai memory system review"
       ]
     },
     {
@@ -10080,11 +10042,9 @@
     {
       "keyword": "how brain keeps memory",
       "slug": "how-brain-keeps-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how brain keeps memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm in climate change law and policy",
@@ -10125,11 +10085,9 @@
     {
       "keyword": "local ai with long-term memory",
       "slug": "local-ai-with-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "local ai with long-term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "supermemory long term ai memory as a service",
@@ -10178,12 +10136,38 @@
     }
   ],
   "new_opportunities": [
-    "deepseek llm memory"
+    "agent memory framework github",
+    "ai agent types of memory",
+    "ai memory boom market trends",
+    "ai memory brain",
+    "ai memory dream",
+    "ai memory drift",
+    "ai memory fusion",
+    "ai memory honcho",
+    "ai memory how does it work",
+    "ai memory meaning",
+    "ai memory os",
+    "ai observational memory",
+    "ai ram image generator",
+    "best ai memory chat",
+    "deepseek llm memory",
+    "does ai agent has memory",
+    "how does perplexity's brain ai memory system function",
+    "how to clear up chatgpt memory",
+    "how to delete meta ai memory",
+    "llm context window nedir",
+    "llm memory brain",
+    "llm memory extraction",
+    "llm memory project",
+    "llm memory tools",
+    "microsoft memora ai memory system",
+    "n8n llm memory",
+    "why is my short term memory better than long term"
   ],
   "summary": {
     "total_keywords": 1109,
-    "validated": 906,
-    "low_volume": 203,
-    "new_opportunities_found": 1
+    "validated": 882,
+    "low_volume": 227,
+    "new_opportunities_found": 27
   }
 }
