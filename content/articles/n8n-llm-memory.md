@@ -86,7 +86,6 @@ def manage_conversation_memory(current_message, previous_history):
  # In a real scenario, you would save updated_history to a persistent store here.
  return updated_history
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
 def format_prompt_with_history(history, user_input):
