@@ -98,7 +98,6 @@ Techniques might include summarizing past interactions, identifying recurring th
 
 Creating an effective **LLM memory brain** involves choosing the right tools and techniques. Several open-source projects and frameworks can assist in this process.
 
-
 One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
 
 ### Open-Source Memory Systems
