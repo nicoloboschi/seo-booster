@@ -6809,5 +6809,17 @@
   },
   "ai-memory-akita": {
     "platforms": {}
+  },
+  "agent-memory-framework-github": {
+    "platforms": {}
+  },
+  "ai-agent-types-of-memory": {
+    "platforms": {}
+  },
+  "ai-memory-boom-market-trends": {
+    "platforms": {}
+  },
+  "ai-memory-brain": {
+    "platforms": {}
   }
 }
