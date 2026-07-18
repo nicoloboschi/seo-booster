@@ -99,7 +99,6 @@
       "deepseek llm memory",
       "dify llm memory",
       "dify llm node memory",
-      "do you need llb for llm",
       "does llm have memory",
       "does llm make you a lawyer",
       "hindsight llm memory",
@@ -108,7 +107,8 @@
       "how to calculate llm memory usage",
       "how to give llm long term memory",
       "how to give llm memory",
-      "how to give local llm memory"
+      "how to give local llm memory",
+      "how to implement llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -5504,11 +5504,9 @@
     {
       "keyword": "llm course time",
       "slug": "llm-course-time",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm course time"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm decoding memory bound",
@@ -8843,11 +8841,9 @@
     {
       "keyword": "do you need llb for llm",
       "slug": "do-you-need-llb-for-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "do you need llb for llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "does ai agents have memory",
@@ -10374,8 +10370,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 906,
+    "low_volume": 229,
     "new_opportunities_found": 1
   }
 }
