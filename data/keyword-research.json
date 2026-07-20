@@ -142,6 +142,7 @@
       "ai assistant that remembers everything",
       "ai chat that remembers everything",
       "ai chat that remembers everything free",
+      "ai chatbot that remembers",
       "ai chatbot that remembers everything",
       "ai friend that remembers",
       "ai girlfriend that remembers everything",
@@ -151,8 +152,7 @@
       "ai remember me",
       "ai that actually remembers",
       "ai that can remember",
-      "ai that does not remember",
-      "ai that remembers chats"
+      "ai that does not remember"
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
@@ -1024,9 +1024,10 @@
     {
       "keyword": "ai chatbot that remembers",
       "slug": "ai-chatbot-that-remembers",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot that remembers",
         "ai chatbot that remembers everything",
         "best ai chatbot that remembers everything"
       ]
@@ -3746,9 +3747,11 @@
     {
       "keyword": "do ai robots have feelings",
       "slug": "do-ai-robots-have-feelings",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "do ai robots have feelings"
+      ]
     },
     {
       "keyword": "does ai have long term memory",
@@ -10371,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 907,
-    "low_volume": 228,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
