@@ -128,9 +128,9 @@
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
       "building smarter ai agents agentcore long term memory deep dive",
+      "can you have good long term memory but bad short term memory",
       "candy ai long term memory",
-      "chub ai long term memory",
-      "claude ai long term memory"
+      "chub ai long term memory"
     ],
     "ai that remembers": [
       ". graffiti ai that remembers stuff",
@@ -3143,9 +3143,11 @@
     {
       "keyword": "can you have good long term memory but bad short term memory",
       "slug": "can-you-have-good-long-term-memory-but-bad-short-term-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "can you have good long term memory but bad short term memory"
+      ]
     },
     {
       "keyword": "candy ai long term memory",
@@ -6711,9 +6713,11 @@
     {
       "keyword": "long term memory better than short term",
       "slug": "long-term-memory-better-than-short-term",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "long term memory better than short term"
+      ]
     },
     {
       "keyword": "long term memory character ai",
@@ -10370,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 906,
-    "low_volume": 229,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
