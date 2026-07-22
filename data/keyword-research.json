@@ -35,18 +35,17 @@
       "ai agent memory benchmark",
       "ai agent memory best practices",
       "ai agent memory context",
-      "ai agent memory database",
-      "ai agent memory db",
-      "ai agent memory design",
       "ai agent memory file",
       "ai agent memory framework",
       "ai agent memory github",
       "ai agent memory graph",
-      "ai agent memory helps in"
+      "ai agent memory helps in",
+      "ai agent memory implementation",
+      "ai agent memory improvement techniques",
+      "ai agent memory knowledge graph"
     ],
     "ai memory": [
       "ai agent memory knowledge graph",
-      "ai foundry memory",
       "ai in memory",
       "ai infinite memory",
       "ai killing ram",
@@ -64,7 +63,8 @@
       "ai memory bank",
       "ai memory benchmark",
       "ai memory book",
-      "ai memory book generator"
+      "ai memory book generator",
+      "ai memory boom market trends"
     ],
     "best ai memory": [
       "ai agent memory best practices",
@@ -398,7 +398,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 215,
+      "autocomplete_matches": 205,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -1149,11 +1149,9 @@
     {
       "keyword": "ai foundry memory",
       "slug": "ai-foundry-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai foundry memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai friend that remembers",
@@ -1680,47 +1678,37 @@
     {
       "keyword": "ai memory file",
       "slug": "ai-memory-file",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory files"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory forum",
       "slug": "ai-memory-forum",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory forum"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory frameworks",
       "slug": "ai-memory-frameworks",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory frameworks"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory full",
       "slug": "ai-memory-full",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory full"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory function",
       "slug": "ai-memory-function",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory function"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory game",
@@ -2498,11 +2486,9 @@
     {
       "keyword": "ai with memory feature",
       "slug": "ai-with-memory-feature",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai with memory feature"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "an ai that remembers",
@@ -4253,11 +4239,9 @@
     {
       "keyword": "ai memory free",
       "slug": "ai-memory-free",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory free"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory hackathon",
@@ -9907,11 +9891,9 @@
     {
       "keyword": "ai memory for agents",
       "slug": "ai-memory-for-agents",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory for agents"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory guide",
@@ -10191,11 +10173,9 @@
     {
       "keyword": "ai memory fusion",
       "slug": "ai-memory-fusion",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory fusion"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory honcho",
@@ -10374,8 +10354,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 898,
+    "low_volume": 237,
     "new_opportunities_found": 1
   }
 }
