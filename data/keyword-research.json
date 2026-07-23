@@ -143,7 +143,6 @@
       "ai chat that remembers everything",
       "ai chat that remembers everything free",
       "ai chatbot that remembers",
-      "ai chatbot that remembers everything",
       "ai friend that remembers",
       "ai girlfriend that remembers everything",
       "ai image generator that remembers characters",
@@ -152,7 +151,8 @@
       "ai remember me",
       "ai that actually remembers",
       "ai that can remember",
-      "ai that does not remember"
+      "ai that does not remember",
+      "ai that remembers chats"
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
@@ -1024,21 +1024,19 @@
     {
       "keyword": "ai chatbot that remembers",
       "slug": "ai-chatbot-that-remembers",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot that remembers",
-        "ai chatbot that remembers everything",
         "best ai chatbot that remembers everything"
       ]
     },
     {
       "keyword": "ai chatbot that remembers everything",
       "slug": "ai-chatbot-that-remembers-everything",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai chatbot that remembers everything",
         "best ai chatbot that remembers everything"
       ]
     },
@@ -2448,7 +2446,7 @@
     {
       "keyword": "ai that remembers everything",
       "slug": "ai-that-remembers-everything",
-      "autocomplete_matches": 8,
+      "autocomplete_matches": 7,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers everything",
@@ -4053,11 +4051,9 @@
     {
       "keyword": "how does chatbot memory work",
       "slug": "how-does-chatbot-memory-work",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how does chatbot memory work"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how does long term memory work in ai",
@@ -4110,11 +4106,9 @@
     {
       "keyword": "how to add to chatbot memory",
       "slug": "how-to-add-to-chatbot-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to add to chatbot memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to build llm memory",
@@ -4201,11 +4195,9 @@
     {
       "keyword": "how to free up chatgpt memory",
       "slug": "how-to-free-up-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to free up chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "agent framework agent memory",
@@ -4437,11 +4429,9 @@
     {
       "keyword": "how to give chatgpt memory",
       "slug": "how-to-give-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to give chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to give llm memory",
@@ -4612,11 +4602,9 @@
     {
       "keyword": "how to see chatgpt memory",
       "slug": "how-to-see-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to see chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to turn ai memories off on snapchat",
@@ -4630,11 +4618,9 @@
     {
       "keyword": "how to turn on chatgpt memory",
       "slug": "how-to-turn-on-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to turn on chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to use janitor ai memory",
@@ -4662,11 +4648,9 @@
     {
       "keyword": "how to wipe chatgpt memory",
       "slug": "how-to-wipe-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to wipe chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "in memory embedding model",
@@ -9997,11 +9981,9 @@
     {
       "keyword": "how to clean up chatbot memory",
       "slug": "how-to-clean-up-chatbot-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to clean up chatbot memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to make ai have memory",
@@ -10281,11 +10263,9 @@
     {
       "keyword": "how to clear up chatgpt memory",
       "slug": "how-to-clear-up-chatgpt-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to clear up chatgpt memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to delete meta ai memory",
@@ -10374,8 +10354,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 899,
+    "low_volume": 236,
     "new_opportunities_found": 1
   }
 }
