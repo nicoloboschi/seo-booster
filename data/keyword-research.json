@@ -156,6 +156,7 @@
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
+      "chronic memory issues",
       "github llm persistent memory",
       "great long term memory bad short term",
       "is there a limit to long term memory",
@@ -3329,9 +3330,11 @@
     {
       "keyword": "chronic memory issues",
       "slug": "chronic-memory-issues",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chronic memory issues"
+      ]
     },
     {
       "keyword": "chub ai long term memory",
@@ -10371,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 907,
-    "low_volume": 228,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
