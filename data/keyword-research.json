@@ -202,13 +202,13 @@
       "best memory system for ai",
       "best memory system for ai agent",
       "best memory system for ai agents",
-      "can brain memory be full",
       "central memory vs effector memory",
       "character ai memory system",
       "example of limited memory ai",
       "how does perplexity's brain ai memory system function",
       "how much memory does ai need",
-      "how much ram for ai"
+      "how much ram for ai",
+      "janitor ai memory system"
     ],
     "give ai memory": [
       "example of limited memory ai",
@@ -9031,11 +9031,9 @@
     {
       "keyword": "can brain memory be full",
       "slug": "can-brain-memory-be-full",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "can brain memory be full"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory karpathy",
@@ -9777,11 +9775,9 @@
     {
       "keyword": "what is automatic memory management",
       "slug": "what-is-automatic-memory-management",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is automatic memory management"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is context window length in llm",
@@ -10374,8 +10370,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 906,
+    "low_volume": 229,
     "new_opportunities_found": 1
   }
 }
