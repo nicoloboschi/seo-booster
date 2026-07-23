@@ -8242,9 +8242,11 @@
     {
       "keyword": "which llm course is best",
       "slug": "which-llm-course-is-best",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which llm course is best"
+      ]
     },
     {
       "keyword": "which llm has best context window",
@@ -8265,9 +8267,10 @@
     {
       "keyword": "which llm is the best",
       "slug": "which-llm-is-the-best",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "which llm is the best",
         "which llm is the best"
       ]
     },
@@ -8281,9 +8284,11 @@
     {
       "keyword": "which specialization is best in llm",
       "slug": "which-specialization-is-best-in-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "which specialization is best in llm"
+      ]
     },
     {
       "keyword": "who has the best chatbot",
@@ -10369,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 906,
-    "low_volume": 229,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
