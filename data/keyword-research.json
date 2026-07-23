@@ -172,6 +172,7 @@
       "what is persistent memory in llm"
     ],
     "rag vs memory": [
+      "is memory cloth real",
       "memory card vs ram",
       "rag and bone review",
       "rag and bone vs theory",
@@ -182,7 +183,9 @@
       "rag vs memory bank",
       "rag vs ram",
       "what is memory cloth",
+      "what is memory fabric",
       "what is rag memory",
+      "what is the best type of memory",
       "why use redis instead of memory"
     ],
     "ai memory system": [
@@ -607,14 +610,14 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 11,
+      "autocomplete_matches": 12,
       "validated": true,
       "matching_suggestions": [
+        "example of limited memory ai",
         "limited memory ai",
         "limited memory ai examples",
         "example of limited memory ai",
-        "limited memory ai system",
-        "what is limited memory ai"
+        "limited memory ai system"
       ]
     },
     {
@@ -5002,9 +5005,11 @@
     {
       "keyword": "is memory cloth real",
       "slug": "is-memory-cloth-real",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is memory cloth real"
+      ]
     },
     {
       "keyword": "is there a limit to long term memory",
@@ -8005,9 +8010,11 @@
     {
       "keyword": "what is memory fabric",
       "slug": "what-is-memory-fabric",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory fabric"
+      ]
     },
     {
       "keyword": "what is memory system",
@@ -8103,9 +8110,11 @@
     {
       "keyword": "what is the best type of memory",
       "slug": "what-is-the-best-type-of-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best type of memory"
+      ]
     },
     {
       "keyword": "what is the purpose of an llm",
@@ -8288,9 +8297,11 @@
     {
       "keyword": "who has the best memory ever",
       "slug": "who-has-the-best-memory-ever",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "who has the best memory ever"
+      ]
     },
     {
       "keyword": "why ai ram",
@@ -10358,8 +10369,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 902,
-    "low_volume": 233,
+    "validated": 906,
+    "low_volume": 229,
     "new_opportunities_found": 1
   }
 }
