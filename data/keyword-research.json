@@ -365,9 +365,13 @@
       "is zep cleaner toxic",
       "is zep memory free",
       "is zep memory open source",
+      "what is keep alive memory",
       "what is zep",
       "what is zep cleaner",
+      "what is zep cleaner used for",
+      "what is zep made of",
       "what is zep memory",
+      "where can i find zep",
       "where can i find zep cleaner",
       "zep agent memory github",
       "zep chat memory",
@@ -376,11 +380,7 @@
       "zep cleaning products near me",
       "zep cloud memory",
       "zep contact cleaner",
-      "zep for memory",
-      "zep graffiti memory",
-      "zep memory agent",
-      "zep memory ai",
-      "zep memory alternative"
+      "zep for memory"
     ],
     "letta memgpt": [
       "klem in engels",
@@ -7937,9 +7937,11 @@
     {
       "keyword": "what is keep alive memory",
       "slug": "what-is-keep-alive-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is keep alive memory"
+      ]
     },
     {
       "keyword": "what is knowledge agent in artificial intelligence",
@@ -10372,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 907,
-    "low_volume": 228,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
