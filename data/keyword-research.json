@@ -8859,11 +8859,9 @@
     {
       "keyword": "latest news about ai ai delas alas",
       "slug": "latest-news-about-ai-ai-delas-alas",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "latest news about ai ai delas alas"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory approaches",
@@ -10374,8 +10372,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 907,
+    "low_volume": 228,
     "new_opportunities_found": 1
   }
 }
