@@ -274,6 +274,7 @@
       "ai chat memory reddit",
       "ai chat permanent memory",
       "ai chatbot best memory",
+      "ai chatbot for customer service",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
@@ -282,8 +283,7 @@
       "ai chatbot with memory free",
       "ai meeting summary",
       "best ai chat memory",
-      "best ai chatbot memory",
-      "best ai conversation app"
+      "best ai chatbot memory"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -972,9 +972,11 @@
     {
       "keyword": "ai chatbot for customer service",
       "slug": "ai-chatbot-for-customer-service",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chatbot for customer service"
+      ]
     },
     {
       "keyword": "ai chatbot good memory",
@@ -8857,9 +8859,11 @@
     {
       "keyword": "latest news about ai ai delas alas",
       "slug": "latest-news-about-ai-ai-delas-alas",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "latest news about ai ai delas alas"
+      ]
     },
     {
       "keyword": "llm memory approaches",
@@ -10370,8 +10374,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 906,
-    "low_volume": 229,
+    "validated": 908,
+    "low_volume": 227,
     "new_opportunities_found": 1
   }
 }
