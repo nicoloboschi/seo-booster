@@ -128,49 +128,12 @@
       "best long term memory ai chatbot",
       "building long term memory in agentic ai",
       "building smarter ai agents agentcore long term memory deep dive",
-      "can you have good long term memory but bad short term memory",
       "candy ai long term memory",
-      "chub ai long term memory"
+      "chub ai long term memory",
+      "claude ai long term memory"
     ],
-    "ai that remembers": [
-      ". graffiti ai that remembers stuff",
-      "age of ai ai delas alas",
-      "ai agent that remembers",
-      "ai ai delas alas height",
-      "ai app that remembers everything",
-      "ai assistant that remembers",
-      "ai assistant that remembers everything",
-      "ai chat that remembers everything",
-      "ai chat that remembers everything free",
-      "ai chatbot that remembers",
-      "ai chatbot that remembers everything",
-      "ai friend that remembers",
-      "ai girlfriend that remembers everything",
-      "ai image generator that remembers characters",
-      "ai necklace that remembers everything",
-      "ai remember app",
-      "ai remember me",
-      "ai that actually remembers",
-      "ai that can remember",
-      "ai that does not remember"
-    ],
-    "persistent memory llm": [
-      "anything llm persistent memory",
-      "chronic memory issues",
-      "github llm persistent memory",
-      "great long term memory bad short term",
-      "is there a limit to long term memory",
-      "long short term memory meaning",
-      "permanent memory example",
-      "persistent memory examples",
-      "persistent memory for llm",
-      "persistent memory for local llm",
-      "persistent memory in llm",
-      "persistent memory in llm agents",
-      "persistent memory local llm",
-      "what is persistent memory",
-      "what is persistent memory in llm"
-    ],
+    "ai that remembers": [],
+    "persistent memory llm": [],
     "rag vs memory": [
       "is memory cloth real",
       "memory card vs ram",
@@ -411,14 +374,14 @@
     {
       "keyword": "ai that remembers conversations",
       "slug": "ai-that-remembers-conversations",
-      "autocomplete_matches": 12,
+      "autocomplete_matches": 9,
       "validated": true,
       "matching_suggestions": [
-        "ai that remembers conversations",
-        "best ai that remembers conversations",
-        "is there an ai that remembers conversations",
         "ai chatbot with memory free",
-        "chatbot with memory langgraph"
+        "chatbot with memory langgraph",
+        "chatbot with memory using langchain",
+        "langchain chatbot with memory github",
+        "langgraph chatbot with memory example"
       ]
     },
     {
@@ -434,12 +397,9 @@
     {
       "keyword": "ai assistant that remembers everything",
       "slug": "ai-assistant-remembers-everything",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai assistant that remembers everything",
-        "best ai assistant that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai agent architecture patterns",
@@ -787,11 +747,9 @@
     {
       "keyword": "ai agent that remembers",
       "slug": "ai-agent-that-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai agent that remembers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai agents examples",
@@ -823,11 +781,9 @@
     {
       "keyword": "ai ai delas alas height",
       "slug": "ai-ai-delas-alas-height",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai ai delas alas height"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai and long term memory",
@@ -848,11 +804,9 @@
     {
       "keyword": "ai app that remembers everything",
       "slug": "ai-app-that-remembers-everything",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai app that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai apps to talk to",
@@ -942,22 +896,16 @@
     {
       "keyword": "ai chat that remembers everything",
       "slug": "ai-chat-that-remembers-everything",
-      "autocomplete_matches": 3,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chat that remembers everything",
-        "ai chat that remembers everything free",
-        "best ai chat that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chat that remembers everything free",
       "slug": "ai-chat-that-remembers-everything-free",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chat that remembers everything free"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chatbot best memory",
@@ -1024,23 +972,16 @@
     {
       "keyword": "ai chatbot that remembers",
       "slug": "ai-chatbot-that-remembers",
-      "autocomplete_matches": 3,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chatbot that remembers",
-        "ai chatbot that remembers everything",
-        "best ai chatbot that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chatbot that remembers everything",
       "slug": "ai-chatbot-that-remembers-everything",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chatbot that remembers everything",
-        "best ai chatbot that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chatbot with best memory",
@@ -1158,11 +1099,9 @@
     {
       "keyword": "ai friend that remembers",
       "slug": "ai-friend-that-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai friend that remembers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai girlfriend long term memory",
@@ -1185,22 +1124,16 @@
     {
       "keyword": "ai girlfriend that remembers",
       "slug": "ai-girlfriend-that-remembers",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai girlfriend that remembers everything",
-        "best ai girlfriend that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai girlfriend that remembers everything",
       "slug": "ai-girlfriend-that-remembers-everything",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai girlfriend that remembers everything",
-        "best ai girlfriend that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai gpu memory",
@@ -1226,20 +1159,16 @@
     {
       "keyword": "ai image generator that remembers",
       "slug": "ai-image-generator-that-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai image generator that remembers characters"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai image generator that remembers characters",
       "slug": "ai-image-generator-that-remembers-characters",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai image generator that remembers characters"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai in memory",
@@ -2239,12 +2168,9 @@
     {
       "keyword": "ai necklace that remembers everything",
       "slug": "ai-necklace-that-remembers-everything",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai necklace that remembers everything",
-        "compass ai necklace that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai no memory",
@@ -2396,20 +2322,16 @@
     {
       "keyword": "ai remember app",
       "slug": "ai-remember-app",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai remember app"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai remember me",
       "slug": "ai-remember-me",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai remember me"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai systems examples",
@@ -2423,20 +2345,16 @@
     {
       "keyword": "ai that actually remembers",
       "slug": "ai-that-actually-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that actually remembers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that can remember",
       "slug": "ai-that-can-remember",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that can remember"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that keeps memory",
@@ -2448,52 +2366,37 @@
     {
       "keyword": "ai that remembers everything",
       "slug": "ai-that-remembers-everything",
-      "autocomplete_matches": 8,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers everything",
-        "ai that remembers everything free",
-        "ai that remembers everything reddit",
-        "an ai that remembers everything",
-        "best ai that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that remembers everything reddit",
       "slug": "ai-that-remembers-everything-reddit",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers everything reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that remembers past conversations",
       "slug": "ai-that-remembers-past-conversations",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers past conversations",
-        "ai that remembers past conversations reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that remembers past conversations reddit",
       "slug": "ai-that-remembers-past-conversations-reddit",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers past conversations reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that remembers you",
       "slug": "ai-that-remembers-you",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers you"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai with memory feature",
@@ -2507,25 +2410,16 @@
     {
       "keyword": "an ai that remembers",
       "slug": "an-ai-that-remembers",
-      "autocomplete_matches": 5,
-      "validated": true,
-      "matching_suggestions": [
-        "an ai that remembers",
-        "an ai that remembers everything",
-        "is there an ai that remembers all conversations",
-        "is there an ai that remembers conversations",
-        "is there an ai that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "an ai that remembers everything",
       "slug": "an-ai-that-remembers-everything",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "an ai that remembers everything",
-        "is there an ai that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "anything llm context window",
@@ -2841,14 +2735,9 @@
     {
       "keyword": "best ai that remembers",
       "slug": "best-ai-that-remembers",
-      "autocomplete_matches": 4,
-      "validated": true,
-      "matching_suggestions": [
-        "best ai that remembers",
-        "best ai that remembers conversations",
-        "best ai that remembers everything",
-        "what is the best ai that remembers everything"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai with best memory",
@@ -3143,11 +3032,9 @@
     {
       "keyword": "can you have good long term memory but bad short term memory",
       "slug": "can-you-have-good-long-term-memory-but-bad-short-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "can you have good long term memory but bad short term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "candy ai long term memory",
@@ -3330,11 +3217,9 @@
     {
       "keyword": "chronic memory issues",
       "slug": "chronic-memory-issues",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chronic memory issues"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chub ai long term memory",
@@ -3747,11 +3632,9 @@
     {
       "keyword": "do ai robots have feelings",
       "slug": "do-ai-robots-have-feelings",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "do ai robots have feelings"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "does ai have long term memory",
@@ -3885,11 +3768,9 @@
     {
       "keyword": "first husband of ai ai delas alas",
       "slug": "first-husband-of-ai-ai-delas-alas",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "first husband of ai ai delas alas"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "flipped ai chat long term memory",
@@ -3982,11 +3863,9 @@
     {
       "keyword": "graffiti ai that remembers stuff",
       "slug": "graffiti-ai-that-remembers-stuff",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        ". graffiti ai that remembers stuff"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "helping ai have long term memory",
@@ -4028,11 +3907,9 @@
     {
       "keyword": "how ai remembers",
       "slug": "how-ai-remembers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how ai remembers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how are long term memories stored in the brain",
@@ -4527,11 +4404,9 @@
     {
       "keyword": "how to make an ai self-aware",
       "slug": "how-to-make-an-ai-self-aware",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to make an ai self-aware"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to make c ai memory better",
@@ -4867,20 +4742,16 @@
     {
       "keyword": "ai that remembers chats",
       "slug": "ai-that-remembers-chats",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that remembers chats"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "anything llm persistent memory",
       "slug": "anything-llm-persistent-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "anything llm persistent memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best llm for mem0",
@@ -4914,29 +4785,23 @@
     {
       "keyword": "is ai actually intelligent",
       "slug": "is-ai-actually-intelligent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is ai actually intelligent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is ai finally closing in on human intelligence",
       "slug": "is-ai-finally-closing-in-on-human-intelligence",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is ai finally closing in on human intelligence"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is ai getting smarter",
       "slug": "is-ai-getting-smarter",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is ai getting smarter"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory icon",
@@ -4957,11 +4822,9 @@
     {
       "keyword": "is ai really ai",
       "slug": "is-ai-really-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "is ai really ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "is ai really that intelligent",
@@ -5014,10 +4877,9 @@
     {
       "keyword": "is there a limit to long term memory",
       "slug": "is-there-a-limit-to-long-term-memory",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "is there a limit to long term memory",
         "is there a limit to long term memory"
       ]
     },
@@ -6661,11 +6523,9 @@
     {
       "keyword": "long short term memory meaning",
       "slug": "long-short-term-memory-meaning",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long short term memory meaning"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term agentic memory with langgraph deeplearning ai",
@@ -6713,11 +6573,9 @@
     {
       "keyword": "long term memory better than short term",
       "slug": "long-term-memory-better-than-short-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "long term memory better than short term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "long term memory character ai",
@@ -7337,11 +7195,9 @@
     {
       "keyword": "permanent memory example",
       "slug": "permanent-memory-example",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "permanent memory example"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "permanent memory llm",
@@ -7362,21 +7218,16 @@
     {
       "keyword": "persistent memory for llm",
       "slug": "persistent-memory-for-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "persistent memory for llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "persistent memory in llm",
       "slug": "persistent-memory-in-llm",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "what is persistent memory in llm",
-        "persistent memory in llm",
-        "persistent memory in llm agents",
         "what is persistent memory in llm"
       ]
     },
@@ -7566,11 +7417,9 @@
     {
       "keyword": "the ai that remembers consequence",
       "slug": "the-ai-that-remembers-consequence",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "the ai that remembers consequence"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "top brain foods improve memory",
@@ -7666,20 +7515,16 @@
     {
       "keyword": "what ai remember previous conversations",
       "slug": "what-ai-remember-previous-conversations",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what ai remember previous conversations"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what ai remembers conversations",
       "slug": "what-ai-remembers-conversations",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what ai remembers conversations"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what are the best ai tools",
@@ -8044,11 +7889,9 @@
     {
       "keyword": "what is persistent memory",
       "slug": "what-is-persistent-memory",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "what is persistent memory in llm",
-        "what is persistent memory",
         "what is persistent memory in llm"
       ]
     },
@@ -8126,21 +7969,16 @@
     {
       "keyword": "what is the smartest ai",
       "slug": "what-is-the-smartest-ai",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the smartest ai",
-        "what is the smartest ai right now"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the smartest ai right now",
       "slug": "what-is-the-smartest-ai-right-now",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is the smartest ai right now"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is the smartest chatbot",
@@ -8232,10 +8070,9 @@
     {
       "keyword": "which is the best ai in the world",
       "slug": "which-is-the-best-ai-in-the-world",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "which is the best ai in the world",
         "which is the best ai in the world"
       ]
     },
@@ -8727,11 +8564,9 @@
     {
       "keyword": "age of ai ai delas alas",
       "slug": "age-of-ai-ai-delas-alas",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "age of ai ai delas alas"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai powered with memory agent features",
@@ -8859,11 +8694,9 @@
     {
       "keyword": "latest news about ai ai delas alas",
       "slug": "latest-news-about-ai-ai-delas-alas",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "latest news about ai ai delas alas"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory approaches",
@@ -8902,11 +8735,9 @@
     {
       "keyword": "persistent memory examples",
       "slug": "persistent-memory-examples",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "persistent memory examples"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory compression breakthrough",
@@ -9219,11 +9050,9 @@
     {
       "keyword": "github llm persistent memory",
       "slug": "github-llm-persistent-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "github llm persistent memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "google ai long term memory",
@@ -9237,11 +9066,9 @@
     {
       "keyword": "great long term memory bad short term",
       "slug": "great-long-term-memory-bad-short-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "great long term memory bad short term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to give a long term memory",
@@ -9274,11 +9101,9 @@
     {
       "keyword": "how to keep long term memory",
       "slug": "how-to-keep-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to keep long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to turn on claude ai memory",
@@ -9759,11 +9584,9 @@
     {
       "keyword": "persistent memory local llm",
       "slug": "persistent-memory-local-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "persistent memory local llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "spring ai conversational memory",
@@ -9873,11 +9696,9 @@
     {
       "keyword": "persistent memory for local llm",
       "slug": "persistent-memory-for-local-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "persistent memory for local llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "who has the best memory in the world",
@@ -10033,11 +9854,9 @@
     {
       "keyword": "ai that does not remember",
       "slug": "ai-that-does-not-remember",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that does not remember"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how brain keeps memory",
@@ -10362,11 +10181,9 @@
     {
       "keyword": "why is my short term memory better than long term",
       "slug": "why-is-my-short-term-memory-better-than-long-term",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "why is my short term memory better than long term"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     }
   ],
   "new_opportunities": [
@@ -10374,8 +10191,8 @@
   ],
   "summary": {
     "total_keywords": 1135,
-    "validated": 908,
-    "low_volume": 227,
+    "validated": 850,
+    "low_volume": 285,
     "new_opportunities_found": 1
   }
 }
