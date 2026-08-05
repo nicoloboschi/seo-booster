@@ -81,7 +81,6 @@ knowledge_base = {
 ## Load a pre-trained sentence transformer model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 ## Generate embeddings for knowledge base

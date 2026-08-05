@@ -10311,33 +10311,178 @@
       "matching_suggestions": [
         "why is my short term memory better than long term"
       ]
+    },
+    {
+      "keyword": "ai memory decay",
+      "slug": "ai-memory-decay",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory decay"
+      ]
+    },
+    {
+      "keyword": "ai memory feature",
+      "slug": "ai-memory-feature",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory feature"
+      ]
+    },
+    {
+      "keyword": "ai memory outlook",
+      "slug": "ai-memory-outlook",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory outlook"
+      ]
+    },
+    {
+      "keyword": "ai memory platform",
+      "slug": "ai-memory-platform",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory platform"
+      ]
+    },
+    {
+      "keyword": "best ai chatbot for roleplay and memory",
+      "slug": "best-ai-chatbot-for-roleplay-and-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai chatbot for roleplay and memory"
+      ]
+    },
+    {
+      "keyword": "brain \u2014 garry tan's ai memory system",
+      "slug": "brain-garry-tan-s-ai-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "brain \u2014 garry tan's ai memory system"
+      ]
+    },
+    {
+      "keyword": "google agent memory framework",
+      "slug": "google-agent-memory-framework",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google agent memory framework"
+      ]
+    },
+    {
+      "keyword": "how to add memory to chatbot",
+      "slug": "how-to-add-memory-to-chatbot",
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "how to add memory to chatbot",
+        "how to add memory to chatbot langchain"
+      ]
+    },
+    {
+      "keyword": "how to add memory to chatbot langchain",
+      "slug": "how-to-add-memory-to-chatbot-langchain",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to add memory to chatbot langchain"
+      ]
+    },
+    {
+      "keyword": "how to build a chatbot with memory",
+      "slug": "how-to-build-a-chatbot-with-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to build a chatbot with memory"
+      ]
+    },
+    {
+      "keyword": "llm context window dumb zone",
+      "slug": "llm-context-window-dumb-zone",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window dumb zone"
+      ]
+    },
+    {
+      "keyword": "llm memory breakthrough",
+      "slug": "llm-memory-breakthrough",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory breakthrough"
+      ]
+    },
+    {
+      "keyword": "llm memory types",
+      "slug": "llm-memory-types",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory types"
+      ]
+    },
+    {
+      "keyword": "most context window llm",
+      "slug": "most-context-window-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "most context window llm"
+      ]
+    },
+    {
+      "keyword": "perchance ai long term memory",
+      "slug": "perchance-ai-long-term-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "perchance ai long term memory"
+      ]
+    },
+    {
+      "keyword": "shared selective persistent memory for agentic llm systems",
+      "slug": "shared-selective-persistent-memory-for-agentic-llm-systems",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "shared selective persistent memory for agentic llm systems"
+      ]
+    },
+    {
+      "keyword": "types of long term memory in agentic ai",
+      "slug": "types-of-long-term-memory-in-agentic-ai",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "types of long term memory in agentic ai"
+      ]
+    },
+    {
+      "keyword": "what is episodic memory llm",
+      "slug": "what-is-episodic-memory-llm",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is episodic memory llm"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory decay",
-    "ai memory feature",
-    "ai memory outlook",
-    "ai memory platform",
-    "best ai chatbot for roleplay and memory",
-    "brain \u2014 garry tan's ai memory system",
-    "deepseek llm memory",
-    "google agent memory framework",
-    "how to add memory to chatbot",
-    "how to add memory to chatbot langchain",
-    "how to build a chatbot with memory",
-    "llm context window dumb zone",
-    "llm memory breakthrough",
-    "llm memory types",
-    "most context window llm",
-    "perchance ai long term memory",
-    "shared selective persistent memory for agentic llm systems",
-    "types of long term memory in agentic ai",
-    "what is episodic memory llm"
+    "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1135,
-    "validated": 880,
+    "total_keywords": 1153,
+    "validated": 898,
     "low_volume": 255,
-    "new_opportunities_found": 19
+    "new_opportunities_found": 1
   }
 }

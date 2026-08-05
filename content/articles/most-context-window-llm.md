@@ -157,7 +157,6 @@ This example illustrates conceptually how a long input string would be passed to
 
 Despite the incredible progress, LLMs with the most context window still face challenges.
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ### Computational Costs

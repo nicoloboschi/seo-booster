@@ -109,7 +109,6 @@ memory_entries = [
  "User is interested in various AI agent memory types and their applications."
 ]
 
-
 Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
 
 ## 
