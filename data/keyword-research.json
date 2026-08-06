@@ -267,20 +267,20 @@
       "ai chat good memory",
       "ai chat infinite memory",
       "ai chat long memory",
+      "ai chat memory",
       "ai chat memory extension",
+      "ai chat memory reddit",
       "ai chat permanent memory",
       "ai chatbot best memory",
       "ai chatbot for customer service",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
+      "ai chatbot memory",
+      "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "ai meeting summary",
-      "best ai chat memory",
-      "best ai chatbot memory",
-      "best ai conversation app",
-      "character ai chat memory limit",
-      "chub ai chat memory not working"
+      "best ai chat memory"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -913,22 +913,24 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 33,
+      "autocomplete_matches": 35,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
+        "ai chat memory",
         "ai chat memory extension",
-        "best ai chat memory",
-        "character ai chat memory limit",
-        "chub ai chat memory not working"
+        "ai chat memory reddit",
+        "best ai chat memory"
       ]
     },
     {
       "keyword": "ai chat memory reddit",
       "slug": "ai-chat-memory-reddit",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat memory reddit"
+      ]
     },
     {
       "keyword": "ai chat permanent memory",
@@ -1011,14 +1013,14 @@
     {
       "keyword": "ai chatbot memory",
       "slug": "ai-chatbot-memory",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 8,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory",
         "ai chatbot memory reddit",
         "best ai chatbot memory",
         "gemini ai chatbot memory feature",
-        "best ai chatbot memory"
+        "ai chatbot memory"
       ]
     },
     {
@@ -3257,11 +3259,12 @@
     {
       "keyword": "chatbot memory reddit",
       "slug": "chatbot-memory-reddit",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory reddit",
-        "chatbot memory reddit"
+        "chatbot memory reddit",
+        "ai chatbot memory reddit"
       ]
     },
     {
@@ -9717,9 +9720,11 @@
     {
       "keyword": "spring ai conversational memory",
       "slug": "spring-ai-conversational-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "spring ai conversational memory"
+      ]
     },
     {
       "keyword": "what is automatic memory management",
@@ -10476,8 +10481,8 @@
   ],
   "summary": {
     "total_keywords": 1153,
-    "validated": 896,
-    "low_volume": 257,
+    "validated": 898,
+    "low_volume": 255,
     "new_opportunities_found": 1
   }
 }
