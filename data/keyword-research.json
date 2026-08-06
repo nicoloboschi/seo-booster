@@ -913,14 +913,14 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 34,
+      "autocomplete_matches": 35,
       "validated": true,
       "matching_suggestions": [
+        "how to use janitor ai chat memory",
         "ai chat memory",
         "ai chat memory extension",
         "ai chat memory reddit",
-        "best ai chat memory",
-        "character ai chat memory limit"
+        "best ai chat memory"
       ]
     },
     {
@@ -4140,9 +4140,11 @@
     {
       "keyword": "how to clear meta ai memory",
       "slug": "how-to-clear-meta-ai-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to clear meta ai memory"
+      ]
     },
     {
       "keyword": "how to create an ai agent",
@@ -4464,9 +4466,11 @@
     {
       "keyword": "how to improve janitor ai memory",
       "slug": "how-to-improve-janitor-ai-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to improve janitor ai memory"
+      ]
     },
     {
       "keyword": "how to improve llm memory",
@@ -4594,9 +4598,11 @@
     {
       "keyword": "how to turn ai memories off on snapchat",
       "slug": "how-to-turn-ai-memories-off-on-snapchat",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to turn ai memories off on snapchat"
+      ]
     },
     {
       "keyword": "how to turn on chatgpt memory",
@@ -9208,9 +9214,11 @@
     {
       "keyword": "how to import ai memory to claude",
       "slug": "how-to-import-ai-memory-to-claude",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to import ai memory to claude"
+      ]
     },
     {
       "keyword": "how to keep long term memory",
@@ -9224,9 +9232,11 @@
     {
       "keyword": "how to turn on claude ai memory",
       "slug": "how-to-turn-on-claude-ai-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to turn on claude ai memory"
+      ]
     },
     {
       "keyword": "llm low memory",
@@ -9513,9 +9523,11 @@
     {
       "keyword": "how ai memory works",
       "slug": "how-ai-memory-works",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how ai memory works"
+      ]
     },
     {
       "keyword": "how to add memory to llm",
@@ -9527,9 +9539,11 @@
     {
       "keyword": "how to manage a memory",
       "slug": "how-to-manage-a-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to manage a memory"
+      ]
     },
     {
       "keyword": "janitor ai memory system",
@@ -10222,9 +10236,11 @@
     {
       "keyword": "how to delete meta ai memory",
       "slug": "how-to-delete-meta-ai-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to delete meta ai memory"
+      ]
     },
     {
       "keyword": "llm context window nedir",
@@ -10465,8 +10481,8 @@
   ],
   "summary": {
     "total_keywords": 1153,
-    "validated": 890,
-    "low_volume": 263,
+    "validated": 898,
+    "low_volume": 255,
     "new_opportunities_found": 1
   }
 }
