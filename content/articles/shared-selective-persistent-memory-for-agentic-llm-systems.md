@@ -144,7 +144,6 @@ results_agent1_update = collection.query(
  where={"agent_id": "agent2"}
 )
 
-
 Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
 
 print("\nAgent 1 retrieved Agent 2's update:")
