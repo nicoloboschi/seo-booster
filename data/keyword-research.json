@@ -264,6 +264,7 @@
       "ai apps to talk to",
       "ai chat best memory",
       "ai chat bot memory",
+      "ai chat good memory",
       "ai chat infinite memory",
       "ai chat long memory",
       "ai chat memory",
@@ -272,15 +273,14 @@
       "ai chat permanent memory",
       "ai chatbot best memory",
       "ai chatbot for customer service",
+      "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
       "ai chatbot memory",
       "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "ai meeting summary",
-      "best ai chat memory",
-      "best ai chatbot memory",
-      "best ai conversation app"
+      "best ai chat memory"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -318,11 +318,14 @@
       "10 million context window llm",
       "12 million context window llm",
       "1m context window local llm",
+      "anything llm context window",
+      "average llm context window",
       "best context window llm",
       "best llm with large context window",
       "big context window llm",
       "biggest context window llm",
       "biggest context window local llm",
+      "context window ai llm",
       "context window by llm",
       "context window for each llm",
       "context window for llm",
@@ -330,10 +333,7 @@
       "context window in llm",
       "context window in llm means",
       "context window in llm models",
-      "context window length llm",
-      "context window limit llm",
-      "context window llm benchmark",
-      "context window llm comparison"
+      "context window length llm"
     ],
     "mem0": [
       "best llm for mem0",
@@ -886,9 +886,11 @@
     {
       "keyword": "ai chat good memory",
       "slug": "ai-chat-good-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai chat good memory"
+      ]
     },
     {
       "keyword": "ai chat infinite memory",
@@ -911,14 +913,14 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 33,
+      "autocomplete_matches": 34,
       "validated": true,
       "matching_suggestions": [
-        "how to use janitor ai chat memory",
         "ai chat memory",
         "ai chat memory extension",
         "ai chat memory reddit",
-        "best ai chat memory"
+        "best ai chat memory",
+        "character ai chat memory limit"
       ]
     },
     {
@@ -981,9 +983,10 @@
     {
       "keyword": "ai chatbot good memory",
       "slug": "ai-chatbot-good-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot good memory",
         "ai chatbot good memory"
       ]
     },
@@ -2521,16 +2524,20 @@
     {
       "keyword": "anything llm context window",
       "slug": "anything-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "anything llm context window"
+      ]
     },
     {
       "keyword": "average llm context window",
       "slug": "average-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "average llm context window"
+      ]
     },
     {
       "keyword": "azure ai agent service memory",
@@ -3353,9 +3360,11 @@
     {
       "keyword": "context window ai llm",
       "slug": "context-window-ai-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window ai llm"
+      ]
     },
     {
       "keyword": "context window by llm",
@@ -3542,10 +3551,12 @@
     {
       "keyword": "context window of an llm",
       "slug": "context-window-of-an-llm",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
-        "the context window of an llm fundamentally limits"
+        "context window of an llm",
+        "the context window of an llm fundamentally limits",
+        "the context window of an llm refers to"
       ]
     },
     {
@@ -3796,9 +3807,11 @@
     {
       "keyword": "effective context window llm",
       "slug": "effective-context-window-llm",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "effective context window llm"
+      ]
     },
     {
       "keyword": "embedded memory meaning",
@@ -4127,11 +4140,9 @@
     {
       "keyword": "how to clear meta ai memory",
       "slug": "how-to-clear-meta-ai-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to clear meta ai memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to create an ai agent",
@@ -4453,11 +4464,9 @@
     {
       "keyword": "how to improve janitor ai memory",
       "slug": "how-to-improve-janitor-ai-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to improve janitor ai memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to improve llm memory",
@@ -4585,11 +4594,9 @@
     {
       "keyword": "how to turn ai memories off on snapchat",
       "slug": "how-to-turn-ai-memories-off-on-snapchat",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to turn ai memories off on snapchat"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to turn on chatgpt memory",
@@ -5185,9 +5192,11 @@
     {
       "keyword": "llm arena context window",
       "slug": "llm-arena-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm arena context window"
+      ]
     },
     {
       "keyword": "llm based memory",
@@ -5226,16 +5235,20 @@
     {
       "keyword": "llm context window accuracy",
       "slug": "llm-context-window-accuracy",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window accuracy"
+      ]
     },
     {
       "keyword": "llm context window architecture",
       "slug": "llm-context-window-architecture",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window architecture"
+      ]
     },
     {
       "keyword": "llm context window arxiv",
@@ -5247,9 +5260,11 @@
     {
       "keyword": "llm context window attention",
       "slug": "llm-context-window-attention",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window attention"
+      ]
     },
     {
       "keyword": "llm context window calculator",
@@ -5344,16 +5359,20 @@
     {
       "keyword": "llm context window evolution",
       "slug": "llm-context-window-evolution",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window evolution"
+      ]
     },
     {
       "keyword": "llm context window extension",
       "slug": "llm-context-window-extension",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window extension"
+      ]
     },
     {
       "keyword": "llm context window for coding",
@@ -8891,9 +8910,11 @@
     {
       "keyword": "extend llm context window",
       "slug": "extend-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "extend llm context window"
+      ]
     },
     {
       "keyword": "llm decode memory bound",
@@ -9187,11 +9208,9 @@
     {
       "keyword": "how to import ai memory to claude",
       "slug": "how-to-import-ai-memory-to-claude",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to import ai memory to claude"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to keep long term memory",
@@ -9205,11 +9224,9 @@
     {
       "keyword": "how to turn on claude ai memory",
       "slug": "how-to-turn-on-claude-ai-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to turn on claude ai memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm low memory",
@@ -9496,11 +9513,9 @@
     {
       "keyword": "how ai memory works",
       "slug": "how-ai-memory-works",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how ai memory works"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to add memory to llm",
@@ -9512,11 +9527,9 @@
     {
       "keyword": "how to manage a memory",
       "slug": "how-to-manage-a-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to manage a memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "janitor ai memory system",
@@ -10209,11 +10222,9 @@
     {
       "keyword": "how to delete meta ai memory",
       "slug": "how-to-delete-meta-ai-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to delete meta ai memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window nedir",
@@ -10454,8 +10465,8 @@
   ],
   "summary": {
     "total_keywords": 1153,
-    "validated": 886,
-    "low_volume": 267,
+    "validated": 890,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
