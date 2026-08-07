@@ -162,6 +162,7 @@
       "permanent memory example",
       "persistent memory for llm",
       "persistent memory for local llm",
+      "persistent memory in llm",
       "persistent memory in llm agents",
       "persistent memory local llm",
       "shared selective persistent memory for agentic llm systems",
@@ -225,7 +226,6 @@
     ],
     "chatbot memory": [
       "ai chatbot best memory",
-      "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
       "ai chatbot memory",
@@ -243,7 +243,8 @@
       "chatbot for customer support",
       "chatbot is an example of",
       "chatbot memory architecture",
-      "chatbot memory github"
+      "chatbot memory github",
+      "chatbot memory langchain"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -335,6 +336,18 @@
       "context window length llm"
     ],
     "mem0": [
+      "best llm for mem0",
+      "best model for mem0",
+      "how to install mem0",
+      "how to memo a check",
+      "how to memo a component",
+      "how to memo component react",
+      "how to memo fast",
+      "how to memo faster",
+      "how to memo format",
+      "how to memo record on iphone",
+      "how to memo writing",
+      "how to use mem0",
       "mem0 agent",
       "mem0 agent memory",
       "mem0 ai",
@@ -342,19 +355,7 @@
       "mem0 alternative open source",
       "mem0 alternatives",
       "mem0 api",
-      "mem0 api key",
-      "mem0 architecture",
-      "mem0 arxiv",
-      "mem0 bangalore",
-      "mem0 bangalore office",
-      "mem0 bedrock",
-      "mem0 benchmark",
-      "mem0 best practices",
-      "mem0 blogs",
-      "mem0 bm25",
-      "mem0 browser extension",
-      "mem0 building production ready",
-      "mem0 building production-ready ai agents"
+      "mem0 api key"
     ],
     "zep memory": [
       "is zep cleaner safe",
@@ -379,6 +380,7 @@
       "zep contact cleaner"
     ],
     "letta memgpt": [
+      "klem in engels",
       "letta ai memgpt",
       "letta ex memgpt",
       "letta formerly memgpt",
@@ -406,7 +408,7 @@
     {
       "keyword": "ai that remembers conversations",
       "slug": "ai-that-remembers-conversations",
-      "autocomplete_matches": 12,
+      "autocomplete_matches": 10,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers conversations",
@@ -981,10 +983,9 @@
     {
       "keyword": "ai chatbot good memory",
       "slug": "ai-chatbot-good-memory",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai chatbot good memory",
         "ai chatbot good memory"
       ]
     },
@@ -4855,9 +4856,11 @@
     {
       "keyword": "best llm for mem0",
       "slug": "best-llm-for-mem0",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best llm for mem0"
+      ]
     },
     {
       "keyword": "best memory system for ai",
@@ -5075,11 +5078,9 @@
     {
       "keyword": "langchain chatbot with memory github",
       "slug": "langchain-chatbot-with-memory-github",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "langchain chatbot with memory github"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "langgraph chatbot with memory example",
@@ -5091,11 +5092,9 @@
     {
       "keyword": "langgraph chatbot with memory github",
       "slug": "langgraph-chatbot-with-memory-github",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "langgraph chatbot with memory github"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "large context window llm",
@@ -7338,10 +7337,11 @@
     {
       "keyword": "persistent memory in llm",
       "slug": "persistent-memory-in-llm",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 4,
       "validated": true,
       "matching_suggestions": [
         "what is persistent memory in llm",
+        "persistent memory in llm",
         "persistent memory in llm agents",
         "what is persistent memory in llm"
       ]
@@ -10534,8 +10534,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 898,
-    "low_volume": 263,
+    "validated": 897,
+    "low_volume": 264,
     "new_opportunities_found": 1
   }
 }
