@@ -10474,22 +10474,64 @@
       "matching_suggestions": [
         "what is episodic memory llm"
       ]
+    },
+    {
+      "keyword": "context window llm l\u00e0 g\u00ec",
+      "slug": "context-window-llm-l-g",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "gemma llm context window",
+      "slug": "gemma-llm-context-window",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "google llm context window",
+      "slug": "google-llm-context-window",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "llm context window gemini",
+      "slug": "llm-context-window-gemini",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "llm context window gpt 4o",
+      "slug": "llm-context-window-gpt-4o",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "llm context window graph",
+      "slug": "llm-context-window-graph",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
+    },
+    {
+      "keyword": "llm context window growth",
+      "slug": "llm-context-window-growth",
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     }
   ],
   "new_opportunities": [
-    "context window llm l\u00e0 g\u00ec",
-    "deepseek llm memory",
-    "gemma llm context window",
-    "google llm context window",
-    "llm context window gemini",
-    "llm context window gpt 4o",
-    "llm context window graph",
-    "llm context window growth"
+    "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1153,
+    "total_keywords": 1160,
     "validated": 898,
-    "low_volume": 255,
-    "new_opportunities_found": 8
+    "low_volume": 262,
+    "new_opportunities_found": 1
   }
 }
