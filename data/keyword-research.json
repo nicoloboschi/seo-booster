@@ -226,6 +226,7 @@
     ],
     "chatbot memory": [
       "ai chatbot best memory",
+      "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
       "ai chatbot memory",
@@ -243,8 +244,7 @@
       "chatbot for customer support",
       "chatbot is an example of",
       "chatbot memory architecture",
-      "chatbot memory github",
-      "chatbot memory langchain"
+      "chatbot memory github"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -408,7 +408,7 @@
     {
       "keyword": "ai that remembers conversations",
       "slug": "ai-that-remembers-conversations",
-      "autocomplete_matches": 10,
+      "autocomplete_matches": 12,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers conversations",
@@ -983,9 +983,10 @@
     {
       "keyword": "ai chatbot good memory",
       "slug": "ai-chatbot-good-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot good memory",
         "ai chatbot good memory"
       ]
     },
@@ -5078,9 +5079,11 @@
     {
       "keyword": "langchain chatbot with memory github",
       "slug": "langchain-chatbot-with-memory-github",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "langchain chatbot with memory github"
+      ]
     },
     {
       "keyword": "langgraph chatbot with memory example",
@@ -5092,9 +5095,11 @@
     {
       "keyword": "langgraph chatbot with memory github",
       "slug": "langgraph-chatbot-with-memory-github",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "langgraph chatbot with memory github"
+      ]
     },
     {
       "keyword": "large context window llm",
@@ -10534,8 +10539,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 897,
-    "low_volume": 264,
+    "validated": 899,
+    "low_volume": 262,
     "new_opportunities_found": 1
   }
 }
