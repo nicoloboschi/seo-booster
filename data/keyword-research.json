@@ -10477,12 +10477,19 @@
     }
   ],
   "new_opportunities": [
-    "deepseek llm memory"
+    "context window llm l\u00e0 g\u00ec",
+    "deepseek llm memory",
+    "gemma llm context window",
+    "google llm context window",
+    "llm context window gemini",
+    "llm context window gpt 4o",
+    "llm context window graph",
+    "llm context window growth"
   ],
   "summary": {
     "total_keywords": 1153,
     "validated": 898,
     "low_volume": 255,
-    "new_opportunities_found": 1
+    "new_opportunities_found": 8
   }
 }
