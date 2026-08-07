@@ -162,7 +162,6 @@
       "permanent memory example",
       "persistent memory for llm",
       "persistent memory for local llm",
-      "persistent memory in llm",
       "persistent memory in llm agents",
       "persistent memory local llm",
       "shared selective persistent memory for agentic llm systems",
@@ -336,18 +335,6 @@
       "context window length llm"
     ],
     "mem0": [
-      "best llm for mem0",
-      "best model for mem0",
-      "how to install mem0",
-      "how to memo a check",
-      "how to memo a component",
-      "how to memo component react",
-      "how to memo fast",
-      "how to memo faster",
-      "how to memo format",
-      "how to memo record on iphone",
-      "how to memo writing",
-      "how to use mem0",
       "mem0 agent",
       "mem0 agent memory",
       "mem0 ai",
@@ -355,7 +342,19 @@
       "mem0 alternative open source",
       "mem0 alternatives",
       "mem0 api",
-      "mem0 api key"
+      "mem0 api key",
+      "mem0 architecture",
+      "mem0 arxiv",
+      "mem0 bangalore",
+      "mem0 bangalore office",
+      "mem0 bedrock",
+      "mem0 benchmark",
+      "mem0 best practices",
+      "mem0 blogs",
+      "mem0 bm25",
+      "mem0 browser extension",
+      "mem0 building production ready",
+      "mem0 building production-ready ai agents"
     ],
     "zep memory": [
       "is zep cleaner safe",
@@ -380,7 +379,6 @@
       "zep contact cleaner"
     ],
     "letta memgpt": [
-      "klem in engels",
       "letta ai memgpt",
       "letta ex memgpt",
       "letta formerly memgpt",
@@ -4857,11 +4855,9 @@
     {
       "keyword": "best llm for mem0",
       "slug": "best-llm-for-mem0",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "best llm for mem0"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best memory system for ai",
@@ -7342,11 +7338,10 @@
     {
       "keyword": "persistent memory in llm",
       "slug": "persistent-memory-in-llm",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 3,
       "validated": true,
       "matching_suggestions": [
         "what is persistent memory in llm",
-        "persistent memory in llm",
         "persistent memory in llm agents",
         "what is persistent memory in llm"
       ]
@@ -10539,8 +10534,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 899,
-    "low_volume": 262,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
