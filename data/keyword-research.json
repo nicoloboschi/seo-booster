@@ -231,7 +231,10 @@
       "ai chatbot long memory",
       "ai chatbot memory",
       "ai chatbot memory reddit",
+      "ai chatbot with memory free",
+      "best ai chatbot for memory",
       "best ai chatbot memory",
+      "best chatbot for memory",
       "best chatbot memory",
       "bot in memory meadow",
       "bot memory janitor ai",
@@ -241,10 +244,7 @@
       "chatbot for customer support",
       "chatbot is an example of",
       "chatbot memory architecture",
-      "chatbot memory github",
-      "chatbot memory langchain",
-      "chatbot memory management",
-      "chatbot memory reddit"
+      "chatbot memory github"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -408,14 +408,14 @@
     {
       "keyword": "ai that remembers conversations",
       "slug": "ai-that-remembers-conversations",
-      "autocomplete_matches": 11,
+      "autocomplete_matches": 12,
       "validated": true,
       "matching_suggestions": [
         "ai that remembers conversations",
         "best ai that remembers conversations",
         "free ai that remembers conversations",
         "is there an ai that remembers conversations",
-        "chatbot with memory langgraph"
+        "ai chatbot with memory free"
       ]
     },
     {
@@ -1013,14 +1013,14 @@
     {
       "keyword": "ai chatbot memory",
       "slug": "ai-chatbot-memory",
-      "autocomplete_matches": 7,
+      "autocomplete_matches": 8,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory",
         "ai chatbot memory reddit",
         "best ai chatbot memory",
-        "ai chatbot memory",
-        "ai chatbot memory reddit"
+        "gemini ai chatbot memory feature",
+        "ai chatbot memory"
       ]
     },
     {
@@ -1057,9 +1057,10 @@
     {
       "keyword": "ai chatbot with memory free",
       "slug": "ai-chatbot-with-memory-free",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot with memory free",
         "ai chatbot with memory free"
       ]
     },
@@ -2668,9 +2669,10 @@
     {
       "keyword": "best ai chatbot for memory",
       "slug": "best-ai-chatbot-for-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "best ai chatbot for memory",
         "best ai chatbot for memory"
       ]
     },
@@ -2894,9 +2896,11 @@
     {
       "keyword": "best chatbot for memory",
       "slug": "best-chatbot-for-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best chatbot for memory"
+      ]
     },
     {
       "keyword": "best chatbot memory",
@@ -7039,9 +7043,11 @@
     {
       "keyword": "memory for chatbot",
       "slug": "memory-for-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory for chatbot"
+      ]
     },
     {
       "keyword": "memory in ai agent n8n",
@@ -10517,16 +10523,24 @@
       "autocomplete_matches": 0,
       "validated": false,
       "matching_suggestions": []
+    },
+    {
+      "keyword": "claude ai memory import",
+      "slug": "claude-ai-memory-import",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "claude ai memory import"
+      ]
     }
   ],
   "new_opportunities": [
-    "claude ai memory import",
     "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1160,
-    "validated": 896,
-    "low_volume": 264,
-    "new_opportunities_found": 2
+    "total_keywords": 1161,
+    "validated": 899,
+    "low_volume": 262,
+    "new_opportunities_found": 1
   }
 }
