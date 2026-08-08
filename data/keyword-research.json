@@ -170,6 +170,7 @@
       "what is persistent memory in llm"
     ],
     "rag vs memory": [
+      "is memory cloth real",
       "memory card vs ram",
       "rag and bone review",
       "rag review",
@@ -179,6 +180,9 @@
       "rag vs memory bank",
       "rag vs ram",
       "what is memory cloth",
+      "what is memory fabric",
+      "what is rag memory",
+      "what is the best type of memory",
       "why use redis instead of memory"
     ],
     "ai memory system": [
@@ -3562,13 +3566,14 @@
     {
       "keyword": "context window of llm",
       "slug": "context-window-of-llm",
-      "autocomplete_matches": 4,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
         "context window of llm",
         "context window of llm models",
         "how to extend context window of llm",
-        "how to increase context window of llm"
+        "how to increase context window of llm",
+        "how to increase context window of llm ollama"
       ]
     },
     {
@@ -4971,9 +4976,11 @@
     {
       "keyword": "is memory cloth real",
       "slug": "is-memory-cloth-real",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "is memory cloth real"
+      ]
     },
     {
       "keyword": "is there a limit to long term memory",
@@ -5503,9 +5510,11 @@
     {
       "keyword": "llm from distance",
       "slug": "llm-from-distance",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm from distance"
+      ]
     },
     {
       "keyword": "llm gpu memory",
@@ -7963,9 +7972,11 @@
     {
       "keyword": "what is memory fabric",
       "slug": "what-is-memory-fabric",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is memory fabric"
+      ]
     },
     {
       "keyword": "what is memory system",
@@ -8006,9 +8017,11 @@
     {
       "keyword": "what is rag memory",
       "slug": "what-is-rag-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is rag memory"
+      ]
     },
     {
       "keyword": "what is role of memory in agentic ai system",
@@ -8059,9 +8072,11 @@
     {
       "keyword": "what is the best type of memory",
       "slug": "what-is-the-best-type-of-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "what is the best type of memory"
+      ]
     },
     {
       "keyword": "what is the purpose of an llm",
@@ -8829,9 +8844,11 @@
     {
       "keyword": "llm programs law",
       "slug": "llm-programs-law",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm programs law"
+      ]
     },
     {
       "keyword": "memory learning ai",
@@ -10519,8 +10536,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 892,
-    "low_volume": 269,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
