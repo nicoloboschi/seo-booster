@@ -52,7 +52,6 @@
       "ai in memory",
       "ai infinite memory",
       "ai killing ram",
-      "ai killing ram prices",
       "ai memory agent",
       "ai memory akita",
       "ai memory and context",
@@ -64,7 +63,8 @@
       "ai memory assistant",
       "ai memory bank",
       "ai memory benchmarks",
-      "ai memory book"
+      "ai memory book",
+      "ai memory book generator"
     ],
     "best ai memory": [
       "ai agent memory best practices",
@@ -611,14 +611,14 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 12,
+      "autocomplete_matches": 13,
       "validated": true,
       "matching_suggestions": [
         "example of limited memory ai",
         "limited memory ai",
+        "limited memory ai kya hai",
         "limited memory ai examples",
-        "example of limited memory ai",
-        "limited memory ai system"
+        "example of limited memory ai"
       ]
     },
     {
@@ -1269,21 +1269,18 @@
     {
       "keyword": "ai killing ram",
       "slug": "ai-killing-ram",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai killing ram",
-        "ai killing ram prices"
+        "ai killing ram"
       ]
     },
     {
       "keyword": "ai killing ram prices",
       "slug": "ai-killing-ram-prices",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai killing ram prices"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai long term memory github",
@@ -10539,8 +10536,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 899,
-    "low_volume": 262,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
