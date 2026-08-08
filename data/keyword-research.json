@@ -7255,11 +7255,9 @@
     {
       "keyword": "open ai long term memory",
       "slug": "open-ai-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "open ai long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "open source agent memory framework",
@@ -8141,11 +8139,9 @@
     {
       "keyword": "where is long term memory in the brain",
       "slug": "where-is-long-term-memory-in-the-brain",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "where is long term memory in the brain"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "which ai chatbot has memory",
@@ -10536,8 +10532,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 898,
-    "low_volume": 263,
+    "validated": 896,
+    "low_volume": 265,
     "new_opportunities_found": 1
   }
 }
