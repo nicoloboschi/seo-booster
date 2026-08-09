@@ -1504,10 +1504,11 @@
     {
       "keyword": "ai memory chips",
       "slug": "ai-memory-chips",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
-        "ai memory chips"
+        "ai memory chips",
+        "best ai memory chips"
       ]
     },
     {
@@ -2704,9 +2705,11 @@
     {
       "keyword": "best ai companion memory",
       "slug": "best-ai-companion-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai companion memory"
+      ]
     },
     {
       "keyword": "best ai conversation app",
@@ -3009,16 +3012,21 @@
     {
       "keyword": "best memory ai chatbot",
       "slug": "best-memory-ai-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory ai chatbot",
+        "best memory ai chatbot reddit"
+      ]
     },
     {
       "keyword": "best memory ai chatbot reddit",
       "slug": "best-memory-ai-chatbot-reddit",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best memory ai chatbot reddit"
+      ]
     },
     {
       "keyword": "best memory for ai agent n8n",
@@ -3930,16 +3938,21 @@
     {
       "keyword": "good memory ai chat",
       "slug": "good-memory-ai-chat",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "good memory ai chat",
+        "good memory ai chatbot"
+      ]
     },
     {
       "keyword": "good memory ai chatbot",
       "slug": "good-memory-ai-chatbot",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "good memory ai chatbot"
+      ]
     },
     {
       "keyword": "google long term memory ai",
@@ -10184,9 +10197,11 @@
     {
       "keyword": "best ai memory chat",
       "slug": "best-ai-memory-chat",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "best ai memory chat"
+      ]
     },
     {
       "keyword": "does ai agent has memory",
@@ -10521,8 +10536,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 892,
-    "low_volume": 269,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
