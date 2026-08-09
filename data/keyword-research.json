@@ -101,14 +101,14 @@
       "dify llm memory",
       "dify llm node memory",
       "do you need llb for llm",
-      "does llm have memory",
       "does llm make you a lawyer",
       "how llm memory works",
       "how to build llm memory",
       "how to calculate llm memory usage",
       "how to give llm long term memory",
       "how to give llm memory",
-      "how to give local llm memory"
+      "how to give local llm memory",
+      "how to implement llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -395,7 +395,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 217,
+      "autocomplete_matches": 216,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -3779,11 +3779,9 @@
     {
       "keyword": "does llm have memory",
       "slug": "does-llm-have-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "does llm have memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "does llm make you a lawyer",
@@ -5220,11 +5218,9 @@
     {
       "keyword": "llm chat history memory",
       "slug": "llm-chat-history-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm chat history memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm chatbot memory",
@@ -5577,29 +5573,23 @@
     {
       "keyword": "llm has memory",
       "slug": "llm-has-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm has memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm hierarchical memory",
       "slug": "llm-hierarchical-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm hierarchical memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm history memory",
       "slug": "llm-history-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm history memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm in memory",
@@ -8883,11 +8873,9 @@
     {
       "keyword": "llm human memory",
       "slug": "llm-human-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm human memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory map",
@@ -9642,11 +9630,9 @@
     {
       "keyword": "llm memory hierarchy",
       "slug": "llm-memory-hierarchy",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory hierarchy"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory name",
@@ -9971,11 +9957,9 @@
     {
       "keyword": "llm holographic memory",
       "slug": "llm-holographic-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm holographic memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai that does not remember",
@@ -10536,8 +10520,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 898,
-    "low_volume": 263,
+    "validated": 890,
+    "low_volume": 271,
     "new_opportunities_found": 1
   }
 }
