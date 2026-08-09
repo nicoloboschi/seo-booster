@@ -256,9 +256,7 @@
       "microsoft agent framework memory management",
       "ms agent framework memory",
       "open source agent memory framework",
-      "reasoningbank llm agent memory framework",
-      "what are the models of memory",
-      "what is fram memory"
+      "reasoningbank llm agent memory framework"
     ],
     "ai conversation memory": [
       "ai apps to talk to",
@@ -7668,11 +7666,9 @@
     {
       "keyword": "what are the models of memory",
       "slug": "what-are-the-models-of-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what are the models of memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what data does ai collect",
@@ -7872,11 +7868,9 @@
     {
       "keyword": "what is fram memory",
       "slug": "what-is-fram-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is fram memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is in memory vector database",
@@ -10536,8 +10530,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 898,
-    "low_volume": 263,
+    "validated": 896,
+    "low_volume": 265,
     "new_opportunities_found": 1
   }
 }
