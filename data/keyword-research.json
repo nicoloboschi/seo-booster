@@ -26,6 +26,7 @@
       "agent memory in ai",
       "agent memory why your ai has amnesia and how to fix it",
       "ai agent and memory",
+      "ai agent chat memory",
       "ai agent episodic memory",
       "ai agent long term memory",
       "ai agent memory api",
@@ -33,6 +34,7 @@
       "ai agent memory bank",
       "ai agent memory benchmark",
       "ai agent memory best practices",
+      "ai agent memory context",
       "ai agent memory database",
       "ai agent memory db",
       "ai agent memory design",
@@ -40,9 +42,7 @@
       "ai agent memory framework",
       "ai agent memory github",
       "ai agent memory graph",
-      "ai agent memory helps in",
-      "ai agent memory implementation",
-      "ai agent memory improvement techniques"
+      "ai agent memory helps in"
     ],
     "ai memory": [
       "ai agent memory knowledge graph",
@@ -395,7 +395,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 213,
+      "autocomplete_matches": 217,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -738,9 +738,12 @@
     {
       "keyword": "ai agent chat memory",
       "slug": "ai-agent-chat-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 2,
+      "validated": true,
+      "matching_suggestions": [
+        "ai agent chat memory",
+        "n8n ai agent chat memory"
+      ]
     },
     {
       "keyword": "ai agent chatbot long term memory note storage telegram",
@@ -4209,9 +4212,11 @@
     {
       "keyword": "ai coding agent memory",
       "slug": "ai-coding-agent-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai coding agent memory"
+      ]
     },
     {
       "keyword": "ai girl memory",
@@ -7173,9 +7178,11 @@
     {
       "keyword": "n8n ai agent clear memory",
       "slug": "n8n-ai-agent-clear-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "n8n ai agent clear memory"
+      ]
     },
     {
       "keyword": "n8n ai agent node memory",
@@ -10529,8 +10536,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 895,
-    "low_volume": 266,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
