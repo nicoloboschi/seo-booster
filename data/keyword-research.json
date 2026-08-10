@@ -305,13 +305,13 @@
       "in memory vector database rust",
       "in memory vector database spring ai",
       "kernel memory vector database",
+      "memorydb vector database",
       "python vector database in memory",
       "vector database for llm memory",
       "vector database for memory",
       "vector database in memory",
       "vector database llm memory",
-      "vector database long term memory",
-      "what is in memory database"
+      "vector database long term memory"
     ],
     "context window llm": [
       "1 million context window llm",
@@ -7132,9 +7132,11 @@
     {
       "keyword": "memorydb vector database",
       "slug": "memorydb-vector-database",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memorydb vector database"
+      ]
     },
     {
       "keyword": "microsoft agent framework memory",
@@ -7591,9 +7593,11 @@
     {
       "keyword": "vector database memory requirements",
       "slug": "vector-database-memory-requirements",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "vector database memory requirements"
+      ]
     },
     {
       "keyword": "vertex ai agent engine memory",
@@ -10532,8 +10536,8 @@
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 896,
-    "low_volume": 265,
+    "validated": 898,
+    "low_volume": 263,
     "new_opportunities_found": 1
   }
 }
