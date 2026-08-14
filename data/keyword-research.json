@@ -99,6 +99,7 @@
       "building llm memory from scratch",
       "deepseek llm memory",
       "dify llm memory",
+      "dify llm node memory",
       "do you need llb for llm",
       "does llm have memory",
       "does llm make you a lawyer",
@@ -107,8 +108,7 @@
       "how to calculate llm memory usage",
       "how to give llm long term memory",
       "how to give llm memory",
-      "how to give local llm memory",
-      "how to implement llm memory"
+      "how to give local llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -224,7 +224,6 @@
       "what is limited memory ai"
     ],
     "chatbot memory": [
-      "ai chatbot best memory",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
@@ -243,7 +242,8 @@
       "chatbot for customer support",
       "chatbot is an example of",
       "chatbot memory architecture",
-      "chatbot memory github"
+      "chatbot memory github",
+      "chatbot memory langchain"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -379,6 +379,7 @@
       "zep contact cleaner"
     ],
     "letta memgpt": [
+      "klem in engels",
       "letta ai memgpt",
       "letta ex memgpt",
       "letta formerly memgpt",
@@ -393,7 +394,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 212,
+      "autocomplete_matches": 217,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -962,10 +963,9 @@
     {
       "keyword": "ai chatbot best memory",
       "slug": "ai-chatbot-best-memory",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai chatbot best memory",
         "ai chatbot best memory"
       ]
     },
@@ -3267,11 +3267,9 @@
     {
       "keyword": "chatbot with best memory reddit",
       "slug": "chatbot-with-best-memory-reddit",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chatbot with best memory reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chatbot with longest memory",
@@ -3718,9 +3716,11 @@
     {
       "keyword": "dify llm node memory",
       "slug": "dify-llm-node-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "dify llm node memory"
+      ]
     },
     {
       "keyword": "do ai agents have memory",
@@ -6336,23 +6336,29 @@
     {
       "keyword": "llm memory n8n",
       "slug": "llm-memory-n8n",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory n8n"
+      ]
     },
     {
       "keyword": "llm memory needed",
       "slug": "llm-memory-needed",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory needed"
+      ]
     },
     {
       "keyword": "llm memory network",
       "slug": "llm-memory-network",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory network"
+      ]
     },
     {
       "keyword": "llm memory offloading",
@@ -6494,9 +6500,11 @@
     {
       "keyword": "llm native memory",
       "slug": "llm-native-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm native memory"
+      ]
     },
     {
       "keyword": "llm no memory",
@@ -6552,9 +6560,11 @@
     {
       "keyword": "llm ram needed",
       "slug": "llm-ram-needed",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm ram needed"
+      ]
     },
     {
       "keyword": "llm ram offload",
@@ -6573,9 +6583,11 @@
     {
       "keyword": "llm vision memory not working",
       "slug": "llm-vision-memory-not-working",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm vision memory not working"
+      ]
     },
     {
       "keyword": "llm with most context window",
@@ -7107,9 +7119,11 @@
     {
       "keyword": "memory system in ai",
       "slug": "memory-system-in-ai",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "memory system in ai"
+      ]
     },
     {
       "keyword": "memorydb vector database",
@@ -7212,9 +7226,11 @@
     {
       "keyword": "neo4j llm memory",
       "slug": "neo4j-llm-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "neo4j llm memory"
+      ]
     },
     {
       "keyword": "notebooklm context window",
@@ -7331,9 +7347,11 @@
     {
       "keyword": "pydantic ai long term memory",
       "slug": "pydantic-ai-long-term-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "pydantic ai long term memory"
+      ]
     },
     {
       "keyword": "python vector database in memory",
@@ -8578,11 +8596,9 @@
     {
       "keyword": "zep memory management",
       "slug": "zep-memory-management",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "zep memory management"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "zep memory mcp",
@@ -8641,11 +8657,9 @@
     {
       "keyword": "zep memory vs mem0",
       "slug": "zep-memory-vs-mem0",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "zep memory vs mem0"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "zep the memory foundation for your ai stack",
@@ -9622,9 +9636,11 @@
     {
       "keyword": "llm memory name",
       "slug": "llm-memory-name",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm memory name"
+      ]
     },
     {
       "keyword": "llm memory provider",
@@ -9638,9 +9654,11 @@
     {
       "keyword": "llm need ram",
       "slug": "llm-need-ram",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm need ram"
+      ]
     },
     {
       "keyword": "llm with 2 million context window",
@@ -10404,9 +10422,11 @@
     {
       "keyword": "perchance ai long term memory",
       "slug": "perchance-ai-long-term-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "perchance ai long term memory"
+      ]
     },
     {
       "keyword": "shared selective persistent memory for agentic llm systems",
@@ -10436,65 +10456,51 @@
     {
       "keyword": "context window llm l\u00e0 g\u00ec",
       "slug": "context-window-llm-l-g",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window llm l\u00e0 g\u00ec"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "gemma llm context window",
       "slug": "gemma-llm-context-window",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "gemma llm context window"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "google llm context window",
       "slug": "google-llm-context-window",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "google llm context window"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window gemini",
       "slug": "llm-context-window-gemini",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window gemini"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window gpt 4o",
       "slug": "llm-context-window-gpt-4o",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window gpt 4o"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window graph",
       "slug": "llm-context-window-graph",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window graph"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window growth",
       "slug": "llm-context-window-growth",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window growth"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "claude ai memory import",
@@ -10572,8 +10578,8 @@
   ],
   "summary": {
     "total_keywords": 1168,
-    "validated": 893,
-    "low_volume": 275,
+    "validated": 896,
+    "low_volume": 272,
     "new_opportunities_found": 1
   }
 }
