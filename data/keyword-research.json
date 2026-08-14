@@ -47,7 +47,6 @@
     "ai memory": [
       "ai agent memory knowledge graph",
       "ai and memory wall",
-      "ai for memory",
       "ai foundry memory",
       "ai in memory",
       "ai infinite memory",
@@ -64,7 +63,8 @@
       "ai memory bank",
       "ai memory benchmarks",
       "ai memory book",
-      "ai memory book generator"
+      "ai memory book generator",
+      "ai memory boom market trends"
     ],
     "best ai memory": [
       "ai agent memory best practices",
@@ -152,7 +152,7 @@
       "ai remember me",
       "ai that actually remembers",
       "ai that can remember",
-      "ai that does not remember"
+      "ai that remembers chats"
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
@@ -165,7 +165,6 @@
       "persistent memory in llm",
       "persistent memory in llm agents",
       "persistent memory local llm",
-      "shared selective persistent memory for agentic llm systems",
       "what is persistent memory",
       "what is persistent memory in llm"
     ],
@@ -196,6 +195,7 @@
       "ai memory systems",
       "ai systems examples",
       "best ai memory system",
+      "best ai memory system reddit",
       "best memory system for ai",
       "best memory system for ai agent",
       "best memory system for ai agents",
@@ -204,8 +204,7 @@
       "central memory vs effector memory",
       "character ai memory system",
       "example of limited memory ai",
-      "how brain keeps memory",
-      "how does perplexity's brain ai memory system function"
+      "how brain keeps memory"
     ],
     "give ai memory": [
       "example of limited memory ai",
@@ -380,7 +379,6 @@
       "zep contact cleaner"
     ],
     "letta memgpt": [
-      "klem in engels",
       "letta ai memgpt",
       "letta ex memgpt",
       "letta formerly memgpt",
@@ -509,7 +507,7 @@
     {
       "keyword": "best ai memory system",
       "slug": "best-ai-memory-systems",
-      "autocomplete_matches": 5,
+      "autocomplete_matches": 6,
       "validated": true,
       "matching_suggestions": [
         "best ai agent memory",
@@ -1114,14 +1112,14 @@
     {
       "keyword": "ai for memory",
       "slug": "ai-for-memory",
-      "autocomplete_matches": 6,
+      "autocomplete_matches": 5,
       "validated": true,
       "matching_suggestions": [
-        "ai for memory",
         "best ai for memory",
         "best ai for memory reddit",
         "best ai for memory retention",
-        "best character ai for memory"
+        "best character ai for memory",
+        "best free ai for memory"
       ]
     },
     {
@@ -1653,7 +1651,7 @@
         "ai memory etf asx",
         "ai memory etf supply chain",
         "ai memory etf uk",
-        "best ai memory etf"
+        "best ai memory etfs"
       ]
     },
     {
@@ -1946,11 +1944,9 @@
     {
       "keyword": "ai memory makers",
       "slug": "ai-memory-makers",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory makers"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory management",
@@ -2120,9 +2116,11 @@
     {
       "keyword": "ai memory paper",
       "slug": "ai-memory-paper",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory paper"
+      ]
     },
     {
       "keyword": "ai memory pendant",
@@ -2159,9 +2157,11 @@
     {
       "keyword": "ai memory price spike",
       "slug": "ai-memory-price-spike",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory price spike"
+      ]
     },
     {
       "keyword": "ai memory prices",
@@ -3312,11 +3312,9 @@
     {
       "keyword": "chatbots to talk to",
       "slug": "chatbots-to-talk-to",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "chatbots to talk to"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "chronic memory issues",
@@ -5801,7 +5799,7 @@
       "validated": true,
       "matching_suggestions": [
         "llm memory bench",
-        "llm memory benchmark"
+        "llm memory benchmarks"
       ]
     },
     {
@@ -7722,11 +7720,9 @@
     {
       "keyword": "what is ai based chatbot",
       "slug": "what-is-ai-based-chatbot",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is ai based chatbot"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is ai context memory",
@@ -7890,11 +7886,9 @@
     {
       "keyword": "what is intelligent agent in artificial intelligence",
       "slug": "what-is-intelligent-agent-in-artificial-intelligence",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is intelligent agent in artificial intelligence"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is keep alive memory",
@@ -8970,10 +8964,9 @@
     {
       "keyword": "ai memory system milla jovovich",
       "slug": "ai-memory-system-milla-jovovich",
-      "autocomplete_matches": 2,
+      "autocomplete_matches": 1,
       "validated": true,
       "matching_suggestions": [
-        "ai memory system milla jovovich",
         "ai memory system milla jovovich"
       ]
     },
@@ -9064,11 +9057,9 @@
     {
       "keyword": "ai memory core",
       "slug": "ai-memory-core",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory core"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory infrastructure",
@@ -9980,11 +9971,9 @@
     {
       "keyword": "ai that does not remember",
       "slug": "ai-that-does-not-remember",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai that does not remember"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how brain keeps memory",
@@ -10339,11 +10328,9 @@
     {
       "keyword": "ai memory platform",
       "slug": "ai-memory-platform",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory platform"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "best ai chatbot for roleplay and memory",
@@ -10448,11 +10435,9 @@
     {
       "keyword": "shared selective persistent memory for agentic llm systems",
       "slug": "shared-selective-persistent-memory-for-agentic-llm-systems",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "shared selective persistent memory for agentic llm systems"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "types of long term memory in agentic ai",
@@ -10524,20 +10509,25 @@
     {
       "keyword": "claude ai memory import",
       "slug": "claude-ai-memory-import",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "claude ai memory import"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     }
   ],
   "new_opportunities": [
-    "deepseek llm memory"
+    "ai memory capsule extension",
+    "ai memory fabio akita",
+    "ai memory injection",
+    "ai memory matrix",
+    "deepseek llm memory",
+    "how to get the best memory",
+    "milla jovovich ai memory",
+    "zep memory system"
   ],
   "summary": {
     "total_keywords": 1161,
-    "validated": 898,
-    "low_volume": 263,
-    "new_opportunities_found": 1
+    "validated": 891,
+    "low_volume": 270,
+    "new_opportunities_found": 8
   }
 }
