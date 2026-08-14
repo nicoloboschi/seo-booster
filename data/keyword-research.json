@@ -99,7 +99,6 @@
       "building llm memory from scratch",
       "deepseek llm memory",
       "dify llm memory",
-      "dify llm node memory",
       "do you need llb for llm",
       "does llm have memory",
       "does llm make you a lawyer",
@@ -108,7 +107,8 @@
       "how to calculate llm memory usage",
       "how to give llm long term memory",
       "how to give llm memory",
-      "how to give local llm memory"
+      "how to give local llm memory",
+      "how to implement llm memory"
     ],
     "long term memory ai": [
       "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -152,7 +152,7 @@
       "ai remember me",
       "ai that actually remembers",
       "ai that can remember",
-      "ai that remembers chats"
+      "ai that does not remember"
     ],
     "persistent memory llm": [
       "anything llm persistent memory",
@@ -393,7 +393,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 217,
+      "autocomplete_matches": 212,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -3718,11 +3718,9 @@
     {
       "keyword": "dify llm node memory",
       "slug": "dify-llm-node-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "dify llm node memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "do ai agents have memory",
@@ -6338,29 +6336,23 @@
     {
       "keyword": "llm memory n8n",
       "slug": "llm-memory-n8n",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory n8n"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory needed",
       "slug": "llm-memory-needed",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory needed"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory network",
       "slug": "llm-memory-network",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory network"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory offloading",
@@ -6502,11 +6494,9 @@
     {
       "keyword": "llm native memory",
       "slug": "llm-native-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm native memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm no memory",
@@ -6562,11 +6552,9 @@
     {
       "keyword": "llm ram needed",
       "slug": "llm-ram-needed",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm ram needed"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm ram offload",
@@ -6585,11 +6573,9 @@
     {
       "keyword": "llm vision memory not working",
       "slug": "llm-vision-memory-not-working",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm vision memory not working"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm with most context window",
@@ -7121,11 +7107,9 @@
     {
       "keyword": "memory system in ai",
       "slug": "memory-system-in-ai",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "memory system in ai"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "memorydb vector database",
@@ -7228,11 +7212,9 @@
     {
       "keyword": "neo4j llm memory",
       "slug": "neo4j-llm-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "neo4j llm memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "notebooklm context window",
@@ -7349,11 +7331,9 @@
     {
       "keyword": "pydantic ai long term memory",
       "slug": "pydantic-ai-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "pydantic ai long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "python vector database in memory",
@@ -9642,11 +9622,9 @@
     {
       "keyword": "llm memory name",
       "slug": "llm-memory-name",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory name"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory provider",
@@ -9660,11 +9638,9 @@
     {
       "keyword": "llm need ram",
       "slug": "llm-need-ram",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm need ram"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm with 2 million context window",
@@ -9971,9 +9947,11 @@
     {
       "keyword": "ai that does not remember",
       "slug": "ai-that-does-not-remember",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai that does not remember"
+      ]
     },
     {
       "keyword": "how brain keeps memory",
@@ -10426,11 +10404,9 @@
     {
       "keyword": "perchance ai long term memory",
       "slug": "perchance-ai-long-term-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "perchance ai long term memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "shared selective persistent memory for agentic llm systems",
@@ -10460,51 +10436,65 @@
     {
       "keyword": "context window llm l\u00e0 g\u00ec",
       "slug": "context-window-llm-l-g",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm l\u00e0 g\u00ec"
+      ]
     },
     {
       "keyword": "gemma llm context window",
       "slug": "gemma-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "gemma llm context window"
+      ]
     },
     {
       "keyword": "google llm context window",
       "slug": "google-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google llm context window"
+      ]
     },
     {
       "keyword": "llm context window gemini",
       "slug": "llm-context-window-gemini",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window gemini"
+      ]
     },
     {
       "keyword": "llm context window gpt 4o",
       "slug": "llm-context-window-gpt-4o",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window gpt 4o"
+      ]
     },
     {
       "keyword": "llm context window graph",
       "slug": "llm-context-window-graph",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window graph"
+      ]
     },
     {
       "keyword": "llm context window growth",
       "slug": "llm-context-window-growth",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window growth"
+      ]
     },
     {
       "keyword": "claude ai memory import",
@@ -10512,22 +10502,78 @@
       "autocomplete_matches": 0,
       "validated": false,
       "matching_suggestions": []
+    },
+    {
+      "keyword": "ai memory capsule extension",
+      "slug": "ai-memory-capsule-extension",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory capsule extension"
+      ]
+    },
+    {
+      "keyword": "ai memory fabio akita",
+      "slug": "ai-memory-fabio-akita",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory fabio akita"
+      ]
+    },
+    {
+      "keyword": "ai memory injection",
+      "slug": "ai-memory-injection",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory injection"
+      ]
+    },
+    {
+      "keyword": "ai memory matrix",
+      "slug": "ai-memory-matrix",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "ai memory matrix"
+      ]
+    },
+    {
+      "keyword": "how to get the best memory",
+      "slug": "how-to-get-the-best-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how to get the best memory"
+      ]
+    },
+    {
+      "keyword": "milla jovovich ai memory",
+      "slug": "milla-jovovich-ai-memory",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "milla jovovich ai memory"
+      ]
+    },
+    {
+      "keyword": "zep memory system",
+      "slug": "zep-memory-system",
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory system"
+      ]
     }
   ],
   "new_opportunities": [
-    "ai memory capsule extension",
-    "ai memory fabio akita",
-    "ai memory injection",
-    "ai memory matrix",
-    "deepseek llm memory",
-    "how to get the best memory",
-    "milla jovovich ai memory",
-    "zep memory system"
+    "deepseek llm memory"
   ],
   "summary": {
-    "total_keywords": 1161,
-    "validated": 891,
-    "low_volume": 270,
-    "new_opportunities_found": 8
+    "total_keywords": 1168,
+    "validated": 893,
+    "low_volume": 275,
+    "new_opportunities_found": 1
   }
 }

@@ -93,7 +93,6 @@ class AgentMemory:
  self.working_memory = []
  self.long_term_memory = {} # Simplified long-term storage
 
-
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 
  def inject_memory(self, fact: str):
