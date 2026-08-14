@@ -6821,5 +6821,8 @@
   },
   "ai-memory-brain": {
     "platforms": {}
+  },
+  "ai-memory-capsule-extension": {
+    "platforms": {}
   }
 }
