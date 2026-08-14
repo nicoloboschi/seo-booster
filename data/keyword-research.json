@@ -224,6 +224,7 @@
       "what is limited memory ai"
     ],
     "chatbot memory": [
+      "ai chatbot best memory",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
@@ -242,8 +243,7 @@
       "chatbot for customer support",
       "chatbot is an example of",
       "chatbot memory architecture",
-      "chatbot memory github",
-      "chatbot memory langchain"
+      "chatbot memory github"
     ],
     "agent memory framework": [
       "agent framework agent memory",
@@ -266,20 +266,20 @@
       "ai chat good memory",
       "ai chat infinite memory",
       "ai chat long memory",
-      "ai chat memory",
       "ai chat memory extension",
-      "ai chat memory reddit",
       "ai chat permanent memory",
       "ai chatbot best memory",
       "ai chatbot for customer service",
       "ai chatbot good memory",
       "ai chatbot infinite memory",
       "ai chatbot long memory",
-      "ai chatbot memory",
-      "ai chatbot memory reddit",
       "ai chatbot with memory free",
       "ai meeting summary",
-      "best ai chat memory"
+      "best ai chat memory",
+      "best ai chatbot memory",
+      "best ai conversation app",
+      "character ai chat memory limit",
+      "chub ai chat memory not working"
     ],
     "embedding model memory": [
       "embedded memory meaning",
@@ -313,9 +313,6 @@
       "vector database long term memory"
     ],
     "context window llm": [
-      "1 million context window llm",
-      "10 million context window llm",
-      "12 million context window llm",
       "1m context window local llm",
       "anything llm context window",
       "average llm context window",
@@ -332,7 +329,10 @@
       "context window in llm",
       "context window in llm means",
       "context window in llm models",
-      "context window length llm"
+      "context window length llm",
+      "context window limit llm",
+      "context window llm benchmark",
+      "context window llm comparison"
     ],
     "mem0": [
       "best llm for mem0",
@@ -394,7 +394,7 @@
     {
       "keyword": "AI agent memory",
       "slug": "ai-agent-memory-explained",
-      "autocomplete_matches": 217,
+      "autocomplete_matches": 207,
       "validated": true,
       "matching_suggestions": [
         "ai agent memory api",
@@ -610,7 +610,7 @@
     {
       "keyword": "limited memory ai",
       "slug": "limited-memory-ai",
-      "autocomplete_matches": 13,
+      "autocomplete_matches": 12,
       "validated": true,
       "matching_suggestions": [
         "example of limited memory ai",
@@ -676,20 +676,16 @@
     {
       "keyword": "1 million context window llm",
       "slug": "1-million-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "1 million context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "10 million context window llm",
       "slug": "10-million-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "10 million context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "1m context window local llm",
@@ -703,11 +699,9 @@
     {
       "keyword": "2 million context window llm",
       "slug": "2-million-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "12 million context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "a long short term memory for ai applications in spike based neuromorphic hardware",
@@ -912,24 +906,22 @@
     {
       "keyword": "ai chat memory",
       "slug": "ai-chat-memory",
-      "autocomplete_matches": 35,
+      "autocomplete_matches": 33,
       "validated": true,
       "matching_suggestions": [
         "how to use janitor ai chat memory",
-        "ai chat memory",
         "ai chat memory extension",
-        "ai chat memory reddit",
-        "best ai chat memory"
+        "best ai chat memory",
+        "character ai chat memory limit",
+        "chub ai chat memory not working"
       ]
     },
     {
       "keyword": "ai chat memory reddit",
       "slug": "ai-chat-memory-reddit",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai chat memory reddit"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai chat permanent memory",
@@ -963,9 +955,10 @@
     {
       "keyword": "ai chatbot best memory",
       "slug": "ai-chatbot-best-memory",
-      "autocomplete_matches": 1,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
+        "ai chatbot best memory",
         "ai chatbot best memory"
       ]
     },
@@ -1011,14 +1004,14 @@
     {
       "keyword": "ai chatbot memory",
       "slug": "ai-chatbot-memory",
-      "autocomplete_matches": 8,
+      "autocomplete_matches": 6,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory",
         "ai chatbot memory reddit",
         "best ai chatbot memory",
         "gemini ai chatbot memory feature",
-        "ai chatbot memory"
+        "best ai chatbot memory"
       ]
     },
     {
@@ -2027,11 +2020,9 @@
     {
       "keyword": "ai memory n8n",
       "slug": "ai-memory-n8n",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory n8n"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory name",
@@ -2045,20 +2036,16 @@
     {
       "keyword": "ai memory necklace",
       "slug": "ai-memory-necklace",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory necklace"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory needs",
       "slug": "ai-memory-needs",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory needs"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory news",
@@ -2072,11 +2059,9 @@
     {
       "keyword": "ai memory notes",
       "slug": "ai-memory-notes",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai memory notes"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai memory open source",
@@ -2224,11 +2209,9 @@
     {
       "keyword": "ai native memory",
       "slug": "ai-native-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai native memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai necklace that remembers everything",
@@ -2243,31 +2226,23 @@
     {
       "keyword": "ai no memory",
       "slug": "ai-no-memory",
-      "autocomplete_matches": 3,
-      "validated": true,
-      "matching_suggestions": [
-        "ai no memory",
-        "ai no memory lyrics",
-        "ai no memory shigeru matsuzaki"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai no memory lyrics",
       "slug": "ai-no-memory-lyrics",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai no memory lyrics"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai no memory shigeru matsuzaki",
       "slug": "ai-no-memory-shigeru-matsuzaki",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "ai no memory shigeru matsuzaki"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "ai on memory",
@@ -3256,20 +3231,21 @@
     {
       "keyword": "chatbot memory reddit",
       "slug": "chatbot-memory-reddit",
-      "autocomplete_matches": 3,
+      "autocomplete_matches": 2,
       "validated": true,
       "matching_suggestions": [
         "ai chatbot memory reddit",
-        "chatbot memory reddit",
-        "ai chatbot memory reddit"
+        "chatbot memory reddit"
       ]
     },
     {
       "keyword": "chatbot with best memory reddit",
       "slug": "chatbot-with-best-memory-reddit",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "chatbot with best memory reddit"
+      ]
     },
     {
       "keyword": "chatbot with longest memory",
@@ -3492,11 +3468,9 @@
     {
       "keyword": "context window llm models",
       "slug": "context-window-llm-models",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window llm models"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window llm openai",
@@ -3535,11 +3509,9 @@
     {
       "keyword": "context window management llm",
       "slug": "context-window-management-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window management llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window of an llm",
@@ -3604,11 +3576,9 @@
     {
       "keyword": "context window size llm comparison",
       "slug": "context-window-size-llm-comparison",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "context window size llm comparison"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "context window size of llm",
@@ -4142,11 +4112,9 @@
     {
       "keyword": "how to create an ai agent",
       "slug": "how-to-create-an-ai-agent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to create an ai agent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to delete chatgpt memory on phone",
@@ -4160,11 +4128,9 @@
     {
       "keyword": "how to expand ai agents memory",
       "slug": "how-to-expand-ai-agents-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "how to expand ai agents memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "how to find chatgpt memory",
@@ -5175,11 +5141,9 @@
     {
       "keyword": "llm agent memory systems",
       "slug": "llm-agent-memory-systems",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm agent memory systems"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm api context window",
@@ -5268,40 +5232,30 @@
     {
       "keyword": "llm context window calculator",
       "slug": "llm-context-window-calculator",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window calculator"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window chart",
       "slug": "llm-context-window-chart",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window chart"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window compare",
       "slug": "llm-context-window-compare",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window compare"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window comparison",
       "slug": "llm-context-window-comparison",
-      "autocomplete_matches": 3,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window comparison",
-        "llm context window comparison 2026",
-        "llm context window comparison chart"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window comparison 2024",
@@ -5313,11 +5267,9 @@
     {
       "keyword": "llm context window comparison chart",
       "slug": "llm-context-window-comparison-chart",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window comparison chart"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window compression koog",
@@ -5403,21 +5355,16 @@
     {
       "keyword": "llm context window memory",
       "slug": "llm-context-window-memory",
-      "autocomplete_matches": 2,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window memory",
-        "llm context window memory usage"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window memory usage",
       "slug": "llm-context-window-memory-usage",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm context window memory usage"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm context window optimization",
@@ -5695,29 +5642,23 @@
     {
       "keyword": "llm memory access pattern",
       "slug": "llm-memory-access-pattern",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory access pattern"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory agent",
       "slug": "llm-memory-agent",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory agent"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory api",
       "slug": "llm-memory-api",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory api"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory architecture",
@@ -5731,29 +5672,23 @@
     {
       "keyword": "llm memory arxiv",
       "slug": "llm-memory-arxiv",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory arxiv"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory attack",
       "slug": "llm-memory-attack",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory attack"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory augmentation",
       "slug": "llm-memory-augmentation",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory augmentation"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory awesome",
@@ -6800,11 +6735,9 @@
     {
       "keyword": "max context window llm",
       "slug": "max-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "max context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "mem0 agent memory",
@@ -7655,11 +7588,9 @@
     {
       "keyword": "what are the components of an ai system",
       "slug": "what-are-the-components-of-an-ai-system",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what are the components of an ai system"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what are the models of memory",
@@ -7732,11 +7663,9 @@
     {
       "keyword": "what is ai focus and ai servo",
       "slug": "what-is-ai-focus-and-ai-servo",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is ai focus and ai servo"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is ai memories honor",
@@ -7750,7 +7679,7 @@
     {
       "keyword": "what is ai memory",
       "slug": "what-is-ai-memory",
-      "autocomplete_matches": 10,
+      "autocomplete_matches": 9,
       "validated": true,
       "matching_suggestions": [
         "what is ai memory",
@@ -7973,11 +7902,9 @@
     {
       "keyword": "what is memory system",
       "slug": "what-is-memory-system",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is memory system"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is memory tagging",
@@ -8018,11 +7945,9 @@
     {
       "keyword": "what is role of memory in agentic ai system",
       "slug": "what-is-role-of-memory-in-agentic-ai-system",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "what is role of memory in agentic ai system"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is short term memory in ai",
@@ -8596,9 +8521,11 @@
     {
       "keyword": "zep memory management",
       "slug": "zep-memory-management",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory management"
+      ]
     },
     {
       "keyword": "zep memory mcp",
@@ -8657,9 +8584,11 @@
     {
       "keyword": "zep memory vs mem0",
       "slug": "zep-memory-vs-mem0",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "zep memory vs mem0"
+      ]
     },
     {
       "keyword": "zep the memory foundation for your ai stack",
@@ -8814,11 +8743,9 @@
     {
       "keyword": "llm memory approaches",
       "slug": "llm-memory-approaches",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory approaches"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory cache",
@@ -9704,11 +9631,9 @@
     {
       "keyword": "spring ai conversational memory",
       "slug": "spring-ai-conversational-memory",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "spring ai conversational memory"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "what is automatic memory management",
@@ -9992,11 +9917,9 @@
     {
       "keyword": "llm memory aws",
       "slug": "llm-memory-aws",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "llm memory aws"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "llm memory md",
@@ -10413,11 +10336,9 @@
     {
       "keyword": "most context window llm",
       "slug": "most-context-window-llm",
-      "autocomplete_matches": 1,
-      "validated": true,
-      "matching_suggestions": [
-        "most context window llm"
-      ]
+      "autocomplete_matches": 0,
+      "validated": false,
+      "matching_suggestions": []
     },
     {
       "keyword": "perchance ai long term memory",
@@ -10578,8 +10499,8 @@
   ],
   "summary": {
     "total_keywords": 1168,
-    "validated": 896,
-    "low_volume": 272,
+    "validated": 859,
+    "low_volume": 309,
     "new_opportunities_found": 1
   }
 }
