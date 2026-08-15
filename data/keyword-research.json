@@ -10463,51 +10463,65 @@
     {
       "keyword": "context window llm l\u00e0 g\u00ec",
       "slug": "context-window-llm-l-g",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "context window llm l\u00e0 g\u00ec"
+      ]
     },
     {
       "keyword": "gemma llm context window",
       "slug": "gemma-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "gemma llm context window"
+      ]
     },
     {
       "keyword": "google llm context window",
       "slug": "google-llm-context-window",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "google llm context window"
+      ]
     },
     {
       "keyword": "llm context window gemini",
       "slug": "llm-context-window-gemini",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window gemini"
+      ]
     },
     {
       "keyword": "llm context window gpt 4o",
       "slug": "llm-context-window-gpt-4o",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window gpt 4o"
+      ]
     },
     {
       "keyword": "llm context window graph",
       "slug": "llm-context-window-graph",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window graph"
+      ]
     },
     {
       "keyword": "llm context window growth",
       "slug": "llm-context-window-growth",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "llm context window growth"
+      ]
     },
     {
       "keyword": "claude ai memory import",
@@ -10585,8 +10599,8 @@
   ],
   "summary": {
     "total_keywords": 1168,
-    "validated": 899,
-    "low_volume": 269,
+    "validated": 906,
+    "low_volume": 262,
     "new_opportunities_found": 1
   }
 }
