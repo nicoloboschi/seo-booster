@@ -204,7 +204,7 @@
       "central memory vs effector memory",
       "character ai memory system",
       "example of limited memory ai",
-      "how does perplexity's brain ai memory system function"
+      "how brain keeps memory"
     ],
     "give ai memory": [
       "example of limited memory ai",
@@ -9981,9 +9981,11 @@
     {
       "keyword": "how brain keeps memory",
       "slug": "how-brain-keeps-memory",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "how brain keeps memory"
+      ]
     },
     {
       "keyword": "llm in climate change law and policy",
@@ -10040,9 +10042,11 @@
     {
       "keyword": "system high memory usage",
       "slug": "system-high-memory-usage",
-      "autocomplete_matches": 0,
-      "validated": false,
-      "matching_suggestions": []
+      "autocomplete_matches": 1,
+      "validated": true,
+      "matching_suggestions": [
+        "system high memory usage"
+      ]
     },
     {
       "keyword": "the highest scoring ai memory system ever benchmarked",
@@ -10581,8 +10585,8 @@
   ],
   "summary": {
     "total_keywords": 1168,
-    "validated": 897,
-    "low_volume": 271,
+    "validated": 899,
+    "low_volume": 269,
     "new_opportunities_found": 1
   }
 }
