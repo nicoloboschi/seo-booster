@@ -1,168 +1,121 @@
 ---
-title: 'OpenClaw AI Agent Memory: Enhancing Recall and Context'
-description: Explore OpenClaw AI agent memory, its limitations, and how to overcome them with external memory solutions like Hindsight, Supermemory, and Mem0.
+title: "OpenClaw Memory: Files, Search and Embedding Models"
+description: "How OpenClaw agent memory works: MEMORY.md and daily notes, hybrid memory_search, embedding model options, dreaming, flush before compaction, and memory plugins."
 date: 2026-04-07
-lastmod: 2026-04-07
-tags:
-- OpenClaw
-- AI Memory
-- Agent Frameworks
-- Hindsight
-- Mem0
-- Supermemory
-keywords:
-- openclaw ai agent memory
-- openclaw memory
-- openclaw agent framework
-- AI agent recall
-- long-term memory AI agent
-- AI memory systems
-faq:
-- question: What is the primary limitation of OpenClaw's default memory?
-  answer: The primary limitation is that the agent must explicitly decide to save information, and only the last two days of notes are automatically loaded at session start. This leads to inconsistent recall
-    and the loss of older context.
-- question: Can OpenClaw's memory be improved without external plugins?
-  answer: While users can manually save more information to MEMORY.md or ensure important details are explicitly written down by the agent, the fundamental limitations of auto-loading and agent-driven saving
-    remain. External plugins automate and enhance this process significantly.
-- question: How does Hindsight contribute to OpenClaw's memory?
-  answer: Hindsight automates the capture of agent interactions and logs them persistently. This ensures that information isn't lost due to the agent forgetting to save it or due to context window limitations,
-    effectively creating a more robust memory for the OpenClaw agent.
+lastmod: 2026-10-08
 slug: openclaw-ai-agent-memory
 aliases:
 - /articles/openclaw-memory-embedding-model/
+tags:
+- OpenClaw
+- agent memory
+- embeddings
+- memory plugins
+keywords:
+- "openclaw memory"
+- "openclaw ai agent memory"
+- "openclaw memory embedding model"
+- "openclaw memory_search"
+- "openclaw MEMORY.md"
+cluster: agent-memory
+faq:
+- question: "How does OpenClaw memory work?"
+  answer: "OpenClaw stores memory as plain Markdown files in the agent workspace (default ~/.openclaw/workspace): MEMORY.md for durable facts, USER.md for preferences, and dated daily notes under memory/. MEMORY.md and USER.md load at session start; daily notes are indexed and found with the memory_search tool."
+- question: "What embedding model does OpenClaw use for memory?"
+  answer: "OpenAI is the default embedding provider. You can set memory.search.provider to Gemini, Voyage (voyage-4-large), Mistral (mistral-embed), Bedrock, DeepInfra (BAAI/bge-m3), Ollama, LM Studio, GitHub Copilot, a generic OpenAI-compatible endpoint, or a local llama.cpp GGUF model of about 0.3 GB. Set it to none for keyword-only search."
+- question: "Why is OpenClaw memory_search returning nothing?"
+  answer: "Check the index and provider with openclaw memory status, confirm the memory files aren't empty, and rebuild with openclaw memory index --force. If the embedding provider fails, OpenClaw falls back to keyword-only search, so exact words still match."
 ---
 
+**OpenClaw memory** is a folder of Markdown files the agent writes and reads. `MEMORY.md` holds durable facts and decisions, `USER.md` holds your preferences, and dated daily notes hold running context. The first two load at session start. Everything is indexed in SQLite, and the agent finds older notes with `memory_search`, a hybrid of vector and keyword search.
 
-Imagine an AI assistant forgetting your project's critical details from yesterday. This is the challenge OpenClaw AI agent memory addresses. Without strong recall, agents struggle with complex, multi-turn tasks and can appear unreliable. Enhancing this memory is key to building truly capable AI systems.
+[OpenClaw](https://github.com/openclaw/openclaw) is an open-source (MIT) personal AI assistant built by Peter Steinberger and contributors and now stewarded by the OpenClaw Foundation. It runs on your own machine and talks to you through WhatsApp, Telegram, Slack, Discord, iMessage and 20+ other channels. Facts on this page come from the official [memory docs](https://docs.openclaw.ai/concepts/memory) and [memory search docs](https://docs.openclaw.ai/concepts/memory-search), checked October 2026.
 
-OpenClaw AI agent memory is the system's ability to store, retrieve, and use past interaction data and learned facts, enabling consistent AI performance by preventing forgotten details and repeated queries. It often requires integration with external solutions for improved recall and context retention, which is crucial for maintaining agent state.
+## What is OpenClaw memory?
 
-## What is OpenClaw AI Agent Memory?
+**OpenClaw memory is file-based. The model remembers only what is written to disk as Markdown in the agent workspace. A memory plugin (memory-core by default) indexes those files and gives the agent tools to search and read them, so knowledge survives restarts, compaction and new sessions.**
 
-OpenClaw AI agent memory refers to the system's capacity to store, retrieve, and use information from past interactions and learned facts. Its default architecture relies on plaintext files and limited auto-loading of recent notes, which works for short-term tasks but struggles with complex, ongoing projects requiring persistent knowledge recall.
+Because memory is plain text, you can open, edit, diff and back it up like any other file. That's the main difference from memory layers that keep facts inside a database. For the general pattern, see [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-The default memory setup in OpenClaw includes daily notes for session-specific context and a `MEMORY.md` file for long-term facts. A SQLite vector index supports semantic search over these notes. However, only the last two days of daily notes are automatically loaded at the start of a new session. This design means that information not explicitly saved by the agent or older than two days becomes difficult to access, impacting the overall effectiveness of OpenClaw AI agent memory.
+## The memory files
 
-### Default Memory Storage and Retrieval
+| File | What goes in it | When it loads |
+|---|---|---|
+| `MEMORY.md` | Curated long-term facts and decisions | At session start |
+| `USER.md` (optional) | Stable preferences, style, relationships, active projects | At session start, with a smaller budget |
+| `memory/YYYY-MM-DD.md` | Daily notes and running context | Today's and yesterday's on a bare `/new` or `/reset`; otherwise via search |
+| `memory/YYYY-MM-DD-<slug>.md` | Slugged daily notes, such as from the session-memory hook | Same as daily notes |
+| `DREAMS.md` (optional) | Dreaming summaries for human review | Not injected |
 
-OpenClaw's memory is primarily stored in plaintext files. `MEMORY.md` serves as a repository for long-term facts and knowledge the agent accumulates. For shorter-term, session-specific context, dated daily notes (e.g., `memory/YYYY-MM-DD.md`) are used. To facilitate quick lookups, OpenClaw also maintains a SQLite database acting as a vector index for semantic search capabilities. This allows for efficient retrieval of relevant information within the OpenClaw AI agent memory framework.
+The workspace defaults to `~/.openclaw/workspace`. If `MEMORY.md` grows past the bootstrap budget, the file on disk stays whole but the injected copy is truncated. `/context list`, `/context detail` and `openclaw doctor` show sizes and truncation.
 
-### Auto-Loading Limitations
+The docs add a useful rule for notes that affect actions: record when it's safe to act (approval needed, expiry, who said so), not just the fact. They also say plainly that memory "guides behavior but does not enforce policy." Hard limits belong in approval settings and sandboxing.
 
-A key constraint in OpenClaw's default memory system is its auto-loading mechanism. At the beginning of a new session, the agent only loads notes from the current and previous day. Information stored in older daily notes remains on disk but isn't immediately available in the agent's working memory. This requires the agent to actively search for older data, which it may not always do effectively, hindering the seamless operation of OpenClaw AI agent memory.
+### Importing memory from other agents
 
-### Agent Control Over Saving
+The Control UI has **Settings → Import Memory**. It copies Markdown memory from Codex (`~/.codex/memories`), Claude Code (`~/.claude/projects/*/memory`) and Hermes (`MEMORY.md` and `USER.md`) into `memory/imports/`. Imports are searchable but aren't merged into `MEMORY.md`, and a backup is made first.
 
-The agent's role in saving information is significant. OpenClaw's design requires the agent to explicitly use a tool call to save specific pieces of information to persistent storage. This means that the agent itself must identify what is important enough to remember. If the agent fails to recognize the significance of certain data points, that information might not be saved and could be lost when the context window shifts or the session ends, impacting the continuity of OpenClaw AI agent memory.
+## How memory_search works
 
-### Contextual Summarization Impact
+The default memory-core plugin gives the agent three tools:
 
-As conversations grow longer, OpenClaw employs context compression. Older conversation turns are summarized to manage the LLM's token limitations. While explicit memories saved to files persist, the nuanced details within summarized turns can be lost. This summarization process, though necessary for efficient processing, directly impacts the richness of the agent's recall from past interactions, a common challenge for OpenClaw AI agent memory.
+- **`memory_search`**: semantic search over notes, optionally also session transcripts.
+- **`memory_get`**: read a specific file or line range.
+- **`intent`**: create, list or cancel event-triggered standing intents.
 
-The cumulative effect of these limitations is a degradation in memory quality over time. As an agent accumulates more data, retrieving specific, relevant information becomes increasingly challenging. This is a primary driver for exploring external memory solutions to achieve true [long-term memory AI agent](/articles/ai-agent-long-term-memory/) capabilities. A 2024 study published on [arXiv](https://arxiv.org/abs/2305.14212) showed that agents relying solely on limited context windows experienced a 25% decrease in task accuracy on complex, multi-turn tasks compared to those with enhanced memory. This highlights the critical need for improved OpenClaw AI agent memory.
+With an embedding provider configured, search is **hybrid**. A vector search (meaning) and a BM25 keyword search (exact tokens like IDs, env vars and code symbols) run in parallel, plus a filename search. If one path fails, the other runs alone.
 
-## Enhancing OpenClaw Memory with External Plugins
+The final score multiplies three things: hybrid relevance, a **recency decay** and an importance score set at write time. Decay has a 30-day half-life, so a note from last month counts half as much. `MEMORY.md`, `USER.md` and undated files never decay. A fixed MMR step (lambda 0.7) then removes near-duplicate snippets so results aren't five copies of one note.
 
-To overcome the inherent limitations of its default memory system, OpenClaw can be extended with specialized plugins. These plugins automate the capture and recall of information, significantly improving an agent's ability to remember and act upon past experiences. Three prominent solutions for OpenClaw AI agent memory are Hindsight, Supermemory, and Mem0.
+Transcripts are opt-in: add `"sessions"` to `sources` and set `experimental.sessionMemory: true`. For more on how ranking by time works in memory systems, see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-These plugins differ in their approaches to privacy, cost, accuracy, and ease of setup. Understanding these differences is key to choosing the right solution for your specific needs. For instance, if you're looking for a quick setup, you might jump directly to the Hindsight setup or Mem0 setup sections, but the underlying trade-offs for OpenClaw AI agent memory are important.
+## Which embedding model OpenClaw uses
 
-### Hindsight: Automated Memory Capture
+OpenAI is the default embedding provider. You change it with `memory.search.provider`:
 
-Hindsight is an open-source memory system designed to automatically capture and organize AI agent interactions. It focuses on providing a seamless experience, allowing agents to retain context across sessions without requiring explicit commands for saving information. Hindsight's approach to **automatic memory capture** means that the agent doesn't need to "decide" what's important; the system records interactions as they happen.
+| Provider | Config ID | API key | Default model or note |
+|---|---|---|---|
+| OpenAI | `openai` | Depends | API key or eligible Codex OAuth |
+| Gemini | `gemini` | Yes | `gemini-embedding-2` for multimodal (image and audio) |
+| Voyage | `voyage` | Yes | `voyage-4-large` |
+| Mistral | `mistral` | Yes | `mistral-embed` |
+| DeepInfra | `deepinfra` | Yes | `BAAI/bge-m3` |
+| Bedrock | `bedrock` | No | AWS credential chain |
+| GitHub Copilot | `github-copilot` | No | Copilot subscription |
+| Local | `local` | No | Managed llama.cpp GGUF, about 0.3 GB |
+| Ollama / LM Studio | `ollama` / `lmstudio` | No | Your local model |
+| OpenAI-compatible | `openai-compatible` | Usually | Any `/v1/embeddings` endpoint |
 
-This significantly addresses the issue of the agent potentially forgetting critical details. By continuously saving conversation turns and agent actions, Hindsight builds a comprehensive memory that can be queried later. This aligns with the goal of enabling [AI that remembers conversations](/articles/best-chatbot-for-memory/). Hindsight can be integrated into various agent frameworks, including OpenClaw. You can find its repository at [Hindsight on GitHub](https://github.com/vectorize-io/hindsight). Its use enhances OpenClaw AI agent memory fundamentally.
+Set `none` for keyword-only search, or `auto` to let OpenClaw pick and fall back to keywords if embeddings fail. For local embeddings, install `@openclaw/llama-cpp-provider`; OpenClaw then installs `llama-server` and downloads the GGUF for you.
 
-### Supermemory: Contextual Recall
+How to pick: stay on the default if you already use OpenAI. Use **local** or **Ollama** if notes must never leave the machine. Use **Gemini** if you want images and audio indexed. Changing provider or model means rebuilding the index with `openclaw memory index --force`, because vectors from different models aren't comparable. Background on choosing models is in [embedding models for RAG](/articles/embedding-models-for-rag/).
 
-Supermemory offers a different approach, emphasizing contextual recall by intelligently indexing and retrieving relevant past interactions. It aims to provide agents with the right information at the right time, improving decision-making and task completion. Supermemory's strength lies in its ability to perform **semantic search** over a vast history of interactions, making it easier for agents to find specific pieces of information even if they don't recall the exact phrasing.
+## Flush, dreaming and compaction
 
-This capability is crucial for agents operating in complex domains where nuanced understanding of past events is required. It's a step towards more sophisticated [semantic memory in AI agents](/articles/semantic-memory-ai-agents/). Implementing Supermemory can greatly boost the OpenClaw AI agent memory.
+Two background processes keep memory current:
 
-### Mem0: Efficient and Scalable Memory
+1. **Memory flush.** Before [compaction](https://docs.openclaw.ai/concepts/compaction) shrinks the conversation, OpenClaw runs a silent turn asking the agent to save anything important. It's on by default. You can turn it off with `agents.defaults.compaction.memoryFlush.enabled: false` or point it at a cheaper model such as `ollama/qwen3:8b`. Read-only sandbox sessions skip it.
+2. **Dreaming.** A recurring job scores short-term recall signals and promotes items into `MEMORY.md` only if they pass score, frequency and query-diversity thresholds. Untrusted and system-derived candidates are excluded. Summaries go to `DREAMS.md` for you to review. Disable it with `plugins.entries.memory-core.config.dreaming.enabled: false`.
 
-Mem0 is designed for efficiency and scalability, providing a reliable solution for agents that handle large volumes of data and interactions. It focuses on **efficient storage and retrieval**, ensuring that even with extensive memory, an agent can access information quickly. Mem0's architecture is built to handle the demands of persistent memory for AI agents, making it suitable for long-running projects and critical applications.
+Dreaming is OpenClaw's version of [memory consolidation](/articles/memory-consolidation-ai-agents/): turning a pile of daily notes into a small set of durable facts.
 
-Mem0's design contributes to creating an [AI agent persistent memory](/articles/persistent-memory-ai/) system that agents can rely on over extended periods. This offers a powerful alternative to the default memory limitations of OpenClaw AI agent memory. According to Mem0's documentation, it can efficiently handle millions of memory entries, a significant advantage for large-scale applications.
+## Memory engines and plugins
 
-## Python Code Example: Integrating an External Memory Plugin
+The memory slot is pluggable:
 
-Integrating external memory solutions into OpenClaw often involves modifying the agent's configuration or using specific adapter classes. While the exact implementation varies per plugin, the general idea is to provide OpenClaw with an interface to interact with the external memory system. This is how OpenClaw AI agent memory is typically extended.
+- **Builtin (default)**: SQLite with keyword, vector and hybrid search, no extra dependencies.
+- **Honcho**: cross-session user modeling and multi-agent awareness.
+- **LanceDB**: OpenAI-compatible or local Ollama embeddings with auto-recall and auto-capture.
+- **Memory Wiki**: compiles durable knowledge into a wiki vault with claims, evidence and freshness tracking. It runs beside the memory plugin, not instead of it.
 
-Here's a conceptual Python snippet demonstrating how you might integrate a hypothetical `ExternalMemoryPlugin` into an OpenClaw agent. This code is illustrative and requires specific plugin APIs for actual implementation.
+Third-party memory backends also publish OpenClaw plugins, including Mem0 (`@mem0/openclaw-mem0` on [ClawHub](https://clawhub.ai/mem0/plugins/openclaw-mem0)) and Hindsight (`@vectorize-io/hindsight-openclaw`, which can run as a local embedded daemon or against a hosted server). These replace file search with an extraction-based store. They add LLM calls per turn, so they're worth it mainly when the agent has months of history that daily notes and `MEMORY.md` no longer cover.
 
-```python
-## This is a conceptual example. Actual integration depends on the specific plugin APIs.
-from openclaw import Agent
+## Useful commands and fixes
 
-class MyOpenClawAgent(Agent):
- def __init__(self, *args, **kwargs):
- super().__init__(*args, **kwargs)
- # Assume ExternalMemoryPlugin is a class that handles saving/loading
- # from a service like Hindsight, Supermemory, or Mem0.
- self.memory_plugin = ExternalMemoryPlugin(config="path/to/plugin/config")
-
- def save_memory(self, key, value):
- # Override or extend the default save behavior
- super().save_memory(key, value)
- self.memory_plugin.save(key, value) # Save to external memory
-
- def load_memory(self, key):
- # Check external memory first if not found in default
- if key not in self.memory:
- external_value = self.memory_plugin.load(key)
- if external_value:
- self.memory[key] = external_value
- return external_value
- return super().load_memory(key)
-
- def reflect(self):
- # Agent's reflection process, potentially involving external memory
- super().reflect()
- # Use memory_plugin for deeper reflection based on past interactions
- past_interactions = self.memory_plugin.get_recent_interactions()
- # ... process past_interactions ...
-
-## Example usage:
-## agent = MyOpenClawAgent(...)
-## agent.run_task(...)
+```bash
+openclaw memory status          # index status and active provider
+openclaw memory search "query"  # search from the command line
+openclaw memory index --force   # rebuild the index
 ```
 
-This example illustrates how an `Agent` class could be extended to incorporate an `ExternalMemoryPlugin`, overriding or augmenting default memory operations to interact with a more sophisticated memory backend. This approach is central to enhancing the capabilities of the OpenClaw AI agent memory.
-
-## Comparing OpenClaw and Hermes Agent Memory
-
-When choosing an AI agent framework, memory capabilities are a significant differentiator. Both OpenClaw and Hermes Agent have built-in memory systems and support external memory options, but their architectures and approaches to memory differ notably. Understanding these distinctions is vital for selecting the framework that best suits your needs for OpenClaw AI agent memory.
-
-### Built-in Memory Architectures
-
-Both OpenClaw and Hermes Agent adopt an agent-curated memory approach, where the LLM plays a role in deciding what information is saved. However, their designs vary. OpenClaw uses plaintext files (`MEMORY.md` and dated notes) and a SQLite vector index. As previously discussed, its primary limitation is the auto-loading of only the last two days of notes.
-
-Hermes Agent, on the other hand, features a more layered architecture. It includes **prompt memory** (short-term, durable facts and user profiles), a **session archive** for episodic recall via a `session_search` tool, and a **skills system** for procedural memory. Hermes also incorporates a `nudge_interval` for periodic agent reflection and saving, and a proactive flush before idle timeouts. This structured approach aims to provide more granular control and recall capabilities from the outset.
-
-### External Memory Ecosystems
-
-The external memory ecosystems for both frameworks are evolving. While OpenClaw can integrate with plugins like Hindsight, Supermemory, and Mem0, Hermes has a pluggable memory provider system. This system allows for greater flexibility in choosing how external memory is managed.
-
-A comparison of these frameworks, particularly concerning their memory handling, can be found in resources like the [OpenClaw vs Hermes Agent: Memory Compared](/articles/openclaw-vs-hermes-agent-memory/) article. For a broader overview of available solutions, consulting [Open-source memory systems compared](/articles/open-source-memory-systems-compared/) is beneficial. The choice between them often depends on whether you prioritize OpenClaw's file-based transparency or Hermes's structured, multi-layered memory approach for OpenClaw AI agent memory.
-
-## Choosing the Right Memory Solution for OpenClaw
-
-Selecting the appropriate memory solution for OpenClaw involves considering several factors, including the complexity of your tasks, privacy requirements, and desired level of automation. The default memory system provides a basic level of recall, but for any serious, long-term application, external enhancements are necessary for effective OpenClaw AI agent memory.
-
-### Key Decision Factors for External Memory
-
-Here's a breakdown of factors to weigh when selecting an external memory solution:
-
-1. **Automation Level:** Do you want the agent to automatically save all interactions, or do you prefer a system where the agent still has some control over what's stored? Plugins like Hindsight offer high automation by default, improving OpenClaw AI agent memory without constant agent intervention.
-2. **Data Privacy:** Where will your agent's memory be stored? Cloud-based solutions might offer convenience but raise privacy concerns compared to local, offline storage options. Hindsight, for example, can be run entirely locally.
-3. **Scalability:** How much data do you expect your agent to process? Solutions like Mem0 are built for high scalability, ensuring performance doesn't degrade with growing memory footprints. According to Mem0's documentation, it can efficiently handle millions of memory entries.
-4. **Integration Complexity:** How easy is it to set up and integrate the memory solution with your existing OpenClaw setup? Some solutions offer simpler installation processes than others for managing OpenClaw AI agent memory.
-5. **Cost:** Are you looking for free, open-source solutions, or are you willing to pay for a managed service? Hindsight and Mem0 are open-source, while some commercial offerings may exist.
-
-Ultimately, the goal is to create an AI that truly remembers, moving beyond the limitations of short-term recall. This is central to the concept of [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
-
-### Comparative Overview of Memory Solutions
-
-| Feature | Hindsight | Supermemory | Mem0 |
-| :
+If search returns nothing, check that the files aren't empty, that the provider is set, then force a reindex. The docs also suggest a reindex when CJK text isn't found. If the agent ignores something you know is in `MEMORY.md`, check for truncation with `/context detail`. To compare OpenClaw with Nous Research's agent, see [OpenClaw vs Hermes Agent memory](/articles/openclaw-vs-hermes-agent-memory/).

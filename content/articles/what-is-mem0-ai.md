@@ -1,27 +1,10 @@
 ---
-title: What is Mem0 AI? Understanding its Role in Agent Memory
-description: What is Mem0 AI? Understanding its Role in Agent Memory. Learn about what is mem0 ai, mem0 ai with practical examples, code snippets, and architectural insights f...
+title: "What Is Mem0? How the Mem0 Memory Layer Works"
+description: "What Mem0 is in 2026: how it extracts and stores memories, the open-source library vs Mem0 Platform, graph memory, LLM and embedding setup, delete, pricing."
 date: 2026-04-09
-lastmod: 2026-04-09
-tags:
-- Mem0 AI
-- AI memory
-- Agent memory
-- LLM memory
-keywords:
-- what is mem0 ai
-- mem0 ai
-- AI memory framework
-- agent memory system
-- long-term memory AI
-faq:
-- question: How does Mem0 AI differ from traditional memory systems?
-  answer: Mem0 AI focuses on optimizing retrieval speed and managing long-term memory efficiently for AI agents, often outperforming general-purpose vector databases in specific agentic tasks.
-- question: Can Mem0 AI handle conversational memory?
-  answer: Yes, Mem0 AI is designed to store and retrieve conversational history, enabling AI agents to maintain context and recall past interactions for more coherent dialogues.
-- question: What are the main benefits of using Mem0 AI?
-  answer: Key benefits include enhanced recall capabilities, faster retrieval of relevant information, and efficient management of large volumes of data, crucial for complex AI agent operations.
+lastmod: 2026-10-08
 slug: what-is-mem0-ai
+cluster: agent-memory
 aliases:
 - /articles/best-llm-for-mem0/
 - /articles/llm-memory-mem0/
@@ -45,138 +28,179 @@ aliases:
 - /articles/mem0-memory-types/
 - /articles/mem0-openmemory/
 - /articles/mem0-pydantic-ai/
+tags:
+- Mem0
+- agent memory
+- LLM memory
+- open source
+keywords:
+- what is mem0
+- mem0 ai
+- mem0 memory layer
+- mem0 graph memory
+- mem0 embedding model
+- mem0 delete memory
+- mem0 openmemory
+- mem0 github
+faq:
+- question: "What is Mem0 used for?"
+  answer: "Mem0 gives AI assistants and agents long-term memory. You send it conversation turns, an LLM extracts facts such as preferences and decisions, and Mem0 stores them per user, agent or session. Before the next model call you search those memories and put the relevant ones in the prompt."
+- question: "Is Mem0 open source?"
+  answer: "Yes. The mem0ai library and the self-hosted server are Apache 2.0 on GitHub (mem0ai/mem0). The hosted Mem0 Platform is a paid service with a free tier. Some features, including graph memory, temporal reasoning and the Dream consolidation process, are Platform-only since the April 2026 release."
+- question: "Which LLM and embedding model does Mem0 use by default?"
+  answer: "The open-source library defaults to OpenAI: gpt-5-mini for extraction and text-embedding-3-small for embeddings, with a local Qdrant store. You can swap in Anthropic, Gemini, Groq, Ollama, Bedrock and others through the config, and the README suggests a stronger embedding model for hybrid search."
 ---
 
+**Mem0** ("mem-zero") is an open-source memory layer for AI agents. It uses an LLM to pull durable facts out of conversations, stores them with embeddings per user, agent or session, and returns the relevant ones when you search. It ships as a Python and Node library, a self-hosted Docker server, and the managed Mem0 Platform.
 
-Mem0 AI is a specialized framework for **AI agent memory**, engineered for efficient, long-term information retrieval. It allows AI agents to recall past experiences and knowledge accurately, which is crucial for applications needing persistent understanding across numerous interactions. This system optimizes recall speed and data management, defining **what is Mem0 AI's** core function.
+This page explains how Mem0 works today, what changed in the April 2026 release, and how to configure, query and delete memories. Facts come from the [Mem0 GitHub README](https://github.com/mem0ai/mem0), the [Mem0 docs](https://docs.mem0.ai) and the pricing page, checked on 8 October 2026.
 
-Could an AI truly learn and adapt without a reliable memory? The challenge of giving AI agents persistent, long-term memory is central to creating truly intelligent systems. Without it, agents are limited to their immediate context, unable to build experience or recall crucial past information.
+## What is Mem0?
 
-## What is Mem0 AI?
+**Mem0 is a memory layer that sits between your app and your model. You call `add` after an interaction so an LLM can extract facts worth keeping, and you call `search` before the next model call to fetch the memories that matter.** Your app decides which results go into the prompt. Memories are scoped by `user_id`, `agent_id` and `run_id`.
 
-Mem0 AI is a **framework and system for managing long-term memory in artificial intelligence agents**. It's engineered to provide fast, efficient retrieval of information, enabling AI agents to recall past experiences and knowledge accurately. This system is particularly useful for applications where an AI needs to maintain a consistent understanding across numerous interactions or tasks.
+The company behind it was founded by **Taranjeet Singh** and **Deshraj Yadav** and went through Y Combinator's S24 batch. Singh previously built Embedchain, an open-source RAG framework. In October 2025 Mem0 announced $24 million in combined seed and Series A funding led by Basis Set Ventures, according to [Inc42](https://inc42.com/buzz/mem0-raises-24-mn-to-scale-its-ai-memory-infrastructure).
 
-Mem0 AI offers a **specialized solution for AI memory**, distinct from general-purpose databases. It prioritizes the specific needs of AI agents, such as rapid context retrieval and the ability to distinguish between relevant and irrelevant past information. This focused design allows agents to act with greater coherence and informed decision-making. Understanding **what is Mem0 AI** helps clarify its role in agent development.
+The GitHub repository had about 66,800 stars in October 2026, the most of any agent memory project. The current Python package is `mem0ai` 2.2.1.
 
-### The Architecture of Mem0 AI
+## How Mem0 stores and retrieves memory
 
-At its core, Mem0 AI often relies on **vector embeddings** to represent and store information. These embeddings capture the semantic meaning of data, allowing for similarity-based retrieval. Unlike simple keyword matching, this approach enables the AI to find information that is conceptually related, even if the exact wording differs. According to a 2023 survey by VectorDB Benchmark, specialized vector databases can achieve retrieval latencies as low as 10-20ms for millions of vectors.
+Mem0 turns messages into short facts. It doesn't keep a verbatim transcript unless you ask it to.
 
-The system is built to manage a **growing knowledge base** without significant performance degradation. It employs optimized indexing and retrieval algorithms. These are crucial for ensuring that an AI agent can access the right information at the right time, a cornerstone of effective agentic behavior. What is Mem0 AI's approach to data handling? It involves efficient ingestion and indexing.
+| You send | Mem0 stores |
+|---|---|
+| "I prefer aisle seats" | User prefers aisle seats |
+| "Let's use Postgres for this project" | Project decision: use Postgres |
 
-#### Data Ingestion and Indexing
+### The write path
 
-The process begins with **ingesting data** into the Mem0 AI system. This data could be conversation logs, user feedback, documents, or any other relevant information. Each piece of data is converted into a vector embedding using a pre-trained or fine-tuned embedding model.
+Per the docs page [How Mem0 Works](https://docs.mem0.ai/core-concepts/how-it-works), an `add` call runs four steps:
 
-These embeddings are then **indexed** for efficient retrieval. Advanced indexing techniques, such as Hierarchical Navigable Small Worlds (HNSW) or Inverted File Index (IVF), are often employed to speed up similarity searches. The choice of indexing method impacts both retrieval speed and accuracy. This ensures **what is Mem0 AI's** data management is efficient.
+1. **Context lookup.** Mem0 checks related memories so it doesn't store the same fact twice.
+2. **Fact extraction.** An LLM pulls out preferences, decisions, plans and other reusable details.
+3. **Deduplication and embedding.** Redundant facts are dropped; each memory gets an embedding.
+4. **Entity extraction.** People, places, organizations and concepts are stored for entity matching.
 
-### Key Features of Mem0 AI
+Since the April 2026 algorithm, extraction is **single-pass and ADD-only**: one LLM call, and no automatic UPDATE or DELETE. If a user says "I moved from Austin to Seattle," Mem0 stores the new fact next to the old one. Retrieval is supposed to rank the current fact higher. When you need a correction, you call `update` or `delete` yourself.
 
-Mem0 AI distinguishes itself through several key features. It emphasizes **speed and efficiency in information retrieval**. This is paramount for real-time AI applications where delays can significantly impact performance. The system is designed to minimize latency when an agent needs to access its memory.
+That's a change from the design in the [Mem0 research paper](/articles/mem0-building-production-ready-ai-agents/), where an LLM chose ADD, UPDATE, DELETE or NOOP for every new fact.
 
-Another critical aspect is **scalability**. As AI agents interact with more data and perform more tasks, their memory requirements grow. Mem0 AI is built to scale, accommodating larger datasets and more complex memory structures without compromising retrieval speed. This ensures the system remains effective as the agent's experience expands.
+### The read path
 
-## Why is Mem0 AI Important for AI Agents?
+`search` scores memories on several signals at once: **semantic** similarity, **BM25 keyword** matching and **entity** overlap. In the open-source library, keyword and entity search need the NLP extra (`pip install "mem0ai[nlp]"` plus a spaCy model); without it, search is semantic only.
 
-The ability for an AI agent to **remember and learn from past interactions** is fundamental to its intelligence and utility. Without effective memory, agents would struggle to maintain context, avoid repeating mistakes, or build upon previous knowledge. Mem0 AI directly addresses this need by providing a structured and efficient memory backbone.
+Data lives in three stores: a SQL database for facts and metadata, a vector database for embeddings, and an entity store. In the open-source library the defaults are a local Qdrant collection (at `/tmp/qdrant`) and a SQLite history file under `~/.mem0`.
 
-Consider an AI assistant designed to manage a user's schedule and preferences. It needs to recall appointments, understand recurring patterns, and learn new preferences over time. A system like Mem0 AI allows the agent to store this information persistently and retrieve it quickly when needed, leading to a more personalized and effective user experience. This is a core aspect of **what is Mem0 AI's** value proposition.
+### Memory types in Mem0
 
-### Enhancing Agent Capabilities
+Mem0's docs talk about user, session and agent memory, which are scopes rather than separate stores. The code still has a `memory_type` enum with semantic, episodic and procedural values, but only `procedural_memory` does anything: with an `agent_id`, it summarizes an agent's run into a procedure. A comment in the source marks procedural memory for removal "in a future breaking release." For the concepts behind these labels, see episodic memory in AI agents.
 
-Mem0 AI significantly enhances an agent's capabilities by providing **persistent, long-term memory**. This allows agents to move beyond the limitations of short-term or context-window memory found in many Large Language Models (LLMs). It enables more complex reasoning and planning by giving agents access to a broader historical context. A 2024 study published on arXiv indicated that retrieval-augmented agents showed a 34% improvement in task completion rates compared to baseline models.
+## Open-source Mem0 vs Mem0 Platform
 
-This is particularly relevant for **autonomous agents** that operate over extended periods. For example, an agent tasked with market analysis would need to remember trends, past reports, and evolving market conditions. Mem0 AI provides the necessary memory infrastructure for such sophisticated operations. Understanding **what is Mem0 AI's** role here is crucial.
+Both versions share the same core calls: `add`, `search`, `get`, `get_all`, `update`, `delete`, `delete_all` and `history`. The differences are in hosting and in a set of ranking features that are now Platform-only.
 
-### Overcoming Context Window Limitations
+| | Open-source library / server | Mem0 Platform |
+|---|---|---|
+| License | Apache 2.0 | Commercial service |
+| Setup | `pip install mem0ai`, or `docker compose up` in `server/` | API key from app.mem0.ai |
+| You provide | LLM, embedder, vector store | Nothing; managed |
+| Graph memory | Removed in v3 | Built in, always on |
+| Temporal reasoning, memory decay | Not supported | Supported |
+| Dream (background consolidation) | Not available | Available (synthesis on Pro and above) |
+| Webhooks, export, batch delete | Not available | Available |
 
-Large Language Models often have **limited context windows**, restricting the amount of information they can process at any given time. This bottleneck can prevent them from accessing crucial historical data. Mem0 AI acts as an **external memory store**, allowing agents to effectively bypass these limitations.
+The source for this table is Mem0's own [Platform vs Open Source](https://docs.mem0.ai/platform/platform-vs-oss) page. The self-hosted server adds a REST API on port 8888, a dashboard on port 3000, per-user API keys and an audit log, backed by Postgres with pgvector.
 
-By storing relevant information externally and retrieving it on demand, agents can maintain a much larger effective memory. This is a key strategy discussed in [solutions for context window limitations](/articles/context-window-limitations-solutions/), where specialized memory systems play a vital role. This directly addresses a key question: **what is Mem0 AI** designed to solve?
+### Mem0 graph memory
 
-## How Mem0 AI Works: Core Concepts
+Older guides show `enable_graph=True` with Neo4j or Memgraph. That no longer works. The [v2-to-v3 migration guide](https://docs.mem0.ai/migration/oss-v2-to-v3) says "Graph memory is removed from the open-source SDK," the graph config keys are gone, and the `relations` field is no longer returned.
 
-Mem0 AI typically operates by converting raw data into **vector embeddings**. These numerical representations capture the semantic essence of text, images, or other data types. This process is often handled by **embedding models**, which are a critical component of modern AI memory systems, as explored in [embedding models for AI memory](/articles/embedding-models-for-rag/).
+On the Platform, graph memory links memories that share an entity, so a question about "Alice" can pull facts from many conversations. It affects ranking only; results come back in the normal shape. The open-source library still extracts entities and boosts on overlap, but there's no queryable graph. If you need open-source graph memory, look at Graphiti or Cognee, covered in [Mem0 alternatives](/articles/mem0-alternatives-compared/).
 
-Once embedded, data is stored in an **indexed vector database**. This database is optimized for **similarity search**, allowing the AI to query its memory by providing a new piece of information (also embedded). The system then returns the most semantically similar stored embeddings.
+### What happened to OpenMemory
 
-### Retrieval and Querying
+**OpenMemory** was Mem0's local MCP memory server for tools like Cursor and Claude Desktop. Mem0 removed OpenMemory references from its docs in March 2026 and removed the code from the monorepo in July 2026 (commit "remove OpenMemory from the monorepo"). The supported MCP route now is Mem0's hosted MCP server at mcp.mem0.ai, which needs a Platform key.
 
-When an AI agent needs to access its memory, it formulates a query. This query is also converted into an embedding. The Mem0 AI system then performs a **similarity search** against its indexed database, returning the most relevant stored embeddings, and by extension, the original data.
+## How to configure Mem0: LLM, embeddings and vector store
 
-The retrieved information is then passed back to the AI agent, providing it with the necessary context. This **retrieval-augmented generation (RAG)** approach is a powerful technique for enhancing LLM capabilities, as detailed in [RAG versus agent memory](/articles/rag-vs-agent-memory/). Mem0 AI optimizes this retrieval process specifically for agentic tasks.
+The open-source library defaults to OpenAI: `gpt-5-mini` for extraction and `text-embedding-3-small` for embeddings. The README recommends at least a Qwen 600M-class embedding model for the best hybrid search results.
 
-Here's a simple Python example illustrating vector embedding and similarity search, a core concept behind **what is Mem0 AI**:
+Supported providers in Python, per the configuration docs:
+
+- **LLMs:** OpenAI, Anthropic, Gemini, Groq, Ollama, AWS Bedrock, Azure OpenAI, LiteLLM and more.
+- **Embedders:** OpenAI, Azure OpenAI, Ollama, Hugging Face, Gemini, Vertex AI, Together, LM Studio, AWS Bedrock, FastEmbed and LangChain.
+- **Vector stores:** Qdrant, pgvector, Chroma, Pinecone, Redis, Weaviate, Milvus, Elasticsearch and others.
+
+There's no single "best LLM for Mem0." Extraction runs on every `add`, so a small, cheap model with reliable instruction following is the usual choice, and the docs advise keeping temperature at 0.2 or below. This example runs fully local with Ollama and Qdrant:
 
 ```python
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+from mem0 import Memory
 
-## Load a pre-trained sentence transformer model
-model = SentenceTransformer('all-MiniLM-L6-v2')
+config = {
+    "llm": {
+        "provider": "ollama",
+        "config": {"model": "llama3.1:8b", "temperature": 0.1},
+    },
+    "embedder": {
+        "provider": "ollama",
+        "config": {"model": "nomic-embed-text", "embedding_dims": 768},
+    },
+    "vector_store": {
+        "provider": "qdrant",
+        "config": {"host": "localhost", "port": 6333, "embedding_model_dims": 768},
+    },
+}
 
-## Sample data and their embeddings
-data = [
- "The quick brown fox jumps over the lazy dog.",
- "AI agents need efficient memory systems.",
- "Vector databases are crucial for efficient retrieval.",
- "Mem0 AI specializes in agent memory.",
- "What is the weather like today?"
-]
-embeddings = model.encode(data)
+memory = Memory.from_config(config)
 
-## User query
-query = "How do AI agents remember things?"
-query_embedding = model.encode([query])[0]
+result = memory.add("I'm vegetarian and I can't eat dairy.", user_id="dana")
+for item in result["results"]:
+    print("stored:", item["memory"])
 
-## Calculate similarity between query and data embeddings
-similarities = cosine_similarity(query_embedding.reshape(1, -1), embeddings)[0]
-
-## Find the most similar item
-most_similar_index = np.argmax(similarities)
-most_similar_text = data[most_similar_index]
-similarity_score = similarities[most_similar_index]
-
-print(f"Query: '{query}'")
-print(f"Most similar item: '{most_similar_text}' (Similarity: {similarity_score:.4f})")
+hits = memory.search("what should I cook for Dana?", filters={"user_id": "dana"}, top_k=5)
+for hit in hits["results"]:
+    print(hit["memory"], hit["score"])
 ```
 
-This example shows how semantic similarity can be used to retrieve relevant information, a fundamental principle powering systems like Mem0 AI.
+Two details trip people up after the upgrade. `search` and `get_all` take entity IDs inside `filters`; passing `user_id=` at the top level raises a `ValueError`. And the default `top_k` dropped from 100 to 20, with a default score `threshold` of 0.1.
 
-### Data Storage and Management
+If your embedding dimensions don't match the vector store's, search returns nothing. Set both explicitly when you change the embedder. For running a whole stack on your own machine, see how to give a local LLM memory.
 
-Mem0 AI ensures that the **memory store is persistent and reliable**. Data isn't lost when the agent stops or restarts. It also manages memory efficiently, potentially using techniques to prune outdated or less relevant information to keep the knowledge base focused. This proactive management is key to long-term agent performance.
+## How to delete memories in Mem0
 
-## Mem0 AI in Practice: Use Cases
+Deletion is explicit. Mem0's ADD-only extraction never removes anything on its own.
 
-Mem0 AI finds applications in a variety of AI agent scenarios. One common use case is in **conversational AI**, enabling chatbots and virtual assistants to remember past interactions and user preferences. This leads to more natural and personalized conversations, as discussed in [AI that remembers conversations](/articles/best-chatbot-for-memory/).
+```python
+memory.delete(memory_id="<memory-id>")   # one memory
+memory.delete_all(user_id="dana")         # everything for one user
+print(memory.history("<memory-id>"))      # change log for a memory
+```
 
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+`delete_all` still takes entity IDs as top-level arguments. On the Platform, `MemoryClient` has the same calls plus batch delete of up to 1,000 memories, user deletion, and **memory expiration** (`expiration_date`), which hides a memory after a date without deleting it. Expiration also works in the open-source library.
 
-Another significant area is **autonomous systems**. Agents controlling robots, managing complex simulations, or performing long-term research tasks benefit immensely from persistent memory. They can learn from their environment and adapt their behavior based on accumulated experience. Understanding **what is Mem0 AI** reveals its broad applicability.
+## Mem0 integrations and pricing
 
-### Customer Support Agents
+Mem0's docs list integrations for LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen, Agno, the OpenAI Agents SDK, Google ADK, Mastra, the Vercel AI SDK and AWS Strands. Most are written against the Platform. There are also plugins for coding agents: Claude Code, Cursor, Codex, OpenCode and others.
 
-For customer support, an AI agent equipped with Mem0 AI can access a vast history of customer interactions, product information, and troubleshooting guides. This allows it to provide faster, more accurate, and more personalized support, improving customer satisfaction. It can recall previous issues a customer faced and their resolutions.
+For **Hermes Agent**, Mem0 maintains a standalone memory plugin with three modes: Platform, a self-hosted Mem0 server, or in-process open source. It recalls memories for the current question with a 3-second wait, extracts facts in the background after each turn, and gives the model `mem0_search`, `mem0_add`, `mem0_update` and `mem0_delete` tools. Our Hermes Agent memory guide compares it with other providers.
 
-### Personalized Recommendation Systems
+Platform pricing, from [mem0.ai/pricing](https://mem0.ai/pricing) in October 2026:
 
-Mem0 AI can power highly personalized recommendation engines. By remembering a user's past choices, preferences, and interaction history, the AI can offer more relevant suggestions for products, content, or services, moving beyond simple collaborative filtering.
+| Plan | Price | Adds per month | Retrievals per month | Notes |
+|---|---|---|---|---|
+| Hobby | Free | 10,000 | 1,000 | 1 project |
+| Starter | $19/month | 50,000 | 5,000 | 1 project |
+| Pro | $249/month | 500,000 | 50,000 | Graph memory, Dream |
+| Enterprise | Custom | Unlimited | Unlimited | On-prem, SSO, SLA |
 
-### Research and Analysis Agents
+## Mem0 benchmarks: what the numbers mean
 
-An agent tasked with scientific research or market analysis can use Mem0 AI to store and recall vast amounts of data, findings, and hypotheses. This enables it to identify patterns, draw connections, and build complex arguments over time, accelerating discovery. This demonstrates **what is Mem0 AI's** power in data-intensive fields.
+The README reports the April 2026 algorithm at **92.5 on LoCoMo** and **94.4 on LongMemEval**, up from 71.4 and 67.8, using about 7,000 tokens per query. These are Mem0's own runs. The README says they "reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK." The evaluation code is public in `mem0ai/memory-benchmarks`.
 
-## Comparing Mem0 AI with Other Memory Solutions
+Other vendors report similar scores with different models and judges, so the numbers can't be ranked side by side. Our [LLM memory comparison](/articles/llm-memory-comparison/) lists each vendor's claims and who ran them.
 
-The landscape of AI memory systems is diverse, with various approaches and tools available. Mem0 AI stands out as a specialized framework, but it's important to understand how it compares to other options. A guide to AI memory frameworks can provide broader context.
+## When Mem0 is a good fit
 
-### Specialized vs. General-Purpose Memory
+Mem0 fits personalization: chat assistants and support agents that should remember a user's preferences, plans and history without replaying old transcripts. The API is small, it has the widest set of integrations, and you can start with the library and move to the server or Platform later.
 
-Mem0 AI is a **specialized memory framework** tailored for AI agents. This contrasts with general-purpose vector databases like Pinecone or Weaviate, which are designed for broader applications. While general databases are flexible, specialized systems like Mem0 AI often offer superior performance for specific agentic memory needs.
-
-Here's a comparison of memory system types:
-
-| Feature | Specialized Frameworks (e.g., Mem0 AI) | General-Purpose Vector Databases | Simple In-Memory Storage |
-| :
+It fits less well when you need open-source graph memory, facts that are explicitly invalidated over time, or an agent that edits its own memory. Those cases point to Graphiti, Zep, Letta, Cognee or [Hindsight](https://github.com/vectorize-io/hindsight); head-to-heads are in Mem0 vs Letta, Mem0 vs Cognee and [Zep vs Mem0](/articles/zep-memory-vs-mem0/). For the bigger picture of how memory layers fit into agents, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).

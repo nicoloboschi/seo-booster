@@ -1,203 +1,125 @@
 ---
-title: 'Chatbot Memory GitHub: Open-Source Solutions for AI Recall & Agent Memory Systems'
-description: Explore Chatbot Memory GitHub for open-source AI recall solutions. Discover tools for agent memory, LLM context, and conversational history management with practi...
+title: "Chatbot Memory on GitHub: Open-Source Repos (2026)"
+description: "A checked list of GitHub repos for chatbot memory: chat apps with built-in memory, memory libraries and templates, with license, stars and how each one remembers."
 date: 2026-03-31
-lastmod: 2026-03-31
-tags:
-- chatbot memory
-- AI memory
-- GitHub
-- open source
-- LLM
-- agent memory
-- conversational AI
-- agent memory system
-keywords:
-- chatbot memory github
-- AI memory GitHub
-- open source chatbot memory
-- LLM memory GitHub
-- chatbot conversation history
-- agent memory system
-- AI agent memory
-- conversational AI memory
-faq:
-- question: What is chatbot memory?
-  answer: Chatbot memory refers to the AI's capability to store, retrieve, and utilize information from previous interactions. This allows for more coherent, contextually relevant, and personalized conversations
-    over extended periods, making the AI feel more intelligent and helpful.
-- question: Why is GitHub important for chatbot memory development?
-  answer: GitHub hosts open-source projects, allowing developers to share, collaborate on, and contribute to chatbot memory solutions, fostering innovation and accessibility in AI development.
-- question: How can I find chatbot memory projects on GitHub?
-  answer: You can search GitHub directly for terms like 'chatbot memory,' 'LLM memory,' or 'conversational AI memory,' and explore repositories that offer libraries, frameworks, or full implementations.
-- question: What are the key components of an AI agent memory system?
-  answer: A robust AI agent memory system typically includes components for short-term (working) memory, long-term memory storage (e.g., vector databases, knowledge graphs), retrieval mechanisms, and potentially
-    summarization or consolidation processes to manage information effectively.
-- question: How can I build an effective agent memory system using GitHub resources?
-  answer: Building an effective agent memory system involves leveraging open-source tools from GitHub for storing conversation history, implementing vector databases for semantic retrieval, utilizing AI
-    frameworks like LangChain or LlamaIndex, and considering advanced architectures like episodic or semantic memory. Careful selection and integration of these components are key.
-- question: What makes an AI agent memory system effective?
-  answer: An effective AI agent memory system is characterized by its ability to store relevant information, retrieve it efficiently, manage context effectively within LLM limitations, and adapt to user
-    needs over time. It balances recall with relevance and avoids information overload.
-- question: What is the primary goal of chatbot memory projects on GitHub?
-  answer: The primary goal is to create open-source tools and frameworks that enable AI chatbots to retain, recall, and effectively use information from past interactions, thereby improving conversation
-    quality, context understanding, and user experience.
-- question: How do vector databases contribute to chatbot memory?
-  answer: Vector databases allow for semantic search, enabling chatbots to retrieve relevant past information based on meaning rather than exact keywords. This is crucial for handling diverse user queries
-    and recalling contextually similar information, a key aspect of many advanced memory implementations.
-- question: Can GitHub projects help my chatbot remember conversations long-term?
-  answer: Yes, many **chatbot memory GitHub** repositories offer solutions for long-term memory, including integrations with vector databases, summarization techniques, and frameworks designed for persistent
-    storage of conversational data. These go beyond the limited context windows of standard LLMs.
+lastmod: 2026-10-08
 slug: chatbot-memory-github
+tags:
+- Chatbot Memory
+- GitHub
+- Open Source
+- LLM Memory
+- Conversational AI
+keywords:
+- "chatbot memory github"
+- "open source chatbot with memory"
+- "chatbot long term memory github"
+- "ai chat app with memory self hosted"
+- "chatbot memory library python"
+cluster: agent-memory
+faq:
+  - question: "What is the best open-source chatbot with memory on GitHub?"
+    answer: "For a ready-made chat app, Open WebUI and LibreChat both have built-in user memory and are self-hostable; SillyTavern is the common choice for roleplay, with summaries, vector retrieval and lorebooks. To add memory to your own chatbot, libraries such as Mem0, Letta, Graphiti, Memobase, Hindsight and Cognee are open source. Pick by license and how memory is stored."
+  - question: "Are these chatbot memory repos free for commercial use?"
+    answer: "Check each license. LibreChat, Hindsight, LangMem and Supermemory are MIT; Mem0, Letta, Graphiti, Memobase and Cognee are Apache-2.0. SillyTavern and Honcho are AGPL-3.0, which has network-use obligations. Open WebUI and LobeHub use custom licenses with branding or derivative-work conditions."
+  - question: "How do I add memory to a chatbot I built?"
+    answer: "Store what matters outside the model and put it back in the prompt. The simplest way is a memory library: before each reply, search memories for the user and add them to the system prompt; after the reply, send the exchange to the library to extract and save new facts. Mem0's README shows this loop in about 20 lines of Python."
 ---
----
 
-**Chatbot memory GitHub** repositories offer open-source tools for AI recall. These solutions enable AI agents to retain context, manage conversation history, and achieve persistence, making them more intelligent and helpful assistants. GitHub serves as a central hub for these crucial developments in AI memory, particularly for building sophisticated **agent memory systems**.
+**Chatbot memory on GitHub** falls into three groups: **chat apps** you self-host that already remember users (Open WebUI, LibreChat, LobeHub, SillyTavern), **memory libraries** you add to your own bot (Mem0, Letta, Graphiti, Memobase, Hindsight and others), and **templates** that show the pattern in a few files. Licenses range from MIT to AGPL to custom terms, so check before you ship.
 
-## What is Chatbot Memory on GitHub?
+Every repo below was opened and checked through the GitHub API on **8 October 2026**. Stars are rounded and measure attention, not quality. For a deeper comparison of memory engines only, see [open-source AI memory systems compared](/articles/open-source-memory-systems-compared/).
 
-**Chatbot memory on GitHub** encompasses open-source projects, libraries, and frameworks enabling AI chatbots to store, retrieve, and use past conversational data. These resources help developers build context-aware AI systems that remember user interactions. The platform fosters collaboration on advanced memory solutions for AI agents, forming the backbone of many **AI agent memory** implementations.
+## What is chatbot memory?
 
-The **chatbot memory GitHub** ecosystem is vibrant and growing. Developers contribute to repositories addressing LLM context limitations. Their collective efforts aim to create AI agents capable of genuine, long-term recall. This collaborative environment accelerates the creation and adoption of effective memory solutions.
+**Chatbot memory is any mechanism that lets a chatbot use information from earlier conversations in a new one. Because language models are stateless, the app stores facts, summaries or past messages outside the model, then retrieves the relevant pieces and adds them to the prompt before each reply.**
 
-### The Importance of Open Source in AI Memory
+There are three common designs. A **profile or key-value store** keeps short facts like "prefers metric units." **Summaries** compress old chat into a running note. **Retrieval** embeds past messages or facts and searches them by similarity. Most of the projects below combine two of these. The [guide to adding memory to a chatbot](/articles/how-to-add-memory-to-chatbot/) walks through each design.
 
-Open-source initiatives on GitHub are fundamental to advancing AI memory systems. They democratize access to sophisticated technologies, enabling a broad developer community to build upon shared innovations. This collaborative model drives rapid iteration, bug resolution, and the creation of diverse, specialized memory architectures for **conversational AI memory**.
+## Self-hosted chat apps with built-in memory
 
-## Key Approaches to Chatbot Memory Found on GitHub
+These are full chat interfaces. You run them, connect a model, and memory is a setting.
 
-GitHub hosts a diverse range of strategies for implementing memory in chatbots. These span from basic conversation logging to intricate, multi-modal memory architectures. Understanding these distinct methods is essential for selecting appropriate tools for any given project, especially when designing an **agent memory system**.
+| Repo | License | Stars | How memory works |
+|---|---|---|---|
+| [open-webui/open-webui](https://github.com/open-webui/open-webui) | Open WebUI License (BSD-3 based, branding clause) | ~154,000 | Per-user memories in Settings > Personalization; models use `add_memory`, `search_memories` and related tools |
+| [LibreChat-AI/LibreChat](https://github.com/LibreChat-AI/LibreChat) | MIT | ~45,000 | Key/value memory configured in `librechat.yaml`; optional memory agent extracts entries |
+| [lobehub/lobehub](https://github.com/lobehub/lobehub) | LobeHub Community License (Apache-2.0 plus conditions) | ~83,000 | Memory plugin per assistant; memories with tags and weights in a memory panel |
+| [SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern) | AGPL-3.0 | ~34,000 | Summarize extension, chat vectorization, Data Bank (RAG) and World Info lorebooks |
 
-### Storing Conversation History
+**Open WebUI.** An admin enables memories globally (`ENABLE_MEMORIES` or the admin Features panel), and users manage entries under Settings > Personalization > Memory. Saved memories are injected into the system context by default, and models with native function calling can add, update, search and delete them through built-in tools. The [memory docs](https://docs.openwebui.com/features/chat-conversations/memory) warn that quality "depends heavily on the model." License note: clause 4 forbids removing Open WebUI branding in deployments with more than 50 users in a 30-day period, unless you have permission or an enterprise license.
 
-Many projects within the **chatbot memory GitHub** space prioritize the storage of raw conversation logs. This can range from simple message archiving to sophisticated indexing for faster retrieval. Some implementations even employ summarization techniques to condense lengthy dialogues.
+**LibreChat.** Memory is off until you add a `memory:` block to `librechat.yaml`. You set a `tokenLimit`, allowed categories with `validKeys`, and an `agent` with a provider and model that reads recent messages and writes new entries. Per the [LibreChat memory docs](https://www.librechat.ai/docs/features/memory), it's "a key/value store, not semantic search over conversation history," and with `personalize: true` users can toggle it per chat.
 
-* **Simple Log Files:** Storing messages in plain text or JSON files offers a straightforward approach.
-* **Database Integration:** Using SQL or NoSQL databases provides structured management of conversation turns.
-* **Summarization Techniques:** Employing LLMs to create concise summaries of past dialogues enhances recall efficiency.
+**LobeHub** (formerly LobeChat). Agent Memory is a built-in plugin you enable per assistant. It extracts key information into a structured memory base that you can search, edit and delete. The license lets you run it commercially unmodified, but distributing a derivative work needs a commercial license.
 
-### Implementing Vector Databases for Memory
+**SillyTavern.** The roleplay favorite has no single memory feature. The **Summarize** extension keeps a running summary (the docs warn it can lose details or hallucinate). **Chat vectorization** pulls older, relevant messages back into the prompt. **World Info** inserts lore entries when keywords appear, or by vector similarity. See the [SillyTavern docs](https://docs.sillytavern.app/extensions/summarize/).
 
-A significant trend observable in **chatbot memory GitHub** repositories is the adoption of **vector databases**. These databases represent information as numerical vectors, facilitating semantic search and retrieval. This method is highly effective for recalling information based on conceptual meaning, not just keywords, and is a cornerstone for robust **AI agent memory**.
+## Memory libraries for your own chatbot
 
-Projects frequently integrate popular vector databases such as Pinecone, Weaviate, Chroma, or FAISS. These tools enable highly efficient similarity searches, allowing chatbots to locate relevant past information even when user queries are phrased differently. This capability is a cornerstone of many Retrieval Augmented Generation (RAG) systems.
+If you're writing the bot yourself, a library handles extraction, storage and retrieval. Stars as of 8 October 2026.
 
-A 2024 study published on [arXiv](https://arxiv.org/abs/2401.02400) demonstrated that RAG-based memory systems can boost conversational task completion rates by up to 34% compared to models lacking external memory. Also, user engagement with chatbots equipped with memory has reportedly risen by an average of 20%, according to a 2023 industry survey by AI Trends.
+| Repo | License | Stars | Memory model | Good for |
+|---|---|---|---|---|
+| [mem0ai/mem0](https://github.com/mem0ai/mem0) | Apache-2.0 | ~66,800 | LLM-extracted facts per user, session or agent; hybrid search | Drop-in user memory for chat apps |
+| [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | MIT | ~47,000 | Retain, recall and reflect over memory banks; facts and experiences kept separate | Assistants that should learn over time |
+| [topoteretes/cognee](https://github.com/topoteretes/cognee) | Apache-2.0 | ~31,600 | Knowledge graph plus vectors | Bots grounded in documents and chats |
+| [getzep/graphiti](https://github.com/getzep/graphiti) | Apache-2.0 | ~31,500 | Temporal knowledge graph; facts have validity windows | Facts that change over time |
+| [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | MIT | ~31,200 | Memory, RAG and user profiles behind one API | Memory plus connectors |
+| [letta-ai/letta](https://github.com/letta-ai/letta) | Apache-2.0 | ~25,100 | Agents that edit their own memory blocks (MemGPT design) | Stateful agents; new work is in letta-code |
+| [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | AGPL-3.0 | ~7,500 | Models users and agents ("peers") over time | User modeling, multi-party chats |
+| [memodb-io/memobase](https://github.com/memodb-io/memobase) | Apache-2.0 | ~2,900 | User profiles and event timelines | Chatbots that need fast profile reads |
+| [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | MIT | ~1,700 | Memory tools and background manager | LangGraph chatbots |
 
-### Using Frameworks and Libraries for Agent Memory
+Memobase describes itself as "User Profile-Based Long-Term Memory for AI Chatbot Applications," which makes it the most chatbot-specific of the group; its last push was January 2026, so check activity before relying on it. Letta's older `letta` repo holds most of its stars, but the project's current development is the [Letta Code](https://github.com/letta-ai/letta-code) harness; the [Letta guide](/articles/letta-ai-guide/) explains the change.
 
-Several prominent AI development frameworks offer built-in modules or integrations for managing chatbot memory. Developers often contribute to or build upon these existing structures found on GitHub, accelerating development of **agent memory systems**.
+## Templates and research code
 
-* **LangChain:** This framework provides a variety of memory components, including buffer memories, summary memories, and vector store retrievers. Numerous custom memory implementations are shared on GitHub.
-* **LlamaIndex:** This tool focuses on data indexing and retrieval, offering utilities to connect LLMs with external data sources, including conversational history. Its flexibility makes it a popular choice for memory integration.
-* **Hindsight:** An open-source AI memory system designed for LLM applications, Hindsight offers a flexible approach to managing and retrieving conversational context. Other open-source AI memory systems, such as Hindsight, also offer flexible ways to manage conversational context.
+Smaller repos that are useful to read:
 
-These frameworks significantly simplify memory implementation. They allow developers to concentrate on the core logic of their AI agents rather than low-level memory management.
+- **[langchain-ai/memory-agent](https://github.com/langchain-ai/memory-agent)** (MIT, ~480 stars). A LangGraph ReAct agent with a tool to save memories, scoped to a configurable `user_id` so it learns preferences across threads. Its sibling `memory-template` is archived. The [LangGraph chatbot with memory](/articles/chatbot-with-memory-langgraph/) page explains the checkpointer and store behind it.
+- **[zhongwanjun/MemoryBank-SiliconFriend](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)** (MIT, ~460 stars). Code and data for the paper [MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250) (Zhong et al., 2023), which added forgetting-curve-based memory updates to a companion chatbot. Last updated May 2023; read it as research, not a dependency.
 
-### Advanced Memory Architectures for AI Agents
+## Minimal chatbot memory loop in Python
 
-Beyond basic history logging and vector stores, some **chatbot memory GitHub** projects explore more sophisticated memory systems. These advanced architectures aim for deeper contextual understanding and more human-like recall, crucial for advanced **AI agent memory**.
-
-* **Episodic Memory:** This approach focuses on storing specific events or interactions as distinct, retrievable memories, mirroring human episodic recall. Projects often investigate methods for precise timestamping and contextualizing these events. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is critical for developing agents that can recount specific past occurrences.
-* **Semantic Memory:** This involves maintaining a knowledge base of facts and concepts acquired over time, independent of specific conversations. Implementation often involves structured knowledge graphs or ontologies, allowing for generalized knowledge retrieval.
-* **Working Memory:** This system manages short-term context within a single, ongoing conversation. While LLM context windows handle some of this, augmented working memory systems offer more control and capacity.
-
-## Finding Chatbot Memory Projects on GitHub for Agent Memory
-
-Effectively searching the vast landscape of **chatbot memory GitHub** repositories requires strategic approaches. Here are some key tips to help you discover relevant projects and tools for building **agent memory systems**.
-
-1. **Use Specific Keywords:** Search for terms like "chatbot memory," "LLM memory," "conversational AI memory," "agent memory," or "long-term memory LLM." Combining keywords can refine your search.
-2. **Filter by Language/Framework:** If you're working with Python, filter results to show Python projects. Similarly, if you're using LangChain, search for "LangChain memory" to find relevant integrations.
-3. **Assess Stars and Forks:** Repositories with a high number of stars and forks often indicate active development, community interest, and reliability. These are good indicators of quality.
-4. **Explore Related Projects:** Examine the dependencies and contributors of popular memory projects. This can lead you to discover other valuable, related tools and libraries.
-5. **Look for "Awesome Lists":** Many developers curate "awesome lists" on GitHub, which are collections of useful resources for specific topics. Searching for "awesome AI memory" or "awesome LLM tools" can yield great results.
-
-### Example: A Simple Conversation Memory Implementation
-
-This basic Python example demonstrates simulating short-term memory for a chatbot using a dictionary. This fundamental logic is often expanded upon in more complex **chatbot memory GitHub** projects, integrating external storage and retrieval mechanisms for a complete **agent memory system**.
+This is the pattern from Mem0's README: search memories before the reply, save the exchange after. It uses Mem0's default OpenAI models, so set `OPENAI_API_KEY`.
 
 ```python
-class SimpleChatbotMemory:
- def __init__(self):
- # Using a dictionary to store conversation history by user ID
- self.memory = {}
- # Limit history to the last 10 turns for this simple example
- self.max_history_length = 10
+from openai import OpenAI
+from mem0 import Memory
 
- def add_message(self, user_id, role, content):
- if user_id not in self.memory:
- self.memory[user_id] = []
+client = OpenAI()
+memory = Memory()
 
- self.memory[user_id].append({"role": role, "content": content})
+def chat(message: str, user_id: str) -> str:
+    # 1. Recall: find memories relevant to this message
+    found = memory.search(query=message, filters={"user_id": user_id}, top_k=3)
+    notes = "\n".join(f"- {m['memory']}" for m in found["results"])
 
- # Trim history if it exceeds the maximum length
- if len(self.memory[user_id]) > self.max_history_length:
- self.memory[user_id] = self.memory[user_id][-self.max_history_length:]
+    # 2. Respond with the memories in the system prompt
+    messages = [
+        {"role": "system", "content": f"You are a helpful assistant.\nUser memories:\n{notes}"},
+        {"role": "user", "content": message},
+    ]
+    reply = client.chat.completions.create(model="gpt-5-mini", messages=messages)
+    answer = reply.choices[0].message.content
 
- def get_history(self, user_id):
- # Return the history for a given user ID, or an empty list if none exists
- return self.memory.get(user_id, [])
+    # 3. Retain: extract and store new facts from this exchange
+    messages.append({"role": "assistant", "content": answer})
+    memory.add(messages, user_id=user_id)
+    return answer
 
- def clear_history(self, user_id):
- # Remove all stored history for a specific user ID
- if user_id in self.memory:
- del self.memory[user_id]
-
-## Example Usage
-memory_manager = SimpleChatbotMemory()
-user_id = "user123"
-
-memory_manager.add_message(user_id, "user", "Hello, what's the weather like?")
-memory_manager.add_message(user_id, "assistant", "I can't check the weather directly. Is there anything else I can help with?")
-memory_manager.add_message(user_id, "user", "Tell me about AI memory systems.")
-
-print(f"History for {user_id}:")
-for message in memory_manager.get_history(user_id):
- print(f"- {message['role']}: {message['content']}")
-
-## To implement long-term memory, you would need to integrate this with
-## vector databases, summarization, or external storage solutions.
+print(chat("I'm vegetarian and live in Lisbon.", user_id="ana"))
+print(chat("Suggest a dinner spot near me.", user_id="ana"))
 ```
 
-This basic example illustrates the core concept of storing and retrieving conversational data. Advanced systems found on **chatbot memory GitHub** repositories expand on these fundamentals by incorporating sophisticated indexing, retrieval algorithms, and reasoning capabilities, forming the basis of advanced **AI agent memory**.
+Swap in any library from the table and the shape stays the same: recall, respond, retain.
 
-## Challenges in Chatbot Memory Development for Agents
+## How to choose a chatbot memory repo
 
-Despite significant progress in **chatbot memory GitHub** projects, developers still face several persistent challenges. Overcoming these hurdles is crucial for building truly effective and reliable **AI agent memory systems**.
-
-* **Context Window Limitations:** Large Language Models (LLMs) possess finite context windows, restricting the amount of information they can process at once. Effective memory systems must intelligently manage and condense information to fit these constraints. Research into [context window limitations and solutions](/articles/context-window-limitations-solutions/) is ongoing and vital.
-* **Information Overload and Filtering:** Storing excessive, irrelevant information can degrade an agent's performance and responsiveness. Agents require sophisticated mechanisms to prioritize, filter, and select what is truly important for current tasks.
-* **Forgetting and Relevance Management:** Determining precisely *when* and *what* an AI agent should forget is as critical as remembering. Past information that is no longer relevant can lead to nonsensical or outdated responses, hindering helpfulness.
-* **Scalability Issues:** Memory systems must scale efficiently to handle a growing number of users and increasingly lengthy conversations without performance degradation. This requires optimized data structures and retrieval algorithms.
-* **Privacy and Security Concerns:** Storing sensitive user conversation data introduces significant privacy and security risks. Developers must implement strong safeguards and adhere to regulations to protect user information.
-
-## The Future of Chatbot Memory on GitHub
-
-The **chatbot memory GitHub** community consistently pushes the boundaries of AI capabilities. Future developments are likely to focus on increasingly sophisticated and integrated memory solutions for **AI agent memory**.
-
-* **Hybrid Memory Systems:** Expect to see more projects combining different memory types, such as episodic, semantic, and working memory, for more nuanced and human-like recall. This integration aims for a more holistic understanding.
-* **Memory Consolidation:** Developing advanced techniques for agents to efficiently process, integrate, and consolidate new information into their long-term knowledge bases is a key area. [Memory consolidation AI agents](/articles/memory-consolidation-ai-agents/) represent a significant research frontier.
-* **Personalized Memory Architectures:** Tailoring memory systems to individual user preferences, interaction styles, and past experiences will lead to more engaging and effective AI assistants. This personalization enhances user satisfaction.
-* **Explainable Memory Mechanisms:** Creating systems where the AI can articulate *why* it recalls certain information will increase transparency and user trust. Understanding the reasoning behind memory recall is crucial.
-* **Multi-Modal Data Integration:** Enabling memory systems to seamlessly handle and recall information from diverse sources, including text, images, audio, and video, will unlock new application possibilities. Exploring resources like [best AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems) provides further insights into emerging tools and strategies.
-
-The continuous development on GitHub ensures that more powerful and versatile AI memory solutions will become available, making chatbots increasingly intelligent, helpful, and contextually aware.
-
-## FAQ
-
-* **What is the primary goal of chatbot memory projects on GitHub?**
- The primary goal is to create open-source tools and frameworks that enable AI chatbots to retain, recall, and effectively use information from past interactions, thereby improving conversation quality, context understanding, and user experience.
-
-* **How do vector databases contribute to chatbot memory?**
- Vector databases allow for semantic search, enabling chatbots to retrieve relevant past information based on meaning rather than exact keywords. This is crucial for handling diverse user queries and recalling contextually similar information, a key aspect of many advanced memory implementations.
-
-* **Can GitHub projects help my chatbot remember conversations long-term?**
- Yes, many **chatbot memory GitHub** repositories offer solutions for long-term memory, including integrations with vector databases, summarization techniques, and frameworks designed for persistent storage of conversational data. These go beyond the limited context windows of standard LLMs.
-
-* **What are the key components of an AI agent memory system?**
- A robust AI agent memory system typically includes components for short-term (working) memory, long-term memory storage (e.g., vector databases, knowledge graphs), retrieval mechanisms, and potentially summarization or consolidation processes to manage information effectively.
-
-* **How can I build an effective agent memory system using GitHub resources?**
- Building an effective agent memory system involves using open-source tools from GitHub for storing conversation history, implementing vector databases for semantic retrieval, using AI frameworks like LangChain or LlamaIndex, and considering advanced architectures like episodic or semantic memory. Careful selection and integration of these components are key.
-
-* **What makes an AI agent memory system effective?**
- An effective AI agent memory system is characterized by its ability to store relevant information, retrieve it efficiently, manage context effectively within LLM limitations, and adapt to user needs over time. It balances recall with relevance and avoids information overload.
+1. **Need a chat UI today?** Start with Open WebUI or LibreChat; both are self-hosted and have per-user memory.
+2. **Building roleplay or fiction?** SillyTavern's summaries and lorebooks fit better than fact extraction.
+3. **Writing your own bot?** Use a library. Mem0 is the most common starting point; Graphiti suits facts that change; Hindsight and Letta suit agents that learn from experience.
+4. **Check the license** against how you'll ship. AGPL and custom licenses matter if you host it for others.
+5. **Check activity.** Look at the last push date and open issues, not just stars.
+6. **Test on your own chats** before committing; the [LLM memory comparison](/articles/llm-memory-comparison/) lists published benchmark results and their caveats.

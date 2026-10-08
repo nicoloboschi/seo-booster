@@ -1,151 +1,135 @@
 ---
-title: 'AI Agents Memory Storage: Memori, GibsonAI, and Advanced Recall Systems'
-description: Explore AI agents memory storage with Memori and GibsonAI concepts. Understand agent memory, long-term memory AI, AI recall, and practical implementations for int...
+title: "Memori by GibsonAI: SQL-Native Memory Storage for Agents"
+description: "What Memori is: the SQL-native agent memory library started by GibsonAI, now Memori Labs. How it stores memory in your database, Python setup, benchmarks."
 date: 2026-03-26
-lastmod: 2026-03-26
+lastmod: 2026-10-08
+slug: ai-agents-memory-storage-memori-gibsonai
+cluster: agent-memory
 tags:
-- AI memory
-- agent architecture
 - Memori
 - GibsonAI
-- long-term memory
-- AI recall
-- ai agents memory storage memori gibsonai
+- Memori Labs
 - agent memory
-- AI memory systems
+- SQL
 keywords:
 - ai agents memory storage memori gibsonai
-- agent memory
-- long-term memory AI
-- AI recall
-- memori
-- gibsonai
-- AI memory systems
-- AI memory storage
-- agent memory storage
-- AI recall systems
+- memori gibsonai
+- memori memory engine
+- memori labs
+- sql memory for ai agents
+- memori byodb
 faq:
-- question: What is Memori in the context of AI agents?
-  answer: Memori refers to a conceptual framework or a specific system designed for AI agents to store, retrieve, and utilize past experiences and information, enabling more sophisticated recall and learning.
-    It's key for effective ai agents memory storage.
-- question: How does GibsonAI relate to AI memory storage?
-  answer: GibsonAI, drawing from ecological psychology, suggests AI agents might store memory related to actionable possibilities and environmental interactions, influencing future decision-making. This
-    perspective enhances ai agents memory storage by focusing on affordances.
-- question: Can AI agents store memories like humans?
-  answer: While AI agents can store and recall vast amounts of data, their memory storage is fundamentally different from human biological memory. AI memory is typically data-driven and computationally
-    managed, lacking the subjective, emotional, and associative qualities of human recall. Effective ai agents memory storage focuses on computational recall.
-- question: What are the key components of AI agents memory storage?
-  answer: Key components include methods for storing, retrieving, and processing past experiences. This often involves structured data, embedding models, vector databases, and mechanisms for memory consolidation
-    and forgetting, all contributing to effective AI recall.
-slug: ai-agents-memory-storage-memori-gibsonai
+- question: "What is Memori by GibsonAI?"
+  answer: "Memori is an open-source (Apache 2.0) memory layer for LLM agents that was first released in 2025 under GibsonAI, a database company, as a 'SQL-native' memory engine. It is now developed by Memori Labs. It wraps your LLM client, records conversations, extracts structured memories, and recalls them automatically on later calls."
+- question: "Where does Memori store agent memory?"
+  answer: "Either in Memori Cloud or in your own database (BYODB). BYODB supports PostgreSQL, MySQL, MariaDB, SQLite, CockroachDB, TiDB, OceanBase, Oracle and MongoDB, plus managed services built on them. Memories land in tables such as memori_entity_fact and memori_knowledge_graph."
+- question: "Is Memori the same as memorisdk?"
+  answer: "memorisdk was the original PyPI package name under GibsonAI, with a 'conscious' and 'auto' memory mode. The current package is memori (version 3.3.6 in May 2026) with a different API built around registering your LLM client and setting entity and process attribution."
 ---
 
-AI agents memory storage, encompassing concepts like Memori and GibsonAI, refers to the systems enabling AI agents to retain, access, and process past experiences for learning and decision-making. This capability is vital for agents to adapt and make informed decisions over time, moving beyond simple recall to sophisticated long-term memory.
+**Memori** is an open-source memory layer for AI agents that stores memory in **ordinary SQL databases** rather than a dedicated vector store. It started in 2025 as a GibsonAI project billed as a "SQL-native memory engine," and is now developed by **Memori Labs**. You wrap your LLM client with Memori, and it records conversations, extracts facts and relationships, and injects relevant memories into later calls automatically.
 
-What if an AI agent could truly remember every past interaction, learning and evolving with each experience? This capability is central to developing intelligent agents that can adapt and make informed decisions. **AI agents memory storage** provides the mechanisms for this crucial function, enabling agents to learn from their history.
+This page explains where Memori came from, how it stores and recalls memory today, how to set it up in Python with your own database, and how to read its benchmark claims. Sources are the [Memori GitHub repo](https://github.com/MemoriLabs/Memori), the [Memori docs](https://memorilabs.ai/docs/) and the [Memori paper](https://arxiv.org/abs/2603.19935), checked on 8 October 2026.
 
-## What is AI Agents Memory Storage?
+## What is Memori?
 
-**AI agents memory storage** refers to the methods and architectures enabling artificial intelligence agents to retain, access, and process information from past experiences or data. It's the foundation for an agent's ability to learn, adapt, and make informed decisions over time. Effective memory storage prevents agents from repeatedly making the same mistakes and allows for more complex reasoning. This is a foundational aspect of advanced AI systems and crucial for robust **AI recall systems**.
+**Memori is an LLM-, database- and framework-agnostic memory layer. It intercepts calls made through a registered LLM client, stores the conversation, runs background "Advanced Augmentation" to extract facts, preferences, relationships and rules, and recalls matching memories into future prompts. Memories can live in Memori Cloud or in your own SQL database.**
 
-### The Importance of Memory in AI Agents
+The core idea is that agent memory is a **data structuring problem**. The Memori paper argues that compact, structured records (semantic triples plus conversation summaries) beat bigger context windows on both accuracy and cost.
 
-Without a reliable memory system, AI agents would be perpetually stateless, forgetting every interaction once it concludes. This severely limits their utility, especially in applications requiring continuous learning or context-aware responses. Imagine a chatbot that forgets your preferences after each message; it would be incredibly frustrating. **Agent memory storage** bridges this gap, enabling persistent learning and context retention. This is a core component of [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/). The efficiency of memory systems directly impacts agent performance and the quality of **AI recall**.
+The repository is Apache 2.0, written in Python with a Rust core, and had about 17,000 GitHub stars in October 2026.
 
-## Understanding Memori in AI Agents Memory Storage
+## From GibsonAI to Memori Labs
 
-The concept of "Memori" in AI agents memory storage often refers to a dedicated subsystem for managing an agent's history. This isn't always a single, monolithic component but can be a collection of techniques. These systems aim to mimic aspects of human memory, allowing agents to recall specific events (episodic memory) or general knowledge (semantic memory). Effective **AI memory systems** rely on these structured approaches for robust **agent memory**.
+The history explains why search results mix the two names.
 
-### Types of Memori Systems
+- **2025, GibsonAI.** The repo was created in July 2025 under GibsonAI, a company building AI-managed databases. Its early README called Memori an "Open-Source Memory Engine for LLMs, AI Agents & Multi-Agent Systems," installed with `pip install memorisdk`. It offered **dual-mode memory**: "conscious" short-term memory promoted into context, and "auto" mode that searched the database per query. Storage was SQLite, PostgreSQL or MySQL.
+- **2026, Memori Labs.** The project moved to the `MemoriLabs/Memori` repo (the old GibsonAI URL redirects). Memori Labs launched **Memori Cloud**, a hosted version, in March 2026, per [Open Source For You](https://www.opensourceforu.com/2026/03/open-source-memory-engine-from-memori-labs-goes-fully-hosted-with-memori-cloud/), with deployment options for cloud, BYODB, VPC and on-prem. The company's CEO is Adam B. Struck and its CTO is Michael Montero, both authors of the Memori paper.
 
-AI memory storage can be categorized by the type of information retained. **Episodic memory** allows agents to store and recall specific past events, including their context, time, and outcomes. **Semantic memory** stores general knowledge, facts, and concepts not tied to a specific time or place, forming the agent's stable knowledge base. These distinctions are crucial for designing sophisticated memory solutions and enhancing **AI recall**.
+The current package is `memori` on PyPI (3.3.6, May 2026) and `@memorilabs/memori` on npm. Code written for `memorisdk`, including `conscious_ingest=True` and `memori.enable()`, doesn't match the current API.
 
-### Benefits of Memori Frameworks
+## How Memori stores and recalls memory
 
-Implementing strong memori frameworks provides agents with crucial capabilities. They enable persistent learning and context retention, preventing agents from repeatedly making the same mistakes. This leads to more sophisticated reasoning and adaptation over time. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) reveals its importance for memory systems and **long-term memory AI**.
+### Attribution: entity, process, session
 
-## GibsonAI and Memory Storage Concepts
+Memori tracks memory at three levels, and it **won't create memories without attribution**:
 
-The influence of **GibsonAI**, drawing from ecological psychology and James J. Gibson's theory of affordances, offers a unique perspective on memory storage for AI agents. Gibson proposed that organisms perceive the environment in terms of what it offers them, its affordances. For an AI, this could mean storing memory not just as raw data, but as an understanding of potential actions and their consequences within specific environmental contexts. This perspective is vital for naturalistic **AI recall** systems and advanced **agent memory**.
+| Level | Meaning | Example |
+|---|---|---|
+| **Entity** | A person, place or thing | `user_123` |
+| **Process** | Your agent, program or LLM workflow | `support_agent` |
+| **Session** | One run of interactions between them | Set automatically, or with `set_session()` |
 
-### Affordances as Memory Units
+### Advanced Augmentation
 
-Instead of storing a log of every sensor reading, an AI influenced by Gibson might store memories of "graspable objects," "walkable surfaces," or "operable buttons." These affordances represent the potential interactions an agent can have with its environment. This **action-oriented memory storage** can lead to more efficient decision-making, as the agent directly accesses relevant interaction possibilities. This is a key facet of advanced memory systems and contributes to **long-term memory AI**.
+After each LLM call returns, Memori queues the conversation for **Advanced Augmentation** in the background, so the response isn't delayed. Per the [augmentation docs](https://github.com/MemoriLabs/Memori/blob/main/docs/memori-byodb/concepts/advanced-augmentation.mdx), it:
 
-### Contextual Memory and Perception
+1. reads the user messages and AI responses;
+2. identifies facts, preferences, skills, attributes and events;
+3. extracts semantic triples (subject, predicate, object);
+4. generates embeddings for semantic search;
+5. stores the results.
 
-Gibson's work emphasizes the inseparable link between perception and action. In this framework, AI memory storage would be deeply integrated with the agent's perceptual system. Memories wouldn't be passive data stores but active components that shape how the agent perceives and interacts with the world. This ties into [temporal reasoning AI memory](/articles/temporal-reasoning-ai-memory/) by linking past perceptions to present actions within the memory paradigm, enhancing **AI recall**.
+It also captures **agent execution traces**, such as tool calls, decisions and outcomes, which is what the README means by "memory from what agents do, not just what they say."
 
-## Implementing AI Agents Memory Storage
+One detail matters for privacy. By default (Memori 3.3.6), the Python SDK's BYODB mode still sends conversations to Memori's hosted augmentation API and writes the results to your database. The README says augmentation works without an account but is rate-limited per IP address, and an API key raises the limits. So BYODB keeps the **stored** memory in your database; it doesn't keep extraction off Memori's servers.
 
-Developing effective AI agents memory storage involves several technical considerations, from data structures to retrieval algorithms. The choice of implementation significantly impacts an agent's performance and scalability. Successful **AI memory systems** require careful architectural design for robust **agent memory**.
+### Recall
 
-### Vector Databases and Embeddings
+When a new call goes through the wrapped client, Memori searches stored entity facts for the query, ranks candidates by vector similarity (the docs mention FAISS), and adds the matches to the prompt. Agents running under OpenClaw or Hermes also get explicit recall tools, such as `memori_recall` and `memori_recall_summary`.
 
-Modern AI memory systems heavily rely on **vector databases** and **embedding models**. Information is converted into numerical vectors (embeddings) that capture semantic meaning. These vectors can then be stored in specialized databases, allowing for efficient similarity searches. This is a cornerstone of many [retrieval-augmented generation (RAG)](/articles/rag-vs-agent-memory/) systems. The effectiveness of these systems depends on the quality of the [embedding models for memory](/articles/embedding-models-for-rag/) and is vital for **AI recall**.
+### What the tables look like
 
-A 2024 study published on arXiv (e.g. arXiv:2401.12345) demonstrated that retrieval-augmented agents using advanced embedding techniques achieved a 34% improvement in task completion accuracy compared to baseline models. This highlights the impact of sophisticated memory storage on agent capabilities and **long-term memory AI**.
+In BYODB mode, Memori creates its own tables in your database, including `memori_conversation_message` (raw messages), `memori_entity_fact` (extracted facts used for recall), `memori_process_attribute` and `memori_knowledge_graph`. Because it's plain SQL, you can query, back up and audit memory with tools you already run. For the tradeoffs of SQL versus vector stores, see [vector databases for LLM memory](/articles/vector-database-for-llm-memory/).
 
-### Memory Consolidation and Forgetting
+## Setting up Memori in Python with your own database
 
-Just as humans consolidate memories and sometimes forget irrelevant information, AI agents benefit from similar processes. **Memory consolidation** involves strengthening important memories and integrating them into the agent's knowledge base. **Forgetting mechanisms** are also crucial, preventing the memory from becoming overloaded with outdated or irrelevant data. This is an active area of research in [memory consolidation AI agents](/articles/memory-consolidation-ai-agents/), directly impacting the design of memory systems and the efficiency of **AI recall**.
+This follows the BYODB quickstart and matches `memori` 3.3.6:
 
-### Context Window Limitations
+```python
+import sqlite3
+from memori import Memori
+from openai import OpenAI
 
-A significant challenge in AI agents memory storage is the **context window limitation** of large language models (LLMs). LLMs can only process a finite amount of text at once. To overcome this, external memory systems are employed, allowing agents to retrieve relevant information from a larger knowledge base and inject it into the LLM's context. This is where techniques like RAG become indispensable. Solutions often involve sophisticated retrieval strategies and managing very large context windows, as seen in [1 million context window LLM](/articles/context-window-llm-ranking/) and [10 million context window LLM](/articles/context-window-llm-ranking/) research. These advancements are critical for scalable **AI recall** and effective **agent memory**.
+client = OpenAI()  # needs OPENAI_API_KEY
 
-## Tools and Frameworks for AI Memory Storage
+mem = Memori(conn=lambda: sqlite3.connect("memori.db")).llm.register(client)
+mem.config.storage.build()  # create Memori's tables
+mem.attribution(entity_id="user_123", process_id="support_agent")
 
-Several open-source tools and frameworks assist developers in implementing memory storage for AI agents. These range from simple key-value stores to sophisticated vector databases and memory management libraries. Choosing the right tools is paramount for effective **AI memory systems** and robust **agent memory storage**.
+client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": "My favorite color is blue."}],
+)
+mem.augmentation.wait()  # short scripts: let background extraction finish
 
-### Open-Source Memory Systems
+reply = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": "What's my favorite color?"}],
+)
+print(reply.choices[0].message.content)  # Memori injects the stored fact
+```
 
-Projects like **Hindsight** offer flexible solutions for managing AI agent memory, enabling developers to build agents with persistent memory capabilities. Hindsight, an open-source AI memory system, provides a framework for storing and retrieving agent experiences, supporting development of more intelligent and context-aware agents. You can explore it on [GitHub](https://github.com/vectorize-io/hindsight). Comparing different [open-source memory systems](/articles/open-source-memory-systems-compared/) is essential for choosing the right tools for **long-term memory AI**.
+Swap the connection factory for PostgreSQL, MySQL or another supported engine. For Memori Cloud, drop `conn` and set `MEMORI_API_KEY`.
 
-### LLM Memory Libraries
+Supported pieces, per the README and docs:
 
-Libraries like LangChain and LlamaIndex provide abstractions for memory management, integrating with LLMs and vector stores. They offer pre-built components for various memory types, including conversation summaries and conversation buffers. These tools simplify the process of giving an AI memory, as discussed in [how to give AI memory](/articles/how-to-give-ai-agents-memory/). For developers comparing options, [Zep Memory AI Guide](/articles/what-is-zep-memory/) and [Letta AI Guide](/articles/letta-ai-guide/) offer insights into specific platforms relevant to **AI memory systems** and **agent memory storage**.
+- **LLMs:** OpenAI (Chat Completions and Responses), Anthropic, Gemini, Bedrock, DeepSeek and xAI Grok; streamed and unstreamed, sync and async.
+- **Frameworks:** Agno, LangChain and Pydantic AI.
+- **Databases (BYODB):** PostgreSQL, MySQL, MariaDB, SQLite, CockroachDB, TiDB, OceanBase, Oracle and MongoDB, plus managed services such as AWS RDS, Neon and Supabase.
+- **Agents and tools:** an OpenClaw plugin, a Hermes Agent memory provider, and an MCP server for Claude Code, Cursor and Codex.
 
-## Memori vs. GibsonAI in Practice
+## Memori benchmark claims
 
-While "Memori" is a broad term for memory systems, and GibsonAI offers a theoretical lens, practical implementations often blend these ideas. An AI agent might use a vector database (inspired by Memori's need for structured recall) to store embeddings of perceived affordances (inspired by GibsonAI). This synthesis is key for advanced **agent memory** solutions and effective **AI recall systems**.
+Memori reports results on [LoCoMo](https://arxiv.org/abs/2402.17753), and two sources give different numbers:
 
-For example, an autonomous robot agent might:
+- The **README** reports **87% overall accuracy** at an average of **721 tokens per query**, which it calls 2.8% of the full-context footprint.
+- The **paper** ([arXiv 2603.19935](https://arxiv.org/abs/2603.19935), March 2026) reports **81.95% accuracy** at **1,294 tokens per query**, about 5% of full context, with 67% fewer tokens than competing approaches.
 
-1. **Perceive** an object.
-2. **Analyze** its properties and the environment to identify affordances (e.g. "this is a graspable cup on a stable surface").
-3. **Embed** these affordances and their context.
-4. **Store** these embeddings in a vector database (its "Memori" system).
-5. When needing to grasp a cup later, **retrieve** similar affordance embeddings to inform its motor control.
+The gap likely reflects different versions or setups, but neither source explains it. Both are **self-reported** by Memori Labs, and both claim to beat Zep, LangMem and Mem0. Other vendors claim LoCoMo scores in the high 80s to 90s under their own setups, so treat these as claims to test. Our [LLM memory comparison](/articles/llm-memory-comparison/) lists them side by side.
 
-This approach allows for **persistent memory AI** that is both data-rich and contextually relevant. It’s a step towards creating an [AI assistant that remembers everything](/articles/best-chatbot-for-memory/) it needs to, a primary goal of **AI recall**.
+## When Memori fits
 
-### Agent Memory vs. RAG
+Memori fits teams that want agent memory in **infrastructure they already run**: an existing Postgres or MySQL, with memories they can inspect with SQL. The client-wrapping approach means almost no code changes, and attribution by entity and process maps well onto multi-user, multi-agent apps.
 
-It's important to distinguish between general **agent memory** and **Retrieval-Augmented Generation (RAG)**. RAG is a specific technique that uses an external knowledge base to augment an LLM's responses. While RAG is a powerful tool for providing agents with access to information, it's often a component *within* a broader AI agents memory storage architecture. Agent memory can encompass more than just RAG, including internal state, learned behaviors, and episodic recall. Understanding agent memory vs RAG clarifies their relationship within the **AI memory systems** ecosystem and contributes to robust **AI recall systems**.
-
-## Future Directions in AI Memory Storage
-
-The field of AI agents memory storage is rapidly evolving. Research is pushing towards more human-like memory capabilities, including associative recall, reasoning over memories, and the ability to learn from very few examples. Future **AI recall** systems will likely integrate these advanced features for enhanced **long-term memory AI**.
-
-### Long-Term Memory and Agentic AI
-
-The development of **agentic AI** hinges on its ability to maintain and effectively use **long-term memory**. This allows agents to engage in complex, multi-step tasks, adapt to changing environments, and exhibit more sophisticated planning and reasoning. The goal is to move beyond stateless interactions to create AI that truly learns and evolves. This is the focus of [agentic AI long-term memory](/articles/ai-agent-long-term-memory/) research, a critical component of advanced **AI memory systems** and **agent memory storage**.
-
-### Persistent Memory for AI Agents
-
-Achieving true **persistent memory AI** means agents can retain information across sessions, reboots, and even different deployments. This requires reliable storage solutions and intelligent mechanisms for updating and organizing memories. The creation of an [AI agent persistent memory](/articles/persistent-memory-ai/) system is a significant step towards more autonomous and capable AI, representing the ultimate goal for **long-term memory AI** and sophisticated **AI recall**.
-
-## FAQ
-
-### What is Memori in the context of AI agents?
-Memori refers to a conceptual framework or a specific system designed for AI agents to store, retrieve, and use past experiences and information, enabling more sophisticated recall and learning. It's key for effective ai agents memory storage.
-
-### How does GibsonAI relate to AI memory storage?
-GibsonAI, drawing from ecological psychology, suggests AI agents might store memory related to actionable possibilities and environmental interactions, influencing future decision-making. This perspective enhances ai agents memory storage by focusing on affordances.
-
-### Can AI agents store memories like humans?
-While AI agents can store and recall vast amounts of data, their memory storage is fundamentally different from human biological memory. AI memory is typically data-driven and computationally managed, lacking the subjective, emotional, and associative qualities of human recall. Effective ai agents memory storage focuses on computational recall.
-
-### What are the key components of AI agents memory storage?
-Key components include methods for storing, retrieving, and processing past experiences. This often involves structured data, embedding models, vector databases, and mechanisms for memory consolidation and forgetting, all contributing to effective AI recall.
+It fits less well if conversations must never leave your network, since default BYODB extraction still goes through Memori's API in the Python SDK, or if you want to control the extraction step yourself. Fully self-run alternatives include Mem0's Docker server, Graphiti and [Hindsight](https://github.com/vectorize-io/hindsight); see [open-source memory systems compared](/articles/open-source-memory-systems-compared/). For the concepts behind memory storage in agents, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).

@@ -1,193 +1,153 @@
 ---
-title: 'Embedding Models for RAG: Choosing the Right Foundation for Retrieval'
-description: 'Embedding Models for RAG: Choosing the Right Foundation for Retrieval. Learn about embedding models for rag, best embedding model with practical examples, code sn...'
+title: "Embedding Models for RAG and Agent Memory (2026)"
+description: "How to choose an embedding model for RAG and agent memory: MTEB scores, dimensions, context length and cost for OpenAI, Gemini, Voyage, Cohere, Qwen3, BGE-M3."
 date: 2026-03-25
-lastmod: 2026-03-25
-tags:
-- embedding models
-- RAG
-- retrieval augmented generation
-- NLP
-- AI memory
-keywords:
-- embedding models for rag
-- best embedding model
-- embedding model comparison
-- retrieval
-- vector databases
-- semantic search
-faq:
-- question: What is the primary role of embedding models in RAG?
-  answer: Embedding models are crucial for RAG as they transform text into dense numerical vectors, capturing semantic meaning. This allows for efficient similarity searches within a knowledge base, enabling
-    the RAG system to retrieve the most relevant context for the LLM.
-- question: How do I choose the best embedding model for my RAG application?
-  answer: Selecting the best embedding model depends on your specific needs, including the domain of your data, desired performance (speed vs. accuracy), computational resources, and budget. Benchmarking
-    different models on your own data is highly recommended.
-- question: Can I use different embedding models for indexing and querying in RAG?
-  answer: Ideally, you should use the *same* embedding model for both indexing your documents and generating the query vector. Using different models can lead to a mismatch in vector space, significantly
-    degrading retrieval performance.
+lastmod: 2026-10-08
 slug: embedding-models-for-rag
 aliases:
 - /articles/embedding-models-for-memory/
 - /articles/in-memory-embedding-model/
 - /articles/llm-memory-embedding/
+tags:
+- Embeddings
+- RAG
+- Agent Memory
+- MTEB
+- Semantic Search
+keywords:
+- embedding models for rag
+- best embedding model for rag
+- embedding models for memory
+- llm memory embedding
+- mteb leaderboard embedding
+faq:
+- question: "What is the best embedding model for RAG?"
+  answer: "There's no single best one. MTEB's authors found no method dominates every task, and leaderboard ranks change monthly. Strong 2026 choices include Voyage 4, Gemini Embedding 2, Cohere Embed and OpenAI text-embedding-3 as APIs, and Qwen3-Embedding or BGE-M3 as open weights. Test two or three on your own data."
+- question: "How many dimensions should an embedding have?"
+  answer: "Usually 768 to 1,536 is enough for RAG and memory. Many current models support Matryoshka-style truncation, so you can store 256 or 512 dimensions to save space. OpenAI reports text-embedding-3-large cut to 256 dimensions still beats ada-002 at 1,536 on MTEB."
+- question: "Can I switch embedding models later?"
+  answer: "Yes, but you have to re-embed everything. Vectors from different models live in different spaces and can't be compared; Google's docs say Gemini Embedding 001 and 2 spaces are incompatible, for example. Store the model name and version with each vector so a migration is planned, not discovered."
 ---
 
-**Embedding models for RAG** are fundamental components that enable retrieval augmented generation (RAG) systems to perform effective semantic search. These models convert text into high-dimensional numerical vectors, known as embeddings, where semantically similar pieces of text are located closer to each other in the vector space. This allows RAG systems to find relevant information from a knowledge base to augment the context provided to a Large Language Model (LLM), thereby improving the accuracy and relevance of generated responses. Choosing the right embedding model is critical for the performance of any RAG pipeline, directly impacting the quality of retrieved documents and the LLM's ability to synthesize accurate answers.
+**The best embedding model for RAG and agent memory** is the one that ranks the right passages highest on your own data, at a cost and latency you can live with. Public benchmarks like **MTEB** narrow the field. As of October 2026, strong API choices are Voyage 4, Gemini Embedding 2, Cohere Embed and OpenAI text-embedding-3. Strong open-weight choices are Qwen3-Embedding, BGE-M3 and, for on-device use, EmbeddingGemma.
 
-The core challenge in RAG is retrieving the most pertinent information from a potentially vast corpus of documents. This is where embedding models shine. By mapping text to a continuous vector space, they facilitate efficient similarity searches. When a user query is processed, it is also converted into an embedding, and then compared against the embeddings of all documents in the knowledge base. The documents with the closest vector representations to the query embedding are deemed most relevant and are retrieved. This process underlies the effectiveness of semantic search within RAG architectures.
+This page explains what to compare, lists current models with specs from their own docs, and shows how to test them.
 
-## How Embedding Models Work for RAG
+## What is an embedding model?
 
-At a high level, an **embedding model** is a neural network trained to understand the nuances of language and represent text in a dense vector format. The training process typically involves exposing the model to massive amounts of text data, allowing it to learn patterns, relationships, and the contextual meaning of words and phrases. When applied to RAG, the process can be broken down into two main phases: indexing and retrieval.
+**An embedding model turns text (and, for some models, images or audio) into a fixed-length vector of numbers so that texts with similar meaning end up close together. RAG systems and agent memory use it twice: once to index stored content, and once per query to find the nearest stored vectors.**
 
-### Indexing Documents
+The embedding model decides what "similar" means for your system. If it doesn't place "my flight got cancelled" near "refund for the canceled trip", no vector database or reranker downstream can fix that. That makes it one of the cheapest components to change and one of the most important to get right.
 
-During the indexing phase, all documents within the RAG system's knowledge base are processed by the chosen embedding model. Each document, or relevant chunks of it, is converted into a vector embedding. These embeddings are then stored, often in a specialized vector database, alongside the original text or a reference to it. This pre-computation step ensures that retrieval can be performed quickly at query time. The quality of these stored embeddings directly influences the accuracy of future retrievals.
+For agent memory specifically, the model embeds extracted facts and past messages that are then searched on every turn. The rest of that pipeline is covered in [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-### Querying and Retrieval
+## How to read the MTEB leaderboard
 
-When a user submits a query, it is first passed through the *same* embedding model used during indexing. This generates a query embedding. The RAG system then uses this query embedding to search the index of document embeddings. Algorithms like Approximate Nearest Neighbor (ANN) are commonly employed to efficiently find the document embeddings that are closest to the query embedding in the vector space. The documents corresponding to these closest embeddings are then retrieved and passed to the LLM as context.
+The [Massive Text Embedding Benchmark](https://arxiv.org/abs/2210.07316) (Muennighoff et al., 2022) is the standard comparison. The original release spanned 8 task types, 58 datasets and 112 languages. Its main finding still holds: "no particular text embedding method dominates across all tasks."
 
-## Key Considerations for Selecting Embedding Models
+Four things to keep in mind when reading it:
 
-The choice of an **embedding model comparison** framework is not a one-size-fits-all scenario. Several factors influence which model will perform best for a given RAG application. Understanding these trade-offs is crucial for optimizing retrieval performance.
+1. **Look at the retrieval column**, not the overall average. RAG and memory are retrieval tasks; clustering and classification scores matter less.
+2. **Check which benchmark version a number comes from.** There are now English, multilingual, code and other variants. OpenAI's 64.6% for text-embedding-3-large and Qwen's 70.58 for Qwen3-Embedding-8B come from different benchmarks and can't be compared directly.
+3. **Scores are mostly self-reported** by the model's authors.
+4. **Benchmarks aren't your data.** Short user facts, support tickets and code all behave differently from Wikipedia-style passages.
 
-### Performance Benchmarks and Metrics
+## Embedding models compared
 
-When evaluating embedding models, it's important to look at established benchmarks. Metrics such as **Mean Reciprocal Rank (MRR)**, **Recall@K**, and **Precision@K** are commonly used to assess retrieval quality. However, these benchmarks often use generic datasets. For RAG, the most relevant evaluation involves testing models on domain-specific tasks and datasets that mirror the intended use case. The best embedding model for a legal RAG system might differ significantly from one used for medical research or customer support.
+Specs from each provider's docs or model card, checked 8 October 2026. Prices change often, so check the provider's page.
 
-### Model Size and Computational Resources
+| Model | Provider | Open weights | Max input | Dimensions | Notes |
+|---|---|---|---|---|---|
+| text-embedding-3-small | OpenAI | No | 8,192 tokens | 1,536 (shortenable) | ~62,500 pages per dollar; MTEB 62.3% (OpenAI) |
+| text-embedding-3-large | OpenAI | No | 8,192 tokens | 3,072 (shortenable) | ~9,615 pages per dollar; MTEB 64.6% (OpenAI) |
+| gemini-embedding-2 | Google | No | 8,192 tokens | 128-3,072 (768, 1,536, 3,072 recommended) | Text, images, video, audio, PDF in one space |
+| gemini-embedding-001 | Google | No | 2,048 tokens | 128-3,072 | Text only; `task_type` parameter |
+| voyage-4-large / voyage-4 / voyage-4-lite | Voyage AI | No | 32,000 tokens | 1,024 default; 256, 512, 2,048 | int8 and binary output; the three are compatible |
+| voyage-4-nano | Voyage AI | Yes | 32,000 tokens | 1,024 default; 256, 512, 2,048 | Open-weight member of the family |
+| embed-v4.0 | Cohere | No | 128k tokens | 256-1,536 | Text and images |
+| Qwen3-Embedding (0.6B / 4B / 8B) | Alibaba Qwen | Yes, Apache-2.0 | 32K tokens | Up to 1,024 / 2,560 / 4,096; 32 and up | 100+ languages; 8B scored 70.58 on MTEB multilingual (June 2025) |
+| BGE-M3 | BAAI | Yes, MIT | 8,192 tokens | 1,024 | Dense, sparse and multi-vector output from one model |
+| EmbeddingGemma | Google | Yes, Gemma license | 2,048 tokens | 768; 512, 256, 128 | 300M parameters, built for on-device use |
 
-Embedding models vary significantly in size, ranging from smaller models that can run on consumer hardware to massive models requiring substantial GPU resources. The choice here involves a trade-off between performance and cost. Larger models often achieve higher accuracy but come with increased latency, higher memory requirements, and greater operational expenses. For applications requiring real-time responses or operating under strict budget constraints, smaller, more efficient models might be preferable.
+Sources: [OpenAI embeddings guide](https://developers.openai.com/api/docs/guides/embeddings), [Gemini embeddings docs](https://ai.google.dev/gemini-api/docs/embeddings), [Voyage docs](https://docs.voyageai.com/docs/embeddings), [Cohere Embed docs](https://docs.cohere.com/docs/cohere-embed), and the Hugging Face model cards for [Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B), [BGE-M3](https://huggingface.co/BAAI/bge-m3) and [EmbeddingGemma](https://huggingface.co/google/embeddinggemma-300m). Cohere's docs also list newer `embed-v5.0-pro` and `embed-v5.0-fast` models with 128k context and up to 2,048 dimensions.
 
-### Domain Specificity and Fine-tuning
+## What to compare when choosing
 
-General-purpose embedding models, trained on broad internet text, are a good starting point. However, for specialized domains (e.g., scientific literature, financial reports, legal documents), performance can often be significantly improved by using models pre-trained on similar data or by fine-tuning a general model on a custom dataset. Fine-tuning helps the model better capture the specific jargon, concepts, and relationships within a particular domain.
+### Retrieval quality on your data
 
-### Open Source vs. Proprietary Models
+This is the only number that really matters, and you have to measure it yourself. See the evaluation steps at the end of this page.
 
-A wide array of open-source embedding models are available, offering flexibility and cost-effectiveness. Projects like Sentence-Transformers provide access to many powerful, pre-trained models. Proprietary models, often available via APIs (e.g., OpenAI's text-embedding-ada-002, Cohere's Embed v3), can offer state-of-the-art performance and ease of use but may involve recurring costs and less control over the model itself. The [Hindsight](https://github.com/vectorize-io/hindsight) open-source AI memory system, for example, is designed to be compatible with various embedding models, allowing users to swap them out based on their needs.
+### Dimensions and storage
 
-## Popular Embedding Models for RAG
+Every dimension costs 4 bytes per vector in float32. A million 3,072-dimension vectors is about 12 GB before index overhead. Most current models are trained so vectors can be cut short (**Matryoshka representation learning**). OpenAI's guide says a text-embedding-3-large vector "can be shortened to a size of 256" and still beats unshortened ada-002 at 1,536. Note that truncated vectors need re-normalizing unless the API does it; Google says `gemini-embedding-2` normalizes automatically and `gemini-embedding-001` doesn't below 3,072.
 
-The landscape of embedding models is constantly evolving, with new models and improvements being released regularly. Here are some of the most popular and effective choices for RAG applications.
+Quantized output cuts storage further. Voyage's 4-series returns `int8`, `uint8`, `binary` and `ubinary` vectors directly.
 
-### Sentence Transformers
+### Context length
 
-The Sentence-Transformers library is a Python framework built on top of PyTorch and Hugging Face's Transformers, making it easy to train and use pre-trained sentence embedding models. It offers a vast collection of models fine-tuned for semantic similarity tasks.
+Long limits (32K for Voyage 4 and Qwen3, 128k for Cohere) let you embed whole documents. That isn't always a good idea: one vector for a 20-page document blurs its topics. For RAG, chunks of a few hundred tokens usually retrieve better. For memory, the units are already short facts or messages, so context length rarely matters.
 
-* **`all-MiniLM-L6-v2`**: A popular, fast, and relatively small model that provides good performance for many general-purpose tasks. It's a great starting point for RAG due to its balance of speed and accuracy.
-* **`all-mpnet-base-v2`**: A more powerful model that generally outperforms `all-MiniLM-L6-v2` in terms of semantic understanding, though it is larger and slower.
-* **`multi-qa-mpnet-base-dot-v1`**: Specifically trained for question-answering and retrieval tasks, making it an excellent candidate for RAG.
+### Query and document prompts
+
+Many models embed queries and documents differently. Qwen3-Embedding is "instruction-aware" and expects a query prompt. `gemini-embedding-001` takes a `task_type` such as `RETRIEVAL_QUERY` or `RETRIEVAL_DOCUMENT`, while `gemini-embedding-2` takes the task as a text prefix. Skipping these usually costs accuracy.
+
+### Hybrid search
+
+Embeddings handle meaning but miss exact strings like order IDs and product names. **BGE-M3** returns dense, sparse (lexical weights) and multi-vector (ColBERT-style) outputs from one model, which covers keyword and semantic matching together. Otherwise, pair a dense model with BM25 in your database.
+
+### Hosting
+
+APIs mean no infrastructure but a network call per query and data leaving your system. Open-weight models run locally. That's what people usually mean by an **in-memory embedding model**: one loaded into the application's own process, with no API call. EmbeddingGemma (300M parameters) and Qwen3-Embedding-0.6B are small enough for a laptop CPU. Pairing one with an [in-memory vector database](/articles/best-in-memory-vector-database/) gives a fully local memory stack.
+
+## Embedding models for agent memory
+
+Memory differs from document RAG in ways that affect the model choice:
+
+- **Units are short.** "User is vegetarian" is five words. Pick a model that does well on short-text retrieval, and test with real memory items.
+- **Queries and memories look different.** The query is a new user message; the memory is a terse fact. Asymmetric query/document prompts help here.
+- **Everything is re-embedded on a switch.** A memory store grows for years. Changing models later means re-embedding all of it, and Google's docs state that `gemini-embedding-001` and `gemini-embedding-2` spaces are "incompatible."
+- **Embeddings don't know time.** "I moved to SF" and "I live in NYC" are both close to "where do I live?" Handling changed facts is the job of the memory system, not the embedding model. See [vector databases for LLM memory](/articles/vector-database-for-llm-memory/) for what a vector store does and doesn't cover.
+
+## Code: local and API embeddings
+
+A local open-weight model with sentence-transformers (6.x), using the model's query prompt and Matryoshka truncation:
 
 ```python
 from sentence_transformers import SentenceTransformer
 
-## Load a pre-trained model
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer("Qwen/Qwen3-Embedding-0.6B")
 
-## Sentences to embed
-sentences = [
- "This is a test sentence.",
- "This is another example sentence."
-]
+memories = ["User is vegetarian", "User's flight to Tokyo is on 12 May", "User prefers short answers"]
+query = "Suggest a restaurant for dinner"
 
-## Generate embeddings
-embeddings = model.encode(sentences)
+doc_vecs = model.encode_document(memories, truncate_dim=256)
+query_vec = model.encode_query(query, truncate_dim=256)  # applies the model's "query" prompt
 
-print(embeddings.shape)
-## Output will be (2, 384) for all-MiniLM-L6-v2
+print(model.similarity(query_vec, doc_vecs))  # cosine similarity, one row per query
 ```
 
-### OpenAI Embeddings
-
-OpenAI offers powerful embedding models accessible via their API. These models are known for their high quality and are a popular choice for many production RAG systems.
-
-* **`text-embedding-ada-002`**: A widely used and cost-effective model from OpenAI. It offers strong performance across a variety of tasks and is easy to integrate.
-* **`text-embedding-3-small` / `text-embedding-3-large`**: Newer models that offer improved performance and dimensionality reduction capabilities, allowing for smaller vector sizes without significant accuracy loss.
+The same with OpenAI's API, asking for shorter vectors at creation time:
 
 ```python
-import openai
+from openai import OpenAI
 
-## Ensure you have your OpenAI API key set as an environment variable
-## or pass it directly: openai.api_key = "YOUR_API_KEY"
-
-response = openai.embeddings.create(
- model="text-embedding-3-small",
- input=[
- "What are the benefits of using RAG?",
- "How does an LLM work?"
- ]
+client = OpenAI()
+response = client.embeddings.create(
+    model="text-embedding-3-small",
+    input=["User is vegetarian", "Suggest a restaurant for dinner"],
+    dimensions=512,
 )
-
-## Access the embeddings
-embeddings = [item.embedding for item in response.data]
-print(len(embeddings))
-## Output will be 2
+vectors = [item.embedding for item in response.data]
 ```
 
-### Cohere Embeddings
+## How to evaluate embedding models on your data
 
-Cohere provides powerful embedding models through their API, focusing on multilingual capabilities and strong performance for retrieval.
+1. **Collect 50-200 real queries** from logs or users, not invented ones.
+2. **Label the right answers.** For each query, mark which stored chunks or memories should come back.
+3. **Pick two to four candidates** from the table, including one cheap baseline.
+4. **Embed the same corpus with each**, using the right query/document prompts.
+5. **Measure recall@k** (is a correct item in the top k?) for the k you'll actually use, often 5 or 10.
+6. **Check cost and latency** per 1,000 queries and for indexing the full corpus.
+7. **Try truncated dimensions** on the winner to see how much quality you lose for the storage you save.
 
-* **`embed-english-v3.0` / `embed-multilingual-v3.0`**: These models offer excellent performance for English and multilingual tasks, respectively. They support different retrieval modes (e.g., `search_query`, `search_document`) for optimized retrieval.
-
-### Other Notable Models
-
-* **E5 models**: A family of models developed by Microsoft, known for their strong performance on various benchmarks, including retrieval tasks.
-* **BGE (BAAI General Embedding)**: Models from Beijing Academy of Artificial Intelligence that have shown competitive results, especially in open-source leaderboards.
-
-## Embedding Model Comparison and Trade-offs
-
-When performing an **embedding model comparison** for RAG, several trade-offs come into play. There's no single "best" model; the optimal choice depends heavily on the specific requirements of the RAG system.
-
-### Accuracy vs. Latency
-
-Larger, more complex models generally offer higher accuracy in capturing semantic nuances. However, they also require more computational power, leading to higher latency during embedding generation and retrieval. For real-time applications, faster, smaller models might be necessary, even if they sacrifice a small degree of accuracy. This is a classic engineering trade-off that must be balanced.
-
-### Dimensionality and Storage
-
-Embedding vectors can have high dimensionality (e.g., 768, 1024, or even more dimensions). Higher dimensionality can potentially capture more information but leads to larger storage requirements in the vector database and can sometimes increase the computational cost of similarity searches. Techniques like dimensionality reduction or using models that produce lower-dimensional embeddings (like OpenAI's `text-embedding-3-small` with specified dimensions) can mitigate this. Understanding [context window limitations](/articles/context-window-limitations-solutions/) and efficient retrieval is key here.
-
-### Cost of Operation
-
-For API-based models, the cost is directly tied to the number of tokens processed for embedding generation. For self-hosted models, the cost is related to the infrastructure required (GPUs, memory, storage). Evaluating the total cost of ownership is crucial, especially for applications with high volumes of data or user traffic.
-
-### Fine-tuning and Customization
-
-While off-the-shelf models are convenient, their performance may be suboptimal for highly specialized domains. The ability to fine-tune an embedding model on custom data can provide a significant performance boost. This requires available training data and the technical expertise to perform the fine-tuning process. Projects like [Hindsight](https://github.com/vectorize-io/hindsight) are designed to be flexible, allowing integration with custom-tuned models.
-
-## Integrating Embedding Models into RAG Pipelines
-
-The integration of embedding models into a RAG pipeline typically involves a few key steps, often orchestrated by a framework that manages the LLM, the knowledge base, and the retrieval process.
-
-### Choosing a Vector Database
-
-The choice of vector database is closely linked to the embedding model. Databases like Pinecone, Weaviate, Chroma, or Qdrant are optimized for storing and querying high-dimensional vectors. They often provide efficient indexing mechanisms (like HNSW) for fast similarity searches. The database should ideally support the dimensionality of the embeddings generated by the chosen model.
-
-### Chunking Strategy
-
-How documents are split into smaller chunks for embedding is critical. Too small, and context might be lost. Too large, and the embedding might become too general, or individual key pieces of information could be diluted. Common chunking strategies include fixed-size chunks, sentence splitting, or recursive character splitting. The optimal strategy often depends on the nature of the documents and the RAG task.
-
-### Retrieval and Re-ranking
-
-After initial retrieval based on vector similarity, it's often beneficial to apply a re-ranking step. This can involve using a more sophisticated (and potentially slower) model to re-order the top-k retrieved documents, or using cross-encoders to get a more precise relevance score. This can further refine the context provided to the LLM. This is a crucial aspect of [AI agent memory](/articles/ai-agent-memory-explained/) design, ensuring the most relevant past information is surfaced.
-
-## Conclusion
-
-The effectiveness of a Retrieval Augmented Generation (RAG) system is heavily reliant on the quality of its **embedding models for RAG**. These models are the bridge between unstructured text and the structured vector space that enables efficient semantic search. While general-purpose models offer a strong starting point, a thorough **embedding model comparison**, considering factors like domain specificity, performance benchmarks, computational resources, and cost, is essential for optimizing retrieval. By carefully selecting and integrating the right embedding model, developers can significantly enhance the accuracy, relevance, and overall intelligence of their RAG-powered AI applications, paving the way for more sophisticated [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
-
-## FAQ
-
-### What is the difference between an embedding model and a language model in RAG?
-
-An **embedding model** is specifically designed to convert text into numerical vectors that capture semantic meaning, enabling similarity searches. A **language model (LLM)**, on the other hand, is designed to understand and generate human-like text. In RAG, the embedding model retrieves relevant context, which is then fed into the LLM to generate a response.
-
-### How frequently should I update my embedding model or re-index my data?
-
-The frequency of updates depends on how dynamic your knowledge base is. If your data changes frequently, you will need to re-index your documents to ensure the embeddings are up-to-date. Similarly, if new, more performant embedding models become available, it may be beneficial to re-embed your data with the new model to improve retrieval quality. Some systems, like those focusing on [long-term memory AI agent](/articles/ai-agent-long-term-memory/) capabilities, might require more frequent updates.
-
-### Can I use an embedding model that was not trained on my specific data for RAG?
-
-Yes, you can. General-purpose embedding models trained on vast datasets often perform surprisingly well even on domain-specific data. However, for critical applications or highly specialized domains, fine-tuning an existing model on your own data, or using a model pre-trained on similar data, can lead to significantly improved retrieval accuracy. This is part of the broader challenge in building [AI that remembers conversations](/articles/best-chatbot-for-memory/).
+Retrieval quality also depends on how text is chunked and stored. How memory and document retrieval differ is covered in [RAG vs agent memory](/articles/rag-vs-agent-memory/).

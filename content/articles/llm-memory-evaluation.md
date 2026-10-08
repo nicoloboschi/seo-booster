@@ -1,327 +1,160 @@
 ---
-title: 'LLM Memory Evaluation: Benchmarking Agent Recall and Retention'
-description: Master LLM memory evaluation with comprehensive benchmarks for AI agent recall and retention. Explore metrics, challenges, and tools for robust AI memory assessment.
+title: "LLM Memory Evaluation: Benchmarks for Agent Memory"
+description: "How to evaluate LLM and agent memory: LoCoMo, LongMemEval, MemoryAgentBench, BEAM, MSC and DMR compared by size, tasks and metrics, plus how to run one."
 date: 2026-04-05
-lastmod: 2026-04-05
-tags:
-- LLM memory
-- AI evaluation
-- agent recall
-- memory benchmarks
-- AI retention
-- agent memory evaluation
-- evaluating memory in AI agents
-- evaluating LLM memory
-keywords:
-- llm memory evaluation
-- AI agent memory
-- memory benchmarks
-- agent recall
-- AI retention
-- evaluating LLM memory
-- AI memory evaluation
-- metrics for LLM memory
-- benchmarks for AI memory
-- agent recall evaluation
-- AI retention metrics
-- evaluating memory in AI agents
-- evaluating memory in LLM agents
-- memory benchmarks for AI
-- AI memory assessment
-- agent memory evaluation
-- comparing memory architectures in llm agents evaluation metrics
-- evaluating memory in ai agents metrics benchmarks
-- evaluating memory in llm agents benchmarks metrics
-faq:
-- question: Why is LLM memory evaluation important?
-  answer: LLM memory evaluation is critical to ensure AI agents can reliably recall past interactions, maintain context, and perform tasks effectively over time, preventing issues like repetition or forgetting
-    crucial information.
-- question: What are common metrics for LLM memory evaluation?
-  answer: Common metrics include recall accuracy, retention rate, response relevance, context window utilization efficiency, and the ability to distinguish between relevant and irrelevant past information.
-- question: How do benchmarks aid LLM memory evaluation?
-  answer: Benchmarks provide standardized datasets and tasks to compare different memory systems objectively. They help identify strengths and weaknesses in an agent's ability to store, retrieve, and utilize
-    information.
-- question: What is the primary challenge in evaluating LLM memory?
-  answer: The primary challenge is isolating memory performance from the LLM's core reasoning and generation capabilities, as a poor output could be due to memory retrieval failure or generation errors.
-    This makes precise **llm memory evaluation** difficult.
-- question: How do retrieval-augmented generation (RAG) systems fit into memory evaluation?
-  answer: RAG systems employ external knowledge bases as a form of long-term memory. Evaluating them involves assessing the retrieval accuracy and relevance of the augmented information, alongside the LLM's
-    ability to integrate it. This is a key area of **AI memory evaluation**.
-- question: Can LLM memory evaluation be automated?
-  answer: Yes, automated evaluation is possible using standardized benchmarks and metrics. However, capturing the nuances of human-like memory often still benefits from human-in-the-loop review, complementing
-    automated **llm memory evaluation**.
-- question: What are the key challenges in evaluating memory in AI agents?
-  answer: Key challenges include isolating memory performance from other LLM capabilities, the scalability and cost of comprehensive AI memory assessment, the dynamic nature of memory systems, and the inherent
-    subjectivity in evaluating nuanced memory recall.
-- question: What are the key metrics and benchmarks for evaluating memory in AI agents?
-  answer: Key metrics include recall accuracy, retention rate, and response relevance. Benchmarks like MemBench and MT-Bench, along with specialized datasets, are crucial for objective **agent memory evaluation**
-    and **evaluating memory in AI agents**.
-- question: How do memory benchmarks compare different LLM memory architectures?
-  answer: Memory benchmarks are essential for comparing different LLM memory architectures by providing standardized tasks and datasets. This allows for objective assessment of recall accuracy, retention
-    rates, and retrieval efficiency across various architectural designs, such as those with different vector database integrations or attention mechanisms.
+lastmod: 2026-10-08
 slug: llm-memory-evaluation
+cluster: agent-memory
+tags: ["LLM memory", "benchmark", "evaluation", "LoCoMo", "LongMemEval", "agent memory"]
+keywords: ["llm memory evaluation", "llm memory benchmark", "agent memory benchmark", "locomo benchmark", "longmemeval", "memoryagentbench", "beam memory benchmark"]
+faq:
+  - question: "What is the best benchmark for LLM memory?"
+    answer: "LongMemEval (ICLR 2025) and LoCoMo (ACL 2024) are the most reported. LongMemEval has 500 questions over five memory abilities; LoCoMo tests very long multi-session chats. For harder tests, MemoryAgentBench adds test-time learning and selective forgetting, and BEAM scales conversations up to 10M tokens."
+  - question: "How is LongMemEval scored?"
+    answer: "Each answer is judged correct or incorrect by GPT-4o using the evaluate_qa.py script in the LongMemEval repo. The authors report that the GPT-4o judge agrees with human experts more than 97% of the time. Retrieval can also be scored with Recall@k and NDCG@k against labeled evidence sessions."
+  - question: "Can I trust memory benchmark scores published by vendors?"
+    answer: "Treat them as self-reported claims. Each vendor picks its own answer model, judge model, prompts and retrieval budget, so scores from different vendors aren't directly comparable. Rerun the benchmark yourself with fixed settings before choosing a system."
 aliases:
 - /articles/llm-memory-bench/
 ---
 
-## LLM Memory Evaluation: Benchmarking Agent Recall and Retention
+**LLM memory evaluation** means testing whether a model or agent can recall, update and reason over information from earlier sessions. The standard benchmarks are **LoCoMo** and **LongMemEval**, with **MemoryAgentBench** and **BEAM** as harder, newer tests. Each feeds a long chat history to the system, then asks questions only that history can answer.
 
-**LLM memory evaluation** systematically assesses how well large language models store, retrieve, and use information over time. It quantifies an AI agent's capacity to retain relevant context and past interactions, which is essential for building truly intelligent and useful agents.
+The tests differ in what they stress: plain recall, time, changed facts, forgetting, or scale. Picking the wrong one tells you little about your use case. This page covers what each benchmark measures, how it's scored, and how to run one yourself.
 
-Can an AI agent reliably recall a specific detail from a conversation held hours ago? This core question drives **llm memory evaluation**, pushing the development of systems beyond simple context windows. Accurately measuring an AI's memory ability is paramount for creating intelligent agents.
+## What is LLM memory evaluation?
 
-## What is LLM Memory Evaluation?
+**LLM memory evaluation is the measurement of how well a language model or memory system stores information from past interactions and uses it later. A benchmark supplies a long history (chat sessions or documents), asks questions that depend on it, and scores the answers with exact match, F1 or an LLM judge.**
 
-**LLM memory evaluation** systematically assesses how effectively large language models (LLMs) and AI agents store, retrieve, and use information over time. It involves designing tests and metrics to quantify an agent's ability to retain relevant context and past interactions, moving beyond stateless processing. Rigorous **llm memory evaluation** is foundational for building agents that demonstrate continuity and learning.
+Zhang et al.'s [survey of agent memory](https://arxiv.org/abs/2404.13501) splits evaluation in two. **Direct evaluation** scores the memory itself, for example whether the right fact was retrieved. **Indirect evaluation** scores an end task, like answering a question or holding a conversation, that needs memory to succeed. Most benchmarks below do both: they score the final answer and, where evidence is labeled, the retrieval step.
 
-### The Crucial Need for Memory Assessment
+For background on what's being tested, see our guide to [AI agent memory](/articles/ai-agent-memory-explained/). For the research taxonomies behind these tests, see the [LLM memory survey papers](/articles/llm-memory-survey/).
 
-Without effective memory, AI agents are limited to their immediate input. This severely restricts their ability to engage in nuanced conversations or learn from experience. Therefore, rigorous **llm memory evaluation** is essential for unlocking AI's true potential and guiding future improvements in **evaluating LLM memory**.
+## LLM memory benchmarks compared
 
-## Key Components of LLM Memory Evaluation
+| Benchmark | Year, venue | Data | What it tests | Main metric |
+|---|---|---|---|---|
+| **MSC** (Multi-Session Chat) | 2021 | Up to 5 chat sessions per episode | Long-term open-domain dialogue | Perplexity |
+| **DMR** (Deep Memory Retrieval) | 2023, MemGPT paper | MSC plus a 6th session with a question | Recall of facts from past sessions | LLM-judged accuracy, ROUGE-L |
+| **LoCoMo** | 2024, ACL | 10 conversations released (50 in first version), ~300 turns, ~9K tokens, up to 35 sessions | QA, event summarization, multimodal dialogue | F1 (QA) |
+| **LongMemEval** | 2024, ICLR 2025 | 500 questions; S ≈ 115K tokens, M ≈ 500 sessions (≈1.5M tokens) | Extraction, multi-session reasoning, temporal reasoning, knowledge updates, abstention | GPT-4o-judged accuracy; Recall@k, NDCG@k |
+| **MemoryAgentBench** | 2025, ICLR 2026 | Long-context datasets turned into incremental multi-turn input | Accurate retrieval, test-time learning, long-range understanding, selective forgetting | Task-specific (accuracy, LLM-judged) |
+| **BEAM** | 2025, ICLR 2026 | 100 conversations, 2,000 questions, up to 10M tokens | Ten abilities, incl. contradiction resolution, event ordering, preference following | LLM-judged nugget scores; Kendall tau-b for event ordering |
 
-Evaluating AI memory involves understanding memory types and establishing concrete measurement tools. Understanding these components is the first step towards developing reliable memory systems and effective **AI memory evaluation**.
+The sections below describe each one from its paper.
 
-### Understanding Memory Types
+## LoCoMo: very long-term conversational memory
 
-Before evaluation, it's essential to understand the types of memory an AI agent might possess. This includes:
+**[LoCoMo](https://arxiv.org/abs/2402.17753)** (Maharana et al., Snap Research) is the benchmark most vendors cite. Its conversations average about **300 turns and 9K tokens over up to 35 sessions**, generated by LLM agents with personas and event timelines, then checked by humans.
 
-* **Short-Term Memory:** Often simulated by the LLM's context window, this is the immediate information available for processing.
-* **Long-Term Memory:** Information that persists beyond the immediate context, typically stored in external databases or vector stores. This can be further broken down into:
- * **Episodic Memory:** Memories tied to specific events or interactions, akin to human autobiographical memory. [Episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for conversational continuity.
- * **Semantic Memory:** General knowledge and facts about the world, not tied to specific events. Understanding [semantic memory in AI agents](/articles/semantic-memory-ai-agents/) is crucial for broad knowledge recall.
- * **Working Memory:** The active processing and manipulation of information from both short-term and long-term stores.
+The QA task has five categories: **single-hop, multi-hop, temporal, open-domain knowledge and adversarial** (questions with no answer in the conversation). The paper scores QA with F1. In its results, humans scored 87.9 F1 overall while the best model tested, GPT-3.5-turbo-16K, scored 37.8.
 
-A well-designed [AI memory architecture](/articles/ai-memory-architecture/) often incorporates multiple types of memory, each requiring specific **llm memory evaluation** strategies.
+Two details trip people up:
 
-### Defining Evaluation Metrics for AI Memory
+- **The released set is smaller than the paper's.** The [LoCoMo repo](https://github.com/snap-research/locomo) ships `locomo10.json` with **ten** conversations, "a subset of the conversations released previously" (the first arXiv version had 50). Vendor scores labeled LoCoMo or LoCoMo10 use this set.
+- **Vendors often change the metric.** Many memory papers, such as Mem0's ([arXiv 2504.19413](https://arxiv.org/abs/2504.19413)), report LLM-as-judge accuracy instead of the original F1, so their numbers aren't on the same scale as the LoCoMo paper.
 
-Quantifying memory performance requires well-defined metrics. Common metrics include:
+## LongMemEval: five long-term memory abilities
 
-* **Recall Accuracy:** The percentage of relevant information correctly retrieved from memory when prompted. This is a core aspect of **agent recall evaluation**.
-* **Retention Rate:** How well information is preserved over extended periods or numerous interactions. This is a key **AI retention metric**.
-* **Response Relevance:** Whether the retrieved information is pertinent to the current query or task.
-* **Context Window Efficiency:** How effectively the agent uses its available context window.
-* **Information Retrieval Latency:** The time taken to access and retrieve information from memory.
-* **False Positive/Negative Rate:** The frequency of retrieving incorrect information or failing to retrieve correct information.
+**[LongMemEval](https://arxiv.org/abs/2410.10813)** (Wu et al., ICLR 2025) targets chat assistants. It has **500 hand-curated questions**, each with its own chat history in which the evidence is hidden among unrelated sessions.
 
-These metrics form the backbone of any systematic **AI memory evaluation**.
+It tests five abilities:
 
-### Creating Datasets and Benchmarks for AI Memory
+1. **Information extraction:** recall a detail the user or assistant said.
+2. **Multi-session reasoning:** combine facts spread across sessions.
+3. **Temporal reasoning:** answer questions about when things happened.
+4. **Knowledge updates:** use the newest value when a fact changed.
+5. **Abstention:** say "I don't know" when the history has no answer.
 
-Standardized datasets are crucial for reproducible **llm memory evaluation**. These datasets simulate real-world scenarios and include specific queries designed to test memory recall, retention, and generalization. Benchmarks like **MemBench**, **MT-Bench**, and **AlpacaEval** often include tasks that implicitly or explicitly test memory. However, specialized benchmarks focusing purely on memory are emerging. For instance, a 2023 study published on [arXiv](https://arxiv.org/abs/2305.11134) introduced a novel benchmark designed to test an agent's ability to recall specific details from long, multi-turn conversations, showing a 25% improvement in recall accuracy for agents employing advanced memory consolidation techniques. This highlights the importance of dedicated **memory benchmarks for AI**. According to a 2024 report by TechInsights, the average recall accuracy for AI agents using basic context window memory is only 45%, compared to 78% for agents using external memory stores. This underscores the need for robust **benchmarks for AI memory**.
+Question types in the data are `single-session-user`, `single-session-assistant`, `single-session-preference`, `multi-session`, `knowledge-update` and `temporal-reasoning`. Abstention questions have a `question_id` ending in `_abs`.
 
-## Methods for LLM Memory Evaluation
+There are three history sizes. **Oracle** holds only the evidence sessions. **LongMemEval_S** is about 115K tokens per question. **LongMemEval_M** has about 500 sessions, roughly 1.5M tokens. In the paper, GPT-4o dropped from 0.870 accuracy on oracle histories to 0.606 on the full S history, about a 30% decline. Answers are judged by GPT-4o, which the authors report agrees with human experts more than 97% of the time.
 
-Evaluating an AI's memory isn't a one-size-fits-all approach. Different methods target specific aspects of memory function, from basic retrieval to complex reasoning over stored information. Effective **evaluating LLM memory** requires a multifaceted approach.
+The paper also tested fixes. Adding extracted user facts to the retrieval index raised recall by about 9.4% and accuracy by about 5.4% on average. Time-aware query expansion improved temporal-reasoning recall by 6.8% to 11.3%. For more on the time problem, see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-### Probing and Question Answering for Agent Recall
+## MemoryAgentBench: incremental input and forgetting
 
-The most straightforward method involves directly asking the agent questions about past interactions or provided information. This can range from simple factual recall ("What was the user's name earlier?") to more complex inferential questions that require synthesizing information from multiple past turns. This direct probing is a core technique in **llm memory evaluation** and is central to **agent recall evaluation**.
+**[MemoryAgentBench](https://arxiv.org/abs/2507.05257)** (Hu, Wang and McAuley, UC San Diego; ICLR 2026) argues that older benchmarks either assume short contexts or test static long documents. Real memory agents receive information piece by piece, so it feeds long-context datasets to the agent in **incremental chunks** and asks questions afterwards.
 
-### Task-Based Evaluation
+It defines four competencies:
 
-Here, agents are tasked with completing multi-step processes that inherently rely on remembering previous states or information. For example, an agent might be asked to plan a trip, requiring it to remember user preferences, budget constraints, and previously identified locations. Success is measured by the task's completion and the accuracy of its execution, which directly reflects its memory capabilities. This form of **AI memory evaluation** tests practical application.
+- **Accurate Retrieval:** single- and multi-hop document QA, LongMemEval, and a new EventQA set built from novels.
+- **Test-Time Learning:** learning classification labels or movie preferences from examples in the history.
+- **Long-Range Understanding:** summarizing novels (∞Bench-Sum) and Detective QA.
+- **Selective Forgetting:** new FactConsolidation sets, where later facts overwrite earlier ones. Early versions called this "conflict resolution."
 
-### Adversarial Testing for Memory Robustness
+The results are humbling. RAG agents beat the plain long-context baseline on retrieval, but long-context models did best on test-time learning and long-range understanding. **All methods struggled with selective forgetting**: multi-hop accuracy reached at most about 7%. Code and data are on [GitHub](https://github.com/HUST-AI-HYZ/MemoryAgentBench) and Hugging Face (`ai-hyz/MemoryAgentBench`).
 
-This involves crafting inputs designed to confuse or break the agent's memory. Examples include:
+## BEAM: memory beyond a million tokens
 
-* **Information Overload:** Presenting a large volume of information to see if critical details are lost.
-* **Conflicting Information:** Providing contradictory details to observe how the agent handles inconsistencies.
-* **Temporal Probes:** Asking about events in a specific chronological order to test temporal reasoning.
+**[BEAM](https://arxiv.org/abs/2510.27246)** ("Beyond a Million Tokens", Tavakoli et al., ICLR 2026) tests what happens when history outgrows any context window. It has **100 conversations and 2,000 validated questions**, with dialogues up to **10M tokens**. It tests **ten memory abilities**: abstention, contradiction resolution, event ordering, information extraction, instruction following, knowledge update, multi-hop reasoning, preference following, summarization and temporal reasoning. Each reference answer is broken into atomic "nuggets" that an LLM judge marks as unsatisfied, partly or fully satisfied (0, 0.5 or 1). Results are reported per length tier: 100K, 500K, 1M and 10M tokens.
 
-Adversarial testing pushes the boundaries of **llm memory evaluation**, uncovering subtle failure modes. The concept of adversarial attacks is also explored in the context of AI security vulnerabilities.
+The authors found that models with 1M-token windows, with or without retrieval, degrade as conversations get longer. They also propose **LIGHT**, a memory framework with long-term episodic memory, short-term working memory and a scratchpad, which improved scores by 3.5% to 12.69% over the strongest baselines depending on the model.
 
-### Simulation Environments for Evaluating Memory in LLM Agents
+BEAM is newer and fewer vendors report it, but it spreads systems out more than LoCoMo and LongMemEval, where top claimed scores now cluster in the high 80s to mid 90s.
 
-Creating simulated environments allows for controlled experiments with repeatable scenarios. Agents interact within this environment, and their memory performance is logged and analyzed. This approach is particularly useful for evaluating agents designed for specific domains, like robotics or game playing, where memory is critical for interaction and adaptation. This controlled method aids in precise **evaluating LLM memory**.
+## MSC and DMR: the older dialogue tests
 
-## Challenges in LLM Memory Evaluation
+**[Multi-Session Chat (MSC)](https://arxiv.org/abs/2107.07567)** (Xu, Szlam and Weston, Meta, 2021) is a human-human dataset where crowdworkers chat across sessions held "hours or days later." Training episodes have 3 or 4 sessions; validation and test extend to 5. It was built to train and test dialogue models on long-term chat, scored mainly with perplexity.
 
-Despite advancements, accurately evaluating AI memory presents significant hurdles. These challenges often stem from the inherent complexity of language, the stochastic nature of LLMs, and the difficulty in isolating memory as a variable. Facing these challenges is key to improving **llm memory evaluation**.
+**Deep Memory Retrieval (DMR)** comes from the [MemGPT paper](https://arxiv.org/abs/2310.08560). It adds a sixth session to MSC with a question answerable only from the first five, and scores the answer with GPT-4-judged accuracy and ROUGE-L. MemGPT reported raising GPT-4 accuracy from 32.1% to 92.5%. Zep later reported 94.8% on DMR. With histories this short, DMR is now close to saturated.
 
-### Isolating Memory Performance
+## How to read published memory benchmark scores
 
-It's often difficult to differentiate between a failure in memory retrieval and a failure in the LLM's reasoning or generation capabilities. An incorrect answer might stem from the model not finding the right information in its memory, or from the model finding the information but misinterpreting or misusing it. This ambiguity complicates **evaluating LLM memory**.
+Nearly every memory vendor publishes LoCoMo or LongMemEval numbers. **Treat them as self-reported.** The [LLM memory comparison](/articles/llm-memory-comparison/) collects the published scores for Mem0, Zep, Hindsight, Supermemory, MemOS, Cognee and others, with who ran each one.
 
-### Scalability and Cost of AI Memory Assessment
+Before comparing two numbers, check:
 
-Creating comprehensive evaluation datasets and running extensive tests can be computationally expensive and time-consuming. For agents with very long-term memory or vast knowledge bases, simulating and evaluating recall across millions of potential data points becomes a monumental task. The cost factor is a significant barrier to widespread **AI memory evaluation**.
+- **Answer model and judge model.** A stronger answer model raises every score. LongMemEval's script uses GPT-4o as judge; some vendors swap it.
+- **Metric.** F1, LLM-judged accuracy and Recall@k are not interchangeable. Recall@15 measures retrieval, not answers.
+- **Dataset variant.** LoCoMo10 vs the original 50; LongMemEval S vs M vs oracle; the cleaned LongMemEval release from September 2025.
+- **Context budget.** A system that returns 20K tokens of context isn't comparable to one returning 1K.
+- **Who ran it.** Independent reproduction counts for more than a vendor's own run.
 
-### Dynamic Nature of Memory Systems
+## How to run a memory benchmark yourself
 
-AI memory systems, especially those using retrieval-augmented generation (RAG) or dynamic knowledge graphs, are constantly updating. This means an evaluation performed today might not be entirely representative of the system's performance tomorrow. This contrasts with more static evaluations of [semantic memory in AI agents](/articles/semantic-memory-ai-agents/). Keeping evaluations current requires sophisticated tracking of memory dynamics.
+The fastest way to test your own system is LongMemEval, because the data and judge script are public.
 
-### Subjectivity and Nuance in Evaluating Memory in AI Agents
+1. **Clone the repo:** `git clone https://github.com/xiaowu0162/LongMemEval`.
+2. **Download the data** from Hugging Face into `data/`, for example `longmemeval_oracle.json` and `longmemeval_s_cleaned.json` from `xiaowu0162/longmemeval-cleaned`.
+3. **Ingest each question's `haystack_sessions`** into your memory system, in date order (`haystack_dates`).
+4. **Ask the `question`** with `question_date` as the current date, and save the answer.
+5. **Write a JSONL file** with one `{"question_id", "hypothesis"}` object per line.
+6. **Score it** from `src/evaluation`: `python3 evaluate_qa.py gpt-4o your_hypothesis_file ../../data/longmemeval_oracle.json` (needs `OPENAI_API_KEY`).
+7. **Print per-type results:** `python3 print_qa_metrics.py gpt-4o your_hypothesis_file.log ../../data/longmemeval_oracle.json`.
 
-Human memory is not perfectly accurate; it's reconstructive and prone to biases. Evaluating AI memory often involves deciding how closely it needs to mimic human recall, which can introduce subjective elements. For instance, understanding sarcasm or implied meaning requires sophisticated memory and reasoning, making objective **llm memory evaluation** difficult. Understanding these nuances is part of building more human-aligned AI, a topic explored in human-aligned AI development.
-
-## Tools and Frameworks for LLM Memory Evaluation
-
-Several open-source tools and frameworks are emerging to aid in the **llm memory evaluation** process, offering standardized ways to test and benchmark different memory systems. These tools streamline the complex task of **evaluating LLM memory**.
-
-### Open-Source Memory Systems
-
-Projects like **Hindsight** provide tools and examples for building and testing agent memory. While not solely an evaluation framework, its architecture allows for introspection and debugging, which are crucial for evaluation. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight). Other systems, like those found in [open-source-memory-systems-compared](/articles/open-source-memory-systems-compared/), offer varying degrees of testability and can be subjected to various **AI memory evaluation** techniques.
-
-### Benchmarking Suites for AI Memory
-
-Frameworks like LangChain and LlamaIndex often include modules or examples for memory management, and communities around these tools are developing shared evaluation protocols. The development of dedicated **AI memory benchmarks** is an active area of research, aiming to provide standardized tests for comparing diverse memory solutions. For instance, LangChain provides utilities that can be adapted for **llm memory evaluation**. The [Hugging Face Evaluate library](https://huggingface.co/docs/evaluate/index) also offers tools that can be customized for memory-specific metrics.
-
-### Vector Databases and Embeddings in Memory Evaluation
-
-The effectiveness of memory systems often hinges on the underlying embedding models and vector databases used for storage and retrieval. Evaluating these components, as discussed in [embedding-models-for-memory](/articles/embedding-models-for-rag/), is a critical part of overall memory evaluation. A poorly performing embedding model can significantly degrade the perceived performance of the entire memory system.
-
-### Code Example for Basic Recall Testing
-
-Here's a simple Python example demonstrating a basic function to test recall accuracy, a fundamental aspect of **evaluating LLM memory**:
+Here's a full-context baseline for steps 3 to 5. It pastes the whole history into the prompt, which is the number any memory system should beat on cost or accuracy:
 
 ```python
-from typing import List, Dict, Any
+import json
+from openai import OpenAI
 
-def evaluate_recall_accuracy(
- memory_entries: List[Dict[str, Any]],
- queries: List[Dict[str, Any]],
- llm_function: callable
-) -> float:
- """
- Evaluates the recall accuracy of a memory system.
+client = OpenAI()
+data = json.load(open("data/longmemeval_oracle.json"))
 
- Args:
- memory_entries: A list of memory items (e.g. {'id': 1, 'text': 'User asked about weather.'}).
- queries: A list of queries designed to retrieve specific memory items.
- Each query could be a dictionary like {'id': 1, 'expected_recall': 'User asked about weather.'}.
- llm_function: A function that simulates an LLM call to retrieve information from a given context.
- This function should accept a prompt and return a string.
+def render_history(item):
+    parts = []
+    for date, session in zip(item["haystack_dates"], item["haystack_sessions"]):
+        turns = "\n".join(f'{t["role"]}: {t["content"]}' for t in session)
+        parts.append(f"### Session on {date}\n{turns}")
+    return "\n\n".join(parts)
 
- Returns:
- The recall accuracy as a percentage.
- """
- correct_recalls = 0
- total_queries = len(queries)
-
- if total_queries == 0:
- return 100.0
-
- for query_data in queries:
- # In a real scenario, you'd format a prompt to the LLM,
- # including the memory_entries as context and the query's intent.
- # For this example, we'll simulate the LLM's retrieval based on a simplified prompt.
-
- # Construct a simulated prompt that the LLM would process
- prompt_context = "\n".join([f"Memory ID {entry['id']}: {entry['text']}" for entry in memory_entries])
- simulated_prompt = f"Retrieve information related to ID {query_data['id']}. Context:\n{prompt_context}"
-
- # Call the provided LLM function (or a simulation of it)
- # In a production system, this would be an actual API call.
- # For this example, we'll simulate its output based on simple matching.
- simulated_llm_output = llm_function(simulated_prompt)
-
- # Check if the simulated LLM output contains the expected recall information
- if query_data['expected_recall'] in simulated_llm_output:
- correct_recalls += 1
-
- return (correct_recalls / total_queries) * 100.0
-
-## Example Usage (simulated)
-
-## Placeholder for a real LLM call function that would interact with an LLM API
-## This dummy function simulates retrieval by checking if the expected recall string
-## is present within a simplified representation of the memory entries,
-## mimicking a successful retrieval that the LLM might return.
-def dummy_llm_retrieval_simulator(prompt: str) -> str:
- # This is a highly simplified simulation. A real LLM would parse the prompt
- # and retrieve relevant information from its knowledge or provided context.
- # We'll simulate a successful retrieval if the prompt implies a known ID and
- # the expected recall content is somewhat derivable from context.
-
- # Extracting ID from prompt (simplified)
- query_id = None
- if "Retrieve information related to ID" in prompt:
- try:
- query_id_str = prompt.split("Retrieve information related to ID ")[1].split(".")[0]
- query_id = int(query_id_str)
- except (IndexError, ValueError):
- pass
-
- # Simulate memory entries (in a real system, these would be passed differently)
- sample_memory_for_sim = [
- {'id': 1, 'text': 'User asked about the weather in London.'},
- {'id': 2, 'text': 'User mentioned they like Italian food.'},
- {'id': 3, 'text': 'User confirmed their meeting is at 3 PM.'}
- ]
-
- if query_id is not None:
- for entry in sample_memory_for_sim:
- if entry['id'] == query_id:
- # Simulate LLM returning the relevant memory text if ID matches
- return f"Simulated LLM response: {entry['text']}"
-
- return "Simulated LLM response: Could not find relevant information."
-
-sample_memory_entries = [
- {'id': 1, 'text': 'User asked about the weather in London.'},
- {'id': 2, 'text': 'User mentioned they like Italian food.'},
- {'id': 3, 'text': 'User confirmed their meeting is at 3 PM.'}
-]
-
-sample_queries_for_test = [
- {'id': 1, 'expected_recall': 'weather in London'},
- {'id': 2, 'expected_recall': 'Italian food'},
- {'id': 4, 'expected_recall': 'This should not be found'} # A query that should fail
-]
-
-## Calculate accuracy using the simulator
-accuracy = evaluate_recall_accuracy(
- sample_memory_entries,
- sample_queries_for_test,
- dummy_llm_retrieval_simulator
-)
-print(f"Recall Accuracy: {accuracy:.2f}%")
-
+with open("hypotheses.jsonl", "w") as out:
+    for item in data:
+        prompt = (
+            f"{render_history(item)}\n\n"
+            f"Current date: {item['question_date']}\n"
+            f"Question: {item['question']}\n"
+            "Answer from the chat history. If it has no answer, say so."
+        )
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        out.write(json.dumps({
+            "question_id": item["question_id"],
+            "hypothesis": resp.choices[0].message.content,
+        }) + "\n")
 ```
-This code snippet illustrates a basic approach to testing recall, a core component of **llm memory evaluation**.
 
-## Future Directions in LLM Memory Evaluation
-
-The field of **llm memory evaluation** is rapidly evolving. As AI agents become more sophisticated, so too must the methods used to assess their capabilities. Future **AI memory evaluation** will likely focus on more dynamic and nuanced measures.
-
-### Continuous and Real-time Evaluation
-
-Moving beyond static benchmarks, the future likely involves continuous evaluation integrated into the agent's operational loop. This allows for real-time monitoring of memory performance and adaptation to changing data distributions or user needs. This continuous **llm memory evaluation** is crucial for production systems.
-
-### Evaluating Adaptability and Learning
-
-Future evaluations will need to assess not just recall but also how agents learn from their memories and adapt their behavior over time. This involves understanding [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) and how it leads to improved performance. Evaluating this adaptive capacity is a complex frontier in **evaluating LLM memory**.
-
-### Human-in-the-Loop Evaluation
-
-Incorporating human feedback directly into the evaluation loop can help capture subjective aspects of memory performance, such as naturalness and coherence in conversations. This aligns with efforts to build [AI assistants that remember everything](/articles/best-chatbot-for-memory/). Human judgment remains invaluable in the nuanced task of **AI memory evaluation**.
-
-### Standardized Memory Architectures
-
-As common [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) emerge, so too will standardized evaluation methodologies tailored to these architectures. This will enable more direct comparisons between different implementations of similar memory concepts. A move towards standardized **memory benchmarks** is anticipated.
-
-The journey towards truly intelligent AI agents hinges on our ability to build and reliably evaluate their memory systems. As research progresses, expect more sophisticated benchmarks and evaluation techniques to emerge, pushing the boundaries of what AI can remember and achieve. This work is foundational for creating agents that exhibit persistent memory, as discussed in [AI agent persistent memory](/articles/persistent-memory-ai/). The ongoing effort in **llm memory evaluation** is critical for this advancement.
-
-## FAQ
-
-* **Question:** Why is LLM memory evaluation important?
- **Answer:** LLM memory evaluation is critical to ensure AI agents can reliably recall past interactions, maintain context, and perform tasks effectively over time, preventing issues like repetition or forgetting crucial information.
-* **Question:** What are common metrics for LLM memory evaluation?
- **Answer:** Common metrics include recall accuracy, retention rate, response relevance, context window use efficiency, and the ability to distinguish between relevant and irrelevant past information.
-* **Question:** How do benchmarks aid LLM memory evaluation?
- **Answer:** Benchmarks provide standardized datasets and tasks to compare different memory systems objectively. They help identify strengths and weaknesses in an agent's ability to store, retrieve, and use information.
-* **Question:** What is the primary challenge in evaluating LLM memory?
- **Answer:** The primary challenge is isolating memory performance from the LLM's core reasoning and generation capabilities, as a poor output could be due to memory retrieval failure or generation errors. This makes precise **llm memory evaluation** difficult.
-* **Question:** How do retrieval-augmented generation (RAG) systems fit into memory evaluation?
- **Answer:** RAG systems employ external knowledge bases as a form of long-term memory. Evaluating them involves assessing the retrieval accuracy and relevance of the augmented information, alongside the LLM's ability to integrate it. This is a key area of **AI memory evaluation**.
-* **Question:** Can LLM memory evaluation be automated?
- **Answer:** Yes, automated evaluation is possible using standardized benchmarks and metrics. However, capturing the nuances of human-like memory often still benefits from human-in-the-loop review, complementing automated **llm memory evaluation**.
-* **Question:** What are the key challenges in evaluating memory in AI agents?
- **Answer:** Key challenges include isolating memory performance from other LLM capabilities, the scalability and cost of comprehensive AI memory assessment, the dynamic nature of memory systems, and the inherent subjectivity in evaluating nuanced memory recall.
-* **Question:** What are the key metrics and benchmarks for evaluating memory in AI agents?
- **Answer:** Key metrics include recall accuracy, retention rate, and response relevance. Benchmarks like MemBench and MT-Bench, along with specialized datasets, are crucial for objective **agent memory evaluation** and **evaluating memory in AI agents**.
-* **Question:** How do memory benchmarks compare different LLM memory architectures?
- **Answer:** Memory benchmarks are essential for comparing different LLM memory architectures by providing standardized tasks and datasets. This allows for objective assessment of recall accuracy, retention rates, and retrieval efficiency across various architectural designs, such as those with different vector database integrations or attention mechanisms.
+To test a memory system, replace `render_history` with your system's ingest and search calls, and log how many tokens of context it returns per question. Run the same answer model and judge for every system you compare. For a list of systems to try, see [open-source memory systems compared](/articles/open-source-memory-systems-compared/).

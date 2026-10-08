@@ -1,187 +1,200 @@
 ---
-title: 'ReasoningBank LLM Agent Memory Framework: Enhancing AI Recall'
-description: Explore the ReasoningBank LLM agent memory framework, a system designed to provide AI agents with persistent, long-term recall capabilities beyond their context w...
+title: "ReasoningBank: Agent Memory That Learns From Failures"
+description: "ReasoningBank (Google, ICLR 2026) explained: how agents distill reasoning strategies from wins and failures, MaTTS, WebArena and SWE-Bench results, and the code."
 date: 2026-04-08
-lastmod: 2026-04-08
-tags:
-- LLM
-- AI Agents
-- Memory Framework
-- ReasoningBank
-keywords:
-- reasoningbank llm agent memory framework
-- AI memory systems
-- LLM agents
-- long-term memory for AI
-- agent recall
-faq:
-- question: What is the primary function of a reasoningbank in an LLM agent?
-  answer: A reasoningbank's primary function is to provide an AI agent with persistent, long-term memory capabilities, enabling it to store, retrieve, and reason over past interactions and learned information
-    beyond the limitations of its immediate context window.
-- question: How does a reasoningbank differ from an LLM's context window?
-  answer: An LLM's context window is a temporary buffer for immediate processing. A reasoningbank is an external, persistent storage system that allows the agent to access and recall information from much
-    longer timescales and a broader history of experiences.
-- question: Can reasoningbanks help AI agents learn over time?
-  answer: Yes, by storing past interactions, feedback, and outcomes, reasoningbanks allow agents to identify patterns, adapt their behavior, and improve their performance on recurring tasks, facilitating
-    continuous learning.
+lastmod: 2026-10-08
 slug: reasoningbank-llm-agent-memory-framework
+cluster: agent-memory
+tags: ["ReasoningBank", "Google Research", "agent memory", "procedural memory", "self-evolving agents", "test-time scaling"]
+keywords: ["reasoningbank", "reasoningbank llm agent memory", "reasoningbank paper", "memory-aware test-time scaling", "matts", "reasoningbank github"]
+faq:
+  - question: "What is ReasoningBank?"
+    answer: "ReasoningBank is an agent memory framework from Google (Ouyang et al., arXiv 2509.25140, ICLR 2026). After each task, an LLM judge labels the attempt a success or failure, and the agent distills up to three short reasoning strategies from it. Similar strategies are retrieved and added to the prompt on later tasks."
+  - question: "How is ReasoningBank different from storing past trajectories?"
+    answer: "Trajectory memory (like Synapse) stores raw action logs, and workflow memory (like AWM) keeps only procedures from successful runs. ReasoningBank stores general lessons, including warnings learned from failures. With failures included, its WebArena-Shopping success rate rose from 46.5 to 49.7, while AWM's dropped."
+  - question: "Is ReasoningBank code available?"
+    answer: "Yes. Google released research code at github.com/google-research/reasoning-bank under Apache 2.0, with setups for WebArena and SWE-Bench. The README says it is not an officially supported Google product and is for demonstration, not production."
 ---
 
-What if your AI assistant could remember every conversation, every preference, and every past mistake? A **reasoningbank LLM agent memory framework** is a system designed to equip AI agents with persistent, long-term recall capabilities. It allows agents to store, retrieve, and reason over past experiences and learned information, extending their memory far beyond the limitations of their immediate context windows, thereby enhancing complex task completion and ensuring coherent dialogue.
+**ReasoningBank** is a memory framework for LLM agents from Google that stores **lessons, not logs**. After each task, the agent judges whether it succeeded, then writes down a few general reasoning strategies, including warnings from its failures. On new tasks it retrieves the closest lessons. On WebArena with Gemini 2.5 Flash, it lifted success from 40.5% to 48.8%.
 
-Currently, AI agents forget more than they remember. However, a **reasoningbank LLM agent memory framework** is changing that by providing enduring recall, making it foundational for advanced AI and intelligent agents.
+The paper is "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory" by Siru Ouyang, Jun Yan, Chen-Yu Lee, Tomas Pfister and 13 co-authors ([arXiv 2509.25140](https://arxiv.org/abs/2509.25140)), accepted at ICLR 2026. It also introduces **MaTTS**, a way to spend extra compute per task to produce better memories.
 
-## What is a ReasoningBank LLM Agent Memory Framework?
+## What is ReasoningBank?
 
-A **reasoningbank LLM agent memory framework** equips AI agents with a mechanism for storing, retrieving, and reasoning over information throughout their operational lifespan. It provides enduring agent memory beyond transient LLM context windows, acting as an external repository for experiences and learned patterns to enhance coherence and performance on complex tasks. This specialized system is key for creating truly intelligent agents.
+**ReasoningBank is an agent memory framework that distills generalizable reasoning strategies from an agent's own successful and failed attempts, stores them as short structured memory items, and retrieves the most relevant ones into the prompt on future tasks, so the agent improves after deployment without retraining.** It is a form of [procedural memory for AI agents](/articles/ai-agent-procedural-memory/): memory about how to do things.
 
-### Definition Block
+The problem it targets is simple. An agent deployed on a stream of tasks usually starts each one from zero. It repeats the same mistakes and rediscovers the same tricks. Google's [blog post on ReasoningBank](https://research.google/blog/reasoningbank-enabling-agents-to-learn-from-experience/) (April 2026) names two weaknesses in earlier agent memory:
 
-A **reasoningbank LLM agent memory framework** provides AI agents with persistent, long-term recall by acting as an external memory store. It enables agents to save, query, and use past interactions and learned data, overcoming the transient nature of LLM context windows for enhanced coherence and task performance.
+- **Trajectory memory** stores every action. That's detailed but doesn't capture higher-level strategy.
+- **Workflow memory** keeps only procedures from successful runs. It misses what failures teach.
 
-This framework acts as an external, long-term repository for an AI agent's experiences, knowledge, and learned patterns. It allows the agent to access relevant past data when making decisions or generating responses, thereby enhancing its coherence, context retention, and overall performance on complex tasks. A well-designed reasoningbank is foundational for truly **intelligent AI agents**.
+ReasoningBank keeps the strategy and learns from both.
 
-### Core Components of a ReasoningBank
+## How ReasoningBank works
 
-At its heart, a reasoningbank typically comprises several key components that work in concert. These include a **storage mechanism** for retaining information, an **indexing or retrieval system** for efficiently querying that information, and **reasoning modules** that help the agent decide what information is relevant and how to use it. The choice of these components significantly impacts the effectiveness of the **reasoningbank llm agent memory framework**.
+### The memory item
 
-The **storage mechanism** might involve vector databases, traditional databases, or even structured file systems. Efficient retrieval is often achieved using semantic search or keyword-based indexing. The **reasoning layer** integrates the retrieved information back into the agent's decision-making process, often by augmenting prompts or directly influencing the LLM's output.
+Each memory item has three fields:
 
-## The Challenge of LLM Context Windows
+- **Title**: a short name for the strategy.
+- **Description**: one sentence summarizing it.
+- **Content**: the distilled reasoning steps or insights.
 
-LLMs, despite their impressive capabilities, operate with a significant limitation: the **context window**. This is the fixed amount of text an LLM can process at any given time. Information outside this window is effectively forgotten, leading to a lack of continuity in conversations and an inability to recall past events or learned knowledge. Industry benchmarks show current LLMs typically have context windows ranging from 4,000 to 32,000 tokens, which can be exceeded quickly in long interactions. This is where a **reasoningbank LLM agent memory framework** becomes indispensable for overcoming this constraint.
+The blog gives an example of a lesson learned from a failure: "always verify the current page identifier first to avoid infinite scroll traps before attempting to load more results." It's short, general and reusable across websites, unlike a raw click log.
 
-Imagine an AI assistant helping you plan a complex trip. If its context window is too small, it might forget your preferred travel dates or the hotel you booked earlier in the conversation. This makes multi-turn, intricate tasks incredibly difficult to manage effectively. A **reasoningbank LLM agent memory framework** is designed to solve this very problem.
+### The closed loop
 
-### Why Context Windows Are Insufficient for Long-Term Memory
+ReasoningBank runs a five-step loop around every task:
 
-The context window is analogous to an AI's short-term working memory. While essential for immediate processing, it's insufficient for tasks requiring sustained recall. As conversations or tasks grow longer, older information falls out of the window, forcing the agent to "re-learn" or re-establish context repeatedly. This is a major hurdle for **AI agent persistent memory**.
+1. **Retrieve.** Embed the task query (the paper uses `gemini-embedding-001`) and fetch the most similar memory items by cosine similarity. The default is top-1. They're added to the agent's system instruction.
+2. **Act.** The agent works on the task with those memories in context.
+3. **Judge.** An LLM-as-a-judge labels the trajectory success or failure, with no ground-truth answer.
+4. **Extract.** A success-specific or failure-specific prompt distills up to three memory items. Successes yield "validated strategies"; failures yield "counterfactual pitfalls."
+5. **Consolidate.** New items are appended to the bank. The paper calls this a "simple addition operation."
 
-This limitation hampers the development of agents capable of true learning and adaptation. For applications requiring **long-term memory AI agent** capabilities, such as personalized assistants or complex problem-solvers, simply increasing the context window is not a scalable or efficient solution. The average context window size, while growing, remains a fundamental architectural limitation for enduring memory within the **reasoningbank llm agent memory framework**.
+Retrieval and consolidation are deliberately basic. The authors say they kept them simple to isolate one variable: the quality of what goes into memory. Pruning, merging duplicates and smarter retrieval are left open. Those are the problems covered in [memory consolidation for AI agents](/articles/memory-consolidation-ai-agents/).
 
-## How ReasoningBanks Enable Long-Term Memory
+### Why failures matter
 
-A reasoningbank overcomes context window limitations by acting as an **external memory store**. Instead of relying solely on the LLM's internal context, the agent can query its reasoningbank for relevant past information. This retrieved data can then be strategically reintroduced into the LLM's prompt, effectively extending its memory. This is a core function of a **reasoningbank LLM agent memory framework**.
+The paper tests what happens when each method also learns from failed runs (WebArena-Shopping, Gemini 2.5 Flash, success rate):
 
-This approach allows agents to maintain a coherent understanding of ongoing dialogues, remember user preferences, and learn from a vast history of interactions. It's a fundamental shift from stateless processing to **agentic AI implementing long term memory**.
+| Method | Successes only | With failures |
+|---|---|---|
+| Synapse (trajectories) | 40.6 | 41.7 |
+| AWM (workflows) | 44.4 | 42.2 |
+| ReasoningBank | 46.5 | 49.7 |
 
-### Retrieval-Augmented Generation (RAG) and ReasoningBanks
+Raw failed trajectories barely help Synapse and hurt AWM. ReasoningBank gains 3.2 points, because it turns a failure into an explicit "don't do this" lesson instead of storing a bad example.
 
-**Retrieval-Augmented Generation (RAG)** is a key technique often employed within reasoningbank frameworks. RAG involves retrieving relevant documents or data snippets from an external knowledge base and using them to augment the LLM's prompt before generation. This allows LLMs to access up-to-date or domain-specific information they weren't originally trained on.
+## MaTTS: memory-aware test-time scaling
 
-While RAG is powerful for external knowledge, a reasoningbank specifically focuses on the AI agent's *own* history and learned experiences. It's about the agent remembering its past interactions and internal states, not just external facts. Understanding the nuances between understanding agent memory versus RAG is crucial here for effective **reasoningbank llm agent memory framework** design.
+**MaTTS (memory-aware test-time scaling)** spends more compute on each task to generate more varied experience, then uses the contrast between attempts to write better memories. Better memories then guide better attempts. The paper calls this a new scaling dimension for agents.
 
-### Storing and Retrieving Agent Experiences
+It comes in two forms:
 
-The process typically involves saving significant events, decisions, or pieces of information from the agent's interactions into the reasoningbank. When a new situation arises, the agent queries the bank for relevant past data. This could be based on keywords, semantic similarity, or temporal proximity.
+- **Parallel scaling**: run k attempts at the same task and use **self-contrast**, comparing successful and failed attempts to find what actually made the difference.
+- **Sequential scaling**: have one attempt **self-refine** several times; the intermediate notes also feed memory extraction.
 
-For instance, if an agent is asked to book a flight, it might query its reasoningbank for the user's preferred airline, past booking details, or even specific complaints about previous flights. This information is then passed to the LLM, enabling a more personalized and context-aware response. This directly supports **AI agent long term memory** through the **reasoningbank llm agent memory framework**.
+On WebArena-Shopping with Gemini 2.5 Flash and k = 5:
 
-## Architecting a ReasoningBank LLM Agent Memory Framework
+| Scaling | Vanilla test-time scaling | MaTTS |
+|---|---|---|
+| Parallel | 52.4 | 55.1 |
+| Sequential | 51.9 | 54.5 |
 
-Building an effective reasoningbank involves careful consideration of its architecture, the technologies used, and how it integrates with the core LLM agent. The goal is to create a system that is both performant and scalable. Implementing a **reasoningbank llm agent memory framework** requires thoughtful design.
+With parallel MaTTS, best-of-k success grew from 49.7 at k = 1 to 55.1 at k = 5. The plain version without memory-aware extraction gained less from the same extra compute.
 
-### Memory Types and Their Roles
+## ReasoningBank results on WebArena, Mind2Web and SWE-Bench
 
-Different types of memory are essential for a comprehensive reasoningbank. **Episodic memory**, which stores specific events and their context, is vital for recalling past interactions. **Semantic memory** stores general knowledge and facts learned over time. Combining these allows for a richer, more nuanced understanding and recall. This builds upon concepts discussed in [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) and [semantic memory ai agents](/articles/semantic-memory-ai-agents/).
+The paper compares four setups on each backbone: no memory, **Synapse** (trajectory memory), **AWM** (Agent Workflow Memory) and ReasoningBank. The abstract sums up the gains as up to **20% relative improvement** in effectiveness and up to **16% fewer interaction steps**. All results are from the paper's own experiments.
 
-The ability to distinguish between "what happened" (episodic) and "what is generally true" (semantic) is a hallmark of advanced AI memory systems and is crucial for accurate **reasoningbank llm agent memory framework** implementations.
+### WebArena
 
-### Choosing the Right Vector Database
+Overall success rate, with average steps in parentheses (Table 1; the Map subset was excluded):
 
-Vector databases are central to modern memory frameworks due to their ability to perform efficient similarity searches on high-dimensional embeddings. Popular choices include ChromaDB, FAISS, and Pinecone. Each offers different trade-offs in terms of performance, scalability, and ease of use for the **reasoningbank llm agent memory framework**.
+| Backbone | No memory | Synapse | AWM | ReasoningBank | + MaTTS |
+|---|---|---|---|---|---|
+| Gemini 2.5 Flash | 40.5 (9.7) | 42.1 (9.2) | 44.1 (9.0) | 48.8 (8.3) | 51.8 (7.9) |
+| Gemini 2.5 Pro | 46.7 (8.8) | 47.7 (8.5) | 47.6 (8.7) | 53.9 (7.4) | 56.3 (7.1) |
+| Claude 3.7 Sonnet | 41.7 (8.0) | 42.6 (7.9) | 40.8 (8.9) | 46.3 (7.3) | 48.8 (7.2) |
 
-A simple Python example using `chromadb` to store and retrieve memories could look like this:
+ReasoningBank beat no memory by 8.3, 7.2 and 4.6 points, and it cut steps on every backbone. AWM did worse than no memory on Claude 3.7 Sonnet.
+
+### SWE-Bench-Verified
+
+Resolve rate, with average steps in parentheses (Table 2):
+
+| Backbone | No memory | Synapse | ReasoningBank |
+|---|---|---|---|
+| Gemini 2.5 Flash | 34.2 (30.3) | 35.4 (30.7) | 38.8 (27.5) |
+| Gemini 2.5 Pro | 54.0 (21.1) | 53.4 (21.0) | 57.4 (19.8) |
+
+That's 4.6 and 3.4 points over no memory, and about 3 fewer steps per issue with Flash. For memory in coding agents more broadly, see [AI coding agent memory](/articles/ai-coding-agent-memory/).
+
+### Mind2Web
+
+On Mind2Web, ReasoningBank improved element accuracy, action F1, step success and task success in all three splits (cross-task, cross-website, cross-domain) for both Gemini models. Full-task success is low for every method on this benchmark. With Gemini 2.5 Pro, cross-task success went from 3.5 (no memory) to 5.1, and cross-domain from 1.4 to 1.7.
+
+## Emergent strategies
+
+The authors report that memory items change as the bank grows, in a way they compare to reinforcement learning. In one case study, an item called "User-Specific Information Navigation" starts as a plain procedure (find the navigation links), becomes self-reflective (re-check identifiers), then adaptive (use search or filters to make sure results are complete) and finally compositional (cross-reference the task requirements and reassess options).
+
+This is a qualitative observation from examples, not a measured result. It's still the most interesting part of the paper for anyone building agents: the bank isn't a fixed rulebook, it keeps rewriting itself through new entries.
+
+## Limitations
+
+The paper lists three in its appendix:
+
+- **Content, not structure.** The study focuses on what goes into memory. It doesn't compare memory structures like graphs or hierarchies, which the authors call "orthogonal concerns."
+- **Simple retrieval and consolidation.** Embedding top-k and append-only storage. A real deployment will hit duplicate and contradictory items as the bank grows.
+- **The judge can be wrong.** Labels come from an LLM judge, which "may introduce noise when tasks are ambiguous or when the judge model itself errs." The authors report results held up under that noise, and suggest stronger verifiers or human feedback.
+
+Two practical notes from outside the paper's list. All experiments use benchmark environments where tasks repeat in style. And the bank is shared across tasks, so a wrong lesson can spread until something removes it.
+
+## ReasoningBank code and a minimal sketch
+
+Google released research code at [google-research/reasoning-bank](https://github.com/google-research/reasoning-bank) under Apache 2.0. It includes run scripts for WebArena (via BrowserGym and Docker-hosted sites) and SWE-Bench (via mini-swe-agent), with GPT, Gemini or Claude backbones. The README says it is "not an officially supported Google product" and is "intended for demonstration purposes only."
+
+It isn't a pip-installable memory library. The core idea is small, though. Here's a self-contained sketch of the retrieve and consolidate steps, with the memory item schema from the paper. The `embed` function is a stand-in; in practice you'd call an embedding model, and the extract step would be an LLM call with the paper's success or failure prompt.
 
 ```python
-import chromadb
+from dataclasses import dataclass
+import math
 
-## Initialize ChromaDB client
-client = chromadb.Client()
+@dataclass
+class MemoryItem:
+    title: str
+    description: str
+    content: str
+    vector: list[float]
 
-## Create or get a collection
-collection = client.get_or_create_collection(name="agent_memory")
+def embed(text: str) -> list[float]:
+    # Stand-in for a real embedding model (the paper uses gemini-embedding-001).
+    counts = [0.0] * 64
+    for word in text.lower().split():
+        counts[hash(word) % 64] += 1.0
+    return counts
 
-## Add some memories (documents and their embeddings)
-collection.add(
- documents=[
- "User asked about the weather yesterday.",
- "Agent provided a forecast for tomorrow.",
- "User expressed dissatisfaction with the previous recommendation."
- ],
- ids=["mem_1", "mem_2", "mem_3"]
-)
+def cosine(a: list[float], b: list[float]) -> float:
+    dot = sum(x * y for x, y in zip(a, b))
+    norm = math.sqrt(sum(x * x for x in a)) * math.sqrt(sum(y * y for y in b))
+    return dot / norm if norm else 0.0
 
-## Query for similar memories
-results = collection.query(
- query_texts=["What did the user say earlier?"],
- n_results=2
-)
+class ReasoningBank:
+    def __init__(self) -> None:
+        self.items: list[MemoryItem] = []
 
-print(results)
-## Expected output might show 'mem_1' and 'mem_3' as most similar.
+    def retrieve(self, query: str, k: int = 1) -> list[MemoryItem]:
+        q = embed(query)
+        return sorted(self.items, key=lambda m: cosine(q, m.vector), reverse=True)[:k]
+
+    def consolidate(self, new_items: list[tuple[str, str, str]]) -> None:
+        # The paper's consolidation is a plain append.
+        for title, description, content in new_items[:3]:  # at most 3 per trajectory
+            self.items.append(MemoryItem(title, description, content, embed(f"{title} {description}")))
+
+bank = ReasoningBank()
+bank.consolidate([(
+    "Verify page identifier before paginating",
+    "Check which page you are on before loading more results to avoid infinite scroll loops.",
+    "Read the current page number or URL first; stop if it doesn't change after loading more.",
+)])
+for m in bank.retrieve("load more search results on the orders page"):
+    print("Add to system prompt:", m.title, "-", m.content)
 ```
 
-This illustrates how a **reasoningbank llm agent memory framework** can use vector storage for its core memory functions.
+## Where ReasoningBank fits in agent memory
 
-### Implementing Semantic Search
+Most agent memory systems store **what happened** or **what's true**: user facts, past conversations, documents. That's [episodic memory](/articles/episodic-memory-in-ai-agents/) and semantic memory. ReasoningBank stores **how to do the work better**, learned from the agent's own track record. It complements fact memory rather than replacing it.
 
-Semantic search allows agents to find memories that are conceptually similar, not just those that share keywords. This is achieved by converting text into numerical vector embeddings using models like Sentence-BERT. The **reasoningbank llm agent memory framework** then queries these embeddings.
+The broader map of memory types, and how they fit together in one agent, is in the [AI agent memory guide](/articles/ai-agent-memory-explained/).
 
-The effectiveness of semantic search is a major advantage over traditional keyword matching for complex recall tasks. This capability is a cornerstone of advanced **LLM agent memory systems**.
+## Key takeaways
 
-### Integration with LLM Agents
-
-Seamless integration is paramount. The reasoningbank needs to communicate efficiently with the LLM agent's control loop. This often involves **prompt engineering** to include retrieved memories effectively or using **function calling** to allow the LLM to explicitly query the memory system.
-
-The agent's architecture must be designed to accommodate these memory interactions. Frameworks like LangChain or LlamaIndex provide tools that can facilitate this integration, though custom solutions are also common. Exploring [effective AI agent memory system architectures](/articles/best-ai-memory-framework/) can provide further insights into effective integration patterns for a **reasoningbank llm agent memory framework**.
-
-## Benefits of a ReasoningBank Approach
-
-Implementing a reasoningbank offers significant advantages for AI agents, transforming them from stateless conversationalists into more capable, learning entities. The adoption of a **reasoningbank llm agent memory framework** provides tangible benefits.
-
-### Enhanced Coherence and Context Retention
-
-By accessing past interactions, agents can maintain a consistent persona and understand the evolving context of a conversation or task. This leads to a more natural and less frustrating user experience, crucial for **AI that remembers conversations**. A well-implemented **reasoningbank llm agent memory framework** is key to this.
-
-### Improved Task Completion and Decision Making
-
-Complex tasks often require recalling details from earlier stages. A reasoningbank ensures that crucial information isn't lost, enabling the agent to make better decisions and complete multi-step processes accurately. This is a core aspect of [AI agent long term memory](/articles/ai-agent-long-term-memory/). According to a 2023 study by Vectorize.io, retrieval-augmented agents showed a 34% improvement in task completion compared to baseline models.
-
-### Personalization and Learning
-
-Agents can learn user preferences, past feedback, and common patterns over time. This allows for highly personalized interactions and a system that genuinely adapts to individual users, moving towards an **AI assistant that remembers everything**. The **reasoningbank llm agent memory framework** is central to this personalization.
-
-### Scalability Beyond Context Limits
-
-The ability to offload memory to an external store means agents aren't constrained by the LLM's context window size. This enables them to handle incredibly long-running tasks or maintain memories over extended periods, a key feature for **agentic AI implementing long term memory**. This scalability is a primary advantage of the **reasoningbank llm agent memory framework**.
-
-## Challenges and Future Directions
-
-Despite the benefits, developing and deploying reasoningbank frameworks presents challenges. Ensuring efficient retrieval, managing memory growth, and handling potential biases in stored data are ongoing areas of research for the **reasoningbank llm agent memory framework**.
-
-### Memory Management and Efficiency
-
-As an agent interacts over time, its memory store can grow exponentially. Efficient indexing, summarization, and **memory consolidation AI agents** techniques are needed to keep retrieval times low and manage storage costs. This is a critical aspect of any effective **LLM memory system**.
-
-### Data Privacy and Security
-
-Storing vast amounts of interaction data raises privacy concerns. Secure measures and transparent data handling policies are essential, especially when dealing with sensitive user information. This is a consideration for any system aiming for **persistent memory AI** and implementing a **reasoningbank llm agent memory framework**.
-
-### Towards More Sophisticated Reasoning
-
-Future developments will likely focus on more advanced reasoning capabilities within the memory framework itself. This could include causal reasoning, analogical reasoning, and the ability to infer new knowledge from existing memories, pushing the boundaries of what **limited memory AI** can achieve. The development of benchmarks for evaluating these capabilities is also an active area, as seen in AI memory benchmarks. The evolution of the **reasoningbank llm agent memory framework** will be driven by these advancements.
-
-In summary, a **reasoningbank LLM agent memory framework** is essential for building AI agents that can truly learn, remember, and perform complex tasks effectively over extended periods, moving beyond the inherent limitations of LLM context windows. It represents a significant step towards more capable and human-like artificial intelligence, with ongoing research aiming to make these systems even more powerful. Projects like Hindsight offer open-source implementations for building such memory systems. For example, the Hindsight project provides tools for developing custom memory architectures for AI agents: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight).
-
-## FAQ
-
-### What is the primary function of a reasoningbank in an LLM agent?
-A reasoningbank's primary function is to provide an AI agent with persistent, long-term memory capabilities, enabling it to store, retrieve, and reason over past interactions and learned information beyond the limitations of its immediate context window.
-
-### How does a reasoningbank differ from an LLM's context window?
-An LLM's context window is a temporary buffer for immediate processing. A reasoningbank is an external, persistent storage system that allows the agent to access and recall information from much longer timescales and a broader history of experiences.
-
-### Can reasoningbanks help AI agents learn over time?
-Yes, by storing past interactions, feedback, and outcomes, reasoningbanks allow agents to identify patterns, adapt their behavior, and improve their performance on recurring tasks, facilitating continuous learning.
----
+- **ReasoningBank** stores short reasoning strategies (title, description, content) distilled from both successes and failures.
+- An **LLM judge** labels each attempt; no ground truth needed.
+- Learning from **failures** is where it pulls ahead of trajectory and workflow memory.
+- **MaTTS** turns extra test-time compute into better memories via self-contrast or self-refinement.
+- Reported gains: WebArena 40.5% to 48.8% (Gemini 2.5 Flash), SWE-Bench-Verified 34.2% to 38.8%, with fewer steps. Paper results, not independent replications.
+- Code is public under Apache 2.0, but it's research code, not a production library.

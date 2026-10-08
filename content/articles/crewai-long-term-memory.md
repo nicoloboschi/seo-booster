@@ -1,263 +1,144 @@
 ---
-title: 'CrewAI Long Term Memory: Enhancing AI Agent Recall and Performance'
-description: Explore CrewAI long term memory, understanding how AI agents retain and recall information beyond their context window. Learn about implementation, vector databas...
+title: "CrewAI Long-Term Memory: The Unified Memory Class"
+description: "How CrewAI long-term memory works since v1.10: one Memory class with scopes, LanceDB storage, composite recall scoring, embedder setup, and how to reset it."
 date: 2026-03-31
-lastmod: 2026-03-31
-tags:
-- CrewAI
-- AI Memory
-- Long Term Memory
-- Agent Architecture
-- AI Agent Memory
-- CrewAI Memory
-keywords:
-- crewai long term memory
-- AI agent memory
-- agent recall
-- CrewAI memory
-- persistent AI memory
-- AI agent recall
-- CrewAI agent memory
-faq:
-- question: What is CrewAI long term memory?
-  answer: CrewAI long term memory refers to mechanisms that allow CrewAI agents to store, retrieve, and utilize information beyond their immediate conversational context or short-term recall, enabling more
-    consistent and informed decision-making.
-- question: Why is long term memory crucial for CrewAI agents?
-  answer: Long term memory is crucial for CrewAI agents to build upon past interactions, learn from experiences, maintain context across extended tasks, and avoid repeating mistakes, ultimately leading
-    to more sophisticated and reliable autonomous operations.
-- question: How can I implement long term memory in CrewAI?
-  answer: Implementation involves integrating external memory systems, such as vector databases, with CrewAI's agent architecture. This allows agents to store and query past experiences, documents, or learned
-    knowledge effectively.
-- question: What is the primary benefit of implementing long term memory in CrewAI?
-  answer: The primary benefit is enabling agents to retain and access information beyond their immediate context, leading to improved consistency, learning, and performance across extended or complex tasks.
-    This allows for more sophisticated decision-making and reduces repetitive errors.
-- question: How does CrewAI's memory management differ from other frameworks?
-  answer: CrewAI itself is primarily an orchestrator. While it handles short-term context, its long-term memory capabilities rely on integrating external memory systems, such as vector databases or specialized
-    memory libraries, which is a common pattern across many agent frameworks.
-- question: Can CrewAI agents forget information?
-  answer: Yes, without a persistent long-term memory system, CrewAI agents will effectively "forget" information once their immediate context window is exceeded or when the session ends. Implementing long-term
-    memory mechanisms is how developers prevent this forgetting.
-- question: What is the role of AI agent memory in CrewAI?
-  answer: AI agent memory in CrewAI refers to the systems and techniques that enable agents to store, retrieve, and utilize information over extended periods, going beyond the immediate context window to
-    enhance performance and consistency.
-- question: How does CrewAI's AI agent memory contribute to its overall intelligence?
-  answer: CrewAI's AI agent memory, particularly its long-term capabilities, allows agents to build a persistent knowledge base. This enables them to learn from past interactions, adapt their strategies,
-    and make more informed decisions, thereby increasing their overall intelligence and autonomy.
-- question: What are the key components of CrewAI long term memory?
-  answer: Key components include mechanisms for storing information (like vector databases), retrieval systems to access relevant data, and integration strategies that allow agents to leverage this memory
-    effectively within their workflows.
+lastmod: 2026-10-08
 slug: crewai-long-term-memory
+cluster: agent-memory
+tags:
+  - CrewAI
+  - agent memory
+  - long-term memory
+  - multi-agent systems
+keywords:
+  - "crewai long term memory"
+  - "crewai memory"
+  - "crewai unified memory"
+  - "crewai memory storage"
+  - "crewai reset memory"
+  - "crewai mem0"
+faq:
+  - question: "How does long-term memory work in CrewAI?"
+    answer: "Since CrewAI 1.10 (February 2026), one Memory class stores everything. An LLM tags each saved item with a scope, categories and an importance score, and the item is embedded into a local LanceDB store. Recall ranks results by a mix of semantic similarity, recency and importance. Set memory=True on a Crew to recall before each task and save facts after it."
+  - question: "Where does CrewAI store memory?"
+    answer: "By default in ./.crewai/memory, as a LanceDB vector store. You can override the location with the storage argument of Memory or the CREWAI_STORAGE_DIR environment variable, or plug in your own backend through the StorageBackend protocol."
+  - question: "Does CrewAI still have short-term, long-term and entity memory?"
+    answer: "No. In current releases those separate classes, along with ExternalMemory, are gone. The docs describe a single Memory class that replaces short-term, long-term, entity and external memory. Older tutorials and some third-party integrations still target the pre-1.10 API."
 ---
 
-What if an AI agent performing a multi-stage project forgot crucial details from earlier phases, client feedback, specific deadlines, or lessons learned? Without this recall, its actions would be inefficient, error-prone, and frustratingly repetitive. This scenario highlights why **CrewAI long term memory** is indispensable for creating truly capable AI agents.
+**CrewAI long-term memory** is handled by one `Memory` class. You save text with `remember()` and get it back with `recall()`. An LLM tags each item with a scope, categories and an importance score, and CrewAI embeds it into a local LanceDB store. Turn on `memory=True` on a `Crew` and it recalls context before each task and saves facts after it.
 
-## What is CrewAI Long Term Memory?
+That's the design since **CrewAI 1.10** (released February 27, 2026). Before it, CrewAI had separate short-term, long-term, entity and external memory, with SQLite for task results. Most tutorials online still show that older API, which no longer exists in current releases (1.15 as of October 2026). Facts here come from the [CrewAI memory docs](https://docs.crewai.com/en/concepts/memory) and the installed package.
 
-**CrewAI long term memory** refers to the systems and techniques enabling AI agents built with CrewAI to retain and access information over extended periods. This capability transcends the immediate context window, allowing agents to recall past interactions, learned facts, and task-specific knowledge for improved performance and consistency.
+## What is CrewAI long-term memory?
 
-This feature is vital for agents needing to maintain context across multiple interactions or long-running tasks. Without it, agents would reset their knowledge with each new conversation, severely limiting their utility for complex applications requiring continuity and learning.
+**CrewAI long-term memory is the persistent store that lets crews and agents reuse what they learned in earlier runs. In current CrewAI it is a single Memory object: records are LLM-analyzed, embedded, stored in LanceDB on disk, organized in a tree of scopes, and recalled by a score that blends similarity, recency and importance.**
 
-### The Importance of Persistent Recall for AI Agent Memory
+It's "long-term" because it survives across `kickoff()` calls and process restarts, as long as the storage directory survives. Within a single task, the agent's working context is still its prompt, bounded by the model's [context window](/articles/context-window-of-an-llm/).
 
-**Persistent recall** is fundamental to advanced AI agent functionality. For **CrewAI agents**, this means acting as knowledgeable entities, not just stateless conversationalists. When agents access a rich history of their operations and learnings, they make more informed decisions, adapt to changing circumstances, and execute tasks with greater accuracy and efficiency. This persistent memory transforms a simple chatbot into an autonomous agent capable of sophisticated problem-solving. Understanding **AI agent memory** in this context is key to unlocking their full potential.
+## How CrewAI memory changed in 1.10
 
-## Understanding Agent Memory Types in CrewAI
+| Before 1.10 | 1.10 and later |
+|---|---|
+| `ShortTermMemory` (ChromaDB vector store of recent context) | Replaced by `Memory` |
+| `LongTermMemory` (SQLite table of task results) | Replaced by `Memory` |
+| `EntityMemory` (people, places, concepts) | Replaced by `Memory` categories and scopes |
+| `ExternalMemory` (e.g. Mem0 as a provider) | Removed; use a custom `StorageBackend` or call the provider yourself |
+| `memory_config={"provider": "mem0"}` | Removed |
+| Default OpenAI embedder `text-embedding-ada-002` (1536 dims) | `text-embedding-3-large` (3072 dims) |
 
-CrewAI can integrate various memory forms. While it manages short-term context, achieving true **CrewAI long term memory** requires deliberate architectural choices. Understanding different memory types is key to implementing effective long-term storage and retrieval for **CrewAI memory**.
+In `crewai` 1.15, the `crewai.memory` package exports `Memory`, `MemoryScope`, `MemorySlice` and related types; the old classes are not there. If you upgrade with old local data, the docs warn about an **embedding dimension mismatch**. Either reset memory or pin the older embedder.
 
-### Episodic Memory for Agents
+The change also breaks integrations built on `ExternalMemory`. Mem0's [CrewAI guide](https://docs.mem0.ai/integrations/crewai) now calls the Mem0 client directly, outside CrewAI's memory, and notes the removed `memory_config` shortcut. Hindsight's `hindsight-crewai` package pins `crewai<1.10` for the same reason. Check any memory plugin's supported CrewAI version before relying on it.
 
-**Episodic memory in AI agents** captures specific events and experiences chronologically. For a CrewAI agent, this could mean remembering the exact sequence of actions during a previous project, the outcome of a specific strategy, or unique feedback received at a certain time. This memory type is crucial for agents needing to reconstruct past events or learn from specific instances. Implementing this in CrewAI typically involves storing conversational turns or task-completion logs as discrete events.
+## Using memory in a crew
 
-Our guide on [how episodic memory enhances AI agents](/articles/episodic-memory-in-ai-agents/) offers more detail.
-
-### Semantic Memory and CrewAI
-
-**Semantic memory for AI agents** stores general knowledge, facts, concepts, and meanings. In a CrewAI context, this would encompass learned business rules, industry jargon, common problem-solving patterns, or general world knowledge. This memory type allows agents to understand and reason about information more broadly, moving beyond specific past experiences. This is fundamental to a **crewai long term memory** system aiming for general intelligence.
-
-### How Agents Store and Retrieve Information: The Core of AI Agent Memory
-
-AI agents store information through various mechanisms. Short-term memory is often handled by the LLM's context window. For **CrewAI long term memory**, external systems like vector databases are employed. These systems convert information into numerical representations (embeddings) that allow for rapid similarity-based retrieval. This process is essential for agents to effectively recall and use past data, forming the backbone of robust **AI agent memory**.
-
-## Implementing Long Term Memory in CrewAI
-
-Integrating **CrewAI long term memory** typically involves augmenting the framework with external memory storage solutions. CrewAI orchestrates agents, so memory management often falls to custom implementations or specialized libraries that agents interact with. This is a critical step for achieving effective **CrewAI agent memory**.
-
-### Vector Databases as Memory Backends for Persistent AI Memory
-
-One effective method for implementing **persistent AI memory** for CrewAI agents is through **vector databases**. These databases store information as numerical vectors, allowing for efficient similarity searches. When an agent needs to recall information, it converts its query into a vector and searches the database for the most relevant stored memories. This is particularly useful for recalling unstructured data like past conversations or user preferences.
-
-Popular vector databases include Pinecone, Weaviate, Chroma, and FAISS. These can be integrated into an agent's workflow for dynamic querying and storage. The process typically involves:
-
-1. **Encoding:** Converting text or data into vector embeddings using models like Sentence-BERT or OpenAI's embedding API.
-2. **Storage:** Storing these embeddings in a vector database.
-3. **Retrieval:** Encoding a query and performing a similarity search against stored embeddings.
-4. **Contextualization:** Injecting retrieved information into the agent's prompt for the LLM.
-
-This approach forms the basis of many **Retrieval-Augmented Generation (RAG)** systems, critical for building **long term memory AI chat** applications.
-
-Here's a simplified Python example demonstrating how you might store an agent's thought process in a vector database for later retrieval:
+The simplest setup is `memory=True`, which uses defaults. For control, pass a configured `Memory`:
 
 ```python
-import uuid
-from sentence_transformers import SentenceTransformer
-## Mock implementations for demonstration purposes
-class MockVectorDBClient:
- def __init__(self):
- self.collections = {}
+from crewai import Agent, Crew, Memory, Process, Task
 
- def get_or_create_collection(self, name):
- if name not in self.collections:
- self.collections[name] = MockCollection(name)
- return self.collections[name]
+memory = Memory(
+    storage="./crew_memory",      # default: ./.crewai/memory or $CREWAI_STORAGE_DIR/memory
+    recency_half_life_days=14,    # default 30
+)
 
-class MockCollection:
- def __init__(self, name):
- self.name = name
- self.data = []
- self.ids = []
+researcher = Agent(
+    role="Researcher",
+    goal="Find facts about the customer's account",
+    backstory="Careful analyst.",
+    memory=memory.scope("/agent/researcher"),  # private branch of the memory tree
+)
 
- def add(self, ids, embeddings, documents):
- for i in range(len(ids)):
- self.ids.append(ids[i])
- self.data.append({"embedding": embeddings[i], "document": documents[i]})
- print(f"Mock DB: Added {len(ids)} items to collection '{self.name}'.")
+task = Task(
+    description="Summarize open issues for ACME Corp.",
+    expected_output="A short list of issues.",
+    agent=researcher,
+)
 
- def query(self, query_embeddings, n_results):
- # Simplified mock query: just return the first n_results documents
- print(f"Mock DB: Querying collection '{self.name}' for {n_results} results.")
- if not self.data:
- return {"ids": [[]], "documents": [[]]}
-
- # In a real scenario, this would involve vector similarity search.
- # For this mock, we'll just return some dummy results if data exists.
- retrieved_docs = [item["document"] for item in self.data[:n_results]]
- retrieved_ids = self.ids[:n_results]
- return {"ids": [retrieved_ids], "documents": [retrieved_docs]}
-
-## Initialize a sentence transformer model for embeddings
-model = SentenceTransformer('all-MiniLM-6-L6-v2')
-
-## Initialize mock vector database client and collection
-vector_db_client = MockVectorDBClient()
-collection = vector_db_client.get_or_create_collection("agent_memory")
-
-def store_agent_thought(thought_text: str):
- """Encodes and stores an agent's thought in a vector database."""
- embedding = model.encode(thought_text).tolist()
- doc_id = str(uuid.uuid4())
- collection.add(ids=[doc_id], embeddings=[embedding], documents=[thought_text])
- print(f"Thought encoded and stored with ID: {doc_id}")
-
-def retrieve_relevant_thoughts(query_text: str, top_n: int = 3):
- """Retrieves thoughts similar to a query from the vector database."""
- query_embedding = model.encode(query_text).tolist()
- results = collection.query(query_embeddings=[query_embedding], n_results=top_n)
- print(f"Retrieved {len(results['ids'][0])} relevant thoughts.")
- return results['documents'][0]
-
-## Example usage:
-agent_current_thought = "I need to consider the client's previous feedback regarding the UI design before proceeding with the next steps."
-store_agent_thought(agent_current_thought)
-
-## Add another thought to simulate a richer memory
-store_agent_thought("Agent explored alternative strategy: A/B testing the new feature.")
-
-user_query = "What did the client think about the UI?"
-relevant_memories = retrieve_relevant_thoughts(user_query)
-print("Relevant memories:", relevant_memories)
-
-## Example showing how RAG improves factual accuracy
-## According to a 2023 survey by [AI Research Hub](https://arxiv.org/abs/2305.10806),
-## RAG systems can improve LLM factual accuracy by up to 40%.
-## Another study from [Stanford AI Lab](https://arxiv.org/abs/2310.09980) in 2024
-## indicated that retrieval-augmented agents showed a 34% improvement in task completion.
-print("\nStatistics on RAG effectiveness:")
-print("- AI Research Hub (2023): RAG systems can improve LLM factual accuracy by up to 40%.")
-print("- Stanford AI Lab (2024): Retrieval-augmented agents showed a 34% improvement in task completion.")
+crew = Crew(agents=[researcher], tasks=[task], memory=memory, process=Process.sequential)
+crew.kickoff()
 ```
 
-### Using Memory Libraries and Frameworks for CrewAI Memory
+When memory is on, the crew recalls relevant records **before** each task and extracts facts from the output **after** it. Saves run on a background thread; `kickoff()` waits for pending writes before it returns. Agents without their own memory use the crew's.
 
-Several libraries and frameworks simplify memory management for AI agents. While CrewAI orchestrates agents, these tools handle underlying memory storage and retrieval. For instance, libraries like `langchain-community` offer various memory components adaptable for CrewAI agents.
+### Using Memory directly
 
-The open-source project **Hindsight** is another system designed to provide agents with long-term memory capabilities by integrating with vector databases. By abstracting memory management complexities, these tools let developers focus on agent logic. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
+You can also use `Memory` outside a crew, which helps for testing what it stored:
 
-### Considerations for CrewAI Memory Implementation
+```python
+from crewai import Memory
 
-When building **CrewAI long term memory** systems, several factors are crucial:
+memory = Memory()
+memory.remember("ACME renewed their contract in March; they want SSO next.",
+                scope="/customers/acme", source="user:alice")
 
-* **Scalability:** The chosen memory solution must scale with data volume.
-* **Retrieval Speed:** Fast retrieval is essential for real-time agent performance.
-* **Data Relevance:** Ensuring agents retrieve relevant information prevents noise.
-* **Cost:** Storage and query costs for vector databases require careful management.
-* **Privacy and Security:** Sensitive data stored in memory must be protected.
+for match in memory.recall("What does ACME want next?", scope="/customers/acme", limit=5):
+    print(f"[{match.score:.2f}] {match.record.content}")
+```
 
-## CrewAI Long Term Memory vs. Context Window Limitations
+Inside a CrewAI Flow, the same calls are available as `self.remember()`, `self.recall()` and `self.extract_memories()`.
 
-Large Language Models (LLMs) have a finite **context window**, the amount of text they can process at once. This limitation directly impacts an agent's ability to recall information from extended interactions. **CrewAI long term memory** systems are designed to overcome these **context window limitations**.
+## How CrewAI recall works
 
-By storing past information externally, agents retrieve only the most relevant past data snippets. This retrieved information is then injected into the LLM's current prompt, effectively extending the agent's memory beyond its native context window. This is a fundamental technique for creating [AI agents with persistent memory](/articles/persistent-memory-ai/).
+Each saved record goes through an LLM (default `gpt-4o-mini`) that infers its scope, categories and importance. On save, **consolidation** checks for near-duplicates (default similarity threshold 0.85) and merges or drops them. `remember_many()` queues a batch in the background and drops in-batch duplicates at 0.98 similarity.
 
-Our article on [context window limitations and solutions](/articles/context-window-limitations-solutions/) details these challenges.
+Recall ranks by a **composite score**:
 
-### Retrieval-Augmented Generation (RAG) for CrewAI Agent Recall
+| Signal | Default weight |
+|---|---|
+| Semantic similarity | 0.5 |
+| Recency (30-day half-life) | 0.3 |
+| Importance | 0.2 |
 
-**RAG** combines LLM generative capabilities with an external knowledge retrieval system. For **CrewAI long term memory**, RAG allows agents to fetch relevant information from their memory store before responding. This ensures the agent's output is grounded in factual, historical, or task-specific data, leading to more accurate and contextually aware actions.
+`recall()` has two depths. `depth="shallow"` is a direct vector search with that scoring and no LLM calls. `depth="deep"` (the default) runs a multi-step recall flow with LLM query analysis, though queries under 200 characters skip the analysis step. Use shallow when latency matters more than precision.
 
-This approach is particularly effective for tasks requiring up-to-date information or a deep understanding of past interactions, such as **AI that remembers conversations**. According to a 2023 survey by [AI Research Hub](https://arxiv.org/abs/2305.10806), RAG systems can improve LLM factual accuracy by up to 40%.
+The weighting is a reasonable heuristic, similar to the recency-importance-relevance scoring from the Generative Agents paper. It isn't time-aware in a stronger sense: an old fact and a newer, contradicting one can both come back, and the higher-scored one wins. For why that matters, see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-## Enhancing CrewAI Agent Performance with Memory
+## Scopes, privacy and multi-agent isolation
 
-A well-implemented **CrewAI long term memory** system dramatically enhances agent capabilities. Agents can learn from mistakes, adapt strategies based on past successes, and provide more personalized, consistent user experiences. This leads to more sophisticated autonomous operations and a deeper level of agent intelligence, significantly improving **agent recall**.
+Records live in a **tree of scopes**, like `/company/knowledge` or `/agent/writer`. Two tools control who sees what:
 
-### Examples of Long Term Memory in Action for CrewAI Agents
+- `memory.scope("/agent/researcher")` returns a view restricted to one subtree.
+- `memory.slice(scopes=[...], read_only=True)` reads from several branches; writing to a read-only slice raises `PermissionError`.
 
-Consider a CrewAI agent managing customer support tickets. With long-term memory, it could:
+Records can also be private. `remember(..., source="user:alice", private=True)` hides a record from recall unless the caller passes the same `source`. For multi-user apps, put the user ID in the scope or source on every call. CrewAI won't infer it.
 
-* Recall a customer's previous issues and resolutions for faster, informed support.
-* Identify recurring problems across tickets to flag them for product teams.
-* Learn from successful support interactions to refine its communication style.
+## Storage, embedders and reset commands
 
-A research agent could use long-term memory to:
+**Storage.** The built-in backend is LanceDB on local disk, with a Qdrant Edge option. You can supply your own backend by implementing the `StorageBackend` protocol (`save`, `search` and friends) and passing it as `storage=`. That's the path for a shared database when several workers run the same crew.
 
-* Track all reviewed papers, their key findings, and its annotations.
-* Avoid re-researching topics it has already covered extensively.
-* Synthesize information from disparate past research efforts.
+**Embedders.** The default is OpenAI `text-embedding-3-large`. Pass `embedder={"provider": "ollama", "config": {"model_name": "mxbai-embed-large"}}` to run locally. The docs list OpenAI, Azure, Google, Vertex, Cohere, VoyageAI, Bedrock, Hugging Face, Jina, WatsonX and sentence-transformers. Pair it with `Memory(llm="ollama/llama3.2")` for a fully local setup.
 
-These examples show how **agent recall** transforms agents into evolving, intelligent systems.
+**Inspecting and resetting.**
 
-## The Future of CrewAI Memory
+- `crewai memory` opens a terminal browser of stored records.
+- `crewai reset-memories -m` wipes memory from the CLI.
+- `crew.reset_memories(command_type="memory")`, `memory.reset()` or `memory.forget(scope="/project/old")` do it in code.
+- `memory.tree()` and `memory.info("/path")` show record counts per scope.
 
-As AI agent development progresses, **CrewAI long term memory** solutions will become more sophisticated. We can expect seamless integrations, smarter retrieval algorithms, and memory consolidation techniques that distill vast past information into concise knowledge. The goal is to build agents that perform tasks, learn, adapt, and grow over time, like human experts.
+## When CrewAI's built-in memory is enough
 
-This journey is part of a broader evolution in [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/), where memory is a primary concern. Developing systems that effectively manage and use **agentic AI long term memory** will unlock the full potential of autonomous AI. LLMs today typically have context windows ranging from 4,000 to 128,000 tokens, a significant increase from earlier models, but external memory remains crucial for truly unbounded recall.
+For a single crew on one machine, built-in memory works well. It's local, it needs no extra service, and the scope tree maps cleanly to multi-agent roles.
 
-## FAQ
-
-### What is CrewAI long term memory?
-CrewAI long term memory refers to mechanisms that allow CrewAI agents to store, retrieve, and use information beyond their immediate conversational context or short-term recall, enabling more consistent and informed decision-making.
-
-### Why is long term memory crucial for CrewAI agents?
-Long term memory is crucial for CrewAI agents to build upon past interactions, learn from experiences, maintain context across extended tasks, and avoid repeating mistakes, ultimately leading to more sophisticated and reliable autonomous operations.
-
-### How can I implement long term memory in CrewAI?
-Implementation involves integrating external memory systems, such as vector databases, with CrewAI's agent architecture. This allows agents to store and query past experiences, documents, or learned knowledge effectively.
-
-### What is the primary benefit of implementing long term memory in CrewAI?
-The primary benefit is enabling agents to retain and access information beyond their immediate context, leading to improved consistency, learning, and performance across extended or complex tasks. This allows for more sophisticated decision-making and reduces repetitive errors.
-
-### How does CrewAI's memory management differ from other frameworks?
-CrewAI itself is primarily an orchestrator. While it handles short-term context, its long-term memory capabilities rely on integrating external memory systems, such as vector databases or specialized memory libraries, which is a common pattern across many agent frameworks.
-
-### Can CrewAI agents forget information?
-Yes, without a persistent long-term memory system, CrewAI agents will effectively "forget" information once their immediate context window is exceeded or when the session ends. Implementing long-term memory mechanisms is how developers prevent this forgetting.
-
-### What is the role of AI agent memory in CrewAI?
-AI agent memory in CrewAI refers to the systems and techniques that enable agents to store, retrieve, and use information over extended periods, going beyond the immediate context window to enhance performance and consistency.
-
-### How does CrewAI's AI agent memory contribute to its overall intelligence?
-CrewAI's AI agent memory, particularly its long-term capabilities, allows agents to build a persistent knowledge base. This enables them to learn from past interactions, adapt their strategies, and make more informed decisions, thereby increasing their overall intelligence and autonomy.
-
-### What are the key components of CrewAI long term memory?
-Key components include mechanisms for storing information (like vector databases), retrieval systems to access relevant data, and integration strategies that allow agents to use this memory effectively within their workflows.
+The limits appear at scale. LanceDB on local disk doesn't share across servers unless you write a backend. Memory quality depends on the analysis LLM. And there's no built-in notion of facts that expire or get replaced. Teams that need shared, multi-tenant memory across many crews usually move it to a separate service; our comparison of [open-source memory systems](/articles/open-source-memory-systems-compared/) and the general [AI agent memory guide](/articles/ai-agent-memory-explained/) cover the options. For how CrewAI's memory compares to other frameworks' defaults, see the [AI agent framework comparison](/articles/ai-agent-framework-comparison/).

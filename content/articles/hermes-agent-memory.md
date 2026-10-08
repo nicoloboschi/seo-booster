@@ -1,140 +1,137 @@
 ---
-title: 'Hermes Agent Memory: Unpacking Its Layers, Providers, and Troubleshooting'
-description: Dive deep into Hermes agent memory, its four distinct layers, common issues like 'Hermes memory not working,' and the advantages of external memory providers for ...
+title: "Hermes Agent Memory: MEMORY.md, USER.md and Providers"
+description: "How Hermes Agent memory works: MEMORY.md and USER.md limits, the frozen snapshot, session search, external providers like Honcho and Mem0, and fixes when it fails."
 date: 2026-04-07
-lastmod: 2026-04-07
+lastmod: 2026-10-08
+slug: hermes-agent-memory
 tags:
 - Hermes Agent
-- AI Memory
-- Agent Architecture
-- AI Memory Systems
-- Long-Term Memory in AI Agents
-- Episodic Memory in AI Agents
-- Hermes Agent Memory Providers
-- Hindsight Memory Hermes Agent
-- Hermes Agent AI Framework Architecture
-- Hermes Agent AI Framework Features
-- Hermes Agent AI Memory
-- Hermes Agent AI Memory System
+- Nous Research
+- agent memory
+- memory providers
 keywords:
-- hermes agent memory
-- hermes memory system
-- hermes agent memory providers
-- hermes memory not working
-- AI memory systems
-- long-term memory in AI agents
-- episodic memory in AI agents
-- hindsight memory hermes agent
-- hermes agent ai framework architecture
-- hermes agent ai framework features
-- hermes agent ai memory
-- hermes agent ai memory system
+- "hermes agent memory"
+- "hermes memory providers"
+- "hermes memory not working"
+- "hermes agent MEMORY.md"
+- "nous research hermes memory"
+cluster: agent-memory
 faq:
-- question: What are the main memory layers in Hermes Agent?
-  answer: 'Hermes Agent has four main memory layers: prompt memory (short-term, always in context), session archive (for explicit search of past conversations), skills (for reusable procedural knowledge),
-    and external memory providers.'
-- question: Why might my Hermes agent memory not be working?
-  answer: Common reasons for Hermes memory not working include the agent not judging content as persistent enough for MEMORY.md, the memory file reaching its character limit, or the agent not explicitly
-    using the session_search tool for episodic recall.
-- question: How do external memory providers improve Hermes Agent's memory?
-  answer: External providers offer structured data capture, better retrieval accuracy, and automatic context prefetching. They enhance Hermes's ability to recall information consistently across sessions,
-    overcoming the limitations of its built-in memory layers.
-- question: How does Hindsight integrate with Hermes Agent for better memory?
-  answer: Hindsight, as an external memory provider for Hermes, automatically captures and indexes all agent interactions. This allows for more robust retrieval of past conversations and facts, overcoming
-    the limitations of Hermes's built-in memory layers and ensuring more consistent **long-term memory in AI agents** without manual intervention.
-- question: What are the core features of the Hermes Agent AI framework regarding memory?
-  answer: The Hermes Agent AI framework features a multi-layered memory system, including prompt memory, session archives, skills for procedural knowledge, and a pluggable architecture for external memory
-    providers, all designed to enhance AI recall and learning.
-- question: How does the Hermes Agent AI framework architecture support advanced memory capabilities?
-  answer: The **Hermes Agent AI framework architecture** is designed with a modular, multi-layered approach to memory. This includes prompt memory for immediate context, a session archive for episodic recall,
-    a skills system for procedural knowledge, and a pluggable architecture for external memory providers, all contributing to robust **hermes agent ai memory** management.
-- question: What is the role of MEMORY.md and USER.md in Hermes Agent memory?
-  answer: MEMORY.md stores durable facts, project conventions, and lessons learned, while USER.md holds user profile details like preferences and communication style. Both are loaded as a frozen snapshot
-    into the system prompt at the start of each session, forming the agent's immediate working knowledge.
-slug: hermes-agent-memory
+- question: "How does Hermes Agent memory work?"
+  answer: "Hermes keeps two small files in ~/.hermes/memories/: MEMORY.md for the agent's notes (2,200 characters) and USER.md for the user profile (1,375 characters). Both load into the system prompt as a frozen snapshot at session start. Past sessions are stored in SQLite and searched on demand with the session_search tool."
+- question: "Why doesn't Hermes remember what I just told it?"
+  answer: "Memory writes save to disk right away but only appear in the system prompt in the next session, because the snapshot is frozen to keep the prompt cache stable. Run /new to start a fresh session and reload it. Also check that memory_enabled is true and that the store isn't full."
+- question: "Which external memory providers does Hermes Agent support?"
+  answer: "As of October 2026 the docs list Honcho, OpenViking, Mem0, Hindsight, Holographic, RetainDB, ByteRover, Supermemory and Memori. Only one external provider can be active at a time, and it runs alongside the built-in MEMORY.md and USER.md."
 ---
 
+**Hermes Agent memory** is two small, agent-curated files plus a searchable history. `MEMORY.md` (2,200 characters) holds the agent's own notes and `USER.md` (1,375 characters) holds your profile. Both load into the system prompt at session start. Older conversations live in SQLite and are searched on demand. One optional external provider can add more.
 
-When your Hermes agent seems to forget crucial details or fails to recall past interactions, it's often not a bug but a misunderstanding of its layered memory architecture. Understanding the distinct functions of its internal memory, session archives, skills, and external providers is key to unlocking more effective agent recall and improving **hermes agent memory**.
+[Hermes Agent](https://github.com/NousResearch/hermes-agent) is an open-source (MIT) agent from Nous Research that runs in a terminal or through messaging apps and creates reusable skills from its own experience. This page covers each layer of its memory, the external providers, and what to check when memory seems broken. Details come from the official [Hermes memory docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory), checked October 2026.
 
-## What is Hermes Agent Memory?
+## What is Hermes Agent memory?
 
-**Hermes agent memory** is a four-layer system that combines two persistent prompt files (`MEMORY.md` and `USER.md`), a SQLite session archive for episodic recall, a skills directory for procedural knowledge, and a pluggable external provider interface. The first three layers ship with Hermes by default; the fourth lets you bolt on dedicated memory backends like [Hindsight](https://github.com/vectorize-io/hindsight) or Mem0 for automatic capture, semantic retrieval, and cross-session persistence.
+**Hermes Agent memory is a bounded, curated store that persists across sessions. The agent decides what to save, writes short entries into MEMORY.md and USER.md through a memory tool, and Hermes injects both files into the system prompt as a frozen block when each session starts.**
 
-## Understanding the Hermes Agent AI Framework Architecture and Memory
+The design is small on purpose. Together the two files are about 1,300 tokens, always in context. Everything else (full transcripts, old tasks) stays out of the prompt until the agent searches for it. That split between always-loaded memory and on-demand recall is the same one described in [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-**Hermes agent memory** refers to the system's capacity to store, retrieve, and use information across conversations and sessions. It's not a single monolithic block but a series of interconnected components designed to manage different types of knowledge, from immediate context to long-term facts and learned procedures. The **hermes agent ai framework architecture** is built with flexibility and extensibility in mind, particularly concerning its memory capabilities.
+## The layers of Hermes memory
 
-The Hermes agent memory system is designed with multiple layers to manage diverse information needs. It includes prompt memory for immediate context, a session archive for historical search, a skills system for learned procedures, and a pluggable system for external memory solutions, offering a flexible approach to AI recall. This multi-faceted **hermes memory system** is designed for adaptability and enhanced **hermes agent ai memory**.
+| Layer | Where it lives | Size | When it's in context |
+|---|---|---|---|
+| **MEMORY.md** | `~/.hermes/memories/` | 2,200 chars (~800 tokens) | Every session, as a frozen snapshot |
+| **USER.md** | `~/.hermes/memories/` | 1,375 chars (~500 tokens) | Every session, as a frozen snapshot |
+| **Session history** | `~/.hermes/state.db` (SQLite, FTS5) | Unlimited | Only when the agent calls `session_search` |
+| **Skills** | Skills directory | Per skill | When a skill is relevant |
+| **External provider** | Depends on provider | Depends | Prefetched before each turn |
 
-### The Four Pillars of Hermes Agent Memory: A Deep Dive
+With profiles, the files sit under `~/.hermes/profiles/<name>/memories/` instead.
 
-Confusion often arises because Hermes doesn't rely on a single memory mechanism. Instead, it employs four distinct layers, each serving a specific purpose. Recognizing these layers helps diagnose why **Hermes agent memory** might not perform as expected and understand the core **hermes agent ai framework features**.
+### MEMORY.md and USER.md
 
-#### Layer 1: Prompt Memory (The Agent's Working Knowledge)
+**MEMORY.md** is for the agent's working knowledge: environment facts, project conventions, tool quirks and techniques that worked. **USER.md** is for you: name, role, timezone, communication style, pet peeves and technical level. The docs say to skip trivial facts, things that are easy to look up again, raw data dumps, and anything already in `SOUL.md` or `AGENTS.md`.
 
-This layer consists of two small, persistent files: `MEMORY.md` and `USER.md`. These are located in `~/.hermes/memories/`. `MEMORY.md` stores durable facts, project conventions, and lessons learned, with a typical size around 2,200 characters as documented in the Hermes configuration. `USER.md` holds user profile details like preferences and communication style, typically around 1,375 characters.
+Entries are separated by `§`. The injected block has a header showing usage (for example 67%, 1,474 of 2,200 characters), so the model knows how full the store is.
 
-These files are loaded as a frozen snapshot into the system prompt at the start of each session. This immutability helps maintain the LLM's prefix cache stability. The agent saves updates immediately, but they only influence the system prompt in subsequent sessions. This forms the agent's "working knowledge", small, always present, and current for the active session, forming the core of its short-term **Hermes agent memory**.
+### The memory tool
 
-#### Layer 2: Session Archive (Episodic Recall)
+The agent edits memory with one tool and three actions:
 
-All command-line and messaging sessions are logged in a SQLite database (`~/.hermes/state.db`). The agent can access this archive using the `session_search` tool. This enables **episodic memory in AI agents**, allowing Hermes to answer questions like "Did we discuss X before?" or "What was the outcome of the auth service issue last week?". The results are then summarized by a configurable LLM call.
+1. **add**: append a new entry.
+2. **replace**: find an entry by a unique substring (`old_text`) and overwrite it.
+3. **remove**: delete the entry matching `old_text`.
 
-The critical distinction here is that architecture determines access, not agent judgment. Prompt memory is always in the context window. The session archive is only queried when the agent explicitly invokes `session_search`. This design keeps the system prompt lean and stable while providing access to rich historical data when needed. Understanding this is vital for effective **hermes agent memory**.
+There's no read action, since the content is already in the prompt. Exact duplicates are rejected. When a write would go over the limit, the tool returns an error with the current entries, and the agent must send one batch of operations that frees space and adds the new entry. Hermes never compacts memory on its own. The docs suggest consolidating once usage passes 80%.
 
-#### Layer 3: Skills (Procedural Memory)
+Every entry is scanned for prompt injection, credential exfiltration, SSH backdoors and invisible Unicode before it's saved. That matters because memory is a known attack surface; see [AI memory injection](/articles/ai-memory-injection/).
 
-When Hermes successfully completes a complex task, it generates a reusable skill document. These markdown files, stored in `~/.hermes/skills/`, detail the approach, tools used, and successful steps. Skills are searchable and designed to self-improve as the agent reuses and refines them. This layer represents the "self-improving" aspect many users associate with advanced agent memory.
+### Session search
 
-This procedural memory allows agents to learn and optimize complex workflows over time. For instance, a skill might capture the exact sequence of API calls and data transformations needed to deploy a new feature, becoming more efficient with each iteration. Understanding this layer is crucial for agents that need to perform repeatable, multi-step operations and is a key component of the **hermes memory system**.
+Past CLI and messaging sessions are stored in `~/.hermes/state.db`. The `session_search` tool runs full-text search (SQLite FTS5) over them and returns raw messages, and the agent can scroll through a found session. `hermes sessions list` shows them from the CLI. This is Hermes's answer to "what did we do last month": not stored in memory, but findable.
 
-#### Layer 4: External Memory Providers
+### Background review and write approval
 
-Recently, Hermes introduced a pluggable memory provider system. This significantly alters how external memory integrates with the agent. If you set up Hermes after this update, your experience will differ from older documentation. These providers layer additional memory capabilities on top of the built-in system, offering structured capture, better retrieval, and cross-session persistence. This significantly expands the potential of **Hermes agent memory providers**.
+After a conversation, a background review can update memory and skills. It's on by default (`auxiliary.background_review.enabled`), uses the main model unless you set another, and caps input at 75% of the model's context window (up to 600,000 tokens). If you want to approve writes, set `memory.write_approval: true`; staged writes then appear under `/memory pending` and can be approved or rejected.
 
-## Common Hermes Memory Not Working Scenarios and Solutions
+## Configuring Hermes memory
 
-When **Hermes memory not working** becomes an issue, it typically falls into a few predictable categories. These often stem from the nuanced design of the built-in memory layers rather than outright failures. Effective troubleshooting requires understanding these common pitfalls of the **hermes memory system**.
+Settings live in `~/.hermes/config.yaml`:
 
-### Problem 1: Memory Files Remain Empty
+```yaml
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+  write_approval: false
+  # provider: honcho   # optional external provider
+```
 
-**Symptom:** `MEMORY.md` and `USER.md` are empty even after several conversations.
+Turning off both `memory_enabled` and `user_profile_enabled` removes the memory tool entirely. You can raise the character limits, but every character is paid for on every turn, so bigger isn't free.
 
-**Why it happens:** The built-in memory is agent-curated, not a passive recorder. Hermes only writes to these files when its LLM determines something is worth persisting, significant facts, user preferences, or project conventions. In short or narrowly focused sessions, the agent might not identify anything for long-term storage. Also, the `nudge_interval` configuration in `~/.hermes/config.yaml` dictates how often the agent is prompted to reflect and save. If this interval is too long for your typical session length, saves might be infrequent.
+The `/journey` command (also `hermes journey`) shows a timeline of skills and memory entries, and `hermes journey delete <node>` removes one.
 
-**How to fix it:**
-1. **Adjust `nudge_interval`:** Reduce this value in your `config.yaml` for more frequent reflection prompts, especially during shorter sessions.
-2. **Ensure proper exit:** In gateway mode, avoid force-quitting the process before the proactive flush before idle timeout can occur.
-3. **Implement an external provider:** For automatic capture regardless of session length or agent judgment, integrating an external provider is the most reliable solution. Tools like [Hindsight](/articles/ai-memory-hindsight/) or Mem0 capture everything in the background, ensuring **long-term memory in AI agents** is consistently captured.
+## External memory providers
 
-### Problem 2: Hermes Asks for Information It Should Know
+Hermes can run **one external provider at a time** next to the built-in files. When one is active, Hermes prefetches relevant memories before each turn, syncs turns after each response, extracts memories at session end where supported, and mirrors built-in memory writes to it. The [memory providers page](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers) lists nine as of October 2026:
 
-**Symptom:** The agent repeatedly asks for details you've provided before, such as your name or project specifics.
+| Provider | What it does (per Hermes docs) | Hosting | Tools |
+|---|---|---|---|
+| **Honcho** (Plastic Labs) | Cross-session user modeling with dialectic reasoning | Cloud or self-hosted | 5 |
+| **OpenViking** (Volcengine) | Context database with a filesystem-style hierarchy | Self-hosted, AGPL-3.0 | 6 |
+| **Mem0** | LLM fact extraction with semantic search and dedup | Cloud, self-hosted or in-process | 4 |
+| **Hindsight** (Vectorize) | Long-term memory with knowledge graph and entity resolution | Cloud, embedded Postgres or local server | 3 |
+| **Holographic** | Local SQLite fact store with FTS5, trust scoring and HRR algebra | Local only | 2 |
+| **RetainDB** | Cloud memory API with hybrid search | Cloud ($20/month listed) | 10 |
+| **ByteRover** | Local-first memory via the `brv` CLI | Local, optional cloud sync | 3 |
+| **Supermemory** | Semantic long-term memory with profile recall | Cloud or self-hosted | 4 |
+| **Memori** (Memori Labs) | Structured long-term memory | Memori Cloud | 5 |
 
-**Why it happens:** This can occur if the information was never deemed important enough for `MEMORY.md` (see Problem 1). Another common cause is the `MEMORY.md` file reaching its ~2,200 character limit. When full, the agent must consolidate or remove entries to make space for new information, potentially dropping nuanced details. A third possibility is that the information resides only in the session archive. While searchable via `session_search`, the agent must explicitly query it, and this doesn't happen automatically before every response. This is a frequent issue impacting **Hermes agent memory**.
+Holographic, RetainDB and ByteRover are bundled today, but the docs say they "leave core" on October 15, 2026. The others install with `hermes plugins install <name>`. Holographic uses holographic reduced representations, explained in [holographic memory for AI agents](/articles/holographic-memory-ai-agent/), and Honcho has its own page on [Honcho LLM memory](/articles/honcho-llm-memory/).
 
-**How to fix it:**
-1. **Force a memory write:** Explicitly instruct Hermes to remember something specific, e.g. "Remember that my production database runs on port 5433." This action triggers a direct write to memory.
-2. **Check and consolidate memory:** Inspect `~/.hermes/MEMORY.md` to see its contents. If it's full, ask Hermes to review and consolidate redundant entries.
-3. **Use external providers for proactive recall:** Solutions like Hindsight automatically prefetch relevant context before each response, ensuring information is available without the agent needing to call `session_search` at the opportune moment. This significantly improves the consistency of **long-term memory in AI agents**.
+Setup is the same for each:
 
-### Problem 3: Session Search Returns Blank Results
+```bash
+hermes plugins install honcho   # or mem0, hindsight, supermemory, openviking
+hermes memory setup             # interactive picker and credentials
+hermes memory status            # confirm which provider is active
+hermes memory off               # disable the external provider
+```
 
-**Symptom:** The `session_search` tool yields no relevant information, even when you're certain a topic was discussed previously.
+How to choose: pick **Honcho** if modeling the user is the point, **Mem0** or **Supermemory** for a hosted fact store with little setup, **Hindsight** if you want memories consolidated into evidence-backed observations plus a reflect call, and **Holographic** or **ByteRover** if nothing may leave the machine. If the built-in files already hold what you need, skip providers entirely; they add LLM calls and a dependency.
 
-**Why it happens:** This can occur if the conversation didn't meet the criteria for being logged or indexed effectively. Issues might arise from how the SQLite database is structured or queried. Also, the agent needs to be prompted to use the `session_search` tool, and it might not always formulate the correct query to find the information. This directly impacts the **episodic memory in AI agents** provided by the session archive.
+## Hermes memory not working: what to check
 
-**How to fix it:**
-1. **Be explicit with queries:** When using `session_search` (or instructing the agent to use it), be as precise as possible with your keywords and phrasing.
-2. **Review session logging configuration:** Ensure that the logging mechanisms for your sessions are correctly configured and functioning.
-3. **Consider providers with better indexing:** Some external memory providers offer more advanced indexing and retrieval capabilities than the default SQLite session archive, making information more consistently discoverable. For example, a 2023 benchmark by Vectorize.io showed that specialized vector databases improved retrieval accuracy by up to 25% compared to keyword-based search.
+Most "Hermes forgot" reports come from a handful of causes:
 
-## Exploring Hermes Agent Memory Providers for Enhanced Recall
+1. **The snapshot is frozen.** Writes save to disk at once but show up in the prompt only next session. Run `/new` to reload. Messaging gateways (Telegram, Discord) are one long session until you reset them.
+2. **The store is full.** At 2,200 or 1,375 characters, new adds fail until the agent consolidates. Check usage in the header or open the files.
+3. **Memory is disabled.** Confirm `memory_enabled` and `user_profile_enabled` in `config.yaml`, and that `memory` isn't listed under `agent.disabled_toolsets`.
+4. **Writes are staged.** With `write_approval: true`, nothing lands until you approve it under `/memory pending`.
+5. **Wrong profile.** Each profile has its own memory directory.
+6. **The detail was never memory.** Long task history belongs in session search, so ask the agent to search past sessions.
+7. **Provider problems.** Run `hermes memory status`. Only one provider can be active, and cloud providers need their credentials (RetainDB, for example, reads `RETAINDB_API_KEY` from `~/.hermes/.env`).
 
-Hermes Agent supports several external memory providers, each offering distinct advantages over the built-in system. The `hermes memory setup` command allows you to choose and install one. These providers augment, rather than replace, the foundational `MEMORY.md` and `USER.md` files. They are crucial for achieving consistent, robust recall, especially in complex applications, and are a key component of an advanced **hermes memory system**.
+## Hermes compared with other agents
 
-### Comparing Hermes Agent Memory Providers
-
-| Provider | Capture model | Retrieval | Cross-session persistence | Best for |
-|
+Hermes's built-in memory is closest to OpenClaw's markdown files and Claude Code's auto memory: plain text, small, loaded at start. It differs in the hard character caps and the frozen snapshot. Hermes can also import from OpenClaw with `hermes claw migrate`, which carries over `SOUL.md`, memories, skills and `AGENTS.md`. For a side-by-side, see [OpenClaw vs Hermes Agent memory](/articles/openclaw-vs-hermes-agent-memory/).

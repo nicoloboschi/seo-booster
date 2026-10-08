@@ -1,222 +1,131 @@
 ---
-title: 'Mem0 vs Letta: AI Agent Memory Frameworks Compared'
-description: Compare Mem0 and Letta (MemGPT) AI agent memory frameworks. Explore architecture, persistence, retrieval, and developer experience trade-offs.
+title: "Mem0 vs Letta: Memory Layer or Stateful Agent?"
+description: "Mem0 vs Letta (MemGPT) compared in 2026: memory model, who decides what to store, Python support, self-hosting, pricing, and which one fits your agent."
 date: 2026-06-16
-lastmod: 2026-06-16
+lastmod: 2026-10-08
+slug: mem0-vs-letta
+cluster: agent-memory
 tags:
-- AI agent memory
 - Mem0
 - Letta
 - MemGPT
-- AI frameworks
+- agent memory
 keywords:
-- Mem0 vs Letta
-- Mem0 alternatives
-- Letta memory
-- AI agent memory
-- AI frameworks
+- mem0 vs letta
+- letta vs mem0
+- mem0 vs memgpt
+- letta memory vs mem0
+- mem0 letta comparison
 faq:
-- question: What is the primary difference between Mem0 and Letta?
-  answer: Mem0 acts as a pluggable memory layer for existing agent frameworks, while Letta is a full agent runtime environment that manages memory as part of its operating-system-like platform.
-- question: Which framework is better for deep knowledge graph integration?
-  answer: Letta's architecture is more inherently designed for tiered memory, including recall and archival, potentially offering deeper integration with structured knowledge. Mem0's advanced graph features
-    are available only on its higher-priced Pro tier.
-- question: Can I use Mem0 with any AI agent framework?
-  answer: Yes, Mem0 is designed to be framework-agnostic. You can integrate it as a library into various agent stacks like LangChain, CrewAI, or AutoGen without altering your existing orchestration logic.
-slug: mem0-vs-letta
+- question: "What is the main difference between Mem0 and Letta?"
+  answer: "Mem0 is a memory layer you call from your own agent: your code sends conversations to add and fetches memories with search. Letta is the agent runtime itself: a Letta agent keeps its memory as files it reads and edits, searches its own history, and consolidates lessons in the background."
+- question: "Can I use Mem0 and Letta together?"
+  answer: "Technically yes, since a Letta agent can call external tools, but it is rarely worth it. Letta already gives the agent self-managed memory. Teams usually pick Mem0 when they keep their own agent framework and Letta when they adopt Letta as the agent."
+- question: "Which is better for a Python project, Mem0 or Letta?"
+  answer: "Mem0. Its library and server have first-class Python SDKs. Letta's Agent SDK is TypeScript only, and its generated Python client (letta-client) is marked deprecated and receives no new features, so Letta suggests the App Server's WebSocket protocol for Python."
 ---
 
-Mem0 vs Letta represents a critical comparison for AI agent memory frameworks. Mem0 provides a pluggable memory layer, while Letta offers a comprehensive agent runtime environment. Understanding their distinct approaches to memory persistence, retrieval, and developer experience is key to selecting the right solution for your AI agent projects.
+**Mem0 vs Letta** comes down to one question: do you want a memory service for an agent you already have, or a runtime where the agent manages its own memory? Mem0 is a memory layer your code calls with `add` and `search`. Letta (formerly MemGPT) is a stateful agent harness whose agents read, edit and consolidate their own memory files.
 
-What if your AI agent could recall every interaction, every preference, and every detail from its entire operational history, not just the last few minutes? The difference between Mem0 and Letta for AI agent memory frameworks directly addresses this, offering contrasting philosophies for how agents retain and access information.
+The two are often listed side by side, but they sit at different levels of the stack. This page compares them on memory model, control, language support, hosting and cost, using each project's README, docs and pricing page as of 8 October 2026.
 
-## What is Mem0 vs Letta in AI Agent Memory?
+## What are Mem0 and Letta?
 
-Mem0 is a **memory layer service** adding persistent storage and retrieval to AI agents, designed for easy integration. Letta is a complete **agent runtime** treating LLM context as virtual memory, managing agent execution and memory across tiered storage, offering a more integrated platform.
+**Mem0 is an Apache 2.0 memory layer that uses an LLM to extract facts from conversations, stores them per user, agent or session, and returns the relevant ones on search. Letta is an Apache 2.0 harness for stateful agents, grown from the MemGPT research, where each agent keeps editable memory files, searchable message history and background consolidation.**
 
-### Mem0: The Pluggable Memory Layer
+**[Mem0](https://github.com/mem0ai/mem0)** runs as a Python or Node library, a self-hosted Docker server, or the hosted Mem0 Platform. It doesn't run your agent. It answers "what should this agent know about this user right now?"
 
-Mem0 positions itself as a framework-agnostic memory service. Its primary function is to provide a simple API for **storing and retrieving** agent memories. Developers can integrate Mem0 into virtually any agent framework, including popular ones like LangChain, CrewAI, or AutoGen, without needing to fundamentally alter their existing agent logic or orchestration.
+**[Letta](https://github.com/letta-ai/letta-code)** in 2026 means **Letta Code**: a CLI, desktop app, App Server and TypeScript Agent SDK, with optional Letta Cloud hosting. The old Python API server (`letta-ai/letta`) is retired; its README points to `letta-code` and keeps the V1 server on an archive branch. Our [Letta guide](/articles/letta-ai-guide/) covers that history.
 
-#### Mem0 Core Functionality
+## Mem0 vs Letta at a glance
 
-The architecture relies on embedding memories into a **vector database** for efficient semantic search. For users opting for the Pro tier, Mem0 also incorporates a **knowledge graph** to extract and link entities and relationships, enabling more complex, multi-hop queries. This dual-store approach aims to cover both broad semantic recall and structured knowledge retrieval.
+| | Mem0 | Letta |
+|---|---|---|
+| What it is | Memory layer (library, server, hosted API) | Stateful agent harness (CLI, desktop, App Server, cloud) |
+| License | Apache 2.0 | Apache 2.0 |
+| Who decides what to remember | Your code calls `add`; an LLM extracts facts | The agent itself, plus background "dreaming" |
+| Memory format | Short extracted facts with embeddings and entities | Markdown memory files in a git-backed store (MemFS), plus message history |
+| Retrieval | Semantic + BM25 + entity matching, fused | Files in context; agent-driven message search |
+| Updates | ADD-only since April 2026; explicit `update`/`delete` | Agent rewrites files; every edit is a git commit |
+| SDKs | Python, TypeScript, REST, CLI | TypeScript Agent SDK; Python client deprecated |
+| Self-host | Library, or Docker server with Postgres + pgvector | Local backend or `letta server` |
+| Hosted pricing | Free; Starter $19/mo; Pro $249/mo | Free; Pro $20/mo; API plan $20/mo + usage |
+| Fits | Adding memory to an existing agent or app | Building a long-lived agent from scratch |
 
-#### Mem0 Integration Points
+Prices are list prices from [mem0.ai/pricing](https://mem0.ai/pricing) and [Letta's pricing page](https://docs.letta.com/letta-code/pricing).
 
-Mem0's API is designed for ease of use. Developers interact with it through simple function calls to add, search, and manage memories. This library-centric approach minimizes disruption to existing agent codebases.
+## How memory works in Mem0
 
-The following Python code snippet demonstrates a basic interaction with Mem0's storage and retrieval capabilities:
+Mem0 is **application-driven**. After an exchange, your code sends the messages to `add`. An LLM pulls out durable facts such as "Dana prefers short answers" in a single pass. Mem0 embeds them, links their entities, and stores them under the IDs you passed.
 
-```python
-from mem0 import MemoryClient
+Before the next model call, your code runs `search` with a query and a filter like `{"user_id": "dana"}`. Mem0 ranks memories by semantic similarity, keyword match and entity overlap, and you put the top results into the prompt.
 
-## Initialize Mem0 client
-client = MemoryClient(api_key="your-api-key")
-
-## Add a memory for a specific user
-client.add(
- "User prefers dark mode and weekly summaries.",
- user_id="alice"
-)
-
-## Search for memories semantically
-results = client.search(
- "notification preferences",
- user_id="alice"
-)
-print(f"Found {len(results)} relevant memories.")
-```
-
-### Letta: The Agent Operating System
-
-Letta takes a more integrated approach, inspired by the concept of treating LLM context as virtual memory. Instead of being a separate layer, agents **run within Letta**. This framework manages the entire agent lifecycle, including the agent loop, tool execution, state persistence, and memory management.
-
-#### Letta's Runtime Architecture
-
-Letta provides a complete runtime for agents. This means it handles the agent's execution loop, tool invocation, and state management. By embedding memory within this runtime, Letta ensures tight integration and efficient data flow. According to a 2023 survey by AI Research Group, 65% of AI developers consider memory management a critical challenge.
-
-#### Letta's Memory Management Philosophy
-
-Letta's memory architecture is inspired by computer systems, featuring three tiers:
-
-* **Core Memory**: Analogous to CPU cache or RAM, this is a small, fast block for immediate context.
-* **Recall Memory**: A cache layer for frequently accessed or recently used memories.
-* **Archival Memory**: A cold storage solution for long-term persistence.
-
-This tiered system allows Letta to manage memory more dynamically, simulating how human memory might prioritize and access information. This model is detailed further in our [guide to AI memory architectures](/articles/ai-memory-architecture/).
-
-## Architectural Differences in AI Agent Memory
-
-The fundamental divergence between Mem0 and Letta lies in their core architectural philosophies and how they handle memory persistence and retrieval. Mem0 focuses on being an add-on service, while Letta aims to be the foundational environment for agents. This Mem0 vs Letta comparison highlights their distinct design goals.
-
-### Mem0's Dual-Store Architecture
-
-Mem0 employs a **dual-store model** to manage agent memories. It uses a **vector database** for performing semantic similarity searches, allowing agents to retrieve memories based on conceptual meaning. Alongside this, it offers a **knowledge graph** component, which extracts entities and their relationships from memories to build a structured representation of an agent's knowledge.
-
-This dual approach means you can store a conversational snippet and later retrieve it based on its semantic content, or, with the Pro tier, query for specific entities and their connections. The API is designed for simplicity. However, the advanced **knowledge graph features are primarily gated behind the Pro tier**, which comes at a significant monthly cost. On lower tiers, retrieval is limited to vector-based semantic search.
-
-### Letta's Tiered Memory System
-
-Letta's architecture draws a direct parallel to computer memory management. It conceptualizes memory across distinct tiers, each with different access speeds and capacities. This design aims to optimize for both immediate relevance and long-term recall.
-
-The tiers include:
-
-* **Core Memory**: This is the most immediate and accessible memory, akin to an LLM's context window or a very small, fast cache. It holds information directly relevant to the current task or conversation.
-* **Recall Memory**: This tier acts as a buffer or short-term cache. It stores recently accessed or important memories that might be needed again soon, but are too large or numerous for the core memory.
-* **Archival Memory**: This is the long-term storage solution. It holds the bulk of the agent's memories, accessible for retrieval when needed but with higher latency.
-
-This tiered approach allows Letta to manage memory more efficiently. Agents can dynamically move information between tiers, ensuring that the most pertinent data is readily available while less critical information is stored cost-effectively. This system is managed internally by the Letta runtime.
-
-#### Letta Memory Interaction Example
-
-The following Python code illustrates how an agent might interact with Letta's memory, demonstrating the use of different memory tiers:
+Since the April 2026 release, extraction is **ADD-only**: Mem0 never rewrites or deletes on its own. A changed fact is stored next to the old one, and you call `update` or `delete` when you need a correction. The same release removed graph memory from the open-source SDK, per Mem0's [migration guide](https://docs.mem0.ai/migration/oss-v2-to-v3); graph memory and temporal reasoning are now hosted Platform features.
 
 ```python
-from letta import Agent, MemoryTier
+from mem0 import Memory
 
-## Assume 'agent' is an initialized Letta agent instance
-agent = Agent(name="MyAgent")
+memory = Memory()  # OpenAI + local Qdrant defaults; needs OPENAI_API_KEY
 
-## Store a critical piece of information in archival memory
-agent.memory.save(
- "Project X detailed requirements document.",
- tier=MemoryTier.ARCHIVAL
+memory.add(
+    [
+        {"role": "user", "content": "Keep answers short, I read on my phone."},
+        {"role": "assistant", "content": "Got it, short answers from now on."},
+    ],
+    user_id="dana",
 )
 
-## Retrieve a recent interaction from recall memory
-recent_interaction = agent.memory.recall(
- query="User's last request about budget",
- tier=MemoryTier.RECALL
-)
-print(f"Retrieved interaction: {recent_interaction}")
-
-## Use core memory for immediate context
-agent.context.add("Current task: Prepare Q3 budget report.")
+hits = memory.search("how should I format replies?", filters={"user_id": "dana"}, top_k=3)
+context = "\n".join(h["memory"] for h in hits["results"])
 ```
 
-This example illustrates how an agent can explicitly interact with different memory tiers provided by the Letta framework.
+The agent never sees Mem0 directly. It gets whatever your code injects.
 
-## Retrieval Strategies: Mem0 vs Letta
+## How memory works in Letta
 
-The way agents retrieve information from their memories is a critical differentiator. Mem0 focuses on semantic and graph-based retrieval, while Letta uses agentic tool calls against its tiered memory structure. The Mem0 vs Letta retrieval strategies offer different advantages.
+Letta is **agent-driven**, following the [MemGPT paper](https://arxiv.org/abs/2310.08560) idea of an LLM that pages its own memory in and out like an operating system.
 
-### Mem0's Retrieval Methods
+- **Memory files (MemFS).** Each memory is a Markdown file with front matter in a git-backed filesystem. Root-level files load into the system prompt every turn. Deeper folders stay out of context until the agent opens them. Every edit is a commit, so you get history and can sync memory to your own repo.
+- **Message search.** The agent can search its full conversation history. On Letta Cloud this supports full-text, vector and hybrid search; local backends use full-text only.
+- **Dreaming.** Background subagents review recent conversations, consolidate lessons and update memory, triggered after a set number of steps or on context compaction.
+- **Skills.** Agents save reusable instruction files and refine them over time.
 
-Mem0 offers two primary retrieval strategies, depending on the subscription tier:
+In the classic Letta API these were **memory blocks** (core memory) and **archival memory** (a vector store of passages). The blocks still exist in the REST API, but new work centers on Letta Code.
 
-1. **Semantic Search**: This is the core retrieval mechanism, powered by **embedding models** and a vector database. When an agent queries Mem0, it embeds the query and finds memories with the highest semantic similarity. This is effective for recalling information based on meaning and context.
-2. **Knowledge Graph Traversal**: Available on the Pro tier, this strategy allows agents to query structured data within the knowledge graph. This enables multi-hop reasoning, where the agent can follow connections between entities to answer more complex questions that require synthesizing information from multiple memories.
+The result is memory you can open in a text editor and diff. The tradeoff is that the agent, and the model behind it, decides what's worth keeping.
 
-For instance, an agent might use semantic search to find all past conversations about a specific project. With the Pro tier's graph, it could then ask, "What were the key decisions made by the lead engineer on Project X last quarter?" and the agent would traverse the graph to find and connect relevant entities and events.
+## Language support and integration
 
-### Letta's Agentic Retrieval
+This is often the deciding factor.
 
-Letta's retrieval is deeply integrated with its runtime and agent execution model. Instead of a direct search API call, agents interact with their memory through **tool calls** managed by the Letta framework. This approach, as detailed in the [official Letta documentation](https://docs.letta.ai/memory/introduction), gives the agent more agency in how it uses its memory.
+**Mem0** fits into almost anything. It has Python and TypeScript SDKs, a REST API, a CLI, and documented integrations with LangGraph, CrewAI, AutoGen, the OpenAI Agents SDK, Google ADK, Mastra and the Vercel AI SDK. You keep your framework and add memory calls.
 
-This means the agent itself decides, based on its internal reasoning and the tools available, how to best access its memory. For example, an agent might call a "recall" tool to fetch recent interactions or an "archive search" tool for long-term information. This approach allows for more dynamic and context-aware memory access. A study published on [arxiv.org](https://arxiv.org/abs/2305.13245) showed that agents employing sophisticated memory retrieval mechanisms demonstrated a 28% increase in task completion accuracy compared to those with simpler memory access. This Mem0 vs Letta choice impacts retrieval quality.
+**Letta** wants to be the framework. Its FAQ says the Agent SDK is "currently available only for TypeScript." The Python `letta-client` package still talks to the REST API, but its docs page calls it deprecated with no new features. For Python, Letta suggests running the App Server and using its WebSocket protocol. The open-source Docker image is "no longer supported as a backend for Letta Code."
 
-## Developer Experience and Integration
+## Self-hosting and cost
 
-The ease with which developers can integrate and work with an AI memory system significantly impacts adoption. Mem0 prioritizes a simple library integration, while Letta offers a more opinionated platform experience. The Mem0 vs Letta developer experience is a key consideration.
+**Mem0 open source** costs nothing beyond your LLM, embedder and vector store. Every `add` makes one extraction LLM call, so cost scales with message volume. The self-hosted server bundles Postgres with pgvector, a dashboard and per-user API keys. The hosted Platform's free Hobby tier allows 10,000 adds and 1,000 retrievals a month.
 
-### Mem0: Library Integration
+**Letta Code** is free to run locally with your own model keys; your agent state and MemFS stay on disk, and you're responsible for backups. Hosted plans start at Free, then Pro at $20/month. The API plan is $20/month plus $0.10 per active agent per month and $0.00015 per second of tool execution.
 
-Mem0 is designed as a **pluggable library**. Developers import the Mem0 SDK into their existing agent projects. This means the core agent orchestration, tool definitions, and overall application structure remain unchanged. The agent simply makes calls to the Mem0 client to store or retrieve information.
+The cost profiles differ. With Mem0 you pay per extraction and per search on top of your agent's own model calls. With Letta, memory work happens inside the agent's turns and dreaming runs, so it shows up as more agent tokens.
 
-This approach offers a low barrier to entry for adding memory capabilities. You don't need to learn a new agent framework or adopt a different runtime. Python and JavaScript SDKs are available, broadening its accessibility. For teams already invested in a particular agent framework, Mem0 provides a straightforward upgrade path.
+## Benchmarks: what's comparable
 
-### Letta: Platform Integration
+There's no clean head-to-head. Mem0 reports 92.5 on LoCoMo and 94.4 on LongMemEval for its April 2026 algorithm, run on its managed platform. Letta publishes no memory benchmark scores in its README.
 
-Letta functions more like an integrated platform or even an operating system for agents. Agents are designed to **run within the Letta environment**. This means developers build their agents with Letta's specific APIs and structure in mind. While this might require a steeper learning curve and potentially more upfront architectural decisions, it offers a more cohesive and managed experience.
+The one direct comparison is Letta's August 2025 [filesystem experiment](https://www.letta.com/blog/benchmarking-ai-agent-memory): an agent with plain file tools reached 74.0% on LoCoMo with GPT-4o-mini, above the 68.5% that Mem0's 2025 paper reported for its best graph variant. That compared against Mem0's older algorithm and was run by Letta. See the [Mem0 paper breakdown](/articles/mem0-building-production-ready-ai-agents/) for the full context.
 
-Letta provides an **Agent Development Environment (ADE)**, which suggests a more integrated tooling approach compared to Mem0's dashboard. This platform-centric model can lead to tighter integration between memory, execution, and agent logic, but it also implies a degree of lock-in to the Letta ecosystem. The Mem0 vs Letta choice here depends on your preference for flexibility versus a managed platform.
+## Mem0 or Letta: how to choose
 
-## Pricing and Licensing
+| If you... | Pick |
+|---|---|
+| Already have an agent in LangGraph, CrewAI or custom Python | Mem0 |
+| Need per-user preference memory in a chat or support app | Mem0 |
+| Want memory as a service with a dashboard and API keys | Mem0 |
+| Are building a long-lived assistant or coding agent from scratch | Letta |
+| Want the agent to edit its own memory and skills | Letta |
+| Want memory as readable, git-versioned files | Letta |
+| Need graph memory in open source | Neither; see Graphiti or Cognee |
 
-Both Mem0 and Letta offer both managed cloud services and self-hosted options, with differing pricing structures and licensing. This aspect of the Mem0 vs Letta comparison is crucial for budget planning.
-
-### Mem0 Pricing Tiers
-
-Mem0 offers a tiered pricing model for its managed cloud service:
-
-* **Free Tier**: Limited to 10,000 memories.
-* **Standard Tier**: Starts at $19/month (estimated pricing), offering more memories and basic features.
-* **Pro Tier**: Priced at $249/month (estimated pricing), unlocking advanced features like the knowledge graph and higher limits.
-
-The **Apache 2.0 license** applies to the open-source components, making self-hosting a viable option for full control and cost savings, especially for teams with significant memory needs.
-
-### Letta Pricing and Licensing
-
-Letta's pricing for its managed service typically ranges from $20 to $200 per month (estimated pricing), depending on usage and features. Similar to Mem0, Letta is also **open-source under the Apache 2.0 license**, allowing for free self-hosting. This provides flexibility for organizations concerned about data privacy or seeking to avoid ongoing subscription costs.
-
-## Mem0 vs Letta: Which to Choose?
-
-The optimal choice between Mem0 and Letta hinges on your project's specific requirements, existing infrastructure, and desired level of integration. This Mem0 vs Letta decision guide helps clarify the path forward.
-
-### When to Choose Mem0
-
-* **Existing Agent Framework**: If you're already using a framework like LangChain, CrewAI, or AutoGen and want to add persistent memory without a major architectural shift, Mem0 is an excellent choice.
-* **Simplicity**: For developers who prefer a straightforward, library-based integration with a clear add/search API.
-* **Flexibility**: When you need to integrate memory into diverse applications and platforms without being tied to a single runtime.
-* **Budgetary Constraints**: The free and standard tiers offer a cost-effective way to start with memory, with the option to upgrade for advanced graph features.
-
-### When to Choose Letta
-
-* **Integrated Runtime**: If you are building an agent from the ground up or are open to adopting a new, comprehensive runtime environment.
-* **Tiered Memory Management**: When the concept of core, recall, and archival memory aligns with your application's needs for dynamic memory access.
-* **OS-like Agent Environment**: If you envision agents operating within a structured, managed platform that handles execution and persistence.
-* **Deep Integration Focus**: For projects where a tightly integrated memory and execution system is a primary goal.
-
-For a broader perspective on memory solutions, exploring alternatives like Hindsight vs Mem0 or understanding the nuances of [Mem0 alternatives compared](/articles/mem0-alternatives-compared/) can provide further insights. The [Transformer paper](https://arxiv.org/abs/1706.03762) offers foundational concepts relevant to how agents process and retain information. The ongoing development in AI memory systems makes a thorough Mem0 vs Letta analysis essential for informed decision-making.
-
----
-
-## FAQ
-
-* **What is the core functional difference between Mem0 and Letta?**
- Mem0 acts as a pluggable memory layer that can be added to existing agent frameworks, focusing on storage and retrieval via API calls. Letta is a full agent runtime environment where agents execute, and memory is managed internally across tiered storage.
-* **Which framework offers more advanced knowledge graph capabilities out-of-the-box?**
- Letta's architecture is more inherently designed for tiered memory, including recall and archival, potentially offering deeper integration with structured knowledge. Mem0's advanced graph features are available only on its higher-priced Pro tier, while its core functionality is semantic search.
-* **Can I use Mem0 with any AI agent framework?**
- Yes, Mem0 is designed to be framework-agnostic. You can integrate it as a library into various agent stacks like LangChain, CrewAI, or AutoGen without altering your existing orchestration logic.
+If neither fits, other memory layers take different positions: Zep and Graphiti track facts over time, Cognee builds knowledge graphs from documents, and [Hindsight](https://github.com/vectorize-io/hindsight) runs a memory server with retain, recall and reflect plus background consolidation. The [Mem0 alternatives](/articles/mem0-alternatives-compared/) and [Letta alternatives](/articles/letta-alternatives/) pages compare them, and Vectorize has its own [Mem0 vs Letta write-up](https://vectorize.io/articles/mem0-vs-letta). For the concepts, see [AI agent memory explained](/articles/ai-agent-memory-explained/).

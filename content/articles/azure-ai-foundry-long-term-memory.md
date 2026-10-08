@@ -1,162 +1,179 @@
 ---
-title: 'Azure AI Foundry Long-Term Memory: Architecting Persistent Agent Recall'
-description: Explore Azure AI Foundry long-term memory, how it enables persistent agent recall, and its core components like Azure Cosmos DB, Azure Blob Storage, and Azure AI ...
+title: "Azure AI Foundry Memory: Agent Service Long-Term Memory"
+description: "How long-term memory works in Azure AI Foundry Agent Service (Microsoft Foundry): memory stores, memory types, scope, TTL, quotas, regions, pricing and Python code."
 date: 2026-03-29
-lastmod: 2026-03-29
-tags:
-- Azure AI Foundry
-- AI Memory
-- Long-Term Memory
-- AI Agents
-- Azure AI Search
-- Azure Cosmos DB
-keywords:
-- azure ai foundry long term memory
-- AI memory systems
-- agent recall
-- persistent memory AI
-- Azure AI Search
-- Azure Cosmos DB
-- azure ai foundry agent memory
-- azure ai foundry agent service conversation state blob storage
-- azure ai foundry agent service use blob storage for conversation state
-- azure ai foundry memory
-faq:
-- question: What is the core benefit of implementing long-term memory in Azure AI Foundry?
-  answer: The core benefit is enabling AI agents to retain and recall information across extended interactions and sessions, leading to more coherent, personalized, and contextually aware responses and
-    actions.
-- question: How does Azure AI Foundry manage long-term memory for its agents?
-  answer: Azure AI Foundry typically integrates with Azure's data storage and retrieval services, such as Azure Cosmos DB or Azure Blob Storage, often augmented by vector databases and embedding techniques
-    for efficient semantic recall.
-- question: Can Azure AI Foundry support different types of long-term memory?
-  answer: Yes, Azure AI Foundry can be architected to support various memory types, including episodic (event-based) and semantic (fact-based) memory, depending on the specific agent's requirements and
-    the chosen integration patterns.
-- question: How can Azure AI Foundry agent services use Blob Storage for conversation state?
-  answer: Azure AI Foundry agent services can leverage Azure Blob Storage to store unstructured data related to conversation state, such as large log files, media attachments, or serialized objects, which
-    can then be referenced or retrieved as needed for persistent memory.
-- question: What are the key Azure services that power Azure AI Foundry agent memory?
-  answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, Azure AI Search for intelligent retrieval (including vector search), and Azure OpenAI Service
-    for the cognitive engine.
-- question: What specific Azure services are crucial for implementing Azure AI Foundry agent memory?
-  answer: Key services include Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for intelligent retrieval. Azure OpenAI Service provides the cognitive engine.
-- question: How does Azure AI Foundry ensure persistent memory for its agents?
-  answer: Azure AI Foundry ensures persistent memory by integrating robust Azure services like Azure Cosmos DB for structured data, Azure Blob Storage for unstructured data, and Azure AI Search for efficient
-    retrieval, enabling comprehensive agent recall.
-- question: What is Azure AI Foundry agent memory and why is it important?
-  answer: Azure AI Foundry agent memory refers to the capability of AI agents built on the Azure AI Foundry platform to store, retrieve, and utilize information from past interactions. This persistent memory
-    is crucial for enabling agents to maintain context, learn over time, and provide more personalized and coherent responses, significantly enhancing their utility and intelligence.
+lastmod: 2026-10-08
 slug: azure-ai-foundry-long-term-memory
 aliases:
 - /articles/ai-foundry-agent-memory/
 - /articles/ai-foundry-agent-service-memory/
 - /articles/ai-foundry-memory/
 - /articles/azure-ai-agent-service-memory/
+tags:
+- Azure AI Foundry
+- Microsoft Foundry
+- Foundry Agent Service
+- Long-Term Memory
+- Managed Agent Memory
+keywords:
+- "azure ai foundry long-term memory"
+- "foundry agent service memory"
+- "ai foundry memory"
+- "azure ai agent service memory"
+- "foundry memory store"
+- "memory search tool foundry"
+cluster: agent-memory
+faq:
+  - question: "Does Azure AI Foundry Agent Service have long-term memory?"
+    answer: "Yes. Memory in Foundry Agent Service is a managed long-term memory feature, in public preview as of October 2026. You create a memory store, attach the memory search tool to an agent (or call the Memory Store API), and the service extracts, consolidates and retrieves memories per scope, usually one scope per user."
+  - question: "How much does Foundry Agent Service memory cost?"
+    answer: "Microsoft's docs say that during the preview you're billed for the chat and embedding model deployments the memory store uses, and that memory pricing can change before general availability. There is no separate per-memory price listed as of October 2026."
+  - question: "What are the limits of Foundry memory stores?"
+    answer: "Per Microsoft Learn, a memory store holds up to 100 scopes, each scope up to 10,000 memories, and search and update calls are each limited to 1,000 requests per minute. Memory needs Azure OpenAI chat and embedding deployments, and virtual network integration isn't supported for memory stores."
 ---
 
-**Azure AI Foundry long-term memory** empowers AI agents to store, retrieve, and apply information across extended interactions, providing persistent recall crucial for context, learning, and coherent, personalized responses. This capability transforms agents from stateless tools into intelligent, evolving partners by enabling effective **agent recall**.
+**Azure AI Foundry long-term memory** is a managed feature of Foundry Agent Service that lets an agent remember users across sessions. You create a **memory store**, attach the **memory search tool** to an agent, and the service extracts facts, preferences and summaries from conversations, merges duplicates, and retrieves the relevant ones in later chats. As of October 2026 it is in **public preview**.
 
-## What is Azure AI Foundry Long-Term Memory?
+Microsoft has since renamed the product family to **Microsoft Foundry**, so current docs say "Memory in Foundry Agent Service." Older posts call it Azure AI Foundry memory or Azure AI Agent Service memory. They mean the same feature. Everything below comes from the [Microsoft Learn memory overview](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory) and the [how-to guide](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/memory-usage), checked on 8 October 2026.
 
-**Azure AI Foundry long-term memory** refers to the integration of specific Azure services and architectural patterns that allow AI agents to retain and recall information beyond immediate conversational contexts. This persistent recall is vital for agents to build context, learn from past interactions, and deliver increasingly relevant **long-term memory for AI agents** over time. This forms the foundation for robust **azure ai foundry agent memory**.
+## What is long-term memory in Azure AI Foundry?
 
-## Understanding Azure AI Foundry Long-Term Memory for Agents
+**Memory in Foundry Agent Service is a managed long-term memory store for agents. An LLM extracts key information from conversations, consolidates it so duplicates merge and conflicting facts get resolved, and stores it as memory items per scope. Agents then search the store to personalize later sessions, across devices and workflows.**
 
-Azure AI Foundry acts as a platform for building sophisticated AI solutions. When we discuss **Azure AI Foundry long-term memory**, we mean the deliberate design and integration of Azure services to equip agents with persistent recall capabilities. It's not a single component but a combination of databases, search technologies, and AI models that work together to create a functioning **AI memory system**.
+Microsoft draws the same line most frameworks do. **Short-term memory** is the current session's conversation, which the orchestration layer keeps. **Long-term memory** is distilled knowledge that survives across sessions, and that's the part this feature handles. If you're new to the split, the [AI agent memory guide](/articles/ai-agent-memory-explained/) covers it in depth.
 
-The capacity for an AI agent to remember is fundamental to its evolving intelligence. Without memory, every interaction starts anew, severely limiting an agent's practical utility. Enabling persistent memory is a key step in building stateful and intelligent AI applications, aligning with broader advancements in [advanced AI agent architecture patterns for persistent recall](/articles/ai-agent-architecture-patterns/).
+The service announced memory at Ignite 2025. Microsoft's [launch post](https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/) (25 November 2025) says retrieval uses hybrid search and that bring-your-own storage is planned but not yet available.
 
-### The Imperative for Persistent Recall
+## How Foundry Agent Service memory works
 
-Consider an AI assistant managing complex projects. If it forgets previous discussions on task priorities or deadlines, its usefulness plummets. **Persistent recall** ensures agents maintain conversational context, learn from user feedback, and provide increasingly valuable assistance. This capability distinguishes advanced agents from basic chatbots.
+Memory runs in three phases, per the Learn overview:
 
-The adoption of AI in business applications is accelerating rapidly. According to a 2024 Gartner report, 70% of IT leaders anticipate AI integration into most business applications by 2027. For these applications to deliver true value, their AI agents must possess memory. Implementing effective memory solutions within platforms like Azure AI Foundry is therefore a strategic necessity for enabling **long-term memory in AI**.
+1. **Extraction.** As a user talks to the agent, the system pulls out preferences, facts and context, such as "allergic to dairy," plus summaries of recent activity.
+2. **Consolidation.** An LLM merges similar or duplicate topics so the store doesn't fill with repeats. Conflicting facts, like a new allergy, get resolved.
+3. **Retrieval.** When the agent needs context, it searches the store for the most relevant memories.
 
-### Core Components of Azure AI Memory Systems
+Writes aren't instant. After each agent response the service schedules a memory update, but it waits for a period of inactivity set by `update_delay`. The default is 300 seconds (five minutes). That debounce means a fact a user states now may not show up in a new chat for a few minutes.
 
-Azure AI Foundry facilitates long-term memory by orchestrating several key Azure services:
+### The three memory types
 
-#### Azure Cosmos DB: The Foundation for Structured Data
+| Memory type | What it holds | When to retrieve it |
+|---|---|---|
+| **User profile memory** | Durable preferences and personal context: language, product defaults, accessibility needs | Near the start of each conversation |
+| **Chat summary memory** | Distilled summaries of earlier topics and threads | Each turn, using the current messages |
+| **Procedural memory** | Reusable routines and patterns inferred from past interactions | When the user asks for a recurring task |
 
-**Azure Cosmos DB** is a globally distributed, multi-model database. It excels at storing structured and semi-structured data, such as conversation logs, user profiles, or application state. Its flexibility makes it ideal for persisting discrete memory items that can be queried by ID, timestamp, or specific attributes, forming a key part of **Azure AI Foundry long-term memory**. It's a cornerstone for managing structured **azure ai foundry memory**.
+All three are enabled by default. You can turn each off when you create the store, and you can steer extraction with a `user_profile_details` instruction such as "flight carrier preference and dietary restrictions," or tell it what to avoid, such as financials or precise location.
 
-#### Azure Blob Storage: For Unstructured Data Assets
+### Static and contextual retrieval
 
-When agents need to reference larger, unstructured data like documents, images, or media files, **Azure Blob Storage** provides a scalable and cost-effective solution. This data can be indexed or linked to more structured memory records, supporting richer **agent recall**. This is particularly relevant for **azure ai foundry agent service conversation state blob storage** scenarios, where large conversational artifacts can be stored. Understanding how **azure ai foundry agent services use blob storage for conversation state** is key to managing complex data.
+The docs make a useful point: profile facts often aren't semantically similar to the user's message, so similarity search alone can miss them. The fix is two calls. A search with a `scope` and no messages returns **static** memories (the user profile), which you inject at the start of a conversation. A search with the latest messages returns **contextual** memories, both profile and chat summary, for each turn. The memory search tool does both for you.
 
-#### Azure AI Search: Enabling Intelligent Retrieval
+## Scope: how memory is partitioned per user
 
-**Azure AI Search** is a powerful service for indexing and retrieving information from vast datasets. It supports full-text search and, critically for memory systems, **vector search capabilities**. This allows for semantic retrieval, finding information based on meaning rather than just keywords, which is central to **long-term memory for AI agents**. This service is fundamental for efficient **azure ai foundry agent memory** retrieval.
+Each **scope** inside a memory store is an isolated set of memory items. For a support agent, each customer gets their own scope.
 
-#### Vector Databases and Embeddings
+- **With the memory search tool**, set `scope` to `{{$userId}}`. The service resolves the user from an `x-memory-user-id` request header if you send one, or falls back to the caller's Microsoft Entra tenant and object IDs.
+- **With the low-level Memory Store API**, you must pass `scope` explicitly on every call. Automatic identity resolution isn't supported there.
 
-To achieve semantic recall, text is converted into numerical representations called **vector embeddings**. These embeddings capture the semantic meaning of the text. Services like Azure AI Search or dedicated vector database integrations store these embeddings, enabling efficient similarity searches. This is a core technique for modern [LLM memory systems](/articles/how-llm-memory-works/) and **Azure AI Foundry long-term memory**.
+Microsoft's best-practice list warns against giving agents memories shared across all users. If you do share a scope, use `user_profile_details` to stop personal data from being stored.
 
-#### Azure OpenAI Service: The Cognitive Engine
+## Using memory from Python
 
-The **Azure OpenAI Service** provides the large language models (LLMs) that process information. It receives the current user query alongside relevant retrieved memories to generate informed responses. Its advanced natural language understanding and generation capabilities are essential for making memory retrieval actionable within **Azure AI Foundry long-term memory**.
-
-## How Azure AI Foundry Facilitates Long-Term Memory
-
-Building **long-term memory in Azure AI Foundry** involves a cyclical process of capturing, storing, indexing, retrieving, and using information.
-
-1. **Capture and Storage:** Key interaction data, user inputs, agent responses, actions taken, outcomes, are logged. This data is then persisted in appropriate Azure storage services like Cosmos DB or Blob Storage for **agent recall**.
-2. **Indexing and Retrieval:** To make stored data searchable, it's indexed. For semantic recall, **embedding models for memory** convert text into vectors. Azure AI Search efficiently stores and queries these vectors, retrieving semantically similar memories. This is a core function of **Azure AI Foundry long-term memory**.
-3. **Contextualization:** When a new user query arrives, the system searches the memory store for relevant past information. This retrieved context is combined with the current prompt to inform the agent.
-4. **Informed Decision Making:** The LLM, augmented by both current context and retrieved memory, generates a more accurate and contextually aware response or action, demonstrating the power of **persistent memory AI**.
-
-This pattern addresses [context window limitations and solutions](/articles/context-window-limitations-solutions/) and represents an evolution beyond basic [AI agent memory types](/articles/ai-agents-memory-types/), showcasing advanced **Azure AI Foundry long-term memory** capabilities. It's crucial for understanding **azure ai foundry agent service use blob storage for conversation state** and how it contributes to the overall **azure ai foundry memory** architecture.
-
-## Architecting Episodic and Semantic Memory
-
-Within **Azure AI Foundry long-term memory**, agents typically implement two primary forms of memory: episodic and semantic.
-
-### Episodic Memory: Recalling Specific Events
-
-**Episodic memory** allows AI agents to recall specific past events or experiences in chronological order. For an agent, this means remembering previous conversations, specific user requests, or sequences of actions. In Azure AI Foundry, this can be achieved by logging each turn of a conversation with timestamps and metadata into a database like Cosmos DB, providing a detailed history for **agent recall**.
-
-When an agent needs to recall a past event, it queries this database for interactions within a specific timeframe or related to a particular topic. This is particularly useful for maintaining conversational flow and referencing past decisions. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is crucial for this implementation of **long-term memory for AI agents**.
-
-### Semantic Memory: Storing Factual Knowledge
-
-**Semantic memory** stores factual knowledge and general concepts, independent of specific events. For an AI agent, this includes remembering facts about the world, domain-specific knowledge, or user preferences. To implement semantic memory in Azure AI Foundry, **embedding models for memory** convert text into vectors, which are stored in a vector database.
-
-When a user asks a question, the system embeds the query and searches the vector database for similar embeddings. The associated text is retrieved and used to inform the LLM, allowing the agent to access vast knowledge efficiently, similar to how [semantic memory AI agents](/articles/semantic-memory-ai-agents/) operate and enhancing **Azure AI Foundry long-term memory**.
-
-## Implementing Long-Term Memory with Azure Services
-
-Building effective **Azure AI Foundry long-term memory** solutions requires careful integration of Azure services.
-
-### Orchestration with Azure Functions and Logic Apps
-
-**Azure Functions** and **Azure Logic Apps** are essential for automating the memory workflow. These serverless services can trigger actions like capturing data, generating embeddings, storing information in Cosmos DB, and retrieving context for the LLM. This automation is key to creating a seamless **persistent memory AI** experience.
-
-For example, an Azure Function can process incoming messages. It captures the text, generates an embedding using an Azure OpenAI model, stores the original message in Cosmos DB, and adds the embedding to Azure AI Search. This ensures a seamless **agent recall** process for **Azure AI Foundry long-term memory**.
-
-### Using Azure AI Search for Vector Storage and Retrieval
-
-Azure AI Search is central to advanced AI memory. Its ability to index and query both text and vectors makes it ideal for **agent recall**.
-
-You can store vector embeddings of your data within Azure AI Search. When a user query arrives, its embedding is generated and used for a vector similarity search against your indexed memory. This retrieves semantically relevant information, forming the basis of the agent's recall. This pattern is common in RAG implementations and a core aspect of **Azure AI Foundry long-term memory**.
+You need the `azure-ai-projects` package (version 2.3.0 or later in the current docs), a Foundry project, a chat model deployment and an embedding deployment. This sketch follows the Learn how-to: create a store, attach the memory search tool, then search the store directly.
 
 ```python
-## Example: Storing and retrieving embeddings using Azure AI Search for agent memory
-from azure.core.credentials import AzureKeyCredential
-from azure.search.documents import SearchClient
-from azure.search.documents.indexes.models import VectorizableText, SearchableField, SimpleField, SearchIndex, VectorSearch, VectorSearchAlgorithmConfiguration, HnswAlgorithmConfiguration
+import os
+from datetime import timedelta
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+from azure.ai.projects.models import (
+    MemoryStoreDefaultDefinition,
+    MemoryStoreDefaultOptions,
+    MemorySearchPreviewTool,
+    MemorySearchOptions,
+    PromptAgentDefinition,
+)
 
-For teams building production systems, open source options like [Hindsight](https://github.com/vectorize-io/hindsight) provide a solid foundation for agent memory with automatic context capture and retrieval.
+project = AIProjectClient(
+    endpoint=os.environ["FOUNDRY_PROJECT_ENDPOINT"],
+    credential=DefaultAzureCredential(),
+)
 
-## Replace with your actual Azure AI Search details
-service_name = "YOUR_SEARCH_SERVICE_NAME"
-index_name = "agent-memory-index"
-key = "YOUR_SEARCH_API_KEY"
+# 1. Create a memory store (options can only be set at creation time)
+store = project.beta.memory_stores.create(
+    name="support_memory",
+    definition=MemoryStoreDefaultDefinition(
+        chat_model=os.environ["MEMORY_STORE_CHAT_MODEL_DEPLOYMENT_NAME"],
+        embedding_model=os.environ["MEMORY_STORE_EMBEDDING_MODEL_DEPLOYMENT_NAME"],
+        options=MemoryStoreDefaultOptions(
+            user_profile_enabled=True,
+            chat_summary_enabled=True,
+            procedural_memory_enabled=True,
+            default_ttl_seconds=timedelta(days=30),
+            user_profile_details="Avoid financials, precise location and credentials",
+        ),
+    ),
+)
 
-endpoint = f"https://{service_name}.search.windows.net"
-credential = AzureKeyCredential(key)
+# 2. Attach the memory search tool to a prompt agent
+agent = project.agents.create_version(
+    agent_name="SupportAgent",
+    definition=PromptAgentDefinition(
+        model=os.environ["MEMORY_STORE_CHAT_MODEL_DEPLOYMENT_NAME"],
+        instructions="You are a helpful support assistant.",
+        tools=[MemorySearchPreviewTool(
+            memory_store_name=store.name,
+            scope="user_123",
+            update_delay=300,  # seconds of inactivity before memories are written
+        )],
+    ),
+)
 
-search_client = SearchClient(endpoint=endpoint,
- index_name=index_name,
- credential=credential)
-
-##
+# 3. Or query the store yourself
+results = project.beta.memory_stores.search_memories(
+    name=store.name,
+    scope="user_123",
+    items=[{"role": "user", "content": "What do I usually order?", "type": "message"}],
+    options=MemorySearchOptions(max_memories=5),
+)
+for m in results.memories:
+    print(m.memory_item.content)
 ```
+
+To write memories without an agent, call `begin_update_memories(name=..., scope=..., items=[...], update_delay=0)`, which returns a poller. Microsoft says this long-running operation can take about a minute. The API also offers item-level create, read, update, list and delete, plus deleting all memories for one scope, which is how you'd handle a user's data deletion request.
+
+When a user says "remember that my seat is aisle" or "forget my seat," the memory search tool applies it at once and returns a `memory_command_call` item in the response. These direct commands still respect the store's TTL.
+
+## Limits, regions and pricing
+
+**Quotas (Learn, October 2026):**
+
+- 100 scopes per memory store
+- 10,000 memories per scope
+- 1,000 search requests per minute
+- 1,000 update requests per minute
+
+**Other limits:** memory needs compatible Azure OpenAI chat and embedding deployments. Virtual network integration isn't supported for memory stores. Procedural memory and default TTL are set at creation; changing them later may need a new store, depending on API version. A TTL of `0` means memories never expire.
+
+**Regions:** 19 at the time of writing, including East US 2, West US, West US 2, West US 3, North Central US, Canada East, Brazil South, UK South, France Central, Sweden Central, Switzerland North, Norway East, Italy North, Japan East, Korea Central, Australia East, South India, South Africa North and UAE North.
+
+**Pricing:** Microsoft says memory pricing "can change during preview" and that you're billed for the chat and embedding model usage the store consumes. There's no separate memory meter listed. Check the [Foundry Agent Service pricing page](https://azure.microsoft.com/pricing/details/foundry-agent-service/) before you plan costs.
+
+## Security and when to use something else
+
+Memory written by an LLM can be poisoned. Microsoft lists **prompt injection** and **memory corruption** as the main risks and recommends Azure AI Content Safety with prompt-injection detection, plus regular adversarial testing. In practice that means treating anything a user says as untrusted before it becomes a stored fact.
+
+Microsoft also says where memory doesn't fit. Use a Foundry IQ knowledge base for curated company content, and the file search tool for documents a user uploads during a chat. Memory is for things learned about a user or task over time.
+
+How it compares with the other managed options:
+
+| | Foundry Agent Service memory | Vertex AI / Agent Platform Memory Bank | AWS AgentCore Memory |
+|---|---|---|---|
+| Status (Oct 2026) | Public preview | Billed service; event ingestion and profiles GA | Generally available |
+| Memory types | User profile, chat summary, procedural | Natural-language facts, custom topics, structured profiles | Semantic, user preference, summary, episodic strategies |
+| Partition key | `scope` | `scope` dictionary | Namespaces built from actor and session IDs |
+| Expiry | Store-level default TTL | TTL config | Event expiry 3-365 days |
+
+See the deep dives on [Vertex AI Agent Engine Memory Bank](/articles/vertex-ai-agent-engine-memory-bank/) and [AgentCore long-term memory](/articles/building-smarter-ai-agents-agentcore-long-term-memory-deep-dive/) for the details.
+
+If you build with Microsoft Agent Framework rather than prompt agents, Foundry memory is one of its listed context provider integrations, next to Mem0, Redis, Neo4j and Cosmos DB. The [Microsoft Agent Framework memory](/articles/microsoft-agent-framework-memory/) page covers that route. If you need memory outside Azure, or self-hosted, open-source systems such as Mem0, Graphiti, Cognee or [Hindsight](https://github.com/vectorize-io/hindsight) run anywhere; the [open-source memory systems comparison](/articles/open-source-memory-systems-compared/) lists them.

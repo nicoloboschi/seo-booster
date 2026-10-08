@@ -1,173 +1,125 @@
 ---
-title: 'Short Term Memory in AI Agents: Managing Immediate Context'
-description: Explore how AI agents utilize short-term memory, also known as working memory, to manage immediate context and information within their operational limits.
+title: "Short-Term Memory in AI Agents: Context, State, Limits"
+description: "What short-term memory is in AI agents, what it holds, why it runs out, and how to trim, summarize or offload it, with a LangChain checkpointer example."
 date: 2026-03-25
-lastmod: 2026-03-25
-tags:
-- AI Memory
-- Agent Architecture
-- Working Memory
-- Context Window
-keywords:
-- short term memory in ai agents
-- working memory ai
-- agent context window
-- AI memory
-- agent architecture
-faq:
-- question: What is the primary function of short-term memory in AI agents?
-  answer: The primary function of short-term memory in AI agents is to hold and process information that is immediately relevant to the current task or interaction, enabling real-time decision-making and
-    response generation.
-- question: How does an AI agent's short-term memory differ from its long-term memory?
-  answer: Short-term memory is transient and limited, focusing on immediate context, whereas long-term memory is more permanent and stores vast amounts of information, experiences, and learned knowledge
-    for future recall.
-- question: What are common limitations of short-term memory in AI agents?
-  answer: Common limitations include a restricted capacity (context window size), rapid decay of information if not actively used, and vulnerability to being overwritten by new incoming data, impacting
-    the agent's ability to retain context over extended interactions.
+lastmod: 2026-10-08
 slug: short-term-memory-ai-agents
 aliases:
 - /articles/short-term-memory-ai-agent/
 - /articles/short-term-memory-for-ai-agents/
 - /articles/what-is-short-term-memory-in-ai/
 - /articles/what-is-short-term-memory-in-ai-agent/
+tags:
+- Short-Term Memory
+- Working Memory
+- AI Agent Memory
+- Context Window
+- LangGraph
+keywords:
+- short-term memory AI agents
+- what is short-term memory in AI
+- short-term memory for AI agents
+- agent working memory
+- conversation memory
+- LangGraph short-term memory
+cluster: agent-memory
+faq:
+- question: "What is short-term memory in an AI agent?"
+  answer: "Short-term memory is the information an agent keeps for the current conversation or task: recent messages, tool results, the current plan and any retrieved facts. In LangGraph it is thread-scoped state saved by a checkpointer. It is limited by the model's context window and disappears when the thread ends unless it is promoted to long-term memory."
+- question: "Is short-term memory the same as the context window?"
+  answer: "Not quite. The context window is the model's input limit for a single call. Short-term memory is the state the agent keeps between calls in one session, and each prompt is built from part of it. Short-term memory can hold more than fits in one window if the agent trims, summarizes or offloads it."
+- question: "How do you stop short-term memory from overflowing the context window?"
+  answer: "Trim old messages to a token budget, summarize older turns into a running summary, delete messages you no longer need, or offload large tool outputs to files and keep only a reference. LangChain provides trim_messages and a SummarizationMiddleware for this."
 ---
 
-**Short-term memory in AI agents**, often referred to as **working memory**, is the cognitive mechanism that allows an agent to temporarily store and manipulate information relevant to its current task. This immediate recall capability is crucial for processing incoming data, making real-time decisions, and generating coherent responses. Unlike long-term memory, which stores vast amounts of persistent knowledge, short-term memory is characterized by its limited capacity and transient nature, focusing solely on the information needed for the immediate operational context. Understanding this component is fundamental to designing effective [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
+**Short-term memory in AI agents** is what the agent keeps for the task in front of it: recent messages, tool results, the plan and retrieved facts. It lasts for one conversation or run. LLM calls are stateless, so the agent's code holds this state and rebuilds the prompt from it each step, within the context window.
 
-The concept of short-term memory in AI is closely tied to the **agent context window**. This window represents the finite amount of information an AI model, particularly a large language model (LLM), can consider at any given moment. When an agent receives new input or performs an action, older information within the context window may be pushed out to make space for the new. This inherent limitation directly impacts how much of a conversation or task history the agent can actively "remember" and use. Managing this **agent context window** is a primary challenge in developing sophisticated AI agents.
+It's the one memory type every agent has, even agents with no memory features at all. Getting it right decides cost, latency and whether the agent loses track halfway through a long task. For the other memory types and how they fit together, see [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-## The Role of Working Memory in AI Agents
+## What is short-term memory in AI agents?
 
-Working memory in AI agents serves as a dynamic scratchpad, holding pieces of information that are actively being reasoned about. This includes recent user inputs, intermediate results of calculations, and relevant facts retrieved from other memory systems. The ability to access and update this information rapidly is what allows an agent to maintain a coherent dialogue, follow multi-step instructions, and adapt its behavior based on the immediate situation. Without effective working memory, an AI agent would struggle to perform even simple sequential tasks.
+**Short-term memory in an AI agent is the session-scoped state the agent keeps while working on one conversation or task, including message history, tool outputs, intermediate results and goals. The agent builds each prompt from it, and it's bounded by the model's context window.**
 
-The architecture of an AI agent often includes a dedicated module for managing this short-term information. This module is responsible for receiving data, deciding what is relevant enough to retain within the working memory, and making that information available to the agent's reasoning or decision-making components. This is distinct from [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/), which focuses on specific past events.
+Two references define it. LangGraph's [memory guide](https://docs.langchain.com/oss/python/langgraph/memory) calls short-term memory "thread-scoped" memory that "tracks the ongoing conversation by maintaining message history within a session." It's stored as agent state and persisted by a **checkpointer**, so a thread can be resumed later.
 
-### Information Processing and Manipulation
+The CoALA framework ([Sumers et al., 2023](https://arxiv.org/abs/2309.02427)) calls the same thing **working memory**: "active and readily available information" for the current decision cycle, including inputs, retrieved knowledge and active goals. CoALA stresses that working memory is "a data structure that persists across LLM calls," not just the prompt. Each LLM input is built from a subset of it, and the output is parsed back into it.
 
-Within the working memory, information is not just stored but also actively processed. This can involve:
+### What is short-term memory in AI, in general?
 
-* **Updating State:** Reflecting the current status of the task or conversation.
-* **Filtering:** Identifying and prioritizing the most relevant pieces of information.
-* **Combining:** Integrating new data with existing context.
-* **Transforming:** Modifying information for specific processing needs.
+Outside agents, "short-term memory" in AI usually means the model's ability to use information in its current input. For transformers that's the context window and its KV cache. For older recurrent networks such as LSTMs (long short-term memory), it's the hidden state carried from step to step. Agent short-term memory builds on the first: the app decides what goes into each window.
 
-This active manipulation is what enables an agent to perform complex reasoning and generate contextually appropriate outputs. For example, if an agent is asked to summarize a document, its working memory will hold the chunks of text being processed, along with the current state of the summary being built.
+## What short-term memory holds
 
-### Interaction with Other Memory Systems
+A typical agent's short-term state includes:
 
-Short-term memory does not operate in isolation. It frequently interacts with other memory systems, such as **semantic memory** and **long-term memory**. When a piece of information is deemed important enough to be retained beyond the immediate context, it might be encoded into semantic memory or even long-term memory for future retrieval. Conversely, information from these deeper memory stores might be loaded into working memory when relevant to the current task. This interplay is key to achieving a more robust and capable AI agent.
+- **Message history:** user turns, assistant replies, tool calls and tool results.
+- **Task state:** the current goal, a plan or to-do list, progress so far.
+- **Retrieved context:** facts or episodes pulled from long-term memory for this turn.
+- **Scratch results:** intermediate values, drafts, extracted fields.
+- **Artifacts:** uploaded files, documents, generated outputs. LangGraph's docs list "uploaded files, retrieved documents, or generated artifacts" as normal parts of thread state.
 
-The efficiency of these memory interactions is a significant factor in the overall performance of an AI agent. A well-designed system can seamlessly transfer relevant data between different memory types, ensuring that the agent has access to the right information at the right time. This is a core aspect discussed in [AI agent memory explained](/articles/ai-agent-memory-explained/).
+Not all of this needs to be in the prompt at once. Keeping state in a structure, and choosing what to render into each call, is the main design lever.
 
-## Managing the Agent Context Window
+## Why short-term memory runs out
 
-The **agent context window** is the most direct manifestation of short-term memory limitations. It dictates how much data an LLM can process simultaneously. When this window is exceeded, the model effectively "forgets" the earliest parts of the input. This poses a significant challenge for maintaining long-term conversational coherence or processing lengthy documents.
+Message history grows with every turn, and tool-heavy agents grow faster. Manus reported that a typical task takes "around 50 tool calls on average" ([Manus, 2025](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)). Three problems follow:
 
-Strategies for managing the context window are critical for overcoming the inherent limitations of short-term memory. These strategies aim to either reduce the amount of information that needs to be stored or to efficiently summarize and condense information to fit within the available space.
+1. **Hard limits.** If the history exceeds the context window, the call fails.
+2. **Quality drops before the limit.** LangGraph's docs note that most LLMs "still perform poorly over long contexts," getting distracted by stale or off-topic content. [Lost in the Middle](https://arxiv.org/abs/2307.03172) (Liu et al., 2023) found accuracy is often highest when relevant information sits at the start or end of the input, and drops when it's in the middle.
+3. **Cost and latency.** Every token is resent and billed on every call.
 
-### Summarization and Condensation Techniques
+How big windows are today, and how they behave when full, is covered in the [context window of an LLM](/articles/context-window-of-an-llm/) guide.
 
-One common approach is to continuously **summarize** the conversation or document history. As new information enters the context window, older, less critical information can be summarized and then replaced. This summary, still within the context window, represents a condensed version of past interactions, preserving some continuity.
+## Techniques to manage short-term memory
 
-A simple Python example illustrating the concept of a limited buffer (analogous to a context window) and a summarization strategy:
+| Technique | What it does | Keeps detail? | When to use | Example tooling |
+|---|---|---|---|---|
+| **Trim** | Drop the oldest messages to fit a token budget | No | Chat where old turns rarely matter | LangChain `trim_messages` |
+| **Delete** | Remove specific messages from state for good | No | Clearing tool noise, resetting a thread | LangGraph `RemoveMessage` |
+| **Summarize** | Replace older turns with a running summary | Partly | Long chats that refer back to early details | LangChain `SummarizationMiddleware`, LangMem `SummarizationNode` |
+| **Offload** | Write large outputs to files; keep only a path or URL in context | Yes, on demand | Tool-heavy agents, web pages, big documents | Deep Agents virtual filesystem, Manus sandbox files |
+| **Compress into notes** | Background agents rewrite history into a dense log of observations | Partly | Very long-running assistants | Mastra Observational Memory |
+| **Promote to long-term** | Extract durable facts and save them outside the thread | Yes, across sessions | Anything the user will expect next week | LangGraph store, Mem0, Zep, Hindsight |
+
+Manus's advice on offloading is worth repeating: make compression **restorable**. Drop a web page's content but keep its URL; drop a document but keep its path. Then the agent can re-read it if needed. The trade-offs of each method are covered in [context window limitations and solutions](/articles/context-window-limitations-solutions/) and [LLM memory compression](/articles/llm-memory-compression/).
+
+## Adding short-term memory with LangChain
+
+In LangChain v1, short-term memory is a `checkpointer` on the agent plus a `thread_id` per conversation. Summarization is a middleware. Adapted from LangChain's [short-term memory docs](https://docs.langchain.com/oss/python/langchain/short-term-memory):
 
 ```python
-class LimitedContextBuffer:
- def __init__(self, max_size=10):
- self.buffer = []
- self.max_size = max_size
+from langchain.agents import create_agent
+from langchain.agents.middleware import SummarizationMiddleware
+from langgraph.checkpoint.memory import InMemorySaver
 
- def add_item(self, item):
- if len(self.buffer) >= self.max_size:
- # Simple summarization: replace oldest item with a summary
- # In a real agent, this would involve a more sophisticated LLM call
- summary = f"Summary of previous entries: {', '.join(self.buffer)}"
- self.buffer = [summary]
- self.buffer.append(item)
- print(f"Added: {item}. Current buffer: {self.buffer}")
+agent = create_agent(
+    model="anthropic:claude-sonnet-4-5",
+    tools=[],
+    middleware=[
+        SummarizationMiddleware(
+            model="anthropic:claude-haiku-4-5",
+            trigger=("tokens", 4000),   # summarize once history passes 4,000 tokens
+            keep=("messages", 20),      # always keep the last 20 messages verbatim
+        )
+    ],
+    checkpointer=InMemorySaver(),  # use PostgresSaver in production
+)
 
- def get_context(self):
- return "\n".join(self.buffer)
-
-## Example Usage
-buffer = LimitedContextBuffer(max_size=3)
-buffer.add_item("User: Hello, how are you?")
-buffer.add_item("Agent: I am doing well, thank you!")
-buffer.add_item("User: What is the weather like today?")
-## This next add will trigger the summarization
-buffer.add_item("Agent: The weather is sunny and warm.")
-
-print("\nFinal Context for Agent:")
-print(buffer.get_context())
+config = {"configurable": {"thread_id": "user-42-session-1"}}
+agent.invoke({"messages": "hi, my name is Bob"}, config)
+agent.invoke({"messages": "write a short poem about cats"}, config)
+reply = agent.invoke({"messages": "what's my name?"}, config)
+print(reply["messages"][-1].content)  # the agent still knows it's Bob
 ```
 
-This code snippet demonstrates a rudimentary form of context management. In practical AI agent development, these summarization tasks would typically be offloaded to another LLM call, creating a more sophisticated summary that captures the essence of the forgotten information. This is a core problem addressed by various [LLM memory systems](/articles/how-llm-memory-works/).
+A new `thread_id` starts a clean short-term memory. The same `thread_id` resumes it, even after a restart if you use a database-backed checkpointer such as `PostgresSaver`. For a plain token cap without summaries, call `trim_messages(..., strategy="last", max_tokens=..., start_on="human")` before each model call instead.
 
-### Retrieval-Augmented Generation (RAG)
+## Short-term memory in other designs
 
-**Retrieval-Augmented Generation (RAG)** is another powerful technique that complements short-term memory. Instead of trying to fit all past information into the context window, RAG systems retrieve relevant information from an external knowledge base (often a vector database) based on the current query. This retrieved information is then injected into the context window alongside the user's prompt.
+- **MemGPT / Letta.** [MemGPT](https://arxiv.org/abs/2310.08560) (Packer et al., 2023) treats the context window like an operating system's main memory and pages information in and out of external storage. Letta keeps memory files under `system/` in the prompt every turn and lets the agent read other files on demand.
+- **Task lists as working memory.** Agents that keep an explicit to-do list in state, like Deep Agents' `write_todos` tool or Manus's `todo.md`, are using short-term memory to stay on track across many steps.
+- **Observation logs.** Mastra's Observational Memory replaces raw history with background-written observations as the thread grows.
 
-This approach significantly extends the effective "memory" of an agent without requiring an infinitely large context window. It allows agents to access vast amounts of information that would otherwise be inaccessible due to short-term memory constraints. The interplay between RAG and agent memory is a key area of research, as detailed in [RAG vs. Agent Memory](/articles/rag-vs-agent-memory/).
+## When short-term memory isn't enough
 
-### State Tracking and Slot Filling
-
-For task-oriented agents, **state tracking** and **slot filling** are crucial components that rely heavily on short-term memory. The agent needs to keep track of the user's goals, the information provided so far (e.g., destination, date, time for a booking), and what information is still missing. This information is held in the agent's working memory.
-
-Each turn of the conversation might update the state or fill a slot. For instance, in a flight booking scenario, the agent's working memory would store the user's desired departure city, destination city, and travel dates. If the user only provides the destination, the agent uses its working memory to know that the departure city and dates are still needed.
-
-## Implementing Short-Term Memory in AI Agents
-
-Implementing effective short-term memory requires careful consideration of the agent's architecture and the underlying AI models. The goal is to balance the need for immediate contextual awareness with the practical limitations of computational resources and model capacities.
-
-### Memory Buffers and Queues
-
-The most basic implementation of short-term memory involves using data structures like **buffers** or **queues**. A fixed-size buffer can store the most recent N turns of a conversation or N pieces of data. A queue can operate on a First-In, First-Out (FIFO) principle, where new items are added to the end and old items are removed from the beginning when the buffer is full.
-
-While simple, these methods often lack the intelligence to discern what information is truly important. They treat all data equally, leading to the potential loss of critical context. More advanced systems employ mechanisms to prioritize or summarize information before it is discarded.
-
-### Using LLMs for Context Management
-
-Large Language Models themselves possess an inherent form of short-term memory through their **context window**. Developers can use this by carefully crafting prompts that include relevant historical information. However, this is limited by the window size. To extend this, LLMs can be used to:
-
-* **Summarize past interactions:** As mentioned, an LLM can process a long history and generate a concise summary to be fed back into the main LLM's context.
-* **Extract key entities and intents:** An LLM can parse a conversation to identify crucial pieces of information (entities) and the user's goals (intents), which can then be stored in a structured format within the working memory.
-* **Generate relevant context:** Based on a query and potentially some long-term memory, an LLM could generate a brief piece of context to be added to the current prompt.
-
-Tools and frameworks are emerging to help manage these complex memory operations. For example, open-source systems like [Hindsight](https://github.com/vectorize-io/hindsight) offer structured approaches to managing various forms of AI memory, including short-term context.
-
-### Hybrid Memory Architectures
-
-The most robust AI agents often employ **hybrid memory architectures**. These systems combine different types of memory to use their respective strengths. A typical hybrid system might include:
-
-* **A short-term memory buffer:** For immediate, high-speed access to recent information.
-* **A vector database:** For efficient storage and retrieval of semantic information, enabling RAG.
-* **A structured database:** For storing explicit facts, user profiles, or task states.
-* **A long-term memory store:** For accumulating knowledge and experiences over extended periods.
-
-The agent's core logic then orchestrates the flow of information between these components, deciding when to load data into short-term memory, when to query the vector database, and when to update the long-term store. Designing such architectures is a key focus in [best AI agent memory systems](/articles/best-ai-memory-framework/).
-
-## Challenges and Future Directions
-
-Despite advancements, challenges remain in effectively implementing and managing short-term memory in AI agents. The primary challenge is the **limited capacity** imposed by context windows, which directly restricts the agent's ability to maintain long-term coherence and understand complex, multi-turn interactions.
-
-Another challenge is **information decay**. Even within the context window, information that is not actively referenced can become less salient. This makes it difficult for agents to recall subtle details from earlier in an interaction.
-
-Future directions include:
-
-* **Larger context windows:** LLM research is continuously pushing the boundaries of context window size, directly increasing the capacity of short-term memory.
-* **More efficient attention mechanisms:** Developing attention mechanisms that can better focus on relevant parts of a long context, even if they are not the most recent.
-* **Hierarchical memory structures:** Creating memory systems that can organize information at different levels of abstraction, allowing agents to quickly access high-level summaries or dive into specific details as needed.
-* **Adaptive memory management:** AI agents that can dynamically adjust their memory management strategies based on the task and the type of information being processed.
-
-The development of sophisticated memory systems, including effective short-term memory management, is crucial for building truly intelligent and versatile AI agents. Exploring different AI memory benchmarks can help evaluate the effectiveness of these systems.
-
-## FAQ
-
-### What is the primary function of short-term memory in AI agents?
-The primary function of short-term memory in AI agents is to hold and process information that is immediately relevant to the current task or interaction, enabling real-time decision-making and response generation.
-
-### How does an AI agent's short-term memory differ from its long-term memory?
-Short-term memory is transient and limited, focusing on immediate context, whereas long-term memory is more permanent and stores vast amounts of information, experiences, and learned knowledge for future recall.
-
-### What are common limitations of short-term memory in AI agents?
-Common limitations include a restricted capacity (context window size), rapid decay of information if not actively used, and vulnerability to being overwritten by new incoming data, impacting the agent's ability to retain context over extended interactions.
+Short-term memory ends with the thread. If a user comes back tomorrow, nothing carries over unless you save it somewhere else. That's the job of long-term memory: extract what matters from the session, store it per user, and retrieve it in the next one. The side-by-side comparison, including how information moves between the two, is in [short-term and long-term memory in agentic AI](/articles/short-term-and-long-term-memory-agentic-ai/).

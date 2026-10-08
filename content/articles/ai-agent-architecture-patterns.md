@@ -1,195 +1,113 @@
 ---
-title: 'AI Agent Architectures: ReAct, Plan-and-Execute, and Memory Patterns Explained'
-description: Discover key AI agent architectures like ReAct and Plan-and-Execute. Understand their design patterns, core components, and the crucial role of memory in autonomo...
+title: "AI Agent Architecture Patterns: ReAct to Multi-Agent"
+description: "The main AI agent architecture patterns compared: ReAct, plan-and-execute, ReWOO, LLMCompiler, Reflexion, workflows, multi-agent, and where memory fits in each."
 date: 2026-03-24
-tags:
-- AI Agents
-- Agent Architectures
-- LLM Design
-- Autonomous Systems
-- AI Planning
-- AI Agent Memory
-- ReAct Architecture
-- Plan-and-Execute Architecture
-- AI Agent Components
-- AI Agent Memory Architecture Patterns
-- Agent Loop Architecture
-- Agent Native Architecture
-- Agent Replanning Dynamic Task Adjustment Architecture
-keywords:
-- AI agent architectures
-- agent architecture patterns
-- LLM agent design
-- autonomous agent systems
-- ReAct architecture
-- Plan-and-Execute architecture
-- AI agent memory
-- AI agent components
-- AI planning
-- AI agent memory architecture patterns
-- LLM agent architecture tools memory planning
-- AI agent memory architecture design
-- agent loop architecture
-- agent native architecture
-- agent replanning dynamic task adjustment architecture
-faq:
-- question: What is the primary goal of an AI agent architecture?
-  answer: The primary goal of an AI agent architecture is to provide a structured framework that enables an AI agent to perceive its environment, reason about its goals, make decisions, and take actions
-    to achieve those goals autonomously.
-- question: How does memory integration influence AI agent architectures?
-  answer: Memory integration is crucial. Different architectures leverage memory in distinct ways to store past experiences, learned knowledge, and intermediate reasoning steps, which are vital for context,
-    adaptation, and long-term planning in autonomous agent systems.
-- question: What are some common challenges in designing AI agent architectures?
-  answer: Common challenges include managing computational resources, ensuring robust decision-making under uncertainty, maintaining coherence in long-term tasks, handling complex environments, and effectively
-    integrating various components like perception, reasoning, and action modules.
-- question: How does the ReAct architecture differ from traditional planning approaches?
-  answer: The ReAct architecture interleaves reasoning and action execution, allowing LLMs to dynamically use tools and refine their thought process iteratively. Traditional planning approaches, like Plan-and-Execute,
-    typically separate planning into a distinct phase before execution, often relying on pre-defined action sequences.
-- question: How do AI agent memory architecture patterns differ?
-  answer: AI agent memory architecture patterns vary significantly. Some focus on short-term working memory for immediate task context (like in ReAct), while others emphasize long-term knowledge bases and
-    state tracking for complex planning (like in Plan-and-Execute). The integration of memory directly impacts an agent's ability to learn, adapt, and perform complex reasoning.
-- question: What are the key AI agent memory architecture patterns to consider?
-  answer: Key AI agent memory architecture patterns include those supporting short-term working memory for immediate context (like in ReAct), long-term knowledge bases for persistent information, and state-tracking
-    mechanisms for planning and execution. The specific pattern chosen significantly impacts an agent's ability to learn, adapt, and perform complex reasoning.
-- question: What are the essential AI agent components in any architecture?
-  answer: Essential AI agent components include Perception (sensing the environment), Reasoning/Cognition (processing information and making decisions), Memory (storing and retrieving information), Action
-    Selection/Decision Making (choosing the best action), and Actuation (executing actions).
-- question: How does LLM agent design leverage memory and planning?
-  answer: LLM agent design increasingly integrates memory and planning to enhance capabilities. Architectures like ReAct use memory for context and planning to guide tool use, enabling more sophisticated
-    autonomous behavior.
-- question: What is an agent loop architecture?
-  answer: An agent loop architecture refers to the fundamental cycle of perception, reasoning, and action that defines how an AI agent interacts with its environment. This loop is the core of an agent's
-    operation, allowing it to process information and respond dynamically. Different architectures implement this loop with varying degrees of complexity and sophistication.
-- question: How does agent replanning dynamic task adjustment architecture work?
-  answer: An agent replanning dynamic task adjustment architecture allows an agent to adapt its plans in real-time when faced with unexpected changes or failures in the environment. Instead of rigidly following
-    a pre-defined plan, the agent can detect deviations, reassess the situation, and generate a new plan to continue working towards its goal. This is crucial for robust autonomous systems.
-- question: What defines an agent's native architecture?
-  answer: An agent's native architecture refers to its fundamental design and the core principles it follows for operation. This includes how it processes information, makes decisions, and interacts with
-    its environment. Understanding the native architecture is key to predicting an agent's behavior and capabilities.
-- question: How does an agent's native architecture influence its capabilities?
-  answer: An agent's native architecture dictates its fundamental operational principles, including how it perceives, reasons, and acts. This foundational design directly impacts its ability to learn, adapt,
-    and perform complex tasks, influencing everything from its decision-making processes to its interaction with memory systems.
-- question: What are the key differences between ReAct and Plan-and-Execute architectures?
-  answer: The ReAct architecture interleaves reasoning and action dynamically, allowing for iterative refinement and tool use. In contrast, the Plan-and-Execute architecture separates planning from execution,
-    generating a complete plan before any actions are taken. This makes Plan-and-Execute more suitable for predictable tasks, while ReAct is better for dynamic environments.
-- question: How does the agent loop architecture enable autonomous behavior?
-  answer: The agent loop architecture, comprising perception, reasoning, and action, is fundamental to autonomous behavior. It allows an AI agent to continuously sense its environment, make informed decisions,
-    and take actions to achieve its goals without constant human intervention. The sophistication of each stage within the loop dictates the agent's overall autonomy and responsiveness.
-- question: What are the implications of an agent's native architecture on its learning capabilities?
-  answer: An agent's native architecture profoundly influences its learning capabilities. For instance, an agent with a modular native architecture might be better at incorporating new learning modules,
-    while one with a deeply integrated neural network architecture might excel at learning complex patterns from raw data. The native design dictates how effectively an agent can update its internal models
-    and adapt its behavior over time.
-- question: When is an agent replanning dynamic task adjustment architecture most beneficial?
-  answer: An agent replanning dynamic task adjustment architecture is most beneficial in dynamic, uncertain, or complex environments where unforeseen events or changes are common. This allows the agent
-    to remain adaptable and goal-oriented, even when its initial plans are disrupted, ensuring continued progress and robustness in its autonomous operations.
+lastmod: 2026-10-08
 slug: ai-agent-architecture-patterns
+tags:
+- Agent Architectures
+- ReAct
+- Plan-and-Execute
+- Multi-Agent Systems
+- Agent Memory
+keywords:
+- AI agent architecture patterns
+- agent architecture patterns
+- ReAct architecture
+- plan-and-execute agent
+- multi-agent architecture
+- agent memory architecture
+cluster: agent-memory
+faq:
+- question: "What are the main AI agent architecture patterns?"
+  answer: "The core single-agent patterns are ReAct (interleaved reasoning and tool calls), plan-and-execute (plan first, then run steps), ReWOO and LLMCompiler (plan tool calls up front, run them without re-prompting, in parallel for LLMCompiler) and Reflexion (retry with stored self-critique). Above these sit fixed workflows like prompt chaining and routing, and multi-agent patterns such as orchestrator-workers and handoffs."
+- question: "What is the difference between ReAct and plan-and-execute?"
+  answer: "ReAct decides one step at a time, calling the LLM after every tool result, so it adapts quickly but uses many calls. Plan-and-execute writes a full plan first and then executes it, which uses fewer expensive planning calls and keeps long tasks on track, but it needs a replanning step when results don't match the plan."
+- question: "Where does memory fit in an agent architecture?"
+  answer: "Every pattern has working memory, the scratchpad of thoughts and tool results in the current context. Patterns differ in what they store beyond it: plan-and-execute keeps the plan as state, Reflexion stores lessons in episodic memory, and multi-agent systems keep shared state or give each subagent its own isolated context."
 ---
 
-## Understanding AI Agent Architectures: The Blueprint for Autonomous Systems
+**AI agent architecture patterns** are the standard ways to arrange LLM calls, tools and memory into an agent. The main ones are **ReAct** (think, act, observe in a loop), **plan-and-execute** (plan first, then run steps), **ReWOO** and **LLMCompiler** (plan all tool calls up front), **Reflexion** (learn from failed attempts), fixed **workflows**, and **multi-agent** setups. Each puts memory in a different place.
 
-The field of artificial intelligence is rapidly advancing, with a significant focus on developing increasingly sophisticated AI agents capable of independent operation and complex task completion. At the heart of these capabilities lies the **AI agent architecture**, which serves as the fundamental blueprint dictating how an agent perceives its environment, processes information, makes decisions, and executes actions. Designing effective **AI agent architectures** is paramount for building robust and intelligent **autonomous agent systems**. This exploration delves into prominent AI agent architectures, their underlying **agent architecture patterns**, and the critical role of memory within these frameworks, touching upon various **AI agent memory architecture patterns**. Understanding the **agent loop architecture** is fundamental to grasping how these systems operate.
+## What are AI agent architecture patterns?
 
-Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) offer a practical approach to this problem, providing structured memory extraction and retrieval for AI agents.
+**An agent architecture pattern is a reusable control structure that decides when the LLM is called, what it sees, how it uses tools, and what state carries between steps.** The model is the same in every pattern. What changes is the loop around it.
 
-### The Core Components of an AI Agent Architecture
+Anthropic's [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) (December 2024) draws the main line. **Workflows** are "systems where LLMs and tools are orchestrated through predefined code paths." **Agents** are "systems where LLMs dynamically direct their own processes and tool usage." Both start from the same block: "an LLM enhanced with augmentations such as retrieval, tools, and memory."
 
-Before dissecting specific architectures, it's beneficial to understand the common functional components that typically comprise an AI agent. These **AI agent components** are the building blocks for any intelligent system.
+The research patterns below are mostly agents in that sense. The workflow patterns come after.
 
-* **Perception:** The ability to sense and interpret information from its environment, whether through sensors, data streams, or other input modalities.
-* **Reasoning/Cognition:** The internal processing of perceived information, involving logic, inference, planning, and problem-solving. This is where the agent's "intelligence" is manifested.
-* **Memory:** The mechanism for storing and retrieving information. This can range from short-term working memory to long-term knowledge bases. The type and management of **AI agent memory** are critical differentiators between architectures. We've previously discussed the importance of [AI agent memory explained](/articles/ai-agent-memory-explained/) and how it differs from simpler storage mechanisms, including the nuances between [RAG vs. agent memory](/articles/rag-vs-agent-memory/). Understanding different **AI agent memory architecture patterns** is key to optimizing agent performance.
-* **Action Selection/Decision Making:** The process of choosing the most appropriate action based on current perceptions, reasoning, and stored knowledge.
-* **Actuation:** The execution of selected actions in the environment.
+## Pattern comparison
 
-The interplay and sophistication of these **AI agent components** define the overall behavior and intelligence of an AI agent. The inherent design of these components forms the basis of an agent's **native architecture**.
+| Pattern | Control flow | LLM calls | Memory it relies on | Good for | Weak at |
+|---|---|---|---|---|---|
+| ReAct | Reason, act, observe, repeat | One per step | Growing scratchpad in context | Open-ended tool use, Q&A over APIs | Long tasks, cost, losing track |
+| Plan-and-execute | Plan once, execute steps, replan | Few planner calls plus cheap executors | Plan and step results as state | Multi-step tasks with clear subgoals | Plans that break on surprises |
+| ReWOO | Plan with variables, run tools, solve | Planner + solver (2 calls) | Plan with placeholders for evidence | Token efficiency, predictable tools | Steps that depend on surprises |
+| LLMCompiler | Plan a task graph, run in parallel | Planner plus joiner | Task DAG and results | Independent tool calls, latency | Highly sequential tasks |
+| Reflexion | Try, evaluate, reflect, retry | Several per attempt | Episodic memory of reflections | Tasks with a clear success signal | Tasks with no feedback |
+| Multi-agent | Lead delegates to specialized agents | Many | Shared state or isolated contexts | Broad, parallel research | Token cost, coordination |
 
-## Prominent AI Agent Architectures and Their Design Patterns
+## Core reasoning patterns
 
-Several architectural paradigms have emerged to guide the design of AI agents, each offering a unique approach to managing the perception-reasoning-action loop. Understanding these **agent architecture patterns** is crucial for selecting or developing the right framework for a given application, especially when considering **LLM agent design** and **AI planning**.
+### ReAct: reason and act in a loop
 
-### 1. The ReAct (Reasoning and Acting) Architecture
+[ReAct](https://arxiv.org/abs/2210.03629) (Yao et al., ICLR 2023) has the model alternate between a **thought** (reasoning text), an **action** (a tool call), and an **observation** (the tool result) until it answers. The paper reports that reasoning traces "help the model induce, track, and update action plans as well as handle exceptions." On ALFWorld and WebShop, ReAct beat imitation and reinforcement learning baselines by 34% and 10% absolute success rate.
 
-The ReAct architecture, popularized in the context of Large Language Models (LLMs), is a powerful paradigm that explicitly interleaves reasoning steps with action execution. It aims to overcome the limitations of purely generative or purely tool-using LLMs by enabling them to engage in a thought process that involves both internal deliberation and external interaction. This approach is key for advanced **LLM agent design** and offers a distinct **AI agent memory architecture pattern**.
+**Where memory sits:** the whole trajectory stays in the prompt as a scratchpad. That's simple, but each step resends everything before it, so long runs get expensive and the model can lose track of the goal. Most "tool-calling agent" loops in current frameworks are ReAct-style.
 
-**Core Principles of ReAct:**
+### Plan-and-execute and Plan-and-Solve
 
-* **Interleaved Thought and Action:** The agent generates a "thought" (an internal reasoning step) and then an "action" (an external query or command). The result of the action is then fed back into the agent's context, informing the next thought-action cycle.
-* **Tool Use:** ReAct agents are typically designed to interact with external tools (e.g., search engines, calculators, APIs) to gather information or perform specific tasks that the LLM itself cannot directly accomplish. This is a crucial aspect of **LLM agent architecture tools memory planning**.
-* **Iterative Refinement:** Through repeated cycles of reasoning and acting, the agent can refine its understanding, correct mistakes, and progress towards its goal.
+**Plan-and-execute** splits planning from doing. A planner LLM writes a step list; an executor (often a cheaper model or a ReAct sub-loop) runs each step; a replanner revises the plan when results come back. The idea traces to [Plan-and-Solve prompting](https://arxiv.org/abs/2305.04091) (Wang et al., ACL 2023), which first devises a plan that splits a task into subtasks and then carries them out, cutting missing-step errors compared with zero-shot chain-of-thought.
 
-**Design Pattern:**
+**Where memory sits:** the plan itself is state, stored outside the prompt and updated as steps finish. That gives long tasks an anchor. Anthropic's research system uses the same trick: its lead agent saves its plan to memory because context past 200,000 tokens gets truncated ([multi-agent research write-up](https://www.anthropic.com/engineering/multi-agent-research-system)). More on planning state in [AI agent planning memory](/articles/ai-agent-planning-memory/).
 
-The ReAct pattern can be visualized as a loop:
+### ReWOO and LLMCompiler: plan the tool calls up front
 
-1. **Observe:** The agent receives an input or task.
-2. **Think:** The LLM generates an internal thought process, outlining a plan or a step towards the solution. This thought is often explicitly stated.
-3. **Act:** Based on the thought, the agent selects an action to execute. This action typically involves calling a tool with specific arguments.
-4. **Observe Result:** The agent receives the output from the executed action.
-5. **Repeat:** The agent integrates the action's result into its context and proceeds to the next "Think" step, continuing the loop until the task is completed or a termination condition is met.
+**ReWOO** ([Xu et al., 2023](https://arxiv.org/abs/2305.18323), "Reasoning WithOut Observation") writes the whole plan with placeholders like `#E1` for evidence not yet fetched. Workers fill the placeholders by running tools, and a solver writes the answer. Because the LLM isn't re-prompted after every observation, the paper reports 5x token efficiency and a 4% accuracy gain on HotpotQA.
 
-**Memory Integration in ReAct:** In ReAct, **AI agent memory** primarily functions as a context window or a conversational history. The LLM uses past thoughts, actions, and their results to inform its current reasoning. This allows for a form of [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/), where sequences of events are recalled and used. This is a key aspect of its **AI agent memory architecture design**.
+**LLMCompiler** ([Kim et al., ICML 2024](https://arxiv.org/abs/2312.04511)) goes further: a planner builds a dependency graph of tool calls, a task-fetching unit dispatches them, and an executor runs independent ones in parallel. Compared with ReAct, the authors report up to 3.7x lower latency, 6.7x cost savings and about 9% better accuracy.
 
-### 2. The Plan-and-Execute Architecture
+**Where memory sits:** a structured plan with variable bindings. It's compact, but there's little room to react to an unexpected result mid-plan without a replanning step.
 
-The Plan-and-Execute (P&E) architecture is a more traditional AI **planning** paradigm that separates the process of generating a plan from the execution of that plan. This approach is well-suited for tasks that can be broken down into a series of sequential, often deterministic, steps. It's a core concept in **AI agent architectures** and represents a different **AI agent memory architecture pattern** focused on state. This architecture is a prime example of an **agent loop architecture** where planning and execution are distinct phases.
+### Reflexion: learning from failed attempts
 
-**Core Principles of P&E:**
+[Reflexion](https://arxiv.org/abs/2303.11366) (Shinn et al., 2023) improves an agent through verbal feedback instead of weight updates. After an attempt fails, the agent writes a reflection on what went wrong and stores it in **episodic memory**. The next attempt reads those reflections first. The paper reports 91% pass@1 on HumanEval, against 80% for GPT-4.
 
-* **Hierarchical Task Decomposition:** Complex goals are broken down into smaller, manageable sub-goals.
-* **Planning Phase:** A dedicated planner component generates a sequence of actions (a plan) that is predicted to achieve the goal, often using domain knowledge and state representations. This is a critical part of **AI planning**.
-* **Execution Phase:** An executor component sequentially carries out the actions specified in the plan.
-* **Monitoring and Replanning:** During execution, the agent monitors the environment and the success of actions. If the plan deviates from expectations (e.g., due to unexpected changes or failed actions), the agent may need to replan. This is where the **agent replanning dynamic task adjustment architecture** comes into play.
+**Where memory sits:** this is the pattern where long-term memory is the core mechanism. It needs a success signal (tests, a checker, an evaluator) to know when to reflect. The same idea underlies agent memory systems that store lessons from past runs; see [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
 
-**Design Pattern:**
+## Workflow patterns: predefined paths
 
-1. **Goal Definition:** The agent is given a high-level goal.
-2. **Planning:**
- * The agent's planner analyzes the current state of the world and the defined goal.
- * It uses knowledge about available actions, their preconditions, and effects to construct a valid sequence of actions.
- * This often involves search algorithms (e.g., A*, STRIPS-like planning).
-3. **Execution:**
- * The executor takes the first action from the plan.
- * It performs the action in the environment.
- * It updates its internal state based on the action's outcome.
-4. **Monitoring & Replanning:**
- * The agent observes the environment to check if the executed action had the expected effect.
- * If the plan is no longer valid or achievable, the planner is invoked again to create a new plan from the current state.
-5. **Termination:** The process continues until the goal is achieved or it's determined to be unachievable.
+Anthropic's guide lists five workflow patterns for cases where the steps are known in advance:
 
-**Memory Integration in P&E:** In P&E, memory is crucial for maintaining the agent's internal state and understanding of the world. This includes storing the current state, the generated plan, and the outcomes of executed actions. This memory is essential for the planner to generate a valid plan and for the executor to track progress and detect deviations. This forms a basis for state-based memory in AI agents and is a key differentiator in **AI agent memory architecture patterns**.
+1. **Prompt chaining:** each LLM call processes the output of the previous one.
+2. **Routing:** classify an input and send it to a specialized follow-up.
+3. **Parallelization:** run LLM calls at the same time and combine the outputs in code.
+4. **Orchestrator-workers:** a central LLM breaks down the task, delegates to worker LLMs, and merges results.
+5. **Evaluator-optimizer:** one call generates, another evaluates and gives feedback, in a loop.
 
-## Understanding Core Agent Concepts: Loop, Native, and Replanning Architectures
+The guide's advice is to "find the simplest solution possible, and only increasing complexity when needed," and to start with LLM APIs directly before adding a framework. Workflows need little memory beyond passing outputs forward, which is part of why they're easier to debug.
 
-Beyond specific paradigms like ReAct and Plan-and-Execute, several foundational concepts define how AI agents operate and adapt. These are critical for understanding the broader landscape of **AI agent architectures**.
+## Multi-agent patterns
 
-### The Agent Loop Architecture
+Multi-agent systems split work across several LLM agents. LangChain's [multi-agent docs](https://docs.langchain.com/oss/python/langchain/multi-agent) name the common shapes and how each handles context:
 
-The **agent loop architecture** is the fundamental operational cycle that governs how an AI agent interacts with its environment. It's a continuous process that allows the agent to perceive, reason, and act. This loop is the bedrock of all intelligent agent behavior, regardless of the specific architectural patterns employed.
+- **Subagents:** a main agent calls subagents as tools. Subagents are stateless and start fresh each time, which isolates context.
+- **Handoffs:** agents pass control to each other via tool calls; state persists across turns.
+- **Skills:** one agent loads specialized prompts and knowledge on demand.
+- **Router:** a routing step sends input to one or more specialized agents and combines the results.
 
-* **Perception:** The agent senses its environment, gathering data about its current state.
-* **Reasoning/Cognition:** The agent processes the perceived information, using its internal knowledge and logic to understand the situation, evaluate goals, and decide on a course of action.
-* **Action:** The agent executes a chosen action in the environment, which in turn can alter the environment and lead to new perceptions.
+Anthropic's research system is an orchestrator-worker setup: a lead agent (Claude Opus 4) delegates to parallel subagents (Claude Sonnet 4). It outperformed single-agent Opus 4 by 90.2% on Anthropic's internal research eval, but multi-agent runs use about 15x the tokens of a chat, against about 4x for a single agent (self-reported).
 
-Different **AI agent architectures** implement this loop with varying levels of sophistication. For instance, the ReAct architecture tightly integrates reasoning and action within its loop, while Plan-and-Execute separates these into distinct phases. The efficiency and robustness of this **agent loop architecture** are paramount for an agent's overall performance.
+**Where memory sits:** either in shared state every agent reads, or in separate per-agent contexts that only pass back condensed results. Isolation keeps each context small; shared state keeps agents consistent. Framework support for both is compared in [AI agent framework comparison](/articles/ai-agent-framework-comparison/).
 
-### The Agent's Native Architecture
+## Choosing a pattern
 
-An agent's **native architecture** refers to its intrinsic design and the core principles that define its fundamental operational capabilities. This encompasses the underlying algorithms, data structures, and computational models that dictate how it processes information, learns, and makes decisions. Understanding an agent's **native architecture** is key to predicting its behavior, limitations, and potential for adaptation.
+1. **Fixed, known steps?** Use a workflow (chain, router, parallel).
+2. **Open-ended tool use, short tasks?** Use ReAct.
+3. **Long tasks with clear subgoals?** Use plan-and-execute with replanning.
+4. **Many independent tool calls?** Use LLMCompiler-style parallel planning.
+5. **Clear pass/fail signal and repeated attempts?** Add Reflexion-style episodic memory.
+6. **Broad research that splits cleanly?** Use orchestrator-workers, and budget for the token cost.
 
-For example, an agent built on a purely symbolic reasoning engine will have a different **native architecture** and capabilities compared to one based on deep neural networks. The **native architecture** influences everything from the agent's ability to handle uncertainty to its efficiency in complex problem-solving.
-
-### Agent Replanning and Dynamic Task Adjustment Architecture
-
-In dynamic and unpredictable environments, rigid plans can quickly become obsolete. This is where the **agent replanning dynamic task adjustment architecture** becomes crucial. This architectural pattern enables an agent to adapt its plans in real-time when faced with unexpected changes, errors, or new information.
-
-* **Monitoring:** The agent continuously monitors the environment and the execution of its current plan.
-* **Deviation Detection:** It identifies discrepancies between the expected outcomes and the actual results.
-* **Replanning:** Upon detecting a deviation, the agent can invoke its planner to generate a new, revised plan from its current state, allowing it to dynamically adjust its strategy to continue pursuing its goals.
-
-This capability is vital for building resilient and robust **autonomous agent systems** that can operate effectively in real-world scenarios where perfect foresight is impossible. The **agent replanning dynamic task adjustment architecture** ensures that an agent doesn't get stuck when its initial assumptions are proven wrong.
-
-## Conclusion: Choosing the Right AI Agent Architecture
-
-The choice between architectures like ReAct and Plan-and-Execute depends heavily on the nature of the task, the environment, and the capabilities of the underlying AI model. ReAct excels in dynamic, open-ended tasks where an LLM needs to interact with external information and adapt its strategy on the fly, using its **LLM agent architecture tools memory planning** capabilities. Plan-and-Execute is more suited for well-defined problems with predictable outcomes, where a robust, pre-determined sequence of actions can be efficiently executed, relying on its state-tracking memory.
-
-Understanding these fundamental **agent architecture patterns**, the specific **AI agent memory architecture patterns**, the nuances of the **agent loop architecture**, the foundational aspects of an agent's **native architecture**, and the importance of **agent replanning dynamic task adjustment architecture** are key to designing and deploying effective **autonomous agent systems** that can tackle increasingly complex challenges.
+Whatever the pattern, the agent forgets everything between sessions unless you add long-term memory. How to add it is covered in [AI agent memory explained](/articles/ai-agent-memory-explained/).

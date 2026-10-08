@@ -1,189 +1,138 @@
 ---
-title: 'Semantic Memory AI Agents: Architectures for Persistent Knowledge'
-description: 'Semantic Memory AI Agents: Architectures for Persistent Knowledge. Learn about semantic memory AI agents, knowledge graph agents with practical examples, code sni...'
+title: "Semantic Memory in AI Agents: Facts, Profiles, Graphs"
+description: "What semantic memory is in AI agents: profile vs collection storage, triples and knowledge graphs, extracting facts with LangMem, and keeping facts current."
 date: 2026-03-24
+lastmod: 2026-10-08
+slug: semantic-memory-ai-agents
 tags:
-- AI Memory
-- Agent Architectures
-- Knowledge Representation
+- Semantic Memory
+- AI Agent Memory
+- Memory Types
+- Knowledge Graphs
+- LangMem
 keywords:
 - semantic memory AI agents
-- knowledge graph agents
-- world model AI
-- fact extraction LLM
+- semantic memory in AI
+- agent semantic memory
+- user profile memory
+- knowledge graph agent memory
+- semantic memory vs semantic search
+cluster: agent-memory
 faq:
-- question: What is the primary function of semantic memory in AI agents?
-  answer: The primary function of semantic memory in AI agents is to store and retrieve general knowledge about the world, concepts, and facts, enabling them to reason and make informed decisions independent
-    of specific experiences.
-- question: How do knowledge graphs contribute to semantic memory AI agents?
-  answer: Knowledge graphs provide a structured way to represent semantic relationships between entities, making it easier for AI agents to store, query, and infer new information within their semantic
-    memory.
-- question: What is the relationship between a world model and semantic memory?
-  answer: A world model can be seen as a dynamic, evolving representation of an agent's understanding of its environment and the rules governing it. Semantic memory often forms the static, foundational
-    knowledge base upon which a more dynamic world model is built and updated.
-slug: semantic-memory-ai-agents
+- question: "What is semantic memory in AI agents?"
+  answer: "Semantic memory is the part of an agent's memory that stores facts and concepts without the event they came from: user preferences, profile details, domain knowledge and relationships between entities. The agent retrieves these facts into the prompt to ground and personalize its answers."
+- question: "Is semantic memory the same as semantic search?"
+  answer: "No. Semantic memory is a psychology term for stored facts and knowledge. Semantic search is a retrieval technique that finds content by meaning, usually with embeddings. A semantic memory can be searched by keyword, by entity or by profile lookup, with no embeddings at all."
+- question: "Should agent semantic memory be a profile or a collection?"
+  answer: "Use a profile (one structured document per user) when you need fast access to the current state of a known set of fields. Use a collection (many small fact records) when facts are open-ended and you want to recall them contextually. LangGraph's docs note collections tend to give higher recall but are harder to update."
 ---
 
-## Understanding Semantic Memory in AI Agents
+**Semantic memory in AI agents** stores facts: who the user is, what they prefer, what's true about the domain, and how entities relate. Unlike episodic memory, a semantic fact isn't tied to the moment it was learned. The agent saves these facts outside the model and pulls the relevant ones into the prompt to ground and personalize its answers.
 
-Artificial intelligence agents are increasingly tasked with complex, long-term goals that necessitate a robust understanding of the world. Beyond merely reacting to immediate stimuli, these agents require the ability to store, recall, and use general knowledge, the "what" and "how" of existence. This is where **semantic memory AI agents** come into play. Unlike episodic memory, which stores specific events and experiences, semantic memory focuses on the accumulation and retrieval of factual, conceptual, and general world knowledge. This foundational layer is crucial for enabling agents to reason, plan, and interact intelligently over extended periods.
+It's the most common kind of agent memory in production, because most "the assistant remembers me" features are semantic memory. The hard part isn't storing facts. It's deciding what counts as a fact, and keeping facts correct when they change. The pillar guide, [AI agent memory explained](/articles/ai-agent-memory-explained/), shows where semantic memory sits among the other types.
 
-The development of effective semantic memory systems is a cornerstone of building more capable and autonomous AI agents. It allows them to move beyond simple pattern matching and develop a more nuanced comprehension of the information they process. This article delves into the architectural considerations, underlying technologies, and practical implications of implementing semantic memory within AI agents, exploring concepts like knowledge graphs and world models. For a broader understanding of how memory functions in AI, refer to our article on [AI Agent Memory Explained](/articles/ai-agent-memory-explained).
+## What is semantic memory in AI agents?
 
-### The Role of General Knowledge
+**Semantic memory in an AI agent is a long-term store of facts and concepts, detached from when they were learned: user attributes and preferences, domain knowledge, and relationships between entities. The agent writes facts into it from conversations or documents and retrieves them to ground its responses.**
 
-Semantic memory serves as an agent's encyclopedia. It encompasses:
+In psychology, semantic memory is general knowledge, distinct from episodic memory of specific events. The CoALA framework ([Sumers et al., 2023](https://arxiv.org/abs/2309.02427)) carries the term over to agents: semantic memory "stores an agent's knowledge about the world and itself."
 
-* **Facts:** Verifiable truths about the world (e.g. "The Eiffel Tower is in Paris").
-* **Concepts:** Abstract ideas and their properties (e.g. understanding what a "vehicle" is and its common attributes).
-* **Relationships:** How entities and concepts connect (e.g. "a dog is a type of mammal," "Paris is the capital of France").
-* **Rules and Principles:** General laws or operating procedures (e.g. gravity, common social etiquette for embodied agents).
+### Semantic memory is not semantic search
 
-This generalized knowledge allows an agent to infer information not explicitly provided in a given context. For example, if an agent knows that "all birds can fly" and it encounters a "sparrow," it can infer that the sparrow can fly, even if that specific fact wasn't directly stated. This inferential capability is a hallmark of intelligence and is heavily reliant on a well-structured semantic memory.
+LangGraph's [memory guide](https://docs.langchain.com/oss/python/langgraph/memory) makes this point directly. **Semantic memory** is a term from psychology for stored facts. **Semantic search** is a retrieval method that matches by meaning, usually with embeddings. You can implement semantic memory as a JSON profile you look up by user ID, with no vectors involved.
 
-## Architectures for Semantic Memory
+## Where semantic memory comes from
 
-Building a robust semantic memory for an AI agent involves several architectural choices, often integrating various techniques to achieve comprehensive knowledge representation and efficient retrieval.
+CoALA describes two sources.
 
-### Knowledge Graphs as a Foundation
+- **Read-only corpora.** Classic retrieval-augmented generation reads from human-written text such as Wikipedia, product docs or a catalog. CoALA calls this retrieving from "a semantic memory of unstructured text." The agent never writes to it.
+- **Agent-written knowledge.** Agents can also write new knowledge into semantic memory as a form of learning. A chat assistant extracts "the user is vegetarian" from a conversation. Reflexion ([Shinn et al., 2023](https://arxiv.org/abs/2303.11366)) reflects on a failed attempt and stores the lesson ("there is no dishwasher in kitchen") for the next try.
 
-One of the most powerful approaches to implementing semantic memory is through **knowledge graph agents**. A knowledge graph is a structured representation of information, consisting of nodes (entities) and edges (relationships) that connect them. This graph-based structure is inherently well-suited for representing the interconnected nature of semantic knowledge.
+The second source is what turns RAG into memory: the store changes with every interaction. The distinction is covered in more depth in [RAG vs agent memory](/articles/rag-vs-agent-memory/).
 
-**Structure of a Knowledge Graph:**
+Facts often come from episodes. Generative Agents ([Park et al., 2023](https://arxiv.org/abs/2304.03442)) periodically reflects over raw events and writes conclusions like "I like to ski now," which CoALA classifies as semantic memory. See [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) for the event side.
 
-* **Entities:** Represent real-world objects, concepts, or events (e.g. "Albert Einstein," "Theory of Relativity," "Germany").
-* **Relationships:** Describe how entities are connected (e.g. "Albert Einstein" `developed` "Theory of Relativity," "Albert Einstein" `was born in` "Germany").
+## Profile vs collection
 
-**Benefits for Semantic Memory:**
+LangGraph and LangMem name two ways to hold semantic memory. The choice affects extraction, updates and retrieval.
 
-1. **Structured Storage:** Provides a clear, organized way to store facts and relationships, making them easily queryable.
-2. **Inferential Power:** Enables reasoning through graph traversal. For instance, if Agent A `is a friend of` Agent B, and Agent B `is a friend of` Agent C, an agent can infer that Agent A might indirectly know Agent C.
-3. **Scalability:** Knowledge graphs can be extended and updated incrementally as the agent encounters new information.
-4. **Explainability:** The path taken through a knowledge graph to arrive at an answer can often provide a degree of explainability for the agent's reasoning.
+| | Profile | Collection |
+|---|---|---|
+| Shape | One JSON document per user or entity, with a fixed schema | Many small records, one fact each |
+| Update | Rewrite or patch the document with each new fact | Insert new records; update or delete conflicting ones |
+| Retrieval | Load the whole profile, no search needed | Search per query (vector, keyword, filter) |
+| Strength | Fast, predictable, easy for users to view and edit | Open-ended; LangGraph says it "tends to lead to higher recall downstream" |
+| Weakness | Gets error-prone as the profile grows; only holds fields you defined | Over-inserting creates duplicates; facts lose context; updates are harder |
+| Good for | Name, language, timezone, plan tier, style preferences | Preferences, relationships, project facts, domain notes |
 
-**Implementation Considerations:**
+LangMem's [conceptual guide](https://langchain-ai.github.io/langmem/concepts/conceptual_guide/) describes profiles as "a single document that represents the current state" and says collections "are what most people think of when they imagine agent long-term memory." Many systems use both: a small profile always in the prompt, and a searchable collection for everything else.
 
-* **Graph Databases:** Technologies like Neo4j, ArangoDB, or Amazon Neptune are optimized for storing and querying graph-structured data.
-* **Ontologies and Schemas:** Defining a schema or ontology for the knowledge graph ensures consistency and allows for more sophisticated reasoning.
-* **Entity Resolution:** A critical challenge is ensuring that different mentions of the same real-world entity are linked to a single node in the graph.
+## How semantic facts are represented
 
-### Integrating Fact Extraction LLMs
+| Representation | Example | Used by | Trade-off |
+|---|---|---|---|
+| Free-text fact | "User prefers window seats on long flights" | Mem0, most memory APIs | Easy to extract and read; fuzzy to dedupe |
+| Triple | (Alice, manages, ML team) | LangMem `Triple` schema, knowledge graphs | Precise, linkable; loses nuance without a context field |
+| Knowledge graph | Entities as nodes, facts as edges with metadata | Graphiti/Zep, Cognee | Multi-hop questions and change tracking; more setup |
+| Structured profile | `{"name": "Alice", "timezone": "America/Los_Angeles"}` | LangMem profiles, Mastra working memory | Fast lookup; limited to the schema |
 
-Large Language Models (LLMs) have revolutionized natural language understanding and generation. Their ability to process and comprehend vast amounts of text makes them invaluable tools for populating and enriching semantic memory, particularly through **fact extraction LLM** capabilities.
+Graphs help when questions span entities ("who on Bob's team worked on the NLP project?"). Graphiti, for instance, stores facts as edges with validity windows so a fact can be superseded without being deleted. The trade-offs between stores are covered in [knowledge graphs for AI memory](/articles/ai-memory-knowledge-graph/).
 
-**Fact Extraction Process:**
+## Extracting semantic memories with LangMem
 
-An LLM can be used to:
-
-1. **Read and Parse Text:** Ingest unstructured text from various sources (documents, web pages, agent interactions).
-2. **Identify Entities and Relationships:** Recognize mentions of entities and the relationships between them.
-3. **Generate Triples:** Output information in a structured format, often as (Subject, Predicate, Object) triples, which can then be directly inserted into a knowledge graph.
-
-**Example using a hypothetical LLM API:**
+LangMem's `create_memory_manager` prompts an LLM to extract facts into a schema, and with `enable_deletes=True` it can also remove facts that new information contradicts. This is adapted from LangMem's [semantic extraction guide](https://langchain-ai.github.io/langmem/guides/extract_semantic_memories/):
 
 ```python
-## This is a conceptual example. Actual LLM APIs vary.
-import requests
+from langmem import create_memory_manager
+from pydantic import BaseModel
 
-def extract_facts_from_text(text):
- # Assume an LLM API endpoint for fact extraction
- api_url = "https://api.example-llm.com/v1/extract_facts"
- headers = {"Authorization": "Bearer YOUR_API_KEY"}
- payload = {"text": text}
+class Triple(BaseModel):
+    """Store all new facts, preferences, and relationships as triples."""
+    subject: str
+    predicate: str
+    object: str
+    context: str | None = None
 
- try:
- response = requests.post(api_url, headers=headers, json=payload)
- response.raise_for_status() # Raise an exception for bad status codes
- return response.json()
- except requests.exceptions.RequestException as e:
- print(f"Error during fact extraction: {e}")
- return None
+manager = create_memory_manager(
+    "anthropic:claude-sonnet-4-5",
+    schemas=[Triple],
+    instructions="Extract user preferences and any other useful information",
+    enable_inserts=True,
+    enable_deletes=True,
+)
 
-## Example usage
-unstructured_text = "The Perseverance rover landed on Mars in February 2021. It is part of NASA's Mars Exploration Program."
-extracted_data = extract_facts_from_text(unstructured_text)
+first = [{"role": "user", "content": "Alice manages the ML team and mentors Bob, who is also on the team."}]
+memories = manager.invoke({"messages": first})
+# -> Triples like (Alice, manages, ML_team), (Alice, mentors, Bob), (Bob, is_member_of, ML_team)
 
-if extracted_data:
- print("Extracted Facts:")
- for fact in extracted_data.get("facts", []):
- print(f"- {fact['subject']} --{fact['predicate']}--> {fact['object']}")
- # These triples could then be added to a knowledge graph
-else:
- print("No facts extracted.")
-
-## Expected Output (conceptual):
-## Extracted Facts:
-## - Perseverance rover --landed on--> Mars
-## - Perseverance rover --landing date--> February 2021
-## - Perseverance rover --part of--> NASA's Mars Exploration Program
+second = [{"role": "user", "content": "Bob now leads the ML team and the NLP project."}]
+update = manager.invoke({"messages": second, "existing": memories})
+# -> RemoveDoc for (Alice, manages, ML_team), plus new triples (Bob, leads, ML_team), (Bob, leads, NLP_project)
 ```
 
-This process allows agents to continuously learn and expand their semantic memory by processing new information encountered in their environment or through external data feeds.
+This functional API doesn't touch a database. You decide what a `RemoveDoc` means: a hard delete, a soft delete, or a lower ranking. To have LangMem write to a LangGraph store directly, use `create_memory_store_manager` with a namespace.
 
-### The Concept of a World Model
+The guide makes a point worth copying: add a `context` field. A memory like `{"content": "User said yes"}` is useless later. `(user, response, yes, "when asked about attending team meeting")` is not.
 
-A **world model AI** represents an agent's internal simulation or understanding of its environment and the causal relationships within it. While closely related to semantic memory, a world model is often more dynamic and predictive. Semantic memory provides the stable, factual bedrock, while the world model uses this knowledge to simulate future states and understand the consequences of actions.
+## Keeping semantic memory current
 
-**Components of a World Model:**
+Facts change. "I live in NYC" in January becomes "I just moved to SF" in June. If both sit in the store, retrieval may return either. Systems handle this in a few ways:
 
-* **State Representation:** How the agent perceives and represents the current state of its environment.
-* **Dynamics:** The rules governing how the environment changes over time, including the effects of actions.
-* **Causality:** Understanding cause-and-effect relationships.
-* **Prediction:** The ability to forecast future states based on current states and actions.
+1. **Overwrite.** Profiles replace the old value. Simple, but history is gone.
+2. **Delete on contradiction.** LangMem's manager emits `RemoveDoc` for facts the new message contradicts.
+3. **Invalidate with time.** Graphiti marks the old edge invalid from the moment the new fact became true, so "where did Alice live in March?" still works.
+4. **Keep both, rank by recency.** Cheap, but pushes conflict resolution onto the model at read time.
+5. **Consolidate into beliefs.** Some systems merge related facts into a summary that is refined as evidence comes in.
 
-**Relationship to Semantic Memory:**
+Test this case with real data before you pick a system. LongMemEval ([Wu et al., 2024](https://arxiv.org/abs/2410.10813)) has a dedicated "knowledge update" category for it, because it's where many setups fail quietly.
 
-Semantic memory provides the general knowledge that informs the world model. For example, if an agent's semantic memory contains the fact that "water is a liquid and flows," its world model can incorporate this into simulations of how pouring water affects the environment. The world model, in turn, can reinforce or refine semantic knowledge through experience. If an agent repeatedly observes that a specific type of liquid behaves unexpectedly, it might update its semantic understanding of that substance.
+## Retrieving semantic memory
 
-## Building and Maintaining Semantic Memory
+How facts reach the prompt matters as much as how they're stored:
 
-The creation and upkeep of an agent's semantic memory are ongoing processes that involve several key challenges and strategies.
+- **Always-on profile.** Load a small profile into the system prompt on every turn. No search, no misses, fixed token cost.
+- **Query-time search.** Search the collection with the user's message. Combine embeddings with keyword search, since names, product codes and IDs often fail pure vector search.
+- **Entity lookup.** Detect entities in the message and fetch their facts or graph neighborhood.
+- **Agent-driven tools.** Give the agent a search tool (LangMem's `create_search_memory_tool`) and let it decide when to look things up.
 
-### Knowledge Acquisition and Integration
-
-The primary challenge is acquiring knowledge from diverse sources and integrating it seamlessly into the existing memory structure. This involves:
-
-* **Unstructured Data Processing:** Using NLP techniques, including LLMs, to extract information from text, speech, and other forms of unstructured data.
-* **Structured Data Integration:** Connecting to databases, APIs, or other structured knowledge bases.
-* **Sensor Data Interpretation:** For embodied agents, interpreting sensor data (e.g. visual, auditory) to extract factual information about the environment.
-* **Consolidation:** Merging new information with existing knowledge, resolving conflicts, and identifying redundancies.
-
-### Memory Management and Retrieval
-
-Efficient retrieval is as crucial as accurate storage. Semantic memory systems need mechanisms for:
-
-* **Indexing:** Organizing knowledge for fast lookup based on concepts, entities, or relationships.
-* **Querying:** Allowing agents to ask complex questions and receive relevant answers.
-* **Contextual Retrieval:** Retrieving information that is relevant to the agent's current situation or task.
-* **Forgetting/Decay:** Mechanisms to prune or de-emphasize outdated or irrelevant information, especially in dynamic environments.
-
-### Memory Evolution and Adaptation
-
-A static semantic memory is of limited use. The memory must evolve as the agent learns and the world changes. This involves:
-
-* **Updating Facts:** Correcting or refining existing factual knowledge based on new evidence.
-* **Learning New Concepts:** Identifying and defining new entities and concepts.
-* **Adapting to Domain Shifts:** Adjusting the knowledge base when the agent enters a new domain or encounters a significant change in its operating environment.
-
-Tools and frameworks that support flexible memory architectures, such as the open-source **Hindsight** system, can provide modular components for managing different memory types, including semantic knowledge, and facilitate experimentation with various knowledge representation and retrieval strategies.
-
-## Challenges and Future Directions
-
-Despite significant progress, building truly robust semantic memory systems for AI agents remains an active area of research.
-
-### Key Challenges:
-
-* **Scalability:** Handling and efficiently querying massive amounts of knowledge.
-* **Uncertainty and Ambiguity:** Representing and reasoning with incomplete or contradictory information.
-* **Common Sense Reasoning:** Imbuing agents with the vast, implicit knowledge that humans take for granted.
-* **Dynamic Environments:** Keeping semantic memory up-to-date in constantly changing worlds.
-* **Ethical Considerations:** Ensuring that the knowledge acquired and used by agents is unbiased and safe.
-
-### Future Directions:
-
-* **Neuro-Symbolic AI:** Combining the strengths of neural networks (for perception and learning) with symbolic reasoning (for knowledge representation and logic).
-* **Lifelong Learning:** Developing agents that can continuously learn and update their semantic memory over their entire operational lifespan.
-* **Explainable AI (XAI):** Enhancing the transparency of semantic memory systems so that agents can explain the basis of their knowledge and reasoning.
-* **Embodied Cognition:** Tightly integrating semantic memory with sensory-motor experiences for agents operating in physical or simulated environments.
-
-The development of advanced **semantic memory AI agents** is critical for realizing the potential of autonomous systems. By using techniques like knowledge graphs and advanced **fact extraction LLM** capabilities, and by considering the interplay with dynamic **world model AI** components, we can build agents that possess a deeper, more persistent understanding of the world, enabling them to perform increasingly sophisticated tasks. For a deeper dive into memory types, our article on [Episodic Memory in AI Agents](/articles/episodic-memory-in-ai-agents) contrasts with the semantic focus here, and our comparison of [RAG vs. Agent Memory](/articles/rag-vs-agent-memory) highlights different approaches to knowledge integration.
+Keep the memory block small. A few precise facts beat twenty loose matches, and every irrelevant fact is a chance for the model to get distracted.

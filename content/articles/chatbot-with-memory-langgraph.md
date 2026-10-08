@@ -1,235 +1,220 @@
 ---
-title: 'Chatbot with Memory using LangGraph: Building Stateful AI Agents'
-description: Build a chatbot with memory using LangGraph for stateful AI agents. Learn about LangGraph's state machine, conversational AI memory, long-term memory AI agent int...
+title: "Build a Chatbot with Memory in LangGraph (Python)"
+description: "How to build a chatbot with memory in LangGraph: a checkpointer for chat history, a store for long-term user memory, Postgres for production, and example repos."
 date: 2026-03-31
-lastmod: 2026-03-31
-tags:
-- LangGraph
-- AI Memory
-- Chatbots
-- LLM Agents
-keywords:
-- chatbot with memory langgraph
-- langgraph chatbot memory
-- stateful AI agents
-- conversational AI memory
-- langgraph memory management
-- ai conversation summarization techniques
-- short term memory langgraph
-- stateful memory
-- long-term memory AI agent
-- ai human conversation summarization techniques
-- langgraph library state machine for llm agents
-- ai_agent_persistent_memory
-- agent recall
-- state machine for llm agents
-faq:
-- question: What makes LangGraph suitable for chatbots with memory?
-  answer: LangGraph's core design is a state machine, which naturally maps to the concept of memory. The "state" within the graph can explicitly store and evolve conversational history, user data, and other
-    contextual elements, allowing the chatbot to maintain continuity and recall past interactions effectively.
-- question: How does LangGraph differ from traditional chatbot memory implementations?
-  answer: Traditional methods often rely on simple buffers or session storage. LangGraph, however, allows developers to define complex, evolving states and transitions, enabling more sophisticated memory
-    management. It supports structured memory updates, integrations with external memory systems like vector databases, and complex agentic workflows, moving beyond basic conversational recall.
-- question: Can LangGraph chatbots handle long-term memory effectively?
-  answer: Yes, by integrating external **long-term memory AI agent** solutions such as vector databases for semantic search and employing memory consolidation strategies, LangGraph chatbots can achieve
-    robust long-term memory. The state machine architecture provides the framework to manage these integrations and ensure relevant information is accessible across extended interactions.
-- question: What are effective AI conversation summarization techniques for chatbots with memory?
-  answer: Effective AI conversation summarization techniques for chatbots with memory include extractive summarization (identifying key sentences), abstractive summarization (generating new sentences that
-    capture the essence), and hierarchical summarization (summarizing chunks of conversation and then summarizing those summaries). LangGraph can implement these by dedicating nodes to process conversation
-    history and condense it into a more manageable form, crucial for managing **context window limitations** and **stateful memory**.
-- question: How can AI conversation summarization techniques be implemented within LangGraph?
-  answer: LangGraph can implement AI conversation summarization techniques by dedicating specific nodes to process conversation history. These nodes can leverage LLMs to perform extractive, abstractive,
-    or hierarchical summarization. The condensed summaries are then updated within the agent's state, effectively managing memory size and ensuring relevant context is retained for future interactions.
-    This is a crucial aspect of **langgraph memory management**.
-- question: How can AI conversation summarization techniques be implemented for stateful memory in chatbots?
-  answer: AI conversation summarization techniques can be implemented for **stateful memory** by creating dedicated nodes within LangGraph that process conversation history. These nodes can utilize LLMs
-    to perform extractive, abstractive, or hierarchical summarization. The resulting condensed summaries are then updated within the agent's state, effectively managing memory size and ensuring relevant
-    context is retained for future interactions. This is a crucial aspect of **langgraph memory management** and essential for maintaining effective **stateful memory**.
-- question: What are the primary challenges in implementing AI conversation summarization for chatbots?
-  answer: Key challenges include maintaining factual accuracy, capturing nuances and sentiment, avoiding information loss, and computational cost. For **stateful memory** in chatbots, ensuring the summarization
-    process doesn't discard critical details needed for future interactions is paramount. Effective **ai conversation summarization techniques** must balance conciseness with completeness.
-- question: How does LangGraph's state machine approach benefit LLM agents with memory?
-  answer: LangGraph's **state machine for LLM agents** provides a structured and explicit way to manage an agent's evolving state, which is crucial for memory. Unlike linear execution flows, the state machine
-    allows for dynamic transitions and updates to memory components (like conversation history, user profiles, or tool usage logs) at each step. This explicit management of state ensures that information
-    is consistently tracked and utilized, leading to more coherent and context-aware AI agent behavior, directly supporting **ai_agent_persistent_memory**.
+lastmod: 2026-10-08
 slug: chatbot-with-memory-langgraph
+cluster: agent-memory
 aliases:
-- /articles/deeplearning-ai-long-term-agentic-memory-with-langgraph/
-- /articles/deeplearning-ai-long-term-memory/
-- /articles/langgraph-chatbot-with-memory-example/
-- /articles/langgraph-chatbot-with-memory-github/
-- /articles/llm-memory-langgraph/
-- /articles/long-term-agentic-memory-with-langgraph-deeplearning-ai/
-- /articles/long-term-memory-deeplearning-ai/
+  - /articles/chatbot-memory-langchain/
+  - /articles/chatbot-with-memory-using-langchain/
+  - /articles/deeplearning-ai-long-term-agentic-memory-with-langgraph/
+  - /articles/deeplearning-ai-long-term-memory/
+  - /articles/how-to-add-memory-to-chatbot-langchain/
+  - /articles/langchain-chatbot-with-memory-github/
+  - /articles/langgraph-chatbot-with-memory-example/
+  - /articles/langgraph-chatbot-with-memory-github/
+  - /articles/llm-memory-langgraph/
+  - /articles/long-term-agentic-memory-with-langgraph-deeplearning-ai/
+  - /articles/long-term-memory-deeplearning-ai/
+  - /articles/rag-chatbot-with-memory-langchain/
+tags:
+  - LangGraph
+  - chatbots
+  - agent memory
+  - Python
+keywords:
+  - "chatbot with memory langgraph"
+  - "langgraph memory"
+  - "langgraph long-term memory"
+  - "langgraph checkpointer"
+  - "langgraph chatbot with memory github"
+  - "long-term agentic memory with langgraph"
+faq:
+  - question: "How do I add memory to a LangGraph chatbot?"
+    answer: "Compile the graph with a checkpointer, such as InMemorySaver or PostgresSaver, and pass the same thread_id in config on every call. LangGraph then saves the message state after each step and reloads it for the next turn of that thread."
+  - question: "How does long-term memory work in LangGraph?"
+    answer: "Long-term memory uses a store, compiled into the graph with builder.compile(store=...). Nodes read and write JSON documents under a namespace such as ('memories', user_id) through runtime.store, so facts saved in one thread are available in every other thread for that user."
+  - question: "What does the DeepLearning.AI course Long-Term Agentic Memory with LangGraph cover?"
+    answer: "It is a free short course taught by LangChain CEO Harrison Chase, about 1 hour 24 minutes long. You build an email assistant and add semantic, episodic and procedural memory to it, using the LangGraph store and the LangMem library."
 ---
 
-Building a **chatbot with memory using LangGraph** empowers AI agents to recall past interactions, enhancing user experience. LangGraph's state machine model allows for persistent context, making conversations feel more natural and coherent. This approach is key for developing advanced conversational AI that remembers.
+A **chatbot with memory in LangGraph** uses two features. A **checkpointer** saves each conversation's messages under a `thread_id`, so the bot remembers earlier turns. A **store** saves facts under a user namespace, so the bot remembers the user in new conversations. You compile both into the graph with `builder.compile(checkpointer=..., store=...)`.
 
-## What is a Chatbot with Memory using LangGraph?
+This page builds that chatbot step by step against current APIs (`langgraph` 1.2, October 2026), then covers production storage, the DeepLearning.AI course on long-term memory, and example repositories on GitHub.
 
-A **chatbot with memory using LangGraph** is an AI conversational agent built using the LangGraph library that maintains and recalls information across interactions. This capability enables the **chatbot with memory LangGraph** to provide contextually aware, personalized, and coherent responses, moving beyond stateless, turn-by-turn exchanges for a more engaging user experience.
+## What is a LangGraph chatbot with memory?
 
-LangGraph provides a powerful framework for creating these memory-enabled agents by modeling agent execution as a **state machine**. The agent's "state" can store diverse information, such as conversation logs, user preferences, or summarized past discussions. By defining how this state updates with each turn, developers can effectively imbue their chatbots with persistent memory, creating true **agentic AI long-term memory**.
+**A LangGraph chatbot with memory is a graph whose state persists between calls. A checkpointer stores the message list per conversation thread (short-term memory), and a store holds JSON documents per user that any thread can search (long-term memory). Without either, every call starts from zero.**
 
-### The Importance of Stateful Agents and Short-Term Memory
+The two kinds of memory answer different questions:
 
-Traditional chatbots often operate stateless, processing each input independently without recalling prior exchanges. This necessitates users re-explaining context repeatedly. Stateful agents, however, retain information from previous turns. They remember user identities, past requests, and outcomes. This capability is fundamental for building AI assistants that remember everything a user shares, essential for **long-term memory AI agent** development.
+| Question | Memory type | LangGraph feature |
+|---|---|---|
+| "What did you just say?" | Short-term (thread) | Checkpointer, keyed by `thread_id` |
+| "What do you know about me?" | Long-term (cross-thread) | Store, keyed by namespace and key |
+| "Go back to step 3" | Thread history | `get_state_history()` on a checkpointed graph |
 
-Managing state is what truly differentiates advanced AI agents from basic chatbots. Without it, achieving **ai_agent_persistent_memory** is impossible. LangGraph's design makes state management a core concept, directly supporting the creation of agents that remember. This is particularly relevant for **short-term memory langgraph** implementations where immediate context is paramount. Effective **stateful memory** management is the cornerstone of these advanced agents.
+If you're new to the distinction, the guide to [short-term vs long-term memory in agentic AI](/articles/short-term-and-long-term-memory-agentic-ai/) explains it framework-free.
 
-## LangGraph's State Machine Approach to Memory
+## Step 1: chat history with a checkpointer
 
-LangGraph's core innovation is modeling agent execution as a **state machine**. Instead of a linear flow, an agent's journey involves states and transitions. This structure is ideal for memory management because the "state" can explicitly hold all necessary information. This is a critical aspect of building a **chatbot with memory LangGraph**.
-
-### Defining the Agent's State
-
-The state in LangGraph is customizable. For simple conversational memory, the state might be a message list. For complex agents, it could include:
-
-* **Conversation History**: A chronological log of user and AI messages.
-* **User Profile**: Details like name, preferences, and past interactions.
-* **Tool Usage History**: Records of tool invocations and their results.
-* **Summaries**: Condensed versions of past conversations to manage memory size.
-
-Consider a simple state definition in Python:
+The smallest chatbot with memory is one node that calls a model, plus a checkpointer:
 
 ```python
-from typing import List, Dict, Any
-from langgraph.graph import StateGraph
+from langchain.chat_models import init_chat_model
+from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.graph import START, MessagesState, StateGraph
 
-## Define the state for our chatbot
-class ChatState:
- messages: List[Dict[str, str]] = []
- user_profile: Dict[str, Any] = {}
- tool_call_history: List[Dict[str, Any]] = []
+model = init_chat_model("openai:gpt-5.4-mini")
 
-## Initialize the state graph
-builder = StateGraph(ChatState)
+
+def chat(state: MessagesState):
+    return {"messages": [model.invoke(state["messages"])]}
+
+
+builder = StateGraph(MessagesState)
+builder.add_node("chat", chat)
+builder.add_edge(START, "chat")
+graph = builder.compile(checkpointer=InMemorySaver())
+
+config = {"configurable": {"thread_id": "dana-1"}}
+graph.invoke({"messages": [{"role": "user", "content": "Hi, I'm Dana."}]}, config)
+out = graph.invoke({"messages": [{"role": "user", "content": "What's my name?"}]}, config)
+print(out["messages"][-1].content)  # the model sees both turns
 ```
 
-This `ChatState` class acts as a blueprint for the **chatbot with memory LangGraph**. Each interaction updates this state with new information. This directly implements **persistent memory AI** concepts, allowing the agent to recall and build upon previous states.
+`MessagesState` uses a reducer that appends new messages instead of replacing the list. The checkpointer saves state after every step. Change the `thread_id` and the bot starts a new conversation.
 
-### Transitions and Memory Updates
+Useful thread operations from the [LangGraph memory docs](https://docs.langchain.com/oss/python/langgraph/add-memory):
 
-Transitions define how the agent moves between states. These are where memory updates occur. After an action, new information is appended to the relevant state part.
+- `graph.get_state(config)` returns the latest snapshot.
+- `graph.get_state_history(config)` lists every snapshot, newest first.
+- `checkpointer.delete_thread("dana-1")` wipes a conversation.
 
-For example, after generating a response, the `messages` list is updated:
+If you don't need a custom graph, LangChain's `create_agent(model, tools, checkpointer=...)` builds the same loop for you. See [LLM memory in LangChain](/articles/llm-memory-langchain/) for that route and for how the deprecated `ConversationBufferMemory` maps to it.
+
+## Step 2: long-term memory with a store
+
+A checkpointer can't help in a new thread. For that, compile a **store** into the graph and read it from the node through `Runtime`. Pass a `context` with the user ID on each call:
 
 ```python
-## Hypothetical node function that updates messages
-def process_message(state: ChatState) -> ChatState:
- # ... logic to generate a response ...
- ai_response = {"role": "assistant", "content": "Hello! How can I help you today?"}
- state["messages"].append(ai_response)
- return state
+import uuid
+from dataclasses import dataclass
 
-## Add the node to the graph
-builder.add_node("process_message", process_message)
-builder.set_entry_point("process_message")
+from langchain.chat_models import init_chat_model
+from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.graph import START, MessagesState, StateGraph
+from langgraph.runtime import Runtime
+from langgraph.store.memory import InMemoryStore
+
+model = init_chat_model("openai:gpt-5.4-mini")
+
+
+@dataclass
+class Context:
+    user_id: str
+
+
+def chat(state: MessagesState, runtime: Runtime[Context]):
+    namespace = ("memories", runtime.context.user_id)
+    last = state["messages"][-1].content
+
+    # Save explicit facts, then recall the most relevant ones
+    if last.lower().startswith("remember"):
+        runtime.store.put(namespace, str(uuid.uuid4()), {"text": last})
+    memories = runtime.store.search(namespace, query=last, limit=3)
+    facts = "\n".join(f"- {m.value['text']}" for m in memories)
+
+    system = {"role": "system", "content": f"You are a helpful assistant.\nKnown about the user:\n{facts}"}
+    return {"messages": [model.invoke([system, *state["messages"]])]}
+
+
+builder = StateGraph(MessagesState, context_schema=Context)
+builder.add_node("chat", chat)
+builder.add_edge(START, "chat")
+graph = builder.compile(checkpointer=InMemorySaver(), store=InMemoryStore())
+
+dana = Context(user_id="dana")
+graph.invoke({"messages": [{"role": "user", "content": "Remember that I'm vegetarian."}]},
+             {"configurable": {"thread_id": "monday"}}, context=dana)
+# New thread, same user: the store still has the fact
+graph.invoke({"messages": [{"role": "user", "content": "Suggest a dinner."}]},
+             {"configurable": {"thread_id": "friday"}}, context=dana)
 ```
 
-This update mechanism grows the conversation history, forming the basis of the chatbot's memory, a core feature of **ai_agent_persistent_memory**.
+The "starts with remember" rule is a placeholder. Real bots decide what to save in one of two ways, which LangChain calls the **hot path** and the **background**:
 
-## Integrating External Memory Systems for Stateful AI Agents
+1. **Hot path**: give the model a memory tool and let it call it mid-conversation. Simple, but adds latency and depends on the model choosing to save.
+2. **Background**: after the conversation (or on a timer), run a separate job that reads the transcript and extracts facts. No added latency, but memories show up a bit later.
 
-While LangGraph's state machine manages immediate context, **long-term memory AI chat** requires external systems. These systems store vast information and retrieve relevant pieces on demand. Building a **chatbot with memory LangGraph** is greatly enhanced by these integrations, enabling robust **stateful AI agents**.
+### Semantic search over memories
 
-### Vector Databases for Semantic Recall
-
-**Vector databases** are crucial for augmenting AI memory. They store information as numerical vectors, enabling semantic search. When a user asks a question, the system converts it to a vector and searches for semantically similar past interactions or documents, forming the basis of Retrieval-Augmented Generation (RAG).
-
-LangGraph easily integrates these systems. A LangGraph node can:
-
-1. **Retrieve** relevant information from a vector database based on the current query.
-2. **Augment** the LLM prompt with this retrieved context.
-3. **Update** the vector database with the new interaction.
-
-This approach significantly enhances **ai_agent_episodic_memory** by allowing agents to recall specific past events. For instance, remembering a user's favorite book is possible. This is a key differentiator from **limited memory AI**. According to a 2023 study by the [National Institute of Standards and Technology (NIST)](https://www.nist.gov/news-events/news/2023/07/nist-study-shows-how-ai-can-generate-more-accurate-text), RAG implementations can improve LLM response relevance by up to 40%.
-
-#### Example: RAG with LangGraph
+Without an index, `search(query=...)` just filters by namespace. To rank by meaning, give the store an embedding index:
 
 ```python
-## Assuming you have a vector store initialized (e.g., Chroma, Pinecone)
-## from vector_store import retriever # Placeholder for actual retriever import
+from langchain.embeddings import init_embeddings
+from langgraph.store.memory import InMemoryStore
 
-## Define a dummy retriever for demonstration
-class DummyRetriever:
- def get_relevant_documents(self, query: str) -> list:
- print(f"Retrieving documents for query: {query}")
- # In a real scenario, this would query a vector database
- return [type('obj', (object,), {'page_content': 'Previous conversation about AI memory.'})()]
-
-retriever = DummyRetriever()
-
-## Node to retrieve context
-def retrieve_context(state: ChatState) -> ChatState:
- query = state["messages"][-1]["content"] # Get the latest user message
- # Retrieve documents semantically similar to the query
- retrieved_docs = retriever.get_relevant_documents(query)
- # Store retrieved context in state for LLM to use
- state["retrieved_context"] = [doc.page_content for doc in retrieved_docs]
- return state
-
-## Add the retrieval node
-builder.add_node("retrieve_context", retrieve_context)
-
-## Define transitions (simplified)
-builder.add_edge("retrieve_context", "process_message")
+store = InMemoryStore(index={"embed": init_embeddings("openai:text-embedding-3-small"), "dims": 1536})
 ```
 
-This illustrates how **embedding models for memory** power semantic search within the agent's workflow. Various tools, including open-source options like [Hindsight](https://github.com/vectorize-io/hindsight), can assist in managing vector-based memory.
+Now `store.search(("memories", "dana"), query="food preferences", limit=3)` returns the closest memories by vector similarity, with a `score` on each item.
 
-### Memory Consolidation and Summarization for Conversational AI Memory
+## Step 3: production storage
 
-As conversations grow, simple appending becomes inefficient. **Memory consolidation AI agents** techniques are vital. This involves summarizing past interactions or extracting key facts to reduce memory footprint while retaining essential information. This is crucial for any **chatbot with memory LangGraph**.
+`InMemorySaver` and `InMemoryStore` lose everything on restart. The LangGraph docs list these persistent backends:
 
-LangGraph can incorporate nodes for this task. A "summarization node" could run periodically, taking accumulated history, passing it to an LLM for summarization, and updating the state. This helps manage **context window limitations** effectively. Studies show that stateful chatbots using summarization can see user retention rates increase by 25% over stateless counterparts, a significant gain for **conversational AI memory**. Implementing effective **ai conversation summarization techniques** is key to managing the growing state of a **stateful memory** system.
+| Backend | Checkpointer | Store | Package |
+|---|---|---|---|
+| PostgreSQL | `PostgresSaver`, `AsyncPostgresSaver` | `PostgresStore`, `AsyncPostgresStore` | `langgraph-checkpoint-postgres` |
+| Redis | `RedisSaver`, `AsyncRedisSaver` | `RedisStore`, `AsyncRedisStore` | `langgraph-checkpoint-redis` |
+| MongoDB | `MongoDBSaver`, `AsyncMongoDBSaver` | not listed | `langgraph-checkpoint-mongodb` |
+| SQLite | `SqliteSaver`, `AsyncSqliteSaver` | not listed | `langgraph-checkpoint-sqlite` |
+| Oracle | `OracleSaver` | `OracleStore` | `langgraph-oracledb` |
 
-## Types of Memory in LangGraph Chatbots
+A Postgres version of the bot looks like this:
 
-LangGraph's flexibility allows implementing various memory types, mirroring human memory. This is key for a sophisticated **chatbot with memory LangGraph**.
+```python
+from langgraph.checkpoint.postgres import PostgresSaver
+from langgraph.store.postgres import PostgresStore
 
-### Episodic Memory
+DB_URI = "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable"
 
-**Episodic memory in AI agents** refers to recalling specific past events. In a LangGraph chatbot, this means remembering a particular conversation instance, like "Last Tuesday, you asked about booking a flight to London." This is often powered by detailed logs and retrieval, forming a core part of **agent recall**. Building this type of memory is a core function of a **chatbot with memory LangGraph**.
+with PostgresSaver.from_conn_string(DB_URI) as checkpointer, \
+     PostgresStore.from_conn_string(DB_URI) as store:
+    checkpointer.setup()  # create tables once
+    store.setup()
+    graph = builder.compile(checkpointer=checkpointer, store=store)
+```
 
-### Semantic Memory
+Two production habits matter more than the backend. Keep the thread history bounded, by trimming or summarizing old turns, so it fits the [model's context window](/articles/context-window-of-an-llm/). And derive `user_id` on the server from the authenticated user, never from client input, because the namespace is your only isolation between users.
 
-**Semantic memory AI agents** store general knowledge and facts. This includes concepts, entity relationships, and common-sense reasoning. While LLMs possess vast semantic knowledge, explicit memory can be built by storing discovered factual statements or relationships. This complements the immediate state of the **chatbot with memory LangGraph**.
+## The DeepLearning.AI course: Long-Term Agentic Memory with LangGraph
 
-### Working Memory (Short-Term Memory)
+[Long-Term Agentic Memory with LangGraph](https://www.deeplearning.ai/short-courses/long-term-agentic-memory-with-langgraph/) is a DeepLearning.AI short course taught by **Harrison Chase**, co-founder and CEO of LangChain. It runs 1 hour 24 minutes, with 7 video lessons and 5 code examples. The course page says access is free for a limited time during the platform's beta.
 
-Working memory, or short-term memory, is information currently being processed. In LangGraph, this is directly represented by the current state of the `ChatState` object. It's the immediate context the agent operates within. **Short-term memory AI agents** rely heavily on this. This is a direct application of **short-term memory langgraph** capabilities.
+You build a personal **email assistant** with a router that triages incoming mail (ignore, respond, or notify), plus tools for writing, scheduling and checking availability. Then you add three kinds of memory:
 
-## Advanced Architectures and Considerations for Memory
+- **Semantic memory**: facts about the user, saved in the LangGraph store.
+- **Episodic memory**: past examples of how emails were handled, used as few-shot examples.
+- **Procedural memory**: the system prompt itself, rewritten from user feedback.
 
-Building an effective **chatbot with memory using LangGraph** requires careful architectural design beyond basic state management. This includes understanding how agents interact and manage external data.
+It also covers the hot path versus background tradeoff. The code uses the [LangMem](https://github.com/langchain-ai/langmem) library on top of the store. LangMem's last PyPI release (0.0.30) dates from October 2025, so expect to adjust imports, for example from the deprecated `create_react_agent` to `create_agent`. The concepts carry over unchanged; our page on [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) goes deeper on one of them.
 
-### Multi-Agent Systems
+## LangGraph chatbot with memory examples on GitHub
 
-LangGraph excels at building **multi-agent systems**. You can design specialized agents (e.g., summarization, retrieval, planning) that interact through shared state. This enables complex task decomposition. For instance, one agent handles user interaction, while another manages data retrieval. This intricate interaction is a hallmark of advanced **chatbot with memory LangGraph** implementations.
+These are the maintained, first-party examples worth starting from, checked October 2026:
 
-### Tool Use and State Updates
+| Repository | What it shows | Status |
+|---|---|---|
+| [langchain-ai/memory-agent](https://github.com/langchain-ai/memory-agent) | ReAct agent that saves memories with an `upsert_memory` tool into the store, scoped by `user_id`; runs in LangGraph Studio | Active, MIT |
+| [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | Memory tools and background extraction on the LangGraph store | Active repo; last PyPI release Oct 2025 |
+| [langchain-ai/langchain-academy](https://github.com/langchain-ai/langchain-academy) | LangChain Academy course code; `module-5` has notebooks on the memory store, profile and collection schemas, and a memory agent | Maintained, MIT |
+| langchain-ai/memory-template | Older template that memory-agent was generated from | Archived |
 
-When agents use tools (searching web, accessing databases), results must be incorporated into the state. LangGraph's `add_node` and `add_edge` make it easy to define nodes that execute tools and update the state with outcomes. This is crucial for **how to give AI memory** of external information. The official [LangGraph documentation](https://langchain.com/docs/langgraph) provides detailed examples of tool integration.
+Many third-party "LangChain chatbot with memory" repos use `ConversationBufferMemory` and `ConversationChain`. Both are deprecated and now live in `langchain-classic`; treat those repos as reading material, not a base.
 
-### Handling Scale and Performance for Stateful Memory
+## When to add a dedicated memory layer
 
-As memory grows, performance can suffer. Strategies like:
-
-1. **Memory pruning**: Removing old or irrelevant information.
-2. **Summarization**: Condensing past interactions.
-3. **Efficient retrieval**: Optimizing vector database queries.
-4. **State compression**: Reducing the size of the stored state.
-5. **Asynchronous processing**: Offloading memory-intensive tasks.
-
-are essential for maintaining a responsive **AI assistant remembers everything**. Comparing different [best AI agent memory systems](/articles/best-ai-memory-framework/) can inform these choices. LLM context window sizes, often ranging from 4k to over 100k tokens, also dictate how much immediate history can be processed, making external memory systems vital for truly long-term recall in a **chatbot with memory LangGraph**. These strategies are fundamental to managing **stateful memory** effectively.
-
-## LangGraph vs. Other Memory Frameworks
-
-LangGraph's explicit state machine model makes complex memory management more intuitive than traditional frameworks. While libraries like LangChain offer memory components, LangGraph's graph-based approach provides a more structured way to define state evolution. It's a powerful alternative to simpler **LLM memory systems**.
-
-Comparing LangGraph to LangChain memory highlights LangGraph's strength in defining intricate, stateful workflows. It allows dynamic memory manipulation within a structured execution graph, key for **persistent memory AI** applications needing intelligent behavior over extended periods. This makes it an excellent choice for developing a **chatbot with memory LangGraph**.
-
-## Conclusion
-
-Building a **chatbot with memory using LangGraph** unlocks truly conversational AI. By treating agent execution as a state machine, LangGraph offers a clear mechanism for managing conversational history, user context, and external knowledge. Integrating with vector databases and employing memory consolidation techniques further enhances these capabilities, enabling AI agents that remember and reason. This architectural pattern is fundamental for sophisticated, stateful AI applications, making the **chatbot with memory LangGraph** a powerful tool for **stateful AI agents**.
+The store gives you storage and search. It doesn't decide what's worth keeping, merge near-duplicates, or notice when a fact changes. For a chatbot with a few preferences per user, that's fine. For assistants that talk to the same people for months, teams often plug in a memory service such as Mem0, Zep or [Hindsight](https://github.com/vectorize-io/hindsight), which handle extraction and retrieval themselves; Hindsight publishes a `hindsight-langgraph` package with memory nodes and tools. The [AI agent memory guide](/articles/ai-agent-memory-explained/) explains the design choices behind these systems.

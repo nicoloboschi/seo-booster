@@ -1,231 +1,157 @@
 ---
-title: Short Term and Long Term Memory in Agentic AI
-description: Short Term and Long Term Memory in Agentic AI. Learn about short term and long term memory agentic ai, agent memory types with practical examples, code snippets, ...
+title: "Short-Term vs Long-Term Memory in Agentic AI"
+description: "Short-term vs long-term memory in agentic AI: scope, storage, limits and failures side by side, how data moves between them, and a LangGraph code example."
 date: 2026-04-08
-lastmod: 2026-04-08
-tags:
-- agentic AI
-- AI memory
-- short-term memory
-- long-term memory
-- short term and long term memory agentic ai
-keywords:
-- short term and long term memory agentic ai
-- agent memory types
-- AI recall
-- AI learning
-- agentic systems
-- episodic memory AI
-- semantic memory AI
-faq:
-- question: How does agentic AI differentiate between short-term and long-term memory?
-  answer: Agentic AI differentiates by storing recent, context-specific information in short-term memory for immediate use, while long-term memory archives crucial learned experiences, facts, and skills
-    for enduring recall and generalization.
-- question: What are the benefits of combining short-term and long-term memory for AI agents?
-  answer: Combining these memory types allows AI agents to maintain immediate conversational context while also retaining learned behaviors and knowledge, leading to more coherent, adaptive, and intelligent
-    interactions and problem-solving.
-- question: Can AI agents forget information from their long-term memory?
-  answer: Yes, AI agents can 'forget' through processes like memory decay, overwriting, or inefficient retrieval mechanisms. Effective memory systems are designed to mitigate this, ensuring critical information
-    remains accessible.
+lastmod: 2026-10-08
 slug: short-term-and-long-term-memory-agentic-ai
 aliases:
 - /articles/short-and-long-term-memory-ai/
 - /articles/short-term-memory-and-long-term-memory-ai/
 - /articles/short-term-memory-vs-long-term-memory-ai/
+tags:
+- Short-Term Memory
+- Long-Term Memory
+- AI Agent Memory
+- Agentic AI
+- LangGraph
+keywords:
+- short-term and long-term memory agentic AI
+- short-term vs long-term memory AI
+- short and long term memory AI
+- agent memory scope
+- thread vs cross-thread memory
+cluster: agent-memory
+faq:
+- question: "What is the difference between short-term and long-term memory in agentic AI?"
+  answer: "Short-term memory holds the current conversation or task and lasts for one thread; it lives in the agent's state and is limited by the context window. Long-term memory persists across threads and sessions in an external store, scoped per user or app, and only the relevant pieces are retrieved into each prompt."
+- question: "How does information move from short-term to long-term memory in an AI agent?"
+  answer: "The agent or a background job extracts durable facts, events or lessons from the conversation and writes them to a long-term store. On later turns, the agent searches that store and copies the relevant memories back into its short-term context. LangGraph calls these writes 'hot path' when they happen during the turn and 'background' when they happen after."
+- question: "Can a long context window replace long-term memory?"
+  answer: "No. A larger window delays the problem but resets with each new session and costs more per call. The LongMemEval benchmark found commercial assistants and long-context LLMs showed a 30% accuracy drop when recalling information across sustained interactions."
 ---
 
-**Short term and long term memory agentic AI** refers to AI systems that use both immediate, transient data (short-term memory) and persistent, learned knowledge (long-term memory) to perform tasks, learn, and adapt. This dual architecture enables agents to process current context while retaining crucial past experiences for informed decision-making and continuous improvement.
+**Short-term and long-term memory in agentic AI** differ by scope. **Short-term memory** is the agent's state for one task: messages, tool results, the plan. It lives in the prompt and ends with the thread. **Long-term memory** lives in an external store, survives across sessions, and is retrieved selectively. Agents need both, plus a path that moves information between them.
 
-Could an AI agent truly learn and adapt without remembering its past experiences? **Short term and long term memory agentic ai** systems are designed to overcome this limitation, enabling agents to retain immediate context and enduring knowledge for sophisticated decision-making and continuous improvement.
+This page compares the two side by side and shows how they connect in code. Each type has its own deep dive: [short-term memory in AI agents](/articles/short-term-memory-ai-agents/) and [AI agent long-term memory](/articles/ai-agent-long-term-memory/). The pillar, [AI agent memory explained](/articles/ai-agent-memory-explained/), covers the full taxonomy.
 
-## What is Short Term and Long Term Memory in Agentic AI?
+## What is the difference between short-term and long-term memory in agentic AI?
 
-**Short term and long term memory agentic AI** is an integrated architecture enabling AI agents to process immediate information and retain learned knowledge. Short-term memory handles fleeting, context-dependent data for current tasks, while long-term memory stores enduring knowledge, skills, and past experiences for persistent recall and generalization. This dual system is fundamental for agents to operate effectively, build upon prior interactions, and exhibit coherent, intelligent behavior.
+**Short-term memory is thread-scoped state that holds the current conversation and task, bounded by the context window and discarded when the thread ends. Long-term memory is cross-thread storage, scoped to a user, agent or organization, that persists indefinitely and is searched to bring relevant facts, events or rules into the current context.**
 
-This dual-memory system is fundamental for agents to operate effectively in dynamic environments. It allows them to build upon prior interactions and knowledge, leading to more coherent and intelligent behavior. Without this capacity, an agent would be unable to learn or adapt.
+LangGraph's [memory docs](https://docs.langchain.com/oss/python/langgraph/memory) draw the line by "recall scope." Short-term memory is saved as agent state through a checkpointer. Long-term memory "is shared *across* conversational threads" and saved in custom namespaces, so it "can be recalled *at any time* and *in any thread*."
 
-## The Crucial Role of Short-Term Memory
+The CoALA paper ([Sumers et al., 2023](https://arxiv.org/abs/2309.02427)) uses the cognitive-science version: one **working memory** for the current decision cycle, plus long-term **episodic**, **semantic** and **procedural** memory. It inherits this layout from the Soar cognitive architecture, which built on psychological theories of memory going back to Atkinson and Shiffrin (1968) and Baddeley and Hitch's working memory model (1974).
 
-**Short-term memory (STM)** functions as a temporary workspace for agentic AI. It captures immediate context, such as recent conversation turns, intermediate calculation results, or currently relevant objects. This memory is typically volatile and has a finite capacity, making it ideal for handling the transient information needed for active processing.
+## Short-term vs long-term memory side by side
 
-### STM for Context and Task Continuity
+| | Short-term memory | Long-term memory |
+|---|---|---|
+| Scope | One thread, session or task run | Across threads; per user, agent, team or app |
+| Lifetime | Until the thread ends or is deleted | Until explicitly updated, expired or deleted |
+| Where it lives | Agent state, rendered into the prompt | External store: vectors, graph, tables, files |
+| Size limit | The model's context window | Storage; only a small slice is retrieved per call |
+| What goes in | Everything in the current exchange | Extracted facts, events, lessons, rules |
+| Write cost | Free (append to state) | An LLM extraction call per write, in most systems |
+| Read cost | Every token is resent each call | One search per turn, fixed token budget |
+| CoALA name | Working memory | Episodic, semantic, procedural memory |
+| LangGraph primitive | Checkpointer + `thread_id` | Store + namespace |
+| Typical failure | Overflow, lost-in-the-middle, rising cost | Missed recall, stale facts, leaks between users |
 
-STM is vital for maintaining conversational flow and performing multi-step reasoning. For example, an agent uses STM to recall the user's last query while formulating a response. This immediate contextual awareness prevents the agent from requesting information it has just received, ensuring smoother interactions. Understanding [context window limitations in AI agents](/articles/context-window-limitations-solutions/) is key to managing this aspect of STM.
+The table hides one important asymmetry. Short-term memory is **lossless but small**: the model sees exactly what was said. Long-term memory is **large but lossy**: something decided what to keep, and retrieval decides what comes back. Most memory bugs live in that gap.
 
-* **Contextual Awareness:** STM allows agents to grasp the immediate situation.
-* **Working Memory:** It acts as a processing hub for active decision-decision making.
-* **Task Continuity:** It preserves intermediate states for executing sequential tasks.
+## How the two work together
 
-The limited capacity of STM is a significant constraint. Much like human working memory, AI agents can only hold a finite amount of data at once. This necessitates efficient data management and the strategic transfer of critical information to long-term storage. This is a key consideration for **short term and long term memory agentic ai** design.
+A memory-enabled agent turn usually runs this loop:
 
-## Long-Term Memory for Enduring Knowledge
+1. **Load the thread.** Restore short-term state (messages, plan) from the checkpointer.
+2. **Recall.** Search long-term memory with the new message and copy the top results into the prompt.
+3. **Act.** Call the model and tools; append results to short-term state.
+4. **Manage the window.** Trim, summarize or offload short-term history if it's getting large.
+5. **Promote.** Extract anything worth keeping (a new preference, a decision, a lesson) and write it to long-term memory.
+6. **Consolidate later.** A background job merges duplicates, resolves conflicts and expires stale items.
 
-**Long-term memory (LTM)** is the repository for information that an agent must retain over extended durations. This includes learned facts, past interactions, acquired skills, user preferences, and general world knowledge. LTM is indispensable for an agent's capacity to learn, adapt, and develop a consistent operational profile.
+Step 5 has two timing options in LangGraph's terms. **Hot path** writes happen during the turn, often as a tool call; they're immediately available but add latency. **Background** writes happen after the turn; they add no latency but lag slightly. LangMem calls these "conscious" and "subconscious" memory formation. Step 6 is covered in [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/).
 
-### LTM for Learning and Generalization
+## One LangGraph agent with both memories
 
-LTM enables agents to recall past interactions, generalize from experiences, and avoid repeating errors. For instance, an agent might remember a user's specific request from weeks prior to tailor a subsequent interaction. This persistent recall capability distinguishes a sophisticated agent from a simple tool. The development of [AI agent persistent memory](/articles/persistent-memory-ai/) is central to this.
-
-* **Knowledge Acquisition:** LTM stores learned information for future application.
-* **Experience Replay:** Agents can access past events to inform current decisions.
-* **Skill Development:** It supports the gradual acquisition and refinement of agent capabilities.
-
-LTM often employs more complex storage and retrieval mechanisms than STM. These commonly involve **knowledge graphs**, **vector databases** that store embeddings of past experiences, or structured databases. The integrity and accessibility of LTM directly influence an agent's long-term performance and overall intelligence. This forms the bedrock of effective **short term and long term memory agentic ai**.
-
-## Bridging the Gap: Memory Consolidation and Transfer
-
-The process of moving information from short-term to long-term memory, known as **memory consolidation**, is essential. It involves identifying significant data within STM and encoding it into LTM for durable storage. This prevents agents from losing valuable insights gained during their operational cycles.
-
-This consolidation can be explicit, where the agent deliberately saves specific information, or implicit, where frequently accessed data or emergent patterns are automatically prioritized. Effective memory consolidation ensures that an agent's learned capabilities grow over time, rather than being lost when a task or conversation concludes. Research into [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) continues to advance this field.
-
-### Key Memory Transfer Mechanisms
-
-1. **Summarization:** Condensing recent interactions or key learnings into concise summaries for LTM.
-2. **Salience Detection:** Identifying critical pieces of information based on frequency, emotional impact, or task relevance.
-3. **Embedding:** Converting textual or experiential data into numerical vectors for efficient storage and retrieval in vector databases.
-4. **Rule Extraction:** Deriving generalizable rules or heuristics from specific past events.
-
-## Categorizing Long-Term Memory in Agentic AI
-
-Long-term memory can be further segmented, drawing parallels with human memory systems. This segmentation is vital for a nuanced understanding of **short term and long term memory agentic ai**.
-
-### Episodic Memory in AI Agents
-
-**Episodic memory** within AI agents is dedicated to storing specific events or experiences in their chronological sequence. It functions as a detailed record of an agent's past actions and perceptions, noting "what, where, and when." This memory type is critical for recalling specific past interactions or the precise context of a particular event.
-
-For example, an agent might use episodic memory to recall a specific instance where it failed to access a particular file. This allows for more nuanced understanding and targeted error correction. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for creating agents that learn from their unique operational histories.
-
-* **Event Recall:** Remembering specific past occurrences.
-* **Temporal Ordering:** Maintaining the sequence of events.
-* **Contextual Retrieval:** Accessing memories based on specific past situations.
-
-### Semantic Memory for General Knowledge
-
-**Semantic memory** stores general knowledge, facts, concepts, and meanings, independent of any personal experience. It represents the agent's understanding of the world. This includes definitions, relationships between concepts, and common sense knowledge.
-
-An agent relies on semantic memory to answer factual questions, comprehend abstract concepts, and perform logical inferences. For instance, knowing that "birds can fly" or that "Tokyo is the capital of Japan" falls under semantic memory. This memory type facilitates general reasoning abilities, as explored in [semantic memory AI agents](/articles/semantic-memory-ai-agents/).
-
-* **Factual Knowledge:** Storing objective information about the world.
-* **Conceptual Understanding:** Grasping relationships and meanings.
-* **Generalization:** Applying learned concepts to new situations.
-
-## Implementing Agentic AI Memory Systems
-
-Building effective memory systems for agentic AI requires careful selection of appropriate architectures and technologies. The interplay between STM and LTM is a defining characteristic of advanced **short term and long term memory agentic ai**.
-
-### Short-Term Memory Implementations
-
-STM is often implemented using:
-
-* **In-memory data structures:** Python lists, queues, or dictionaries can efficiently manage recent conversation history or task states.
-* **Fixed-size buffers:** A rolling buffer can store the last N conversation turns or actions.
-* **LLM Context Windows:** The inherent short-term memory of large language models, though often limited and transient.
-
-### Long-Term Memory Implementations
-
-LTM typically requires more persistent and scalable solutions:
-
-* **Vector Databases:** Stores embeddings of experiences, documents, or knowledge snippets, enabling semantic search and retrieval. Popular options include Pinecone, Weaviate, and ChromaDB.
-* **Relational Databases (SQL):** Useful for storing structured factual knowledge or user profiles.
-* **Graph Databases:** Ideal for representing complex relationships between entities, supporting knowledge graph applications.
-* **Key-Value Stores:** For simple, fast lookups of specific facts or configurations.
-* **Specialized AI Memory Systems:** Platforms like [Hindsight](https://github.com/vectorize-io/hindsight) offer integrated solutions for managing and querying agent memory.
-
-The choice of LTM implementation depends on the data type and retrieval patterns. Recalling a specific past event might benefit from an episodic memory structure, while retrieving general facts aligns well with semantic storage in a vector database. Explore [AI agent long-term memory](/articles/ai-agent-long-term-memory/) solutions for more options.
-
-## Navigating Challenges in Agent Memory
-
-Integrating STM and LTM presents several significant challenges for **short term and long term memory agentic ai**:
-
-* **Information Overload:** Agents can accumulate vast amounts of data, making efficient retrieval difficult.
-* **Memory Decay and Forgetting:** Information can become outdated or inaccessible, requiring mechanisms for pruning or updating.
-* **Retrieval Accuracy:** Ensuring the agent retrieves the *most relevant* information for the current context is a persistent challenge.
-* **Computational Cost:** Storing, indexing, and searching large memory stores can be computationally expensive.
-* **Privacy and Security:** Handling sensitive information stored in LTM requires careful consideration of ethical and security implications.
-
-According to a 2024 study published in arxiv, retrieval-augmented agents that effectively combined short-term context with long-term knowledge retrieval demonstrated a 34% improvement in task completion accuracy on complex reasoning benchmarks compared to agents relying solely on immediate context. The paper "Retrieval-Augmented Generation for Large Language Models" by Lewis et al. (2020) is a foundational work in this area.
-
-## The Synergistic Power of Memory Systems
-
-The true capability of **short term and long term memory agentic ai** lies in the synergy between its memory systems. STM provides immediate situational awareness, while LTM offers the wisdom of experience and accumulated knowledge. This integrated approach allows an agent to:
-
-* **Maintain context** during extended conversations or tasks.
-* **Learn from past successes and failures** to improve future performance.
-* **Personalize interactions** based on stored user preferences and history.
-* **Reason more deeply** by combining current information with general knowledge.
-
-This integrated approach is fundamental to achieving more sophisticated and human-like AI behavior. For a deeper understanding of how agents remember, see [AI agent memory explained](/articles/ai-agent-memory-explained/). The development of advanced AI memory systems is a critical differentiator in the field, with platforms like [Vectorize.io's AI Memory Solutions](https://vectorize.io/articles/best-ai-agent-memory-systems) offering tools to manage these complex requirements. The continuous evolution of [AI agents' memory types](/articles/ai-agents-memory-types/) is shaping the future of intelligent systems.
-
-## Python Example: Simulating Memory Transfer
-
-This example simulates a simplified interaction where an agent might decide to store a piece of information from its STM into its LTM.
+The pattern below uses a checkpointer for short-term memory and a store for long-term memory. It's adapted from LangGraph's [add-memory guide](https://docs.langchain.com/oss/python/langgraph/add-memory):
 
 ```python
-class ShortTermMemory:
- def __init__(self, capacity=5):
- self.capacity = capacity
- self.memory = []
+import uuid
+from dataclasses import dataclass
 
- def add(self, item):
- if len(self.memory) >= self.capacity:
- self.memory.pop(0) # Remove oldest item
- self.memory.append(item)
- print(f"STM: Added '{item}'. Current STM: {self.memory}")
+from langchain.chat_models import init_chat_model
+from langchain.embeddings import init_embeddings
+from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.graph import START, MessagesState, StateGraph
+from langgraph.runtime import Runtime
+from langgraph.store.memory import InMemoryStore
 
- def get_relevant(self, keyword):
- return [item for item in self.memory if keyword in item]
+model = init_chat_model("anthropic:claude-sonnet-4-5")
+store = InMemoryStore(
+    index={"embed": init_embeddings("openai:text-embedding-3-small"), "dims": 1536}
+)
 
- def get_all(self):
- return self.memory
+@dataclass
+class Context:
+    user_id: str
 
-class LongTermMemory:
- def __init__(self):
- self.memory = {} # Using a dict for simple key-value storage
+def call_model(state: MessagesState, runtime: Runtime[Context]):
+    namespace = (runtime.context.user_id, "memories")
+    last = state["messages"][-1].content
 
- def store(self, key, value):
- self.memory[key] = value
- print(f"LTM: Stored '{key}': '{value}'")
+    # Long-term -> short-term: pull relevant memories into this turn's prompt
+    hits = runtime.store.search(namespace, query=last, limit=3)
+    known = "\n".join(h.value["text"] for h in hits)
+    system = {"role": "system", "content": f"Known about the user:\n{known}"}
+    response = model.invoke([system, *state["messages"]])
 
- def retrieve(self, key):
- return self.memory.get(key, "Not found in LTM.")
+    # Short-term -> long-term: naive promotion; real systems extract facts with an LLM
+    if "remember" in last.lower():
+        runtime.store.put(namespace, str(uuid.uuid4()), {"text": last})
+    return {"messages": [response]}
 
-## Simulation
-stm = ShortTermMemory(capacity=3)
-ltm = LongTermMemory()
+builder = StateGraph(MessagesState, context_schema=Context)
+builder.add_node(call_model)
+builder.add_edge(START, "call_model")
+graph = builder.compile(checkpointer=InMemorySaver(), store=store)
 
-## Agent receives information
-stm.add("User asked about flight booking availability.")
-stm.add("Agent found 2 flights for tomorrow.")
-stm.add("User confirmed they want the earliest flight.")
-
-## Agent decides to store a key piece of info
-relevant_stm_items = stm.get_relevant("earliest flight")
-if relevant_stm_items:
- # Simplified decision to store user confirmation
- ltm.store("user_preference", "earliest flight")
-
-## Later, agent needs to recall this preference
-retrieved_preference = ltm.retrieve("user_preference")
-print(f"Agent retrieved from LTM: {retrieved_preference}")
-
-## STM might now be cleared or overwritten as new info comes in
-stm.add("Agent is now searching for hotels.")
-print(f"Current STM after new input: {stm.get_all()}")
+ctx = Context(user_id="user-1")
+graph.invoke(
+    {"messages": [{"role": "user", "content": "Remember: I'm vegetarian."}]},
+    {"configurable": {"thread_id": "thread-1"}},
+    context=ctx,
+)
+# New thread: short-term memory starts empty, long-term memory still has the fact
+out = graph.invoke(
+    {"messages": [{"role": "user", "content": "Suggest a dinner recipe."}]},
+    {"configurable": {"thread_id": "thread-2"}},
+    context=ctx,
+)
+print(out["messages"][-1].content)
 ```
 
-This simulation illustrates how an agent might transfer a specific, relevant detail from its immediate context (STM) to more permanent storage (LTM) for future use, a core process in **short term and long term memory agentic ai**.
+The `thread_id` scopes short-term memory. The namespace `(user_id, "memories")` scopes long-term memory. Swap `InMemorySaver` and `InMemoryStore` for Postgres-backed versions in production, and replace the keyword check with an LLM extractor such as LangMem's `create_memory_store_manager`. A full walkthrough is in [how to give AI agents memory](/articles/how-to-give-ai-agents-memory/).
 
-## Conclusion
+## What belongs in which memory
 
-Short-term and long-term memory are foundational pillars of agentic AI. They empower agents to move beyond simple reactive behaviors to become adaptive, learning entities capable of complex problem-solving and nuanced interaction. As AI systems become more sophisticated, the design and integration of these memory architectures will remain a critical area of development for achieving advanced **short term and long term memory agentic ai**.
+| Information | Short-term | Long-term | Why |
+|---|---|---|---|
+| The last few messages | Yes | No | Needed verbatim now; little value later |
+| A large tool output (web page, log) | Reference only | No | Offload to a file; keep the path |
+| The current plan or to-do list | Yes | Sometimes | Save it only if the task spans sessions |
+| "I'm vegetarian" | Yes | Yes | Durable preference |
+| "I'm on a train right now" | Yes | No, or with expiry | Temporary state |
+| What was decided in this meeting | Yes | Yes, as an episode | Users will ask "what did we decide?" |
+| A lesson from a failed attempt | Yes | Yes | Prevents repeating the mistake |
+| A change to the agent's own rules | No | Yes, with review | Procedural memory; affects every future task |
 
-## FAQ
+A quick test: if the user would be annoyed to repeat it next week, promote it. If it would be wrong or creepy to bring up next week, don't.
 
-### How does agentic AI differentiate between short-term and long-term memory?
-Agentic AI differentiates by storing recent, context-specific information in short-term memory for immediate use, while long-term memory archives crucial learned experiences, facts, and skills for enduring recall and generalization.
+## Common mistakes
 
-### What are the benefits of combining short-term and long-term memory for AI agents?
-Combining these memory types allows AI agents to maintain immediate conversational context while also retaining learned behaviors and knowledge, leading to more coherent, adaptive, and intelligent interactions and problem-solving.
-
-### Can AI agents forget information from their long-term memory?
-Yes, AI agents can 'forget' through processes like memory decay, overwriting, or inefficient retrieval mechanisms. Effective memory systems are designed to mitigate this, ensuring critical information remains accessible.
+- **Treating a long context as long-term memory.** A bigger window still resets per session and costs more per call. [LongMemEval](https://arxiv.org/abs/2410.10813) (Wu et al., 2024) found commercial chat assistants and long-context LLMs showed "a 30% accuracy drop" on memorizing information across sustained interactions.
+- **Promoting everything.** Saving every message as a memory recreates the long-context problem inside your database, with worse ordering.
+- **Never consolidating.** Without updates, both "lives in NYC" and "moved to SF" stay in the store forever.
+- **Weak scoping.** Short-term memory is isolated by thread; long-term memory is only as isolated as your namespaces. Use a user or tenant ID in every key and test deletion.
+- **No time on long-term items.** Store timestamps on everything you promote, so the agent can tell old facts from new ones.

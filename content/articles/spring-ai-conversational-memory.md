@@ -1,195 +1,132 @@
 ---
-title: 'Spring AI Conversational Memory: Enhancing AI Dialogue Recall'
-description: Explore Spring AI conversational memory for robust AI dialogue recall. Understand its architecture, benefits, and integration for fluid AI interactions.
+title: "Spring AI Chat Memory: ChatMemory, Advisors, JDBC"
+description: "How conversational memory works in Spring AI 2.0: ChatMemory, MessageWindowChatMemory, memory advisors, JDBC/Redis/Neo4j repositories, and 2.0 breaking changes."
 date: 2026-06-18
-lastmod: 2026-06-18
-tags:
-- Spring AI
-- Conversational Memory
-- AI Memory
-- LLM
-keywords:
-- spring ai conversational memory
-- AI memory
-- conversational AI
-- LLM memory
-- dialogue recall
-faq:
-- question: What is Spring AI conversational memory?
-  answer: Spring AI conversational memory refers to the specific implementation of memory within the Spring AI framework designed to help AI agents recall and utilize past dialogue turns for more coherent
-    and context-aware conversations.
-- question: How does Spring AI conversational memory work?
-  answer: It typically integrates with Spring Boot applications, allowing developers to use predefined memory components or custom implementations to store and retrieve conversation history, often leveraging
-    techniques like chat message history management.
-- question: What are the benefits of using Spring AI for conversational memory?
-  answer: Benefits include seamless integration with the Spring ecosystem, simplified development for Java developers, and the ability to build stateful conversational agents that remember context across
-    multiple turns, improving user experience.
+lastmod: 2026-10-08
 slug: spring-ai-conversational-memory
+cluster: agent-memory
 aliases:
-- /articles/spring-ai-conversation-memory/
+  - /articles/spring-ai-conversation-memory/
+tags:
+  - Spring AI
+  - Java
+  - conversation memory
+  - chat memory
+keywords:
+  - "spring ai conversational memory"
+  - "spring ai chat memory"
+  - "messagewindowchatmemory"
+  - "messagechatmemoryadvisor"
+  - "jdbcchatmemoryrepository"
+  - "spring ai memory"
+faq:
+  - question: "How do I add conversation memory in Spring AI?"
+    answer: "Build a ChatMemory, usually MessageWindowChatMemory, and register MessageChatMemoryAdvisor on the ChatClient. On each call, pass the conversation ID with .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, id)). The advisor loads earlier messages into the prompt and saves the new exchange."
+  - question: "What is the default window size of MessageWindowChatMemory?"
+    answer: "20 messages. System messages are always kept, and the 2.0 reference says eviction removes whole turns, from a user message through the assistant reply and any tool messages, so the stored count can be lower than the limit."
+  - question: "Was PromptChatMemoryAdvisor removed in Spring AI 2.0?"
+    answer: "Yes. It was deprecated in 1.1.3 and removed in 2.0, so code that references it no longer compiles. The upgrade notes say to replace it with MessageChatMemoryAdvisor, which has the same builder API but sends history as chat messages instead of system-prompt text."
 ---
 
-Has an AI ever forgotten what you just told it mid-conversation? This frustrating experience highlights the critical need for **conversational memory** in AI agents. Without it, AI interactions feel stateless, disjointed, and ultimately, unhelpful.
+**Spring AI conversational memory** is handled by the `ChatMemory` interface and a memory **advisor** on the `ChatClient`. `MessageWindowChatMemory` keeps the last 20 messages per conversation by default. A `ChatMemoryRepository` stores them in memory, JDBC, Cassandra, Neo4j, MongoDB or Redis. `MessageChatMemoryAdvisor` adds that history to every prompt.
 
-## What is Spring AI Conversational Memory?
+This page follows the [Spring AI 2.0.1 chat memory reference](https://docs.spring.io/spring-ai/reference/api/chat-memory.html). Spring AI 2.0.0 shipped in June 2026 and changed memory behavior in ways that break 1.x code; those changes are covered below. Spring AI is a Java framework, so the examples are Java.
 
-**Spring AI conversational memory** is the component within the Spring AI framework that enables AI agents to retain and recall information from previous turns in a conversation. This allows for contextually relevant responses and a more natural, human-like interaction flow. It's fundamental for building stateful AI applications.
+## What is conversational memory in Spring AI?
 
-This memory capability is crucial for applications ranging from customer service chatbots to sophisticated AI assistants. It allows the AI to build upon previous statements, understand user intent more deeply, and avoid repetitive questioning. The Spring AI project aims to simplify the integration of these memory mechanisms into Java-based applications.
+**Conversational memory in Spring AI is the set of recent messages a ChatClient sends back to the model so it keeps context across calls. ChatMemory decides which messages to keep, a ChatMemoryRepository stores them per conversation ID, and an advisor injects them into each prompt.**
 
-### The Importance of State in Conversations
+The docs separate two ideas. **Chat memory** is what the model needs to keep context. **Chat history** is the full record of every message. `ChatMemory` is built for the first and, in the docs' words, "not the best fit for storing the chat history." For a complete audit record, the docs recommend Spring Data.
 
-Conversations are inherently **stateful**. Each new utterance builds upon the history of what has already been said. For an AI to participate effectively, it must maintain this state, remembering who said what, the topics discussed, and the overall context. Without this, an AI might ask the same clarifying question multiple times or fail to understand follow-up instructions. This is where **conversational memory** becomes indispensable.
+## Adding memory to a ChatClient
 
-## How Spring AI Manages Conversational Memory
-
-Spring AI provides abstractions and implementations for managing conversational history. Developers can choose from various **memory strategies** depending on their needs. These strategies dictate how conversation data is stored, accessed, and eventually pruned or summarized to manage resources.
-
-### Core Memory Components
-
-At its heart, Spring AI's memory system often revolves around managing a list of **chat messages**. These messages typically include the role (user, AI, system) and the content of the utterance. Different memory types then operate on this list to provide specific functionalities.
-
-For instance, a simple **chat history memory** might store a fixed number of recent messages. More advanced techniques involve summarizing older parts of the conversation to condense the history while retaining key information. This is vital to overcome the **context window limitations** inherent in many Large Language Models (LLMs).
-
-### Integration with Spring Boot
-
-A key advantage of Spring AI is its seamless integration with the broader **Spring ecosystem**, particularly Spring Boot. This means developers familiar with Spring can easily incorporate sophisticated memory management into their AI applications without a steep learning curve. Configuration is often handled through simple property files or Java configuration classes.
-
-You can configure memory by defining beans in your Spring application context. For example, a basic `InMemoryChatMemory` could be set up like this:
+Spring Boot auto-configures a `ChatMemory` bean: an `InMemoryChatMemoryRepository` behind a `MessageWindowChatMemory`. Register an advisor and pass a conversation ID on each call:
 
 ```java
-import org.springframework.ai.chat.memory.InMemoryChatMemory;
-import org.springframework.ai.chat.memory.ChatMemory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+ChatMemory chatMemory = MessageWindowChatMemory.builder()
+        .maxMessages(20)
+        .build();
 
-@Configuration
-public class AiMemoryConfig {
+ChatClient chatClient = ChatClient.builder(chatModel)
+        .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
+        .build();
 
- @Bean
- public ChatMemory chatMemory() {
- // This is a simple in-memory implementation. For production, consider more robust options.
- return new InMemoryChatMemory();
- }
-}
+// Derive the ID on the server, per user and per conversation
+String conversationId = currentUser.getId() + ":" + httpSession.getId();
+
+String answer = chatClient.prompt()
+        .user("My name is Dana. What's a good first Spring AI project?")
+        .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, conversationId))
+        .call()
+        .content();
 ```
 
-This simple bean definition makes an in-memory chat memory available for use in your Spring AI components.
+The conversation ID is mandatory in 2.0. Calls without `ChatMemory.CONVERSATION_ID` throw `IllegalArgumentException`; there's no default ID anymore. The docs recommend building it on the server from the authenticated user and session, and checking ownership before listing or deleting conversations.
 
-## Types of Conversational Memory in Spring AI
+### Advisors in Spring AI 2.0
 
-Spring AI offers several built-in memory implementations, each suited for different use cases. Understanding these types is key to selecting the right approach for your **AI agent architecture**.
+| Advisor | Backed by | How history reaches the model |
+|---|---|---|
+| `MessageChatMemoryAdvisor` | `ChatMemory` | As a list of chat messages (recommended) |
+| `VectorStoreChatMemoryAdvisor` | `VectorStore` | Retrieved by similarity, appended to the system message as text |
+| `PromptChatMemoryAdvisor` | `ChatMemory` | Removed in 2.0 (deprecated in 1.1.3) |
 
-### 1. In-Memory Chat Memory
+`VectorStoreChatMemoryAdvisor` is the one closest to long-term memory: it retrieves relevant past messages rather than the most recent ones. Its template needs two placeholders, `instructions` (the original system message) and `long_term_memory` (the retrieved text).
 
-The `InMemoryChatMemory` is the most straightforward implementation. It stores all conversation turns in the application's memory.
+## MessageWindowChatMemory: how the window works
 
-* **Pros:** Simple to implement and fast for short conversations.
-* **Cons:** Data is lost when the application restarts. It can consume significant memory for long dialogues.
+`MessageWindowChatMemory` keeps a sliding window of up to `maxMessages` (default 20). System messages are always kept.
 
-This is often a good starting point for development or for applications where persistence isn't critical.
+The 2.0 reference describes eviction by **whole turns** (the 1.1 docs only said older messages are removed). A turn starts at a `UserMessage` and includes the assistant reply, tool calls and tool responses up to the next `UserMessage`. So `maxMessages` is an upper bound, and the stored count may be lower. If `maxMessages` is smaller than one full turn, non-system messages can all be evicted until the next user message arrives. Keeping turns whole avoids sending a tool result without the call that produced it, which many model APIs reject.
 
-### 2. Simple Chat Memory
+A window of 20 messages is roughly 10 exchanges. That's plenty for a support chat and too little for anything that should remember a user next month. See [short-term memory in AI agents](/articles/short-term-memory-ai-agents/) for why a window is short-term by design.
 
-Similar to in-memory, but often with a configurable limit on the number of messages stored. This helps manage memory usage.
+## Chat memory repositories
 
-* **Pros:** Provides a basic form of history management with a controlled memory footprint.
-* **Cons:** Still lacks persistence. Older messages are simply discarded.
+| Repository | Starter artifact | Tool calls stored |
+|---|---|---|
+| `InMemoryChatMemoryRepository` | Auto-configured | n/a (in-process `ConcurrentHashMap`) |
+| `JdbcChatMemoryRepository` | `spring-ai-starter-model-chat-memory-repository-jdbc` | No |
+| `CassandraChatMemoryRepository` | `spring-ai-starter-model-chat-memory-repository-cassandra` | No |
+| `Neo4jChatMemoryRepository` | `spring-ai-starter-model-chat-memory-repository-neo4j` | Yes, as nodes |
+| `MongoChatMemoryRepository` | `spring-ai-starter-model-chat-memory-repository-mongodb` | No |
+| `RedisChatMemoryRepository` | `spring-ai-starter-model-chat-memory-repository-redis` | No mention; needs Redis Stack 7.0+ |
 
-### 3. Snapshot Chat Memory
+Azure Cosmos DB support exists as an external module maintained by the Cosmos DB team.
 
-This type of memory attempts to create a concise "snapshot" of the conversation history. It might use summarization techniques to reduce the amount of text stored while trying to preserve the essential context.
+### JDBC setup
 
-* **Pros:** More efficient for long conversations than simply storing all messages. Helps mitigate context window issues.
-* **Cons:** Summarization can sometimes lose nuances or specific details.
-
-### 4. Aggregating Chat Memory
-
-`AggregatingChatMemory` is designed to combine multiple memory types. For example, it could use a `SimpleChatMemory` for recent turns and a longer-term storage mechanism for older, summarized interactions.
-
-* **Pros:** Offers flexibility by combining different memory strategies.
-* **Cons:** Can increase complexity in configuration and management.
-
-## Advanced Memory Concepts for AI Agents
-
-Beyond basic chat history, sophisticated AI agents often require more advanced memory capabilities. These concepts are often supported or can be integrated with Spring AI's framework.
-
-### Episodic and Semantic Memory
-
-**Episodic memory** stores specific events or past experiences, like "the user asked about booking a flight yesterday." **Semantic memory**, on the other hand, stores general knowledge and facts, such as "Paris is the capital of France." Effectively managing both is crucial for a truly intelligent agent.
-
-While Spring AI's core memory components focus on dialogue history, they can be extended. For example, you might use an external vector database to store and retrieve semantic information or specific episodic events. This is where **agent memory** systems like [Hindsight](https://github.com/vectorize-io/hindsight) can play a role, offering structured ways to manage and query diverse memory types.
-
-### Long-Term Memory for AI Agents
-
-For agents that need to remember information across multiple sessions or over extended periods, **long-term memory** is essential. This goes beyond the immediate conversational context. Spring AI's in-memory solutions are insufficient for this.
-
-To implement long-term memory, developers typically integrate with external databases, such as:
-
-* **Vector Databases:** For storing and retrieving information based on semantic similarity using embeddings. This is a core technique in **retrieval-augmented generation (RAG)**.
-* **Relational Databases:** For structured data and user profiles.
-* **Key-Value Stores:** For quick lookups of specific pieces of information.
-
-The choice depends on the nature of the information to be stored and how it needs to be accessed. Integrating these with Spring AI usually involves custom components or using Spring Data modules.
-
-## Implementing Spring AI Conversational Memory: A Practical Example
-
-Let's consider a simplified scenario where we want an AI to remember the user's name.
-
-First, ensure you have the necessary Spring AI dependencies in your `pom.xml` or `build.gradle`.
-
-```xml
-<dependency>
- <groupId>org.springframework.ai</groupId>
- <artifactId>spring-ai-openai</artifactId> <!-- Or your preferred AI provider -->
-</dependency>
-<dependency>
- <groupId>org.springframework.ai</groupId>
- <artifactId>spring-ai-core</artifactId>
-</dependency>
-```
-
-Then, configure your AI provider and memory bean as shown previously.
-
-Now, you can inject `ChatClient` and `ChatMemory` into your service:
+Add the JDBC starter and Spring Boot wires a `JdbcChatMemoryRepository` for your `DataSource`:
 
 ```java
-import org.springframework.ai.chat.ChatClient;
-import org.springframework.ai.chat.ChatResponse;
-import org.springframework.ai.chat.messages.Message;
-import org.springframework.ai.chat.memory.ChatMemory;
-import org.springframework.stereotype.Service;
+@Autowired
+JdbcChatMemoryRepository chatMemoryRepository;
 
-import java.util.List;
-import java.util.stream.Collectors;
+ChatMemory chatMemory = MessageWindowChatMemory.builder()
+        .chatMemoryRepository(chatMemoryRepository)
+        .maxMessages(20)
+        .build();
+```
 
-@Service
-public class ConversationalAiService {
+Supported databases are PostgreSQL, MySQL/MariaDB, SQL Server, HSQLDB and Oracle; the dialect is auto-detected. Schema creation is controlled by `spring.ai.chat.memory.repository.jdbc.initialize-schema`: `embedded` (default, embedded databases only), `always` or `never` (use with Flyway or Liquibase). Data goes in the `SPRING_AI_CHAT_MEMORY` table.
 
- private final ChatClient chatClient;
- private final ChatMemory chatMemory;
+One limit matters for agents. The JDBC repository **silently drops** assistant messages with tool calls and tool response messages on save. If you need those, the docs point to the community [Spring AI Session](https://spring-ai-community.github.io/spring-ai-session/latest/) project and its JDBC session store.
 
- public ConversationalAiService(ChatClient chatClient, ChatMemory chatMemory) {
- this.chatClient = chatClient;
- this.chatMemory = chatMemory;
- }
+### Redis and Cassandra TTLs
 
- public String askAi(String question) {
- // Add the user's question to the memory
- chatMemory.add(new Message("user", question));
+Redis and Cassandra support expiry, which is useful when chat data has a retention policy. Redis takes `spring.ai.chat.memory.repository.redis.time-to-live` (for example `24h` or `30d`). Cassandra takes `spring.ai.chat.memory.cassandra.time-to-live`, and the docs suggest a long TTL such as three years for audit use. MongoDB has `spring.ai.chat.memory.repository.mongo.ttl` in seconds.
 
- // Generate a response from the AI, which will consider the memory
- ChatResponse response = chatClient.call(chatMemory.getMessages());
+## Upgrading chat memory from Spring AI 1.x to 2.0
 
- // Add the AI's response to the memory
- chatMemory.add(new Message("assistant", response.getResult().getOutput().getContent()));
+The [2.0 upgrade notes](https://docs.spring.io/spring-ai/reference/upgrade-notes.html) list four memory changes:
 
- return response.getResult().getOutput().getContent();
- }
+1. **`PromptChatMemoryAdvisor` is removed.** Replace it with `MessageChatMemoryAdvisor`; the builder API is the same.
+2. **Conversation ID is required.** There's no default conversation ID. Pass `ChatMemory.CONVERSATION_ID` on every call.
+3. **JDBC table gains a `sequence_id` column.** Messages are now ordered by it, not by timestamp, because timestamp precision varies across databases. Tables created by 1.x need the column added and backfilled before they work; the notes include a PostgreSQL migration script.
+4. **Messages carry a timestamp in metadata.** Read it with `JdbcChatMemoryRepository.CONVERSATION_TS`. Because metadata differs, a retrieved message no longer `equals()` an otherwise identical new one.
 
- public List<String> getConversationHistory() {
- return chatMemory.getMessages().stream()
- .map(message -> message.getRole() + ": " + message.getContent())
- .collect(Collectors.toList());
- }
-}
+## When you need more than chat memory
+
+Spring AI's chat memory is short-term: a bounded window of recent messages per conversation. It doesn't extract facts, merge duplicates, or carry a user's preferences into a new conversation ID. `VectorStoreChatMemoryAdvisor` gets you similarity search over old messages, which helps, but it's still retrieving raw messages.
+
+For assistants that should remember users across conversations, teams usually add a separate memory service called over HTTP or exposed as a tool. The [AI agent memory guide](/articles/ai-agent-memory-explained/) explains the options, and [how to add memory to a chatbot](/articles/how-to-add-memory-to-chatbot/) walks through the patterns in Python that translate directly to a Spring service.

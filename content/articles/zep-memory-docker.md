@@ -1,209 +1,165 @@
 ---
-title: 'Running Zep Memory with Docker: An Effective Deployment'
-description: 'Running Zep Memory with Docker: An Effective Deployment. Learn about zep memory docker, Zep Docker deployment with practical examples, code snippets, and architec...'
+title: "Zep Docker in 2026: Self-Hosting Options Explained"
+description: "Can you run Zep memory with Docker? Zep Community Edition is deprecated. The self-hosting options now: Graphiti server and MCP containers, legacy CE, BYOC."
 date: 2026-04-11
-lastmod: 2026-04-11
-tags:
-- AI memory
-- Docker
-- Zep
-- agent architecture
-keywords:
-- zep memory docker
-- Zep Docker deployment
-- AI agent memory Docker
-- run Zep with Docker
-- persistent AI memory Docker
-faq:
-- question: What is Zep memory?
-  answer: Zep is an open-source memory store designed for AI agents, enabling them to store, retrieve, and manage vast amounts of contextual information, including messages, documents, and embeddings, for
-    long-term recall.
-- question: Why use Docker for Zep memory?
-  answer: Docker simplifies Zep deployment by encapsulating dependencies, ensuring consistent environments across development and production, and making it easy to manage Zep as a standalone service or
-    integrate it into larger agent architectures.
-- question: Can Zep handle large volumes of data?
-  answer: Yes, Zep is built to scale and manage significant amounts of data, making it suitable for AI applications requiring extensive long-term memory capabilities, especially when deployed efficiently
-    with tools like Docker.
+lastmod: 2026-10-08
 slug: zep-memory-docker
+cluster: agent-memory
 aliases:
 - /articles/zep-memory-docker-compose/
 - /articles/zep-memory-local/
 - /articles/zep-memory-self-hosted/
+tags:
+- Zep
+- Graphiti
+- Docker
+- self-hosting
+keywords:
+- zep memory docker
+- zep docker compose
+- self-hosted zep
+- zep memory local
+- graphiti docker
+- zep community edition docker
+faq:
+- question: "Can I still self-host Zep with Docker?"
+  answer: "Not the current Zep product. Zep stopped maintaining Zep Community Edition in April 2025, and its Docker Compose files sit unsupported in the legacy folder of getzep/zep. The supported self-hosted path is Graphiti, Zep's open-source graph engine, which ships Docker images for a REST server and an MCP server. Full Zep in your own cloud is an Enterprise BYOC option."
+- question: "What is the Docker image for Graphiti?"
+  answer: "The Graphiti REST server is published as zepai/graphiti on Docker Hub and needs a Neo4j database. The Graphiti MCP server is published as zepai/knowledge-graph-mcp and by default bundles FalkorDB in the same container. Both need an LLM key, OpenAI by default."
+- question: "Is Graphiti the same as self-hosted Zep?"
+  answer: "No. Graphiti is the temporal knowledge graph engine Zep is built on, but it doesn't include Zep's users, threads, Context Block assembly, dashboard or managed graph engine. You get the graph and its search; you build user and conversation management yourself."
 ---
 
+**You can't self-host today's Zep with Docker.** Zep Community Edition, the Docker-based self-hosted Zep, has been deprecated since April 2025. What you can run in Docker now is **Graphiti**, Zep's open-source temporal graph engine, as a REST server with Neo4j or an MCP server with FalkorDB. The full Zep product runs in your own cloud only on the Enterprise plan.
 
-Deploying **zep memory docker** provides a streamlined path to integrating effective, scalable AI memory into your applications. Docker encapsulates Zep's dependencies, ensuring consistent operation across different environments and simplifying its management within complex agent systems for reliable, persistent storage of AI conversational context and knowledge. This is ideal for developers seeking robust memory solutions.
+Many guides still show `docker compose up` for Zep. They describe an edition that gets no updates or support. This page lays out the real options as of 8 October 2026, with working Compose setups, based on the [getzep/zep](https://github.com/getzep/zep) and [Graphiti](https://github.com/getzep/graphiti) repositories.
 
-## What is Zep Memory and Why Dockerize It?
+## What are the Zep self-hosting options in 2026?
 
-Zep memory is an open-source project designed to give AI agents **long-term memory**. It allows agents to store and recall information beyond their immediate context window, crucial for maintaining coherent conversations and complex task execution. Dockerizing Zep offers a **portable and reproducible deployment solution**. This means you can spin up a Zep instance with all its required components, like databases and configurations, consistently, whether on your local machine or in a cloud environment.
+**There are three ways to run Zep-style memory on your own infrastructure: Graphiti in Docker (supported, open source, Apache 2.0), the legacy Zep Community Edition Compose stack (deprecated and unsupported), or Zep's Bring Your Own Cloud deployment (Enterprise plan only). Zep Cloud, the main product, is managed.**
 
-### Defining Zep Memory
+| Option | Status | What you get | What you run |
+|---|---|---|---|
+| **Graphiti REST server** (`zepai/graphiti`) | Supported, Apache 2.0 | Temporal graph: add messages, search facts, delete episodes or groups | Graphiti container + Neo4j, LLM key |
+| **Graphiti MCP server** (`zepai/knowledge-graph-mcp`) | Supported, Apache 2.0 | Graph memory for Claude, Cursor and other MCP clients | One container with FalkorDB bundled, or + Neo4j |
+| **Graphiti as a library** (`graphiti-core`) | Supported, Apache 2.0 | Full Python API inside your app | Your app + a graph database |
+| **Zep Community Edition** (`zepai/zep`) | Deprecated April 2025, unsupported | Old Zep server with users and sessions | Zep + Graphiti 0.3 + Postgres containers |
+| **Zep BYOC** | Enterprise plan | The real Zep, inside your VPC | Arranged with Zep |
 
-Zep is an open-source AI memory store focused on providing agents with persistent, searchable recall capabilities. It efficiently stores conversational history, documents, and embeddings, extending an agent's contextual understanding far beyond typical short-term limits. This makes **zep memory docker** a powerful combination for AI development.
+## What happened to Zep Community Edition
 
-### The Advantages of Dockerizing Zep
+On 2 April 2025, Zep [announced](https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/) it had "decided to stop maintaining and releasing Zep Community Edition." The code stayed public under Apache 2.0, but with no updates or support. Zep's open-source work moved to Graphiti.
 
-Docker offers several advantages for deploying Zep:
+Today the getzep/zep README opens with "This repository is **not** Zep's product or service." It holds examples, framework integrations and benchmarks for Zep Cloud. The old server lives in `legacy/`, labeled "Deprecated Zep Community Edition (unsupported)."
 
-* **Environment Consistency:** Avoids "it works on my machine" issues by packaging Zep and its dependencies.
-* **Simplified Setup:** Reduces manual installation and configuration steps, accelerating development for **Zep Docker deployment**.
-* **Scalability:** Easily scale Zep instances as your application grows, supporting more users or data.
-* **Isolation:** Keeps Zep's dependencies separate from your main application's environment.
+That folder still has `docker-compose.ce.yaml`. It starts the `zepai/zep:latest` image, a pinned `zepai/graphiti:0.3` image and Postgres with pgvector (`ankane/pgvector:v0.5.1`). It may still start, but it's frozen at an old Graphiti and gets no security fixes. The CE API also differs from Zep Cloud's v3 SDK, which is built around users and threads. **Don't start a new project on it.**
 
-This makes **zep memory docker** a powerful combination for developers building sophisticated AI agents. You can find more about deploying AI memory solutions in our [guide to **zep memory docker** frameworks](/articles/best-ai-memory-framework/).
+## Option 1: Graphiti REST server with Neo4j
 
-## Setting Up Zep Memory with Docker
+The Graphiti repo includes a FastAPI service, published to Docker Hub as `zepai/graphiti` with tags that match each `graphiti-core` release (0.30.2 as of September 2026). It needs a Neo4j database and an LLM key.
 
-Getting Zep up and running with Docker involves a few straightforward steps. You'll typically pull the official Zep Docker image and configure it to suit your needs. This often includes setting up persistent storage for the Zep database so that your memory isn't lost when the container restarts. Mastering **zep memory docker** setup is key for persistent AI.
-
-### Prerequisites for Docker Deployment
-
-Before you start, ensure you have **Docker and Docker Compose** installed on your system. You can download them from the official Docker website. Docker provides the containerization environment, while Docker Compose simplifies the orchestration of multi-container Zep applications. This is a fundamental requirement for any **run Zep with Docker** scenario.
-
-### Pulling the Official Zep Docker Image
-
-The simplest way to start is by using the official Zep Docker image. You can pull it directly using the Docker CLI.
-
-```bash
-docker pull zepos/zep
-```
-
-This command downloads the latest stable version of the Zep image from Docker Hub. According to Docker Hub statistics, the Zep image has seen consistent adoption by developers, indicating its growing popularity for AI memory solutions. This is a foundational step for **zep memory docker** deployments.
-
-### Running Zep with Docker Compose for Persistent Storage
-
-For more complex configurations and easier management, Docker Compose is recommended. Create a `docker-compose.yml` file with the following content:
+This Compose file follows the [server README](https://github.com/getzep/graphiti/tree/main/server) and the repo's own `docker-compose.yml`:
 
 ```yaml
-version: '3.8'
-
 services:
- zep:
- image: zepos/zep
- container_name: zep-memory
- ports:
- - "8000:8000" # Map host port 8000 to container port 8000
- volumes:
- - zep-data:/app/data # Persist data using a Docker volume
- environment:
- # Optional: Configure database connection, API keys, etc.
- # For example, to use a PostgreSQL backend instead of SQLite:
- # ZEPO_DB_TYPE: postgres
- # ZEPO_DB_CONNECTION_STRING: "postgresql://user:password@host:port/dbname"
- restart: unless-stopped
-
+  graph:
+    image: zepai/graphiti:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=${NEO4J_PASSWORD}
+    depends_on:
+      - neo4j
+  neo4j:
+    image: neo4j:5.26.2
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+    volumes:
+      - neo4j_data:/data
 volumes:
- zep-data: # Define the persistent volume
+  neo4j_data:
 ```
 
-To start Zep, navigate to the directory containing your `docker-compose.yml` file and run:
+Steps to run it:
 
-```bash
-docker-compose up -d
-```
+1. Save the file as `docker-compose.yml` and create a `.env` with `OPENAI_API_KEY` and `NEO4J_PASSWORD`.
+2. Run `docker compose up -d`.
+3. Open `http://localhost:8000/docs` for the Swagger UI.
+4. Open `http://localhost:7474` to browse the graph in Neo4j.
+5. Send messages to `POST /messages` and query with `POST /search`.
 
-The `-d` flag runs the container in detached mode. This setup ensures that your Zep **memory data persists** even if the container is stopped and restarted. This is a critical aspect of **persistent AI memory** in Docker. This method is central to **zep memory docker** strategy.
-
-## Integrating Zep into Your AI Agent Architecture
-
-Once Zep is running via Docker, you can connect your AI agent applications to it. Zep provides SDKs for popular programming languages, simplifying this integration. The key is to configure your agent to use Zep as its **long-term memory store**. Effective integration is crucial for **zep memory docker** success.
-
-### Connecting Your Agent to the Dockerized Zep Instance
-
-Your agent will need the Zep server's address, which is typically `http://localhost:8000` when running locally with the default Docker Compose configuration. You'll use this address when initializing the Zep client in your agent's code. This is a core part of **AI agent memory Docker** integration.
-
-Here's a simplified Python example using the `zep-python` SDK:
+A `group_id` plays the role of a Zep user: each group is a separate graph partition. This Python client adds a conversation and searches it:
 
 ```python
-import zep
+import time
+import httpx
 
-## Initialize the Zep client
-## Replace with your Zep server URL if it's different
-zep_client = zep.ZepClient(base_url="http://localhost:8000")
+api = httpx.Client(base_url="http://localhost:8000", timeout=30)
 
-## Example of adding a message to an agent's memory
-## You would typically create a session for a specific user or conversation
-session = zep_client.memory.get_or_create_session(session_id="user123")
+api.post("/messages", json={
+    "group_id": "user-dana",
+    "messages": [
+        {"content": "I moved to Lisbon last month.", "role_type": "user", "role": "Dana"},
+        {"content": "Noted, I'll use your Lisbon address.", "role_type": "assistant", "role": "bot"},
+    ],
+}).raise_for_status()  # 202: processed by a background worker
 
-session.add_message(role="user", content="What are the main benefits of using Docker for AI memory?")
-session.add_message(role="assistant", content="Docker provides consistent environments, simplifies setup, and aids in scaling AI memory solutions like Zep.")
+time.sleep(20)  # extraction runs LLM calls asynchronously
 
-## You can also add documents or embeddings
-## For example, to add a document:
-## session.add_document(content="This is a document about AI memory benefits.", metadata={"source": "doc1"})
+result = api.post("/search", json={
+    "group_ids": ["user-dana"],
+    "query": "Where does Dana live?",
+    "max_facts": 5,
+}).json()
 
-## Retrieve messages from memory
-retrieved_messages = session.get_messages()
-print(retrieved_messages)
+for fact in result["facts"]:
+    print(fact["fact"], fact["valid_at"], fact["invalid_at"])
 ```
 
-This code snippet demonstrates how to initialize a Zep client and add messages to a session. The **zep memory docker** setup makes this client connection straightforward. For more advanced memory strategies, explore our comparison of [open-source memory systems for agents](/articles/open-source-memory-systems-compared/).
+Each fact comes back with `valid_at` and `invalid_at`, the validity window that makes Graphiti temporal. When Dana later says she moved again, the Lisbon fact gets an `invalid_at` instead of disappearing. For why that matters, see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-### Handling Context and Retrieval with Zep
+The server also has `POST /get-memory` (facts relevant to a list of messages), `GET /episodes/{group_id}`, and deletes for edges, episodes and whole groups.
 
-When your agent needs to recall information, it queries Zep. Zep can retrieve messages based on recency, semantic similarity, or custom filters. This allows the agent to access relevant past interactions or stored knowledge, effectively extending its **context window limitations**.
+## Option 2: Graphiti MCP server in Docker
 
-For instance, if an agent needs to answer a question based on previous conversations, it would query Zep for relevant messages. Zep, powered by **embedding models for memory**, can find semantically similar past exchanges, providing the agent with the necessary context to formulate an informed response. According to a 2023 paper by Vectorize.io researchers, agents using retrieval-augmented generation with semantic memory retrieval showed a 34% improvement in task completion accuracy compared to agents without such memory. This capability is vital for building AI that remembers conversations using **zep memory docker**.
+If the goal is memory for Claude Desktop, Cursor or another MCP client, use the Graphiti MCP server. A pre-built image is published as `zepai/knowledge-graph-mcp`. Its default setup runs **FalkorDB and the MCP server in a single container**:
 
-## Advanced Zep Docker Configurations
+```bash
+git clone https://github.com/getzep/graphiti.git
+cd graphiti/mcp_server
+cp .env.example .env      # set OPENAI_API_KEY (or another provider's key) here
+cd docker && docker compose up
+```
 
-While the basic Docker Compose setup is effective, you might need more advanced configurations for production environments. This could involve integrating Zep with a dedicated database like PostgreSQL for better performance and scalability, or setting up reverse proxies for secure access. Advanced **zep memory docker** setups are crucial for production.
+The Compose file reads keys from `mcp_server/.env`, so set them there rather than only exporting them in your shell.
 
-### Choosing Your Docker Deployment Strategy
+That exposes the MCP endpoint at `http://localhost:8000/mcp/` over HTTP, FalkorDB on port 6379, and FalkorDB's web UI on port 3000. A Neo4j variant is in `docker-compose-neo4j.yml` in the same folder. Point an HTTP-capable MCP client at the endpoint; stdio-only clients can run the server directly with `uv`, per the [MCP server README](https://github.com/getzep/graphiti/tree/main/mcp_server).
 
-Deciding between a simple `docker run` command for quick tests and `docker-compose.yml` for persistent, multi-container setups is the first step. For any serious development or production use of **zep memory docker**, Docker Compose is highly recommended due to its ability to manage volumes and environment variables effectively.
+The MCP server supports OpenAI, Anthropic, Gemini, Groq and Azure OpenAI for the LLM, and OpenAI, Voyage, Sentence Transformers and Gemini for embeddings, configured in `config.yaml`. More on this pattern in [AI memory MCP servers](/articles/ai-memory-mcp-server/).
 
-### Using External Databases for Scalability
+## Running Zep-style memory fully local
 
-Zep supports external databases, which can be crucial for handling large volumes of data and high throughput. You can configure Zep to connect to a PostgreSQL, MySQL, or other supported databases by modifying the `environment` variables in your `docker-compose.yml` file.
+"Local" usually means no cloud LLM. Graphiti defaults to OpenAI for both extraction and embeddings, but its README says other providers, including local servers such as **Ollama, vLLM, llama.cpp and LM Studio**, work through their OpenAI-compatible endpoints. It also warns that Graphiti "works best with LLM services that support Structured Output." Small local models often fail to produce valid entity and edge JSON, so test extraction quality before you commit.
 
-For example, to use PostgreSQL:
+Graph database choices for Graphiti 0.30: Neo4j 5.26, FalkorDB 1.1.2, or Amazon Neptune. Kuzu support is deprecated because the upstream Kuzu project is no longer maintained. FalkorDB also has an embedded "lite" install extra (`graphiti-core[falkordblite]`) for single-process setups.
 
-1. **Set up a PostgreSQL database** (either in another Docker container or a managed service).
-2. **Update `docker-compose.yml`**:
- ```yaml
- version: '3.8'
+## Graphiti vs the Zep you'd get in the cloud
 
- services:
- zep:
- image: zepos/zep
- container_name: zep-memory
- ports:
- - "8000:8000"
- environment:
- ZEPO_DB_TYPE: postgres
- ZEPO_DB_CONNECTION_STRING: "postgresql://user:password@your_postgres_host:5432/zepdb"
- depends_on:
- - postgres # Assumes you have a postgres service defined
- restart: unless-stopped
+Self-hosted Graphiti is the engine, not the product. The Graphiti README is explicit about the split:
 
- postgres: # Example Postgres service definition
- image: postgres:15
- container_name: zep_postgres
- environment:
- POSTGRES_DB: zepdb
- POSTGRES_USER: user
- POSTGRES_PASSWORD: password
- volumes:
- - postgres-data:/var/lib/postgresql/data
+| | Zep Cloud | Self-hosted Graphiti |
+|---|---|---|
+| Users and threads | Built in | Use `group_id`; build the rest |
+| Context Block (prompt-ready summary) | Built in | Build your own from search results |
+| Graph database | Zep's managed engine | You run Neo4j, FalkorDB or Neptune |
+| Dashboard, API logs | Yes | Neo4j Browser or FalkorDB UI only |
+| Framework packages (LangGraph, CrewAI, ADK...) | Yes | No; call the REST API or library |
+| Cost | Credits per ingested data (from $125/month for Flex) | Your infrastructure plus LLM and embedding calls |
 
- volumes:
- postgres-data:
- ```
- Remember to replace `user`, `password`, `your_postgres_host`, and `zepdb` with your actual database credentials and host. This setup ensures that Zep's data is stored in a reliable, external database, enhancing reliability for **large-scale AI memory**. This is a key step for production-ready **zep memory docker** deployments.
-
-### Scaling Zep for High-Traffic Applications
-
-For high-traffic applications, you might need to run multiple Zep instances behind a load balancer. Docker Swarm or Kubernetes can manage these deployments. The **zep memory docker** approach provides a foundation that can be extended to these orchestration platforms. For instance, deploying Zep on Kubernetes can enable automatic scaling based on demand, ensuring your agent's memory remains available even under heavy load.
-
-Consider exploring **Hindsight**, an open-source AI memory system, as another option for managing agent memory, particularly if you're looking for flexible integration patterns. You can find it on [GitHub](https://github.com/vectorize-io/hindsight).
-
-## Zep Memory vs. Other AI Memory Solutions
-
-While Zep excels at providing a structured way to store conversational history and embeddings, it's one of many approaches to **AI agent memory**. Other systems might focus on different aspects, such as **episodic memory in AI agents** or **semantic memory AI agents**. Understanding these differences helps in choosing the right **zep memory docker** strategy.
-
-Here's a comparison of Zep against a hypothetical alternative memory solution, "MemoryCore," focusing on key features:
-
-| Feature | Zep Memory (Docker) | Hypothetical MemoryCore |
-| :
+If you were on Community Edition and want the closest thing to what you had, Graphiti plus a thin layer for users and sessions is the honest answer. If you'd rather not run a graph database, other self-hostable memory servers exist: Mem0's Docker server and [Hindsight](https://github.com/vectorize-io/hindsight) both run on Postgres with pgvector, and Cognee runs with local file-based stores. These are compared in [Zep alternatives](/articles/zep-alternatives/), and Zep's own product is explained in [what is Zep memory](/articles/what-is-zep-memory/).

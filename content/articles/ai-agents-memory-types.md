@@ -1,125 +1,138 @@
 ---
-title: 'AI Agents: Differentiating Long-Term and Short-Term Memory'
-description: Explore the critical differences between AI agents' long-term and short-term memory, their roles, and implementation strategies for advanced AI systems.
+title: "Types of AI Agent Memory: Working, Episodic, Semantic"
+description: "The types of AI agent memory: working, episodic, semantic and procedural (CoALA), parametric vs external memory, and how LangGraph, Letta and Mastra name them."
 date: 2026-03-25
-lastmod: 2026-03-25
-tags:
-- AI Memory
-- Agent Architecture
-- Machine Learning
-keywords:
-- ai agents long term and short term memory
-- working memory ai
-- memory hierarchy agents
-- short term memory AI
-- long term memory AI
-- AI memory systems
-faq:
-- question: What is the primary difference between short-term and long-term memory in AI agents?
-  answer: Short-term memory, often akin to a scratchpad or working memory, holds information relevant to the immediate task or conversation. Long-term memory, conversely, stores knowledge and experiences
-    over extended periods, enabling persistent learning and recall of past events or learned facts.
-- question: How are short-term and long-term memory implemented in AI agents?
-  answer: Short-term memory is typically managed using techniques like context windows in LLMs, limited-size buffers, or specialized working memory modules. Long-term memory often involves external databases,
-    vector stores for semantic search, or knowledge graphs, allowing for scalable information storage and retrieval.
-- question: Can AI agents effectively switch between short-term and long-term memory?
-  answer: Yes, sophisticated AI agents are designed to seamlessly integrate both memory types. They utilize short-term memory for immediate context and long-term memory for recalling past interactions,
-    learned skills, or general knowledge, creating a more coherent and capable agent.
+lastmod: 2026-10-08
 slug: ai-agents-memory-types
 aliases:
 - /articles/ai-agent-types-of-memory/
 - /articles/ai-observational-memory/
 - /articles/llm-memory-types/
 - /articles/types-of-long-term-memory-in-agentic-ai/
+tags:
+- Memory Types
+- AI Agent Memory
+- CoALA
+- Agent Architectures
+keywords:
+- types of AI agent memory
+- AI agent memory types
+- LLM memory types
+- types of long-term memory in agentic AI
+- observational memory
+- CoALA memory
+cluster: agent-memory
+faq:
+- question: "What are the types of memory in an AI agent?"
+  answer: "The standard split, from the CoALA paper (Sumers et al., 2023), is one short-term working memory plus three long-term memories: episodic (past experiences), semantic (facts about the world and the user) and procedural (how to act, stored in the model's weights, the agent's code and its prompts)."
+- question: "What are the types of long-term memory in agentic AI?"
+  answer: "Episodic, semantic and procedural. Episodic memory stores what happened, semantic memory stores what is true, and procedural memory stores how to do things. LangGraph and LangMem use the same three types for cross-session memory."
+- question: "What is observational memory in AI?"
+  answer: "Observational Memory is a feature of the Mastra framework. Two background agents, an Observer and a Reflector, watch the conversation and keep a dense log of observations that replaces raw message history as it grows. In CoALA terms it is a way of compressing working memory into episodic and semantic notes."
 ---
 
-The distinction between **AI agents long term and short term memory** is fundamental to building sophisticated and capable artificial intelligence systems. Short-term memory, often referred to as **working memory AI**, acts as a temporary holding space for information immediately relevant to the current task or interaction. This allows the agent to maintain context and process ongoing information streams efficiently. Long-term memory, on the other hand, serves as a persistent repository for knowledge, experiences, and learned patterns, enabling the agent to recall information over extended periods and learn from past events. Understanding this **memory hierarchy agents** employ is crucial for designing agents that can perform complex, multi-turn tasks and exhibit continuous learning.
+The **types of AI agent memory** are usually split four ways: **working memory** for the current step, and three long-term stores, **episodic** (what happened), **semantic** (what is true) and **procedural** (how to act). The split comes from cognitive science. The CoALA paper mapped it onto LLM agents in 2023, and LangGraph, LangMem and most memory tools now use it.
 
-## Implementing Short-Term Memory in AI Agents
+That four-way split is not the only useful one. You can also sort memory by where it lives (model weights, the prompt, or an external store) and by scope (one thread or many). This page covers all three views and shows how real frameworks name their memory types. For the bigger picture of how memory systems store and retrieve data, see the pillar guide, [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-**Short-term memory** in AI agents is characterized by its limited capacity and short duration. It's the agent's immediate mental workspace, holding data that is actively being processed or is needed for the next few steps. This type of memory is essential for maintaining conversational flow, tracking intermediate results in a computation, or remembering user preferences within a single session. Without effective short-term memory, an AI agent would struggle to follow a conversation, complete multi-step instructions, or adapt its responses based on recent inputs.
+## What are the types of AI agent memory?
 
-### Context Windows and Buffers
+**AI agent memory types are categories for the information an agent keeps, based on what that information is for: holding the current task (working memory), recalling past events (episodic), knowing facts (semantic), or knowing how to act (procedural).** Each type gets written, stored and retrieved differently, so the type decides the design.
 
-One of the most common implementations of short-term memory is through the **context window** of large language models (LLMs). The context window dictates how much preceding text the model can consider when generating its next output. This provides a direct mechanism for short-term recall within a single interaction. However, the finite size of context windows presents a significant challenge, often leading to the loss of earlier information in long conversations. This limitation is a primary driver for developing more advanced memory strategies, as discussed in [understanding context window limitations and solutions](/articles/context-window-limitations-solutions/).
+The reference taxonomy is [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427) (CoALA) by Sumers, Yao, Narasimhan and Griffiths, published in TMLR in 2024. It starts from a plain fact: language models are stateless, so any memory an agent has is something its code keeps for it. CoALA then organizes that kept information into "multiple memory modules, each containing a different form of information."
 
-Beyond LLM context windows, developers often implement explicit **buffers** or **queues** to manage short-term memory. These data structures can store recent user inputs, agent outputs, or intermediate states. For instance, an AI agent designed for customer support might use a buffer to store the last five customer messages and agent responses to ensure it doesn't lose track of the ongoing issue. This explicit management allows for more fine-grained control over what information is retained in the immediate term.
+## The four CoALA memory types
 
-### Working Memory Modules
+CoALA borrows its modules from older cognitive architectures like Soar, which already split working memory from long-term procedural, semantic and episodic stores.
 
-More advanced agent architectures may incorporate dedicated **working memory modules**. These modules are designed to actively manage and prioritize information relevant to the current task. Unlike a passive context window, a working memory module can selectively attend to, update, and discard information based on task demands. This enables more dynamic and efficient use of short-term information, allowing the agent to focus on the most critical data points at any given moment. This concept is closely related to the principles of [AI agent memory explained](/articles/ai-agent-memory-explained/).
+| Memory type | What it holds (CoALA) | Typical agent example | Who usually writes it |
+|---|---|---|---|
+| **Working** | Active information for the current decision cycle: inputs, goals, intermediate results | The current messages, the plan, the last tool output | The agent loop, every step |
+| **Episodic** | Experience from earlier decision cycles | "Last Tuesday the deploy failed because the migration timed out" | The agent, after an interaction |
+| **Semantic** | Knowledge about the world and about itself | "The user is vegetarian", "API rate limit is 600/min" | The agent (via extraction) or a human-curated corpus |
+| **Procedural** | How to act: LLM weights (implicit) and agent code and prompts (explicit) | System prompt, tool code, a skill library | Mostly the developer |
 
-## Storing and Retrieving Long-Term Memory
+### Working memory
 
-**Long-term memory** in AI agents is about persistence and knowledge acquisition over time. It allows agents to remember past interactions, learned skills, factual knowledge, and user profiles, enabling personalization and continuous improvement. Unlike the fleeting nature of short-term memory, long-term memory aims to store information that is valuable for future use, even after the agent has been reset or the current session has ended. This is what enables an **AI agent to remember conversations** and build a consistent persona or knowledge base.
+**Working memory** is the hub. CoALA defines it as information kept "for the current decision cycle," including perceptual inputs, retrieved knowledge and active goals. It is more than the context window: it's a data structure that persists across LLM calls, and each prompt is built from a subset of it. In practice this is the message list plus agent state such as a task list. LangGraph calls this short-term memory.
 
-### Vector Databases and Embeddings
+### Episodic memory
 
-A prevalent approach for implementing long-term memory involves using **vector databases** to store information as **embeddings**. Embeddings are numerical representations of text, images, or other data, capturing their semantic meaning. When an agent needs to recall information, it can convert a query into an embedding and then search the vector database for similar embeddings, effectively retrieving semantically related past experiences or knowledge. This method is highly effective for tasks requiring the recall of factual information or past conversational snippets.
+**Episodic memory** stores experiences: past trajectories, event logs, earlier conversations. CoALA notes these episodes are typically pulled back into working memory during planning to support reasoning. Generative Agents (Park et al., 2023) is the classic example: every observation goes into a timestamped memory stream. See [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
 
-The use of embeddings is a cornerstone of many modern AI memory systems. Libraries like `sentence-transformers` or models integrated within frameworks facilitate the creation of these dense vector representations. For example, an agent might store summaries of past user interactions or important facts learned during previous sessions as embeddings in a vector database. When a similar topic arises, the agent can retrieve these stored memories. This forms the basis of many **AI agent persistent memory** solutions.
+### Semantic memory
 
-### Knowledge Graphs and Structured Databases
+**Semantic memory** stores facts. Classic RAG over Wikipedia is, in CoALA's framing, retrieval from a read-only semantic memory. What makes agents different is that they can also write new knowledge into it, for example facts extracted from a chat or lessons inferred from failures (Reflexion stores reflections like "there is no dishwasher in kitchen"). See [semantic memory in AI agents](/articles/semantic-memory-ai-agents/).
 
-For more structured knowledge and complex relationships, **knowledge graphs** and traditional **structured databases** are employed. Knowledge graphs represent information as a network of entities and their relationships, allowing for sophisticated querying and reasoning. An AI agent could use a knowledge graph to store facts about the world, user preferences, or system capabilities in a highly organized manner. This is particularly useful for agents requiring deep understanding and logical inference.
+### Procedural memory
 
-Structured databases, such as SQL or NoSQL databases, can also serve as long-term memory. They are adept at storing and retrieving specific pieces of information based on defined schemas. For instance, an agent might use a SQL database to store user account details, order history, or configuration settings, ensuring that critical data is reliably accessible. The choice between vector databases, knowledge graphs, or structured databases often depends on the nature of the information to be stored and the types of queries the agent is expected to perform. These approaches are vital for building **agentic AI long term memory**.
+**Procedural memory** stores how to act. CoALA splits it into **implicit** knowledge in the LLM weights and **explicit** knowledge in the agent's code and prompts. Unlike the other types, procedural memory can't start empty: the developer has to write it. CoALA also warns that writing to it is "significantly riskier" than writing to episodic or semantic memory, since a bad update can break the agent or subvert its designer's intent. See [procedural memory in AI agents](/articles/ai-agent-procedural-memory/).
 
-### Memory Consolidation and Summarization
+## Types of long-term memory in agentic AI
 
-To manage the potentially vast amount of information stored in long-term memory, **memory consolidation** techniques are employed. This involves processing and organizing stored memories to make them more efficient to access and less redundant. Techniques like summarization can be used to condense lengthy past interactions into shorter, more digestible entries in the long-term memory, reducing storage space and improving retrieval speed. This process is analogous to how humans consolidate memories during sleep.
+When people ask about long-term memory types, they mean the three persistent stores. LangGraph's [memory guide](https://docs.langchain.com/oss/python/langgraph/memory) uses exactly these three for cross-thread memory.
 
-**Memory consolidation in AI agents** is critical for maintaining a manageable and performant long-term memory system. Without it, the sheer volume of stored data could overwhelm the agent's retrieval capabilities. Summarizing long conversations or extracting key insights from multiple interactions allows the agent to retain the essence of past experiences without needing to store every detail verbatim. This is a key component for achieving **AI agent long-term memory** that is both comprehensive and efficient.
+| Long-term type | LangGraph "what is stored" | LangGraph agent example | Common storage shape |
+|---|---|---|---|
+| Semantic | Facts | Facts about a user | A profile (one JSON document) or a collection of small records |
+| Episodic | Experiences | Past agent actions, often used as few-shot examples | A collection of episodes, searched by similarity |
+| Procedural | Instructions | The agent's system prompt | A prompt stored in the store and rewritten from feedback |
 
-## Integrating Short-Term and Long-Term Memory
+The types interact. Generative Agents store raw events (episodic), periodically reflect on them, and write the conclusions ("I like to ski now") as higher-level memories that act like semantic knowledge. CoALA describes the same loop for a code-writing agent: read manuals (semantic), gain experience (episodic), reflect to get new facts (semantic), and build up a code library (procedural).
 
-The true power of AI agents lies in their ability to seamlessly integrate both short-term and long-term memory. This integration allows for a more nuanced and intelligent interaction, where the agent can use immediate context while also drawing upon a wealth of past knowledge and experience. This creates agents that are not only responsive but also consistent, personalized, and capable of learning over time. The sophisticated interplay between these memory types is a hallmark of advanced [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
+CoALA also suggests deciding **read and write access per type**. In its retail-assistant example, the agent can read and write episodic memory (to store each customer interaction) but only read semantic memory (the product catalog) and procedural memory (its own code). That's a practical rule: give the agent write access only where mistakes are cheap to undo.
 
-### Memory Hierarchy and Selection
+## LLM memory types by where the memory lives
 
-An effective **memory hierarchy agents** use involves mechanisms for selecting which memory to access and how to combine information from different sources. When faced with a query or a new piece of information, the agent must decide whether the relevant data resides in its short-term working memory or needs to be retrieved from long-term storage. This selection process often involves attention mechanisms or routing logic within the agent's architecture.
+A second view sorts memory by its physical home. This is the split most LLM papers use.
 
-For example, if a user asks a follow-up question within a conversation, the agent will primarily consult its short-term memory (context window or buffer) for the immediate dialogue history. However, if the question requires recalling a fact learned in a previous session, or a user preference stated days ago, the agent will query its long-term memory. This dynamic switching ensures efficiency for immediate tasks and depth for complex recall. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-agents-memory/).
+| Where it lives | What it is | How it's updated | Example |
+|---|---|---|---|
+| **Parametric** | Knowledge stored in the model's weights during training | Pretraining, fine-tuning, model editing | A model knowing Paris is in France |
+| **In-context** | Tokens in the current prompt (and their KV cache) | Every call; gone when the call ends | The chat history you resend |
+| **External (non-parametric)** | A database the app reads and writes | Any time, per user | A vector store, a knowledge graph, memory files |
 
-### Hybrid Memory Systems
+The RAG paper (Lewis et al., 2020) introduced the parametric vs non-parametric naming: a seq2seq model as parametric memory, a dense Wikipedia index as non-parametric memory. Weights hold general knowledge, but they can't be updated per user or per conversation.
 
-Many modern AI systems employ **hybrid memory systems** that combine different memory storage and retrieval mechanisms. A common pattern is to use LLM context windows for immediate short-term memory, vector databases for retrieving semantically similar past experiences (a form of long-term memory), and potentially knowledge graphs for structured factual recall. Frameworks and libraries are emerging to help manage these complex memory architectures, offering solutions that go beyond simple RAG or basic LLM context.
+The two views line up. Working memory is in-context. Episodic and semantic memory for agents are almost always external. Procedural memory spans all three: weights (implicit skill), code and prompts (explicit rules), and sometimes external skill files loaded on demand.
 
-Tools like **Hindsight**, an open-source AI memory system, provide a framework for building sophisticated memory management for agents, allowing for the integration of various memory types and retrieval strategies. [See Hindsight on GitHub](https://github.com/vectorize-io/hindsight). Such systems facilitate the development of agents that can effectively manage both immediate context and a vast store of learned information, leading to more robust and versatile AI applications. Comparing these solutions is key, as discussed in [open-source memory systems compared](/articles/open-source-memory-systems-compared/).
+## Memory types by scope: short-term vs long-term
 
-### Temporal Reasoning and Memory
+The third view is about scope and lifetime. LangGraph uses it as its main split:
 
-The ability to reason about time is intrinsically linked to memory in AI agents. Short-term memory helps track the sequence of events in an ongoing interaction, while long-term memory allows for the recall of past events and their temporal relationships. This is crucial for tasks requiring an understanding of causality, planning, or historical context. [Temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/) is an active area of research, aiming to imbue agents with a more human-like understanding of time.
+- **Short-term memory** is thread-scoped. It "tracks the ongoing conversation by maintaining message history within a session," and LangGraph saves it as agent state through a checkpointer.
+- **Long-term memory** is shared across threads. It is "saved within custom namespaces," so the same memories can be recalled in any conversation for that user or app.
 
-An agent that can effectively use both short-term and long-term memory can build a coherent timeline of its experiences. This allows it to understand cause-and-effect relationships, predict future outcomes based on past patterns, and provide responses that are temporally consistent. For instance, an agent might recall a past failure (long-term memory) to inform its current decision-making process (short-term memory), thereby avoiding a repeated mistake.
+Scope is a deployment question, not a content question. A user's dietary preference is semantic memory either way; it becomes long-term once you save it outside the thread. The side-by-side comparison is in [short-term and long-term memory in agentic AI](/articles/short-term-and-long-term-memory-agentic-ai/).
 
-## When to Use Each Type of Memory
+## How frameworks name their memory types
 
-The choice and implementation of memory types depend heavily on the specific application and the agent's intended capabilities.
+Every framework uses its own words. Checked against each project's docs on 8 October 2026:
 
-### Short-Term Memory Use Cases
+| Framework | Its memory types | Rough CoALA mapping |
+|---|---|---|
+| [LangGraph / LangMem](https://langchain-ai.github.io/langmem/concepts/conceptual_guide/) | Short-term (thread state); long-term semantic, episodic, procedural | Direct mapping |
+| [Letta](https://docs.letta.com/agent-sdk/memory) | Memory files in a git-backed MemFS; files under `system/` are in the prompt every turn, others are read on demand; background "dreaming" consolidates lessons | `system/` files act as working plus semantic memory; agents can also rewrite their own system prompt (procedural) |
+| [Mastra](https://mastra.ai/docs/memory/observational-memory) | Message history, "working memory" (persistent structured user data like names and goals), semantic recall, Observational Memory | Mastra's working memory is closer to CoALA semantic memory; Observational Memory compresses history into an observation log |
+| [Hindsight](https://github.com/vectorize-io/hindsight) | World facts, experiences, observations, mental models | World facts = semantic; experiences = episodic; observations and mental models = consolidated semantic knowledge |
+| Mem0 | "Multi-level memory": user, session and agent state | A scope split; contents are mostly extracted facts |
 
-* **Conversational Agents:** Maintaining the thread of a dialogue, remembering user's immediate requests, and tracking conversational state.
-* **Task Execution:** Holding intermediate results, variables, and steps in a multi-part task.
-* **Real-time Data Processing:** Keeping track of recent sensor readings or streaming data for immediate analysis.
-* **Interactive Games:** Remembering player actions and game state within a single session.
+### What is observational memory?
 
-### Long-Term Memory Use Cases
+**Observational Memory** is Mastra's name for a long-context memory feature added in `@mastra/memory` 1.1.0. Two background agents, an **Observer** and a **Reflector**, watch the agent's conversations and maintain "a dense observation log that replaces raw message history as it grows." The Observer writes observations; the Reflector merges related ones and condenses the log.
 
-* **Personalized Assistants:** Remembering user preferences, history, and learned behaviors across multiple sessions.
-* **Knowledge Management Systems:** Storing and retrieving vast amounts of information, facts, and domain-specific knowledge.
-* **Continuous Learning Agents:** Adapting and improving performance over time by recalling past successes and failures.
-* **Historical Analysis:** Recalling and reasoning about past events or interactions to inform current decisions.
-* **Building AI Personas:** Developing a consistent identity and backstory for an AI agent.
+In CoALA terms, it's a working-memory compression scheme that produces something between episodic notes and semantic facts. The idea is close to Generative Agents' reflection step and to the background ("subconscious") memory formation that LangMem describes.
 
-Effectively managing both **AI agents long term and short term memory** is essential for creating intelligent systems that are not only functional but also capable of exhibiting complex behaviors, learning, and providing personalized experiences. The ongoing development in **AI memory systems** and **agentic AI** continues to push the boundaries of what's possible, enabling agents to remember, learn, and interact with the world in increasingly sophisticated ways. For a comprehensive overview of available solutions, consider exploring [best AI agent memory systems](/articles/best-ai-memory-framework/).
+## How to choose which memory types your agent needs
 
-## FAQ
+CoALA's design advice boils down to a short checklist:
 
-### What is the primary difference between short-term and long-term memory in AI agents?
-Short-term memory, often akin to a scratchpad or working memory, holds information relevant to the immediate task or conversation. Long-term memory, conversely, stores knowledge and experiences over extended periods, enabling persistent learning and recall of past events or learned facts.
+1. **Start with working memory.** Every agent needs it. Decide what state lives beyond the message list (plan, task list, retrieved facts).
+2. **Add semantic memory if users repeat themselves.** Preferences, profile data and domain facts belong here.
+3. **Add episodic memory if past events matter.** Support history, "what did we decide last time," or examples of tasks done well.
+4. **Treat procedural memory as code.** Keep the system prompt and skills versioned. Let the agent propose changes, and review them before they ship.
+5. **Set read and write access per type.** Write access only where a wrong memory is cheap to fix.
+6. **Pick write timing.** Hot path (the agent saves during the turn) or background (a job extracts after the turn).
+7. **Measure recall on real questions** before adding more memory types.
 
-### How are short-term and long-term memory implemented in AI agents?
-Short-term memory is typically managed using techniques like context windows in LLMs, limited-size buffers, or specialized working memory modules. Long-term memory often involves external databases, vector stores for semantic search, or knowledge graphs, allowing for scalable information storage and retrieval.
-
-### Can AI agents effectively switch between short-term and long-term memory?
-Yes, sophisticated AI agents are designed to seamlessly integrate both memory types. They use short-term memory for immediate context and long-term memory for recalling past interactions, learned skills, or general knowledge, creating a more coherent and capable agent.
+Most production chat assistants need only working plus semantic memory. Long-running task agents gain the most from episodic and procedural memory, because that's where learning from past runs happens.

@@ -1,129 +1,133 @@
 ---
-title: 'LLM Memory with Obsidian: Building Persistent Knowledge for AI Agents'
-description: 'LLM Memory with Obsidian: Building Persistent Knowledge for AI Agents. Learn about llm memory obsidian, AI agent memory with practical examples, code snippets, an...'
+title: "LLM Memory With Obsidian: Karpathy's LLM Wiki Pattern"
+description: "How to use Obsidian as LLM memory, based on Andrej Karpathy's LLM Wiki gist: raw sources, an LLM-maintained wiki and a schema file, plus search and MCP tools."
 date: 2026-06-02
-lastmod: 2026-06-02
-tags:
-- LLM
-- AI Memory
-- Obsidian
-- Knowledge Management
-keywords:
-- llm memory obsidian
-- AI agent memory
-- persistent memory AI
-- Obsidian knowledge graph
-- LLM context window
-faq:
-- question: Can Obsidian act as a long-term memory for LLMs?
-  answer: Yes, Obsidian can function as a persistent knowledge base for LLMs. By structuring notes and using linking, it creates a retrievable knowledge graph that agents can query, effectively extending
-    their memory beyond the immediate context window.
-- question: How does Obsidian improve LLM recall?
-  answer: Obsidian improves LLM recall by providing a structured, searchable repository of past interactions and learned information. Agents can retrieve specific notes or related concepts, allowing for
-    more contextually relevant and informed responses.
-- question: What are the benefits of using Obsidian for LLM memory?
-  answer: The benefits include creating a persistent, searchable knowledge base, enabling agents to recall information across sessions, supporting complex reasoning by linking related concepts, and offering
-    a user-friendly interface for managing AI-generated knowledge.
+lastmod: 2026-10-08
 slug: llm-memory-obsidian
 aliases:
 - /articles/karpathy-llm-memory-wiki/
 - /articles/llm-memory-karpathy/
+tags:
+- Obsidian
+- Karpathy
+- LLM wiki
+- personal knowledge base
+- agent memory
+keywords:
+- "llm memory obsidian"
+- "karpathy llm wiki"
+- "karpathy llm memory"
+- "obsidian ai memory"
+- "llm knowledge base obsidian"
+cluster: agent-memory
+faq:
+- question: "What is Karpathy's LLM Wiki?"
+  answer: "It's a pattern Andrej Karpathy published as a GitHub gist on April 4, 2026. Instead of retrieving from raw documents on every question, an LLM agent builds and maintains an interlinked Markdown wiki from your sources. It has three layers: immutable raw sources, the LLM-written wiki, and a schema file such as CLAUDE.md or AGENTS.md."
+- question: "How do I use Obsidian as memory for an LLM?"
+  answer: "Make the vault the agent's working folder, put source documents in a raw folder the agent never edits, and write a schema file that tells the agent how to ingest sources, update pages, keep index.md and log.md, and lint. Run a coding agent like Claude Code or Codex in that folder and browse the results in Obsidian."
+- question: "Is an LLM wiki better than RAG?"
+  answer: "It's different. RAG re-finds fragments on every question. A wiki compiles knowledge once and keeps it updated, so cross-references and contradictions are already worked out. Karpathy notes an index file works at moderate scale; past that you add a search tool such as qmd."
 ---
 
+**Using Obsidian as LLM memory** means letting an AI agent write and maintain a folder of linked Markdown notes that you browse in Obsidian. The best-known version is **Andrej Karpathy's LLM Wiki**, published as a gist in April 2026. You drop sources into a folder, the agent compiles them into wiki pages, and both of you read the wiki instead of re-searching raw documents.
 
-**LLM memory obsidian** integration connects large language models with Obsidian's note-taking system. This creates persistent, retrievable knowledge stores, transforming static LLMs into dynamic, learning entities by overcoming their inherent context window limitations and enabling recall of information across sessions.
+This page explains what Karpathy actually proposed, how to set it up with Obsidian, the tools that help it scale, and when a memory server fits better. The main source is Karpathy's [LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), dated April 4, 2026.
 
-## What is LLM Memory Obsidian Integration?
+## What is Karpathy's LLM Wiki?
 
-**LLM memory obsidian integration** uses Obsidian as an external, persistent knowledge store for large language models (LLMs). This enables AI agents to access and reason over information beyond their limited context windows, establishing **long-term memory for AI agents**. It provides a structured repository for past experiences and learned facts, enhancing **llm memory obsidian** capabilities.
+**The LLM Wiki is a pattern where an LLM agent incrementally builds and maintains a persistent, interlinked Markdown wiki from source documents you collect. Knowledge is compiled once and kept current, rather than retrieved from raw text on every question. Obsidian is the viewer; the agent does the writing.**
 
-This approach overcomes LLM context window limitations, which restrict the amount of information an AI can process simultaneously. By offloading memory to Obsidian, LLMs gain access to a vast, organized store of knowledge. According to a 2023 study published on arxiv, retrieval-augmented generation systems using external memory sources can improve task completion accuracy by up to 40%.
+Karpathy's one-line summary in the gist: "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase." He calls the wiki "a persistent, compounding artifact."
 
-### The Challenge of LLM Memory Limitations
+The gist is an "idea file," not code. Karpathy says it's deliberately abstract so you can paste it into your own agent and have it build a version for your domain. That's why many slightly different implementations exist.
 
-LLMs operate with a **context window**, a fixed buffer holding current input data. Once this window fills, older information is discarded, causing memory loss. This severely limits an AI's ability to maintain coherent, long-term interactions or build upon accumulated knowledge. This is a core problem that **llm memory obsidian** seeks to solve.
+## The three layers
 
-For instance, many current LLMs have context windows ranging from 4,000 to 128,000 tokens, which translates to roughly 3,000 to 96,000 words. Information outside this window is inaccessible without external memory. This limitation impacts conversational AI, task-performing agents, and any application requiring sustained context, making **llm memory obsidian** integration crucial for advanced use cases.
+| Layer | Who writes it | What it holds |
+|---|---|---|
+| **Raw sources** | You | Articles, papers, transcripts, images. Immutable; the LLM reads but never edits them |
+| **The wiki** | The LLM | Summaries, entity and concept pages, comparisons, an overview. "You read it; the LLM writes it." |
+| **The schema** | You and the LLM, over time | A config file like `CLAUDE.md` or `AGENTS.md` that sets structure, conventions and workflows |
 
-## How Obsidian Enhances AI Agent Memory
+Two special files keep it navigable:
 
-Obsidian's architecture provides a strong foundation for managing complex knowledge for AI memory. Its core features, linking, tagging, and local storage, are well-suited for this purpose, making it an ideal backend for **llm memory obsidian** systems.
+- **`index.md`**: a catalog of every page with a link and a one-line summary. The agent reads it first when answering a question. Karpathy says this works well at moderate scale without embedding-based RAG.
+- **`log.md`**: an append-only record of ingests, queries and lint passes, with greppable headings like `## [2026-04-02] ingest | Article Title`.
 
-### Bidirectional Linking for Relational Memory
+## The three operations
 
-Obsidian's **bidirectional linking** is a signature feature. It enables the creation of a **knowledge graph** where notes are interconnected. An AI agent can store information in one note and link it to related concepts in others, building a rich memory.
+1. **Ingest.** Add one source. The agent reads it, discusses takeaways with you, writes a summary page, updates the index, revises related pages and appends to the log. Karpathy says one source may touch 10 to 15 pages, and he prefers ingesting one at a time.
+2. **Query.** Ask a question. The agent reads the index and relevant pages and answers with citations. Good answers get filed back into the wiki, so exploration compounds.
+3. **Lint.** Periodically, the agent checks for contradictions, stale claims, orphan pages, missing concepts and missing cross-references.
 
-For example, a user's preference for a specific coffee type could be stored in a "User Preferences" note. This note could then link to "Coffee Types" and "Morning Routine" notes. When recalling information, the agent traverses these links to retrieve contextually relevant data. This mimics **episodic memory in AI agents**, storing events with their associated context. This relational capability is key to **llm memory obsidian** effectiveness.
+Karpathy's argument for why this works: knowledge bases fail on maintenance, because "the maintenance burden grows faster than the value." LLMs do the bookkeeping at near-zero cost. He links it to Vannevar Bush's 1945 Memex: "The part he couldn't solve was who does the maintenance. The LLM handles that."
 
-### Tagging and Metadata for Categorization
+## How to set it up with Obsidian
 
-Obsidian also supports **tags** and **metadata** (YAML frontmatter) for efficient organization. Tags enable broad categorization, while metadata offers structured attributes for notes. AI agents can use these features to organize information effectively within their **llm memory obsidian** store.
+A minimal setup, following the gist:
 
-Research findings, for example, could be tagged with topics like `#AI` or `#Robotics`. Metadata could include source, date, and confidence scores. This structured data allows for precise retrieval, enabling agents to search for specific criteria, like notes tagged `#AI` with high confidence. This resembles **semantic memory in AI agents**, focusing on generalized knowledge within the **llm memory obsidian** framework.
+1. **Create a vault** and add folders: `raw/` for sources, `wiki/` for pages.
+2. **Write a schema file** (`CLAUDE.md` or `AGENTS.md`) at the root: page types, naming, link style (`[[wikilinks]]`), what goes in `index.md` and `log.md`, and the ingest, query and lint steps. Tell the agent never to edit `raw/`.
+3. **Clip sources** with the Obsidian Web Clipper extension, which saves web articles as Markdown. Karpathy also binds a hotkey to download attachments so images are stored locally.
+4. **Run a coding agent in the vault folder.** Claude Code, Codex or any agent that reads and writes files will work, because the schema file is the same kind of instruction file they already load; see [AI coding agent memory](/articles/ai-coding-agent-memory/).
+5. **Browse in Obsidian.** Graph view shows hubs and orphan pages. Dataview can build tables from page frontmatter, and Marp turns pages into slides.
+6. **Commit to git.** The wiki is a repo of Markdown, so you get history and can review what the agent changed.
 
-### Local Storage and Data Ownership
+Ingest one source, read what changed, correct the schema, repeat. The schema co-evolves with you.
 
-Obsidian stores all notes as plain text Markdown files locally. This offers significant advantages for AI memory systems:
+### A small lint script
 
-* **Data Ownership:** Users retain full control over their AI's knowledge base.
-* **Privacy:** Sensitive information remains on local systems, avoiding cloud server risks.
-* **Portability:** The knowledge base is easily backed up or transferred.
-* **Accessibility:** Data is directly available for programmatic AI interaction.
-
-This local, accessible format is vital for developing **persistent memory AI** systems independent of proprietary cloud solutions. The **Obsidian knowledge graph** can grow organically, mirroring human learning processes, and forms the backbone of a robust **llm memory obsidian** solution.
-
-## Implementing LLM Memory with Obsidian: A Practical Approach
-
-Creating an LLM memory system with Obsidian involves building a pipeline for AI agent interaction. This typically includes an LLM, an embedding model, and tools to interface with the Obsidian vault, enabling effective **llm memory obsidian** integration.
-
-### The Core Components
-
-1. **Large Language Model (LLM):** Acts as the central processing unit, understanding queries and generating responses.
-2. **Embedding Model:** Converts text into numerical vectors, capturing semantic meaning for similarity searches. These **embedding models for memory** are crucial for understanding text relationships in **llm memory obsidian**.
-3. **Vector Database (Optional but Recommended):** Stores embeddings for fast, efficient similarity searches. While Obsidian lacks a built-in vector DB, external tools can index its content effectively for **llm memory obsidian**.
-4. **Obsidian Vault:** Serves as the primary knowledge base, containing notes as Markdown files. This is the core of your **llm memory obsidian** setup.
-5. **Interfacing Script/Agent:** Orchestrates the interaction between the LLM, embedding model, and Obsidian vault. This script manages the **llm memory obsidian** workflow.
-
-### Workflow Example
-
-A typical workflow for an LLM agent using Obsidian for memory follows these steps:
-
-1. **User Query:** The user poses a question or request to the AI agent.
-2. **Query Embedding:** The agent converts the user's query into a numerical vector using the embedding model.
-3. **Similarity Search:** The query vector is used to search the vector database for semantically similar notes within the Obsidian vault. This process is a form of **retrieval-augmented generation (RAG)** applied to a local knowledge graph, a key aspect of **llm memory obsidian**.
-4. **Context Augmentation:** The content of the most relevant Obsidian notes is retrieved.
-5. **LLM Prompting:** The original user query and the retrieved note content are combined into a prompt for the LLM.
-6. **Response Generation:** The LLM formulates a response, informed by the augmented context from the **llm memory obsidian** system.
-7. **Memory Update (Optional):** The agent can create new notes or update existing ones in the Obsidian vault if new knowledge is generated. This contributes to **memory consolidation in AI agents** and enhances the **llm memory obsidian** store.
-
-### Python Example Snippet
-
-This example shows how to search for relevant notes in an Obsidian vault using basic file operations and a hypothetical search function.
+The lint step can be partly mechanical. This stdlib Python script finds broken `[[wikilinks]]` and orphan pages that nothing links to, which you can hand to the agent as a to-do list:
 
 ```python
-import os
 import re
-from typing import List, Dict
+import sys
+from pathlib import Path
 
-## Assume you have an embedding model and a way to search embeddings
-## from some_embedding_library import get_embedding, search_embeddings
+LINK = re.compile(r"\[\[([^\]|#]+)")
 
-OBSIDIAN_VAULT_PATH = "/path/to/your/obsidian/vault"
+def lint(wiki_dir: str) -> None:
+    pages = {p.stem: p for p in Path(wiki_dir).rglob("*.md")}
+    linked = set()
+    for name, path in pages.items():
+        for target in LINK.findall(path.read_text(encoding="utf-8")):
+            target = target.strip()
+            linked.add(target)
+            if target not in pages:
+                print(f"broken link: {name} -> {target}")
+    for name in sorted(set(pages) - linked - {"index", "log"}):
+        print(f"orphan page: {name}")
 
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+if __name__ == "__main__":
+    lint(sys.argv[1] if len(sys.argv) > 1 else "wiki")
+```
 
-def get_markdown_files(directory: str) -> List[str]:
- """Recursively finds all markdown files in a directory."""
- md_files = []
- for root, _, files in os.walk(directory):
- for file in files:
- if file.endswith(".md"):
- md_files.append(os.path.join(root, file))
- return md_files
+## Scaling past index.md
 
-def read_note_content(filepath: str) -> str:
- """Reads the content of a markdown file, excluding YAML frontmatter."""
- with open(filepath, 'r', encoding='utf-8') as f:
- content = f.read()
- # Remove YAML frontmatter if present
- content = re.sub(r'^
+An index file stops working once the wiki has thousands of pages. Options:
+
+- **qmd.** Karpathy mentions [qmd](https://github.com/tobi/qmd), a local Markdown search engine with BM25, vector search and LLM reranking, all on-device. It has a CLI and an MCP server (`qmd mcp`) with tools like `query` and `get`.
+- **Obsidian CLI.** Obsidian has an official command-line interface (it needs the 1.12 installer) that talks to the running app: `obsidian search query="..."`, `obsidian read`, `obsidian create`. An agent can call it from a shell.
+- **Basic Memory.** An AGPL-3.0 MCP server that stores notes as Markdown with an SQLite index. Point Obsidian at its folder and both see the same files.
+- **OpenClaw Memory Wiki.** OpenClaw's `memory-wiki` plugin compiles agent knowledge into a vault with structured claims and evidence, and can write Obsidian-friendly Markdown.
+- **A memory server over the vault.** Hindsight's Obsidian plugin (beta) syncs a vault one way into a Hindsight bank, tags notes by vault, folder and date, and answers questions with citations to the source notes; the vault stays the source of truth.
+
+More options are compared on [AI memory MCP servers](/articles/ai-memory-mcp-server/).
+
+## LLM wiki vs RAG vs memory servers
+
+| | LLM wiki (Obsidian) | RAG over documents | Agent memory server |
+|---|---|---|---|
+| **What's stored** | LLM-written pages that synthesize sources | Raw chunks of your documents | Extracted facts, events, entities |
+| **When work happens** | At ingest: pages updated once | At query: fragments re-found each time | At write: facts extracted per message |
+| **Human-readable** | Yes, browse in Obsidian | Only the source docs | Usually through an API or UI |
+| **Best for** | Research, reading, personal knowledge | Large document sets | Chat and agent personalization |
+| **Weak spot** | Errors in pages propagate; ingest is slow | No synthesis across sources | Hard to audit by hand |
+
+The wiki pattern shines for one person or a small team building up understanding of a topic. It's a poor fit for remembering thousands of users' preferences, where a memory API is the right tool; see [RAG vs agent memory](/articles/rag-vs-agent-memory/) and [persistent memory in AI](/articles/persistent-memory-ai/).
+
+## Risks to watch
+
+- **Compounding errors.** If the LLM misreads a source, the mistake spreads to every page it touches. Keep `raw/` immutable so you can always check, and lint often.
+- **Stale claims.** Pages written early may contradict newer sources. The lint step exists for this.
+- **Untrusted sources.** A clipped page with hidden instructions can steer the agent while it edits your wiki. Review diffs before committing, especially for web clips.

@@ -1,205 +1,156 @@
 ---
-title: 'Microsoft Agent Framework Memory: Enhancing AI Agent Recall'
-description: Explore Microsoft Agent Framework memory capabilities, focusing on how it enables AI agents to store and retrieve information for better performance and context.
+title: "Microsoft Agent Framework Memory: Sessions and Providers"
+description: "How memory works in Microsoft Agent Framework (Python): AgentSession, history providers, context providers, Redis, Mem0 and Foundry memory, and serialization."
 date: 2026-04-08
-lastmod: 2026-04-08
-tags:
-- Microsoft Agent Framework
-- AI Memory
-- Agent Architecture
-keywords:
-- microsoft agent framework memory
-- AI agent memory
-- agent recall
-- state management AI
-faq:
-- question: How does Microsoft Agent Framework handle memory?
-  answer: The framework provides mechanisms for agents to store and retrieve data, enabling them to maintain context across interactions and perform complex tasks. Developers can implement custom memory
-    solutions or integrate existing libraries.
-- question: What types of memory can agents use with the Microsoft Agent Framework?
-  answer: Agents can utilize various memory types, including short-term conversational history, long-term knowledge bases, and episodic event recall, depending on the application's needs. This flexibility
-    allows for tailored agent behavior.
-- question: Can I integrate custom memory solutions with the Microsoft Agent Framework?
-  answer: Yes, the framework is designed to be extensible, allowing developers to integrate custom memory solutions or leverage existing tools for enhanced agent recall. This supports a wide range of memory
-    requirements.
+lastmod: 2026-10-08
 slug: microsoft-agent-framework-memory
+cluster: agent-memory
 aliases:
-- /articles/ms-agent-framework-memory/
+  - /articles/ms-agent-framework-memory/
+tags:
+  - Microsoft Agent Framework
+  - Semantic Kernel
+  - AutoGen
+  - agent memory
+keywords:
+  - "microsoft agent framework memory"
+  - "agent framework context provider"
+  - "agent framework agentsession"
+  - "agent framework chat history"
+  - "semantic kernel memory replacement"
+faq:
+  - question: "How does memory work in Microsoft Agent Framework?"
+    answer: "Each conversation is an AgentSession that you pass to agent.run. Context providers run before and after every call: history providers reload and save the transcript, and memory providers such as Mem0, Redis or Microsoft Foundry extract and recall durable facts. Sessions serialize with to_dict and from_dict."
+  - question: "Where does Microsoft Agent Framework store chat history?"
+    answer: "Either in the model service, when it keeps server-side state such as OpenAI Responses or Foundry, or in a local history provider. InMemoryHistoryProvider is the built-in local one; RedisHistoryProvider and Cosmos DB providers persist history outside the process."
+  - question: "Is Microsoft Agent Framework the replacement for Semantic Kernel and AutoGen?"
+    answer: "Yes. Microsoft's overview calls Agent Framework the direct successor to Semantic Kernel and AutoGen, built by the same teams, and provides migration guides from both. Version 1.0 of the Python package shipped in April 2026."
 ---
 
-The ability for an AI agent to retain and recall information is fundamental to its intelligence. Microsoft's Agent Framework offers essential tools for this capability, providing patterns to imbue agents with effective **microsoft agent framework memory**, enabling them to store and retrieve data for coherent, intelligent behavior.
+**Microsoft Agent Framework memory** is built from two pieces. An **`AgentSession`** holds one conversation's state across `agent.run` calls. **Context providers** run before and after each call: history providers reload and save the transcript, and memory providers extract and recall lasting facts through Mem0, Redis, Cosmos DB, Neo4j or Microsoft Foundry.
 
-## What is Microsoft Agent Framework Memory?
+Agent Framework is the [successor to Semantic Kernel and AutoGen](https://learn.microsoft.com/en-us/agent-framework/overview/), built by the same teams. The Python package hit 1.0 in April 2026 and is at 1.20 as of October 2026. Code below follows the [Agent Framework memory tutorial](https://learn.microsoft.com/en-us/agent-framework/get-started/memory) and the package's current signatures.
 
-**Microsoft Agent Framework memory** refers to the systems and techniques employed within the framework that allow AI agents to store, retrieve, and manage information over time. This includes conversational history, user preferences, task-specific data, and external knowledge, enabling agents to maintain context and exhibit more intelligent, coherent behavior.
+## What is memory in Microsoft Agent Framework?
 
-This memory functionality is crucial for building sophisticated AI agents that can engage in natural dialogues, learn from interactions, and execute complex workflows. Without effective **microsoft agent framework memory**, agents would be stateless, forgetting every previous turn and making sustained, meaningful engagement impossible.
+**Memory in Microsoft Agent Framework is the context an agent carries between runs. An AgentSession groups a conversation and holds shared state. Context providers attached to the agent load that context before each model call and save what happened after it, either as a full transcript (history) or as selected durable facts (memory).**
 
-### The Importance of Memory in AI Agents
+The docs split providers into patterns:
 
-Memory isn't just an add-on; it's a core component of an agent's cognitive architecture. It allows agents to build upon past experiences, adapt their responses, and avoid repetitive errors. Think of it like human memory: without it, learning and intelligent action are severely limited.
+| Pattern | What it does | Examples |
+|---|---|---|
+| Conversation storage | Reloads and saves the exact transcript | `InMemoryHistoryProvider`, Redis, Cosmos DB |
+| Memory | Extracts and recalls selected durable facts | Mem0, Foundry, Redis, Neo4j, Cosmos DB |
+| RAG | Retrieves from an external knowledge source | Azure AI Search, Foundry, Neo4j, Redis |
 
-For AI agents, effective memory management directly impacts their performance. According to a 2023 study by Stanford AI Lab, agents with effective memory systems showed a 28% improvement in complex task completion rates compared to stateless agents. This highlights the critical role of **microsoft agent framework memory**. Memory enables agents to:
+This split mirrors the general difference between [short-term and long-term memory](/articles/short-term-and-long-term-memory-agentic-ai/): one keeps the conversation going, the other remembers the user.
 
-1. **Maintain Context:** Remember previous parts of a conversation or task to provide relevant responses, a key function of **microsoft agent framework memory**.
-2. **Personalize Interactions:** Store user preferences, history, and profiles for tailored experiences.
-3. **Learn and Adapt:** Update their knowledge base and behavior based on new information and feedback.
-4. **Improve Efficiency:** Avoid re-asking for information or re-performing tasks already completed.
+## Sessions: multi-turn conversations
 
-### Core Concepts of Agent Memory
-
-Understanding agent memory involves grasping a few key concepts. **Short-term memory** typically holds recent conversational data, acting as a scratchpad for immediate context. **Long-term memory** stores more persistent information, such as user profiles, learned facts, or past interaction summaries. **Episodic memory** can recall specific events or experiences, adding a temporal dimension to recall.
-
-The Microsoft Agent Framework supports these concepts through its design. It allows developers to implement various memory strategies, from simple conversational logs to complex knowledge graph integrations. This flexibility is key to tailoring agent behavior for diverse applications using **microsoft agent framework memory**.
-
-## Implementing Memory in Microsoft Agent Framework Agents
-
-The Microsoft Agent Framework doesn't prescribe a single memory solution but rather offers patterns and extensibility points. Developers typically integrate memory by defining how an agent's state is managed and by connecting to external storage mechanisms for their **microsoft agent framework memory**.
-
-### State Management and Persistence for Microsoft Agent Framework Memory
-
-An agent's **state** encompasses all the information it needs to operate at any given moment. This includes its current objective, any data it has collected, and its history. The Microsoft Agent Framework facilitates managing this state for **microsoft agent framework memory**.
-
-Persistence is the ability to save this state so it can be restored later. For example, if an agent is interrupted, its persistent memory allows it to resume from where it left off without losing crucial context. This is vital for long-running tasks or multi-session interactions, demonstrating the power of persistent **microsoft agent framework memory**.
-
-### Integrating External Memory Stores
-
-Often, an agent's memory needs exceed the capacity or capabilities of simple in-memory storage. The Microsoft Agent Framework allows integration with external **memory stores**. These can range from simple databases to sophisticated vector databases.
-
-These external stores are essential for:
-
-* **Scalability:** Handling large volumes of data beyond the agent's local memory.
-* **Durability:** Ensuring data survives agent restarts or crashes.
-* **Advanced Retrieval:** Employing techniques like semantic search for efficient information recall.
-
-This approach aligns with modern AI architectures, such as those discussed in [key AI agent architecture patterns](/articles/ai-agent-architecture-patterns/). Integrating external stores is a cornerstone of advanced **microsoft agent framework memory**.
-
-### Using Vector Databases for Semantic Memory
-
-For agents that need to understand and recall information based on meaning rather than exact keywords, **vector databases** are invaluable. These databases store data as numerical vectors (embeddings), allowing for semantic similarity searches. The Microsoft Agent Framework can integrate with these for sophisticated **microsoft agent framework memory**.
-
-When an agent needs to recall information, it converts the query into a vector and searches the database for similar vectors. This is the foundation of **semantic memory** in AI agents, enabling them to find relevant information even if the wording differs. Frameworks often provide connectors to popular vector databases.
-
-This mirrors the principles behind Retrieval-Augmented Generation (RAG), where external knowledge is retrieved to inform LLM responses. You can learn more about [understanding RAG versus agent memory concepts](/articles/rag-vs-agent-memory/) to understand the interplay. Effective RAG is a form of advanced **microsoft agent framework memory**.
-
-## Types of Memory Supported by the Framework
-
-Microsoft Agent Framework's flexibility means it can support various memory paradigms, catering to different agent needs. The choice of memory type directly influences an agent's capabilities and how it interacts with its environment and users, forming the core of **microsoft agent framework memory**.
-
-### Short-Term Conversational Memory
-
-This is the most basic form of memory, often holding the recent turns of a conversation. It's like a scratchpad that allows the agent to refer back to what was just said. In the context of the Microsoft Agent Framework, this might be managed as a list of messages, forming immediate **microsoft agent framework memory**.
-
-This type of memory is crucial for maintaining conversational flow. For example, an agent needs to remember the user's last question to answer it coherently. Frameworks often provide built-in mechanisms for managing this, similar to how [short-term memory in AI agents](/articles/short-term-memory-ai-agents/) functions.
-
-### Long-Term Memory and Knowledge Bases
-
-For agents that need to remember information beyond a single conversation, **long-term memory** is essential. This could involve storing user profiles, learned facts, or summaries of past interactions. The Microsoft Agent Framework supports building these for persistent **microsoft agent framework memory**.
-
-The Microsoft Agent Framework can be configured to connect to persistent data stores, such as SQL databases or NoSQL databases, to implement long-term memory. This allows agents to build a consistent persona and recall information across multiple sessions, effectively creating an [AI agent persistent memory](/articles/persistent-memory-ai/).
-
-This is also key for applications like [AI that remembers conversations](/articles/best-chatbot-for-memory/). Building robust long-term capabilities is a goal for **microsoft agent framework memory**.
-
-### Episodic Memory and Event Recall
-
-**Episodic memory** allows agents to recall specific past events or experiences. This adds a temporal richness to an agent's recall capabilities. For instance, an agent might remember a specific customer service interaction from last week, a sophisticated feature of **microsoft agent framework memory**.
-
-Implementing episodic memory often involves timestamping events and storing them in a way that allows for chronological retrieval or querying based on event details. This can be achieved using specialized databases or by structuring data within a general-purpose store. Understanding [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is vital for agents requiring detailed historical context.
-
-## Challenges and Considerations in Microsoft Agent Framework Memory
-
-While powerful, implementing and managing memory for AI agents presents several challenges. Developers must carefully consider how data is stored, retrieved, and secured for **microsoft agent framework memory**.
-
-### Context Window Limitations
-
-Large Language Models (LLMs) have a **context window limit**, meaning they can only process a certain amount of text at a time. Research from Hugging Face indicates that typical context windows have expanded from 2,048 tokens to over 100,000 tokens in some models, but limitations persist for very long interactions. The Microsoft Agent Framework must work within these constraints.
-
-Effective memory systems help mitigate this by providing only the most relevant information to the LLM. Techniques like summarization and selective retrieval are crucial for optimizing **microsoft agent framework memory**. Solutions for [context window limitations](/articles/context-window-limitations-solutions/) are actively being developed.
-
-### Data Privacy and Security
-
-Storing user data and conversation history raises significant privacy and security concerns. Any memory system integrated with Microsoft Agent Framework agents must adhere to strict data protection regulations and best practices. This is a crucial aspect of responsible **microsoft agent framework memory**.
-
-This includes encrypting sensitive data, implementing access controls, and providing mechanisms for data deletion or anonymization. Securely managing [long-term memory AI agent](/articles/ai-agent-long-term-memory/) data is paramount.
-
-### Memory Consolidation and Forgetting
-
-Just as humans don't remember everything perfectly, AI agents may need mechanisms for **memory consolidation** or even forgetting. Consolidating memories can involve summarizing or abstracting information to make it more manageable and efficient for retrieval. Intelligent forgetting is an advanced aspect of **microsoft agent framework memory**.
-
-Conversely, an agent might need to "forget" outdated or irrelevant information to prevent interference with current tasks. Implementing intelligent forgetting mechanisms is an active area of research and development. This relates to concepts like [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/).
-
-## Frameworks and Tools for Agent Memory
-
-While the Microsoft Agent Framework provides the structure, specific tools and libraries often handle the intricate details of memory management. Many developers turn to specialized solutions to build sophisticated memory systems for **microsoft agent framework memory**.
-
-### Open-Source Memory Systems
-
-Several **open-source memory systems** can be integrated with agents built on frameworks like Microsoft's. These systems offer pre-built components for managing different types of memory, often with support for vector embeddings and semantic search. For **microsoft agent framework memory**, these are valuable additions.
-
-For example, projects like [Hindsight](https://github.com/vectorize-io/hindsight) offer a flexible memory store for AI agents, allowing developers to easily add conversational memory and state management. Comparing [open-source memory systems](/articles/open-source-memory-systems-compared/) can help identify the best fit for a project.
-
-### Specialized Memory Libraries
-
-Libraries like LangChain and LlamaIndex offer extensive tools for building LLM applications, including robust memory modules. These can often be integrated into agents developed using broader frameworks. This expands the possibilities for **microsoft agent framework memory**.
-
-These libraries provide abstractions for various memory types, such as `ConversationBufferMemory`, `ConversationSummaryMemory`, and `VectorStoreRetrieverMemory`. Understanding the differences, for instance between Letta vs. Langchain memory, is key to choosing the right tools.
-
-Here's a basic Python example demonstrating a simple memory component, conceptualized for agent integration within a framework like Microsoft's:
+Pass the same session to every run and the agent sees earlier turns:
 
 ```python
-class SimpleAgentMemory:
- def __init__(self, max_size=10):
- # Initialize memory as a list to store conversation turns
- self.memory = []
- # Limit memory size to manage context effectively
- self.max_size = max_size
+import asyncio
 
- def add_message(self, role: str, content: str):
- """Adds a message to the memory, maintaining the size limit."""
- self.memory.append({"role": role, "content": content})
- # Trim memory if it exceeds max_size to keep it manageable
- if len(self.memory) > self.max_size:
- self.memory = self.memory[-self.max_size:]
+from agent_framework import Agent, AgentSession
+from agent_framework.openai import OpenAIChatClient
 
- def get_history(self) -> list:
- """Retrieves the current conversation history."""
- return self.memory
 
- def clear(self):
- """Clears all memory."""
- self.memory = []
+async def main():
+    agent = Agent(
+        client=OpenAIChatClient(model="gpt-5.4-mini"),  # reads OPENAI_API_KEY
+        instructions="You are a friendly assistant. Keep answers brief.",
+    )
+    session = agent.create_session()
 
-## Example Usage (conceptual integration with Microsoft Agent Framework)
-## Assume 'agent_context' is an object managing the agent's state and memory
-## agent_memory_instance = SimpleAgentMemory(max_size=15) # Configure size
-## agent_context.set_memory(agent_memory_instance) # Link to agent's state
+    await agent.run("My name is Alice and I love hiking.", session=session)
+    print(await agent.run("What do you remember about me?", session=session))
 
-## When an agent receives a user message:
-## user_input = "What's the weather like today?"
-## agent_memory_instance.add_message("user", user_input)
+    # Save and restore across processes
+    saved = session.to_dict()  # JSON-serializable dict
+    restored = AgentSession.from_dict(saved)
+    print(await agent.run("And my name?", session=restored))
 
-## Agent processes the input and generates a response:
-## agent_response = "I need your location to tell you the weather."
-## agent_memory_instance.add_message("agent", agent_response)
 
-## To get context for the LLM:
-## conversation_history = agent_memory_instance.get_history()
-## This history would then be passed to the LLM for response generation.
+asyncio.run(main())
 ```
 
-This code snippet illustrates a fundamental memory management pattern that could be a building block for **microsoft agent framework memory**. It shows how to add messages, maintain a history limit, and retrieve the conversation log, essential for stateful agent behavior.
+Where the transcript lives depends on the model service. Services that keep conversation state, such as OpenAI Responses or Foundry, store it server-side and the session holds a `service_session_id`. Otherwise a local history provider stores it. The Python docs note that the agent may add an `InMemoryHistoryProvider` automatically in some cases, "but this is not guaranteed," so add one explicitly if you rely on it.
 
-## Conclusion
+The [session docs](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/conversations/session) flag a security point. Service-side IDs like `resp_*` or `conv_*` are scoped to your API key or project, not to your end users. In a multi-user app, map client session IDs to service IDs in your own storage and check ownership before resuming.
 
-Microsoft Agent Framework memory is a critical aspect of building intelligent, stateful AI agents. By providing mechanisms for state management, persistence, and integration with external memory stores, the framework empowers developers to create agents capable of complex reasoning and nuanced interactions. Whether employing short-term conversational recall, long-term knowledge bases, or sophisticated semantic search, effective memory management is the bedrock of advanced agent capabilities. As AI continues to evolve, the sophistication of memory systems within frameworks like Microsoft's will only increase, pushing the boundaries of what AI agents can achieve, enhancing the utility of **microsoft agent framework memory**. The development of robust **microsoft agent framework memory** solutions is key to the future of AI agents.
+## History providers: persisting the transcript
 
-## FAQ
+`InMemoryHistoryProvider` keeps the transcript in process memory. For persistence, swap in a database-backed provider, such as Redis from the `agent-framework-redis` package:
 
-### How does Microsoft Agent Framework handle memory?
-The framework provides mechanisms for agents to store and retrieve data, enabling them to maintain context across interactions and perform complex tasks. Developers can implement custom memory solutions or integrate existing libraries for **microsoft agent framework memory**.
+```python
+from agent_framework import Agent
+from agent_framework.openai import OpenAIChatClient
+from agent_framework.redis import RedisHistoryProvider
 
-### What types of memory can agents use with the Microsoft Agent Framework?
-Agents can use various memory types, including short-term conversational history, long-term knowledge bases, and episodic event recall, depending on the application's needs. This flexibility allows for tailored agent behavior and advanced **microsoft agent framework memory**.
+history = RedisHistoryProvider(
+    source_id="chat_history",
+    redis_url="redis://localhost:6379",
+    application_id="support-bot",
+    agent_id="support-bot",
+    max_messages=50,  # keep the last 50 messages
+)
 
-### Can I integrate custom memory solutions with the Microsoft Agent Framework?
-Yes, the framework is designed to be extensible, allowing developers to integrate custom memory solutions or use existing tools for enhanced agent recall. This supports a wide range of memory requirements for **microsoft agent framework memory**.
+agent = Agent(
+    client=OpenAIChatClient(),
+    instructions="You are a helpful support assistant.",
+    context_providers=[history],
+)
+```
+
+`InMemoryHistoryProvider` accepts flags that control what it saves: `load_messages`, `store_inputs`, `store_outputs` and `store_context_messages`. The docs warn that only **one** history provider should have `load_messages=True`, or you'll replay several transcripts into the same call. A common pattern adds a second provider with `load_messages=False, store_context_messages=True` as an audit log of everything the model saw.
+
+## Context providers: custom and long-term memory
+
+A **context provider** subclasses `ContextProvider` and implements `before_run` and `after_run`. Before the call it can add instructions, messages or tools. After the call it can save what it learned. Per-session state goes in the `state` dict, which serializes with the session:
+
+```python
+from typing import Any
+
+from agent_framework import AgentSession, ContextProvider, SessionContext
+
+
+class UserNameMemory(ContextProvider):
+    def __init__(self) -> None:
+        super().__init__("user_name_memory")
+
+    async def before_run(self, *, agent: Any, session: AgentSession,
+                         context: SessionContext, state: dict[str, Any]) -> None:
+        name = state.get("user_name")
+        context.extend_instructions(
+            self.source_id,
+            f"The user's name is {name}." if name else "Ask for the user's name.",
+        )
+
+    async def after_run(self, *, agent: Any, session: AgentSession,
+                        context: SessionContext, state: dict[str, Any]) -> None:
+        for message in context.input_messages:
+            _, found, rest = (message.text or "").lower().partition("my name is")
+            if found and rest.strip():
+                state["user_name"] = rest.split()[0].capitalize()
+```
+
+That example only lasts as long as the session. For memory across sessions, use a provider backed by a memory service:
+
+- **Mem0** (`pip install agent-framework-mem0`, then `from agent_framework.mem0 import Mem0ContextProvider`). Set storage scopes (`user_id`, `agent_id`, `application_id`) and retrieval scopes (`search_user_id`, and so on) separately. The docs warn that if no `search_*` scope is set, it stores memories but never recalls them.
+- **Microsoft Foundry** (`FoundryMemoryProvider` in `agent_framework.foundry`): managed semantic memory in a Foundry memory store, scoped per user. Our page on [Azure AI Foundry long-term memory](/articles/azure-ai-foundry-long-term-memory/) covers the service side.
+- **Redis**, **Neo4j** and **Azure Cosmos DB** providers, listed on the [context provider integrations page](https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/context-providers/).
+
+Third-party memory systems also ship providers. [Hindsight](https://github.com/vectorize-io/hindsight) publishes `hindsight-agent-framework`, whose `HindsightProvider` recalls memories in `before_run` and retains the exchange in `after_run`.
+
+## Harness Agent memory
+
+Agent Framework also has a **Harness Agent** (`create_harness_agent` in Python): an opinionated agent for long, multi-step tasks with planning, context compaction, file access and memory built in. It uses the same `AgentSession` lifecycle. Per the docs, the harness saves history after each model call inside a tool loop, not just at the end of a run. Reuse and serialize the session so todos, file memory and tool approvals survive a restart.
+
+## Coming from Semantic Kernel
+
+Microsoft's [Semantic Kernel migration guide](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel/) maps the conversation pieces directly. Semantic Kernel's `ChatHistoryAgentThread` becomes `agent.create_session()`, and `agent.get_session(service_session_id=...)` continues a service-managed conversation. There's no session delete API, since not every provider supports deleting hosted history, so track and delete server-side history through the provider's own SDK.
+
+Existing Semantic Kernel vector stores aren't stranded either. With `semantic-kernel` 1.38 or later, `collection.create_search_function(...)` returns a kernel function, and `.as_agent_framework_tool()` turns it into an Agent Framework tool. Support differs by language: Mem0 is Python-only, and the Go SDK, in public preview, has no Harness Agent and none of the listed providers yet.
+
+For how Agent Framework's approach compares with LangGraph, CrewAI and the OpenAI Agents SDK, see the [AI agent framework comparison](/articles/ai-agent-framework-comparison/) and the [AI agent memory guide](/articles/ai-agent-memory-explained/).

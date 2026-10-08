@@ -1,74 +1,8 @@
 ---
-title: 'How LLM Memory Works: Architectures, Mechanisms, and AI Recall'
-description: Explore how LLM memory works, from context windows for short-term recall to long-term storage with vector databases and knowledge graphs. Understand AI recall and...
+title: "How LLM Memory Works: Weights, Context and KV Cache"
+description: "How LLM memory works inside the model: knowledge in weights, the context window, the KV cache, why each API call is stateless, and where external memory fits."
 date: 2026-04-02
-lastmod: 2026-04-02
-tags:
-- LLM
-- AI Memory
-- Agent Architecture
-- AI Recall
-- Context Window
-- Long-Term Memory AI
-- Short-Term Recall
-- Vector Databases
-- Knowledge Graphs
-- RAG
-- Agent Memory
-- Short-Term Recall AI
-- LLM Short-Term Recall
-- LLM Long-Term Memory
-- AI Agent Memory
-- Conversational Memory
-- Memory Consolidation
-- Memory Expiration
-- AI Recall Mechanisms
-keywords:
-- how llm memory works
-- LLM memory
-- AI recall
-- context window
-- long-term memory AI
-- short-term recall
-- vector databases
-- knowledge graphs
-- RAG
-- agent memory
-- shorttermrecall
-- LLM short-term recall
-- LLM long-term memory
-- AI agent memory
-- conversational memory
-- memory consolidation
-- memory expiration
-- AI recall mechanisms
-- short-term recall AI
-- llamaindex short-term recall
-faq:
-- question: What is the primary challenge in LLM memory?
-  answer: The primary challenge is the fixed, limited context window of most LLMs, which restricts how much information they can process at once, hindering their ability to recall past interactions or extensive
-    knowledge.
-- question: How do LLMs store information beyond their context window?
-  answer: LLMs can store information beyond their context window using external memory systems. These include vector databases, knowledge graphs, and specialized memory architectures that allow for retrieval
-    and integration of relevant data.
-- question: Can LLMs truly 'remember' like humans?
-  answer: LLMs don't 'remember' in a biological sense. They simulate memory by storing and retrieving information from their training data and external memory stores. This allows them to recall facts and
-    past interactions effectively.
-- question: What is the primary difference between an LLM's context window and long-term memory?
-  answer: The context window is a limited, temporary buffer for immediate information, while long-term memory involves external systems like vector databases or knowledge graphs for persistent recall of
-    vast amounts of data.
-- question: How does RAG improve LLM memory?
-  answer: RAG augments LLMs by retrieving relevant information from an external knowledge source (like a vector database) and injecting it into the LLM's context window, allowing it to access and use information
-    beyond its inherent training or immediate input.
-- question: Can LLMs forget information?
-  answer: LLMs themselves don't forget in a biological sense, but the information within their fixed context window is lost once it scrolls out. External memory systems can be designed with mechanisms for
-    data expiration, updating, or selective removal to simulate forgetting.
-- question: What is LLM short-term recall?
-  answer: LLM short-term recall refers to the model's ability to access and utilize information within its immediate context window, typically the last few turns of a conversation or recent input. This
-    is crucial for maintaining conversational flow and immediate task relevance.
-- question: How does LlamaIndex facilitate short-term recall?
-  answer: LlamaIndex provides tools and abstractions to manage conversation history and integrate with external memory stores, making it easier to implement effective short-term recall mechanisms for LLMs.
-    It simplifies the process of feeding relevant context into the LLM's window.
+lastmod: 2026-10-08
 slug: how-llm-memory-works
 aliases:
 - /articles/does-llm-have-memory/
@@ -77,192 +11,127 @@ aliases:
 - /articles/llm-memory-system/
 - /articles/memory-of-llm/
 - /articles/what-is-llm-memory/
+tags:
+- LLM memory
+- context window
+- KV cache
+- parametric memory
+- transformers
+keywords:
+- how llm memory works
+- does llm have memory
+- what is llm memory
+- llm memory mechanism
+- kv cache memory
+- llm stateless
+cluster: context-windows
+faq:
+- question: "Does an LLM have memory?"
+  answer: "Only in a limited sense. It has knowledge stored in its weights from training, and it can see the tokens in its current context window. It keeps nothing between API calls: OpenAI's docs say each request is 'independent and stateless.' Memory across sessions comes from the application, which stores information and adds it back to the prompt."
+- question: "What is the KV cache in an LLM?"
+  answer: "The KV cache stores the key and value vectors the model computed for every earlier token, per layer, so it doesn't recompute them for each new token. It lives in GPU memory during one request and grows linearly with context length. For Llama 3.1 8B it takes 128 KiB per token in 16-bit precision."
+- question: "Is prompt caching a form of memory?"
+  answer: "No. Prompt caching reuses computation for an identical prompt prefix to cut cost and latency. You still send the full prompt each time, the cache expires after minutes (5 minutes by default on Anthropic's API), and the model's output is the same as without it."
 ---
 
-LLM memory refers to how large language models store, access, and use information beyond their immediate input. This involves a limited context window for **short-term recall** and external systems like vector databases or knowledge graphs for **long-term memory AI**. Understanding these mechanisms is crucial for AI agents to maintain coherence and learn from interactions.
+**An LLM has three kinds of memory, and none of them remembers you.** Knowledge from training sits in its **weights**. During one request it sees the tokens in its **context window**, which it reads through a **KV cache** in GPU memory. After the reply, the cache is dropped. Anything that lasts between calls is stored outside the model by the app.
 
-Imagine an AI that forgets your entire conversation after a few sentences. That's the reality without effective LLM memory.
+## How LLM memory works: the short version
 
-## What is LLM Memory and Why Does It Matter for AI Recall?
+**LLM memory is the set of places a large language model holds information: its trained weights (long-lived, general knowledge), its context window (the tokens it can see in one request), and the KV cache (the working state for those tokens during generation).** None persists per user. Cross-session memory is an external store the application manages.
 
-LLM memory is the capability of large language models to retain and recall information across interactions. It encompasses **short-term recall** via context windows and **long-term memory AI** using external databases. This allows AI to maintain conversational flow, access past data, and perform complex, context-aware tasks. Effective **AI recall** is fundamental to building intelligent agents.
+| Layer | What it holds | Lifetime | Changes when | Size example (Llama 3.1 8B) |
+|---|---|---|---|---|
+| Weights (parametric memory) | Patterns and facts from training data | Until the model is replaced | Training or fine-tuning | ~8B parameters, ~16 GB in 16-bit |
+| Context window | The tokens in this request | One request | Your app builds a new prompt | Up to 128K tokens |
+| KV cache | Keys and values for every token seen so far | One request (or a short-lived cache) | Each new token adds an entry | 128 KiB per token |
+| External memory | Facts, past chats, documents | As long as you keep it | Your app writes to it | Unbounded |
 
-### The Context Window: LLMs' Short-Term Recall Mechanism
+The first three are inside the model's runtime. Only the fourth survives a new session.
 
-Every LLM operates with a **context window**, a fixed-size buffer that holds the current input and recent conversational history. This window is the LLM's primary, albeit limited, form of immediate memory, enabling **short-term recall**. Information outside this window is effectively forgotten by the model itself. This mechanism is often referred to as **LLM short-term recall**.
+## Does an LLM have memory?
 
-The size of this window directly impacts an LLM's ability to maintain context. For instance, a model with a 4,096 token context window can only consider the last 4,096 tokens of text when generating a response. This limitation is a significant bottleneck for long-running conversations or tasks requiring access to extensive prior information. For effective **short-term recall**, managing this window is paramount.
+Not between calls. OpenAI's [conversation state guide](https://developers.openai.com/api/docs/guides/conversation-state) states it plainly: "each text generation request is independent and stateless." When a chatbot recalls what you said ten turns ago, the app resent those ten turns as part of the new prompt.
 
-### Challenges with Context Window Limitations for AI Recall
+Even server-side conversation features don't change this. OpenAI's `previous_response_id` and Conversations API store the history for you, but the same guide notes that "all previous input tokens for responses in the chain are billed as input tokens." The model still reads the full history on every turn. The server just saves you from sending it.
 
-These context window limitations pose several practical problems for AI development, especially concerning **AI recall**. Imagine an AI assistant designed to manage your schedule; if a crucial instruction falls outside the context window, the assistant might fail to execute it. This is a common issue when building [ai-agent-long-term-memory](/articles/ai-agent-long-term-memory/) capabilities.
+So the honest answer to "does an LLM have memory?" is: it has trained knowledge and a short-term view of the current input. It doesn't learn from your conversation, and it doesn't keep anything for next time.
 
-According to a 2024 research paper on arXiv, models with larger context windows generally exhibit improved performance on tasks requiring long-range dependency understanding. For example, a study by Google AI in 2023 indicated that models with context windows exceeding 100,000 tokens showed a 15% improvement in complex reasoning tasks. However, even state-of-the-art models face practical and computational constraints with extremely large windows.
+## Memory in the weights (parametric memory)
 
-## Architectures for LLM Long-Term Memory and AI Recall
+During training, the model adjusts billions of numbers so it can predict the next token. Facts it saw often, like "Paris is the capital of France," end up encoded in those numbers. Researchers call this **parametric memory**.
 
-To address the context window's limitations and enhance **AI recall**, developers employ various architectures that grant LLMs access to **long-term memory AI**. These systems allow AI to recall information from past interactions, external documents, or vast knowledge bases.
+Where exactly? A well-cited study, [Transformer Feed-Forward Layers Are Key-Value Memories](https://arxiv.org/abs/2012.14913) (Geva et al., EMNLP 2021), found that the feed-forward layers behave like lookup tables: "each key correlates with textual patterns in the training examples," and each value pushes the output toward tokens likely to follow. Lower layers catch surface patterns; upper layers catch more semantic ones.
 
-### Retrieval-Augmented Generation (RAG) for Enhanced AI Recall
+Three limits follow:
 
-**Retrieval-Augmented Generation (RAG)** is a prominent approach that combines LLMs with an external knowledge retrieval system. This system typically involves a **vector database** storing information as embeddings. When a query is made, relevant information is retrieved from the database and then fed into the LLM's context window.
+- **It has a cutoff.** Llama 3.1's pretraining data stops at December 2023, per its [model card](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct). Anything newer isn't in the weights.
+- **It's fuzzy.** The model stores patterns, not records. It can't cite where it learned something, and it may blend or invent details.
+- **It's frozen at inference.** Chatting doesn't change the weights. Only training or fine-tuning does.
 
-This method allows LLMs to access information far beyond their inherent context, significantly improving **AI recall**. It's particularly effective for grounding responses in factual data and providing up-to-date information. Understanding [embedding-models-for-memory](/articles/embedding-models-for-rag/) is key to building efficient RAG systems.
+Fine-tuning can add knowledge, but it's a weak way to teach new facts. [Ovadia et al. (2023)](https://arxiv.org/abs/2312.05934) compared it with retrieval and found RAG "consistently outperforms it, both for existing knowledge encountered during training and entirely new knowledge." More on this layer in [LLM parametric memory](/articles/llm-parametric-memory/).
 
-### Vector Databases and Semantic Search for AI Recall
+## Memory in the context window
 
-**Vector databases** store data, such as text, as high-dimensional numerical vectors (**embeddings**). These embeddings capture the semantic meaning of the data. When a user asks a question, the query is also converted into an embedding. The database then finds the vectors (and thus, the data) closest in meaning to the query embedding, effectively performing a **semantic search**.
+The **context window** is the token budget for one request: system prompt, conversation so far, retrieved documents, tool results, and the model's own output. It's the closest thing an LLM has to working memory. Everything the model "knows" about your situation has to be in there.
 
-This is a fundamental mechanism for enabling **AI recall** from large datasets. Systems like Pinecone, Weaviate, and ChromaDB are popular choices for implementing this. The effectiveness of the retrieval directly impacts how well the LLM can answer questions based on its "memory."
+The mechanism that reads it is **self-attention**. For each new token, every layer compares that token's query vector with the key vectors of all earlier tokens, and mixes their value vectors by how well they match. That's how the model connects "it" in turn 12 with "the invoice" in turn 3.
 
-### Knowledge Graphs for Structured AI Recall
+Attention isn't uniform across a long input. [Lost in the Middle](https://arxiv.org/abs/2307.03172) (Liu et al., TACL 2023) found "performance is often highest when relevant information occurs at the beginning or end of the input context," and drops for facts buried in the middle. A large window holds more, but the model doesn't use all of it equally well. Sizes, limits and the full token breakdown are in [the context window of an LLM](/articles/context-window-of-an-llm/).
 
-**Knowledge graphs** represent information as a network of entities and their relationships. Unlike vector databases that focus on semantic similarity, knowledge graphs excel at capturing structured relationships and logical connections between pieces of information.
+## Memory in the KV cache
 
-An LLM can query a knowledge graph to retrieve specific facts or infer new relationships. This approach is powerful for tasks requiring complex reasoning and understanding of domain-specific knowledge, offering a different dimension to **AI recall**. It complements vector-based methods by providing structured context.
+The **KV cache** is where the context window physically lives during generation. The model produces one token at a time. Without a cache, it would recompute keys and values for the entire prompt at every step. Instead, it computes them once per token and keeps them in GPU memory.
 
-### Other Retrieval Methods for AI Recall
+### How big is the KV cache?
 
-Beyond vector databases and knowledge graphs, other retrieval methods exist. These can include traditional keyword search, hybrid approaches combining keyword and semantic search, or specialized indexing techniques tailored to specific data types. The goal is always to efficiently find the most relevant information to augment the LLM's current processing and improve **AI recall**.
+Per token, the cache holds one key and one value vector per KV head, per layer:
 
-## Agent-Based Memory Systems for Persistent AI Recall
-
-For more complex AI agents that need to perform multi-step tasks and maintain a persistent state, specialized agent memory architectures are employed. These systems go beyond simple Q&A retrieval to enable persistent **AI recall**.
-
-### Episodic Memory in AI Agents for Event Recall
-
-**Episodic memory** in AI agents refers to the recall of specific past events or experiences. This is analogous to human memory of personal experiences. An AI agent might store records of past interactions, actions taken, and their outcomes.
-
-This type of memory helps agents learn from their mistakes and successes, contributing to their **AI recall** of specific scenarios. For example, an agent that previously failed to complete a task might recall the specific steps it took that led to failure, thus avoiding them in the future. This is a core component of [episodic-memory-in-ai-agents](/articles/episodic-memory-in-ai-agents/).
-
-### Semantic and Working Memory Integration for Comprehensive AI Recall
-
-A sophisticated AI agent often integrates multiple memory types. **Semantic memory** stores general knowledge and facts, while **working memory** acts as a temporary scratchpad for information currently being processed. Combining these with episodic memory provides a more human-like cognitive architecture for comprehensive **AI recall**.
-
-This integrated approach allows agents to understand the context of a situation (semantic), focus on relevant details (working), and recall past similar experiences (episodic) to inform decisions. This is a key aspect of [ai-agent-memory-explained](/articles/ai-agent-memory-explained/).
-
-### Memory Consolidation and Forgetting for Efficient AI Recall
-
-Just as human memory isn't perfect, AI memory systems also benefit from mechanisms for **memory consolidation** and selective forgetting. Over time, an agent might accumulate a vast amount of data. **Memory consolidation** involves organizing and strengthening important memories, while forgetting irrelevant or redundant information prevents the memory store from becoming unwieldy, optimizing **AI recall**.
-
-This process is crucial for maintaining efficiency and relevance. Forgetting ensures that the most pertinent information is prioritized, improving retrieval speed and accuracy. This is an active area of research in [memory-consolidation-ai-agents](/articles/memory-consolidation-ai-agents/).
-
-## Implementing LLM Memory and AI Recall
-
-Implementing effective LLM memory often involves combining LLM capabilities with external storage and retrieval mechanisms. Several tools and frameworks facilitate this for robust **AI recall**.
-
-### Open-Source Memory Systems for AI Recall
-
-Several open-source projects provide building blocks for LLM memory. These include libraries for managing conversation history, integrating with vector databases, and building agentic loops, all aimed at enhancing **AI recall**.
-
-For instance, tools like **Hindsight** offer a framework for managing and querying LLM memories, enabling agents to retain context and learn from interactions. You can explore Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight). These systems are vital for developing [ai-agent-persistent-memory](/articles/persistent-memory-ai/).
-
-### Frameworks and Libraries for LLM Memory and AI Recall
-
-Frameworks like LangChain and LlamaIndex provide abstractions for interacting with LLMs and memory stores. They offer built-in components for conversation memory, document loaders, and vector store integrations, simplifying the development of applications that require LLM memory and robust **AI recall**.
-
-These frameworks abstract away much of the complexity, allowing developers to focus on the application logic rather than the low-level details of memory management. Comparing frameworks like [letta-ai-guide](/articles/letta-ai-guide/) versus others can help in choosing the right tools for **AI recall**.
-
-### Python Code Example: Basic Conversation Memory for Short-Term Recall
-
-Here's a simplified Python example using a hypothetical `LLMClient` and `VectorDatabase` to simulate storing and retrieving conversation history, focusing on **short-term recall**.
-
-```python
-from typing import List, Dict, Any
-
-class LLMClient:
- def generate_response(self, prompt: str, history: List[Dict[str, str]]) -> str:
- # In a real scenario, this would call an LLM API
- print(f"LLM received prompt: {prompt}")
- print(f"LLM received history: {history}")
- return f"Response based on: {prompt} and {len(history)} past messages."
-
-class VectorDatabase:
- def __init__(self):
- self.store = []
-
- def add_message(self, role: str, content: str):
- # In a real scenario, this would embed and store the message
- self.store.append({"role": role, "content": content})
- print(f"Added to vector store: {role}: {content[:30]}...")
-
- def retrieve_relevant_messages(self, query: str, limit: int = 5) -> List[Dict[str, str]]:
- # In a real scenario, this would perform semantic search
- print(f"Retrieving for query: {query[:30]}...")
- # Simple simulation: return recent messages if query is short
- if len(query) < 20 and len(self.store) > 0:
- return self.store[-limit:]
- return []
-
-class ConversationManager:
- def __init__(self, llm_client: LLMClient, vector_db: VectorDatabase):
- self.llm = llm_client
- self.db = vector_db
- self.conversation_history = []
-
- def add_user_message(self, message: str):
- self.conversation_history.append({"role": "user", "content": message})
- self.db.add_message("user", message)
-
- def get_llm_response(self, prompt: str) -> str:
- # Retrieve relevant past messages to augment the context for short-term recall
- relevant_history = self.db.retrieve_relevant_messages(prompt)
-
- # Combine current history with retrieved messages for the LLM
- full_context = self.conversation_history + relevant_history
-
- response = self.llm.generate_response(prompt, full_context)
- self.conversation_history.append({"role": "assistant", "content": response})
- self.db.add_message("assistant", response)
- return response
-
-## Example Usage
-llm = LLMClient()
-db = VectorDatabase()
-manager = ConversationManager(llm, db)
-
-manager.add_user_message("What is the capital of France?")
-response1 = manager.get_llm_response("Tell me more about it.")
-print(f"Assistant: {response1}\n")
-
-manager.add_user_message("And what about Germany?")
-response2 = manager.get_llm_response("What are its main industries?")
-print(f"Assistant: {response2}\n")
+```
+bytes per token = 2 (key + value) × layers × kv_heads × head_dim × bytes per number
 ```
 
-### Considerations for Memory Design for AI Recall
+Llama 3.1 8B's `config.json` lists 32 layers, 8 key-value heads (grouped-query attention, down from 32 query heads) and a head dimension of 128. At 16-bit precision (2 bytes):
 
-When designing an LLM memory system, several factors are critical for effective **AI recall**:
+```python
+layers, kv_heads, head_dim, bytes_per = 32, 8, 128, 2
 
-1. **Scalability**: The system must handle growing amounts of data and user interactions.
-2. **Retrieval Speed**: Information needs to be retrieved quickly to maintain low latency.
-3. **Relevance**: The system must retrieve the most pertinent information for the current task.
-4. **Cost**: Storing and querying large amounts of data can incur significant costs.
-5. **Privacy and Security**: Sensitive information stored in memory must be protected.
+per_token = 2 * layers * kv_heads * head_dim * bytes_per
+print(per_token)                      # 131072 bytes = 128 KiB per token
 
-Choosing the right memory architecture, whether it's RAG, knowledge graphs, or a hybrid approach, depends heavily on the specific application requirements for **AI recall**. The field is rapidly evolving, with new techniques constantly emerging for [how-to-give-ai-memory](/articles/how-to-give-ai-agents-memory/) capabilities.
+full_window = per_token * 131_072     # Llama 3.1's 128K-token window
+print(full_window / 2**30)            # 16.0 GiB
+```
 
-## The Future of LLM Memory and AI Recall
+A full 128K-token window needs about **16 GiB of cache for a single request**, roughly the same as the model's weights in 16-bit. That's why long contexts are expensive and why providers cap them. Without grouped-query attention (32 KV heads instead of 8), the cache would be four times larger.
 
-The ongoing advancements in LLM architecture and memory systems promise more capable and context-aware AI with enhanced **AI recall**. Researchers are exploring ways to make LLMs more efficient in their memory usage and to develop more nuanced forms of recall and learning.
+Managing this memory is its own engineering problem. The vLLM paper, [Efficient Memory Management for LLM Serving with PagedAttention](https://arxiv.org/abs/2309.06180) (Kwon et al., SOSP 2023), showed that naive allocation wastes cache space through "fragmentation and redundant duplication," and that paging it like an operating system's virtual memory improved throughput 2-4x at similar latency.
 
-Future LLMs may exhibit more dynamic and adaptive memory capabilities, potentially moving closer to human-like understanding and recall. This evolution is critical for building truly intelligent agents that can operate autonomously and effectively in complex environments. The development of [ai-agent-architecture-patterns](/articles/ai-agent-architecture-patterns/) continues to be a central focus for improving **AI recall**.
+### The KV cache is not long-term memory
 
-## FAQ
+The cache belongs to one request. When the response ends, it's freed or evicted. It can't be searched later, it holds vectors rather than readable facts, and it grows with every token, so keeping it for months of conversations isn't practical.
 
-* **What is the primary challenge in LLM memory?**
- The primary challenge is the fixed, limited context window of most LLMs, which restricts how much information they can process at once, hindering their ability to recall past interactions or extensive knowledge.
-* **How do LLMs store information beyond their context window?**
- LLMs can store information beyond their context window using external memory systems. These include vector databases, knowledge graphs, and specialized memory architectures that allow for retrieval and integration of relevant data.
-* **Can LLMs truly 'remember' like humans?**
- LLMs don't 'remember' in a biological sense. They simulate memory by storing and retrieving information from their training data and external memory stores. This allows them to recall facts and past interactions effectively.
-* **What is the primary difference between an LLM's context window and long-term memory?**
- The context window is a limited, temporary buffer for immediate information, while long-term memory involves external systems like vector databases or knowledge graphs for persistent recall of vast amounts of data.
-* **How does RAG improve LLM memory?**
- RAG augments LLMs by retrieving relevant information from an external knowledge source (like a vector database) and injecting it into the LLM's context window, allowing it to access and use information beyond its inherent training or immediate input.
-* **Can LLMs forget information?**
- LLMs themselves don't forget in a biological sense, but the information within their fixed context window is lost once it scrolls out. External memory systems can be designed with mechanisms for data expiration, updating, or selective removal to simulate forgetting.
-* **What is LLM short-term recall?**
- LLM short-term recall refers to the model's ability to access and use information within its immediate context window, typically the last few turns of a conversation or recent input. This is crucial for maintaining conversational flow and immediate task relevance.
-* **How does LlamaIndex facilitate short-term recall?**
- LlamaIndex provides tools and abstractions to manage conversation history and integrate with external memory stores, making it easier to implement effective short-term recall mechanisms for LLMs. It simplifies the process of feeding relevant context into the LLM's window.
+## Prompt caching is not memory either
+
+**Prompt caching** keeps the KV cache for a repeated prompt prefix for a short time, so the next request with the same prefix skips recomputing it. Anthropic's [prompt caching docs](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) describe it as "resuming from specific prefixes in your prompts," with a default lifetime of 5 minutes (1 hour at extra cost) and cache reads at 0.1x the base input price for most models.
+
+It's a cost and speed optimization, not memory:
+
+- Cache hits "require 100% identical prompt segments." Change one early token and the cache misses.
+- You still send the full prompt. The model's answer is the same with or without the cache.
+- It expires in minutes, not sessions.
+
+It does pair well with memory, though. A stable system prompt plus a memory block that changes rarely can stay cached while the conversation grows.
+
+## Where external memory comes in
+
+Since the model keeps nothing between calls, any LLM memory system that lasts has to live outside it. The app stores information in a database, then puts the relevant pieces back into the context window. The common forms:
+
+- **Chat history buffer:** resend recent turns, trim or summarize older ones.
+- **RAG:** search a document store and add matching passages.
+- **Memory layers:** extract facts from conversations, store them per user, retrieve the few that matter. Tools like Mem0, Zep, Letta and others work this way.
+- **Self-managed memory:** the model calls tools to read and write its own store, as in [MemGPT](https://arxiv.org/abs/2310.08560) (Packer et al., 2023), which treats the context window like RAM and external storage like disk.
+
+All four end the same way: text placed in the context window, read through attention, held in the KV cache for one request. The design choices for that outside layer (stores, retrieval, consolidation) are covered in [AI memory architecture](/articles/ai-memory-architecture/). For the user-facing side, including how ChatGPT and Claude do this, see [how AI memory works](/articles/how-ai-memory-works/).
+
+Research is pushing at the boundary. Some architectures add memory that updates at inference time, such as Google's Titans; see [Google Titans and human-like memory](/articles/google-titans-give-ai-human-like-memory/). Mainstream production models still work as described above.

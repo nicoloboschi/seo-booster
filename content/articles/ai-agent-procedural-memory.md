@@ -1,207 +1,139 @@
 ---
-title: 'AI Agent Procedural Memory: How Agents Learn Skills'
-description: 'AI Agent Procedural Memory: How Agents Learn Skills. Learn about ai agent procedural memory, procedural memory AI with practical examples, code snippets, and arch...'
+title: "Procedural Memory in AI Agents: Prompts, Skills, Workflows"
+description: "Procedural memory in AI agents and LLMs: weights, code, prompts and skill files, how Voyager, AWM and Memp learn procedures, and LangMem prompt optimization."
 date: 2026-03-26
-lastmod: 2026-03-26
-tags:
-- AI Memory
-- Procedural Memory
-- AI Agents
-keywords:
-- ai agent procedural memory
-- procedural memory AI
-- AI skills memory
-- agent task execution
-- how AI agents learn
-faq:
-- question: What is the primary function of procedural memory in an AI agent?
-  answer: The primary function of procedural memory in an AI agent is to store and enable the execution of learned skills, tasks, and sequences of actions. It allows the agent to perform procedures automatically
-    and efficiently without explicit step-by-step guidance for each instance.
-- question: How does an AI agent 'learn' a procedure?
-  answer: AI agents learn procedures through various methods, including reinforcement learning (trial and error with rewards), imitation learning (observing and mimicking demonstrations), and by interpreting
-    and executing explicit instructions. These processes encode the sequence of actions required for a task.
-- question: Can procedural memory be combined with other memory types?
-  answer: Yes, procedural memory is often integrated with other memory types like episodic and semantic memory. For example, an agent might recall an episodic memory of learning a skill and then use its
-    procedural memory to execute that skill. Semantic memory provides the context and knowledge necessary to understand when and how to apply a learned procedure.
+lastmod: 2026-10-08
 slug: ai-agent-procedural-memory
 aliases:
 - /articles/llm-procedural-memory/
 - /articles/llm-procedural-memory-optimization/
+tags:
+- Procedural Memory
+- AI Agent Memory
+- Memory Types
+- Agent Skills
+- Prompt Optimization
+keywords:
+- AI agent procedural memory
+- procedural memory AI
+- LLM procedural memory
+- LLM procedural memory optimization
+- agent skill library
+- prompt optimization memory
+cluster: agent-memory
+faq:
+- question: "What is procedural memory in AI agents?"
+  answer: "Procedural memory is the agent's knowledge of how to do things. In the CoALA framework it has two parts: implicit knowledge in the LLM's weights and explicit knowledge in the agent's code and prompts. In practice it shows up as the system prompt, tool code, skill files and learned workflows."
+- question: "How do LLM agents learn procedural memory?"
+  answer: "Mostly by editing text, not weights. Agents rewrite their own instructions from feedback (LangMem's prompt optimizer), save working code as reusable skills (Voyager), or distill past trajectories into reusable workflows (Agent Workflow Memory, Memp). Fine-tuning the model is the costly alternative."
+- question: "Why is writing procedural memory risky?"
+  answer: "Procedural memory controls behavior on every future task. CoALA notes that writing to it is significantly riskier than writing to episodic or semantic memory because it can introduce bugs or let an agent subvert its designers' intentions. Version prompt and skill changes and review them before they go live."
 ---
 
-AI agent procedural memory is the type of memory that enables agents to learn and execute skills, tasks, and sequences of actions. It represents the 'how-to' knowledge, allowing for autonomous operation and complex task completion without constant re-learning of each step. This core capability is fundamental to advanced AI.
+**Procedural memory in AI agents** is the agent's knowledge of how to do things: the rules and skills that shape how it acts. For LLM agents it lives in three places: the model's weights, the agent's code and its prompts. Most current work on learning procedures edits the text parts, because rewriting text is cheaper and safer than retraining the model.
 
----
-## What is AI Agent Procedural Memory?
+It's the memory type agents use on every single step, and the one developers change most carefully. This page covers what counts as procedural memory, how research agents learn new procedures, and how to optimize prompts from feedback. For the full set of memory types, see [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-AI agent procedural memory refers to the system that stores and retrieves information about **how to perform specific tasks or skills**. It's the component responsible for learned sequences of actions, enabling an agent to execute procedures without explicit step-by-step instructions each time. This memory type is vital for autonomous operation and complex problem-solving.
+## What is procedural memory in AI agents?
 
-### Defining Procedural Memory in AI
+**Procedural memory in an AI agent is stored knowledge of how to perform tasks: implicit skill in the LLM's weights, plus explicit instructions in the agent's code, system prompt, tool definitions and skill files. Unlike episodic or semantic memory, it shapes how the agent acts rather than what it knows.**
 
-Procedural memory in AI agents is **the learned ability to perform a sequence of actions or a skill**. Unlike declarative memory, which stores facts and events, procedural memory is about **implicit knowledge** and **learned behaviors**. Think of it as the AI's 'muscle memory' for tasks, allowing for smooth, automatic execution. This is a core aspect of [understanding AI agent memory systems](/articles/ai-agent-memory-explained/).
+The term comes from psychology, where [procedural memory](https://en.wikipedia.org/wiki/Procedural_memory) covers skills like riding a bike. LangGraph's [memory guide](https://docs.langchain.com/oss/python/langgraph/memory) applies it directly: for AI agents, procedural memory is "a combination of model weights, agent code, and agent's prompt that collectively determine the agent's functionality."
 
-### The Importance of Procedural Memory for Agents
+## Implicit vs explicit procedural memory
 
-Without procedural memory, an AI agent would struggle to perform any task requiring multiple steps. Imagine a robot needing to learn how to pour a cup of coffee from scratch every single time. **AI agent procedural memory** allows an agent to **encode, store, and recall the sequence of movements and decisions** needed for such tasks. This is fundamental for creating agents that can operate independently in complex environments.
+The CoALA framework ([Sumers et al., 2023](https://arxiv.org/abs/2309.02427)) splits procedural memory into two forms.
 
-## How AI Agents Acquire Procedural Memory
+| Form | Where it lives | Example | How it changes | Cost and risk of change |
+|---|---|---|---|---|
+| **Implicit** | LLM weights | Knowing how to write Python, follow a chat format | Fine-tuning, RLHF, distillation | High cost; hard to inspect or undo |
+| **Explicit: code** | Agent source code | Tool functions, retrieval logic, the agent loop | A developer edits it, or the agent writes new code skills | Testable, but bugs break every run |
+| **Explicit: prompts** | System prompt, instruction files | "Always run tests before opening a PR" | Edits by a developer, or prompt optimization from feedback | Cheap; easy to version and roll back |
+| **Explicit: skills** | Skill files loaded on demand | A `SKILL.md` describing how to file an expense report | Added by people or saved by the agent | Cheap; loaded only when relevant |
 
-The acquisition of **ai agent procedural memory** often involves learning through experience, imitation, or instruction. Reinforcement learning is a common technique where agents learn by trial and error, gradually refining their ability to execute tasks based on rewards. According to a 2023 study on arXiv, agents using reinforcement learning for skill acquisition showed a 40% reduction in learning time for complex manipulation tasks compared to purely supervised methods.
+CoALA makes two points that still hold. First, procedural memory can't start empty: "procedural memory must be initialized by the designer." Second, writing to it is "significantly riskier than writing to episodic or semantic memory, as it can easily introduce bugs or allow an agent to subvert its designers' intentions."
 
-### Reinforcement Learning Mechanics
+LangGraph's docs add a practical note: agents rarely change their weights or code, but "it is more common for agents to modify their own prompts."
 
-**Reinforcement learning (RL)** is a powerful paradigm for developing procedural memory. An agent interacts with an environment, taking actions and receiving feedback in the form of rewards or penalties. Over many iterations, the agent learns a **policy**, a mapping from states to actions, that maximizes its cumulative reward. This policy essentially becomes its procedural memory for a given task.
+## How research agents learn procedures
 
-For example, an RL agent learning to navigate a maze will develop **ai agent procedural memory** for the optimal sequence of turns to reach the exit. The policy might dictate: "If you are at location X and facing direction Y, turn left." This learned directive is stored as procedural knowledge.
+Three lines of work show agents building procedural memory from experience, without touching model weights. All numbers below are the authors' own reported results.
 
-The following Python code demonstrates a simplified RL agent. The `policy` dictionary within the `RLAgent` class represents the learned procedural memory. It stores the optimal action to take for a given state, which the agent learns through the `learn` method by updating its Q-values and deriving the best action.
+### Voyager: a library of code skills
+
+[Voyager](https://arxiv.org/abs/2305.16291) (Wang et al., 2023) plays Minecraft with GPT-4 and keeps "an ever-growing skill library of executable code." When a generated program succeeds, it's saved as a named skill (CoALA's examples: `combatZombie`, `craftStoneSword`) and retrieved later by embedding similarity. Complex skills call simpler ones. The authors report 3.3x more unique items and tech-tree milestones up to 15.3x faster than prior methods, and the library carried over to a new world.
+
+### Agent Workflow Memory: reusable routines
+
+[Agent Workflow Memory](https://arxiv.org/abs/2409.07429) (AWM, Wang et al., 2024) induces "commonly reused routines, i.e., workflows" from past web-navigation runs and gives the relevant ones to the agent on new tasks. It reports relative success-rate gains of 24.6% on Mind2Web and 51.1% on WebArena, with fewer steps per solved task. It works offline (from training examples) or online (from test queries as they come).
+
+### Memp: build, retrieve and update procedures
+
+[Memp](https://arxiv.org/abs/2508.06433) (Fang et al., 2025) distills past trajectories into two forms: step-by-step instructions and higher-level, script-like abstractions. It studies build, retrieval and update strategies separately, including a regimen that "updates, corrects, and deprecates" entries. On TravelPlanner and ALFWorld, success rates rose as the repository improved. Procedural memory built with a stronger model also helped when moved to a weaker one.
+
+A related approach, [ReasoningBank](/articles/reasoningbank-llm-agent-memory-framework/), stores distilled reasoning strategies from both successful and failed runs, which sits between episodic and procedural memory.
+
+## Procedural memory in production agents
+
+Most shipped agents store procedural memory as plain text files that people and agents can both edit.
+
+- **System prompts and instruction files.** `AGENTS.md`, `CLAUDE.md` and similar files hold project rules that load every session. Deep Agents loads "persistent instructions and preferences" from `AGENTS.md` files at startup. More on this pattern in [AI coding agent memory](/articles/ai-coding-agent-memory/).
+- **Agent Skills.** The [Agent Skills](https://agentskills.io/) format, first developed by Anthropic and released as an open standard, packages "procedural knowledge" as folders with a `SKILL.md` file. Agents load skills by **progressive disclosure**: only each skill's name and description at startup, the full instructions when a task matches, and bundled files only when needed. Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and Letta are among the listed clients.
+- **Self-editing agents.** Letta's docs describe agents that "learn skills, rewrite their own system prompts," with background "dreaming" subagents that consolidate lessons into memory.
+
+Progressive disclosure matters for scale. A system prompt holds every rule on every call. A skill library can hold hundreds of procedures while spending only a line of context on each one until it's needed.
+
+## LLM procedural memory optimization with LangMem
+
+Prompt optimization is the most practical way to update procedural memory today: feed past conversations and feedback to an LLM, and let it propose a better system prompt. LangMem's `create_prompt_optimizer` does this. Adapted from LangMem's [prompt optimization guide](https://langchain-ai.github.io/langmem/guides/optimize_memory_prompt/):
 
 ```python
-import collections
-import random
+from langmem import create_prompt_optimizer
 
-class RLAgent:
- def __init__(self, actions):
- self.actions = actions
- # Policy: maps state to action - this is the procedural memory
- self.policy = {}
- # State-action value function (simplified Q-learning)
- self.q_values = collections.defaultdict(lambda: collections.defaultdict(float))
- self.learning_rate = 0.1
- self.discount_factor = 0.9
- self.epsilon = 0.1 # For exploration
+trajectories = [
+    # A conversation with no annotation: the optimizer infers what went wrong
+    (
+        [
+            {"role": "user", "content": "Tell me about Mars"},
+            {"role": "assistant", "content": "Mars is the fourth planet..."},
+            {"role": "user", "content": "I wanted more about its moons"},
+        ],
+        None,
+    ),
+    # A conversation with explicit feedback
+    (
+        [
+            {"role": "user", "content": "What are Mars' moons?"},
+            {"role": "assistant", "content": "Mars has two moons: Phobos and Deimos..."},
+        ],
+        {"score": 0.9, "comment": "Should include more details and recommended follow-up questions"},
+    ),
+]
 
- def choose_action(self, state):
- if state not in self.policy or random.random() < self.epsilon:
- # Explore: choose a random action or default if no policy yet
- action = random.choice(self.actions) if state not in self.policy else self.policy[state]
- else:
- # Exploit: choose best action according to policy
- action = self.policy[state]
- return action
-
- def learn(self, state, action, reward, next_state):
- # Update Q-value for the current state-action pair
- old_value = self.q_values[state][action]
- next_max = 0.0
- if next_state in self.q_values:
- next_max = max(self.q_values[next_state].values())
-
- new_value = old_value + self.learning_rate * (reward + self.discount_factor * next_max - old_value)
- self.q_values[state][action] = new_value
-
- # Update policy based on Q-values
- best_action = max(self.q_values[state], key=self.q_values[state].get) if state in self.q_values else random.choice(self.actions)
- self.policy[state] = best_action
-
-## Simplified example of using the RLAgent
-actions = ["move_forward", "turn_left", "turn_right", "stay"]
-agent = RLAgent(actions)
-
-## Simulate a few learning steps (in a real scenario, this would be many more)
-state1 = "room_entrance"
-action1 = agent.choose_action(state1)
-reward1 = 0 # Assume no immediate reward
-next_state1 = "corridor"
-agent.learn(state1, action1, reward1, next_state1)
-
-state2 = "corridor"
-action2 = agent.choose_action(state2)
-reward2 = 0
-next_state2 = "exit_door"
-agent.learn(state2, action2, reward2, next_state2)
-
-## After learning, the policy dictionary holds the procedural memory
-print(f"Learned policy for '{state1}': {agent.policy.get(state1)}")
-print(f"Learned policy for '{state2}': {agent.policy.get(state2)}")
+optimizer = create_prompt_optimizer(
+    "anthropic:claude-sonnet-4-5",
+    kind="metaprompt",  # also "gradient" (2-10 LLM calls) or "prompt_memory" (1 call)
+    config={"max_reflection_steps": 1, "min_reflection_steps": 0},
+)
+new_prompt = optimizer.invoke(
+    {"trajectories": trajectories, "prompt": "You are a planetary science expert"}
+)
+print(new_prompt)
 ```
 
-### Imitation Learning Techniques
+The three `kind` options trade cost for depth. `prompt_memory` makes a single LLM call. `gradient` splits the work between one call that proposes improvements and one that applies them. `metaprompt` uses reflection steps you can bound with `config`.
 
-Another approach is **imitation learning**, where an agent learns by observing and mimicking human or expert demonstrations. The agent is presented with examples of a task being performed correctly. It then tries to replicate these actions, building its **ai agent procedural memory** from the observed sequences. This can be more efficient than pure RL, especially for complex tasks where rewards are sparse.
+LangGraph's docs describe the same loop without a library: store the instructions in the memory store, have one node rewrite them from conversation feedback, and have the main node read the latest version each run.
 
-### Instruction Following
+## Guardrails for writable procedural memory
 
-Agents can also acquire procedural memory by interpreting and executing explicit instructions. Natural language instructions can be parsed, and the agent's internal systems translate them into executable action sequences. This often requires a combination of [semantic memory in AI agents](/articles/semantic-memory-ai-agents/) to understand the instruction's meaning and procedural memory to execute the steps.
+Because procedural memory runs on every future task, treat updates like code changes:
 
-## Manifestations of Procedural Memory in AI
+1. **Version every change.** Keep prompts and skills in git or a store with history, so you can diff and roll back.
+2. **Separate proposal from approval.** Let the agent propose prompt or skill edits; have a person or an evaluation gate approve them.
+3. **Evaluate before shipping.** Run the new prompt on a fixed test set and compare it with the old one.
+4. **Scope updates.** A rule learned from one user's feedback shouldn't silently change the agent for everyone.
+5. **Watch for poisoning.** An attacker who can get text into the agent's learned instructions controls future behavior. Don't let untrusted content write procedural memory directly.
+6. **Deprecate stale procedures.** Memp's results suggest removing outdated entries matters as much as adding new ones.
 
-**AI agent procedural memory** can manifest in various forms within an AI agent's architecture, each suited for different types of tasks and complexities. These forms allow for structured and efficient recall of learned actions.
-
-### Skill Libraries
-
-Many agents maintain a **library of learned skills**. Each skill is a self-contained procedural memory unit representing a specific task, like 'open door,' 'search inventory,' or 'calculate trajectory.' When a higher-level goal requires a skill, the agent retrieves and executes the corresponding procedure from its library. This modular approach aids in task decomposition and reusability.
-
-### Action Sequences and Scripts
-
-For tasks that aren't easily broken into distinct skills, agents might store **action sequences** or **scripts**. These are linear or conditional sequences of basic actions. For instance, a script for 'making tea' might involve: `boil_water -> add_tea_bag -> steep -> remove_tea_bag -> add_milk`. These are more granular than skills and directly map to elemental operations.
-
-### Reactive Policies
-
-In simpler scenarios, procedural memory might exist as a **reactive policy**. This is a direct mapping from sensory input or current state to an immediate action. While less sophisticated than skill libraries, reactive policies are efficient for agents operating in well-defined environments with predictable inputs. This is a foundational concept in AI agent control architectures.
-
-## Procedural Memory vs. Other Memory Types
-
-Understanding how **ai agent procedural memory** fits within the broader landscape of AI memory is crucial. It complements episodic and semantic memory, each serving a distinct purpose.
-
-### Procedural vs. Episodic Memory
-
-**Episodic memory** in AI agents stores specific past events and their context, what happened, when, and where. It allows agents to recall unique experiences. **Procedural memory**, on the other hand, stores the 'how-to' knowledge of performing actions. An agent might have an episodic memory of *learning* to bake a cake (the specific time it happened, any issues encountered), while its procedural memory contains the *recipe and steps* to bake a cake successfully. This distinction is key to [episodic memory functions in AI agents](/articles/episodic-memory-in-ai-agents/) and its role.
-
-### Procedural vs. Semantic Memory
-
-**Semantic memory** holds general knowledge, facts, and concepts about the world. It's the AI's knowledge base. **Procedural memory** is about learned skills and procedures. An agent's semantic memory might know that 'a hammer is a tool used for pounding nails,' while its procedural memory contains the steps and motor control needed to *actually pick up and swing a hammer*.
-
-### Procedural Memory and Long-Term Recall
-
-Procedural memory is inherently a form of **long-term memory**. Once a skill is learned, it's intended to be retained and accessible for future use, distinguishing it from the fleeting nature of short-term memory. This persistent nature is what allows agents to build up a repertoire of capabilities over time. For more on this, see [long-term memory for AI chatbots](/articles/best-chatbot-for-memory/).
-
-## Challenges in Implementing Procedural Memory
-
-Developing and managing **ai agent procedural memory** for AI agents isn't without its difficulties. Ensuring efficiency, adaptability, and preventing interference between learned procedures are significant challenges.
-
-### Forgetting and Interference
-
-Like human memory, AI procedural memory can suffer from **forgetting**. This can occur due to **catastrophic interference**, where learning a new skill overwrites or corrupts previously learned ones. Techniques like [AI agent memory consolidation techniques](/articles/memory-consolidation-ai-agents/) and regularization are employed to mitigate this.
-
-### Adaptability and Generalization
-
-A key challenge is ensuring that learned procedures are **adaptable** to new situations and can **generalize** beyond their training conditions. An agent trained to open a specific door might struggle with a slightly different door. Research in [embedding models for memory](/articles/embedding-models-for-rag/) aims to create more flexible representations of procedural knowledge.
-
-### Scalability of Skill Libraries
-
-As agents learn more skills, managing and efficiently retrieving from a large **skill library** becomes complex. The overhead of searching and selecting the correct procedure can impact real-time performance. This is an area where efficient indexing and retrieval mechanisms are crucial for effective **ai agent procedural memory**.
-
-## Tools and Frameworks for AI Agent Memory
-
-Several open-source projects and commercial tools are emerging to help developers implement sophisticated memory systems for AI agents, including procedural memory.
-
-### Open-Source Solutions
-
-Frameworks like LangChain and LlamaIndex provide modules for managing different types of memory. For more advanced, persistent memory needs, systems like **Hindsight** offer a way to store and retrieve long-term memories, including learned procedures, in a structured manner. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
-
-These tools often integrate with vector databases and LLMs to create rich memory architectures. Comparing these systems is essential for choosing the right tools for a given project. See our [comparison of open-source memory systems](/articles/open-source-memory-systems-compared/) for more details.
-
-### Commercial AI Memory Platforms
-
-Commercial platforms are also developing specialized solutions for AI agent memory. These often offer managed services, advanced analytics, and enterprise-grade scalability. Exploring options like [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-framework/) can provide insight into the current market offerings.
-
-## The Future of AI Procedural Memory
-
-The ongoing development of **ai agent procedural memory** promises more capable and autonomous AI systems. Future agents will likely exhibit more sophisticated skill acquisition, better generalization, and seamless integration of procedural knowledge with other memory types. This evolution is critical for advancing AI in areas like robotics, autonomous systems, and personalized assistants.
-
-The ability for AI agents to reliably learn and execute procedures is a cornerstone of their increasing autonomy and utility. As research progresses, we can expect agents to become far more adept at mastering complex tasks through effective procedural memory systems. This is a key aspect of creating truly [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
-
-## FAQ
-
-### What is the primary function of procedural memory in an AI agent?
-
-The primary function of procedural memory in an AI agent is to store and enable the execution of learned skills, tasks, and sequences of actions. It allows the agent to perform procedures automatically and efficiently without explicit step-by-step guidance for each instance.
-
-### How does an AI agent 'learn' a procedure?
-
-AI agents learn procedures through various methods, including reinforcement learning (trial and error with rewards), imitation learning (observing and mimicking demonstrations), and by interpreting and executing explicit instructions. These processes encode the sequence of actions required for a task.
-
-### Can procedural memory be combined with other memory types?
-
-Yes, procedural memory is often integrated with other memory types like episodic and semantic memory. For example, an agent might recall an episodic memory of learning a skill and then use its procedural memory to execute that skill. Semantic memory provides the context and knowledge necessary to understand when and how to apply a learned procedure.
+For how procedural memory relates to the other types, and how to decide which ones an agent needs, see [types of AI agent memory](/articles/ai-agents-memory-types/).

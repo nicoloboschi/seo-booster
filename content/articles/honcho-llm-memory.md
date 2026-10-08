@@ -1,166 +1,161 @@
 ---
-title: 'Honcho LLM Memory: Enhancing AI Agent Recall and Context'
-description: 'Honcho LLM Memory: Enhancing AI Agent Recall and Context. Learn about honcho llm memory, LLM context window with practical examples, code snippets, and architectu...'
+title: "Honcho LLM Memory: Peers, Reasoning and Setup"
+description: "What Honcho is: Plastic Labs' open-source memory for LLM agents. How peers, sessions and background reasoning work, Python SDK, self-hosting, pricing, evals."
 date: 2026-06-18
-lastmod: 2026-06-18
+lastmod: 2026-10-08
+slug: honcho-llm-memory
+cluster: agent-memory
 tags:
-- LLM memory
-- AI agents
 - Honcho
+- Plastic Labs
+- agent memory
+- user modeling
 keywords:
 - honcho llm memory
-- LLM context window
-- AI agent recall
-- long-term memory AI
+- honcho memory
+- plastic labs honcho
+- honcho peers
+- honcho self host
+- honcho vs mem0
 faq:
-- question: What are the main challenges in implementing LLM memory systems like Honcho?
-  answer: The primary challenges include managing the scale of data, ensuring efficient retrieval of relevant information, effectively handling memory consolidation, and maintaining privacy and security
-    of user data stored in memory. These are critical for robust Honcho LLM memory.
-- question: How does Honcho LLM memory differ from simply increasing the LLM's context window?
-  answer: Increasing the context window is a hardware-bound solution that is expensive and still limited. Honcho LLM memory uses external storage and retrieval mechanisms, allowing for potentially unlimited
-    memory capacity and more sophisticated memory management strategies, independent of the LLM's native context window.
-- question: Can Honcho LLM memory be used for real-time applications?
-  answer: Yes, with optimized vector databases and efficient retrieval algorithms, Honcho LLM memory can support real-time applications. The latency of embedding generation and database queries are key
-    factors, but advancements are continuously improving performance for AI agent persistent memory needs.
-slug: honcho-llm-memory
+- question: "What is Honcho?"
+  answer: "Honcho is an open-source memory service for LLM agents from Plastic Labs. You store conversations as messages on sessions; Honcho reasons over them in the background and builds a representation of each participant (a peer), which you can query in natural language or pull as prompt-ready context."
+- question: "Is Honcho open source?"
+  answer: "Yes. The Honcho server is licensed AGPL-3.0 on GitHub (plastic-labs/honcho). You can self-host it with Docker Compose or run a local stack with the honcho CLI. Plastic Labs also runs a managed service at api.honcho.dev."
+- question: "How is Honcho different from Mem0?"
+  answer: "Mem0 extracts facts from messages and returns them by search. Honcho stores the messages themselves and runs background reasoning to derive conclusions about each peer, including what one peer knows about another, and answers natural-language questions about them through its chat endpoint. Mem0 is Apache 2.0; Honcho is AGPL-3.0."
 ---
 
+**Honcho** is an open-source memory service for LLM agents, built by Plastic Labs. Instead of only storing extracted facts, it **reasons about the people and agents in your conversations**. You save messages; a background worker derives conclusions about each participant; then you ask Honcho what it knows, in plain language or as prompt-ready context.
 
-**Honcho LLM memory** enhances AI agent recall by integrating the Honcho framework with large language models, extending context beyond fixed windows for improved task performance and conversational continuity. This system addresses the critical need for AI agents to retain and use information from past interactions, moving beyond the limitations of standard LLMs.
+This page covers Honcho's data model, how its reasoning pipeline works, the Python SDK, self-hosting, pricing and its benchmark claims. Sources are the [Honcho GitHub README](https://github.com/plastic-labs/honcho), the [Honcho docs](https://honcho.dev/docs/v3) and [honcho.dev](https://honcho.dev/), checked on 8 October 2026.
 
-## What is Honcho LLM Memory?
+## What is Honcho?
 
-**Honcho LLM memory** describes the application of the Honcho framework to augment the memory capabilities of large language models (LLMs). It aims to overcome the inherent **context window limitations** of LLMs by providing mechanisms for storing, retrieving, and using information beyond immediate conversational turns. This allows AI agents to maintain a more persistent and expansive understanding of their interactions and environment.
+**Honcho is memory infrastructure for stateful agents. It stores messages and events on sessions, reasons over them asynchronously, and maintains a representation of every participant, called a peer. Agents query those representations, search history, or ask natural-language questions such as "what learning style does this user respond to?"**
 
-This enhanced memory system is critical for developing AI agents that can engage in complex, multi-turn dialogues and perform tasks requiring recall of past events or information. Without such systems, AI agents would struggle with continuity and context, severely limiting their usefulness.
+Its README describes it as memory for agents "that understand changing people, agents, groups, projects, and ideas over time." The server is a FastAPI app, licensed **AGPL-3.0**, at version 3.3.0 in October 2026. The Python SDK is `honcho-ai` (2.5.1) and the TypeScript SDK is `@honcho-ai/sdk`.
 
-### The Challenge of Fixed Context Windows
+The emphasis is **user modeling** rather than retrieval. Most memory layers answer "which stored facts match this query?" Honcho also tries to answer "what kind of person is this, and what do they likely want?"
 
-LLMs process input text within a defined **context window**, measured in tokens. Once this window fills, older information is discarded. This architectural constraint means an LLM might "forget" the beginning of a long conversation or important details provided earlier. For instance, if an agent is tasked with planning a complex trip, it needs to remember flight details, hotel bookings, and user preferences discussed over several interactions. A fixed context window would cause it to lose track of these details as new information is added. According to a 2023 survey by the AI Research Group, over 60% of AI developers report context window limitations as a major bottleneck.
+## Honcho's data model: workspaces, peers and sessions
 
-### Honcho's Approach to Extended Memory
+| Concept | What it is |
+|---|---|
+| **Workspace** | Top-level container that isolates one app or use case (formerly "App") |
+| **Peer** | Any participant, human or AI agent (formerly "User") |
+| **Session** | A conversation; many-to-many with peers |
+| **Scope** | A named group of sessions that limits what recall can see |
+| **Message** | One unit of data: a chat turn, an event, or an ingested document chunk |
 
-The Honcho framework, when applied to LLM memory, typically integrates with external memory storage solutions. These solutions often involve **vector databases** and **retrieval-augmented generation (RAG)** techniques. Information is encoded into **embeddings** and stored. When an AI agent needs to recall something, the system queries the memory store to retrieve the most relevant pieces of information. These retrieved pieces are then fed back into the LLM's prompt.
+The **peer model** is Honcho's distinctive choice. Humans and agents are both first-class, sessions can have many of each, and you can configure which peers observe which. Internally, observations live in collections keyed by an `(observer, observed)` pair, so Honcho can hold both a peer's view of itself and **peer X's understanding of peer Y**. That matters for multi-agent setups where agents shouldn't share everything.
 
-This process effectively extends the LLM's working memory, allowing it to access and act upon a much larger corpus of information than its native context window would permit. It's a foundational aspect of building **agentic AI long-term memory**.
+## How Honcho's memory pipeline works
 
-## How Honcho LLM Memory Works
+Honcho splits into two services, per its architecture section:
 
-The core mechanism behind Honcho LLM memory relies on transforming and storing conversational data in a way that makes it efficiently retrievable. This involves several key stages in the **LLM memory system**.
+- **Storage** is synchronous: workspaces, peers, sessions and messages, written through the API.
+- **Insights** is asynchronous: a background worker called the **deriver** consumes a queue and produces conclusions, representations, summaries and peer cards. It also runs **dreaming**, a background consolidation task.
 
-### Information Ingestion and Embedding
+The loop the README describes:
 
-New information, such as user queries, AI responses, and external data, is captured. This information is then converted into numerical representations called **embeddings** using **embedding models**. These embeddings capture the semantic meaning of the text, forming the basis for **Honcho LLM memory** recall.
+1. **Store** conversations, events, documents or tool traces as messages on a session.
+2. **Reason.** The deriver processes the queue and updates peer representations.
+3. **Query.** Ask for context, search results, a representation, or a natural-language answer.
+4. **Inject** the result into any LLM call.
 
-### Vector Storage and Retrieval
+What you can read back:
 
-The generated embeddings are stored in a **vector database**, which is optimized for searching based on semantic similarity. When the LLM needs context, a query is generated, embedded, and used to search the vector database for the most relevant past information. This forms the retrieval part of **retrieval-augmented generation (RAG)**.
+- **Conclusions**: deductive and inductive statements Honcho has derived about a peer.
+- **Representations**: low-latency snapshots of what Honcho knows, optionally per session.
+- **Peer cards**: compact identity summaries.
+- **Session context**: prompt-ready bundles with summaries, sized to a token budget.
+- **Chat endpoint** (the "dialectic" settings in the config): a reasoning model that answers questions about a peer, at a reasoning level from `minimal` to `max`.
 
-### Augmentation and Response Generation
+Because reasoning is asynchronous, new messages take a moment to show up in chat answers. The docs suggest the representation endpoint for low-latency reads. Search over messages is hybrid BM25 plus vector.
 
-The retrieved information is added to the LLM's current prompt, effectively extending its context. The LLM then uses this augmented prompt to generate a more informed and contextually relevant response. This cycle allows the AI agent to access a history that far exceeds its immediate processing window, crucial for **AI agent persistent memory**.
+## Using Honcho from Python
 
-### Vector Databases and Embeddings
-
-**Vector databases** like Pinecone, Weaviate, or Chroma are central to Honcho's memory capabilities. They store high-dimensional vectors (embeddings) and allow for rapid similarity searches. An **embedding model** converts text into these vectors. For example, if a user asks, "What was the name of the restaurant we discussed yesterday?", the system embeds this question and searches the vector database for embeddings of past conversation turns that are semantically similar.
-
-This capability is also fundamental to understanding how embedding models power Honcho LLM memory and how they function in modern AI systems. It's a key component of **Honcho LLM memory** systems.
-
-### Retrieval-Augmented Generation (RAG)
-
-**Retrieval-Augmented Generation (RAG)** is the overarching technique that uses vector databases and embeddings. In the context of Honcho LLM memory, RAG ensures that the LLM's responses are grounded in a broader, retrievable knowledge base. This prevents hallucinations and improves factual accuracy by providing the LLM with relevant external context.
-
-RAG is a powerful approach for enhancing LLM capabilities. For a deeper dive, explore [RAG vs. Agent Memory](/articles/rag-vs-agent-memory/).
-
-## Benefits of Honcho LLM Memory
-
-Integrating Honcho with LLM memory systems unlocks several significant advantages for AI agent development and deployment. These benefits directly address the limitations of standard LLMs and pave the way for more sophisticated AI applications.
-
-### Enhanced Conversational Continuity
-
-One of the most immediate benefits is **enhanced conversational continuity**. An AI agent equipped with Honcho memory can "remember" previous parts of a conversation, leading to more natural and coherent interactions. Users won't have to repeat themselves, and the AI can build upon prior exchanges, fostering a better user experience. This is particularly important for **AI that remembers conversations**.
-
-### Improved Task Completion
-
-For tasks requiring multiple steps or recall of specific details, Honcho LLM memory proves invaluable. An agent can retain user preferences, project requirements, or previous problem-solving steps, leading to more efficient and accurate task completion. This directly contributes to building **AI agent long-term memory** capabilities.
-
-### Overcoming Context Window Limitations
-
-As discussed, the fixed **context window limitation** is a major hurdle. Honcho's memory solutions effectively bypass this by providing an external, queryable memory. This allows for processing and recalling vast amounts of information without being constrained by the LLM's native architectural limits. This is a core aspect of [solutions for context window limitations](/articles/context-window-limitations-solutions/).
-
-### Personalization and User Profiling
-
-By storing past interactions and user feedback, Honcho-enabled memory systems can facilitate personalization. An AI agent can learn user preferences, tailor its responses, and offer more relevant suggestions over time, creating a more personalized user experience. This is a key aspect of achieving an **AI assistant that remembers everything**.
-
-## Honcho LLM Memory in AI Agent Architectures
-
-The integration of Honcho LLM memory fits within broader **AI agent architecture patterns**. These architectures often involve a central orchestrator that manages different components, including the LLM, memory modules, and tools. Honcho's role is primarily within the memory management aspect, ensuring seamless access to historical data for **Honcho LLM memory**.
-
-### Memory Types and Honcho
-
-Different types of AI memory exist, each serving a distinct purpose. Honcho's framework can support various forms:
-
-* **Episodic Memory**: Remembering specific events or interactions. Honcho can store summaries or key details of past conversations as distinct "episodes." This relates to [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
-* **Semantic Memory**: Storing general knowledge or facts. While LLMs inherently have a form of semantic memory, Honcho can augment this by providing access to curated or dynamically updated knowledge bases. This complements [semantic memory in AI agents](/articles/semantic-memory-ai-agents/).
-* **Working Memory**: The immediate information the agent is actively processing. Honcho's retrieval mechanism feeds relevant information into the LLM's working memory. Understanding [short-term memory in AI agents](/articles/short-term-memory-ai-agents/) is also relevant here.
-
-The ability to manage these different memory types is crucial for sophisticated agents.
-
-### Honcho and Open-Source Memory Systems
-
-Several open-source projects aim to provide robust memory solutions for AI agents. Frameworks like LangChain and LlamaIndex offer modules for memory management, often using vector databases. Honcho can be implemented using these or similar libraries. For instance, exploring [comparisons of open-source memory systems](/articles/open-source-memory-systems-compared/) reveals various approaches to achieving persistent memory.
-
-Tools like **Hindsight** offer flexible approaches to building AI agent memory that can complement or be integrated with Honcho-based solutions. Comparing different systems, such as [MEM0 alternatives compared](/articles/mem0-alternatives-compared/), highlights the diverse landscape of available tools for **Honcho LLM memory**.
-
-## Implementing Honcho LLM Memory
-
-Implementing Honcho LLM memory typically involves selecting and configuring the necessary components. The choice of vector database, embedding model, and the specific Honcho integration strategy will depend on the application's requirements.
-
-### Choosing the Right Tools
-
-Developers often choose between managed vector database services (like Pinecone, Weaviate Cloud) or self-hosted options (like Chroma, FAISS). The selection of an **embedding model** is also critical, with options ranging from open-source models like Sentence-BERT to proprietary models from OpenAI or Cohere.
-
-The **LLM memory system** itself might be built using libraries that abstract these components, allowing for easier integration. For example, many [best AI memory systems](/articles/best-ai-memory-framework/) use these underlying technologies for **Honcho LLM memory**.
-
-### Example: Basic RAG Integration
-
-A simplified Python example demonstrating a RAG-like retrieval for memory might look like this:
+This follows the README quickstart and matches `honcho-ai` 2.5.1:
 
 ```python
-import uuid
-from sentence_transformers import SentenceTransformer
-from chromadb import Client, PersistentCollection
+import os
+from honcho import Honcho
+from openai import OpenAI
 
-## Initialize embedding model
-embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+honcho = Honcho(
+    workspace_id="tutoring-app",
+    api_key=os.environ["HONCHO_API_KEY"],  # self-hosted: base_url="http://localhost:8000"
+)
 
-## Initialize ChromaDB client and collection
-## Use a persistent collection to save data
-client = Client()
-collection_name = "ai_agent_conversation_history"
-try:
- collection = client.get_collection(collection_name)
-except:
- collection = client.create_collection(collection_name)
+student = honcho.peer("student-42")
+tutor = honcho.peer("tutor")
+session = honcho.session("lesson-1")
 
-def add_to_memory(text_chunk: str, metadata: dict = None):
- """Adds a chunk of text to the memory collection."""
- embedding = embedding_model.encode(text_chunk).tolist()
- collection.add(
- ids=[str(uuid.uuid4())], # Use a unique ID for each chunk
- embeddings=[embedding],
- documents=[text_chunk],
- metadatas=[metadata] if metadata else [{}]
- )
- print(f"Added to memory: '{text_chunk[:50]}...'")
+session.add_messages([
+    student.message("Can you explain fractions with a picture? Text walls lose me."),
+    tutor.message("Sure, let's draw a pizza cut into eight slices."),
+])
 
-def retrieve_from_memory(query: str, n_results: int = 3):
- """Retrieves the most relevant chunks from memory based on the query."""
- query_embedding = embedding_model.encode(query).tolist()
- results = collection.query(
- query_embeddings=[query_embedding],
- n_results=n_results
- )
- return results['documents'][0] if results and results['documents'] else []
+# Natural-language question about the peer (answered by Honcho's reasoning)
+print(student.chat("How does this student prefer to learn?", reasoning_level="low"))
 
-## 
+# Prompt-ready context for the next turn, capped at a token budget
+context = session.context(summary=True, tokens=4_000)
+reply = OpenAI().chat.completions.create(
+    model="gpt-4o-mini",
+    messages=context.to_openai(assistant=tutor),
+)
+print(reply.choices[0].message.content)
+```
+
+`peer.search(...)`, `peer.representation(...)` and `peer.card()` give the other read paths. `student.chat(..., target=tutor)` asks what one peer knows about another. A `to_anthropic()` formatter exists alongside `to_openai()`.
+
+## Self-hosting Honcho
+
+Three ways to run it:
+
+1. **Managed** at api.honcho.dev. Each organization gets its own dedicated Honcho instance, per the README.
+2. **Local stack with the CLI**: `uv tool install honcho-cli`, then `honcho start --setup`. It writes your LLM provider key and starts the API, the deriver, Postgres and Redis in Docker.
+3. **From source**: clone the repo, copy `docker-compose.yml.example` and `.env.template`, add LLM keys, and run `docker compose up`.
+
+Honcho needs **PostgreSQL with pgvector**. It uses several model providers by default: Gemini for the deriver, summaries and low reasoning levels; Anthropic for higher reasoning levels and dreaming; and OpenAI for embeddings. Each can be reconfigured. Running a self-hosted instance means running those LLM calls on your own keys.
+
+The **AGPL-3.0** license is worth checking with your legal team. It requires you to share source changes if you offer a modified Honcho to users over a network.
+
+## Integrations for coding agents
+
+Honcho ships first-party memory plugins for **Claude Code, Codex, Cursor, OpenCode, OpenClaw** and the DeepSeek Harness, and it's built into **Hermes Agent** as a memory provider (`hermes memory setup`). All of them read one `~/.honcho/config.json`, so pointing two tools at the same workspace gives them shared memory. A hosted MCP server at mcp.honcho.dev covers other clients. See [Hermes Agent memory](/articles/hermes-agent-memory/) and OpenClaw memory for how Honcho compares with other providers there.
+
+## Honcho pricing
+
+From [honcho.dev](https://honcho.dev/) in October 2026:
+
+| Item | Price |
+|---|---|
+| Ingestion (storage plus reasoning) | $2.00 per 1M tokens |
+| `context()` retrieval | No limit listed |
+| Dreaming | Included |
+| Chat (reasoning) queries | $0.001 (minimal), $0.01 (low), $0.05 (medium), $0.10 (high), $0.50 (max) per query |
+| Startups under $5M raised | $1,000 credits and 12 months of subsidized pricing |
+
+New accounts get free starter credits; the amount shown differs between the site and the docs, so check at sign-up.
+
+## Honcho benchmark results
+
+Plastic Labs publishes evals at [honcho.dev/evals](https://honcho.dev/evals/), with configurations in the `plastic-labs/honcho-benchmarks` repo:
+
+| Benchmark | Honcho | Claude Haiku 4.5 with full context |
+|---|---|---|
+| LongMemEval-S | 90.4% | 62.6% |
+| LoCoMo | 89.9% | 75.6% |
+| BEAM 100K | 0.630 | 0.533 |
+| BEAM 10M | 0.409 | not reported |
+
+The default setup used gemini-2.5-flash-lite for the deriver and claude-haiku-4.5 for dreaming and chat. These are **self-reported** results, graded by an LLM judge, and other vendors use different models and judges. Our [LLM memory comparison](/articles/llm-memory-comparison/) lists claims side by side, and [LLM memory evaluation](/articles/llm-memory-evaluation/) explains the benchmarks.
+
+## When Honcho fits
+
+Honcho fits when understanding the person matters more than recalling a fact: tutors, coaches, companions, and support agents that should adapt to how each user thinks. It's also one of the few systems that models what one agent knows about another, which helps in multi-agent apps.
+
+It fits less well when you need document RAG, explicit fact validity windows, or a permissive license. Mem0 and Graphiti (Apache 2.0) and Hindsight (MIT) are alternatives with different memory models; see [Supermemory alternatives](/articles/supermemory-alternatives/) and Mem0 alternatives. For how user modeling fits into agent memory overall, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).

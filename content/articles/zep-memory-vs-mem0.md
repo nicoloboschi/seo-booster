@@ -1,137 +1,144 @@
 ---
-title: 'Zepp Memory vs Mem0: Choosing the Right AI Memory Solution'
-description: 'Zepp Memory vs Mem0: Choosing the Right AI Memory Solution. Learn about zep memory vs mem0, Zepp Memory with practical examples, code snippets, and architectural ...'
+title: "Zep vs Mem0: Temporal Graph vs Fact Memory"
+description: "Zep vs Mem0 compared (Oct 2026): temporal context graph vs extracted facts, open source, self-hosting, APIs, pricing, the benchmark dispute, how to pick."
 date: 2026-04-11
-lastmod: 2026-04-11
-tags:
-- AI memory
-- Zepp Memory
-- Mem0
-- AI agents
-keywords:
-- zep memory vs mem0
-- Zepp Memory
-- Mem0
-- AI agent memory
-- LLM memory
-faq:
-- question: What is Zepp Memory?
-  answer: Zepp Memory is an AI memory system designed for creating persistent, searchable, and context-aware memory for AI agents. It focuses on enabling agents to recall specific past interactions and
-    information efficiently, making it ideal for agents needing a detailed history.
-- question: What is Mem0?
-  answer: Mem0 is an open-source AI memory system that provides a unified API for various memory types, including short-term, long-term, and episodic memory. It aims to simplify the integration of memory
-    into AI applications by abstracting underlying complexities.
-- question: 'Which is better for long-term memory: Zepp Memory or Mem0?'
-  answer: Both systems support long-term memory, but Zepp Memory often emphasizes structured recall of specific events, while Mem0 offers a more general framework for integrating different memory modalities.
-    The choice depends on your specific needs for recall granularity and architectural flexibility.
+lastmod: 2026-10-08
 slug: zep-memory-vs-mem0
+cluster: agent-memory
+tags:
+- Zep
+- Mem0
+- Graphiti
+- agent memory
+keywords:
+- zep vs mem0
+- zep memory vs mem0
+- mem0 vs zep
+- graphiti vs mem0
+- zep or mem0
+faq:
+- question: "What is the difference between Zep and Mem0?"
+  answer: "Zep stores memory in a temporal knowledge graph where each fact has a validity window, so it can tell what is true now from what used to be true. Mem0 extracts facts into a vector store with entity linking and hybrid search, and since April 2026 appends new facts instead of overwriting old ones."
+- question: "Is Zep or Mem0 open source?"
+  answer: "Mem0's library and self-hosted server are Apache 2.0. Zep's managed service is not open source, and Zep Community Edition is deprecated. Zep's open-source project is Graphiti, an Apache 2.0 temporal graph framework that you run with your own Neo4j, FalkorDB or Neptune database."
+- question: "Which scores higher on LoCoMo, Zep or Mem0?"
+  answer: "It depends on who ran the test. Mem0's 2025 paper scored Zep at 65.99% and Mem0's graph variant at 68.44%. Zep said the setup was wrong and reported 75.14% for itself. Both are vendor-run numbers with different setups, so test on your own data."
 ---
 
+**Zep vs Mem0** is a choice between two ways of storing what an agent learns. **Zep** keeps a temporal knowledge graph where every fact has a validity window, so old facts are invalidated rather than lost. **Mem0** extracts short facts into a vector store with entity linking, and ranks them by semantic, keyword and entity match. Mem0 is open source; Zep is a managed service with Graphiti as its open-source core.
 
-Zepp Memory offers specialized, structured recall for AI agents, while Mem0 provides a unified API for diverse memory types. Understanding the **zep memory vs mem0** distinction is key to choosing the right solution for your AI's persistent context and interaction history.
+This page compares the memory model, open-source status, APIs, pricing and benchmarks of each, based on their docs, READMEs and pricing pages as of 8 October 2026.
 
-Imagine an AI assistant that forgets your name mid-conversation. This frustrating reality highlights the critical need for robust memory systems like Zepp Memory and Mem0. The **zep memory vs mem0** debate isn't just technical; it's about building truly intelligent and reliable AI.
+## What are Zep and Mem0?
 
-## What is Zepp Memory?
+**Zep is a managed context platform that builds a temporal context graph per user or account from messages and business data, and returns a prompt-ready block of relevant facts. Mem0 is an Apache 2.0 memory layer that uses an LLM to extract facts from conversations, stores them per user, agent or session, and returns them on search.**
 
-Zepp Memory is an AI memory system designed for creating persistent, searchable, and context-aware memory for AI agents. It focuses on enabling agents to recall specific past interactions and information efficiently, making it ideal for agents needing a detailed history.
+Zep's design is described in the paper [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](https://arxiv.org/abs/2501.13956) (Rasmussen et al., 2025). Its engine is **[Graphiti](https://github.com/getzep/graphiti)**, released separately under Apache 2.0. See [what is Zep memory](/articles/what-is-zep-memory/) for the full picture.
 
-## What is Mem0?
+Mem0's design is described in [arXiv 2504.19413](https://arxiv.org/abs/2504.19413), and its algorithm was rewritten in April 2026. See [what is Mem0](/articles/what-is-mem0-ai/).
 
-Mem0 is an open-source AI memory system that provides a unified API for various memory types, including short-term, long-term, and episodic memory. It aims to simplify the integration of memory into AI applications by abstracting underlying complexities.
+## Zep vs Mem0 at a glance
 
-## Zepp Memory: Structured Recall and Persistence
+| | Zep | Mem0 |
+|---|---|---|
+| Product form | Managed service (Zep Cloud) | Library, self-hosted server, or Mem0 Platform |
+| Open source | Graphiti (Apache 2.0); Community Edition deprecated | Library and server (Apache 2.0) |
+| Memory model | Temporal graph: entities, facts as edges, episodes as provenance | Extracted facts with embeddings plus an entity collection |
+| Changed facts | Old fact gets an invalid date; history kept | New fact stored next to old one (ADD-only); retrieval ranks the current one |
+| Retrieval | Context Block, or graph search with RRF, MMR or cross-encoder reranking | Semantic + BM25 + entity, fused |
+| Graph in open source | Yes, via Graphiti (bring Neo4j, FalkorDB or Neptune) | No; removed in April 2026, now Platform-only |
+| SDKs | Python, TypeScript, Go | Python, TypeScript, REST, CLI |
+| Self-host the full product | Enterprise BYOC only | Yes, Docker server |
+| Hosted pricing | Free 10,000 credits/mo; Flex $125/mo | Free; Starter $19/mo; Pro $249/mo |
 
-Zepp Memory is engineered to give AI agents a powerful and persistent memory. It allows agents to store and retrieve information from past interactions, enabling them to maintain context over extended conversations or tasks. This **zep memory vs mem0** system is particularly useful when an agent needs to recall specific details, like previous user requests or key decisions made.
+## How Zep handles memory
 
-### How Zepp Memory Enables Structured Recall
+Zep organizes data into **users**, **threads** and **episodes**. Every message added to a user's threads becomes an episode in that user's graph. Zep extracts **entities** (nodes) and **facts** (edges) from each episode.
 
-The architecture behind Zepp Memory often involves sophisticated indexing and retrieval mechanisms. This ensures that agents can quickly access relevant memories, even from a vast history of interactions. It’s built to handle the complexities of maintaining a coherent persona and history for an AI agent across multiple sessions. This focus on structured recall is a primary differentiator in the **zep memory vs mem0** comparison.
+When new data contradicts a fact, Zep doesn't delete it. It sets the time the old fact became invalid. That's the core difference from most memory layers: you can ask what's true now, or what was true last month. Graphiti calls these graphs **bi-temporal**.
 
-Zepp Memory typically employs data structures optimized for associative recall. It's designed to link related pieces of information, allowing an agent to traverse its memory like a network of interconnected events. This makes it excellent for tasks requiring nuanced recollection of past states or dialogue turns.
-
-## Mem0: Unified Memory Abstraction
-
-Mem0 aims to democratize AI memory by providing a single, consistent interface for developers. It abstracts away the underlying complexities of different memory storage and retrieval methods. This includes supporting various types of memory, from fleeting short-term context to enduring long-term knowledge.
-
-### Simplifying Memory Integration
-
-This unified approach simplifies the process of integrating memory into an AI agent. Developers don't need to become experts in multiple memory backends. Mem0 allows them to focus on the agent's logic, knowing that memory management is handled through a well-defined API. It's a key component in building more sophisticated [intelligent agents](/articles/ai-agent-architecture-patterns/). Mem0's abstraction defines a core part of the **zep memory vs mem0** distinction.
-
-Mem0's flexibility means it can adapt to various retrieval strategies depending on the memory modality being accessed. For instance, retrieving from short-term memory might be a simple key-value lookup, while long-term memory might involve vector similarity search. This adaptability is a core strength when building complex AI memory solutions.
-
-## Core Differences in Approach
-
-The fundamental divergence between Zepp Memory and Mem0 lies in their design philosophy. Zepp Memory is akin to a specialized database for an AI's life experiences, emphasizing the *what* and *when* of past events. Mem0, on the other hand, is more like a universal adapter, facilitating the *how* of memory integration across different types. This **zep memory vs mem0** contrast defines their primary use cases.
-
-### Data Structure and Retrieval Mechanisms
-
-Zepp Memory's specialized indexing might offer superior retrieval speeds for its specific use cases. It's designed to link related pieces of information, allowing an agent to traverse its memory like a network of interconnected events. This makes it excellent for tasks requiring nuanced recollection of past states or dialogue turns.
-
-Mem0, by abstracting different memory types, allows for maximum flexibility. It can adapt to various retrieval strategies depending on the memory modality being accessed. For instance, retrieving from short-term memory might be a simple key-value lookup, while long-term memory might involve vector similarity search. This adaptability is a core strength when building complex AI memory solutions. The **zep memory vs mem0** debate often centers on this flexibility versus specialization.
-
-## Architectural Considerations
-
-The choice between Zepp Memory and Mem0 also hinges on how they fit into the broader AI agent architecture. Each system presents different integration patterns and demands on the surrounding components. Understanding these architectural nuances is key to the **zep memory vs mem0** decision.
-
-### Integration Complexity and Developer Effort
-
-Integrating Zepp Memory typically involves setting up its specific data structures and ensuring your agent’s state is correctly mapped to its memory model. This might require more upfront design work focused on how the agent interacts with its persistent memory. Developers might invest more time in designing the agent's interaction patterns with its specialized memory.
-
-Mem0’s strength lies in its simplified integration. Its unified API means developers can plug it into existing agent frameworks with less friction. This is particularly beneficial when working with popular LLM orchestration libraries. For instance, comparing it with other frameworks, [Letta AI](/articles/letta-ai-guide/) offers another perspective on memory integration. This ease of integration is a significant factor in **zep memory vs mem0** choices, reducing the barrier to entry for basic integration.
-
-### Scalability and Performance Benchmarks
-
-Both systems aim for scalability, but their performance characteristics can differ. Zepp Memory’s specialized indexing might offer superior retrieval speeds for its specific use cases. However, scaling a highly specialized system can sometimes present unique challenges. According to a 2024 benchmark study on AI memory benchmarks, specialized systems like Zepp Memory can sometimes outperform generalized ones in specific tasks, but the gap is narrowing. This performance aspect is vital in **zep memory vs mem0** analyses.
-
-Mem0’s performance will depend heavily on the underlying memory backends it supports and how efficiently its abstraction layer operates. Its flexibility allows for choosing performant storage solutions, but the abstraction itself can introduce some overhead. A 2024 study published in arxiv indicated that generalized memory frameworks can achieve near-specialized performance with careful backend selection, showing a 25% improvement in average retrieval times when optimized.
-
-Here's a conceptual Python example demonstrating how you might initialize a generic memory object, which Mem0 aims to standardize:
+Retrieval has two paths. `thread.get_user_context()` returns a **Context Block**, a prompt-ready string assembled from the user's graph. `graph.search()` is the low-level path with scopes (edges, nodes, episodes) and a choice of reranker. With the `zep-cloud` v3 SDK:
 
 ```python
-## Conceptual example for a unified memory API like Mem0
-class AgentMemory:
- def __init__(self, memory_type="long_term"):
- self.memory_type = memory_type
- self.storage = self._initialize_storage(memory_type)
- print(f"Initialized {memory_type} memory.")
+import os
+from zep_cloud.client import Zep
+from zep_cloud.types import Message
 
- def _initialize_storage(self, memory_type):
- if memory_type == "long_term":
- return {"entries": [], "vector_db": None} # Placeholder for vector DB
- elif memory_type == "short_term":
- return {"recent_interactions": []}
- else:
- return {}
+zep = Zep(api_key=os.environ["ZEP_API_KEY"])
+zep.user.add(user_id="dana")
+zep.thread.create(thread_id="dana-1", user_id="dana")
 
- def add_memory(self, data):
- if self.memory_type == "long_term":
- self.storage["entries"].append(data)
- # Logic to update vector DB if applicable
- elif self.memory_type == "short_term":
- self.storage["recent_interactions"].append(data)
- # Logic for managing short-term buffer size
+zep.thread.add_messages(
+    "dana-1",
+    messages=[Message(role="user", name="Dana", content="I switched from Python to Go at work.")],
+)
 
- def retrieve_memory(self, query):
- if self.memory_type == "long_term":
- # Search entries and potentially vector DB
- pass
- elif self.memory_type == "short_term":
- # Search recent interactions
- pass
- return "Retrieved memory content"
-
-## Example usage:
-## long_term_mem = AgentMemory(memory_type="long_term")
-## long_term_mem.add_memory("User asked about AI memory systems.")
-## retrieved = long_term_mem.retrieve_memory("What did the user ask?")
+context = zep.thread.get_user_context(thread_id="dana-1")
+print(context.context)  # prompt-ready block, built in the background
 ```
 
-One notable open source solution is [Hindsight](https://github.com/vectorize-io/hindsight), which provides agents with persistent memory through automatic extraction and semantic retrieval.
+Ingestion is asynchronous, so new facts can take a moment to appear.
 
-## Comparative Analysis: Zepp Memory vs. Mem0
+## How Mem0 handles memory
 
-To better illustrate the differences, consider this comparison table. It highlights key aspects relevant to developers choosing between these two AI memory solutions. This table is central to understanding **zep memory vs mem0**.
+Mem0 is simpler. Your code calls `add` with messages and a `user_id`. One LLM call extracts facts like "Dana uses Go at work." Mem0 embeds them, links their entities, and stores them.
 
-| Feature | Zepp Memory | Mem0 |
-| :
+Since the April 2026 algorithm, Mem0 doesn't update or delete during extraction. "Dana switched from Python to Go" is stored as a new fact next to any older "Dana uses Python" memory, and time-aware retrieval is meant to rank the current one first. You correct memories explicitly with `update` and `delete`.
+
+```python
+from mem0 import Memory
+
+memory = Memory()  # OpenAI + local Qdrant defaults
+memory.add("I switched from Python to Go at work.", user_id="dana")
+
+hits = memory.search("what language does Dana use?", filters={"user_id": "dana"}, top_k=5)
+for h in hits["results"]:
+    print(h["memory"], h["score"])
+```
+
+The graph difference matters. Mem0's [migration guide](https://docs.mem0.ai/migration/oss-v2-to-v3) says graph memory "is removed from the open-source SDK." The Platform has a built-in entity graph that boosts ranking, but it doesn't track validity windows the way Zep does.
+
+## Open source and self-hosting
+
+This is where the two diverge most.
+
+**Mem0** you can run yourself completely: the library, or the Docker server with Postgres and pgvector, a dashboard and API keys. You supply the LLM and embedder.
+
+**Zep** you can't, unless you buy Enterprise. Zep stopped maintaining **Community Edition** in April 2025; the code sits unsupported in the `legacy/` folder of getzep/zep. Bring Your Own Cloud deployment is an Enterprise feature on the [Zep pricing page](https://www.getzep.com/pricing). The open-source path is **Graphiti**: the same temporal graph engine, but you run Neo4j, FalkorDB or Neptune and build users, threads and context assembly yourself. Our [Zep Docker guide](/articles/zep-memory-docker/) covers what self-hosting looks like now.
+
+## Pricing
+
+| | Zep Cloud | Mem0 Platform |
+|---|---|---|
+| Free | 10,000 credits/month | 10,000 adds and 1,000 retrievals/month |
+| Entry paid | Flex: $125/month, 50,000 credits | Starter: $19/month, 50,000 adds and 5,000 retrievals |
+| Next tier | Flex Plus: $375/month, 200,000 credits | Pro: $249/month, 500,000 adds, graph memory |
+| Billing unit | 1 credit per 350 bytes ingested; retrieval unmetered | Requests: adds and retrievals counted separately |
+| Enterprise | Custom; BYOC, BYOK, SLA | Custom; on-prem, SSO, SLA |
+
+Zep bills on **ingestion**; searches are free. Mem0 bills on **requests**, and retrievals are the tighter limit on the lower tiers. Which is cheaper depends on whether your app writes a lot and reads a little, or the reverse.
+
+## Benchmarks and the LoCoMo dispute
+
+The two companies have argued publicly over numbers.
+
+- Mem0's 2025 paper scored **Zep at 65.99%** on LoCoMo (LLM-as-judge), below **Mem0 at 66.88%** and **Mem0g at 68.44%**. It also measured Zep's graph at over 600,000 tokens per conversation.
+- Zep replied in May 2025 that Mem0 had set Zep up wrong: both speakers mapped to one user, timestamps pasted into message text instead of `created_at`, and searches run sequentially. Zep reported **75.14%** for itself in [its rebuttal](https://www.getzep.com/blog/lies-damn-lies-statistics-is-mem0-really-sota-in-agent-memory/).
+- Zep's own paper reports **94.8% on DMR** and up to **18.5% higher accuracy on LongMemEval** than baselines.
+- Mem0 now reports **92.5 on LoCoMo** and **94.4 on LongMemEval** for its April 2026 algorithm, measured on its managed platform.
+
+Every figure here is vendor-run, with different models, judges and settings. The [Mem0 paper breakdown](/articles/mem0-building-production-ready-ai-agents/) and LLM memory evaluation explain why these numbers don't line up.
+
+## Zep or Mem0: how to choose
+
+| If you need... | Pick |
+|---|---|
+| To know which version of a fact is current, with history | Zep (or Graphiti) |
+| Customer or account context built from business data plus chat | Zep |
+| A fully self-hosted, open-source memory server | Mem0 |
+| Open-source temporal graph and you can run a graph DB | Graphiti |
+| Simple per-user preference memory with a small API | Mem0 |
+| Low entry price for a hosted service | Mem0 |
+| Retrieval cost that doesn't grow with query volume | Zep |
+
+If facts in your domain change often (addresses, plans, account status), Zep's validity windows are the stronger model; see temporal reasoning in AI memory. If you mostly store stable preferences and want to own the stack, Mem0 is the easier fit. Other options, including Letta, Cognee and [Hindsight](https://github.com/vectorize-io/hindsight), are compared in [Zep alternatives](/articles/zep-alternatives/) and Mem0 alternatives. Vectorize also publishes a [Mem0 vs Zep comparison](https://vectorize.io/articles/mem0-vs-zep).

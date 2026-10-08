@@ -96,7 +96,7 @@ Builds temporal knowledge graphs: entities, facts with validity windows, and the
 
 ### Cognee
 
-Turns text, code and conversations into a graph plus vector index, with file-based defaults (SQLite, LanceDB, Kuzu) so it runs with no setup. Version 1.6.0 (September 2026) added keyless workflows using local models. It has plugins for Claude Code, Codex and OpenClaw. See [Mem0 vs Cognee](/articles/mem0-vs-cognee/) and [Cognee alternatives](/articles/cognee-alternatives/).
+Turns text, code and conversations into a graph plus vector index, with file-based defaults (SQLite, LanceDB, LadybugDB) so it runs with no setup. Version 1.6.0 (September 2026) added keyless workflows using local models. It has plugins for Claude Code, Codex and OpenClaw. See [Mem0 vs Cognee](/articles/mem0-vs-cognee/) and [Cognee alternatives](/articles/cognee-alternatives/).
 
 ### Supermemory
 

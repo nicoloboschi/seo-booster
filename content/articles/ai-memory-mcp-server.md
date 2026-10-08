@@ -1,168 +1,146 @@
 ---
-title: 'AI Memory MCP Server: Enhancing Agent Recall and Context'
-description: Explore the role of an AI memory MCP server in providing agents with persistent, contextual recall. Learn how it supports complex agent architectures.
+title: "AI Memory MCP Servers: Official Server and Alternatives"
+description: "What an AI memory MCP server is, how the official MCP memory server's knowledge graph works, and how Graphiti, Basic Memory, Mem0, MemPalace and Hindsight compare."
 date: 2026-03-28
-lastmod: 2026-03-28
-tags:
-- AI memory
-- MCP server
-- agent architecture
-- AI recall
-keywords:
-- ai memory mcp server
-- MCP server for AI
-- AI agent memory
-- persistent AI memory
-- contextual AI recall
-- agent recall server
-- AI memory server
-faq:
-- question: What is the primary function of an AI memory MCP server?
-  answer: The primary function is to manage an AI agent's memory, ensuring it can store, retrieve, and contextualize information for persistent and intelligent interaction.
-- question: How does an MCP server contribute to AI agent context?
-  answer: It provides relevant past information and experiences, enriching the current input and allowing the agent to understand and respond within a broader situational context.
-- question: Are there specific technologies that form an AI memory MCP server?
-  answer: Yes, common components include vector databases (for semantic search), LLMs (for processing), and potentially relational or key-value stores for structured data.
+lastmod: 2026-10-08
 slug: ai-memory-mcp-server
 aliases:
 - /articles/llm-memory-mcp/
 - /articles/llm-memory-mcp-server/
+tags:
+- MCP
+- Model Context Protocol
+- agent memory
+- tools
+keywords:
+- "ai memory mcp server"
+- "llm memory mcp"
+- "mcp memory server"
+- "modelcontextprotocol server-memory"
+- "best memory mcp server"
+cluster: agent-memory
+faq:
+- question: "What is an MCP memory server?"
+  answer: "It's a Model Context Protocol server that exposes memory operations, such as storing facts and searching them, as tools any MCP client can call. Claude Desktop, Claude Code, Cursor and other clients can then share one persistent memory without custom integration code."
+- question: "How does the official MCP memory server store data?"
+  answer: "The reference server @modelcontextprotocol/server-memory keeps a small knowledge graph of entities, relations and observations in a local memory.jsonl file. You can move the file with the MEMORY_FILE_PATH environment variable. It has nine tools, such as create_entities, add_observations and search_nodes, and no embeddings."
+- question: "Which MCP memory server should I use?"
+  answer: "For a quick personal setup, the official server or Basic Memory (Markdown files) are simplest. For semantic search over past chats, MemPalace runs locally. For temporal facts, Graphiti's MCP server. For extracted, multi-user memory, hosted or self-hosted servers like Mem0 or Hindsight."
 ---
 
+An **AI memory MCP server** is a [Model Context Protocol](https://modelcontextprotocol.io/) server that gives any MCP client tools to save and recall memories. Instead of each app building its own memory, Claude Desktop, Claude Code, Cursor or a custom agent connect to the same server and call tools like `add_observations` or `search_nodes`. The official reference server stores a small knowledge graph in a JSONL file.
 
-What if your AI agent could truly remember every interaction, learning and adapting like a human? An **AI memory MCP server** provides AI agents with dedicated infrastructure for managing their recall capabilities. It centralizes the storage, retrieval, and contextualization of information, enabling agents to maintain persistent memory and understand ongoing interactions effectively. This system is key to advanced agent behavior and is vital for any **AI memory server** application.
+This page explains how memory over MCP works, walks through the official server, compares the main alternatives, and covers security. Facts come from each project's README, checked October 2026.
 
-## What is an AI memory MCP server?
+## What is an MCP memory server?
 
-An **AI memory MCP server** is a specialized architectural component designed to manage an AI agent's memory functions. It acts as a central hub for storing and retrieving both short-term and long-term information, which is essential for maintaining context and recalling past interactions.
+**An MCP memory server is a process that speaks the Model Context Protocol and exposes memory as tools: write a fact, search memories, delete an entry. The model decides when to call them. Because MCP is a shared standard, one memory server can serve every MCP-capable assistant on a machine or team.**
 
-This system is crucial for building **persistent AI memory**, allowing agents to move beyond single-turn responses and engage in more complex, ongoing interactions. The **AI memory MCP server** is fundamental to modern AI agent design, facilitating sophisticated recall.
+MCP tools are "model-controlled," per the [spec](https://modelcontextprotocol.io/specification/2025-11-25/server/tools): the model discovers and calls them based on the conversation. That's the key behavior difference from memory that an app injects automatically. With MCP, memory works only if the model chooses to save and search, which is why most memory servers ship a suggested system prompt. The two patterns are compared in [how AI memory works](/articles/how-ai-memory-works/).
 
-### The Crucial Role of Memory in AI Agents
+## The official MCP memory server
 
-Without effective memory, AI agents would struggle to learn from experience or maintain coherent dialogues, similar to individuals with severe amnesia. **AI agent memory** forms the foundation for intelligent behavior. It empowers agents to:
+The reference implementation is [`@modelcontextprotocol/server-memory`](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) in the `modelcontextprotocol/servers` repo. It models memory as a **knowledge graph**:
 
-* **Maintain context:** Recall previous conversational turns or task steps.
-* **Learn and adapt:** Incorporate new information and refine their understanding over time.
-* **Personalize interactions:** Tailor responses based on user history and preferences.
-* **Perform complex tasks:** Execute multi-step operations requiring the recall of intermediate states.
+- **Entities**: nodes with a unique name, a type (like `person`) and a list of observations.
+- **Relations**: directed links between entities, written in active voice (`works_at`).
+- **Observations**: single facts attached to an entity, added or removed one at a time.
 
-Understanding the different [types of AI agent memory](/articles/ai-agents-memory-types/) is fundamental to designing these sophisticated systems. An **AI memory MCP server** is the backbone for these capabilities.
+It exposes nine tools:
 
-### MCP: The Pillars of Memory, Context, and Persistence
+| Tool | What it does |
+|---|---|
+| `create_entities` | Add entities with types and observations |
+| `create_relations` | Link entities |
+| `add_observations` | Add facts to existing entities |
+| `delete_entities` / `delete_observations` / `delete_relations` | Remove data |
+| `read_graph` | Return the whole graph |
+| `search_nodes` | Search names, types and observation text |
+| `open_nodes` | Fetch specific entities by name |
 
-The acronym "MCP" in **AI memory MCP server** commonly stands for **Memory, Context, and Persistence**. These three elements are closely related and vital for enabling advanced AI capabilities.
+Data lives in `memory.jsonl`, by default in the server's directory; set `MEMORY_FILE_PATH` to put it somewhere durable. There are no embeddings, so search matches text, not meaning. It's a reference server: easy to read and run, but meant as a starting point. It works well for a few hundred facts about one user. It isn't built for large histories or multiple tenants.
 
-* **Memory:** This is the core ability to store and retrieve information, encompassing everything from raw sensory data to abstract concepts. A robust **ai memory mcp server** excels here.
-* **Context:** This refers to the agent's capacity to understand the relevance of stored information to its current situation. It involves retrieving data and discerning its applicability through the **AI memory MCP server**.
-* **Persistence:** This is the capability for memory to endure over extended periods, allowing agents to retain knowledge and experiences across multiple sessions or tasks. The **AI memory MCP server** ensures this longevity.
+Claude Desktop config:
 
-A well-designed MCP server ensures these components work harmoniously, fostering more capable and intelligent agent behavior. For a deeper dive into how agents remember, see [understanding agent memory](/articles/ai-agent-memory-explained/). The functionality of an **AI memory mcp server** is paramount.
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": { "MEMORY_FILE_PATH": "/Users/me/.mcp/memory.jsonl" }
+    }
+  }
+}
+```
 
-## Architecture of an AI Memory MCP Server
+The README also suggests a system prompt that tells the model to start each chat by retrieving memory and to watch for identity, behaviors, preferences, goals and relationships worth saving.
 
-An **AI memory MCP server** is typically an architectural pattern that integrates several distinct components rather than being a single piece of software. Its design emphasizes efficient data management and rapid information retrieval, making it a cornerstone of any advanced **AI recall server**. The architecture of an **AI memory MCP server** is modular.
+## Calling a memory server from Python
 
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
-
-### Key Architectural Components
-
-The standard architecture of an **AI memory MCP server** usually comprises several critical parts. These components work in concert to provide agents with a comprehensive memory system.
-
-#### Short-Term Memory (STM) / Working Memory
-
-This component holds information currently being processed or immediately relevant to the ongoing task. It generally has a limited capacity and a short duration, acting as the agent's immediate scratchpad.
-
-#### Long-Term Memory (LTM)
-
-This is where information is stored for extended periods. It includes learned facts, past experiences, user profiles, and accumulated knowledge. The **AI memory MCP server** ensures this knowledge base is accessible.
-
-#### Memory Storage
-
-This is the underlying infrastructure responsible for physically storing the data. It can range from simple databases to advanced vector stores. Selecting the right storage is key for an effective **ai memory mcp server**.
-
-#### Retrieval Mechanisms
-
-These are algorithms and models designed to fetch relevant information from memory based on current input or specific queries. Efficient retrieval is a hallmark of a good **AI memory MCP server**.
-
-#### Contextualization Engine
-
-This component processes retrieved information, filtering and integrating it with the current input to provide necessary context. This engine is critical for an **AI memory MCP server** to be truly useful.
-
-The effective interplay between these components dictates how well an agent can recall and apply information. This intricate design is what makes an **AI memory MCP server** so powerful.
-
-### Integrating LLMs and Embeddings
-
-Modern **AI memory MCP servers** heavily rely on Large Language Models (LLMs) and embedding models. LLMs are instrumental in processing natural language queries and generating responses. Embedding models, in turn, convert text and other data types into numerical vectors, enabling semantic understanding.
-
-Vector databases, such as Chroma, Weaviate, or Pinecone, are frequently employed as the storage layer for LTM. These databases excel at performing similarity searches, which is fundamental for retrieving semantically related information. This capability is central to how agents achieve effective [semantic memory in AI agents](/articles/semantic-memory-ai-agents/). An **AI memory MCP server** often orchestrates these technologies.
-
-A common operational pattern involves these steps within the **AI memory MCP server**:
-1. **Embedding the input:** The current user query is converted into an embedding vector.
-2. **Performing a vector search:** The vector database is queried to find past memories whose embeddings are closest to the query embedding.
-3. **Retrieving contextual information:** The full content of the most relevant memories is fetched.
-4. **Constructing a prompt:** The current query is combined with the retrieved memories to form a rich prompt for the LLM.
-
-This process is a cornerstone of techniques like Retrieval-Augmented Generation (RAG). Understanding how RAG differs from other agent memory approaches is beneficial, as explored in [RAG vs. Agent Memory](/articles/rag-vs-agent-memory/). The **AI memory MCP server** is pivotal in implementing RAG.
-
-### Python Code Example: Simple Memory Storage and Retrieval
-
-Here's a basic Python example demonstrating how one might store and retrieve simple text memories using embeddings and a conceptual vector store. This illustrates a core function of an **AI memory server**, a key part of an **AI memory MCP server**.
+You can use the same server from your own agent with the official MCP Python SDK (`pip install mcp`). This starts the reference server over stdio, writes an entity, and searches it:
 
 ```python
-from sentence_transformers import SentenceTransformer
-import numpy as np
+import asyncio
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
 
-class SimpleMemorySystem:
- def __init__(self, model_name='all-MiniLM-L6-v2'):
- self.model = SentenceTransformer(model_name)
- self.memory_store = [] # Stores tuples of (text_memory, embedding)
+server = StdioServerParameters(
+    command="npx",
+    args=["-y", "@modelcontextprotocol/server-memory"],
+    env={"MEMORY_FILE_PATH": "/tmp/agent-memory.jsonl"},
+)
 
- def add_memory(self, text_memory, metadata=None):
- """Adds a new memory to the system."""
- embedding = self.model.encode(text_memory)
- self.memory_store.append({'text': text_memory, 'embedding': embedding, 'metadata': metadata or {}})
- print(f"Added memory: '{text_memory[:30]}...'")
+async def main():
+    async with stdio_client(server) as (read, write):
+        async with ClientSession(read, write) as session:
+            await session.initialize()
+            await session.call_tool("create_entities", {
+                "entities": [{
+                    "name": "Alice",
+                    "entityType": "person",
+                    "observations": ["Prefers Python", "Works on the billing service"],
+                }]
+            })
+            result = await session.call_tool("search_nodes", {"query": "billing"})
+            print(result.content[0].text)
 
- def retrieve_memories(self, query, top_k=3, filter_metadata=None):
- """Retrieves the top_k most relevant memories for a given query, with optional metadata filtering."""
- query_embedding = self.model.encode(query)
+asyncio.run(main())
+```
 
- # Calculate cosine similarity between query and all memory embeddings
- similarities = []
- for mem in self.memory_store:
- # Basic check for metadata filter if provided
- if filter_metadata:
- match = True
- for key, value in filter_metadata.items():
- if key not in mem['metadata'] or mem['metadata'][key] != value:
- match = False
- break
- if not match:
- similarities.append(-1) # Assign low similarity if filter fails
- continue
+Swap the command and arguments to talk to any other memory server; the session code stays the same.
 
- mem_embedding = mem['embedding']
- similarity = np.dot(query_embedding, mem_embedding) / \
- (np.linalg.norm(query_embedding) * np.linalg.norm(mem_embedding))
- similarities.append(similarity)
+## Other memory MCP servers compared
 
- # Get indices of top_k most similar memories
- # Filter out items that didn't match filters before sorting
- valid_indices = [i for i, sim in enumerate(similarities) if sim != -1]
- valid_similarities = [similarities[i] for i in valid_indices]
+| Server | Storage | Search | Tools | License | Good for |
+|---|---|---|---|---|---|
+| **Official server-memory** | Local JSONL graph | Text match | 9 | MIT moving to Apache 2.0 | Small personal memory, learning MCP |
+| **[Graphiti MCP](https://github.com/getzep/graphiti/tree/main/mcp_server)** | FalkorDB (default) or Neo4j 5.26+ | Hybrid graph search over temporal facts | 13 | Apache 2.0 | Facts that change over time |
+| **Basic Memory** | Markdown files + SQLite index | Full-text and graph context | 21 | AGPL-3.0 | Notes you also read in Obsidian |
+| **MemPalace** | Local ChromaDB + SQLite graph | Semantic search over verbatim text | 45 | MIT | Searching past chats locally |
+| **Mem0** | Mem0 Platform | Semantic, filtered | 9 | Hosted service | Managed user memory |
+| **Hindsight** | PostgreSQL + pgvector | Semantic, BM25, graph and temporal in parallel | Per-bank endpoint | MIT | Extracted, multi-user memory you can self-host |
 
- if not valid_similarities:
- print(f"\nNo memories found matching the query and filters: '{query}'")
- return []
+Notes on each:
 
- sorted_indices_in_valid = np.argsort(valid_similarities)[::-1]
- top_indices_in_valid = sorted_indices_in_valid[:top_k]
+- **Graphiti MCP** (from Zep) exposes `add_memory`, `search_nodes`, `search_memory_facts` and others over HTTP at `http://localhost:8000/mcp/` by default, or stdio for Claude Desktop. It needs an LLM key (OpenAI by default) because ingestion extracts entities and facts, and it warns that very small local models may fail at structured output.
+- **[Basic Memory](https://github.com/basicmachines-co/basic-memory)** writes plain Markdown with wikilinks and frontmatter, so the same folder opens as an Obsidian vault. Tools include `write_note`, `read_note`, `search_notes` and `build_context`. See [LLM memory with Obsidian](/articles/llm-memory-obsidian/).
+- **MemPalace** stores conversations verbatim and searches them semantically, with no LLM needed. See [MemPalace](/articles/mempalace-ai-memory-system/).
+- **Mem0**'s original `mem0ai/mem0-mcp` repo was archived in March 2026; its README now points to a hosted server at `https://mcp.mem0.ai/mcp`, which needs a Mem0 API key.
+- **Hindsight** mounts an MCP endpoint per memory bank at `/mcp/{bank_id}/` on its API server. The endpoint is open by default, and you enable API-key auth with a tenant extension.
 
- retrieved_indices = [valid_indices[i] for i in top_indices_in_valid]
+Choosing comes down to what memory should be. If it's notes you want to read and edit, use a file-based server. If it's searchable history, use a vector store. If it's facts that change, use a temporal graph. If many users or agents share it, use a server with tenancy and auth. The broader trade-offs are in the [LLM memory comparison](/articles/llm-memory-comparison/).
 
- retrieved = [(self.memory_store[i]['text'], similarities[i]) for i in retrieved_indices]
- print(f"\nRetrieved {len(retrieved)} memories for query: '{query}'")
- return retrieved
+## Security for memory MCP servers
 
-## 
+A memory server is a write path into every future prompt, so it deserves more care than a read-only tool. The MCP spec says servers **must** validate inputs, implement access controls, rate-limit calls and sanitize outputs, and that clients should keep a human in the loop who can deny tool calls.
+
+In practice:
+
+1. **Turn on auth for any network-reachable server.** Several servers, including Hindsight's, are open by default on localhost.
+2. **Separate memory per user or project**, with banks, files or namespaces, so one person's data can't reach another's prompt.
+3. **Treat recalled memories as untrusted input.** Text saved from a web page or email can carry instructions.
+4. **Review writes** when the agent reads untrusted content, or make memory read-only in those sessions.
+5. **Back up the store.** A JSONL file or database you can roll back makes cleanup possible after a bad write.
+
+The attacks this guards against, like MINJA and AgentPoison, are covered in [AI memory injection](/articles/ai-memory-injection/).

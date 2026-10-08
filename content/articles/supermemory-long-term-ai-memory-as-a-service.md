@@ -1,129 +1,123 @@
 ---
-title: 'SuperMemory: Long-Term AI Memory as a Service Explained'
-description: 'SuperMemory: Long-Term AI Memory as a Service Explained. Learn about supermemory long term ai memory as a service, long term AI memory with practical examples, co...'
+title: "Supermemory: Long-Term AI Memory as a Service"
+description: "What Supermemory is: a hosted memory API with fact extraction, user profiles, hybrid RAG search and connectors. How it works, Python SDK, local mode, pricing."
 date: 2026-07-04
-lastmod: 2026-07-04
+lastmod: 2026-10-08
+slug: supermemory-long-term-ai-memory-as-a-service
+cluster: agent-memory
 tags:
-- AI memory
+- Supermemory
+- memory as a service
 - long-term memory
-- AI as a Service
-- SuperMemory
+- agent memory
 keywords:
 - supermemory long term ai memory as a service
-- long term AI memory
-- AI memory service
-- persistent AI memory
+- what is supermemory
+- supermemory api
+- supermemory user profiles
+- supermemory self host
+- supermemory pricing
 faq:
-- question: What are the primary benefits of using a long-term AI memory service?
-  answer: A long-term AI memory service allows AI agents to retain information beyond their immediate context window, enabling more coherent conversations, personalized interactions, continuous learning,
-    and the ability to synthesize knowledge from vast amounts of past data.
-- question: How does SuperMemory handle data privacy and security for AI memory?
-  answer: Reputable AI memory services like SuperMemory employ strong security measures including encryption at rest and in transit, strict access controls, and compliance with data protection regulations
-    to safeguard user data and agent knowledge.
-- question: Can SuperMemory be integrated with existing LLM frameworks like LangChain or LlamaIndex?
-  answer: Yes, services like SuperMemory are designed with APIs that allow integration into popular LLM frameworks. This enables developers to incorporate advanced long-term memory capabilities into their
-    existing agent development workflows, similar to how other memory backends are used, as seen in comparisons like [Letta vs. Langchain memory](/articles/letta-vs-langchain-memory/).
-slug: supermemory-long-term-ai-memory-as-a-service
+- question: "What is Supermemory?"
+  answer: "Supermemory is a hosted memory and context API for AI apps and agents. It extracts facts from conversations, keeps an auto-maintained profile per user, searches documents and memories together, and syncs data from Google Drive, Gmail, Notion, OneDrive and GitHub. It also ships plugins and an MCP server for coding assistants."
+- question: "Is Supermemory open source?"
+  answer: "Partly. The GitHub repository (supermemoryai/supermemory) is MIT licensed and holds the apps, SDKs and plugins. The local server is a free binary under a 'lite license', and Supermemory's docs say its server source is not in the public repository. The full platform runs as a managed service."
+- question: "How much does Supermemory cost?"
+  answer: "As of October 2026: Free ($5 of usage credits), Pro at $19/month ($20 credits), Max at $100/month ($130 credits), Scale at $399/month ($600 credits, includes a self-hosted option), and custom Enterprise. Usage is billed per 1,000 'SM tokens' for memory and RAG, and per 1,000 search queries."
 ---
 
+**Supermemory** is long-term memory sold as a service: one API that extracts facts from conversations, keeps a profile for each user, and searches your documents and those memories together. You send content scoped to a user or project, and Supermemory handles chunking, embeddings, extraction, contradictions and forgetting. It also runs locally as a single binary.
 
-What if your AI could remember every conversation, every preference, and every detail from its entire operational history? **Supermemory long term ai memory as a service** makes this a reality by providing AI agents with a persistent, scalable repository for storing and retrieving information over extended periods. This technology is key to developing truly intelligent, remembering AI agents.
+This page covers what Supermemory does, how its memory model works, the current Python SDK, the local server, pricing and its benchmark claims. Sources are the [Supermemory GitHub README](https://github.com/supermemoryai/supermemory), the [docs](https://supermemory.ai/docs) and the [pricing page](https://supermemory.ai/pricing), checked on 8 October 2026.
 
-## What is SuperMemory Long-Term AI Memory as a Service?
+## What is Supermemory?
 
-**Supermemory long term ai memory as a service** is a cloud-based platform offering AI agents a persistent, scalable repository for storing and retrieving information over extended periods. It overcomes the fixed context window limitations of LLMs, allowing agents to develop continuous, evolving knowledge bases. This **AI memory service** acts as an external brain, enabling agents to remember past experiences and user preferences.
+**Supermemory is a managed memory and context layer for AI applications. It ingests conversations, files and synced data, extracts facts about users, maintains a static and dynamic profile per user, and returns relevant memories and document chunks in one hybrid search call.** It targets both app builders (through its API) and individual users (through plugins for AI tools).
 
-### The Challenge of AI Forgetfulness
+Supermemory was started by **Dhravya Shah** and raised a seed round in October 2025. The GitHub repository, created in February 2024, had about 31,000 stars in October 2026.
 
-Modern AI agents often struggle with memory due to their limited **context window**, a fixed buffer of recent interactions. Information outside this window is effectively lost. This constraint prevents agents from maintaining coherent multi-turn conversations, learning from past interactions, or personalizing experiences based on long-term user history.
+## What "memory as a service" means here
 
-Dedicated **long-term AI memory** solutions like **supermemory long term ai memory as a service** are critical for overcoming this fundamental limitation. Without it, AI agents remain perpetually forgetful.
+A memory-as-a-service API takes over the pieces teams otherwise build themselves: a vector database, an embedding pipeline, a chunking strategy, an extraction prompt, and rules for when facts change. Supermemory's README pitches exactly that: "No vector DB config. No embedding pipelines. No chunking strategies."
 
-## Architecting for Persistent Memory
+The tradeoff is the usual one for managed infrastructure. You get speed and less to operate. You give up control over how extraction and ranking work, and your users' data lives with a vendor unless you take the local or Enterprise route. For the broader design space, see [persistent memory for AI](/articles/persistent-memory-ai/).
 
-Building effective long-term memory for AI agents requires sophisticated architectural patterns that manage storage, retrieval, and integration. A **long-term AI memory** service like SuperMemory incorporates several key components to ensure data is not just stored, but intelligently managed and accessible. This is the core of **supermemory long term ai memory as a service**.
+## How Supermemory works
 
-### Structured Data Storage
+The README describes five parts behind one API:
 
-AI memory systems benefit from structured representations beyond raw text. This includes:
+| Component | What it does |
+|---|---|
+| **Memory engine** | Extracts facts, tracks updates, resolves contradictions, forgets expired information |
+| **User profiles** | Keeps static facts ("Senior engineer at Acme") and dynamic context ("Working on auth migration") |
+| **Hybrid search** | Returns document chunks (RAG) and personal memories in one query |
+| **Connectors** | Syncs Google Drive, Gmail, Notion, OneDrive, GitHub and a web crawler, with webhooks |
+| **File processing** | PDFs, images (OCR), video (transcription), code (AST-aware chunking) |
 
-* **Vector Embeddings:** Numerical representations capturing semantic meaning, crucial for efficient similarity searches. [Embedding models for AI memory](/articles/embedding-models-for-rag/) are vital for this process.
-* **Knowledge Graphs:** Representing relationships between entities, enabling more complex reasoning.
-* **Timestamps and Metadata:** Essential for temporal reasoning and understanding information recency.
+Two behaviors set it apart from a plain vector store. First, **knowledge updates**: the README's example is that "I just moved to SF" supersedes "I live in NYC." Second, **automatic forgetting**: a temporary fact like "I have an exam tomorrow" expires after the date passes.
 
-### Advanced Retrieval Mechanisms
+Memory is scoped by a **namespace** in the v5 API (called a container tag in older versions). A namespace can be a user ID, a project, a repo or a client.
 
-Retrieving the *right* information at the *right* time is paramount. SuperMemory likely employs techniques such as:
+## Using the Supermemory API from Python
 
-* **Semantic Search:** Using embeddings to find semantically similar information, going beyond simple keyword matching.
-* **Hybrid Search:** Combining vector search with keyword or metadata filtering for greater precision.
-* **Contextual Re-ranking:** Adjusting retrieved memory relevance based on the current task.
+The Python SDK moved to a namespace-first v5 API with release 5.0.0 on 6 October 2026, so older examples using `container_tag=` and `q=` are out of date. This matches the current [Python SDK README](https://github.com/supermemoryai/python-sdk):
 
-### Memory Consolidation and Forgetting
+```python
+from supermemory import Supermemory
 
-Effective memory systems involve **memory consolidation**, reinforcing important information, and **forgetting** irrelevant data. This keeps the memory store manageable and relevant. According to a 2024 analysis by Vectorize.io, effective consolidation can reduce retrieval latency by up to 25%. A 2023 report by Gartner noted that 60% of AI projects struggle with data decay, highlighting the need for such mechanisms in **supermemory long term ai memory as a service**.
+client = Supermemory()  # reads SUPERMEMORY_API_KEY
 
-## SuperMemory's Role in AI Agent Architecture
+# Store content for one user; extraction happens on Supermemory's side
+client.add("user_dana", content="Dana prefers short answers and works in Go.")
 
-SuperMemory acts as a crucial backend component within a broader **AI agent architecture**. It complements the core LLM by providing reliable external knowledge and history, transcending the inherent statelessness of many AI models. This integration is key to unlocking advanced agent capabilities for a **long term AI memory service**.
+# Profile: maintained facts, no query needed
+profile = client.profile("user_dana").profile
+print([fact.memory for fact in profile.static])   # long-term facts
+print([fact.memory for fact in profile.dynamic])  # recent context
 
-### Integration with LLMs
+# Hybrid search over memories and document chunks
+response = client.search("user_dana", query="how should I answer Dana?", limit=5)
+for result in response.results:
+    print(result.memory or result.chunk, result.similarity)
+```
 
-An AI agent using SuperMemory typically involves an orchestrator that:
+`search` takes a `search_mode` of `"hybrid"` (default), `"memories"` or `"chunks"`, plus options for reranking and query rewriting (the reference notes rewriting adds about 400 ms). Deleting is done with `client.memories.forget` and `client.memories.forget_matching`, and documents have their own update and delete calls.
 
-1. Processes incoming user input.
-2. Queries SuperMemory for relevant past information.
-3. Constructs a prompt for the LLM, including retrieved memories.
-4. Sends the prompt to the LLM for response generation.
-5. Stores new insights back into SuperMemory.
+Framework wrappers exist for the Vercel AI SDK, LangChain, LangGraph, the OpenAI Agents SDK, Mastra, Agno and n8n.
 
-This pattern is a form of **Retrieval-Augmented Generation (RAG)**, specifically tailored for long-term, persistent agent memory. [RAG vs. agent memory](/articles/rag-vs-agent-memory/) further elaborates on these distinctions in **AI agent persistent memory**.
+## Supermemory for AI tools: plugins and MCP
 
-### Enabling Different Memory Types
+For people who just want their assistant to remember them, Supermemory ships open-source plugins for **Claude Code, Cursor, Codex, OpenCode, OpenClaw** and others, and acts as a memory provider for Hermes Agent. There's also a hosted MCP server at `https://mcp.supermemory.ai/mcp` with three tools: `memory` (save or forget), `recall` (search plus profile summary) and `context` (inject the profile at the start of a chat). See [memory for AI coding agents](/articles/ai-coding-agent-memory/) for how these compare with other approaches.
 
-SuperMemory's infrastructure would likely support various forms of AI memory, including:
+## Running Supermemory locally
 
-* **Episodic Memory:** Recalling specific past events or interactions. For instance, remembering a project discussion from last Tuesday. [Episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) maintains conversational flow.
-* **Semantic Memory:** Storing general knowledge and learned concepts, like a user's preferred communication style. [Semantic memory in AI agents](/articles/semantic-memory-ai-agents/) underpins an agent's world understanding.
-* **Procedural Memory:** Learning sequences of actions or skills, enabling more complex task execution over time. This is a key aspect of **supermemory long term ai memory as a service**.
+**Supermemory local** is a single binary: `curl -fsSL https://supermemory.ai/install | bash`, then `supermemory-server`. It sets up an embedded graph engine and local embeddings (`Xenova/bge-base-en-v1.5` by default), prints an API key, and serves the same API on `http://localhost:6767`. You bring any LLM, including Ollama for offline text memory. Data lives in `./.supermemory`.
 
-### Scalability and Accessibility as a Service
+Be clear on what this is. The [local vs Enterprise docs](https://supermemory.ai/docs/self-hosting/local-vs-enterprise) say the binary is "free within its lite license limit," built for individual developers, and that "its server source is not in the public repository." It runs as one process with one API key and no connectors. URL ingestion still calls a hosted reader service. Enterprise adds proprietary extraction models, team access, observability and dedicated deployments.
 
-The "as a service" aspect is critical. It means developers avoid building and maintaining complex memory infrastructure themselves. SuperMemory offers:
+So Supermemory can be self-hosted, but it isn't open-source infrastructure in the way Mem0, Graphiti or Cognee are.
 
-* **Scalability:** The service grows with the agent's needs, handling vast data and high query volumes.
-* **Accessibility:** APIs allow agents to easily read from and write to the memory store.
-* **Managed Infrastructure:** The provider handles hardware, software updates, and maintenance.
+## Supermemory pricing
 
-This allows development teams to focus on agent logic and user experience, not infrastructure headaches associated with managing **persistent AI memory**. This managed approach defines **supermemory long term ai memory as a service**.
+| Plan | Price | Included usage credits | Notable |
+|---|---|---|---|
+| Free | $0 | $5 | 1 seat |
+| Pro | $19/month | $20 | 3 seats, auto top-ups |
+| Max | $100/month | $130 | Gmail connector |
+| Scale | $399/month | $600 | Unlimited seats, self-hosted option, S3 and web crawler connectors |
+| Enterprise | Custom | Committed spend | Air-gapped or dedicated instance, SSO |
 
-## Use Cases for SuperMemory
+Usage draws on the credits at one rate card for all plans: $0.005 per 1,000 SM tokens for plain-text memory, $0.010 for rich content, $0.001 per 1,000 SM tokens for text RAG, and $0.005 per 1,000 search queries. Subscription credits reset monthly; top-ups don't expire.
 
-The implications of reliable **long-term AI memory** are far-reaching. SuperMemory could power a new generation of AI applications, changing how we interact with intelligent systems. This is where **supermemory long term ai memory as a service** truly shines.
+## Supermemory benchmark claims
 
-Projects like [Hindsight](https://github.com/vectorize-io/hindsight) demonstrate how open source memory systems can address these challenges with structured extraction and cross-session persistence.
+The README says Supermemory is "#1" on LongMemEval, LoCoMo and ConvoMem, and reports **95% Recall@15 on LongMemEval** while adding about 720 tokens of context. Two cautions:
 
-### Advanced Conversational AI
+- These are **self-reported**. No independent run is cited.
+- **Recall@15** measures whether the right evidence appears in the top 15 retrieved items. It's a retrieval metric, not the end-to-end answer accuracy most other vendors report, so the numbers aren't comparable.
 
-Imagine chatbots remembering every previous interaction, offering truly personalized and context-aware support. This moves beyond simple **long-term memory AI chat** to deeply understanding user history and preferences. An AI assistant that remembers everything a user has ever told it becomes a tangible reality with **supermemory long term ai memory as a service**.
+Supermemory also maintains **MemoryBench**, an open-source harness for running Supermemory, Mem0, Zep and others on the same benchmarks. Running it on your own data is more useful than any headline number. Our [LLM memory comparison](/articles/llm-memory-comparison/) lists each vendor's claims.
 
-### Personalized AI Assistants
+## When Supermemory fits
 
-An AI assistant could learn a user's habits, preferences, and goals over months or years, proactively offering tailored suggestions. This requires a strong **AI agent persistent memory** solution.
-
-### Knowledge Management Systems
-
-Internal AI agents for businesses could maintain a collective memory of projects, decisions, and learnings, making institutional knowledge accessible. This relates to [AI agent long-term memory](/articles/ai-agent-long-term-memory/) in a corporate context.
-
-### Continuous Learning Agents
-
-Agents in dynamic environments, like robotics or simulations, could learn and adapt over time by retaining experiences, improving performance incrementally. This is a direct benefit of **supermemory long term ai memory as a service**.
-
-## SuperMemory vs. Other Memory Solutions
-
-SuperMemory operates within a landscape of AI memory solutions. Understanding its place clarifies its value proposition as a dedicated **supermemory long term ai memory as a service**.
-
-### Comparison with Traditional Databases and Vector Stores
-
-| Feature | Traditional Database | Vector Store | SuperMemory (as a Service) |
-| :
+Supermemory fits when you want memory, document RAG and connectors from one API and don't want to run infrastructure: consumer assistants, support bots that need both a knowledge base and user history, or a personal memory across AI tools. It fits less well when open, self-built infrastructure or full control over extraction is a requirement. Those options are compared in [Supermemory alternatives](/articles/supermemory-alternatives/), and the concepts behind them in [AI agent memory explained](/articles/ai-agent-memory-explained/).

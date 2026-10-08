@@ -130,7 +130,7 @@ Many systems mix both. Letta Code's "dreaming" uses background subagents to revi
 | Relational / profile | Structured fields or tables per user | Fast lookups of known attributes | Open-ended questions | Memobase, Supermemory profiles, Memori |
 | Files | Markdown or text files the agent reads and edits | Human-readable, versionable | Search at scale | Letta Code MemFS (git-backed), Basic Memory |
 
-Most production systems are hybrids. Hindsight stores memories as entities, relationships and time series with sparse and dense vectors, on PostgreSQL with pgvector. Cognee keeps relational, vector and graph stores side by side (SQLite, LanceDB and Kuzu by default). For the trade-offs of each store, see [vector databases for LLM memory](/articles/vector-database-for-llm-memory/) and [knowledge graphs for AI memory](/articles/ai-memory-knowledge-graph/).
+Most production systems are hybrids. Hindsight stores memories as entities, relationships and time series with sparse and dense vectors, on PostgreSQL with pgvector. Cognee keeps relational, vector and graph stores side by side (SQLite, LanceDB and LadybugDB by default). For the trade-offs of each store, see [vector databases for LLM memory](/articles/vector-database-for-llm-memory/) and [knowledge graphs for AI memory](/articles/ai-memory-knowledge-graph/).
 
 ### Consolidation and forgetting
 

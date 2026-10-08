@@ -1,153 +1,144 @@
 ---
-title: 'OpenAI Agents SDK Memory: Enabling Persistent Recall for AI Agents'
-description: Explore OpenAI Agents SDK memory, how it enables AI to recall past interactions and information for more coherent and context-aware responses. Learn about impleme...
+title: "OpenAI Agents SDK Memory: Sessions and Sandbox Memory"
+description: "How memory works in the OpenAI Agents SDK: Sessions for chat history (SQLite, Redis, SQLAlchemy, Conversations API), compaction, and sandbox agent memory files."
 date: 2026-04-08
-lastmod: 2026-04-08
-tags:
-- OpenAI
-- AI Agents
-- Memory
-- SDK
-- AI Agent Memory
-- OpenAI Agents SDK
-keywords:
-- openai agents sdk memory
-- ai agent memory
-- llm memory
-- persistent memory ai
-- sdk memory
-- AI agent memory SDK
-- SDK memory for OpenAI agents
-- openai agents sdk responses api 2026
-- openai agents sdk session memory
-- openai personal agent
-- openai agents sdk context window
-- openai agents sdk long term memory
-- openai agents sdk persistent recall
-faq:
-- question: What is memory in the context of OpenAI Agents SDK?
-  answer: Memory in the OpenAI Agents SDK refers to the mechanisms that allow AI agents to store, retrieve, and utilize past information from interactions or external sources, enabling them to maintain
-    context and learn over time.
-- question: How does the OpenAI Agents SDK handle long-term memory?
-  answer: The SDK facilitates long-term memory by integrating with various storage solutions, like vector databases, allowing agents to persist and recall information beyond the immediate conversation context.
-- question: Can OpenAI Agents SDK agents remember specific past events?
-  answer: Yes, through episodic memory implementations, agents built with the SDK can be designed to recall specific past events or interactions, enhancing their ability to provide personalized and contextually
-    relevant responses.
-- question: How does OpenAI Agents SDK session memory work?
-  answer: OpenAI Agents SDK session memory typically refers to the management of conversational context within a single interaction session. This involves storing and retrieving recent messages and states
-    to ensure the agent maintains coherence and understands the immediate flow of dialogue. For longer-term recall, integration with external memory stores is necessary.
-- question: What is the role of the context window in OpenAI Agents SDK memory?
-  answer: The context window in the OpenAI Agents SDK refers to the limited amount of text the language model can process at any given time. Managing this window is crucial for short-term memory, as it
-    dictates how much recent conversation history the agent can directly access. For longer-term memory, information needs to be summarized or retrieved from external stores to fit within or augment the
-    context window.
+lastmod: 2026-10-08
 slug: openai-agents-sdk-memory
+cluster: agent-memory
 aliases:
-- /articles/ai-powered-with-memory-agent-features/
-- /articles/debuts-ai-powered-memory-agent-features/
-- /articles/openai-ai-powered-browser-memory-agent-features/
-- /articles/openai-ai-powered-memory-agent-features/
+  - /articles/ai-powered-with-memory-agent-features/
+  - /articles/debuts-ai-powered-memory-agent-features/
+  - /articles/openai-ai-powered-browser-memory-agent-features/
+  - /articles/openai-ai-powered-memory-agent-features/
+tags:
+  - OpenAI Agents SDK
+  - OpenAI
+  - agent memory
+  - sessions
+keywords:
+  - "openai agents sdk memory"
+  - "openai agents sdk session"
+  - "openai agents sdk long-term memory"
+  - "sqlitesession"
+  - "openai agent memory"
+faq:
+  - question: "Does the OpenAI Agents SDK have memory?"
+    answer: "Yes, in two forms. Sessions store conversation history and replay it on each Runner.run call, with backends such as SQLiteSession, RedisSession, SQLAlchemySession and OpenAIConversationsSession. Sandbox agents can also use a Memory capability that distills lessons from past runs into files like memories/MEMORY.md."
+  - question: "How do I persist conversation history in the OpenAI Agents SDK?"
+    answer: "Create a session, for example SQLiteSession('user-42', 'conversations.db'), and pass it as session= to Runner.run on every turn. The runner loads earlier items before the run and saves new ones after it. Without a file path, SQLiteSession is in-memory only."
+  - question: "Does the OpenAI Agents SDK have long-term memory across conversations?"
+    answer: "Not for general chat agents. Sessions are per session ID and hold raw history. Cross-run learning exists only for sandbox agents through the Memory capability. For user facts across sessions, add your own store or a memory service as a tool."
 ---
 
-What if your AI assistant could truly remember every conversation? **OpenAI Agents SDK memory** refers to the SDK's features enabling AI agents to store, retrieve, and manage interaction data. This persistent recall allows agents to maintain context across sessions, learn from past experiences, and provide more coherent, stateful responses, crucial for advanced AI development.
+**OpenAI Agents SDK memory** comes in two parts. **Sessions** store a conversation's history and replay it on every `Runner.run`, so the agent remembers earlier turns. **Sandbox agent memory** distills lessons from past runs into Markdown files the agent reads next time. There's no built-in store of user facts across sessions.
 
-## What is OpenAI Agents SDK Memory?
+This page covers both against the Python SDK (`openai-agents` 0.23, October 2026), using the official [Sessions docs](https://openai.github.io/openai-agents-python/sessions/). It also clears up a common mix-up with ChatGPT's own memory features.
 
-**OpenAI Agents SDK memory** is the set of features within the SDK that empowers AI agents to retain, access, and process information gathered from their interactions. This allows agents to maintain conversational context, learn from past experiences, and execute complex, stateful tasks, significantly improving their coherence and utility.
+## What is memory in the OpenAI Agents SDK?
 
-This capability is vital for AI that can engage in extended dialogues, remember user preferences, track task progress, and even learn from its operational history. Without memory, AI agents operate as stateless entities, unable to build upon previous knowledge or grasp ongoing situations. The **OpenAI Agents SDK memory** provides developers with the necessary tools to implement various memory functions, enabling **AI agent memory SDK** solutions.
+**Memory in the OpenAI Agents SDK is the conversation state the runner carries between turns. A Session object loads prior items before each run and saves new items after it, in SQLite, Redis, a SQL database or OpenAI's Conversations API. Sandbox agents can add a Memory capability that writes reusable lessons to files.**
 
-### The Importance of Persistence in AI Interactions
+An agent run is stateless by default. If you call `Runner.run` twice without passing history, the second call knows nothing about the first. The SDK's [running agents docs](https://openai.github.io/openai-agents-python/running_agents/) list four ways to carry state forward:
 
-Stateless AI models treat each query independently by default. This limitation severely restricts their ability to perform tasks requiring continuity, such as managing multi-step projects, offering personalized recommendations, or engaging in natural conversations. **Persistent memory** for AI agents overcomes this by enabling information retention over extended periods. This is fundamental for AI that acts as a reliable assistant or collaborator, genuinely understanding and adapting to user needs.
+| Strategy | Where history lives | Best for |
+|---|---|---|
+| `result.to_input_list()` | Your app | Small loops, full control, any model provider |
+| `session=` | Your storage, managed by the SDK | Persistent chat, resumable runs, custom stores |
+| `conversation_id` | OpenAI Conversations API | Server-side conversation shared across services |
+| `previous_response_id` | OpenAI Responses API | Light server-side chaining, no conversation object |
 
-A 2025 survey by AI Research Labs indicated that over 70% of users found AI assistants frustrating due to their inability to remember previous interactions (Source: AI Research Labs, 2025 Survey). This highlights the critical demand for **AI agents with memory** that can maintain context and recall past information, a core function of **SDK memory for OpenAI agents**.
+The last two work only with the OpenAI Responses API. The docs advise picking one strategy per conversation; a session can't be combined with `conversation_id` or `previous_response_id` in the same run.
 
-### Core Components of AI Agent Memory
+## Sessions: conversation history
 
-Understanding the foundational concepts of AI memory is key before exploring the specifics of the OpenAI Agents SDK. Generally, AI memory systems, which inform **OpenAI agents SDK memory** design, can be categorized as follows:
-
-* **Short-Term Memory (STM)**: This functions like working memory, holding information relevant to the immediate task or conversation. It's volatile and has limited capacity. This is crucial for **OpenAI Agents SDK session memory**.
-* **Long-Term Memory (LTM)**: This stores information more permanently, allowing agents to recall facts, past experiences, and learned patterns over extended periods.
-* **Episodic Memory**: A subset of LTM, this stores specific events and experiences with temporal context, enabling recall of "what happened when."
-* **Semantic Memory**: This stores general knowledge, facts, and concepts, independent of specific personal experiences.
-
-Understanding these distinctions is crucial for designing an effective memory strategy for your AI agent. For a deeper dive, explore [detailed AI agent memory concepts](/articles/ai-agent-memory-explained/).
-
-## Implementing Memory with the OpenAI Agents SDK
-
-The OpenAI Agents SDK serves as a framework, offering abstractions and tools to build intelligent agents. For memory, the SDK promotes flexibility, allowing integration with various memory mechanisms, often by interacting with external storage solutions or structuring the agent's internal state. This approach is central to effective **OpenAI agents SDK memory** implementation and building **openai personal agent** capabilities.
-
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
-
-### Understanding the SDK's Role in Memory
-
-The SDK's design encourages developers to consider how an agent will store and retrieve information. This typically involves defining how the agent's **context window** is managed and how external data sources can be queried for **OpenAI agents SDK memory**. For instance, an agent might use its short-term memory for current conversation turns while querying a long-term memory store for user preferences or historical data. This is key to managing **OpenAI Agents SDK session memory**.
-
-### Managing Short-Term Context and the Context Window
-
-For immediate conversational context, agents often manage the input/output history. The OpenAI Agents SDK facilitates this by allowing you to pass previous messages or interaction states as input to the language model. This ensures the model has access to recent turns, helping it maintain coherence within a single session.
-
-This approach is effective for managing the immediate flow of conversation but doesn't scale for retaining information across sessions or long periods. It's a form of implicit, short-term memory management essential for **AI agent memory SDK** functionality. The **context window** is a critical constraint here; as conversations grow, older parts of the dialogue may fall out of the model's immediate view. Strategies for **OpenAI agents SDK long term memory** often involve summarizing or selectively retaining information to manage this constraint.
-
-### Connecting to External Stores for Long-Term Memory
-
-To achieve persistent memory, agents built with the OpenAI Agents SDK need to interact with external storage systems. This is where the SDK's flexibility shines for **OpenAI agents SDK memory**. Common strategies include:
-
-* **Vector Databases**: Storing conversational history, user data, or knowledge base documents as embeddings in a vector database (like Pinecone, Weaviate, or Chroma). The agent can then perform similarity searches to retrieve relevant information. This is a cornerstone of [Retrieval-Augmented Generation (RAG)](/articles/rag-vs-agent-memory/).
-* **Key-Value Stores**: Using simpler databases to store specific pieces of information, like user IDs, preferences, or task statuses.
-* **Databases**: Employing traditional relational or NoSQL databases for structured data storage.
-
-The SDK allows you to write custom logic to interact with these stores. For example, before processing a user query, the agent could first query a vector database for relevant past interactions or knowledge snippets and then inject this retrieved information into the prompt for the language model. This is crucial for enabling **persistent memory AI** features and achieving **OpenAI agents SDK persistent recall**.
-
-### Example: Using a Simple Memory Store (Conceptual)
-
-While the OpenAI Agents SDK doesn't include a built-in memory database, you can easily integrate one. Here’s a conceptual Python example demonstrating how an agent might interact with a simple dictionary as a form of memory, showcasing **OpenAI agents SDK memory** integration.
+A **session** is a store keyed by a session ID. Pass it on every turn:
 
 ```python
-from openai import OpenAI
+import asyncio
 
-client = OpenAI()
+from agents import Agent, Runner, SQLiteSession
 
-class ConversationalAgent:
- def __init__(self):
- self.memory = {} # Simple dictionary for memory
- self.history = [] # To store conversation turns
 
- def remember(self, key, value):
- """Stores information in memory."""
- self.memory[key] = value
- print(f"Agent remembered: {key} = {value}")
+async def main():
+    agent = Agent(name="Assistant", instructions="Reply concisely.")
+    session = SQLiteSession("user-42", "conversations.db")  # omit the path for in-memory
 
- def recall(self, key):
- """Retrieves information from memory."""
- return self.memory.get(key, None)
+    await Runner.run(agent, "My name is Dana and I'm vegetarian.", session=session)
+    result = await Runner.run(agent, "Suggest a dinner for me.", session=session)
+    print(result.final_output)
 
- def chat(self, user_input):
- """Processes user input and generates a response."""
- self.history.append({"role": "user", "content": user_input})
+    # Session API
+    print(await session.get_items(limit=4))  # most recent items
+    await session.pop_item()                 # undo the last item
+    # await session.clear_session()          # wipe the conversation
 
- # Example: Basic recall and reinforcement
- previous_topic = self.recall("last_topic")
- if previous_topic and previous_topic in user_input.lower():
- response_content = f"Welcome back! We were discussing {previous_topic}. What's new?"
- else:
- # Use OpenAI API for a more complex response
- messages = [{"role": "system", "content": "You are a helpful AI assistant."}] + self.history
- try:
- response = client.chat.completions.create(
- model="gpt-4o", # Or another suitable model
- messages=messages
- )
- response_content = response.choices[0].message.content
- except Exception as e:
- response_content = f"An error occurred: {e}"
- print(f"Error during OpenAI API call: {e}")
 
- # Simple heuristic to identify a topic for memory
- if "topic" in user_input.lower(): # Very basic topic detection
- self.remember("last_topic", user_input.split("topic")[-1].strip())
+asyncio.run(main())
+```
 
- self.history.append({"role": "assistant", "content": response_content})
- return response_content
+Before each run, the runner prepends the stored items to the new input. After the run, it saves only the new items.
 
-##
+### Session backends
+
+| Session | Import | Storage |
+|---|---|---|
+| `SQLiteSession` | `from agents import SQLiteSession` | SQLite file or in-memory |
+| `AsyncSQLiteSession` | `agents.extensions.memory` | SQLite, async driver |
+| `SQLAlchemySession` | `agents.extensions.memory` | Any SQLAlchemy database, such as Postgres or MySQL |
+| `RedisSession` | `agents.extensions.memory` | Redis |
+| `MongoDBSession` | `agents.extensions.memory` | MongoDB |
+| `DaprSession` | `agents.extensions.memory` | Dapr state stores |
+| `AdvancedSQLiteSession` | `agents.extensions.memory` | SQLite with branching and usage tracking |
+| `EncryptedSession` | `agents.extensions.memory` | Wrapper that encrypts another session |
+| `OpenAIConversationsSession` | `from agents import OpenAIConversationsSession` | OpenAI Conversations API |
+| `OpenAIResponsesCompactionSession` | `agents.memory` | Wrapper that compacts another session |
+
+You can also write your own by implementing the session protocol: `get_items`, `add_items`, `pop_item` and `clear_session`.
+
+## Keeping session history small
+
+Sessions grow forever by default. Long histories cost tokens and eventually overflow the [context window](/articles/context-window-of-an-llm/). The SDK gives you three controls:
+
+1. **`SessionSettings(limit=N)`** in `RunConfig(session_settings=...)` loads only the last N items.
+2. **`session_input_callback`** in `RunConfig` lets you rewrite the history list before it goes to the model, for example `lambda history, new: history[-10:] + new`. Only new items get saved, so pruning doesn't re-save old ones.
+3. **`OpenAIResponsesCompactionSession`** wraps another session and calls the Responses API `compact` endpoint when history grows. By default it triggers once 10 or more candidate items exist. It works with OpenAI Responses models only.
+
+Cutting history by item count can split a tool call from its result. The compaction wrapper handles that boundary for you; a hand-written callback has to. For the general tradeoffs, see [LLM memory compression](/articles/llm-memory-compression/).
+
+## Sandbox agent memory: lessons across runs
+
+The newer **sandbox agents** (`SandboxAgent`, which work inside a filesystem and shell) have a separate feature: the **Memory capability**. The [sandbox memory docs](https://openai.github.io/openai-agents-python/sandbox/memory/) say it is distinct from Sessions. It doesn't replay chat; it distills lessons from earlier runs.
+
+How it works:
+
+- After each run, the conversation is appended to `sessions/<rollout-id>.jsonl` in the workspace.
+- When the session closes, a model summarizes each conversation into raw notes (phase 1), then a consolidation agent writes `memories/MEMORY.md` and a short `memories/memory_summary.md` (phase 2).
+- At the next run, the summary is injected into the prompt. The agent searches `MEMORY.md` and opens per-run summaries only when it needs detail.
+- With `live_update` on (the default), the agent can fix stale entries mid-run.
+
+```python
+from agents.sandbox import SandboxAgent
+from agents.sandbox.capabilities import Filesystem, Memory, Shell
+
+agent = SandboxAgent(
+    name="Repo reviewer",
+    instructions="Inspect the workspace and keep useful lessons for follow-up runs.",
+    capabilities=[Memory(), Filesystem(), Shell()],  # Memory reads need Shell; live updates need Filesystem
+)
+```
+
+The limits are worth knowing. Memory only survives if the sandbox state survives, through a live session, persisted state or a snapshot. A fresh sandbox starts empty. Raw memories are capped (256 by default) and the oldest drop first. Phase 1 drops system, developer and reasoning content and truncates long conversations. This is closer to [procedural memory](/articles/ai-agent-procedural-memory/), "how to do the job here," than to remembering a user.
+
+## Long-term user memory with the Agents SDK
+
+For a chat agent that should remember a user next week in a new session, the SDK has nothing built in. Sessions are per session ID and store raw items, not facts. The usual patterns:
+
+- **Reuse a stable session ID per user.** Simple, but history grows without bound and old details get trimmed away.
+- **Add a memory tool.** Give the agent `function_tool`s that write facts to your database and search them. You own extraction and retrieval.
+- **Use a memory service.** Mem0 documents an Agents SDK integration, and [Hindsight](https://github.com/vectorize-io/hindsight) ships `hindsight-openai-agents`, which adds retain, recall and reflect as `FunctionTool`s. These handle fact extraction and search for you.
+
+Our guide on [how to give AI agents memory](/articles/how-to-give-ai-agents-memory/) compares those patterns in detail.
+
+## Not the same as ChatGPT memory
+
+Several searches mix the Agents SDK up with OpenAI's consumer features. ChatGPT has its own saved memories and chat-history reference, covered in [how to find ChatGPT memory](/articles/how-to-find-chatgpt-memory/). [ChatGPT Atlas](https://openai.com/index/introducing-chatgpt-atlas/), OpenAI's browser launched in October 2025, adds optional "browser memories" that carry context from pages you visit into later chats. You can view, archive or delete them in settings. None of those features are available to agents you build with the SDK. In the SDK, memory is whatever your sessions and tools store.

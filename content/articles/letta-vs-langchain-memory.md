@@ -1,179 +1,91 @@
 ---
-title: 'Letta vs LangChain Memory: Architectures and Trade-offs for AI Agents'
-description: Compare Letta (MemGPT) and LangChain memory. Explore their distinct architectures, persistence strategies, and practical trade-offs for AI agent development.
+title: "Letta vs LangChain Memory: Harness vs Library (2026)"
+description: "Letta vs LangChain memory in 2026: Letta Code's self-editing, git-backed memory files versus LangGraph checkpointers, stores and Deep Agents. When to pick each."
 date: 2026-06-16
-lastmod: 2026-06-16
-tags:
-- AI memory
-- agent frameworks
-- Letta
-- LangChain
-- MemGPT
-keywords:
-- Letta vs LangChain memory
-- MemGPT vs LangChain
-- agent memory frameworks
-- AI agent memory
-- LangGraph memory
-- agent persistence
-faq:
-- question: What is the core difference between Letta and LangChain memory?
-  answer: Letta is a full agent runtime with built-in memory management, treating memory like an OS. LangChain memory (LangMem) is a lightweight memory component that plugs into LangGraph agents, focusing
-    solely on storing and retrieving specific data points.
-- question: 'Which is better for an existing LangGraph project: Letta or LangChain memory?'
-  answer: LangChain memory (LangMem) is designed specifically for LangGraph and integrates seamlessly. Letta is a full runtime and would require migrating your agents to its environment, which is a much
-    larger undertaking.
-- question: Can Letta be used as a standalone memory library?
-  answer: While Letta has advanced memory features, it's fundamentally an agent runtime. Using it purely as a memory library without its runtime would be complex and isn't its intended use case, unlike
-    dedicated memory layers.
+lastmod: 2026-10-08
 slug: letta-vs-langchain-memory
+cluster: agent-memory
+tags:
+  - Letta
+  - LangChain
+  - LangGraph
+  - MemGPT
+  - agent memory
+keywords:
+  - "letta vs langchain memory"
+  - "letta vs langchain"
+  - "letta vs langgraph"
+  - "memgpt vs langchain memory"
+  - "letta memory vs langgraph store"
+faq:
+  - question: "What is the difference between Letta and LangChain memory?"
+    answer: "Letta is an agent harness where the agent manages its own memory: memory is stored as git-backed Markdown files that the agent edits, with background 'dreaming' to consolidate it. LangChain gives you storage primitives in Python, a LangGraph checkpointer for thread history and a store for long-term data, and your code decides what to save."
+  - question: "Can I use Letta from Python like LangChain?"
+    answer: "Not for new projects. Letta's FAQ says its Agent SDK is TypeScript only, and the Python letta-client package is marked deprecated. LangChain and LangGraph are Python-first, with JavaScript versions as well."
+  - question: "Is Letta the same as MemGPT?"
+    answer: "Letta was built by the MemGPT researchers and grew from the 2023 MemGPT paper, which had the LLM page information in and out of its own context. In 2026 the main Letta product is Letta Code, which replaced the older Python API server."
 ---
 
-What if your AI agent could recall every interaction, not just the last one? This is the challenge **Letta vs LangChain memory** address with fundamentally different approaches to agent persistence. Letta operates as a complete agent runtime with OS-like memory management. In contrast, LangChain memory (LangMem) is a modular component for LangGraph agents, specifically designed for storing and retrieving discrete data points. Understanding **Letta vs LangChain memory** is key to choosing the right persistence strategy for your AI.
+**Letta vs LangChain memory** is a choice between a harness and a library. **Letta** runs the agent for you and lets it edit its own memory, stored as git-backed Markdown files. **LangChain** gives you Python building blocks: a LangGraph checkpointer for chat history and a store for long-term facts. Your code decides what goes in.
 
-## What is Letta vs LangChain Memory?
+Older comparisons describe Letta as a Python server with memory blocks and LangChain as `ConversationBufferMemory`. Both pictures are out of date. Letta retired its Python API server in 2026, and LangChain deprecated its memory classes. This page compares what each ships as of October 2026.
 
-Letta and LangChain memory offer distinct approaches to AI agent persistence. Letta functions as a complete **agent runtime**, providing a holistic environment for agent execution and memory management. LangChain memory, specifically **LangMem**, acts as a **memory add-on**, designed to integrate with existing LangGraph agent frameworks. This difference dictates how each system handles persistence, retrieval, and overall agent architecture in the **Letta vs LangChain memory** comparison.
+## What is the difference between Letta and LangChain memory?
 
-**Letta (formerly MemGPT)** positions itself as an operating system for AI agents. It manages the agent loop, tool execution, state persistence, and memory through an OS-inspired tiered system. This approach provides deep integration but requires agents to operate within its framework.
+**Letta memory is agent-managed: the model reads and rewrites its own memory files, and background agents consolidate them. LangChain memory is developer-managed: LangGraph saves thread state with a checkpointer and JSON documents in a store, and your code or tools decide what to write and when to read it.**
 
-**LangChain memory (LangMem)**, in contrast, is a focused component. It plugs into **LangGraph** agents, handling the memory aspect while LangGraph manages the broader agent orchestration. This makes it a more modular choice for developers already invested in the LangGraph ecosystem. Comparing **Letta vs LangChain memory** reveals these core distinctions in scope and integration.
+That one difference drives most others. With Letta, you get opinions: memory layout, self-editing tools, consolidation. With LangChain, you get storage and wire the memory policy yourself, or adopt LangChain's own opinionated harness, Deep Agents.
 
-## Architectural Philosophies: Runtime vs. Component
+## How Letta handles memory in 2026
 
-The deepest divergence between Letta and **LangChain memory** stems from their core architectural design. Letta's philosophy is that of a unified agent operating system. LangChain memory adopts a component-based, modular approach. This fundamental difference shapes how developers interact with and implement memory for their AI agents.
+Letta grew out of the [MemGPT paper](https://arxiv.org/abs/2310.08560) (Packer et al., 2023), which treated the context window like RAM and let the LLM page data in and out with function calls. The idea survives; the product changed. Per the [Letta Code repository](https://github.com/letta-ai/letta-code), the main product is now **Letta Code**: a CLI, desktop app, App Server and TypeScript Agent SDK. The `letta-ai/letta` README says its `archive` branch holds "the retired Letta V1 API server."
 
-### Letta's OS-Inspired Memory Architecture
+Letta's memory now has these parts:
 
-Letta grew from the **MemGPT research project**, which conceptualized LLM context management akin to an operating system's virtual memory. This translates into a multi-tiered memory system. This tiered structure allows agents to dynamically manage their memory.
+- **MemFS**: memory as Markdown files with YAML front matter in a git repository. Root-level files load into the system prompt each turn; subfolders load on demand. Every edit is a commit.
+- **Message search**: the full conversation history, searchable by the agent.
+- **Dreaming** (formerly sleep-time agents): background subagents that review recent conversations and update memory.
+- **Skills**: reusable instruction files the agent learns and stores.
 
-* **Core Memory (RAM):** Analogous to an agent's immediate context window, holding the most relevant and frequently accessed information.
-* **Recall Memory (Cache):** A faster-access layer for frequently retrieved but less immediate information.
-* **Archival Memory (Cold Storage):** A long-term, slower-access repository for vast amounts of historical data.
+For Python developers, this is the main friction. Letta's FAQ says the Agent SDK is TypeScript only. The `letta-client` Python package still talks to the REST API, but its docs mark it deprecated. Our [Letta guide](/articles/letta-ai-guide/) covers setup, the memory model and pricing in detail.
 
-This tiered structure allows agents to dynamically manage their memory, recalling information from different levels based on relevance and access speed. Agents within Letta can even **self-edit their own memory**, creating a feedback loop for continuous learning and adaptation. According to a 2024 paper on agent memory architectures from MIT, such self-editing capabilities are crucial for achieving true long-term learning in AI agents. A study published on arxiv in 2023 also found that agents employing tiered memory systems demonstrated a 28% improvement in complex task completion compared to those with single-tier memory. This is a significant advantage when considering **Letta vs LangChain memory**.
+## How LangChain handles memory in 2026
 
-### LangChain Memory's Component-Based Details
+LangChain's memory lives in LangGraph. The [LangChain short-term memory docs](https://docs.langchain.com/oss/python/langchain/short-term-memory) describe two layers:
 
-LangChain memory (LangMem) takes a significantly simpler route. It stores memories as **flat JSON key-value items** within LangGraph's built-in structured store. Each memory unit has a namespace and a key, making it straightforward to manage. Retrieval primarily relies on **vector similarity search** against these stored items.
+- **Checkpointer**: saves agent state per `thread_id` (InMemory, SQLite, Postgres, Redis, MongoDB). This is conversation history.
+- **Store**: JSON documents under namespaces like `("users", user_id)`, with optional embedding search. This is long-term memory.
 
-This approach is highly effective for personalizing user experiences. It can remember preferences (e.g., a user prefers Python over JavaScript) or summarize past conversations. A background memory manager can automatically extract these preferences from ongoing dialogues without explicit agent instructions.
+The old classes, such as `ConversationBufferMemory`, are deprecated since 0.3.1 and moved to `langchain-classic`. See [LLM memory in LangChain](/articles/llm-memory-langchain/) for the full migration map.
 
-A unique feature of LangMem is its **prompt optimization** capability. It can analyze agent performance over time and suggest refinements to system prompts. This is a valuable asset for iterative prompt engineering within the LangGraph environment. This focus on specific components is a core differentiator in **Letta vs LangChain memory**.
+On top of that, LangChain offers two opinionated layers:
 
-## Key Differences in Functionality and Scope
+1. **LangMem**: memory tools and background extraction on the store. Its last PyPI release was October 2025.
+2. **Deep Agents** (`deepagents`): LangChain's agent harness. Its [long-term memory](https://docs.langchain.com/oss/python/deepagents/long-term-memory) is file-based too. You route a path such as `/memories/` to a `StoreBackend` and list memory files like `/memories/AGENTS.md`, which load into the prompt.
 
-Beyond their core architectures, Letta and **LangChain memory** differ in several key functional areas. These differences impact their suitability for various use cases. Understanding these nuances is vital for making an informed decision between the two in the **Letta vs LangChain memory** debate.
+That last point narrows the gap. If you compare Letta Code to Deep Agents, both are harnesses with file-shaped memory. If you compare Letta to plain LangGraph, you're comparing a finished memory design to storage primitives.
 
-### Data Structure and Retrieval Mechanisms
+## Letta vs LangChain memory at a glance
 
-Letta's tiered system allows for complex memory structures. It supports richer data representation, enabling agents to understand relationships between entities and temporal sequences more effectively. This enables more sophisticated reasoning.
+| | Letta (Letta Code) | LangChain / LangGraph |
+|---|---|---|
+| What it is | Agent harness and runtime | Library and graph runtime; Deep Agents harness on top |
+| Who decides what to remember | The agent, via memory tools and dreaming | Your code, tools you write, or LangMem |
+| Always-in-context memory | Root MemFS files in the system prompt | Whatever you inject: system prompt, `memory=` files in Deep Agents |
+| Conversation history | Stored per agent, searchable | Checkpointer per `thread_id` |
+| Long-term storage | Git-backed Markdown files (MemFS) | Store: JSON documents, optional vector index |
+| Consolidation | Built in (dreaming, `/doctor` audits) | Not built in; LangMem background manager or your own job |
+| Versioning | Every memory edit is a git commit | Checkpoint history per thread; store has no version history |
+| Primary SDK language | TypeScript (Python client deprecated) | Python and JavaScript |
+| Self-hosting | Local backend or `letta server` App Server | Any database you run |
+| License | Apache 2.0 | MIT |
 
-LangMem's flat key-value store and vector search are excellent for direct recall of discrete facts or preferences. However, this structure inherently limits the ability to model complex relationships between memories. It also makes sophisticated temporal reasoning more challenging without additional custom logic. This stark contrast is central to **Letta vs LangChain memory**.
+## When to pick Letta, and when to pick LangChain
 
-### Knowledge Representation Capabilities
+**Pick Letta** when the agent is the product: a long-lived assistant or coding agent that should learn about its users and itself over weeks. Memory as readable, diffable files is a real advantage for debugging. Accept that you're adopting its runtime and a TypeScript-first SDK.
 
-Letta, with its more advanced memory management, has the potential to support richer knowledge representation. The ability to self-edit and manage memory tiers implies a capacity for more nuanced data organization. Explicit knowledge graph capabilities aren't its primary focus, but the foundation is stronger.
+**Pick LangChain/LangGraph** when you're building a Python application with specific control flow: support bots, RAG pipelines, multi-step workflows. You want to choose exactly which facts persist, where they're stored, and who can read them. Accept that the memory policy is your code.
 
-LangMem, being a simpler key-value store, doesn't inherently support knowledge graphs or explicit entity resolution. Its strength lies in retrieving specific stored pieces of information. It's less about understanding interconnected knowledge structures and more about quick access to facts. This is a key area in the **Letta vs LangChain memory** comparison.
+**Pick neither as the memory layer** when you already have an agent and just want it to remember users. Dedicated memory services sit beside any framework: Mem0, Zep and [Hindsight](https://github.com/vectorize-io/hindsight) all extract facts from conversations and return relevant ones at query time, and each has LangChain or LangGraph integrations. Our comparisons of [Mem0 vs Letta](/articles/mem0-vs-letta/) and [Letta alternatives](/articles/letta-alternatives/) cover that route.
 
-### Framework Dependency and Lock-in Effects
-
-This is a critical differentiator when comparing **Letta vs LangChain memory**. Letta is a **full agent runtime**. When you build with Letta, your agents run *inside* its environment. This offers a cohesive experience but creates significant **framework lock-in**. Migrating an existing agent stack to Letta can be a substantial undertaking.
-
-LangChain memory (LangMem) is explicitly designed as a library to be plugged into **LangGraph**. This means it has a high dependency on LangGraph but offers **less lock-in** if you're already using that framework. You're adding memory to an existing structure, not replacing it. For teams already committed to LangGraph, this integration is a major advantage in the **Letta vs LangChain memory** decision.
-
-## Trade-offs and Use Case Suitability for Letta vs LangChain Memory
-
-Choosing between Letta and **LangChain memory** hinges on your project's existing infrastructure, development goals, and desired level of control. The **Letta vs LangChain memory** decision requires careful consideration of these factors.
-
-### When to Choose Letta
-
-* **Starting a new agent project:** If you're building an agent from scratch and want a comprehensive, opinionated platform that handles everything from the agent loop to memory persistence, Letta is a strong contender. It provides a complete environment.
-* **Need for OS-like memory management:** If your agent requires sophisticated memory tiering, self-editing capabilities, and a unified runtime, Letta's architecture is well-suited. Its design supports deep learning.
-* **No existing framework preference:** If you aren't tied to a specific agent orchestration framework like LangGraph, AutoGen, or CrewAI, Letta provides a complete solution. It offers an all-in-one package.
-* **Seeking deep integration:** Letta offers a tightly integrated experience. This simplifies development by providing a single environment for agent logic and memory. It reduces the complexity of managing multiple components.
-
-### When to Choose LangChain Memory (LangMem)
-
-* **Already using LangGraph:** If your agent infrastructure is built on or planned for LangGraph, LangMem is the natural, tightly integrated choice for adding memory. Its design is purpose-built for this ecosystem.
-* **Need for a lightweight memory component:** If you only need to add persistent memory to existing agents without overhauling your entire agent architecture, LangMem is ideal. It's an additive solution.
-* **Prioritizing modularity:** LangMem allows you to swap out or integrate memory solutions more easily within the LangGraph ecosystem. This flexibility is a key benefit.
-* **Focus on personalization and prompt optimization:** LangMem's automatic preference extraction and prompt optimization features are valuable for user-facing applications and iterative prompt engineering. These direct benefits enhance agent performance.
-
-## Implementing Agent Memory: A Python Example
-
-To illustrate memory management concepts applicable to both Letta and LangChain, consider a simple Python example demonstrating how an agent might store and retrieve key-value pairs. This showcases a basic form of persistence that both frameworks build upon.
-
-```python
-class SimpleAgentMemory:
- def __init__(self):
- self.memory = {}
-
- def store_fact(self, key: str, value: str):
- """Stores a key-value fact in memory."""
- self.memory[key] = value
- print(f"Stored: '{key}' -> '{value}'")
-
- def recall_fact(self, key: str) -> str | None:
- """Retrieves a fact by its key."""
- fact = self.memory.get(key)
- if fact:
- print(f"Recalled: '{key}' -> '{fact}'")
- else:
- print(f"Fact not found for key: '{key}'")
- return fact
-
- def list_facts(self):
- """Lists all stored facts."""
- if not self.memory:
- print("Memory is empty.")
- return
- print("Current memory:")
- for key, value in self.memory.items():
- print(f"- {key}: {value}")
-
-## Example Usage
-agent_memory = SimpleAgentMemory()
-agent_memory.store_fact("user_preference", "dark mode")
-agent_memory.store_fact("last_topic", "AI memory systems")
-agent_memory.list_facts()
-retrieved_preference = agent_memory.recall_fact("user_preference")
-```
-
-This basic implementation highlights the core idea of associating keys with values for later retrieval, a fundamental operation that both **Letta vs LangChain memory** systems facilitate with more advanced features.
-
-## Comparing Letta vs LangChain Memory with Other Frameworks
-
-It's helpful to contextualize **Letta vs LangChain memory** within the broader landscape of agent memory solutions. Each offers a unique approach to persistence and recall.
-
-### Hindsight: A Framework-Agnostic Alternative
-
-**Hindsight** offers a different path, acting as a **framework-agnostic memory layer**. Unlike Letta (a full runtime) or LangMem (tied to LangGraph), Hindsight can be integrated with virtually any agent framework. It supports multiple retrieval strategies beyond simple vector search, including entity extraction and knowledge graph capabilities. This makes it suitable for both personalization and institutional knowledge. For teams needing a powerful memory solution without runtime lock-in, Hindsight is a compelling option. You can find more details in our comparison of Hindsight and LangChain memory.
-
-### Mem0: Simplicity in Integration
-
-**Mem0** is another memory layer, often highlighted for its extreme simplicity and ease of integration. While Letta offers a full runtime and LangMem is tied to LangGraph, Mem0 focuses on providing the most straightforward API for adding memory to existing agents. It's a good alternative when the primary goal is minimal friction in adding basic persistent memory. See [alternatives to Mem0](/articles/mem0-alternatives-compared/) for more.
-
-### Zep: Temporal Reasoning and Graph Capabilities
-
-**Zep** offers a more advanced memory solution, focusing on temporal reasoning and knowledge graph capabilities. While Letta and **LangChain memory** have different strengths, Zep aims to provide a more structured understanding of memory over time and across relationships. For complex applications requiring deep temporal analysis, Zep is a noteworthy option. Explore more in our [guide to Zep AI memory](/articles/what-is-zep-memory/).
-
-### Hindsight vs. Letta: A Deeper Dive
-
-The comparison between **Hindsight** and **Letta** highlights the runtime vs. memory layer distinction. Letta is a complete agent operating system. Hindsight is a standalone memory service that integrates with existing runtimes. This means using Letta requires running agents within its environment. Hindsight can be added to frameworks like LangGraph, AutoGen, or custom solutions. For teams that already have an agent framework in place, Hindsight offers a more flexible integration path than Letta. This is a key consideration in the **Letta vs LangChain memory** debate, emphasizing integration flexibility.
-
-## Conclusion: Navigating Letta vs LangChain Memory
-
-**Letta vs LangChain memory** represents two distinct philosophies in AI agent memory. Letta champions a unified, OS-like runtime for deep integration and advanced memory management. LangChain memory (LangMem) offers a modular, component-based solution specifically tailored for the LangGraph ecosystem.
-
-Your choice should align with your project's existing architecture, development team's familiarity with specific frameworks, and the desired level of control and flexibility. Understanding these trade-offs is crucial for building AI agents that can effectively learn, adapt, and remember over time. For a broader overview of agent memory solutions, consult our [comprehensive guide to memory frameworks](/articles/best-ai-memory-framework/). This detailed comparison of **Letta vs LangChain memory** should guide your decision.
-
-## FAQ
-
-* **What is the fundamental difference in scope between Letta and LangChain memory?**
- Letta is a full agent runtime that includes memory management as part of its operating system-like design. LangChain memory (LangMem) is a specialized memory component intended to be integrated into existing LangGraph agent frameworks.
-* **Which memory solution is better if I'm already using LangGraph?**
- LangChain memory (LangMem) is the more suitable choice. It's designed specifically for LangGraph, offering seamless integration and using its existing infrastructure for memory storage and retrieval.
-* **Does Letta offer capabilities beyond memory management?**
- Yes, Letta is a complete agent runtime. It manages the agent loop, tool execution, state persistence, and memory, providing a holistic platform rather than just a memory module.
+For the concepts underneath all of these, from context windows to memory tiers, start with the [AI agent memory guide](/articles/ai-agent-memory-explained/).

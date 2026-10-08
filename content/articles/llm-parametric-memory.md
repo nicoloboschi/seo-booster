@@ -1,173 +1,103 @@
 ---
-title: 'LLM Parametric Memory: Storing Knowledge Within AI Models'
-description: Explore LLM parametric memory, understanding how knowledge is stored directly within AI model weights, its benefits, and limitations for AI agents.
+title: "LLM Parametric Memory: What Model Weights Remember"
+description: "What parametric memory is in LLMs: how facts live in model weights, how much a model holds, how to update it (fine-tuning, ROME, MEMIT, Memory Tuning)."
 date: 2026-04-06
-lastmod: 2026-04-06
-tags:
-- LLM
-- AI Memory
-- Parametric Memory
-keywords:
-- llm parametric memory
-- parametric memory
-- AI memory
-- LLM knowledge storage
-- model weights
-- transformer memory
-faq:
-- question: What is parametric memory in LLMs?
-  answer: Parametric memory refers to the knowledge and information encoded directly within the learned parameters (weights) of a large language model (LLM). This is the primary way most LLMs store information
-    acquired during their extensive training.
-- question: How does parametric memory differ from other AI memory systems?
-  answer: Unlike external memory systems like vector databases or explicit knowledge graphs, parametric memory is internal. It's not directly accessible or modifiable post-training without retraining, whereas
-    external systems offer dynamic storage and retrieval.
-- question: Can LLM parametric memory be updated?
-  answer: Updating parametric memory typically requires retraining or fine-tuning the LLM, which is computationally expensive. It's not a dynamic, real-time update mechanism like adding entries to an external
-    knowledge base.
+lastmod: 2026-10-08
 slug: llm-parametric-memory
 aliases:
 - /articles/llm-latent-memory/
 - /articles/what-is-memory-tuning-in-llm/
+tags:
+- Parametric Memory
+- LLM
+- Knowledge Editing
+- Memory Types
+keywords:
+- LLM parametric memory
+- parametric vs non-parametric memory
+- LLM latent memory
+- what is memory tuning in LLM
+- knowledge editing LLM
+- model weights memory
+cluster: agent-memory
+faq:
+- question: "What is parametric memory in an LLM?"
+  answer: "Parametric memory is the knowledge stored in a language model's weights during training: facts, language patterns and skills. It is available on every call with no retrieval, but it is fixed at training time, hard to inspect, and can't be updated per user. The term comes from the 2020 RAG paper, which contrasted it with non-parametric memory in an external index."
+- question: "What is memory tuning in LLMs?"
+  answer: "Memory Tuning is a method from the company Lamini that trains a large set of adapter 'memory experts' on specific facts until the training loss for those facts is near zero, aiming to stop the model from hallucinating them. At inference, only the relevant experts are selected. It was described in a 2024 Lamini paper and is a vendor method, not a general standard."
+- question: "What is latent memory in an LLM?"
+  answer: "Latent memory is information kept inside the model's hidden representations rather than in its trained weights or in text. Examples include the KV cache of the current context and research models like MemoryLLM, which adds a fixed-size pool of updatable memory vectors to a transformer."
 ---
-Imagine an AI that "knows" everything it's ever learned, not from a database, but from its very core. This is the essence of **LLM parametric memory**, where vast knowledge is etched directly into the model's weights. This internal storage mechanism is the result of extensive training, where the model learns patterns, facts, and relationships from vast datasets. It's the primary way most LLMs store acquired information, making it intrinsically part of the model itself.
 
-## What is LLM Parametric Memory?
+**LLM parametric memory** is the knowledge a language model stores in its weights during training. It's why a model knows Paris is in France without being told. It's free to use at query time, but it's frozen after training, can't be updated per user, and is hard to inspect or correct. That's why agents put user and task memory somewhere else.
 
-**LLM parametric memory** refers to the knowledge and information encoded directly within the learned parameters (weights) of a large language model (LLM). This is the primary way most LLMs store information acquired during their extensive training. It's essentially the model's learned world knowledge, language understanding, and reasoning capabilities baked into its neural network architecture. This stored information isn't directly addressable or editable post-training without retraining.
+This page covers how facts end up in weights, how much a model can hold, how to change it, and the "latent memory" research that sits between weights and text. For how parametric memory fits next to the memory types agents actually manage, see [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-### How Knowledge is Encoded
+## What is parametric memory in an LLM?
 
-During **pre-training**, LLMs are exposed to massive text and code datasets. The training process adjusts the model's **weights** to minimize prediction errors. As the model learns to predict the next word or token, it implicitly learns grammatical rules, factual information, common sense reasoning, and stylistic nuances. All this learned information becomes encoded in the numerical values of the model's parameters.
+**Parametric memory is knowledge encoded in a neural network's trained parameters. In an LLM, it includes facts, language patterns and skills learned from the training data. The model uses it implicitly on every call, with no lookup, but it changes only through training or direct weight edits.**
 
-Think of it like a human brain learning. While humans have distinct memory systems, much of our general knowledge is embedded within our neural connections. Similarly, **LLM parametric memory** represents the model's internalized understanding of the data it was trained on.
+The term was popularized by the RAG paper ([Lewis et al., 2020](https://arxiv.org/abs/2005.11401)). It described models that "combine pre-trained parametric and non-parametric memory": a seq2seq model as the parametric part and a dense vector index of Wikipedia as the non-parametric part. The paper's motivation still applies. Models store facts in their parameters, but "providing provenance for their decisions and updating their world knowledge remain open research problems."
 
-### The Scale of Parametric Memory
+In the CoALA agent framework ([Sumers et al., 2023](https://arxiv.org/abs/2309.02427)), LLM weights are the agent's **implicit procedural memory**: the stochastic "production system" that does the reasoning. Everything else an agent remembers lives outside.
 
-The capacity of **LLM parametric memory** is directly proportional to the number of parameters in the model. Larger models with more parameters can store more complex information and nuances from the training data. Models with hundreds of billions of parameters can encapsulate a vast amount of general knowledge, historical facts, scientific concepts, and cultural references. This scale allows LLMs to perform a wide range of tasks without explicit programming for each.
+## How LLMs store knowledge in weights
 
-## Advantages of Parametric Memory
+Several lines of research show that facts aren't spread evenly through a model. They have a location.
 
-The primary advantage of **LLM parametric memory** is its seamless integration with the model's inference process. Because the knowledge is internal, there's no need for separate retrieval steps that could introduce latency. This makes it highly efficient for generating responses that rely on general knowledge or learned patterns.
+- **Models as knowledge bases.** [Language Models as Knowledge Bases?](https://arxiv.org/abs/1909.01066) (Petroni et al., 2019) showed that BERT, with no fine-tuning, could answer fill-in-the-blank factual queries at a level competitive with traditional NLP methods that had some access to oracle knowledge. Some types of facts were learned much more readily than others.
+- **Feed-forward layers as key-value stores.** [Geva et al. (2020)](https://arxiv.org/abs/2012.14913) found that feed-forward layers, about two-thirds of a transformer's parameters, act as key-value memories: keys match patterns in the input, values push the output toward likely next tokens.
+- **Facts are localized.** [ROME](https://arxiv.org/abs/2202.05262) (Meng et al., 2022) traced factual recall in GPT models to "a distinct set of steps in middle-layer feed-forward modules" while processing the subject's tokens, and showed it could edit a single fact by changing those weights.
 
-### Speed and Efficiency
+The practical takeaway: parametric memory is real and structured, but it's addressed by patterns in the input, not by IDs. You can't list what's in it or delete one user's data from it.
 
-When an LLM accesses information stored parametrically, it's incredibly fast. The knowledge is already "present" within the model's computational structure. There's no external lookup required, which can be a bottleneck in systems relying solely on retrieval.
+## How much can parametric memory hold?
 
-### Implicit Knowledge Integration
+[Physics of Language Models: Part 3.3](https://arxiv.org/abs/2404.05405) (Allen-Zhu and Li, 2024) measured factual capacity on controlled datasets and found language models "can and only can store 2 bits of knowledge per parameter," even when quantized to int8. By their estimate, a 7B model could store 14B bits, more than English Wikipedia and textbooks combined.
 
-Parametric memory allows for the implicit integration of knowledge. The model doesn't just store facts; it learns the relationships between concepts and how to apply them. This enables nuanced understanding and generation, going beyond simple fact recall. For instance, it can understand context, infer meaning, and generate creative text formats.
+Capacity isn't the only limit. Exposure matters. [Kandpal et al. (2022)](https://arxiv.org/abs/2211.08411) showed that a model's accuracy on a factual question tracks how many training documents mention the relevant entities. Rare, **long-tail** facts are learned poorly, and the authors estimate models would need to grow by many orders of magnitude to answer them well. Retrieval reduced that dependence.
 
-### Broad Generalization Capabilities
+For agents, the long tail is exactly where user memory lives. Your customer's account history appears in zero training documents.
 
-The vast amount of data used in training LLMs means their parametric memory contains a broad spectrum of information. This allows them to generalize well across various topics and tasks. They can answer questions about history, science, literature, and even generate code, all from the same underlying parametric knowledge base.
+## Updating parametric memory
 
-## Limitations of Parametric Memory
+| Method | What it changes | Scale | Strength | Weakness |
+|---|---|---|---|---|
+| Full or LoRA fine-tuning | Many weights, via gradient training | Datasets of examples | Teaches style, format and domain skills | Costly; risk of forgetting older knowledge; needs many examples |
+| ROME | One fact via a rank-one weight edit | Single facts | Targeted, inspectable | Doesn't scale to many facts at once |
+| MEMIT | Many facts via edits across layers | "Thousands of associations" (GPT-J, GPT-NeoX) | Batch editing | Edits can interact; side effects need testing |
+| Lamini Memory Tuning | Many small adapter "memory experts" | Large fact sets | Targets near-zero loss on key facts | Vendor method; results mostly self-reported |
+| Retrieval (non-parametric) | Nothing in the model | Unlimited | Instant updates, provenance, per-user scope | Retrieval quality limits recall |
 
-Despite its power, **LLM parametric memory** has significant limitations, primarily concerning its static nature and lack of controllability. Once a model is trained, its parametric memory is largely fixed. It doesn't automatically update with new information or correct factual errors.
+CoALA notes that fine-tuning the agent's LLM "is a costly form of learning," so studies use fixed learning schedules. A 2023 survey of model editing ([Yao et al.](https://arxiv.org/abs/2305.13172)) frames the goal as changing behavior in one domain "without negatively impacting performance across other inputs," which is the hard part.
 
-### Static and Immutable Knowledge
+### What is memory tuning in an LLM?
 
-To incorporate new knowledge or fix inaccuracies, the model typically needs to be retrained or **fine-tuned**, which is a costly and time-consuming process. This makes it challenging for LLMs to stay current with rapidly evolving information. A 2023 study on arXiv highlighted that fine-tuning can introduce "catastrophic forgetting," where models lose previously acquired knowledge while learning new information, underscoring the difficulty of updating **parametric memory** effectively.
+**Memory Tuning** is Lamini's name for training facts directly into a model with a **Mixture of Memory Experts** (MoME). The 2024 Lamini paper, [Banishing LLM Hallucinations Requires Rethinking Generalization](https://arxiv.org/abs/2406.17642) (Li et al.), argues that models hallucinate facts when training loss on those facts stays above a threshold, as it does in normal pretraining. Memory Tuning instead "targets near zero training loss for key facts."
 
-### Verifiability and Explainability Issues
+The model keeps a frozen backbone and adds a large index of adapters. Facts are stored in what the paper calls "millions of memory experts that are retrieved dynamically," and a cross-attention step picks the relevant experts at inference. Treat accuracy claims for it as vendor-reported unless you test it on your own data.
 
-It's difficult to verify the exact source or accuracy of information retrieved from **LLM parametric memory**. The knowledge is distributed across millions or billions of weights, making it hard to pinpoint where a specific fact or bias originated. This "black box" nature poses challenges for applications requiring high levels of trustworthiness and explainability.
+## Latent memory: inside the model, outside the weights
 
-### Susceptibility to Bias
+Between frozen weights and plain text there's a third option: memory kept as hidden vectors the model reads directly.
 
-The knowledge encoded in parametric memory directly reflects the biases present in the training data. If the data contains societal biases related to race, gender, or other characteristics, the model will learn and potentially propagate these biases in its responses. Mitigating this requires careful data curation and bias detection techniques, but completely eliminating it is an ongoing challenge.
+- **The KV cache.** The keys and values computed for the current context are a short-lived latent memory. The [context window](/articles/context-window-of-an-llm/) is its limit.
+- **MemoryLLM.** [MemoryLLM](https://arxiv.org/abs/2402.04624) (Wang et al., 2024) adds "a fixed-size memory pool within the latent space" of a transformer that the model updates with new text. The authors report no sign of performance degradation after nearly a million memory updates.
+- **Memory³.** [Memory³](https://arxiv.org/abs/2407.01178) (Yang et al., 2024) adds "explicit memory," which it describes as the third form of memory after model parameters and context key-values. A 2.4B model trained this way beat larger models and RAG baselines in the authors' tests.
+- **Test-time learning.** Architectures like Google's Titans update a neural memory module while the model runs; see [Google Titans and human-like memory](/articles/google-titans-give-ai-human-like-memory/).
 
-### Context Window Limitations
+These are research systems. None of them gives you per-user isolation, deletion or audit trails out of the box, which is why production agents still store memory as text or structured records.
 
-While parametric memory holds vast general knowledge, the **context window** of an LLM limits how much information it can actively consider at any one time during a conversation or task. Information stored deeply within the parameters might not be easily accessible if the current input doesn't trigger the right "pathways" within the neural network. This is distinct from external memory, where specific pieces of information can be explicitly retrieved. Understanding [LLM context window limitations](/articles/context-window-limitations-solutions/) is crucial when working with LLMs.
+## Parametric vs external memory for AI agents
 
-## Parametric Memory vs. External Memory Systems
+| | Parametric memory | External memory |
+|---|---|---|
+| Where | Model weights | Database, files, graph |
+| Updated | Training or weight editing | Any time, per request |
+| Per-user scope | No | Yes, by namespace or ID |
+| Provenance | None | Can link to source messages |
+| Delete one fact | Hard, often impossible | One call |
+| Cost per query | None beyond inference | A retrieval step and prompt tokens |
+| Best for | General knowledge, language, reasoning skill | User facts, events, changing data, private data |
 
-**LLM parametric memory** is often contrasted with **external memory systems**, which provide a more dynamic and controllable way for AI agents to store and access information. External systems can include vector databases, knowledge graphs, or simple key-value stores.
-
-### Dynamic vs. Static Storage
-
-External memory systems are **dynamic**. Information can be added, updated, or deleted easily without retraining the LLM. This is crucial for applications that require up-to-date information, such as news aggregation or real-time customer support. Parametric memory, conversely, is **static** after training.
-
-### Controllability and Verifiability
-
-With external memory, developers have explicit control over what information is stored and how it's organized. This allows for better **verifiability** and **explainability**. For example, if an AI agent provides an answer based on an external knowledge source, that source can be traced. This is a significant advantage over the opaque nature of parametric memory.
-
-### Retrieval Augmented Generation (RAG)
-
-A popular approach that combines LLMs with external memory is **Retrieval Augmented Generation (RAG)**. In RAG, an LLM doesn't rely solely on its parametric memory. Instead, it first retrieves relevant information from an external knowledge base (often a vector database) and then uses this retrieved context, along with its parametric knowledge, to generate a response. This approach significantly enhances accuracy and relevance, especially for domain-specific or rapidly changing information. Comparing [Retrieval Augmented Generation (RAG) with agent memory](/articles/rag-vs-agent-memory/) reveals the distinct roles these systems play.
-
-```python
-## Conceptual example of RAG interaction
-class LLM:
- def __init__(self, parametric_memory):
- self.parametric_memory = parametric_memory # Represents internal weights
-
- def generate(self, prompt, context=None):
- # Simplified generation logic
- full_prompt = f"{context}\n{prompt}" if context else prompt
- # ... internal generation based on prompt and context ...
- return f"Generated response based on: {full_prompt}"
-
-class VectorDB:
- def retrieve(self, query):
- # Simulate retrieving relevant documents
- return "Retrieved relevant information about X from external source."
-
-llm_model = LLM("...") # Initialize LLM with its parametric memory
-vector_db = VectorDB()
-
-user_query = "What are the latest developments in AI memory?"
-retrieved_context = vector_db.retrieve(user_query)
-final_response = llm_model.generate(user_query, context=retrieved_context)
-print(final_response)
-```
-
-### Open-Source Memory Systems
-
-Tools like [Hindsight](https://github.com/vectorize-io/hindsight), an open-source AI memory system, exemplify how external memory can be managed. These systems allow developers to build agents that can store and retrieve conversational history, user preferences, and domain-specific facts, augmenting the LLM's inherent capabilities. Exploring [open-source AI memory systems](/articles/open-source-memory-systems-compared/) can provide further insights.
-
-## Use Cases for Parametric Memory
-
-Despite its limitations, **LLM parametric memory** remains fundamental to many AI applications. Its strength lies in providing a broad foundation of general knowledge and language understanding.
-
-### General Knowledge Assistants
-
-For broad-purpose AI assistants that answer general questions, write creatively, or summarize text, **LLM parametric memory** is the primary driver. It allows these agents to function out-of-the-box with a vast understanding of the world. This is the core of what makes LLMs so versatile.
-
-### Language Translation and Summarization
-
-Tasks like language translation and text summarization heavily rely on the model's learned linguistic patterns and semantic understanding, which are deeply embedded in its parametric memory. The model doesn't "look up" translations; it generates them based on its learned associations between languages.
-
-### Code Generation and Understanding
-
-Modern LLMs trained on extensive code repositories exhibit remarkable capabilities in generating, debugging, and explaining code. This ability stems directly from the patterns and syntax learned and stored within their **parametric memory** during training on programming languages.
-
-## The Future of LLM Memory
-
-The field of AI memory is rapidly evolving. While **LLM parametric memory** will likely remain a foundational component, future AI systems will increasingly integrate it with more sophisticated external memory solutions.
-
-### Hybrid Approaches
-
-The trend is towards **hybrid memory architectures**. These systems combine the broad, general knowledge of parametric memory with the dynamic, controllable nature of external memory. This allows AI agents to be both knowledgeable and up-to-date, precise and adaptable.
-
-### Continual Learning
-
-Research into **continual learning** aims to enable LLMs to update their parametric memory more efficiently and without catastrophic forgetting. This could lead to models that can learn and adapt in near real-time, making their parametric knowledge more dynamic. Advancements in [memory consolidation for AI agents](/articles/memory-consolidation-ai-agents/) are key here.
-
-### Specialized Memory Modules
-
-We may see the development of specialized memory modules within AI architectures, some parametric and some external, tailored for specific tasks. This modular approach could offer greater flexibility and performance. Understanding [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) is essential for designing such systems.
-
-## Conclusion
-
-**LLM parametric memory** is the internal knowledge base of large language models, encoded within their weights and biases. It provides a powerful, fast, and generalized foundation for AI capabilities. However, its static nature and lack of direct control present limitations. As AI systems mature, the integration of parametric memory with dynamic external memory solutions, like those used in RAG or managed by systems such as [Hindsight](https://github.com/vectorize-io/hindsight), will be crucial for building more intelligent, adaptable, and trustworthy AI agents.
-
-## FAQ
-
-* **What distinguishes parametric memory in LLMs from episodic memory in AI agents?**
- Parametric memory is static knowledge learned during training and embedded in model weights, representing general facts and skills. Episodic memory, in contrast, is dynamic and stores specific past events or interactions of an AI agent, akin to personal experiences.
-* **How can an LLM's parametric memory be updated?**
- Updating parametric memory typically requires computationally intensive retraining or fine-tuning of the entire model. This differs from external memory systems where data can be added or modified directly without affecting the core model weights.
-* **Is LLM parametric memory suitable for real-time information?**
- No, LLM parametric memory is generally not suitable for real-time information because it's static. For up-to-date information, AI agents typically rely on external memory sources, often integrated via Retrieval Augmented Generation (RAG).
+The two work together. Parametric memory supplies the general knowledge and reasoning; external memory supplies what's specific, recent or private. The trade-offs on the external side are covered in [RAG vs agent memory](/articles/rag-vs-agent-memory/), and the full set of memory categories is in [types of AI agent memory](/articles/ai-agents-memory-types/).

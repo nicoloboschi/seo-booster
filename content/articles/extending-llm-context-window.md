@@ -1,36 +1,19 @@
 ---
-title: 'Extending LLM Context Window: Techniques and Strategies for Enhanced AI Memory'
-description: Explore advanced techniques for extending LLM context windows, overcoming limitations with methods like RAG, sparse attention, and architectural innovations. Lear...
+title: "Extending the LLM Context Window: How It Works"
+description: "How to extend an LLM context window: position interpolation, NTK and YaRN RoPE scaling, LongRoPE, long-context fine-tuning, ring attention and KV cache tricks."
 date: 2026-04-01
-lastmod: 2026-04-01
-tags:
-- LLM
-- Context Window
-- AI Memory
-- RAG
-- Large Language Model
-keywords:
-- extending llm context window
-- LLM context window
-- large language model context
-- LLM memory
-- AI context
-- llm context window extension techniques
-- large context window
-faq:
-- question: Why is extending the LLM context window important?
-  answer: Extending the context window allows LLMs to process and retain more information, leading to better comprehension, more coherent long-form generation, and improved performance on complex tasks
-    requiring extensive background knowledge.
-- question: What are the main challenges in extending LLM context windows?
-  answer: The primary challenges include increased computational cost, memory requirements, potential degradation of performance on shorter contexts (recency bias), and the quadratic complexity of self-attention
-    mechanisms in standard Transformer architectures.
-- question: How does Retrieval-Augmented Generation (RAG) help extend context?
-  answer: RAG effectively bypasses the LLM's fixed context window by dynamically retrieving relevant information from an external knowledge base and injecting it into the LLM's prompt, allowing it to access
-    far more data than its inherent limit.
-- question: What are the key benefits of a large context window for LLMs?
-  answer: A large context window enables LLMs to understand and generate more coherent and contextually relevant text over longer interactions or documents. This leads to improved performance in tasks like
-    summarization, question answering over extensive texts, and maintaining complex conversational threads.
+lastmod: 2026-10-08
 slug: extending-llm-context-window
+cluster: context-windows
+tags: ["context window", "RoPE scaling", "YaRN", "long context", "LLM"]
+keywords: ["extending llm context window", "increase context window llm", "llm context window extension", "rope scaling", "yarn context extension", "llm dynamic context window"]
+faq:
+  - question: "Can you increase the context window of an LLM?"
+    answer: "For open-weight models, yes. You rescale the RoPE position encoding (linear interpolation, NTK, YaRN or LongRoPE) and usually fine-tune briefly on long text. For a hosted API you can't change the window; you can only pick a model with a bigger one or send less text through retrieval, compaction or memory."
+  - question: "What is YaRN context extension?"
+    answer: "YaRN is a RoPE scaling method by Peng et al. (2023) that stretches a model's position encoding so it handles sequences longer than it was trained on. The paper reports it needs 10x fewer tokens and 2.5x fewer training steps than earlier methods. Qwen3 uses it to go from 32,768 native tokens to 131,072."
+  - question: "What is a dynamic context window in an LLM?"
+    answer: "The term has two uses. In model code, dynamic NTK scaling changes the RoPE scaling factor based on the current input length, so short prompts run unscaled. In applications, it means choosing what goes into the window on each call, by trimming, summarizing or retrieving, instead of sending everything."
 aliases:
 - /articles/extend-llm-context-window/
 - /articles/increase-context-window-llm/
@@ -39,170 +22,138 @@ aliases:
 - /articles/llm-memory-extension/
 ---
 
-Extending LLM context window capabilities allows AI models to process and retain significantly more information, overcoming the limitations of their fixed input size. This enhancement is crucial for complex tasks requiring long-term memory, coherent long-form generation, and deeper understanding of extensive data. It moves AI beyond simply reacting to immediate inputs towards more informed, context-aware reasoning.
 
-## What is an LLM Context Window?
+**Extending an LLM context window** means getting a trained model to read sequences longer than the ones it saw in training. For open-weight models, the main tool is rescaling the RoPE position encoding (position interpolation, NTK, YaRN, LongRoPE), usually followed by a short fine-tune on long text. Attention and KV cache tricks then make the longer window affordable to run.
 
-An LLM's **context window** refers to the maximum number of tokens (words or sub-word units) it can process as input at any single time. This window dictates how much prior conversation, document text, or other data the model can "remember" and consider when generating its next output. A small context window means the AI quickly forgets earlier parts of an interaction.
+For hosted APIs you can't change the window at all. There, "extending context" means sending less: retrieval, compaction and external memory. This page covers the model-side techniques in depth and the app-side options briefly.
 
-This fixed-size input buffer is a significant bottleneck for many advanced AI applications. Without effective methods for managing and expanding this window, LLMs struggle with tasks like summarizing lengthy documents, maintaining coherent long-form conversations, or performing complex reasoning that relies on a broad set of information.
+## What is context window extension?
 
-## The Problem with Limited Context Windows
+**Context window extension is any method that lets a language model work with more tokens per request than its original training length, either by changing how the model encodes positions, by changing how attention is computed, or by retraining on longer sequences.** It's different from app-side context management, which keeps the window size fixed and decides what goes into it.
 
-Standard **LLM context window** sizes, often ranging from a few thousand to tens of thousands of tokens, present several practical limitations. For instance, trying to have a deep, multi-turn conversation with an AI using a small context window will inevitably lead to the model losing track of earlier details. Similarly, feeding a whole book into a model with a limited context means it can only "see" a small portion of the text at once, hindering its ability to grasp the overall narrative or argumentation.
+The [context window of an LLM](/articles/context-window-of-an-llm/) is limited by three things: attention cost that grows with the square of length, a KV cache that grows linearly, and position handling that only works for lengths seen in training. Each technique below attacks one of those.
 
-This limitation is particularly problematic for **AI agent memory** systems. If an agent can only access a small snippet of its past experiences, its ability to learn, adapt, and make informed decisions is severely hampered. This is why techniques for **extending LLM context window** are so vital for building more capable and context-aware AI.
+| Technique | What it changes | Fine-tuning needed | Reported result |
+|---|---|---|---|
+| Position Interpolation | Position indices (linear scaling) | Yes, under 1,000 steps | LLaMA 7B-65B to 32,768 tokens |
+| NTK-aware / dynamic NTK | RoPE frequency base | Optional | Used as `dynamic` RoPE type in transformers |
+| YaRN | Per-frequency RoPE scaling + attention temperature | Short | 10x fewer tokens, 2.5x fewer steps than prior methods |
+| LongRoPE | Searched non-uniform RoPE scaling | Up to 1,000 steps at ≤256K | LLaMA2 and Mistral to 2,048K tokens |
+| Long-context continual pretraining | Model weights, on long data | Yes, substantial | Llama 2 to 32,768 effective tokens |
+| LongLoRA | Sparse attention during fine-tuning | Yes, LoRA | Llama2 7B from 4K to 100K on one 8x A100 machine |
+| Ring Attention | Splits attention across devices | No (training/inference system) | Length scales with device count |
 
-### Computational and Memory Demands of Large Context Windows
+## Why models break past their trained length
 
-The core challenge often lies in the **self-attention mechanism** used in Transformer architectures, which underlies most modern LLMs. The computational and memory cost of self-attention scales quadratically with the sequence length (context window size). Doubling the context window can quadruple the processing requirements, making it computationally prohibitive to simply increase the window size indefinitely.
+Most open models use **Rotary Position Embeddings (RoPE)**. RoPE rotates each query and key vector by an angle that depends on the token's position. Different pairs of dimensions rotate at different speeds, from very fast to very slow.
 
-A 2023 paper from Google AI highlighted that training models with context windows beyond 32k tokens faces significant engineering and computational hurdles, even with specialized hardware. This quadratic scaling is a primary reason why researchers are exploring alternative approaches to **extending LLM context window** rather than just making them larger.
+The slow pairs are the problem. In training, a slow pair may only ever rotate through a small arc. Give the model a position far beyond its training length and that pair hits angles it has never seen. Chen et al. describe the result as "catastrophically high attention scores" that break the model ([Position Interpolation paper](https://arxiv.org/abs/2306.15595)).
 
-## Strategies for Extending LLM Context Windows
-
-Several innovative strategies are being developed to overcome the inherent limitations of fixed context windows. These approaches can broadly be categorized into architectural modifications, retrieval-augmented methods, and specialized training techniques.
-
-### Architectural Innovations for Larger Context Windows
-
-Researchers are actively modifying the Transformer architecture to reduce the computational complexity of self-attention or replace it with more efficient mechanisms. This is a direct approach to creating larger context windows.
-
-#### Sparse Attention Mechanisms
-
-Instead of attending to every token in the input sequence, **sparse attention** mechanisms restrict attention to a subset of tokens. This can significantly reduce the quadratic complexity to something closer to linear. Examples include:
-
-* **Longformer**: Uses a combination of local and global attention.
-* **BigBird**: Employs random attention, windowed attention, and global attention.
-* **Reformer**: Uses locality-sensitive hashing to group similar tokens, reducing attention computations.
-
-These methods allow models to process much longer sequences without a prohibitive increase in compute.
-
-#### Recurrent and State-Space Models
-
-Some research explores moving away from pure Transformer architectures. **Recurrent Neural Networks (RNNs)**, while older, inherently process sequences step-by-step, offering linear scaling. Newer approaches like **State-Space Models (SSMs)**, such as Mamba, have emerged, offering efficient, linear-time scaling for sequence processing that rivals or surpasses Transformers on long sequences for certain tasks. These models maintain a compressed internal state that summarizes past information.
-
-### Retrieval-Augmented Generation (RAG) for Context Extension
-
-**Retrieval-Augmented Generation (RAG)** is a powerful technique that effectively extends the LLM's knowledge base and, by extension, its accessible context, without modifying the core model architecture. Instead of cramming all information into the prompt, RAG dynamically retrieves relevant information from an external knowledge source and injects it into the LLM's prompt.
-
-This approach is particularly relevant for **extending LLM context window** in practical applications. It allows an LLM to access vast amounts of information, far exceeding its inherent context window, by querying a database or document collection. The retrieved snippets are then added to the prompt, providing the LLM with the necessary context to answer a question or complete a task.
-
-#### How RAG Works for Context Extension
-
-1. **Indexing**: A large corpus of text (documents, articles, past conversations) is broken down into smaller chunks and converted into **embeddings** using an **embedding model**. These embeddings capture the semantic meaning of the text chunks and are stored in a **vector database**.
-2. **Retrieval**: When a user query arrives, it's also converted into an embedding. This query embedding is used to search the vector database for the most semantically similar text chunks.
-3. **Augmentation**: The retrieved text chunks are then combined with the original user query to form an augmented prompt.
-4. **Generation**: This augmented prompt is fed into the LLM, which uses the provided context to generate a response.
-
-RAG effectively bypasses the context window limitation by ensuring only the most relevant information is presented to the LLM at any given time. This is a cornerstone of many modern **AI agent memory** systems, providing access to both short-term conversational history and long-term knowledge stores. For a deeper dive, see our [detailed guide to RAG and agent memory](/articles/rag-vs-agent-memory/).
-
-#### RAG and Embedding Models
-
-The effectiveness of RAG heavily relies on the quality of the **embedding models for RAG** used to represent text and queries. Models like Sentence-BERT or specialized dense retrieval models are crucial for accurate semantic matching. Exploring different [embedding models for RAG](/articles/embedding-models-for-rag/) can significantly improve retrieval relevance.
-
-### Fine-Tuning and Specialized Training for LLM Context Window Extension
-
-Another approach involves training or fine-tuning LLMs specifically to handle longer sequences. This requires significant computational resources but can yield models adept at processing extensive inputs.
-
-#### Positional Embeddings
-
-Standard Transformers use **positional embeddings** to encode the order of tokens. Techniques like **RoPE (Rotary Positional Embeddings)** and **ALiBi (Attention with Linear Biases)** have shown promise in allowing models to generalize to sequence lengths beyond what they were trained on, effectively **extending LLM context window** during inference. These methods help the model understand the relative or absolute positions of tokens in a sequence.
-
-#### Fine-Tuning on Longer Sequences
-
-Models can be fine-tuned on datasets that include much longer sequences. This process adapts the model's weights to better handle the long-range dependencies. However, this can be computationally expensive and requires careful curriculum design to avoid degrading performance on shorter sequences.
-
-#### Context Window Extensions in Practice
-
-Companies and research labs are pushing the boundaries of context window sizes. Projects enabling **achieving million-token context windows** ([1 million context window llm](/articles/context-window-llm-ranking/)) and even **10 million token context windows** ([10 million context window llm](/articles/context-window-llm-ranking/)) demonstrate significant progress. According to research from MosaicML, fine-tuning LLMs on longer contexts can improve performance significantly, with some models showing over 80% improvement in perplexity on long sequences. For those interested in local deployments, options for **running large context models locally** ([1m context window local llm](/articles/largest-context-window-llm-open-source/)) are also becoming available. These advancements are often achieved through a combination of architectural tweaks, efficient training methods, and optimized inference strategies.
-
-## Hybrid Approaches and Memory Systems
-
-In practice, the most effective solutions often combine multiple strategies. For example, an AI agent might use a RAG system to access a vast external knowledge base while also maintaining a short-term memory of the current conversation within its inherent context window. This layered approach maximizes the benefits of both direct context processing and external knowledge retrieval.
-
-### The Role of Memory Systems
-
-Understanding **AI agent memory** is crucial when discussing context extension. Beyond the LLM's immediate context window, **long-term memory for AI agents** can be implemented using various techniques. This includes:
-
-* **Episodic Memory**: Storing specific past events or interactions, akin to human memory. [Episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) plays a key role in recalling specific past experiences and their context.
-* **Semantic Memory**: Storing general knowledge and facts. [Semantic memory in AI agents](/articles/semantic-memory-ai-agents/) provides a foundation of understanding that an agent can draw upon.
-* **Vector Databases**: As used in RAG, these databases store information as embeddings, enabling efficient semantic search for relevant past data.
-
-Tools like **Hindsight**, an open-source AI memory system, offer flexible ways to manage and retrieve information, effectively augmenting an LLM's capabilities beyond its native context. This allows for persistent, context-aware interactions, crucial for building sophisticated agents.
-
-### Memory Consolidation
-
-Just as humans consolidate memories, AI systems benefit from **memory consolidation in AI agents**. This process involves refining and organizing stored information, making it more accessible and less prone to interference. Efficient memory consolidation can help maintain a coherent and useful memory store even as the volume of data grows. This ensures that older, less relevant information doesn't clutter the agent's active memory.
-
-## Future Directions and Challenges
-
-While progress in **extending LLM context window** is rapid, several challenges remain. Ensuring that models perform equally well on both very long and very short contexts is difficult. The computational cost, while reduced, can still be substantial for the largest context windows. Also, interpretability and control over what information the model prioritizes from a vast context remain active research areas.
-
-The quest for truly boundless context windows is ongoing, pushing the boundaries of AI architecture, training methodologies, and memory management. The ability to process and recall information akin to human long-term memory is key to unlocking the next generation of intelligent systems. Researchers are exploring novel attention mechanisms and memory architectures to achieve this goal.
-
-Here's a basic Python example demonstrating how to load a model and potentially configure it for a larger context window, if the underlying library and model architecture support it. This example uses the Hugging Face `transformers` library.
+This small script shows the idea for a 4K-trained model pushed to 16K:
 
 ```python
-from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
+def rope_angles(pos, dim=128, base=10000.0, scale=1.0):
+    """RoPE rotation angle (radians) of each frequency pair at one position.
+    scale > 1 is Position Interpolation: positions are divided by scale."""
+    return [(pos / scale) * base ** (-2 * i / dim) for i in range(dim // 2)]
 
-## Model name known for supporting larger context windows is crucial.
-## For example, models like 'mosaicml/mpt-7b-longcontext' or others
-## specifically trained or configured for extended contexts.
-## Always check model documentation for specific capabilities.
-model_name = "mosaicml/mpt-7b-longcontext" # Example model
+trained_len, target_len = 4096, 16384
+scale = target_len / trained_len  # 4.0
 
-try:
- # Load the tokenizer
- tokenizer = AutoTokenizer.from_pretrained(model_name)
+# Slowest-rotating pair: the one most likely to hit angles never seen in training
+seen = rope_angles(trained_len)[-1]
+extrapolated = rope_angles(target_len)[-1]
+interpolated = rope_angles(target_len, scale=scale)[-1]
 
- # Load the model. The 'max_seq_length' parameter or similar configuration
- # within the model's config might control the maximum input sequence length
- # the model can process during inference. This needs to align with the model's
- # architecture and training.
- model = AutoModelForCausalLM.from_pretrained(
- model_name,
- trust_remote_code=True, # Often required for specific model architectures like MPT
- # The actual context window is an intrinsic property of the model architecture and training.
- # Some models allow specifying a 'max_length' or 'max_position_embeddings' during loading
- # or generation, which dictates the maximum token sequence it can handle.
- # For MPT models, this is often handled internally or via generation configs.
- )
- print(f"Successfully loaded tokenizer and model: {model_name}")
-
- # To demonstrate context extension for generation, you might use GenerationConfig
- # to set a maximum generation length, which indirectly relates to how much
- # context the model might consider if it were to generate that much.
- # The actual context window an LLM can *process* is a fixed architectural limit.
- # This code snippet focuses on loading a model potentially capable of longer contexts.
-
- # Example of setting generation parameters if needed, though this doesn't 'extend'
- # the model's inherent context window, but rather controls output length.
- # generation_config = GenerationConfig(
- # max_new_tokens=2048, # Example: Generate up to 2048 new tokens
- # do_sample=True,
- # temperature=0.7,
- # top_p=0.9
- # )
- # print("Generation configuration set for potentially longer outputs.")
-
-except Exception as e:
- print(f"Error loading model or tokenizer: {e}")
- print("Please ensure the model name is correct and the 'transformers' library is up-to-date.")
- print("Check model documentation for specific loading requirements and context window capabilities.")
-
-## Note: The ability to process a long context is fundamentally determined by the model's
-## architecture and how it was trained. Loading a model like 'mpt-7b-longcontext'
-## is an example of choosing a model *designed* for longer contexts, rather than a
-## general method to extend any LLM's context window.
+print(f"largest angle seen in training: {seen:.3f} rad")          # 0.473
+print(f"plain extrapolation to 16K:     {extrapolated:.3f} rad")  # 1.892
+print(f"position interpolation to 16K:  {interpolated:.3f} rad")  # 0.473
 ```
 
-## FAQ
+Plain extrapolation asks the model to handle an angle four times bigger than anything it learned. Interpolation squeezes 16K positions into the angle range it already knows.
 
-* **What are the main challenges in extending LLM context windows?**
- The primary challenges include increased computational cost, memory requirements, potential degradation of performance on shorter contexts (recency bias), and the quadratic complexity of self-attention mechanisms in standard Transformer architectures.
-* **How does Retrieval-Augmented Generation (RAG) help extend context?**
- RAG effectively bypasses the LLM's fixed context window by dynamically retrieving relevant information from an external knowledge base and injecting it into the LLM's prompt, allowing it to access far more data than its inherent limit.
-* **Are there specific LLM architectures designed for longer contexts?**
- Yes, architectures like sparse attention models (e.g. Longformer, BigBird) and newer State-Space Models (e.g. Mamba) are designed to handle longer sequences more efficiently than standard Transformers.
-* **What are the key benefits of a large context window for LLMs?**
- A large context window enables LLMs to understand and generate more coherent and contextually relevant text over longer interactions or documents. This leads to improved performance in tasks like summarization, question answering over extensive texts, and maintaining complex conversational threads.
+## RoPE scaling: position interpolation, NTK, YaRN and LongRoPE
+
+These methods all edit the position encoding. They're cheap because the architecture stays the same, so existing inference stacks keep working.
+
+### Position Interpolation (linear scaling)
+
+**Position Interpolation** (Chen et al., Meta, June 2023) divides every position index by the extension factor. The paper extended LLaMA models from 7B to 65B parameters to 32,768 tokens with "minimal fine-tuning (within 1000 steps)" and reports that the interpolation's upper bound is "at least ~600× smaller" than extrapolation's, which makes it stable ([arXiv 2306.15595](https://arxiv.org/abs/2306.15595)).
+
+The cost: squeezing positions together makes nearby tokens harder to tell apart, so some fine-tuning is needed to recover.
+
+### NTK-aware and dynamic NTK scaling
+
+**NTK-aware scaling** changes RoPE's frequency base instead of the positions. Fast-rotating pairs (which carry local detail) barely change, and slow pairs get stretched. It came from community experiments in 2023 rather than a paper, and it's built into Hugging Face transformers as the `dynamic` RoPE type, described as "NTK-aware scaling computed by rescaling frequency base (θ) for longer context" ([transformers RoPE docs](https://huggingface.co/docs/transformers/main/en/internal/rope_utils)).
+
+The **dynamic** variant picks the scaling factor from the current sequence length. Short prompts run unscaled, so short-text quality doesn't drop. This is one meaning of "LLM dynamic context window."
+
+### YaRN
+
+**YaRN** (Peng et al., 2023) scales each frequency band differently and adds an attention temperature fix. The paper says it reaches state-of-the-art context extension "requiring 10x less tokens and 2.5x less training steps than previous methods" ([arXiv 2309.00071](https://arxiv.org/abs/2309.00071)).
+
+YaRN is what most current open models ship with. Qwen3's model card says the model "natively supports context lengths of up to 32,768 tokens" and was validated up to 131,072 tokens with YaRN, enabled by adding this to `config.json` ([Qwen3-8B model card](https://huggingface.co/Qwen/Qwen3-8B)):
+
+```json
+"rope_scaling": {
+  "rope_type": "yarn",
+  "factor": 4.0,
+  "original_max_position_embeddings": 32768
+}
+```
+
+The same card warns that static YaRN applies the factor to every input, "potentially impacting performance on shorter texts," and advises turning it on only when you need long context. Newer transformers releases call this field `rope_parameters`, so check which name your version expects.
+
+### LongRoPE
+
+**LongRoPE** (Ding et al., Microsoft, February 2024) searches for a non-uniform scaling factor per dimension and per position range instead of using one formula. It extended LLaMA2 and Mistral "to an impressive 2048k tokens" with "only up to 1k fine-tuning steps at within 256k training lengths," and gets an 8x extension with no fine-tuning at all ([arXiv 2402.13753](https://arxiv.org/abs/2402.13753)). Hugging Face transformers exposes it as the `longrope` RoPE type.
+
+## Long-context fine-tuning and pretraining
+
+RoPE scaling makes long positions legal. Training on long text is what makes the model good at them.
+
+**Continual pretraining** is the heavy option. Meta's "Effective Long-Context Scaling" paper continued pretraining Llama 2 on longer sequences with upsampled long texts and reached "effective context windows of up to 32,768 tokens." Its ablations found that the amount of long text in the data matters less than people assumed, and that continuing pretraining is about as good as training from scratch on long sequences, for less compute ([arXiv 2309.16039](https://arxiv.org/abs/2309.16039)).
+
+**LongLoRA** is the cheap option. It fine-tunes with LoRA plus "shifted sparse attention" during training, while keeping normal dense attention at inference. The authors extended Llama2 7B from 4K to 100K tokens and Llama2 70B to 32K "on a single 8x A100 machine" ([arXiv 2309.12307](https://arxiv.org/abs/2309.12307)). They also found LoRA alone isn't enough: the embedding and normalization layers must be trainable too.
+
+## Making long context affordable: attention and KV cache
+
+Extending positions doesn't help if you can't fit the computation in memory. These techniques don't change what the model understands; they change what it costs.
+
+- **FlashAttention** computes exact attention in tiles so memory grows linearly with sequence length instead of quadratically. FlashAttention-2 is about 2x faster than the first version and reaches 50-73% of an A100's peak FLOPs/s ([arXiv 2307.08691](https://arxiv.org/abs/2307.08691)).
+- **Sparse and local attention** limits which tokens each token attends to. Longformer combined "a local windowed attention with a task motivated global attention" to scale linearly ([arXiv 2004.05150](https://arxiv.org/abs/2004.05150)). Many current models mix sliding-window layers with full-attention layers.
+- **Ring Attention** splits a long sequence across GPUs and passes key-value blocks around a ring while computing. Max length grows with the number of devices, with no approximation ([arXiv 2310.01889](https://arxiv.org/abs/2310.01889)).
+- **Grouped-query attention (GQA)** shares key-value heads across query heads, which shrinks the KV cache. Existing multi-head checkpoints can be converted with about 5% of the original pretraining compute ([arXiv 2305.13245](https://arxiv.org/abs/2305.13245)).
+- **KV cache quantization** stores keys and values in 8 or 4 bits. Ollama and llama.cpp expose it as a setting; the [open-source long-context guide](/articles/largest-context-window-llm-open-source/) shows the VRAM math.
+
+## How to increase the context window of a local model
+
+To run an open-weight model past its default window:
+
+1. **Read the model card.** Find the native length and whether the authors validated a scaled length (Qwen3: 32,768 native, 131,072 with YaRN).
+2. **Raise the runtime limit.** Ollama picks a default from your VRAM (4K tokens under 24 GiB), so set `num_ctx` or `OLLAMA_CONTEXT_LENGTH`; in llama.cpp set `--ctx-size`.
+3. **Enable the scaling the authors used.** Use their RoPE type and factor, not a bigger one. Going past the validated length usually degrades quality.
+4. **Budget the KV cache.** Memory grows linearly with tokens; quantize the cache or use a smaller model if it doesn't fit.
+5. **Leave scaling off for short inputs** if you use static YaRN, since it can hurt short-text quality.
+6. **Test at your real length.** A needle-in-a-haystack pass isn't enough; benchmarks like RULER show effective length is often shorter than advertised.
+
+## Extending context without changing the model
+
+With hosted APIs (about 1M tokens on current frontier models, per the [context window comparison](/articles/context-window-llm-ranking/)), you can't touch RoPE. You extend what the model can *use* by choosing what goes in:
+
+- **Trim or summarize history** so old turns don't crowd out new ones.
+- **Retrieve** only the relevant chunks of documents instead of pasting them whole.
+- **Store memories outside the model** and load the few that matter for each call. This is what people usually mean by "LLM memory extension": facts that persist across sessions, not a bigger window.
+
+These approaches work at any window size and cost less per call. The details are in [LLM context window optimization](/articles/llm-context-window-optimization/), and the reasons a bigger window still underperforms are in [context window limitations and solutions](/articles/context-window-limitations-solutions/).
+
+## Which approach to pick
+
+| Your situation | What extends your context |
+|---|---|
+| Hosted API, need more room | Retrieval, compaction, external memory |
+| Open model, validated scaled length exists | Enable the model's own YaRN/LongRoPE config |
+| Open model, need beyond its validated length | YaRN or LongRoPE plus long-context fine-tuning |
+| Training your own long model | Continual pretraining on long data, FlashAttention, Ring Attention |
+| Long context fits logically but not in VRAM | GQA models, KV cache quantization, sliding-window layers |
+| Facts must survive across sessions | A memory store; no window size solves this |

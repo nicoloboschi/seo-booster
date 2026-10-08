@@ -1,230 +1,137 @@
 ---
-title: 'Mempalace AI Memory System: Enhancing Agent Recall and Context'
-description: Explore the Mempalace AI memory system, a novel approach to long-term recall and context management for advanced AI agents. Learn its architecture and benefits.
+title: "MemPalace: Milla Jovovich's Open-Source AI Memory"
+description: "MemPalace is an MIT-licensed local AI memory system co-created by Milla Jovovich and Ben Sigman. How wings, rooms and drawers work, and what its benchmarks measure."
 date: 2026-06-01
-lastmod: 2026-06-01
-tags:
-- AI memory systems
-- Mempalace
-- AI agents
-keywords:
-- mempalace ai memory system
-- AI memory
-- agent recall
-- long-term memory AI
-- AI context management
-faq:
-- question: What makes Mempalace's memory system 'long-term'?
-  answer: Mempalace provides **long-term memory** by storing information independently of an LLM's transient context window. This external, persistent storage allows agents to retain and access data across
-    vastly extended periods.
-- question: How does Mempalace handle large volumes of data?
-  answer: Mempalace utilizes **scalable indexing techniques**, often leveraging vector databases. By converting data into semantic embeddings, it can manage and search through immense datasets effectively.
-- question: Can Mempalace be integrated with existing LLM frameworks?
-  answer: Yes, systems like Mempalace are typically designed to be integrated as external modules. They can interface with popular LLM frameworks through well-defined APIs, allowing developers to enhance
-    existing agents with advanced memory capabilities.
+lastmod: 2026-10-08
 slug: mempalace-ai-memory-system
 aliases:
 - /articles/ai-memory-milla-jovovich/
 - /articles/milla-jovovich-ai-memory/
+tags:
+- MemPalace
+- agent memory
+- open source
+- local-first
+keywords:
+- "mempalace"
+- "mempalace ai memory system"
+- "milla jovovich ai memory"
+- "mempalace benchmark"
+- "mempalace review"
+cluster: agent-memory
+faq:
+- question: "What is MemPalace?"
+  answer: "MemPalace is an open-source (MIT), local-first memory system for AI assistants and coding agents. It stores conversation history and files as verbatim text, organizes them into wings, rooms and drawers, and retrieves them with semantic search over ChromaDB by default. It exposes 45 MCP tools and auto-save hooks for Claude Code, Codex CLI and Cursor."
+- question: "Did Milla Jovovich really make an AI memory system?"
+  answer: "Yes. MemPalace launched on GitHub in early April 2026. Decrypt reported that Jovovich says she designed the concept and architecture, and that Ben Sigman, CEO of Libre Labs, engineered the software. The official repository is github.com/MemPalace/mempalace."
+- question: "Is MemPalace's 100% LongMemEval score real?"
+  answer: "The README itself does not headline 100%, saying the last 0.6% came from inspecting specific wrong answers. Its main figure is 96.6% retrieval recall@5 in raw mode, which measures whether the right session is in the top five results, not whether an answer is correct. That isn't comparable to end-to-end QA accuracy other systems report."
 ---
 
-What if your AI could remember every interaction, every piece of data, without forgetting? The **mempalace ai memory system** provides AI agents with persistent, scalable, and contextual long-term memory. It overcomes LLM context window limits, allowing agents to retain and recall information across complex tasks and extended periods, fostering more intelligent interactions.
+**MemPalace** is an open-source (MIT), local-first memory system for AI assistants, co-created by actress **Milla Jovovich** and developer **Ben Sigman** and released in April 2026. It stores your conversations and files **verbatim**, without summarizing them, sorts them into wings, rooms and drawers, and retrieves them with semantic search. Everything stays on your machine by default.
 
-## What is the Mempalace AI Memory System?
+This page covers what MemPalace is, how its "palace" structure works, how to use it, and what its much-discussed benchmark numbers actually measure. Facts come from the [MemPalace GitHub README](https://github.com/MemPalace/mempalace) and the official docs at mempalaceofficial.com, checked October 2026.
 
-The **mempalace ai memory system** is an advanced architecture designed to imbue AI agents with long-term memory capabilities. It goes beyond the ephemeral nature of standard LLM context windows, enabling agents to store, retrieve, and reason over vast datasets of past experiences and knowledge. This persistent memory is crucial for developing more capable and context-aware AI assistants.
+## What is MemPalace?
 
-The Mempalace system provides AI agents with **persistent, scalable, and contextual long-term memory**. It addresses the inherent limitations of LLM context windows by enabling agents to retain and recall information across extended periods and complex task sequences, fostering more intelligent and coherent interactions.
+**MemPalace is a Python memory layer that saves AI conversation history and project files as unchanged text chunks, indexes them in a local vector store (ChromaDB by default), and lets an assistant search them through a CLI, a Python API or 45 MCP tools. It's named after the method of loci, the memory-palace technique.**
 
-## The Critical Limitation of AI Context Windows
+The core bet is in the README's first line: it "does not summarize, extract, or paraphrase." Many memory systems use an LLM to decide which facts are worth keeping. MemPalace keeps everything and relies on search to find it later. That's closer to retrieval over raw history than to fact extraction; the tradeoffs are covered in [RAG vs agent memory](/articles/rag-vs-agent-memory/).
 
-Current AI agents, especially those using Large Language Models (LLMs), struggle with remembering information. Their **context windows** are finite. This means they can only process a small amount of text at once. Information outside this window is effectively lost. This severely limits their ability to learn from past interactions or perform multi-step tasks.
+## Who made MemPalace
 
-This limitation is a primary bottleneck for building truly intelligent agents. Industry reports indicate that LLM context window sizes have grown significantly, with some reaching 128k tokens. However, even this is insufficient for many real-world applications requiring deep historical context. The **mempalace ai memory system** aims to solve this. According to a 2023 analysis by AI Research Hub, agents without external memory systems exhibit a 40% decline in performance on tasks requiring recall of information beyond 10,000 tokens.
+Jovovich announced the project in an Instagram video in April 2026. [Decrypt reported](https://decrypt.co/363524/fifth-element-milla-jovovich-ai-tool-mempalace) on April 7, 2026 that she says she designed the concept and architecture, while Ben Sigman, CEO of the Bitcoin lending platform Libre Labs, engineered the software. Sigman told Decrypt the repo got 10,000 GitHub stars and 50 pull requests in its first 24 hours. As of October 2026 the repo shows about 59,500 stars.
 
-## Core Components of the Mempalace Architecture
+The project now lives under the `MemPalace` GitHub organization. The README warns that the only official sources are the GitHub repo, the PyPI package and mempalaceofficial.com, and that look-alike domains "may distribute malware." Install only from those.
 
-The effectiveness of the **mempalace ai memory system** lies in its distinct architectural components. Each serves a specific role in managing and accessing an agent's knowledge. These components work in concert to create a dynamic and accessible memory store.
+## How the palace is organized
 
-### Memory Storage and Indexing
+The structure is a metaphor for scoping search:
 
-At its heart, Mempalace uses advanced **embedding models** to convert raw data into dense vector representations. These vectors capture semantic meaning. The system then employs efficient indexing techniques, often based on **vector databases**, to organize these embeddings. This allows for rapid similarity searches, enabling agents to quickly find relevant past information. This is a fundamental aspect of [AI agent information management strategies](/articles/ai-agent-memory-explained).
+| Level | What it holds | Example |
+|---|---|---|
+| **Wing** | A person, project or life area | `myapp`, `team` |
+| **Room** | A topic within a wing | `auth`, `architecture` |
+| **Drawer** | One chunk of original, verbatim content | A message or file section |
 
-### Retrieval Mechanisms
+The README describes rooms as topics. The official site's overview describes rooms as time units (one per day or session) and adds **closets** that group drawers by thread, so the two descriptions don't fully match. Either way, the point is that a search can be limited to one wing or room instead of running over everything.
 
-Mempalace provides **advanced retrieval mechanisms**. When an agent needs information, Mempalace performs targeted searches within its indexed memory. This could involve recalling specific facts or past events. The retrieval process is often guided by the agent's current goals. This contrasts with simpler keyword-based search systems.
+Other parts:
 
-### Memory Consolidation and Forgetting
+- **Memory stack.** Four layers: L0 identity and L1 "essential story" load at wake-up (the docs say about 600-900 tokens), L2 is on-demand recall from a wing or room, L3 is deep semantic search.
+- **Knowledge graph.** A temporal entity-relationship graph in local SQLite, where each fact has valid-from and valid-to dates, similar in spirit to [temporal knowledge graphs](/articles/ai-memory-knowledge-graph/).
+- **AAAK dialect.** A compact symbolic format the docs call "lossy compression for token density at scale," used to fit more pointers into a prompt.
+- **Backends.** ChromaDB by default; `sqlite_exact`, `rust_exact`, Milvus, Qdrant and pgvector are opt-in.
+- **Embeddings.** Local. Onboarding offers `embeddinggemma-300m` (multilingual) or `all-MiniLM-L6-v2` (English, about 30 MB). No API key needed.
 
-An effective memory system must handle new information and manage older data. Mempalace incorporates **memory consolidation** processes to integrate new experiences. It may also implement controlled **forgetting mechanisms**. This prevents the memory store from becoming overloaded.
+## How to use MemPalace
 
-## Types of Memory Supported by Mempalace
+Install with `uv tool install mempalace` (or `pipx`, or `pip` in a virtualenv). Python 3.9+ is required. The README's quickstart:
 
-Mempalace supports a diverse range of memory types. This moves beyond simple factual recall to encompass richer forms of knowledge. Supporting multiple memory types is key to creating sophisticated AI.
-
-### Episodic Memory
-
-**Episodic memory** refers to the recall of specific events and experiences. For an AI agent, this means remembering "what happened when." Mempalace stores these events with timestamps and contextual details. This allows agents to reconstruct past sequences. This is vital for [conversational AI memory capabilities](/articles/best-chatbot-for-memory/).
-
-### Semantic Memory
-
-**Semantic memory** stores general knowledge, facts, and concepts. This includes information like historical facts or scientific principles. Mempalace organizes this knowledge for agent access. Unlike episodic memory, semantic memory is decontextualized. Understanding [semantic memory in AI agents](/articles/semantic-memory-ai-agents) is crucial for building knowledgeable AI.
-
-### Procedural Memory
-
-**Procedural memory** involves the knowledge of how to perform tasks or skills. This could be anything from formatting output to executing procedures. Mempalace can potentially store and retrieve these "how-to" instructions. This enables agents to learn and execute new skills.
-
-## Benefits of Using Mempalace for AI Agents
-
-Implementing a system like Mempalace offers significant advantages for AI agent development. These benefits directly impact performance, coherence, and utility.
-
-### Enhanced Contextual Understanding
-
-By providing agents access to a large, persistent memory, Mempalace dramatically improves **contextual understanding**. Agents can recall details from much earlier in an interaction. This leads to more relevant and coherent responses. It helps avoid "short-term memory" issues common in basic LLM applications.
-
-### Improved Task Completion and Reasoning
-
-Complex tasks require agents to maintain state and track progress. Mempalace's long-term memory facilitates this. Agents can store intermediate results and decisions. This capability is essential for agents performing multi-stage operations. This directly addresses the challenge of limited memory AI.
-
-### Scalability and Long-Term Learning
-
-Mempalace is designed for scalability. It can grow with the agent's experience and data volume. This allows for true **long-term learning**. Agents can accumulate knowledge and refine behavior over extended periods. This is a key differentiator from systems relying solely on fixed context windows.
-
-## Mempalace vs. Other Memory Solutions
-
-Comparing Mempalace to existing approaches highlights its unique contributions. Understanding these distinctions is key to selecting the right memory solution.
-
-### Mempalace vs. Traditional LLM Context Windows
-
-The most apparent comparison is with the standard **context window** of LLMs. While context windows are fast, they are severely limited in size. Mempalace, by contrast, offers a potentially limitless external memory. This allows for a much deeper historical understanding. This is a core difference discussed in [context window limitations and solutions](/articles/context-window-limitations-solutions).
-
-### Mempalace vs. Retrieval-Augmented Generation (RAG)
-
-**Retrieval-Augmented Generation (RAG)** augments LLM responses with information from an external knowledge base. Mempalace can be seen as a more integrated form of RAG. It may include more advanced memory management and different memory types. While RAG focuses on external knowledge for a single query, Mempalace builds a persistent, evolving internal memory for the agent. You can learn more about [RAG vs. agent memory](/articles/rag-vs-agent-memory).
-
-### Mempalace and Open-Source Alternatives
-
-The AI memory space has many open-source solutions. Tools like **Hindsight** offer frameworks for building agent memory, integrating with vector databases. Mempalace may offer specific architectural choices or optimizations. These could be in memory consolidation or indexing strategies. Exploring [open-source memory systems compared](/articles/open-source-memory-systems-compared) is vital for developers.
-
-## Implementing Mempalace in Agent Architectures
-
-Integrating Mempalace into an AI agent requires careful consideration. This involves defining clear interfaces for memory access.
-
-### Agent-LLM Interaction Loop
-
-In a typical agent architecture, the LLM might query Mempalace for relevant historical context. After generating a response, the agent might store new information back into Mempalace. This creates a continuous loop of memory interaction. This is part of the broader [AI agent architecture patterns](/articles/ai-agent-architecture-patterns).
-
-Here's a Python example demonstrating a simplified interaction:
-
-```python
-import uuid
-import time
-
-class MockVectorDB:
- def __init__(self):
- self.documents = {}
-
- def add_document(self, content, metadata=None):
- doc_id = str(uuid.uuid4())
- self.documents[doc_id] = {"content": content, "metadata": metadata or {}}
- print(f"Added document {doc_id[:8]}... with metadata: {metadata}")
- return doc_id
-
- def search(self, query_text, k=3):
- print(f"Searching for: '{query_text}'")
- # In a real system, this would involve embedding the query and performing vector similarity search.
- # For this mock, we'll just return the most recently added documents as a placeholder.
- sorted_ids = sorted(self.documents.keys(), key=lambda x: self.documents[x]['metadata'].get('timestamp', 0), reverse=True)
- results = [self.documents[doc_id] for doc_id in sorted_ids[:k]]
- print(f"Found {len(results)} relevant documents.")
- return results
-
-class MempalaceAgent:
- def __init__(self, vector_db):
- self.vector_db = vector_db
- # Assume an LLM component is present, represented by a placeholder function
- self.llm_response = lambda prompt: f"LLM response to: '{prompt[:50]}...'"
-
- def remember(self, content, context_type, timestamp):
- metadata = {"type": context_type, "timestamp": timestamp}
- self.vector_db.add_document(content, metadata)
-
- def recall(self, query_text, num_results=3):
- return self.vector_db.search(query_text, k=num_results)
-
- def think_and_act(self, user_input, current_task):
- # Retrieve relevant memories based on the current task and user input
- retrieved_memories = self.recall(f"Context for task '{current_task}': {user_input}")
-
- # Construct a prompt for the LLM, incorporating retrieved memories
- memory_summary = "\n".join([f"- {mem['content'][:100]}..." for mem in retrieved_memories])
- prompt = f"Current Task: {current_task}\nUser Input: {user_input}\nRelevant Past Information:\n{memory_summary}\n\nGenerate a relevant response:"
-
- # Get response from LLM
- agent_response = self.llm_response(prompt)
- print(f"Agent Response: {agent_response}")
-
- # Store the current interaction as a memory
- self.remember(f"User: {user_input} -> Agent: {agent_response}", "interaction", time.time())
-
- return agent_response
-
-## Example Usage
-mock_db = MockVectorDB()
-agent = MempalaceAgent(mock_db)
-
-## Simulate initial memories being added
-agent.remember("User asked about the weather yesterday.", "interaction", 1678886400) # March 15, 2023
-agent.remember("The weather was sunny.", "interaction", 1678886500)
-
-## Simulate an agent processing a task
-current_task = "Plan a day trip"
-user_input = "Suggest a destination for a day trip tomorrow."
-agent.think_and_act(user_input, current_task)
-
-## Simulate a follow-up question that requires recalling past interactions
-user_input_follow_up = "What kind of weather did we discuss previously?"
-agent.think_and_act(user_input_follow_up, current_task)
-
+```bash
+mempalace mine ~/projects/myapp                    # index project files
+mempalace mine ~/.claude/projects/ --mode convos   # index Claude Code sessions
+mempalace search "why did we switch to GraphQL"
+mempalace wake-up                                  # load context for a new session
 ```
 
-This Python code demonstrates a simplified **mempalace ai memory system** integration. It uses a mock vector database to store and retrieve information. The `MempalaceAgent` class shows how an agent might `remember` new interactions and `recall` relevant past data when processing user input and a `current_task`. The `think_and_act` method illustrates constructing a prompt for an LLM that includes retrieved memories, mimicking how Mempalace enhances an agent's contextual awareness and reasoning by accessing its long-term memory.
+From Python, the documented API looks like this:
 
-### Data Ingestion and Processing
+```python
+from mempalace.searcher import search_memories
+from mempalace.knowledge_graph import KnowledgeGraph
 
-Getting information into Mempalace involves **data ingestion**. This requires pipelines to collect raw data and process it. Generating embeddings and storing them in the indexed memory store is then performed. The frequency of ingestion can be tuned.
+# Scoped semantic search over verbatim drawers
+results = search_memories(
+    query="why did we switch to GraphQL",
+    wing="myapp",
+    room="architecture",
+    n_results=5,
+)
+for hit in results["results"]:
+    print(round(hit["similarity"], 2), hit["source_file"], hit["text"][:80])
 
-### Querying and Retrieval Logic
+# Temporal facts with validity windows
+kg = KnowledgeGraph()
+kg.add_triple("Kai", "works_on", "Orion", valid_from="2025-06-01")
+kg.invalidate("Kai", "works_on", "Orion", ended="2026-03-01")
+print(kg.query_entity("Kai", as_of="2026-01-15"))
+```
 
-The agent's decision-making module decides *when* and *what* to query from Mempalace. This logic can be complex. It involves analyzing the current situation and formulating queries. The quality of retrieval logic directly impacts the agent's ability to use its memory effectively.
+For coding agents, MemPalace ships **auto-save hooks** for Claude Code, Codex CLI and Cursor that save periodically and before context compaction. The README stresses wiring them early: Claude Code deletes old session transcripts after its retention period (30 days by default), so unsaved history is gone. More on this in [AI coding agent memory](/articles/ai-coding-agent-memory/).
 
-## The Future of AI Memory with Systems like Mempalace
+## MemPalace benchmarks: what the numbers mean
 
-The development of advanced memory systems like Mempalace signals a significant leap forward in AI capabilities. As these systems mature, AI agents will become more intelligent and adaptable.
+MemPalace's launch claims were the most debated part. Here's what the current README reports on LongMemEval (500 questions):
 
-### Towards More Human-Like AI Cognition
+| Mode | Metric | Score | LLM needed |
+|---|---|---|---|
+| Raw semantic search | Recall@5 | 96.6% | None |
+| Hybrid v4, held-out 450 questions | Recall@5 | 98.4% | None |
+| Hybrid v4 + LLM rerank | Recall@5 | ≥99% | Yes |
+| LoCoMo hybrid v5, no rerank | Recall@10 | 88.9% | None |
 
-Mempalace and similar advancements are critical steps towards **human-like AI cognition**. The ability to remember and learn from the past is fundamental to intelligence. As memory systems advance, AI agents will move closer to possessing nuanced understanding.
+Three things to know:
 
-### Impact on Autonomous Systems
+1. **These are retrieval scores, not answer accuracy.** Recall@5 asks whether the right session is among the top five results. Most memory vendors report end-to-end QA accuracy, where a model must also produce the correct answer and a judge grades it. Recall is always the easier number. The README itself says putting the two side by side "is not an honest comparison," and it doesn't include a table against Mem0, Zep or others.
+2. **The "100%" figure was walked back.** Early coverage cited a perfect score. The README now says it doesn't headline 100% because "the last 0.6% was reached by inspecting specific wrong answers," which its benchmark notes flag as teaching to the test. The held-out 98.4% is what it calls "the honest generalisable figure."
+3. **The palace features didn't drive the headline score.** An independent reproduction in [GitHub issue #39](https://github.com/MemPalace/mempalace/issues/39) confirmed 96.6% recall@5 in raw mode, but found room-based retrieval at 89.4% and AAAK mode at 84.2% on the same data. In other words, the top number came from plain ChromaDB search over verbatim text.
 
-For autonomous systems, persistent memory is essential. Mempalace could enable systems to build detailed maps of environments. They can recall past encounters to improve safety. This is crucial for [persistent memory AI](/articles/persistent-memory-ai). According to a 2024 report by McKinsey & Company, advancements in AI memory are projected to drive a 25% increase in the efficiency of autonomous robotic systems.
+USC professor Sean Ren told Decrypt the performance claims hadn't been validated outside controlled tests: "That's not proven." For how to read memory benchmarks in general, see [LLM memory evaluation](/articles/llm-memory-evaluation/).
 
-### Ethical Considerations and Memory Management
+## Strengths and limits
 
-As AI memory systems grow, so do ethical considerations. Questions arise about data privacy and bias. Responsible development of systems like Mempalace must include safeguards. Transparent memory management is paramount.
+**Where MemPalace fits well:**
 
-## FAQ
+- You want memory that never leaves your laptop and needs no API key.
+- You want the original words, not an LLM's summary of them.
+- You use Claude Code, Codex or Cursor and want past sessions searchable.
 
-### What makes Mempalace's memory system "long-term"?
+**Where it's weaker:**
 
-Mempalace provides **long-term memory** by storing information independently of an LLM's transient context window. This external, persistent storage allows agents to retain and access data across vastly extended periods.
+- **No fact updates by default.** Verbatim storage means old and new statements both stay. The knowledge graph handles changes only if you write triples to it.
+- **Search returns chunks, not answers.** The model still has to read and reconcile them, which costs context tokens.
+- **Single-user, local design.** There's a remote/team server guide, but the default is one machine, one palace.
+- **Young project.** It launched in April 2026, and its structure and docs are still shifting.
 
-### How does Mempalace handle large volumes of data?
-
-Mempalace uses **scalable indexing techniques**, often using vector databases like [Pinecone](https://www.pinecone.io/) or ChromaDB. By converting data into semantic embeddings, it can manage and search through immense datasets effectively.
-
-### Can Mempalace be integrated with existing LLM frameworks?
-
-Yes, systems like Mempalace are typically designed to be integrated as external modules. They can interface with popular LLM frameworks through well-defined APIs. This allows developers to enhance existing agents with advanced memory capabilities. You can find more on [best AI memory systems](/articles/best-ai-memory-framework/) and compare them.
----
+If you need extracted facts, user profiles or multi-tenant hosting, look at extraction-based systems like Mem0, Zep or Hindsight. The [open-source memory systems comparison](/articles/open-source-memory-systems-compared/) lists them side by side.

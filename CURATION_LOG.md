@@ -14,16 +14,21 @@ impression in 28 days. Real search visits ~570/28d, almost all Bing + DuckDuckGo
   `aliases`), 496 off-topic pages deleted (RAM/chip stocks, human memory, LLM law degree, AI companions,
   Illustrator, games, nonsense keywords like "AI memory stick for agents").
 - Added `llms.txt` and an IndexNow key.
-- Rewrote the 20 highest-demand pages from real sources (consumer chat memory, context windows,
-  framework comparisons, tool alternatives, n8n, MemoryOS, Zep). Pillars: `ai-agent-memory-explained`,
-  `context-window-of-an-llm`.
+- Rewrote all 95 remaining pages from primary sources (docs, READMEs, pricing pages, papers), checked
+  2026-10-08. Merged `langchain-chatbot-with-memory-github` into `chatbot-with-memory-langgraph`.
+  Pillars: `ai-agent-memory-explained`, `context-window-of-an-llm`. Hindsight now on 61/95 pages, always
+  as one option among others (was 95/96, shoehorned).
+- New homepage (guides + full article list), robots.txt with sitemap, `find-topics/hot.py`.
+- Scheduled daily curation with reps: `~/.reps/jobs/aiagentmemory/JOB.md` (one new article max per run).
 
 **Why**: Google refused most auto-generated pages. Low-quality volume drags the whole site down, and
 agents cite what search engines trust.
 
 **Next**
-- Rewrite the other ~76 pages (Hindsight is shoehorned into 95 of 96 old pages; 71 use banned words;
-  24 have template descriptions).
+- Facts to re-check when they age: Hermes holographic plugin leaves core on 2026-10-15; vendor pricing
+  (Zep, Mem0, Supermemory, Vertex, AgentCore); context window tables ("as of October 2026").
+- Hindsight integrations that are behind: `hindsight-crewai` pins crewai<1.10 (ExternalMemory removed);
+  the Dify plugin isn't on the Dify Marketplace.
 - In 3-4 weeks: re-run the index sample. Success = indexed share well above 37%, positions improving.
 - Consider Cloudflare in front of GitHub Pages to see AI crawler hits (GPTBot, ClaudeBot, PerplexityBot).
 - Add the site to Bing Webmaster Tools if not there; check IndexNow submissions show up.

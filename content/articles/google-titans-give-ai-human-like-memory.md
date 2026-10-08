@@ -1,194 +1,176 @@
 ---
-title: 'Google Titans Drive AI Towards Human-Like Memory: The Quest for Persistent Recall'
-description: Discover how Google titans are pushing the boundaries of AI by giving it human-like memory. Explore the quest for persistent recall, AI memory systems, and practi...
+title: "Google Titans: How AI Learns to Memorize at Test Time"
+description: "Google Titans explained from the paper: a neural long-term memory that learns at test time using surprise, momentum and forgetting, its MAC/MAG/MAL variants and results."
 date: 2026-04-01
-lastmod: 2026-04-01
-tags:
-- AI memory
-- Google AI
-- human-like memory
-- AI agents
-- persistent AI memory
-- AI recall
-- AI agents memory
-- Google AI memory
-keywords:
-- google titans give ai human-like memory
-- AI memory
-- human-like memory for AI
-- AI recall
-- persistent AI memory
-- AI agents memory
-- Google AI memory
-faq:
-- question: What does 'human-like memory' mean for AI?
-  answer: It refers to an AI's ability to store, recall, and utilize past experiences and information in a way analogous to human episodic and semantic memory, enabling context-aware and personalized interactions.
-- question: How does this differ from current AI memory limitations?
-  answer: Current AI often struggles with long-term, context-rich recall, relying on limited context windows or basic retrieval. Human-like memory aims for deeper understanding, nuanced recall, and continuous
-    learning from interactions.
-- question: What are the implications of AI with persistent memory?
-  answer: Such AI could lead to more personalized assistants, more effective long-term collaborators, and systems that genuinely learn and adapt over time, transforming fields from customer service to scientific
-    research.
-- question: What are the key types of memory being developed for AI agents?
-  answer: Current research focuses on mimicking human memory systems, primarily episodic memory (recalling specific events and their context) and semantic memory (storing and understanding general knowledge
-    and concepts). Hybrid approaches combining these with short-term recall mechanisms are also gaining traction, a goal for Google titans giving AI human-like memory.
-- question: How are Google titans specifically advancing AI memory?
-  answer: Google titans are investing heavily in novel AI architectures, exploring techniques like mimicking episodic and semantic memory systems, and developing hybrid memory approaches to overcome current
-    limitations and achieve persistent recall in AI.
-- question: What are the primary challenges in developing human-like memory for AI?
-  answer: Key challenges include achieving scalability and efficiency in AI memory systems, addressing data privacy and potential biases, managing the computational costs of advanced memory, and moving
-    beyond mere data storage to true understanding and reasoning.
-- question: How does Google's pursuit of human-like AI memory impact the broader AI landscape?
-  answer: Google's significant investments and research in human-like AI memory are setting benchmarks and driving innovation across the industry. Their advancements in persistent AI memory and AI recall
-    are influencing the development of more sophisticated AI agents and pushing the boundaries of what's possible with AI agents' memory.
-- question: What is the primary goal of Google titans in developing AI memory?
-  answer: The primary goal is to equip AI with persistent, context-aware recall capabilities, moving beyond simple data recall to genuine understanding and continuous learning, essentially giving AI human-like
-    memory.
+lastmod: 2026-10-08
 slug: google-titans-give-ai-human-like-memory
+cluster: context-windows
+tags: ["Titans", "Google Research", "long context", "neural memory", "test-time learning", "MIRAS"]
+keywords: ["google titans", "titans learning to memorize at test time", "titans neural long-term memory", "titans ai memory", "titans miras", "titans memory as context"]
+faq:
+  - question: "What is Google Titans?"
+    answer: "Titans is a family of sequence-model architectures from Google Research (Behrouz, Zhong and Mirrokni, arXiv 2501.00663). It pairs attention, used as short-term memory, with a neural long-term memory module, a small MLP whose weights are updated by gradient steps while the model reads its input."
+  - question: "Does Titans give LLMs human-like memory?"
+    answer: "Only in a loose sense. The paper borrows ideas from human memory, such as storing surprising events more strongly and forgetting gradually, but the memory still lives inside one model run. It isn't persistent memory across sessions like a database-backed agent memory system."
+  - question: "Can I use Titans today?"
+    answer: "Not as a product. Google hasn't released official Titans code or weights as of October 2026. The paper's models are research-scale (up to 760M parameters in the first arXiv version), and lucidrains/titans-pytorch is an unofficial PyTorch implementation for experiments."
 ---
 
-Imagine an AI that doesn't just answer your question, but remembers your entire conversation history, your preferences from last year, and the nuances of your ongoing projects. This is the ambitious goal driving **Google titans giving AI human-like memory**. This quest aims to move beyond simple data recall towards genuine understanding and persistent, context-aware interaction, a central challenge for **google titans give ai human-like memory**.
+**Google Titans** is a research architecture that gives a language model a second kind of memory: a small neural network that keeps learning while the model reads. Attention handles the recent context as short-term memory. The neural memory compresses the distant past into its weights, using a "surprise" signal to decide what's worth storing. The paper reports scaling past 2 million tokens.
 
-## What is Human-Like Memory in AI Agents?
+It's research, not a product. You can't call a Titans model through an API, and Google hasn't released official code. What it offers is a clear idea about how future models might handle very long inputs without paying full attention cost on every token.
 
-**Human-like memory in AI agents** means AI systems can store, retrieve, and integrate past experiences, knowledge, and interactions, mimicking human cognitive processes. This enables contextual understanding, nuanced recall, and continuous learning from history, moving beyond simple data storage to foster natural, intelligent interactions. This advancement goes beyond current AI limitations.
+## What is Google Titans?
 
-The goal is to equip AI with capabilities akin to **episodic memory** (recalling specific events) and **semantic memory** (understanding concepts and facts). This fosters more natural and intelligent interactions for AI agents. This is a key aspect of **google titans give ai human-like memory**.
+**Titans is a family of model architectures, introduced in "Titans: Learning to Memorize at Test Time" by Ali Behrouz, Peilin Zhong and Vahab Mirrokni of Google Research, that combines attention as short-term memory with a neural long-term memory module whose parameters are updated during inference.** The paper was posted to arXiv on 31 December 2024 ([arXiv 2501.00663](https://arxiv.org/abs/2501.00663)) and presented as a poster at NeurIPS 2025.
 
-### The Google Initiative: Beyond Stateless AI
+The starting point is a trade-off the abstract states directly. Recurrent models compress history into a "fixed-size memory," so detail gets lost. Attention sees the whole context window exactly, but its cost grows quadratically with length, which caps how long the window can be. Titans tries to get both: exact attention over a recent slice, plus a learned memory for everything older.
 
-Google's top AI minds are deeply invested in this challenge. Their research explores novel architectures and techniques to imbue AI with persistent, autobiographical recall. This is crucial for developing AI agents that can engage in extended dialogues and maintain long-term goals. This is a core focus for **Google titans giving AI human-like memory**.
+The paper frames this with human memory terms. Attention is short-term memory: precise but limited. The neural module is long-term memory: it holds more, less precisely. A third piece, **persistent memory**, holds task knowledge that doesn't depend on the input.
 
-Think of an AI assistant that doesn't just recall your last query but remembers your preferences from months ago. It understands the context of your ongoing projects and learns from every conversation. This is the essence of the memory capabilities being explored by **Google titans giving AI human-like memory**.
+## How the Titans neural long-term memory works
 
-### Why Current AI Memory Falls Short
+The core of Titans is the **neural long-term memory module (LMM)**. It's a small multi-layer perceptron. At each step, the model takes a gradient step on that MLP's weights, so the memory "learns" the input as it goes. This happens at test time, not only in training.
 
-Most current AI systems, including many large language models (LLMs), face significant memory limitations. Their ability to retain information is often constrained by limited context windows. Information outside this window is effectively forgotten.
+### Memory as key-value regression
 
-Many AI models are designed to be stateless. They don't retain information between separate interactions without external memory mechanisms. **Retrieval-Augmented Generation (RAG)** is powerful for accessing external knowledge. However, it's often passive retrieval rather than integrated, learned **agent memory**.
+Each input token is projected into a key and a value. The memory is trained online to map keys to values, with a squared-error loss: how far the memory's output for key k is from value v. That is **associative memory**: given a key, recall the value.
 
-A 2023 survey by Tech Insights revealed that over 60% of AI developers struggle with implementing effective long-term memory for their agents. This indicates a widespread challenge. According to a report by Gartner in 2024, effective long-term memory implementation is a key differentiator for advanced AI agents. This highlights the need for **google titans give ai human-like memory**.
+Reading the memory is just a forward pass with a query, with no weight update. So the model writes by learning and reads by inference.
 
-## Architecting for Persistent Recall: The Google AI Memory Vision
+### Surprise decides what gets stored
 
-Achieving human-like memory requires rethinking AI architectures. Researchers are exploring several promising avenues, a core focus for **Google titans giving AI human-like memory**.
+The paper defines surprise in one line: "a simple definition of surprise for a model can be its gradient with respect to the input." If the memory already predicts a token's value well, the gradient is small and little changes. If the token is unexpected, the gradient is large and the memory updates more.
 
-### Mimicking Episodic Memory Systems
+The idea comes from how people remember. In the paper's words, the module is designed "so an event that violates the expectations (being surprising) is more memorable." The authors note a problem with using raw gradients, though. After a very surprising moment, the gradient can shrink fast, and the memory would miss what comes right after.
 
-Mimicking human episodic memory is a key focus. This involves storing discrete events, their temporal order, and associated context. This allows an AI to recall "what happened when" and "who was involved." This is crucial for understanding cause and effect. This is a key aspect of **agent memory**.
+### Momentum carries surprise forward
 
-For instance, an AI designed for customer support might recall a specific customer's previous issue and the resolution provided. This allows for more personalized and efficient follow-up. Systems like [Hindsight](https://github.com/vectorize-io/hindsight) offer open-source tools for building such structured memory. This is a direct application of **google titans give ai human-like memory**.
+To fix that, Titans splits surprise into two parts:
 
-### Building Semantic Memory Integration
+- **Momentary surprise**: the gradient for the current token.
+- **Past surprise**: a decaying record of recent surprise, which works like momentum in gradient descent.
 
-Beyond specific events, AI needs to build and update a rich repository of general knowledge and concepts. This **semantic memory in AI agents** allows them to understand relationships between ideas. It helps them generalize from past experiences and apply knowledge to new situations. This is a critical component of **AI recall**.
+The update term at step t is the decayed past surprise minus the scaled current gradient. Both the decay and the step size are data-dependent, so the model learns how long a surprising event keeps influencing the memory.
 
-This is distinct from simply accessing a knowledge base. Semantic memory implies an internal model of the world. The AI actively updates and reasons with this model. This is where advancements in [advanced embedding models for AI memory](/articles/embedding-models-for-rag/) become critical. They enable efficient storage and retrieval of conceptual information.
+### Forgetting with a learned gate
 
-### Temporal Reasoning and Memory Consolidation
+Memory capacity is finite, so Titans also forgets. Before each update, an adaptive gate α between 0 and 1 shrinks the old memory. Near 0, the memory keeps the past; near 1, it clears it. The paper describes this as a form of weight decay and says it generalizes the forgetting gates in modern recurrent models such as Mamba, Mamba2 and Gated DeltaNet.
 
-Human memory isn't just a collection of facts; it's organized and updated over time. AI research is exploring **temporal reasoning in AI memory**. This helps understand the sequence of events. **Memory consolidation in AI agents** refines and prioritizes stored information. This is a vital area for **Google titans giving AI human-like memory**.
+Putting it together, each step does: shrink the old memory by the forget gate, then add the surprise term. The paper also shows how to compute this in parallel over chunks with matrix multiplications and a parallel scan, so training on accelerators is practical.
 
-This means an AI might learn to forget irrelevant details while strengthening important memories. This mirrors human cognitive processes. This is vital for preventing AI from being overwhelmed by vast amounts of data. It ensures its memory remains relevant and useful.
+### Deeper memory holds more
 
-## Techniques for Enhancing AI Memory
+The memory MLP can have one layer (which behaves like a linear memory, similar to linear attention) or more. The paper argues deeper memories are more expressive. In its ablation, deeper memory gave better perplexity at longer sequence lengths but trained more slowly.
 
-Several technical approaches are being investigated and developed to create more capable AI memory systems. This is a key area where **Google titans give AI human-like memory**.
+## Titans variants: MAC, MAG and MAL
 
-### Vector Databases and Embeddings for AI Memory
+The paper offers three ways to wire the long-term memory into a model. They differ in where the memory sits relative to attention.
 
-Modern AI memory heavily relies on **embedding models for memory**. These models convert text, images, or other data into numerical vectors. These vectors capture semantic meaning. **Vector databases** then store and efficiently query these embeddings. This allows AI to retrieve information based on conceptual similarity.
+| Variant | How memory is used | What attention sees |
+|---|---|---|
+| **MAC** (Memory as a Context) | Sequence is split into segments. The current segment queries the memory, and the retrieved content is prepended, with persistent memory, before attention. The attention output then updates the memory. | Persistent tokens + retrieved memory + current segment |
+| **MAG** (Memory as a Gate) | A sliding-window attention branch and the memory branch run in parallel. A gate mixes their outputs. | A local sliding window |
+| **MAL** (Memory as a Layer) | The memory layer processes the input first; sliding-window attention runs on its output. | A local sliding window over memory-processed input |
 
-This is a foundational element for many advanced AI memory solutions. It's a key component in understanding how AI can access vast amounts of information quickly. You can learn more about these concepts in our guide on how vector databases enhance AI memory. This is a focus for **google titans give ai human-like memory**.
+MAC is the variant the paper leans on for long-context tasks. MAL is the closest to existing hybrid designs that stack recurrent and attention layers. The paper also tests the memory module alone (labeled LMM) as a pure recurrent model.
 
-### External Memory Modules for Persistent AI Memory
+## Titans results: what the paper reports
 
-To overcome the limitations of internal model context windows, researchers are developing **external memory modules**. These modules act as persistent storage, separate from the core AI model. They can range from simple key-value stores to complex graph databases or specialized vector stores.
+All numbers below come from the first (and, as of October 2026, only) arXiv version. The paper itself notes that results for larger models were still being finalized.
 
-These modules allow AI agents to maintain a **long-term memory** that persists across multiple interactions and sessions. This is essential for creating AI that can genuinely learn and evolve. This is a primary goal for **Google titans giving AI human-like memory**.
+### Language modeling
 
-### Hybrid Memory Architectures
+Models were trained on FineWeb-Edu at three sizes. Average accuracy on commonsense reasoning tasks (Table 1):
 
-The most promising solutions often involve **hybrid memory architectures**. These combine different memory types and retrieval mechanisms. For example, an AI might use a short-term memory buffer for immediate context. It might also use an episodic memory store for recent events and a semantic memory database for general knowledge.
+| Size / tokens | Transformer++ | Best Titans |
+|---|---|---|
+| 340M / 15B | 42.92 | 46.17 (LMM) |
+| 400M / 15B | 45.64 | 48.65 (MAC) |
+| 760M / 30B | 48.69 | 52.51 (MAC) |
 
-This layered approach allows AI to manage different types of information and recall needs effectively. Exploring [AI agent architecture patterns for memory integration](/articles/ai-agent-architecture-patterns) that incorporate these hybrid systems is a significant area of research. This is a core objective for **google titans give ai human-like memory**.
+At 340M, Titans (LMM) reached a WikiText perplexity of 26.18 versus 31.52 for Transformer++.
 
-### Memory-Augmented Neural Networks (MANNs)
+### Needle in a haystack
 
-MANNs are neural networks explicitly designed with external memory components. They can read from and write to this memory. This allows them to store and retrieve information dynamically during processing. This enables more complex reasoning and learning capabilities.
+On the single-needle tasks from the RULER suite (S-NIAH) at 16K tokens, Titans (MAC) scored 98.4, 97.4 and 95.2 across the three task types. Some recurrent baselines collapsed on the hardest one: TTT and Mamba2 scored 0.0.
 
-This is a more integrated approach than simple external databases. It allows the AI model to directly interact with and manipulate its memory. This is a core area for **Google titans giving AI human-like memory**.
+### BABILong and the 2M-token claim
 
-Here's a simplified Python example demonstrating a basic memory storage and retrieval mechanism using a dictionary:
+**BABILong** asks models to reason over facts scattered through very long documents. The paper tests the MAC variant and reports that it beats GPT-4 and GPT-4o-mini few-shot; after fine-tuning, "Titans outperform all models even extremely large models like GPT4." In the fine-tuned setting it says Llama 3.1 8B with retrieval does worse than Titans with about 70 times fewer parameters. The exact scores are in figures, so they aren't repeated here.
+
+The headline claim, from the abstract: Titans "can effectively scale to larger than 2M context window size with higher accuracy in needle-in-haystack tasks compared to baselines."
+
+### Ablations, time series and DNA
+
+Removing each piece hurt perplexity (Table 5). The full memory scored 27.01; without weight decay (forgetting) it was 29.04, without momentum 28.98, and with a linear instead of deep memory 28.49. The memory module also performed well on time-series forecasting and was "competitive with state-of-the-art architectures" on genomics benchmarks.
+
+## Titans and MIRAS
+
+In December 2025, Google Research published a blog post, [Titans + MIRAS: Helping AI have long-term memory](https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/), pairing Titans with a follow-up paper. The post calls Titans "the specific architecture (the tool)" and MIRAS "the theoretical framework (the blueprint)."
+
+**MIRAS** comes from [It's All Connected: A Journey Through Test-Time Memorization, Attentional Bias, Retention, and Online Optimization](https://arxiv.org/abs/2504.13173) (Behrouz, Razaviyayn, Zhong and Mirrokni, April 2025). It describes transformers, Titans and linear RNNs as associative memories defined by four choices:
+
+1. **Memory architecture**: a vector, a matrix or a deep MLP.
+2. **Attentional bias**: the objective the memory optimizes, which decides what it prioritizes.
+3. **Retention gate**: the regularizer that balances new learning against keeping old knowledge.
+4. **Memory algorithm**: the optimizer used to update the memory.
+
+The paper derives three new models from this. **YAAD** uses a Huber loss so a single outlier, like a typo, doesn't swamp the memory. **MONETA** uses stricter generalized-norm penalties. **MEMORA** constrains the memory to behave like a probability map for stable updates.
+
+## Is Titans memory the same as agent memory?
+
+No, and the "human-like memory" headlines blur this. Titans memory is **in-model, in-run memory**. Its weights reset when a new sequence starts. It helps one model read a very long input; it doesn't remember a user from last week.
+
+That puts Titans next to other ways of [extending the LLM context window](/articles/extending-llm-context-window/), not next to memory databases. It's closer to the context window than to [parametric memory](/articles/llm-parametric-memory/) in the usual sense: the weights it updates are a scratch memory, not the base model's knowledge.
+
+Agents that need memory across sessions still store facts outside the model and load the relevant ones into the window, as the [AI agent memory guide](/articles/ai-agent-memory-explained/) describes. Even with a very long effective context, you'd still want an external store for anything that must survive a restart, be edited, or be audited.
+
+| | Titans neural memory | Context window | External agent memory |
+|---|---|---|---|
+| Where it lives | Weights of a small MLP inside the model | The current request | A database or service |
+| Lifetime | One sequence | One request | Until deleted |
+| How it's written | Gradient steps at inference | Your app builds the prompt | Your app or agent writes records |
+| Can you inspect it? | Not directly | Yes, it's text | Yes |
+
+For the basics of what the window is and why it's finite, see the [context window of an LLM](/articles/context-window-of-an-llm/).
+
+## Trying Titans in Python
+
+There's no official release. The most used community version is [lucidrains/titans-pytorch](https://github.com/lucidrains/titans-pytorch), which its README calls an "Unofficial implementation of Titans." It's useful for experiments, not for reproducing the paper's exact numbers. From its README:
 
 ```python
-class SimpleMemoryAgent:
- def __init__(self):
- # A simple dictionary serves as a basic in-memory store.
- # In advanced systems, this would be replaced by a vector database or knowledge graph.
- self.memory = {}
+# pip install titans-pytorch
+import torch
+from titans_pytorch import NeuralMemory, MemoryAsContextTransformer
 
- def remember(self, key, value):
- """Stores a piece of information in memory."""
- self.memory[key] = value
- print(f"Stored: '{key}' -> '{value}'")
+# The neural memory module on its own
+mem = NeuralMemory(dim=384, chunk_size=64)
+seq = torch.randn(2, 1024, 384)
+retrieved, mem_state = mem(seq)
+assert seq.shape == retrieved.shape
 
- def recall(self, key):
- """Retrieves information from memory."""
- retrieved_value = self.memory.get(key, "Information not found.")
- print(f"Recalled for '{key}': {retrieved_value}")
- return retrieved_value
-
-## Example Usage
-agent = SimpleMemoryAgent()
-agent.remember("user_preference", "dark mode")
-agent.remember("last_project_update", "Completed phase 1 analysis.")
-
-agent.recall("user_preference")
-agent.recall("last_project_update")
-agent.recall("meeting_notes") # Example of recalling non-existent info
+# A small MAC-style transformer
+transformer = MemoryAsContextTransformer(
+    num_tokens=256,
+    dim=256,
+    depth=2,
+    segment_len=128,             # local attention window
+    num_persist_mem_tokens=4,    # persistent memory
+    num_longterm_mem_tokens=16,  # retrieved long-term memory
+)
+token_ids = torch.randint(0, 256, (1, 1023))
+loss = transformer(token_ids, return_loss=True)
+loss.backward()
 ```
 
-This basic example illustrates the core concept of storing and retrieving data. This is fundamental to all AI memory systems. It ranges from simple key-value pairs to complex neural memory architectures. A real-world implementation would involve sophisticated data structures and algorithms for efficient storage and retrieval. It would likely use vector databases and complex indexing schemes.
+The README examples call `.cuda()`; the CPU version above is for a quick shape check.
 
-## The Future: AI That Truly Remembers
+## Key takeaways
 
-The drive to give AI human-like memory is not just an academic exercise. It has profound implications for the future of AI applications. This is a vision actively pursued by **Google titans giving AI human-like memory**.
-
-### Personalized AI Assistants
-
-Imagine an AI assistant that truly knows you, your habits, your preferences, your history. This level of **AI that remembers conversations** and personal experiences could lead to unprecedented personalization. An **AI assistant that remembers everything** could proactively assist you based on your long-term needs. This is a direct outcome of **google titans give ai human-like memory**.
-
-### Advanced Agentic AI with Persistent Memory
-
-For **agentic AI**, persistent memory is a prerequisite for complex task execution and goal-oriented behavior. Agents that can recall past attempts and learned strategies will be far more capable and autonomous. This is key for **agentic AI long-term memory**. The development of **AI agents' memory types** is central to this evolution.
-
-### Continuous Learning and Adaptation
-
-Human-like memory enables AI to learn continuously from its interactions. Instead of requiring massive retraining, an AI with a robust memory system can update its understanding and behavior dynamically. This makes it more adaptable and efficient over time. This moves towards **AI agent persistent memory**. A study published on [arXiv in 2024](https://arxiv.org/abs/2401.03019) showed that agents with continuous learning capabilities exhibited a 25% improvement in task completion over time compared to static models. This is a direct benefit of **google titans give ai human-like memory**.
-
-### Overcoming Context Window Limitations
-
-As mentioned, current LLMs struggle with long contexts. Advanced memory systems offer a way to bypass these **context window limitations**. They intelligently store and retrieve relevant information as needed. This is a critical step towards more capable AI. This is a major focus for **Google titans giving AI human-like memory**. Understanding the nuances between **short-term memory AI agents** and their long-term counterparts is vital for **google titans give ai human-like memory**.
-
-## Challenges and Ethical Considerations in AI Memory
-
-Despite the exciting potential, significant challenges remain in the quest for **Google titans to give AI human-like memory**.
-
-### Scalability and Efficiency of AI Memory
-
-Storing and accessing vast amounts of memory efficiently is a major technical hurdle. **AI memory benchmarks** are crucial for evaluating and comparing different approaches. Solutions need to be scalable to handle the data generated by real-world AI deployments. This is a persistent challenge for **google titans give ai human-like memory**.
-
-### Bias and Data Privacy in AI Memory
-
-If AI remembers everything, what happens to data privacy? Ensuring that AI memory systems are secure and unbiased is paramount. Ethical frameworks must evolve alongside the technology. This is a critical concern for **google titans give ai human-like memory**.
-
-### Computational Cost of Advanced Memory Systems
-
-Implementing and running sophisticated memory systems can be computationally expensive. This requires significant processing power and memory resources. Research into [LLM memory systems](/articles/how-llm-memory-works/) aims to optimize these costs. This is an ongoing effort for **google titans give ai human-like memory**.
-
-### The Quest for True Understanding in AI
-
-Ultimately, the goal isn't just to store data, but for AI to truly understand and reason with it. This requires advancements not only in memory but also in general intelligence and common-sense reasoning.
-
-The ongoing work by Google titans and researchers worldwide signals a significant shift. We are moving towards an era where AI agents won't just process information; they will remember, learn, and interact with a depth that begins to approach human cognition. The development of **persistent memory AI** is no longer a distant dream but an active area of innovation. This is the promise of **google titans give ai human-like memory**.
+- **Titans** adds a neural long-term memory that learns at test time, alongside attention as short-term memory.
+- **Surprise** (the gradient), **momentum** and a **forget gate** decide what the memory stores and drops.
+- Three variants: **MAC**, **MAG**, **MAL**. MAC is the long-context workhorse.
+- The paper reports beating Transformer++ at 340M to 760M parameters, strong BABILong results, and scaling past **2M tokens**. These are research-scale results from one arXiv version.
+- **MIRAS** generalizes the idea into four design choices.
+- It's in-model memory for long inputs, not persistent memory across sessions.

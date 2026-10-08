@@ -1,55 +1,8 @@
 ---
-title: 'Janitor LLM Memory: Mastering AI Agent Context and Recall'
-description: Discover Janitor LLM memory, a vital technique for AI agents to efficiently manage their limited context window. Learn about its strategies, benefits, and practic...
+title: "Janitor AI Memory: Chat Memory, JLLM Context and Fixes"
+description: "How Janitor AI memory works: JLLM's ~9K token context, permanent vs temporary tokens, the Chat Memory box, the August 2026 memory changes, and how to make bots remember."
 date: 2026-04-04
-lastmod: 2026-04-04
-tags:
-- LLM memory
-- AI agents
-- memory systems
-- context window management
-- AI recall
-- janitor LLM memory
-- AI agent context
-- AI agent context window
-- LLM context window management
-keywords:
-- janitor llm memory
-- AI agent memory
-- LLM context
-- memory management
-- AI recall
-- context window
-- context window management
-- AI agent context
-- LLM context window
-- AI agent context window
-- LLM context window management
-faq:
-- question: What is the main goal of Janitor LLM memory?
-  answer: The main goal is to efficiently manage an AI agent's limited context window by intelligently removing or summarizing less relevant information, ensuring that the most critical data remains accessible
-    for accurate decision-making.
-- question: How does Janitor LLM memory differ from long-term memory?
-  answer: Janitor LLM memory primarily focuses on curating the information within the LLM's immediate, short-term context window. Long-term memory refers to persistent storage solutions (like vector databases)
-    that hold a much larger, more comprehensive history, from which relevant snippets are retrieved into the short-term memory.
-- question: Can Janitor LLM memory lead to loss of important information?
-  answer: Yes, if not implemented carefully. The challenge lies in accurately identifying and discarding truly irrelevant information. Overly aggressive pruning can indeed lead to the loss of contextually
-    important details, underscoring the need for sophisticated relevance assessment.
-- question: How does Janitor LLM memory help manage the AI agent's context window?
-  answer: Janitor LLM memory actively prunes or summarizes older or less relevant parts of the conversation history to ensure that the most critical information stays within the LLM's limited context window.
-    This prevents the agent from exceeding its token limits and losing track of important details.
-- question: What are the primary strategies used in Janitor LLM memory for context window management?
-  answer: Primary strategies include token budgeting, information prioritization, and dynamic pruning. These methods ensure that the most relevant information is retained within the LLM's limited context
-    window, optimizing AI agent context and recall.
-- question: Why is context window management crucial for AI agents?
-  answer: Context window management is crucial because LLMs have a finite capacity for processing information at any given time. Without effective management, agents can lose track of important details
-    in long conversations, leading to degraded performance and inaccurate responses. Janitor LLM memory directly addresses this challenge.
-- question: How does Janitor LLM memory contribute to effective AI recall?
-  answer: By intelligently curating the information within the LLM's context window, Janitor LLM memory ensures that the most relevant past interactions and data are readily accessible. This direct access
-    to pertinent information significantly enhances the AI agent's ability to recall and utilize it for accurate and timely responses.
-- question: What are the key challenges in implementing Janitor LLM memory?
-  answer: Key challenges include accurately assessing information relevance for pruning, balancing information retention with context window limits, and avoiding the loss of critical context. Sophisticated
-    algorithms are needed to effectively manage the AI agent's context window.
+lastmod: 2026-10-08
 slug: janitor-llm-memory
 aliases:
 - /articles/bot-memory-janitor-ai/
@@ -61,136 +14,109 @@ aliases:
 - /articles/janitor-ai-memory-system/
 - /articles/janitor-llm-context-window/
 - /articles/long-term-memory-janitor-ai-reddit/
+tags:
+- Janitor AI
+- JLLM
+- Chat Memory
+- Roleplay Chatbots
+- Context Window
+keywords:
+- "janitor llm memory"
+- "janitor ai memory"
+- "janitor ai chat memory"
+- "jllm context window"
+- "how to improve janitor ai memory"
+- "janitor ai long term memory"
+faq:
+  - question: "How much memory does Janitor AI have?"
+    answer: "Janitor's help center puts the free JanitorLLM (JLLM) context at around 8,000 to 9,000 tokens. That budget holds the bot's permanent definition, your Chat Memory and recent messages together. Janitor+ advertises 5x more context. With a proxy, the limit depends on the external model you connect."
+  - question: "How do I make Janitor AI remember things?"
+    answer: "Use the Chat Memory box in the chat's memory panel. Keep it to short bullet facts (setting, relationship, current plot, key past events), refresh it with the summarize option or an out-of-character recap prompt, and keep the bot's permanent tokens under about 1,500 so more recent chat fits in context."
+  - question: "What changed with Janitor AI chat memory in August 2026?"
+    answer: "A test where saved memory replaced the old messages it covered reached all users by mistake, and some memory text was lost or hidden. Janitor's 19 August 2026 changelog made that behavior an opt-in toggle, 'memory replaces old messages', off by default. Auto-summarizing now only runs when that toggle is on, and Janitor later restored memory on about 15,000 affected chats."
 ---
----
 
-What happens when an AI agent "forgets" crucial details mid-conversation? **Janitor LLM memory** is a technique for AI agents that prunes and summarizes their conversational history. It ensures only the most relevant information stays within the LLM's limited context window, preventing data overload and improving recall for better decision-making. This **janitor LLM memory** strategy is crucial for agents to maintain coherence in extended interactions and effective **context window management**.
+**Janitor LLM memory** is how much of a roleplay chat the bot can see at once. On Janitor AI's free model, **JanitorLLM (JLLM)**, that's a context window of roughly **8,000 to 9,000 tokens**, shared between the bot's permanent definition, your **Chat Memory** note and the most recent messages. Anything older silently drops out, which is why bots forget.
 
-## What is Janitor LLM Memory?
+The fix isn't a hidden setting. It's managing that token budget: keep definitions lean, keep a short Chat Memory note, and refresh it with summaries. This page explains how each part works, using Janitor's [help center](https://help.janitorai.com/en/) and [changelog](https://janitorai.com/news/changelog/), checked on 8 October 2026.
 
-**Janitor LLM memory** is a memory management strategy for AI agents. It involves actively pruning or summarizing an agent's history and internal state to keep only the most relevant information within the LLM's current context window. This prevents the LLM from exceeding its input token limits and helps maintain focus on critical data for improved decision-making and response generation.
+## What is Janitor LLM memory?
 
-This approach is vital because LLMs have a limited capacity for processing information in a single interaction. Without effective memory management, an agent's ability to maintain context over extended conversations or complex tasks would degrade significantly. The principles of **janitor LLM memory** are fundamental to scalable agent design and effective **AI agent context** management.
+**Janitor AI's memory is its context window: the fixed number of tokens the model reads for each reply. Permanent tokens (the character's personality, scenario, advanced prompts and your Chat Memory) are sent every time. Temporary tokens, your chat messages, fill what's left, and the oldest messages are dropped first when space runs out.**
 
-### The Problem of Limited Context Windows
+JLLM is the free model built into Janitor. The help center describes it as "the default model used in Janitor unless you've hooked up an external one via API." Its [tokens guide](https://help.janitorai.com/en/article/tokens-your-ais-memory-budget-brmwx3/) calls the context a token "wallet" of about 8,000 to 9,000 tokens. When it's full, the bot "quietly starts forgetting the oldest parts of the chat," with "no warnings, no errors."
 
-Modern LLMs operate with a fixed **context window**. This window defines the maximum number of tokens (words or sub-word units) the model can consider at any given time. For instance, a model might have a context window of 4,000, 8,000, or even 32,000 tokens.
+A rough conversion: 1,000 tokens is about 750 words. So 9,000 tokens is roughly 6,700 words for everything combined.
 
-When an agent engages in a long conversation or performs a task requiring extensive prior knowledge, the conversation history or accumulated internal state can easily exceed this limit. Older or less relevant information gets pushed out, leading to a loss of crucial context. This is where techniques like **janitor LLM memory** become indispensable for effective **AI agent memory** and robust **context window management**.
+## Permanent vs temporary tokens
 
-### Strategies for Context Window Management
+This split explains most "my bot forgot" complaints.
 
-Effective **janitor LLM memory** relies on various strategies to manage this limited space. These techniques aim to maximize the utility of the available context for **AI agent context** and overall performance.
+| Token type | What counts | Sent when |
+|---|---|---|
+| **Permanent** | Personality/prompt, scenario, advanced prompts, Chat Memory | Every single message |
+| **Temporary** | Your messages and the bot's replies | Until pushed out by newer ones |
 
-1. **Token Budgeting**: Assigning a strict token limit for conversational history and actively monitoring it. This is a foundational aspect of **context window management**.
-2. **Information Prioritization**: Developing methods to score the importance of different pieces of information. This ensures that critical data is prioritized within the limited **LLM context**.
-3. **Dynamic Pruning**: Adjusting pruning frequency and intensity based on the current task or conversation stage. This adaptive approach is key to efficient **context window management**.
+Every permanent token you add is one less token for recent chat. Janitor's guide says most well-made bots work best with **under 1,500 permanent tokens**, and past 2,000 you're "skating on thin ice." Its example of a bad setup is a 3,000-token character file, which leaves very little room for the actual conversation.
 
-These methods are core to any **janitor LLM memory** implementation for efficient **context window management**.
+Tokens aren't words. "hello" is 1 token, "can't" is 2, "unbelievable" is 3. Counts vary by model, so Janitor suggests checking the count on the character page rather than trusting online counters.
 
-## How Janitor LLM Memory Works
+## How Janitor AI's Chat Memory works
 
-The core idea behind **janitor LLM memory** is to act like a diligent cleaner for the agent's working memory. It doesn't necessarily store information permanently but rather curates what the LLM *sees* in its immediate operational space. This curation is the essence of **janitor LLM memory** and is key to maintaining relevant **LLM context**.
+**Chat Memory** is a text box attached to one chat, opened from that chat's memory panel. Janitor adds it to the prompt as permanent tokens. It isn't part of the character, so other chats with the same bot don't share it. Branching a chat copies its memory over.
 
-### Pruning Strategies for AI Agent Context
+You fill it in three ways:
 
-Several strategies can be employed for pruning in a **janitor LLM memory** system to optimize **AI agent context**:
+- **Write it yourself.** Short facts you want the bot to keep.
+- **Summarize.** Generate a summary into the box. The "summarize since last update" option adds only what happened since the last summary, and it now works for handwritten memory too.
+- **Ask in chat.** Janitor's [memory guide](https://help.janitorai.com/en/article/chat-memory-context-management-9oivt3/) suggests a `<system>` prompt that includes "pause chat|roleplay" so the model answers out of character with a recap you can paste in.
 
-* **Recency-based pruning**: The simplest method is to discard the oldest messages. If the context window is full, the earliest parts of the conversation are removed. This is a common initial approach for **janitor LLM memory**.
-* **Importance-based pruning**: More sophisticated methods attempt to assess the relevance of past interactions. This might involve using embedding models to compare semantic similarity or using a smaller model to score importance. This enhances the effectiveness of **janitor LLM memory** and ensures critical **LLM context** is preserved.
-* **Summarization**: Instead of outright discarding old information, the agent can periodically summarize it. For example, a long exchange about a specific topic might be condensed into a single summary sentence. This summary then occupies fewer tokens than the original exchange, a key technique in **janitor LLM memory**.
+### The August 2026 memory changes
 
-### Summarization Techniques for LLM Context
+In August 2026 Janitor tested a context-saving change with a small group, and it leaked to everyone. Per the [19 August changelog](https://janitorai.com/news/changelog#20260819135602), once a memory was saved, the messages it covered stopped being sent with the prompt. Bots had less real conversation to work with and got vaguer.
 
-Summarization is a key component of many **janitor LLM memory** implementations. It allows the agent to retain the gist of past interactions without consuming excessive tokens, thereby preserving valuable **LLM context**.
+What Janitor changed:
 
-* **Abstractive Summarization**: The LLM itself can generate a novel summary of past events or conversations. This requires careful prompting to ensure accuracy and conciseness for proper **janitor LLM memory** operation.
-* **Extractive Summarization**: Key sentences or phrases from the history are identified and stitched together to form a summary. This provides a more direct representation of past events.
+- A new **"memory replaces old messages"** toggle in the chat memory panel, on web and app. **Off** (the default) adds memory on top of the conversation and removes nothing. **On** drops covered messages to save context.
+- **Auto-summarizing** only runs when that toggle is on, and has its own off switch.
+- A failed summary no longer blanks your existing memory, and blank memories can't be saved.
+- Model reasoning text no longer leaks into the memory box.
 
-A study published on arXiv in 2023 demonstrated that agents employing summarization techniques for memory management showed a 25% improvement in their ability to recall specific details from earlier in multi-turn dialogues. Also, research from Stanford University indicates that summarization can reduce token count by up to 70% for lengthy dialogue segments, significantly expanding effective context for **janitor LLM memory**.
+A day later, Janitor found that deleting a message covered by memory also cleared the memory. It fixed that and restored memory on about **15,000 chats**, except memories made after 18 August that had been overwritten ([20 August entry](https://janitorai.com/news/changelog#20260820023555)).
 
-### Integrating with External Memory for AI Agent Memory
+## What to put in Chat Memory
 
-Janitor LLM memory often works in conjunction with **long-term memory** systems. While it manages the immediate context for the LLM, external systems like vector databases or knowledge graphs store vast amounts of information that can be retrieved when needed. The pruning process ensures that the agent only fetches and includes the most pertinent pieces of information from its long-term memory into its active context. This layered approach is crucial for building capable AI agents. For a deeper dive into how different memory systems function, exploring [AI agent memory explained](/articles/ai-agent-memory-explained/) can provide valuable context. Understanding AI agent reasoning is also key to appreciating why curated memory is essential for **janitor LLM memory**.
+Janitor's help center gives a six-part template. Use short bullets, not prose:
 
-## Benefits of Janitor LLM Memory
+- **Environment:** where you are, in short phrases.
+- **Relationship Dynamic:** key facts about you and `{{char}}`.
+- **Current Plot Points:** what's happening now, with action verbs.
+- **`{{char}}` notes:** concrete facts that aren't personality, such as inventory.
+- **`{{user}}` notes:** stable facts about your persona, such as appearance or gear.
+- **Important Past Events:** big events that still matter.
 
-Implementing effective memory pruning and management yields significant advantages for AI agents. It directly impacts their performance, efficiency, and user experience. The benefits of **janitor LLM memory** are multifaceted, particularly in optimizing **AI agent context**.
+Its tips: keep one verb tense, because switching "confuses the model's understanding of time." List facts, not scenes. Describe what the character *is*, not what they *do*. Treat memory like "your best set of post-it notes, not a giant wiki." Overfilling it makes the model forget or misread the key details.
 
-### Improved Performance and Accuracy
+## How to make Janitor AI memory better
 
-By keeping the LLM focused on relevant information, **janitor LLM memory** reduces the chances of the model getting confused or distracted by outdated or irrelevant data. This leads to more coherent, accurate, and contextually appropriate responses. For tasks requiring precise recall, such as debugging code or following complex instructions, this focused context is invaluable. This is a primary benefit of **janitor LLM memory** for maintaining **AI recall**.
+1. **Trim the bot's permanent tokens.** Aim for under 1,500. Remove repeated information across personality and scenario fields.
+2. **Keep Chat Memory short and current.** Bullets only. Delete events that no longer matter.
+3. **Refresh it with summaries** every so often, using "summarize since last update" or an out-of-character recap.
+4. **Decide on the replace toggle.** Leave "memory replaces old messages" off for the most faithful replies; turn it on only in very long chats where you'd rather keep more history summarized.
+5. **Start a new chat when it degrades.** If the bot repeats itself or loses the plot, the help center suggests a fresh chat that carries over only the essentials.
+6. **Consider more context.** Janitor+ advertises "5x more context for better memory," and a proxy to an external model uses that model's own window.
+7. **Use scripts for lore.** Janitor's Scripts section includes community lorebook scripts that inject world details when keywords appear, instead of keeping everything in permanent tokens.
 
-### Enhanced Efficiency
+## Janitor AI context window: JLLM, Janitor+ and proxies
 
-Processing fewer tokens per interaction translates to faster response times and lower computational costs. When an agent doesn't have to sift through a massive, undifferentiated history, it can reach its conclusions more quickly. This is particularly important for real-time applications like conversational AI assistants. The efficiency gains from **janitor LLM memory** are substantial.
+| Setup | Context, per Janitor | Notes |
+|---|---|---|
+| Free JLLM | About 8K-9K tokens | Help center and subscription FAQ |
+| Janitor+ | "5x more context" | No exact figure on the FAQ page |
+| Proxy (external model) | Set by that model and provider | The proxy is "the middleman between your chat and the model provider" |
 
-### Scalability for Long Interactions
+In January 2026 Janitor's changelog said a new FP8 version of JLLM would be tested at 16,384 tokens of context. Treat that as a test note, not a guaranteed limit; the help center still states 8K-9K.
 
-Without memory management, an agent's ability to handle prolonged interactions would be severely limited. **Janitor LLM memory** allows agents to maintain continuity and understanding over many turns, making them more useful for extended tasks or ongoing conversations. This addresses the core of the [solutions for context window limitations](/articles/context-window-limitations-solutions/) problem, enabling better **context window management**. This scalability is a key feature of **janitor LLM memory**.
+## Why Janitor bots forget, compared with other apps
 
-### Better User Experience
-
-Users interacting with agents that can remember and refer back to previous points in a conversation will naturally have a more satisfying experience. An agent that "forgets" what was just discussed is frustrating. Effective memory management contributes to an AI that feels more intelligent and helpful, a direct result of employing **janitor LLM memory**.
-
-## Janitor LLM Memory in Practice
-
-Implementing **janitor LLM memory** requires careful design within the agent's architecture. It's not a standalone feature but a component that interacts with other memory mechanisms. The practical application of **janitor LLM memory** is where its value is truly realized for managing **AI agent context**.
-
-### Architectural Considerations for AI Agent Memory
-
-An agent architecture might include:
-
-* **Short-Term Memory (Working Memory)**: This is the LLM's context window. Janitor techniques operate here.
-* **Long-Term Memory**: A persistent store (e.g., vector database) for vast amounts of data.
-* **Memory Manager**: A module responsible for deciding what to keep in short-term memory, what to summarize, and what to retrieve from long-term memory. The "janitor" logic resides here.
-
-Tools like **Hindsight** ([https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)) offer frameworks for building sophisticated AI agent memory systems, where custom pruning and summarization logic can be integrated. This aids in developing effective **janitor LLM memory**.
-
-### Example Implementation (Conceptual Python)
-
-Here’s a simplified conceptual example of how pruning might work in a **janitor LLM memory** context to manage **LLM context**:
-
-```python
-## This is a Python code example illustrating janitor LLM memory concepts.
-class ConversationManager:
- def __init__(self, max_tokens=4000, prune_threshold=0.8):
- self.history = []
- self.max_tokens = max_tokens # The LLM's context window limit
- self.prune_threshold = prune_threshold # When to start pruning (e.g., 80% full)
-
- def add_message(self, role, content):
- # Add the new message to the history
- self.history.append({"role": role, "content": content})
- # Check and apply pruning if the history exceeds the threshold
- self._prune_if_necessary()
-
- def get_context(self):
- # In a real system, token counting would be more sophisticated
- # This function simulates retrieving the current active context
- current_tokens = sum(len(msg["content"].split()) for msg in self.history)
- print(f"Current context tokens: {current_tokens}/{self.max_tokens}")
- return self.history # Or a token-limited version
-
- def _prune_if_necessary(self):
- # Simplified token count based on word count
- current_tokens = sum(len(msg["content"].split()) for msg in self.history)
-
- # Apply pruning if the history exceeds the defined threshold
- if current_tokens / self.max_tokens > self.prune_threshold:
- print("Context nearing limit, applying pruning...")
- # Simple recency-based pruning: remove oldest messages
- # This loop ensures we stay below the threshold after pruning
- while sum(len(msg["content"].split()) for msg in self.history) / self.max_tokens > self.prune_threshold and len(self.history) > 1:
- removed_message = self.history.pop(0) # Remove the oldest message
- print(f" - Pruned oldest message: {removed_message['role']}: {removed_message['content'][:50]}...")
- print("Pruning complete.")
-
-##
-```
-
-This conceptual code demonstrates how a `ConversationManager` might implement basic recency-based pruning to manage the **AI agent context** within its token limits, a core function of **janitor LLM memory**.
-
-## Conclusion
-
-**Janitor LLM memory** is an essential technique for building robust and capable AI agents. By intelligently managing the LLM's limited context window, it ensures that agents can maintain coherence, recall critical information, and perform effectively over extended interactions. As AI agents become more sophisticated, mastering **context window management** through techniques like janitor memory will be paramount for their success. The ongoing development in **LLM context window management** promises even more efficient and powerful AI agents in the future.
+Janitor's model is the simplest kind of chatbot memory: a fixed window plus one note you manage yourself. Other roleplay apps add automation. [AI Dungeon's memory system](/articles/ai-dungeon-memory-system/) summarizes every six actions and retrieves memories by embedding similarity. [Character.AI](/articles/what-is-character-ai-memory-limit/) uses pinned messages and a short chat memory field. All of them hit the same limit described in the [context window guide](/articles/context-window-of-an-llm/): what doesn't fit in the prompt doesn't exist for the model. For the general reasons chatbots lose track, see [why AI memory is so bad](/articles/why-is-ai-memory-so-bad/).
