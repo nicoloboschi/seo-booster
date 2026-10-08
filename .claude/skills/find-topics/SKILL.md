@@ -5,6 +5,14 @@ description: Find questions about agent/LLM memory that people and agents ask bu
 
 # Find topics
 
+## Quick scan
+```bash
+python3 .claude/skills/find-topics/hot.py --days 14
+```
+Pulls Hacker News stories, new GitHub repos, newest arXiv papers and Google Autocomplete for agent-memory
+terms, and marks what the site already covers. It's noisy (RAM prices, "memory-safe" code): keep only
+items about memory for AI agents/LLMs. Then check the candidates against the sources below.
+
 ## Sources, best first
 1. **Search Console queries** (`site-stats --pages`, and the query list). A query with impressions
    but position > 20, and no page clearly about it, is a proven gap.

@@ -10,12 +10,15 @@ import os
 import random
 import re
 import urllib.request
+import subprocess
 import warnings
 from datetime import date, timedelta
 from pathlib import Path
 
 warnings.filterwarnings("ignore")
-ROOT = Path(__file__).resolve().parents[3]
+# Secrets live in the main checkout; in a git worktree they aren't present, so resolve via the common .git dir.
+ROOT = Path(subprocess.run(["git", "rev-parse", "--path-format=absolute", "--git-common-dir"], cwd=Path(__file__).parent,
+                           capture_output=True, text=True).stdout.strip()).parent
 SITE = "https://aiagentmemory.org/"
 
 ap = argparse.ArgumentParser()
