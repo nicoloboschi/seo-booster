@@ -11,11 +11,14 @@ uv run .claude/skills/site-stats/stats.py --days 90 --pages --inspect 0   # ever
 ```
 
 ## Auth
-- Search Console uses your Google login. If it fails:
+- Both Search Console and GA4 use the service account in `.secrets/ga-service-account.json`
+  (`seo-booster-ga@seo-booster-491310.iam.gserviceaccount.com`). It never expires, so scheduled runs need no login.
+  For Search Console it must be a **Full** user of the `https://aiagentmemory.org/` property
+  (Search Console > Settings > Users and permissions). GA4 needs `GA_PROPERTY_ID` in `.env`.
+- If the service account has no access, the script says so and falls back to the gcloud login:
   `gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform`
   then `gcloud auth application-default set-quota-project seo-booster-491310`.
-- GA4 uses `.secrets/ga-service-account.json` and `GA_PROPERTY_ID` in `.env`.
-- Bing Webmaster Tools has no script here. Check it in the browser if needed.
+- Bing Webmaster Tools has no script here.
 
 ## How to read the numbers
 - **Index sample** is the most important line. "Crawled - currently not indexed" means Google

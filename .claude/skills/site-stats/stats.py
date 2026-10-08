@@ -30,12 +30,22 @@ args = ap.parse_args()
 end = date.today() - timedelta(days=3)  # GSC lags ~3 days
 start = end - timedelta(days=args.days)
 
-# --- Search Console (user ADC: gcloud auth application-default login --scopes=...webmasters.readonly,...cloud-platform)
+# --- Search Console. Prefer the service account (never expires; must be a "Full" user on the property),
+# fall back to the user's gcloud login.
 import google.auth
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-creds, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
-gsc = build("searchconsole", "v1", credentials=creds)
+SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+sa = ROOT / ".secrets" / "ga-service-account.json"
+gsc = None
+if sa.exists():
+    gsc = build("searchconsole", "v1", credentials=service_account.Credentials.from_service_account_file(str(sa), scopes=SCOPES))
+    if SITE not in {s["siteUrl"] for s in gsc.sites().list().execute().get("siteEntry", [])}:
+        print(f"(service account has no Search Console access to {SITE}; using gcloud login)")
+        gsc = None
+if gsc is None:
+    gsc = build("searchconsole", "v1", credentials=google.auth.default(scopes=SCOPES)[0])
 
 
 def q(dims, limit=25, s=start, e=end):
@@ -82,7 +92,6 @@ if args.inspect:
 from dotenv import load_dotenv
 
 load_dotenv(ROOT / ".env")
-sa = ROOT / ".secrets" / "ga-service-account.json"
 prop = os.environ.get("GA_PROPERTY_ID")
 if not (sa.exists() and prop):
     print("\n(GA skipped: need .secrets/ga-service-account.json and GA_PROPERTY_ID)")
