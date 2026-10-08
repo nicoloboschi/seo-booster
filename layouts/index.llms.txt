@@ -1,0 +1,12 @@
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+Each article answers one question about memory for AI agents and LLMs. Start with the guides, then follow the topic you need.
+
+## Guides
+{{ range where site.RegularPages "Params.role" "pillar" }}- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}
+## Articles
+{{ range (where site.RegularPages "Params.role" "!=" "pillar").ByTitle }}- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}

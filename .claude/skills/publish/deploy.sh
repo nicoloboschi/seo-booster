@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Deploy built Hugo site to gh-pages branch.
-# Usage: ./scripts/deploy.sh
+# Usage: bash .claude/skills/publish/deploy.sh
 set -euo pipefail
 
-REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+REPO_DIR="$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
 cd "$REPO_DIR"
 
 echo "Building Hugo site..."

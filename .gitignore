@@ -2,26 +2,13 @@ public/
 resources/_gen/
 .hugo_build.lock
 
-# Python
+# Python (skill scripts)
 __pycache__/
-*.pyc
 .venv/
-*.egg-info/
 
 # Credentials (NEVER commit)
 .env
-data/gsc-credentials.json
-data/gsc-token.json
-data/ga-service-account.json
-
-# Scraped data (regeneratable)
-data/scraped/
-
-# Backups from optimization
-content/**/*.bak
+.secrets/
 
 # OS
 .DS_Store
-
-# Logs (regeneratable, can grow huge)
-logs/

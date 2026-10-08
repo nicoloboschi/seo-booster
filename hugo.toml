@@ -51,3 +51,13 @@ twitterHandle = ""
 # Create one at https://analytics.google.com → Admin → Create Property → Web stream
 [params.analytics]
 googleAnalyticsId = "G-FHD1L5VSDV"
+
+# llms.txt: plain-text map of the site for AI agents (layouts/index.llms.txt)
+[outputFormats.llms]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
+
+[outputs]
+home = ["HTML", "RSS", "llms"]
