@@ -36,6 +36,13 @@ faq:
   answer: Improving AI memory involves techniques like Retrieval-Augmented Generation (RAG), leveraging advanced vector databases and embedding models, and developing specialized memory architectures such
     as hierarchical memory or memory networks. These solutions aim to overcome current AI memory limitations.
 slug: why-is-ai-memory-so-bad
+aliases:
+- /articles/agent-memory-why-your-ai-has-amnesia-and-how-to-fix-it/
+- /articles/ai-no-memory/
+- /articles/ai-that-does-not-remember/
+- /articles/llm-memory-issue/
+- /articles/llm-memory-problem/
+- /articles/llm-no-memory/
 ---
 
 AI memory is often perceived as bad due to fundamental limitations in how current models store and recall information, primarily stemming from finite context windows, the problem of catastrophic forgetting, and inefficiencies in retrieving relevant data. These AI memory issues are common frustrations, directly answering why AI memory is so bad.
@@ -125,7 +132,7 @@ The advancement of **embedding models** (like Sentence-BERT, OpenAI's Ada) and *
 
 * **Embeddings:** These models convert text into numerical vectors that capture semantic meaning. Similar concepts are represented by vectors that are close in multi-dimensional space.
 * **Vector Databases:** These databases are optimized for storing and querying these high-dimensional vectors, enabling efficient similarity searches.
-* **Impact:** They form the foundation for many modern AI memory solutions, allowing agents to search through vast amounts of information based on meaning rather than keywords. Understanding [embedding models for memory](/articles/embedding-models-for-memory/) is key to grasping this technology and its role in the problem of why AI memory is so bad.
+* **Impact:** They form the foundation for many modern AI memory solutions, allowing agents to search through vast amounts of information based on meaning rather than keywords. Understanding [embedding models for memory](/articles/embedding-models-for-rag/) is key to grasping this technology and its role in the problem of why AI memory is so bad.
 
 Here's a Python example demonstrating a basic concept of creating embeddings and a simple similarity search, which is foundational to vector databases:
 
@@ -199,4 +206,4 @@ The perception of "bad AI memory" is a consequence of current technological limi
 * **Question:** Is catastrophic forgetting a problem for all AI models?
  **Answer:** Catastrophic forgetting is primarily an issue for neural networks, especially when they undergo sequential learning or fine-tuning on new datasets. While it's a significant challenge for models that need to adapt and learn continuously, research is actively developing methods to mitigate its effects, addressing a key aspect of why AI memory is so bad.
 * **Question:** How do AI agents handle remembering conversations over days or weeks?
- **Answer:** Agents typically use a combination of techniques. They might summarize past conversations to fit within the context window, store key interactions in an external vector database for retrieval (RAG), or employ more advanced memory architectures designed for long-term persistence. Effective [AI that remembers conversations](/articles/ai-that-remembers-conversations/) relies heavily on these external memory management strategies to overcome why AI memory is so bad.
+ **Answer:** Agents typically use a combination of techniques. They might summarize past conversations to fit within the context window, store key interactions in an external vector database for retrieval (RAG), or employ more advanced memory architectures designed for long-term persistence. Effective [AI that remembers conversations](/articles/best-chatbot-for-memory/) relies heavily on these external memory management strategies to overcome why AI memory is so bad.

@@ -22,6 +22,29 @@ faq:
 - question: What are the main benefits of using Mem0 AI?
   answer: Key benefits include enhanced recall capabilities, faster retrieval of relevant information, and efficient management of large volumes of data, crucial for complex AI agent operations.
 slug: what-is-mem0-ai
+aliases:
+- /articles/best-llm-for-mem0/
+- /articles/llm-memory-mem0/
+- /articles/mem0-agent-memory/
+- /articles/mem0-ai-founder/
+- /articles/mem0-ai-github/
+- /articles/mem0-ai-memory/
+- /articles/mem0-delete-memory/
+- /articles/mem0-embedding/
+- /articles/mem0-embedding-model/
+- /articles/mem0-episodic-memory/
+- /articles/mem0-for-agents/
+- /articles/mem0-for-rag/
+- /articles/mem0-graph-memory/
+- /articles/mem0-hermes-agent/
+- /articles/mem0-in-ai/
+- /articles/mem0-in-memory/
+- /articles/mem0-long-term-memory/
+- /articles/mem0-memory/
+- /articles/mem0-memory-layer/
+- /articles/mem0-memory-types/
+- /articles/mem0-openmemory/
+- /articles/mem0-pydantic-ai/
 ---
 
 
@@ -73,7 +96,7 @@ By storing relevant information externally and retrieving it on demand, agents c
 
 ## How Mem0 AI Works: Core Concepts
 
-Mem0 AI typically operates by converting raw data into **vector embeddings**. These numerical representations capture the semantic essence of text, images, or other data types. This process is often handled by **embedding models**, which are a critical component of modern AI memory systems, as explored in [embedding models for AI memory](/articles/embedding-models-for-memory/).
+Mem0 AI typically operates by converting raw data into **vector embeddings**. These numerical representations capture the semantic essence of text, images, or other data types. This process is often handled by **embedding models**, which are a critical component of modern AI memory systems, as explored in [embedding models for AI memory](/articles/embedding-models-for-rag/).
 
 Once embedded, data is stored in an **indexed vector database**. This database is optimized for **similarity search**, allowing the AI to query its memory by providing a new piece of information (also embedded). The system then returns the most semantically similar stored embeddings.
 
@@ -127,7 +150,7 @@ Mem0 AI ensures that the **memory store is persistent and reliable**. Data isn't
 
 ## Mem0 AI in Practice: Use Cases
 
-Mem0 AI finds applications in a variety of AI agent scenarios. One common use case is in **conversational AI**, enabling chatbots and virtual assistants to remember past interactions and user preferences. This leads to more natural and personalized conversations, as discussed in [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+Mem0 AI finds applications in a variety of AI agent scenarios. One common use case is in **conversational AI**, enabling chatbots and virtual assistants to remember past interactions and user preferences. This leads to more natural and personalized conversations, as discussed in [AI that remembers conversations](/articles/best-chatbot-for-memory/).
 
 The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
 

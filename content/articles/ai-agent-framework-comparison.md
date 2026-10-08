@@ -67,7 +67,7 @@ LangChain has rapidly become a dominant force in AI agent development. Its modul
 
 LangChain offers a rich set of memory integrations, supporting everything from simple conversation buffers to more sophisticated [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/). Developers can choose pre-built memory types or implement custom solutions. This flexibility is key to building agents that can recall past interactions and maintain context across extended conversations.
 
-For instance, `ConversationBufferMemory` stores raw messages. `ConversationSummaryMemory` uses an LLM to summarize past interactions, conserving token limits. More advanced memory strategies can be built using vector stores for semantic recall, similar to [long-term memory for AI agents](/articles/long-term-memory-ai-agent/) concepts. This ability to manage and retrieve relevant information is fundamental for advanced agents.
+For instance, `ConversationBufferMemory` stores raw messages. `ConversationSummaryMemory` uses an LLM to summarize past interactions, conserving token limits. More advanced memory strategies can be built using vector stores for semantic recall, similar to [long-term memory for AI agents](/articles/ai-agent-long-term-memory/) concepts. This ability to manage and retrieve relevant information is fundamental for advanced agents.
 
 ```python
 from langchain.memory import ConversationBufferMemory
@@ -91,9 +91,9 @@ Microsoft's AutoGen takes a different approach, focusing on simplifying the orch
 
 #### AutoGen's Memory Approach
 
-AutoGen's memory handling is often tied to the conversation history between agents. Each agent maintains its conversational context, which serves as a form of short-term memory. For more persistent or structured memory, developers typically integrate external memory solutions, such as vector databases or specialized [LLM memory systems](/articles/llm-memory-system/) components.
+AutoGen's memory handling is often tied to the conversation history between agents. Each agent maintains its conversational context, which serves as a form of short-term memory. For more persistent or structured memory, developers typically integrate external memory solutions, such as vector databases or specialized [LLM memory systems](/articles/how-llm-memory-works/) components.
 
-The framework facilitates passing conversation history as context to agents, enabling them to refer to previous turns. This is crucial for collaborative problem-solving. While AutoGen doesn't enforce a specific memory architecture, its conversational nature inherently supports memory recall within dialogue turns. Advanced [agentic AI with long-term memory](/articles/agentic-ai-long-term-memory/) can be achieved by integrating dedicated memory modules.
+The framework facilitates passing conversation history as context to agents, enabling them to refer to previous turns. This is crucial for collaborative problem-solving. While AutoGen doesn't enforce a specific memory architecture, its conversational nature inherently supports memory recall within dialogue turns. Advanced [agentic AI with long-term memory](/articles/ai-agent-long-term-memory/) can be achieved by integrating dedicated memory modules.
 
 ```python
 from autogen import UserProxyAgent, AssistantAgent, configlist_openai_models
@@ -130,9 +130,9 @@ LlamaIndex is designed to connect LLMs with external data sources, acting as a d
 
 #### LlamaIndex and Memory
 
-LlamaIndex's core strength is its sophisticated data indexing and querying mechanisms, which can be directly applied to agent memory. It excels at building retrieval-augmented generation (RAG) systems. For agents, this means efficiently searching through vast amounts of stored information to find relevant context for decision-making. This directly impacts [how to provide AI with memory](/articles/how-to-give-ai-memory/).
+LlamaIndex's core strength is its sophisticated data indexing and querying mechanisms, which can be directly applied to agent memory. It excels at building retrieval-augmented generation (RAG) systems. For agents, this means efficiently searching through vast amounts of stored information to find relevant context for decision-making. This directly impacts [how to provide AI with memory](/articles/how-to-give-ai-agents-memory/).
 
-It provides tools for ingesting data into various index structures (e.g., vector stores, keyword tables) and querying them. This functionality can be used to implement both short-term context retrieval and effective [long-term memory for AI agents](/articles/long-term-memory-ai-agent/) capabilities. The framework's focus on data retrieval makes it an excellent foundation for agents that are data-intensive.
+It provides tools for ingesting data into various index structures (e.g., vector stores, keyword tables) and querying them. This functionality can be used to implement both short-term context retrieval and effective [long-term memory for AI agents](/articles/ai-agent-long-term-memory/) capabilities. The framework's focus on data retrieval makes it an excellent foundation for agents that are data-intensive.
 
 ```python
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
@@ -159,9 +159,9 @@ CrewAI focuses on orchestrating AI agents to work collaboratively on complex tas
 
 #### CrewAI's Memory Management
 
-CrewAI integrates memory through its agent definitions and the overall task execution flow. Each agent within a crew can have its own memory, often managed using underlying libraries like LangChain. The framework allows for the sharing of information and context between agents as they collaborate on tasks. This facilitates a form of distributed [AI agent persistent memory](/articles/ai-agent-persistent-memory/).
+CrewAI integrates memory through its agent definitions and the overall task execution flow. Each agent within a crew can have its own memory, often managed using underlying libraries like LangChain. The framework allows for the sharing of information and context between agents as they collaborate on tasks. This facilitates a form of distributed [AI agent persistent memory](/articles/persistent-memory-ai/).
 
-The framework's design encourages passing relevant context and outcomes between agents, effectively simulating memory transfer. For advanced memory needs, CrewAI agents can be configured with specific [LLM memory systems](/articles/llm-memory-system/) components. This makes it suitable for scenarios where agents need to build upon each other's work.
+The framework's design encourages passing relevant context and outcomes between agents, effectively simulating memory transfer. For advanced memory needs, CrewAI agents can be configured with specific [LLM memory systems](/articles/how-llm-memory-works/) components. This makes it suitable for scenarios where agents need to build upon each other's work.
 
 ```python
 from crewai import Agent, Task, Crew, Process

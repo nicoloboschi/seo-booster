@@ -83,7 +83,7 @@ For instance, an AI designed for customer support might recall a specific custom
 
 Beyond specific events, AI needs to build and update a rich repository of general knowledge and concepts. This **semantic memory in AI agents** allows them to understand relationships between ideas. It helps them generalize from past experiences and apply knowledge to new situations. This is a critical component of **AI recall**.
 
-This is distinct from simply accessing a knowledge base. Semantic memory implies an internal model of the world. The AI actively updates and reasons with this model. This is where advancements in [advanced embedding models for AI memory](/articles/embedding-models-for-memory) become critical. They enable efficient storage and retrieval of conceptual information.
+This is distinct from simply accessing a knowledge base. Semantic memory implies an internal model of the world. The AI actively updates and reasons with this model. This is where advancements in [advanced embedding models for AI memory](/articles/embedding-models-for-rag/) become critical. They enable efficient storage and retrieval of conceptual information.
 
 ### Temporal Reasoning and Memory Consolidation
 
@@ -185,7 +185,7 @@ If AI remembers everything, what happens to data privacy? Ensuring that AI memor
 
 ### Computational Cost of Advanced Memory Systems
 
-Implementing and running sophisticated memory systems can be computationally expensive. This requires significant processing power and memory resources. Research into [LLM memory systems](/articles/llm-memory-system/) aims to optimize these costs. This is an ongoing effort for **google titans give ai human-like memory**.
+Implementing and running sophisticated memory systems can be computationally expensive. This requires significant processing power and memory resources. Research into [LLM memory systems](/articles/how-llm-memory-works/) aims to optimize these costs. This is an ongoing effort for **google titans give ai human-like memory**.
 
 ### The Quest for True Understanding in AI
 

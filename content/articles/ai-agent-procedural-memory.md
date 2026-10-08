@@ -24,6 +24,9 @@ faq:
   answer: Yes, procedural memory is often integrated with other memory types like episodic and semantic memory. For example, an agent might recall an episodic memory of learning a skill and then use its
     procedural memory to execute that skill. Semantic memory provides the context and knowledge necessary to understand when and how to apply a learned procedure.
 slug: ai-agent-procedural-memory
+aliases:
+- /articles/llm-procedural-memory/
+- /articles/llm-procedural-memory-optimization/
 ---
 
 AI agent procedural memory is the type of memory that enables agents to learn and execute skills, tasks, and sequences of actions. It represents the 'how-to' knowledge, allowing for autonomous operation and complex task completion without constant re-learning of each step. This core capability is fundamental to advanced AI.
@@ -143,7 +146,7 @@ Understanding how **ai agent procedural memory** fits within the broader landsca
 
 ### Procedural vs. Episodic Memory
 
-**Episodic memory** in AI agents stores specific past events and their context, what happened, when, and where. It allows agents to recall unique experiences. **Procedural memory**, on the other hand, stores the 'how-to' knowledge of performing actions. An agent might have an episodic memory of *learning* to bake a cake (the specific time it happened, any issues encountered), while its procedural memory contains the *recipe and steps* to bake a cake successfully. This distinction is key to [episodic memory functions in AI agents](/articles/ai-agent-episodic-memory/) and its role.
+**Episodic memory** in AI agents stores specific past events and their context, what happened, when, and where. It allows agents to recall unique experiences. **Procedural memory**, on the other hand, stores the 'how-to' knowledge of performing actions. An agent might have an episodic memory of *learning* to bake a cake (the specific time it happened, any issues encountered), while its procedural memory contains the *recipe and steps* to bake a cake successfully. This distinction is key to [episodic memory functions in AI agents](/articles/episodic-memory-in-ai-agents/) and its role.
 
 ### Procedural vs. Semantic Memory
 
@@ -151,7 +154,7 @@ Understanding how **ai agent procedural memory** fits within the broader landsca
 
 ### Procedural Memory and Long-Term Recall
 
-Procedural memory is inherently a form of **long-term memory**. Once a skill is learned, it's intended to be retained and accessible for future use, distinguishing it from the fleeting nature of short-term memory. This persistent nature is what allows agents to build up a repertoire of capabilities over time. For more on this, see [long-term memory for AI chatbots](/articles/long-term-memory-ai-chat/).
+Procedural memory is inherently a form of **long-term memory**. Once a skill is learned, it's intended to be retained and accessible for future use, distinguishing it from the fleeting nature of short-term memory. This persistent nature is what allows agents to build up a repertoire of capabilities over time. For more on this, see [long-term memory for AI chatbots](/articles/best-chatbot-for-memory/).
 
 ## Challenges in Implementing Procedural Memory
 
@@ -163,7 +166,7 @@ Like human memory, AI procedural memory can suffer from **forgetting**. This can
 
 ### Adaptability and Generalization
 
-A key challenge is ensuring that learned procedures are **adaptable** to new situations and can **generalize** beyond their training conditions. An agent trained to open a specific door might struggle with a slightly different door. Research in [embedding models for memory](/articles/embedding-models-for-memory/) aims to create more flexible representations of procedural knowledge.
+A key challenge is ensuring that learned procedures are **adaptable** to new situations and can **generalize** beyond their training conditions. An agent trained to open a specific door might struggle with a slightly different door. Research in [embedding models for memory](/articles/embedding-models-for-rag/) aims to create more flexible representations of procedural knowledge.
 
 ### Scalability of Skill Libraries
 
@@ -181,13 +184,13 @@ These tools often integrate with vector databases and LLMs to create rich memory
 
 ### Commercial AI Memory Platforms
 
-Commercial platforms are also developing specialized solutions for AI agent memory. These often offer managed services, advanced analytics, and enterprise-grade scalability. Exploring options like [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-systems/) can provide insight into the current market offerings.
+Commercial platforms are also developing specialized solutions for AI agent memory. These often offer managed services, advanced analytics, and enterprise-grade scalability. Exploring options like [Vectorize.io's best AI agent memory systems](/articles/best-ai-memory-framework/) can provide insight into the current market offerings.
 
 ## The Future of AI Procedural Memory
 
 The ongoing development of **ai agent procedural memory** promises more capable and autonomous AI systems. Future agents will likely exhibit more sophisticated skill acquisition, better generalization, and seamless integration of procedural knowledge with other memory types. This evolution is critical for advancing AI in areas like robotics, autonomous systems, and personalized assistants.
 
-The ability for AI agents to reliably learn and execute procedures is a cornerstone of their increasing autonomy and utility. As research progresses, we can expect agents to become far more adept at mastering complex tasks through effective procedural memory systems. This is a key aspect of creating truly [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/).
+The ability for AI agents to reliably learn and execute procedures is a cornerstone of their increasing autonomy and utility. As research progresses, we can expect agents to become far more adept at mastering complex tasks through effective procedural memory systems. This is a key aspect of creating truly [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
 
 ## FAQ
 

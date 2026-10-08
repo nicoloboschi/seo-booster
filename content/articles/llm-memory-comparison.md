@@ -58,6 +58,9 @@ faq:
     method (vector search, knowledge graphs), and how they integrate with the LLM. A thorough **llm memory architecture comparison** considers factors like scalability, latency, and the complexity of managing
     the memory.
 slug: llm-memory-comparison
+aliases:
+- /articles/best-llm-memory/
+- /articles/best-long-term-memory-llm/
 ---
 
 An **llm memory comparison** evaluates and contrasts various methods that enable Large Language Models (LLMs) to store, retrieve, and use information beyond their immediate context window. This process is crucial for building AI agents that can maintain conversational history, learn from past experiences, and access external knowledge bases for more informed responses and actions. A direct **llm memory comparison** helps pinpoint the best approach.
@@ -106,7 +109,7 @@ A **llm memory comparison** often places RAG against more integrated memory arch
 
 **Vector databases** store data as high-dimensional vectors, representing semantic meaning. **Embedding models** convert text or other data into these vectors. When an AI needs to recall information, it queries the vector database with a query embedding, retrieving semantically similar stored vectors. This is foundational for many RAG implementations and semantic memory systems.
 
-The efficiency of embedding models directly impacts retrieval speed and accuracy. Understanding [embedding models for memory](/articles/embedding-models-for-memory/) is key to optimizing these systems.
+The efficiency of embedding models directly impacts retrieval speed and accuracy. Understanding [embedding models for memory](/articles/embedding-models-for-rag/) is key to optimizing these systems.
 
 Here's a Python example demonstrating a simple memory retrieval using a hypothetical vector store:
 

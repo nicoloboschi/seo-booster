@@ -53,6 +53,14 @@ faq:
     allows for dynamic transitions and updates to memory components (like conversation history, user profiles, or tool usage logs) at each step. This explicit management of state ensures that information
     is consistently tracked and utilized, leading to more coherent and context-aware AI agent behavior, directly supporting **ai_agent_persistent_memory**.
 slug: chatbot-with-memory-langgraph
+aliases:
+- /articles/deeplearning-ai-long-term-agentic-memory-with-langgraph/
+- /articles/deeplearning-ai-long-term-memory/
+- /articles/langgraph-chatbot-with-memory-example/
+- /articles/langgraph-chatbot-with-memory-github/
+- /articles/llm-memory-langgraph/
+- /articles/long-term-agentic-memory-with-langgraph-deeplearning-ai/
+- /articles/long-term-memory-deeplearning-ai/
 ---
 
 Building a **chatbot with memory using LangGraph** empowers AI agents to recall past interactions, enhancing user experience. LangGraph's state machine model allows for persistent context, making conversations feel more natural and coherent. This approach is key for developing advanced conversational AI that remembers.
@@ -214,7 +222,7 @@ As memory grows, performance can suffer. Strategies like:
 4. **State compression**: Reducing the size of the stored state.
 5. **Asynchronous processing**: Offloading memory-intensive tasks.
 
-are essential for maintaining a responsive **AI assistant remembers everything**. Comparing different [best AI agent memory systems](/articles/best-ai-memory-systems/) can inform these choices. LLM context window sizes, often ranging from 4k to over 100k tokens, also dictate how much immediate history can be processed, making external memory systems vital for truly long-term recall in a **chatbot with memory LangGraph**. These strategies are fundamental to managing **stateful memory** effectively.
+are essential for maintaining a responsive **AI assistant remembers everything**. Comparing different [best AI agent memory systems](/articles/best-ai-memory-framework/) can inform these choices. LLM context window sizes, often ranging from 4k to over 100k tokens, also dictate how much immediate history can be processed, making external memory systems vital for truly long-term recall in a **chatbot with memory LangGraph**. These strategies are fundamental to managing **stateful memory** effectively.
 
 ## LangGraph vs. Other Memory Frameworks
 

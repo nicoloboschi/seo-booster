@@ -27,6 +27,10 @@ faq:
   answer: Ideally, you should use the *same* embedding model for both indexing your documents and generating the query vector. Using different models can lead to a mismatch in vector space, significantly
     degrading retrieval performance.
 slug: embedding-models-for-rag
+aliases:
+- /articles/embedding-models-for-memory/
+- /articles/in-memory-embedding-model/
+- /articles/llm-memory-embedding/
 ---
 
 **Embedding models for RAG** are fundamental components that enable retrieval augmented generation (RAG) systems to perform effective semantic search. These models convert text into high-dimensional numerical vectors, known as embeddings, where semantically similar pieces of text are located closer to each other in the vector space. This allows RAG systems to find relevant information from a knowledge base to augment the context provided to a Large Language Model (LLM), thereby improving the accuracy and relevance of generated responses. Choosing the right embedding model is critical for the performance of any RAG pipeline, directly impacting the quality of retrieved documents and the LLM's ability to synthesize accurate answers.
@@ -182,8 +186,8 @@ An **embedding model** is specifically designed to convert text into numerical v
 
 ### How frequently should I update my embedding model or re-index my data?
 
-The frequency of updates depends on how dynamic your knowledge base is. If your data changes frequently, you will need to re-index your documents to ensure the embeddings are up-to-date. Similarly, if new, more performant embedding models become available, it may be beneficial to re-embed your data with the new model to improve retrieval quality. Some systems, like those focusing on [long-term memory AI agent](/articles/long-term-memory-ai-agent/) capabilities, might require more frequent updates.
+The frequency of updates depends on how dynamic your knowledge base is. If your data changes frequently, you will need to re-index your documents to ensure the embeddings are up-to-date. Similarly, if new, more performant embedding models become available, it may be beneficial to re-embed your data with the new model to improve retrieval quality. Some systems, like those focusing on [long-term memory AI agent](/articles/ai-agent-long-term-memory/) capabilities, might require more frequent updates.
 
 ### Can I use an embedding model that was not trained on my specific data for RAG?
 
-Yes, you can. General-purpose embedding models trained on vast datasets often perform surprisingly well even on domain-specific data. However, for critical applications or highly specialized domains, fine-tuning an existing model on your own data, or using a model pre-trained on similar data, can lead to significantly improved retrieval accuracy. This is part of the broader challenge in building [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+Yes, you can. General-purpose embedding models trained on vast datasets often perform surprisingly well even on domain-specific data. However, for critical applications or highly specialized domains, fine-tuning an existing model on your own data, or using a model pre-trained on similar data, can lead to significantly improved retrieval accuracy. This is part of the broader challenge in building [AI that remembers conversations](/articles/best-chatbot-for-memory/).

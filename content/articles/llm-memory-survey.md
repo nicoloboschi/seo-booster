@@ -27,6 +27,12 @@ faq:
   answer: LLM memory systems enhance performance by providing relevant context, enabling recall of past interactions, and allowing for more coherent and personalized responses. This leads to better task
     completion and user experience.
 slug: llm-memory-survey
+aliases:
+- /articles/a-survey-on-ai-long-term-memory/
+- /articles/llm-memory-arxiv/
+- /articles/llm-memory-improvement-research/
+- /articles/llm-memory-paper/
+- /articles/llm-memory-pdf/
 ---
 
 
@@ -42,7 +48,7 @@ The quest for LLM memory mirrors the human need to learn and adapt. Without it, 
 
 ### The Problem of Finite Context
 
-LLMs operate with a **context window**, a fixed-size buffer holding input and recent conversation history. Once this window is full, older information is typically discarded. This creates a fundamental limitation for [long-term memory AI agents](/articles/long-term-memory-ai-agent/). For instance, a customer service bot cannot effectively resolve an issue if it forgets previous interactions.
+LLMs operate with a **context window**, a fixed-size buffer holding input and recent conversation history. Once this window is full, older information is typically discarded. This creates a fundamental limitation for [long-term memory AI agents](/articles/ai-agent-long-term-memory/). For instance, a customer service bot cannot effectively resolve an issue if it forgets previous interactions.
 
 Similarly, a personal assistant would fail to provide tailored recommendations if it couldn't recall past user preferences. Overcoming **context window limitations** is a central theme in LLM memory research and a key focus of this **llm memory survey**.
 
@@ -145,7 +151,7 @@ As mentioned, the **context window limitation** remains a primary bottleneck. Ev
 
 ### Memory Management and Retrieval Efficiency
 
-Managing a growing memory store is challenging. Simply storing everything leads to noise and inefficient retrieval. **Memory consolidation AI agents** are being developed to summarize, prune, and organize memories, ensuring that only the most relevant or important information is retained and easily accessible. Efficient retrieval algorithms are also critical; slow retrieval defeats the purpose of having memory. This is a key aspect of [long-term memory AI agent](/articles/long-term-memory-ai-agent/) development and a critical point in any **llm memory survey**.
+Managing a growing memory store is challenging. Simply storing everything leads to noise and inefficient retrieval. **Memory consolidation AI agents** are being developed to summarize, prune, and organize memories, ensuring that only the most relevant or important information is retained and easily accessible. Efficient retrieval algorithms are also critical; slow retrieval defeats the purpose of having memory. This is a key aspect of [long-term memory AI agent](/articles/ai-agent-long-term-memory/) development and a critical point in any **llm memory survey**.
 
 ### Forgetting and Information Degradation
 
@@ -169,7 +175,7 @@ Future LLMs will likely integrate distinct memory types, mirroring human cogniti
 
 ### Self-Improving Memory Systems
 
-AI agents are moving towards systems that can learn *how* to remember better. This involves agents that can analyze their past performance, identify memory failures, and adapt their memory strategies accordingly. This self-improvement loop is key to developing truly autonomous and adaptive AI. This is a core concept in [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/).
+AI agents are moving towards systems that can learn *how* to remember better. This involves agents that can analyze their past performance, identify memory failures, and adapt their memory strategies accordingly. This self-improvement loop is key to developing truly autonomous and adaptive AI. This is a core concept in [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
 
 ### Real-time Memory Updates
 
@@ -177,7 +183,7 @@ The ability to update memory in real-time as new information becomes available i
 
 ### Personalized and Adaptive Memory
 
-As LLMs become more integrated into daily life, personalized memory systems will become essential. An AI assistant should remember individual user preferences, habits, and even emotional states to provide truly bespoke assistance. This moves beyond simple factual recall towards a deeper understanding of the user. This is a goal for [AI assistants that remember conversations](/articles/ai-that-remembers-conversations/).
+As LLMs become more integrated into daily life, personalized memory systems will become essential. An AI assistant should remember individual user preferences, habits, and even emotional states to provide truly bespoke assistance. This moves beyond simple factual recall towards a deeper understanding of the user. This is a goal for [AI assistants that remember conversations](/articles/best-chatbot-for-memory/).
 
 ### LLM Memory and Agent Architectures
 
@@ -187,5 +193,5 @@ The development of LLM memory is intrinsically tied to **AI agent architecture p
 
 This **llm memory survey** highlights that equipping LLMs with effective, persistent memory is a complex but critical endeavor. From managing finite context windows to implementing sophisticated retrieval mechanisms via embeddings and knowledge graphs, the challenges are substantial. However, the ongoing research and development in this area promise to unlock new levels of AI intelligence, leading to more capable, coherent, and personalized AI agents. The future of AI hinges on its ability to remember.
 
-We've explored various approaches, including vector databases for semantic recall and the foundational role of [embedding models for RAG](/articles/embedding-models-for-rag/). The ongoing evolution of [LLM memory systems](/articles/llm-memory-system/) is central to creating AI that truly learns and adapts. For a deeper dive into available solutions, explore our guide on [best AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems).
+We've explored various approaches, including vector databases for semantic recall and the foundational role of [embedding models for RAG](/articles/embedding-models-for-rag/). The ongoing evolution of [LLM memory systems](/articles/how-llm-memory-works/) is central to creating AI that truly learns and adapts. For a deeper dive into available solutions, explore our guide on [best AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems).
 

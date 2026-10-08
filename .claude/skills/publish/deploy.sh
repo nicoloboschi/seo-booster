@@ -7,7 +7,7 @@ REPO_DIR="$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
 cd "$REPO_DIR"
 
 echo "Building Hugo site..."
-hugo --minify
+hugo --minify --cleanDestinationDir
 
 DEPLOY_DIR=$(mktemp -d)
 trap "rm -rf $DEPLOY_DIR" EXIT

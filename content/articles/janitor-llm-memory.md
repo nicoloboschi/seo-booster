@@ -51,6 +51,16 @@ faq:
   answer: Key challenges include accurately assessing information relevance for pruning, balancing information retention with context window limits, and avoiding the loss of critical context. Sophisticated
     algorithms are needed to effectively manage the AI agent's context window.
 slug: janitor-llm-memory
+aliases:
+- /articles/bot-memory-janitor-ai/
+- /articles/how-to-improve-janitor-ai-memory/
+- /articles/how-to-make-janitor-ai-memory-better/
+- /articles/how-to-use-janitor-ai-memory/
+- /articles/how-to-use-long-term-memory-janitor-ai/
+- /articles/janitor-ai-best-memory/
+- /articles/janitor-ai-memory-system/
+- /articles/janitor-llm-context-window/
+- /articles/long-term-memory-janitor-ai-reddit/
 ---
 ---
 

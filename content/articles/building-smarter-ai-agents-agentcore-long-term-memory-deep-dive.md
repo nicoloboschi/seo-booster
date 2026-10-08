@@ -24,6 +24,8 @@ faq:
 - question: Can AgentCore handle complex, multi-turn interactions with long-term memory?
   answer: Yes, AgentCore's design aims to support complex interactions by enabling agents to access and utilize stored information, ensuring consistency and relevance across extended dialogues or tasks.
 slug: building-smarter-ai-agents-agentcore-long-term-memory-deep-dive
+aliases:
+- /articles/llm-memory-aws/
 ---
 
 What if your AI assistant remembered every conversation, every preference, and every past success? This deep dive into AgentCore's long-term memory reveals how building smarter AI agents with persistent recall is no longer science fiction. It transforms AI from stateless entities into adaptive, continuously learning systems capable of complex reasoning.
@@ -48,7 +50,7 @@ The effective implementation of long-term memory in **AgentCore** requires a sop
 
 A foundational element in modern AI memory systems is the synergy between **embedding models** and **vector databases**. Embedding models translate complex data, such as text or images, into dense numerical vectors that capture semantic meaning. These vectors serve as rich representations of the data's essence.
 
-**Vector databases** are optimized for storing these high-dimensional vectors and performing rapid similarity searches. When an agent needs to access past information, it can generate an embedding for its current query and search the vector database for the most semantically similar stored memories. This allows for nuanced retrieval based on meaning, not just keywords. This method is a core aspect of [embedding models for memory](/articles/embedding-models-for-memory/).
+**Vector databases** are optimized for storing these high-dimensional vectors and performing rapid similarity searches. When an agent needs to access past information, it can generate an embedding for its current query and search the vector database for the most semantically similar stored memories. This allows for nuanced retrieval based on meaning, not just keywords. This method is a core aspect of [embedding models for memory](/articles/embedding-models-for-rag/).
 
 For example, an agent needing to recall advice given in a prior session about a specific marketing campaign could embed the query "What strategies did we discuss for the Q3 campaign?" and efficiently retrieve the most relevant past dialogue from its memory store.
 
@@ -84,7 +86,7 @@ The information retrieved is then appended to the current prompt and fed into th
 
 Long-term memory is intrinsically linked to an agent's **state management**. The agent's "state" represents its current understanding of the situation, which is dynamically updated based on its history and interactions. By accessing its long-term memory, an agent can maintain a consistent and evolving state across extended conversational threads or multiple operational sessions.
 
-This consistent state fosters **contextual awareness**. An agent can recall prior user inputs, project specifics, or established facts, ensuring its subsequent outputs are relevant, consistent, and appropriate. This capability is especially crucial for [AI that remembers conversations](/articles/ai-that-remembers-conversations/).
+This consistent state fosters **contextual awareness**. An agent can recall prior user inputs, project specifics, or established facts, ensuring its subsequent outputs are relevant, consistent, and appropriate. This capability is especially crucial for [AI that remembers conversations](/articles/best-chatbot-for-memory/).
 
 ### Overcoming Context Window Limitations with External Memory
 
@@ -104,7 +106,7 @@ The user asks, "What's my current checking account balance?" Without any prior s
 
 After the user has linked their bank account and previously discussed budgeting goals, they ask the same question. The agent accesses its long-term memory, retrieves the latest balance from the linked account, and provides a context-aware response: "Your checking account balance is $2,500. We also discussed setting aside $500 for your upcoming vacation fund."
 
-This scenario highlights how **long-term memory** transforms the interaction from a simple data retrieval to a personalized, contextually rich exchange, significantly enhancing the agent's utility. This is a prime example of an [AI assistant that remembers everything](/articles/ai-assistant-remembers-everything/).
+This scenario highlights how **long-term memory** transforms the interaction from a simple data retrieval to a personalized, contextually rich exchange, significantly enhancing the agent's utility. This is a prime example of an [AI assistant that remembers everything](/articles/best-chatbot-for-memory/).
 
 ### Case Study: A Project Management Agent
 
@@ -115,7 +117,7 @@ An **AgentCore**-powered project management agent, equipped with long-term memor
 * It notes and applies user preferences, such as preferred update frequencies (daily/weekly) and communication channels.
 * It analyzes past project data to identify recurring problems and proactively suggests preventative measures or alternative strategies.
 
-Such capabilities elevate the agent from a basic task tracker to an intelligent, proactive project partner. This aligns with the objectives of [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/).
+Such capabilities elevate the agent from a basic task tracker to an intelligent, proactive project partner. This aligns with the objectives of [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
 
 ## Challenges and Future Directions in AI Memory
 
@@ -123,7 +125,7 @@ Despite significant progress, the development and widespread implementation of e
 
 ### Scalability and Performance Optimization
 
-As the volume of stored information grows, maintaining efficient and rapid retrieval becomes increasingly challenging. Developing **scalable vector databases** and employing optimized indexing strategies are crucial. The performance characteristics of these memory systems are a major focus of ongoing research, with efforts in [AI memory benchmarks](/articles/ai-memory-benchmarks/) aiming to quantify and compare different approaches.
+As the volume of stored information grows, maintaining efficient and rapid retrieval becomes increasingly challenging. Developing **scalable vector databases** and employing optimized indexing strategies are crucial. The performance characteristics of these memory systems are a major focus of ongoing research, with efforts in AI memory benchmarks aiming to quantify and compare different approaches.
 
 ### Ensuring Privacy and Data Security
 
@@ -139,7 +141,7 @@ Open-source memory systems like [Hindsight](https://github.com/vectorize-io/hind
 
 A more sophisticated aspect of long-term memory involves **temporal reasoning**, the ability to understand the sequence, duration, and causality of events over time. Integrating advanced temporal reasoning will empower agents to grasp complex timelines, predict outcomes based on temporal dependencies, and perform more nuanced historical analysis. This remains an active area of research, as explored in [temporal reasoning AI memory](/articles/temporal-reasoning-ai-memory/).
 
-The future trajectory of AI agents is inextricably linked to their capacity for learning and remembering. Frameworks like **AgentCore**, by developing and integrating sophisticated long-term memory systems, are paving the way for more intelligent, adaptive, and genuinely helpful AI companions. This represents a significant step in the evolution from basic chatbots to truly cognitive agents, moving beyond [limited memory AI](/articles/limited-memory-ai/) towards systems possessing persistent, usable knowledge.
+The future trajectory of AI agents is inextricably linked to their capacity for learning and remembering. Frameworks like **AgentCore**, by developing and integrating sophisticated long-term memory systems, are paving the way for more intelligent, adaptive, and genuinely helpful AI companions. This represents a significant step in the evolution from basic chatbots to truly cognitive agents, moving beyond limited memory AI towards systems possessing persistent, usable knowledge.
 
 Here's a Python code example illustrating a basic concept of storing and retrieving memories using embeddings and a simple dictionary as a mock vector store:
 

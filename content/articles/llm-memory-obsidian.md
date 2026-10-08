@@ -25,6 +25,9 @@ faq:
   answer: The benefits include creating a persistent, searchable knowledge base, enabling agents to recall information across sessions, supporting complex reasoning by linking related concepts, and offering
     a user-friendly interface for managing AI-generated knowledge.
 slug: llm-memory-obsidian
+aliases:
+- /articles/karpathy-llm-memory-wiki/
+- /articles/llm-memory-karpathy/
 ---
 
 

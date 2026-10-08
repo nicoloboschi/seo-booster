@@ -25,6 +25,11 @@ faq:
   answer: Yes, sophisticated AI agents are designed to seamlessly integrate both memory types. They utilize short-term memory for immediate context and long-term memory for recalling past interactions,
     learned skills, or general knowledge, creating a more coherent and capable agent.
 slug: ai-agents-memory-types
+aliases:
+- /articles/ai-agent-types-of-memory/
+- /articles/ai-observational-memory/
+- /articles/llm-memory-types/
+- /articles/types-of-long-term-memory-in-agentic-ai/
 ---
 
 The distinction between **AI agents long term and short term memory** is fundamental to building sophisticated and capable artificial intelligence systems. Short-term memory, often referred to as **working memory AI**, acts as a temporary holding space for information immediately relevant to the current task or interaction. This allows the agent to maintain context and process ongoing information streams efficiently. Long-term memory, on the other hand, serves as a persistent repository for knowledge, experiences, and learned patterns, enabling the agent to recall information over extended periods and learn from past events. Understanding this **memory hierarchy agents** employ is crucial for designing agents that can perform complex, multi-turn tasks and exhibit continuous learning.
@@ -73,7 +78,7 @@ The true power of AI agents lies in their ability to seamlessly integrate both s
 
 An effective **memory hierarchy agents** use involves mechanisms for selecting which memory to access and how to combine information from different sources. When faced with a query or a new piece of information, the agent must decide whether the relevant data resides in its short-term working memory or needs to be retrieved from long-term storage. This selection process often involves attention mechanisms or routing logic within the agent's architecture.
 
-For example, if a user asks a follow-up question within a conversation, the agent will primarily consult its short-term memory (context window or buffer) for the immediate dialogue history. However, if the question requires recalling a fact learned in a previous session, or a user preference stated days ago, the agent will query its long-term memory. This dynamic switching ensures efficiency for immediate tasks and depth for complex recall. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-memory/).
+For example, if a user asks a follow-up question within a conversation, the agent will primarily consult its short-term memory (context window or buffer) for the immediate dialogue history. However, if the question requires recalling a fact learned in a previous session, or a user preference stated days ago, the agent will query its long-term memory. This dynamic switching ensures efficiency for immediate tasks and depth for complex recall. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-agents-memory/).
 
 ### Hybrid Memory Systems
 
@@ -106,7 +111,7 @@ The choice and implementation of memory types depend heavily on the specific app
 * **Historical Analysis:** Recalling and reasoning about past events or interactions to inform current decisions.
 * **Building AI Personas:** Developing a consistent identity and backstory for an AI agent.
 
-Effectively managing both **AI agents long term and short term memory** is essential for creating intelligent systems that are not only functional but also capable of exhibiting complex behaviors, learning, and providing personalized experiences. The ongoing development in **AI memory systems** and **agentic AI** continues to push the boundaries of what's possible, enabling agents to remember, learn, and interact with the world in increasingly sophisticated ways. For a comprehensive overview of available solutions, consider exploring [best AI agent memory systems](/articles/best-ai-memory-systems/).
+Effectively managing both **AI agents long term and short term memory** is essential for creating intelligent systems that are not only functional but also capable of exhibiting complex behaviors, learning, and providing personalized experiences. The ongoing development in **AI memory systems** and **agentic AI** continues to push the boundaries of what's possible, enabling agents to remember, learn, and interact with the world in increasingly sophisticated ways. For a comprehensive overview of available solutions, consider exploring [best AI agent memory systems](/articles/best-ai-memory-framework/).
 
 ## FAQ
 

@@ -82,7 +82,7 @@ While episodic memory recalls specific events, semantic memory provides the unde
 
 The concept of time is fundamental to storytelling. **Temporal reasoning** allows AI agents to understand the sequence of events, their durations, and their relationships in time. This is crucial for a coherent narrative.
 
-An AI Dungeon memory system needs to track not just *what* happened, but *when* it happened relative to other events. This allows for logical progression and prevents anachronisms. Advanced systems might even incorporate concepts like "short-term memory" for immediate context and "long-term memory" for the overarching plot, similar to [short-term memory AI agents](/articles/short-term-memory-ai-agents/) and [long-term memory AI agent](/articles/long-term-memory-ai-agent/).
+An AI Dungeon memory system needs to track not just *what* happened, but *when* it happened relative to other events. This allows for logical progression and prevents anachronisms. Advanced systems might even incorporate concepts like "short-term memory" for immediate context and "long-term memory" for the overarching plot, similar to [short-term memory AI agents](/articles/short-term-memory-ai-agents/) and [long-term memory AI agent](/articles/ai-agent-long-term-memory/).
 
 ## Implementing an AI Dungeon Memory System
 
@@ -92,14 +92,14 @@ Building an effective memory system for AI Dungeons involves several technical c
 
 The simplest approach involves storing game events as text strings or structured data. Each entry might include a timestamp, a description of the event, and involved entities. This forms the raw data for the AI's memory.
 
-More sophisticated methods use **vector embeddings** to represent narrative elements. These embeddings capture the semantic meaning of events, allowing for more nuanced retrieval. Models like those discussed in [embedding models for memory](/articles/embedding-models-for-memory/) are key here.
+More sophisticated methods use **vector embeddings** to represent narrative elements. These embeddings capture the semantic meaning of events, allowing for more nuanced retrieval. Models like those discussed in [embedding models for memory](/articles/embedding-models-for-rag/) are key here.
 
 ### Retrieval Mechanisms
 
 Retrieving relevant information is as important as storing it. Common techniques include:
 
 1. **Keyword Matching**: Simple searches for specific terms.
-2. **Vector Similarity Search**: Finding narrative elements semantically similar to a query. This is fundamental to many modern [LLM memory systems](/articles/llm-memory-system/).
+2. **Vector Similarity Search**: Finding narrative elements semantically similar to a query. This is fundamental to many modern [LLM memory systems](/articles/how-llm-memory-works/).
 3. **Graph-Based Retrieval**: Representing memories as nodes in a graph and traversing it to find related information.
 
 The goal is to efficiently find past events that are most relevant to the current game state and player action within the **ai dungeon memory system**.
@@ -132,15 +132,15 @@ This aligns with general [AI agent architecture patterns](/articles/ai-agent-arc
 
 Combining different memory types and retrieval methods often yields the best results. A **hybrid memory model** might use a fast, short-term vector store for recent events and a slower, more structured database for long-term plot points and lore.
 
-This approach balances speed and depth. It ensures the AI can react quickly to immediate context while still recalling crucial narrative arcs. Many [best AI agent memory systems](/articles/best-ai-memory-systems/) employ such hybrid strategies.
+This approach balances speed and depth. It ensures the AI can react quickly to immediate context while still recalling crucial narrative arcs. Many [best AI agent memory systems](/articles/best-ai-memory-framework/) employ such hybrid strategies.
 
 ### Vector Databases for Game Memory
 
 **Vector databases** are increasingly popular for storing and querying memory in AI applications, including games. They are optimized for similarity search on high-dimensional vector embeddings.
 
-These databases can efficiently store representations of narrative events, character descriptions, and world states. When the AI needs to recall something, it can perform a similarity search against the vector database to find the most relevant past information. This is a core technology behind many modern [LLM memory systems](/articles/llm-memory-system/).
+These databases can efficiently store representations of narrative events, character descriptions, and world states. When the AI needs to recall something, it can perform a similarity search against the vector database to find the most relevant past information. This is a core technology behind many modern [LLM memory systems](/articles/how-llm-memory-works/).
 
-For game development, specialized solutions or general-purpose vector databases can be integrated. Projects like Zep Memory and others offer dedicated tools for managing LLM-based memory, as seen in guides like [Zep Memory AI Guide](/articles/zep-memory-ai-guide/).
+For game development, specialized solutions or general-purpose vector databases can be integrated. Projects like Zep Memory and others offer dedicated tools for managing LLM-based memory, as seen in guides like [Zep Memory AI Guide](/articles/what-is-zep-memory/).
 
 ## Future of AI Dungeon Memory
 

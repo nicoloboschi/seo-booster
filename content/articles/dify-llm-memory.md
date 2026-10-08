@@ -23,6 +23,9 @@ faq:
 - question: Can DiFY LLM memory be integrated with existing AI agent frameworks?
   answer: Yes, DiFY LLM memory is designed for integration. Its modular approach allows it to be incorporated into various AI agent architectures and frameworks, enhancing their recall capabilities.
 slug: dify-llm-memory
+aliases:
+- /articles/dify-chatbot-memory/
+- /articles/dify-llm-node-memory/
 ---
 
 What if your AI assistant remembered every detail of your past conversations? **DiFY LLM memory** systems make this a reality, providing AI agents with persistent, long-term recall that transcends the limitations of their immediate context window. These advanced memory capabilities are crucial for developing truly intelligent and context-aware AI agents.

@@ -31,6 +31,12 @@ faq:
   answer: A large context window enables LLMs to understand and generate more coherent and contextually relevant text over longer interactions or documents. This leads to improved performance in tasks like
     summarization, question answering over extensive texts, and maintaining complex conversational threads.
 slug: extending-llm-context-window
+aliases:
+- /articles/extend-llm-context-window/
+- /articles/increase-context-window-llm/
+- /articles/llm-context-window-extension/
+- /articles/llm-dynamic-context-window/
+- /articles/llm-memory-extension/
 ---
 
 Extending LLM context window capabilities allows AI models to process and retain significantly more information, overcoming the limitations of their fixed input size. This enhancement is crucial for complex tasks requiring long-term memory, coherent long-form generation, and deeper understanding of extensive data. It moves AI beyond simply reacting to immediate inputs towards more informed, context-aware reasoning.
@@ -108,7 +114,7 @@ Models can be fine-tuned on datasets that include much longer sequences. This pr
 
 #### Context Window Extensions in Practice
 
-Companies and research labs are pushing the boundaries of context window sizes. Projects enabling **achieving million-token context windows** ([1 million context window llm](/articles/1-million-context-window-llm/)) and even **10 million token context windows** ([10 million context window llm](/articles/10-million-context-window-llm/)) demonstrate significant progress. According to research from MosaicML, fine-tuning LLMs on longer contexts can improve performance significantly, with some models showing over 80% improvement in perplexity on long sequences. For those interested in local deployments, options for **running large context models locally** ([1m context window local llm](/articles/1m-context-window-local-llm/)) are also becoming available. These advancements are often achieved through a combination of architectural tweaks, efficient training methods, and optimized inference strategies.
+Companies and research labs are pushing the boundaries of context window sizes. Projects enabling **achieving million-token context windows** ([1 million context window llm](/articles/context-window-llm-ranking/)) and even **10 million token context windows** ([10 million context window llm](/articles/context-window-llm-ranking/)) demonstrate significant progress. According to research from MosaicML, fine-tuning LLMs on longer contexts can improve performance significantly, with some models showing over 80% improvement in perplexity on long sequences. For those interested in local deployments, options for **running large context models locally** ([1m context window local llm](/articles/largest-context-window-llm-open-source/)) are also becoming available. These advancements are often achieved through a combination of architectural tweaks, efficient training methods, and optimized inference strategies.
 
 ## Hybrid Approaches and Memory Systems
 

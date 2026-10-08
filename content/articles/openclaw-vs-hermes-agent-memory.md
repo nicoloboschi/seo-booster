@@ -77,7 +77,7 @@ The fundamental difference in their architectural philosophies directly impacts 
 
 ### Architectural Differences
 
-OpenClaw's architecture is characterized by its layers of abstraction. It defines interfaces for memory operations (e.g., `add`, `get`, `search`) and then provides adapter implementations for various storage backends. This means OpenClaw itself doesn't store data; it orchestrates how data is stored and retrieved by an underlying provider. This makes it highly adaptable, similar to how [embedding models impact agent memory](/articles/embedding-models-for-memory/) can be swapped out.
+OpenClaw's architecture is characterized by its layers of abstraction. It defines interfaces for memory operations (e.g., `add`, `get`, `search`) and then provides adapter implementations for various storage backends. This means OpenClaw itself doesn't store data; it orchestrates how data is stored and retrieved by an underlying provider. This makes it highly adaptable, similar to how [embedding models impact agent memory](/articles/embedding-models-for-rag/) can be swapped out.
 
 Hermes, conversely, often embeds memory storage solutions directly within its structure. It might include its own internal database or tightly integrate with a specific popular vector database. This leads to a more monolithic structure, where the memory management and storage are more tightly coupled. This can simplify integration but reduce flexibility in the **OpenClaw vs Hermes agent memory** context.
 
@@ -127,7 +127,7 @@ Open source tools like [Hindsight](https://github.com/vectorize-io/hindsight) of
 * **Research and Development**: When experimenting with different memory technologies or building novel memory solutions.
 * **Large-Scale Enterprise Applications**: Where the ability to scale individual memory components and integrate with existing infrastructure is paramount.
 * **Multi-Provider Strategies**: If you anticipate needing to switch memory providers or use multiple types of memory simultaneously for different purposes.
-* **When fine-grained control over memory operations is essential**, similar to how one might manage [long-term memory in AI agents](/articles/long-term-memory-ai-agent/).
+* **When fine-grained control over memory operations is essential**, similar to how one might manage [long-term memory in AI agents](/articles/ai-agent-long-term-memory/).
 
 ### When to Use Hermes
 

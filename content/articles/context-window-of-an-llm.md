@@ -24,6 +24,34 @@ faq:
   answer: The LLM's context window directly limits its short-term memory. Information outside this window is effectively forgotten unless managed by external memory systems, impacting an AI agent's ability
     to recall past interactions or information.
 slug: context-window-of-an-llm
+aliases:
+- /articles/context-window-ai-llm/
+- /articles/context-window-for-llm/
+- /articles/context-window-in-llm/
+- /articles/context-window-llm-definition/
+- /articles/context-window-llm-example/
+- /articles/context-window-llm-explained/
+- /articles/context-window-llm-l-g/
+- /articles/context-window-llm-meaning/
+- /articles/context-window-of-llm/
+- /articles/cosa-significa-context-window-negli-llm/
+- /articles/input-context-window-llm/
+- /articles/llm-context-window-architecture/
+- /articles/llm-context-window-attention/
+- /articles/llm-context-window-compression-koog/
+- /articles/llm-context-window-definition/
+- /articles/llm-context-window-diagram/
+- /articles/llm-context-window-input-output/
+- /articles/llm-context-window-memory/
+- /articles/llm-context-window-nedir/
+- /articles/llm-memory-context/
+- /articles/llm-prompt-context-window/
+- /articles/what-does-context-window-mean-for-llm/
+- /articles/what-is-ai-context-memory/
+- /articles/what-is-context-memory-in-llm/
+- /articles/what-is-context-window-in-ai-llm/
+- /articles/what-is-context-window-length-in-llm/
+- /articles/what-is-context-window-llm/
 ---
 
 
@@ -53,7 +81,7 @@ LLMs inherently possess a limited form of short-term memory, defined by their co
 
 ### Impact on Conversational Flow
 
-In conversational AI, a small context window means the AI might forget details discussed just a few turns prior. This necessitates careful management of conversational history. Systems designed for [AI that remembers conversations](/articles/ai-that-remembers-conversations/) must implement strategies to feed relevant past dialogue back into the LLM's context window or use external memory stores. The limited **AI context length** can disrupt conversational flow.
+In conversational AI, a small context window means the AI might forget details discussed just a few turns prior. This necessitates careful management of conversational history. Systems designed for [AI that remembers conversations](/articles/best-chatbot-for-memory/) must implement strategies to feed relevant past dialogue back into the LLM's context window or use external memory stores. The limited **AI context length** can disrupt conversational flow.
 
 ## The Technical Constraints of the LLM Context Window
 
@@ -69,7 +97,7 @@ Storing intermediate self-attention calculations demands significant memory. As 
 
 ### Algorithmic Innovations for Transformer Context
 
-Researchers are developing innovations to overcome these limitations. Techniques like sparse attention and linear attention aim to reduce quadratic complexity. Advancements in hardware and efficient model designs are pushing the boundaries. Models now exist with context windows reaching [LLMs with 1 million token context windows](/articles/1-million-context-window-llm/) and even [LLMs with 10 million token context windows](/articles/10-million-context-window-llm/). These innovations expand the practical **transformer context**.
+Researchers are developing innovations to overcome these limitations. Techniques like sparse attention and linear attention aim to reduce quadratic complexity. Advancements in hardware and efficient model designs are pushing the boundaries. Models now exist with context windows reaching [LLMs with 1 million token context windows](/articles/context-window-llm-ranking/) and even [LLMs with 10 million token context windows](/articles/context-window-llm-ranking/). These innovations expand the practical **transformer context**.
 
 ## Strategies for Expanding Effective Context
 

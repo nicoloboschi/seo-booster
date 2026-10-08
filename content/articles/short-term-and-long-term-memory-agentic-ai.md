@@ -28,6 +28,10 @@ faq:
   answer: Yes, AI agents can 'forget' through processes like memory decay, overwriting, or inefficient retrieval mechanisms. Effective memory systems are designed to mitigate this, ensuring critical information
     remains accessible.
 slug: short-term-and-long-term-memory-agentic-ai
+aliases:
+- /articles/short-and-long-term-memory-ai/
+- /articles/short-term-memory-and-long-term-memory-ai/
+- /articles/short-term-memory-vs-long-term-memory-ai/
 ---
 
 **Short term and long term memory agentic AI** refers to AI systems that use both immediate, transient data (short-term memory) and persistent, learned knowledge (long-term memory) to perform tasks, learn, and adapt. This dual architecture enables agents to process current context while retaining crucial past experiences for informed decision-making and continuous improvement.
@@ -60,7 +64,7 @@ The limited capacity of STM is a significant constraint. Much like human working
 
 ### LTM for Learning and Generalization
 
-LTM enables agents to recall past interactions, generalize from experiences, and avoid repeating errors. For instance, an agent might remember a user's specific request from weeks prior to tailor a subsequent interaction. This persistent recall capability distinguishes a sophisticated agent from a simple tool. The development of [AI agent persistent memory](/articles/ai-agent-persistent-memory/) is central to this.
+LTM enables agents to recall past interactions, generalize from experiences, and avoid repeating errors. For instance, an agent might remember a user's specific request from weeks prior to tailor a subsequent interaction. This persistent recall capability distinguishes a sophisticated agent from a simple tool. The development of [AI agent persistent memory](/articles/persistent-memory-ai/) is central to this.
 
 * **Knowledge Acquisition:** LTM stores learned information for future application.
 * **Experience Replay:** Agents can access past events to inform current decisions.

@@ -25,6 +25,11 @@ faq:
   answer: Common limitations include a restricted capacity (context window size), rapid decay of information if not actively used, and vulnerability to being overwritten by new incoming data, impacting
     the agent's ability to retain context over extended interactions.
 slug: short-term-memory-ai-agents
+aliases:
+- /articles/short-term-memory-ai-agent/
+- /articles/short-term-memory-for-ai-agents/
+- /articles/what-is-short-term-memory-in-ai/
+- /articles/what-is-short-term-memory-in-ai-agent/
 ---
 
 **Short-term memory in AI agents**, often referred to as **working memory**, is the cognitive mechanism that allows an agent to temporarily store and manipulate information relevant to its current task. This immediate recall capability is crucial for processing incoming data, making real-time decisions, and generating coherent responses. Unlike long-term memory, which stores vast amounts of persistent knowledge, short-term memory is characterized by its limited capacity and transient nature, focusing solely on the information needed for the immediate operational context. Understanding this component is fundamental to designing effective [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/).
@@ -96,7 +101,7 @@ print("\nFinal Context for Agent:")
 print(buffer.get_context())
 ```
 
-This code snippet demonstrates a rudimentary form of context management. In practical AI agent development, these summarization tasks would typically be offloaded to another LLM call, creating a more sophisticated summary that captures the essence of the forgotten information. This is a core problem addressed by various [LLM memory systems](/articles/llm-memory-system/).
+This code snippet demonstrates a rudimentary form of context management. In practical AI agent development, these summarization tasks would typically be offloaded to another LLM call, creating a more sophisticated summary that captures the essence of the forgotten information. This is a core problem addressed by various [LLM memory systems](/articles/how-llm-memory-works/).
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -139,7 +144,7 @@ The most robust AI agents often employ **hybrid memory architectures**. These sy
 * **A structured database:** For storing explicit facts, user profiles, or task states.
 * **A long-term memory store:** For accumulating knowledge and experiences over extended periods.
 
-The agent's core logic then orchestrates the flow of information between these components, deciding when to load data into short-term memory, when to query the vector database, and when to update the long-term store. Designing such architectures is a key focus in [best AI agent memory systems](/articles/best-ai-memory-systems/).
+The agent's core logic then orchestrates the flow of information between these components, deciding when to load data into short-term memory, when to query the vector database, and when to update the long-term store. Designing such architectures is a key focus in [best AI agent memory systems](/articles/best-ai-memory-framework/).
 
 ## Challenges and Future Directions
 
@@ -154,7 +159,7 @@ Future directions include:
 * **Hierarchical memory structures:** Creating memory systems that can organize information at different levels of abstraction, allowing agents to quickly access high-level summaries or dive into specific details as needed.
 * **Adaptive memory management:** AI agents that can dynamically adjust their memory management strategies based on the task and the type of information being processed.
 
-The development of sophisticated memory systems, including effective short-term memory management, is crucial for building truly intelligent and versatile AI agents. Exploring different [AI memory benchmarks](/articles/ai-memory-benchmarks/) can help evaluate the effectiveness of these systems.
+The development of sophisticated memory systems, including effective short-term memory management, is crucial for building truly intelligent and versatile AI agents. Exploring different AI memory benchmarks can help evaluate the effectiveness of these systems.
 
 ## FAQ
 

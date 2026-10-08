@@ -41,6 +41,11 @@ faq:
     dictates how much recent conversation history the agent can directly access. For longer-term memory, information needs to be summarized or retrieved from external stores to fit within or augment the
     context window.
 slug: openai-agents-sdk-memory
+aliases:
+- /articles/ai-powered-with-memory-agent-features/
+- /articles/debuts-ai-powered-memory-agent-features/
+- /articles/openai-ai-powered-browser-memory-agent-features/
+- /articles/openai-ai-powered-memory-agent-features/
 ---
 
 What if your AI assistant could truly remember every conversation? **OpenAI Agents SDK memory** refers to the SDK's features enabling AI agents to store, retrieve, and manage interaction data. This persistent recall allows agents to maintain context across sessions, learn from past experiences, and provide more coherent, stateful responses, crucial for advanced AI development.

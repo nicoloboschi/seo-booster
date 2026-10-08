@@ -85,7 +85,7 @@ This method is a practical step towards managing conversational history effectiv
 
 ### ConversationSummaryMemory
 
-This memory type uses an LLM to summarize the conversation as it progresses. It's ideal for long conversations where retaining every detail isn't necessary, but a general understanding of the ongoing dialogue is crucial. This method condenses information, allowing the LLM to process a summary rather than a lengthy transcript, which is excellent for [long-term memory AI agent](/articles/long-term-memory-ai-agent) applications using **llm memory langchain**.
+This memory type uses an LLM to summarize the conversation as it progresses. It's ideal for long conversations where retaining every detail isn't necessary, but a general understanding of the ongoing dialogue is crucial. This method condenses information, allowing the LLM to process a summary rather than a lengthy transcript, which is excellent for [long-term memory AI agent](/articles/ai-agent-long-term-memory/) applications using **llm memory langchain**.
 
 ```python
 from langchain.chains import ConversationChain

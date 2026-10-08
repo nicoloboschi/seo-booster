@@ -54,6 +54,20 @@ faq:
     files are accessible and loadable by your inference engine (e.g., Ollama, LM Studio). This often means organizing them in a dedicated directory and configuring your application to point to that location.
     Effective management also includes version control and efficient storage solutions, especially for larger models.
 slug: how-to-give-local-llm-memory
+aliases:
+- /articles/ai-agent-local-memory/
+- /articles/best-local-ai-memory/
+- /articles/best-local-llm-with-memory/
+- /articles/does-local-llm-have-memory/
+- /articles/jan-ai-long-term-memory/
+- /articles/llm-local-memory/
+- /articles/llm-memory-local/
+- /articles/local-ai-long-term-memory/
+- /articles/local-ai-with-long-term-memory/
+- /articles/local-llm-persistent-memory/
+- /articles/long-term-memory-local-ai/
+- /articles/persistent-memory-for-local-llm/
+- /articles/persistent-memory-local-llm/
 ---
 
 Could your local AI assistant recall the exact advice you received last week or remember your preferred coding style? Giving a local LLM memory bridges this gap, transforming stateless models into context-aware agents. This involves equipping them with external systems to store and retrieve past interactions, user preferences, and task progress, enabling coherent, ongoing dialogues. This guide details precisely **how to give local LLM memory**.
@@ -231,7 +245,7 @@ Running LLMs and their associated memory systems locally presents unique challen
 * **Performance:** Latency in embedding, retrieval, and LLM inference can impact user experience.
 * **Persistence:** Ensuring that memory data is saved and reloaded correctly when the application restarts.
 
-Choosing lightweight, efficient tools is critical. For example, using a local vector database like ChromaDB or FAISS is often preferred over cloud-based solutions for truly local deployments. Understanding the trade-offs between performance, resource usage, and functionality is key to successful [local LLM memory implementation](/articles/llm-memory-implementation/).
+Choosing lightweight, efficient tools is critical. For example, using a local vector database like ChromaDB or FAISS is often preferred over cloud-based solutions for truly local deployments. Understanding the trade-offs between performance, resource usage, and functionality is key to successful [local LLM memory implementation](/articles/how-to-give-ai-agents-memory/).
 
 ## Enhancing Memory Capabilities
 

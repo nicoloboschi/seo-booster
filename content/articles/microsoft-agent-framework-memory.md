@@ -23,6 +23,8 @@ faq:
   answer: Yes, the framework is designed to be extensible, allowing developers to integrate custom memory solutions or leverage existing tools for enhanced agent recall. This supports a wide range of memory
     requirements.
 slug: microsoft-agent-framework-memory
+aliases:
+- /articles/ms-agent-framework-memory/
 ---
 
 The ability for an AI agent to retain and recall information is fundamental to its intelligence. Microsoft's Agent Framework offers essential tools for this capability, providing patterns to imbue agents with effective **microsoft agent framework memory**, enabling them to store and retrieve data for coherent, intelligent behavior.
@@ -94,9 +96,9 @@ This type of memory is crucial for maintaining conversational flow. For example,
 
 For agents that need to remember information beyond a single conversation, **long-term memory** is essential. This could involve storing user profiles, learned facts, or summaries of past interactions. The Microsoft Agent Framework supports building these for persistent **microsoft agent framework memory**.
 
-The Microsoft Agent Framework can be configured to connect to persistent data stores, such as SQL databases or NoSQL databases, to implement long-term memory. This allows agents to build a consistent persona and recall information across multiple sessions, effectively creating an [AI agent persistent memory](/articles/ai-agent-persistent-memory/).
+The Microsoft Agent Framework can be configured to connect to persistent data stores, such as SQL databases or NoSQL databases, to implement long-term memory. This allows agents to build a consistent persona and recall information across multiple sessions, effectively creating an [AI agent persistent memory](/articles/persistent-memory-ai/).
 
-This is also key for applications like [AI that remembers conversations](/articles/ai-that-remembers-conversations/). Building robust long-term capabilities is a goal for **microsoft agent framework memory**.
+This is also key for applications like [AI that remembers conversations](/articles/best-chatbot-for-memory/). Building robust long-term capabilities is a goal for **microsoft agent framework memory**.
 
 ### Episodic Memory and Event Recall
 
@@ -118,7 +120,7 @@ Effective memory systems help mitigate this by providing only the most relevant 
 
 Storing user data and conversation history raises significant privacy and security concerns. Any memory system integrated with Microsoft Agent Framework agents must adhere to strict data protection regulations and best practices. This is a crucial aspect of responsible **microsoft agent framework memory**.
 
-This includes encrypting sensitive data, implementing access controls, and providing mechanisms for data deletion or anonymization. Securely managing [long-term memory AI agent](/articles/long-term-memory-ai-agent/) data is paramount.
+This includes encrypting sensitive data, implementing access controls, and providing mechanisms for data deletion or anonymization. Securely managing [long-term memory AI agent](/articles/ai-agent-long-term-memory/) data is paramount.
 
 ### Memory Consolidation and Forgetting
 

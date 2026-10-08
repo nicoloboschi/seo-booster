@@ -25,6 +25,10 @@ faq:
   answer: Yes, Zep is built to scale and manage significant amounts of data, making it suitable for AI applications requiring extensive long-term memory capabilities, especially when deployed efficiently
     with tools like Docker.
 slug: zep-memory-docker
+aliases:
+- /articles/zep-memory-docker-compose/
+- /articles/zep-memory-local/
+- /articles/zep-memory-self-hosted/
 ---
 
 
@@ -47,7 +51,7 @@ Docker offers several advantages for deploying Zep:
 * **Scalability:** Easily scale Zep instances as your application grows, supporting more users or data.
 * **Isolation:** Keeps Zep's dependencies separate from your main application's environment.
 
-This makes **zep memory docker** a powerful combination for developers building sophisticated AI agents. You can find more about deploying AI memory solutions in our [guide to **zep memory docker** frameworks](/articles/best-ai-memory-systems/).
+This makes **zep memory docker** a powerful combination for developers building sophisticated AI agents. You can find more about deploying AI memory solutions in our [guide to **zep memory docker** frameworks](/articles/best-ai-memory-framework/).
 
 ## Setting Up Zep Memory with Docker
 

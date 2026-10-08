@@ -32,6 +32,11 @@ faq:
 - question: Why is memory crucial for AI agents built with Langchain?
   answer: Memory is crucial for AI agents built with Langchain because it allows them to maintain context, learn from previous interactions, and provide more personalized and coherent responses. Without
     memory, each interaction is treated in isolation, limiting the agent's intelligence and usefulness.
+aliases:
+- /articles/chatbot-memory-langchain/
+- /articles/chatbot-with-memory-using-langchain/
+- /articles/how-to-add-memory-to-chatbot-langchain/
+- /articles/rag-chatbot-with-memory-langchain/
 ---
 
 

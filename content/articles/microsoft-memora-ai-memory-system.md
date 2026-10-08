@@ -81,7 +81,7 @@ While specific details of Microsoft's Memora implementation are proprietary, it'
 
 Modern AI memory systems often rely on **embedding models for memory**. These models convert text or other data into numerical vectors, allowing for semantic similarity searches. A system like Memora would likely use advanced embedding techniques to store memories in a way that facilitates efficient retrieval based on meaning, not just keywords.
 
-**Vector databases** are crucial for managing these embeddings at scale. They are optimized for storing and querying high-dimensional vectors. Companies like Pinecone, Weaviate, and Chroma are leaders in this space, and Microsoft likely has its own internal solutions or partnerships. This forms the backbone for rapid recall of relevant past information within the **microsoft memora ai memory system**. Understanding [the role of embedding models in AI memory](/articles/embedding-models-for-memory) is fundamental here.
+**Vector databases** are crucial for managing these embeddings at scale. They are optimized for storing and querying high-dimensional vectors. Companies like Pinecone, Weaviate, and Chroma are leaders in this space, and Microsoft likely has its own internal solutions or partnerships. This forms the backbone for rapid recall of relevant past information within the **microsoft memora ai memory system**. Understanding [the role of embedding models in AI memory](/articles/embedding-models-for-rag/) is fundamental here.
 
 ### Retrieval-Augmented Generation (RAG)
 
@@ -115,7 +115,7 @@ Other systems like LangChain and LlamaIndex offer memory modules that can be int
 
 Beyond open-source projects, various commercial and research-focused memory systems are emerging. These often target specific use cases or offer unique architectural approaches. For instance, specialized **LLM memory systems** are being developed to optimize for performance and cost.
 
-Platforms like Zep AI offer persistent memory solutions for AI applications, focusing on storing and retrieving conversational data. Leitner, another system, uses spaced repetition principles adapted for AI. Comparing these systems, such as in an [evaluating the best AI agent memory systems](/articles/best-ai-memory-systems) guide, reveals different strategies for tackling the memory challenge. Memora's potential strength lies in its integration with Microsoft's broader AI infrastructure and research. The **microsoft memora ai memory system** aims to be a leading solution.
+Platforms like Zep AI offer persistent memory solutions for AI applications, focusing on storing and retrieving conversational data. Leitner, another system, uses spaced repetition principles adapted for AI. Comparing these systems, such as in an [evaluating the best AI agent memory systems](/articles/best-ai-memory-framework/) guide, reveals different strategies for tackling the memory challenge. Memora's potential strength lies in its integration with Microsoft's broader AI infrastructure and research. The **microsoft memora ai memory system** aims to be a leading solution.
 
 ### Memora's Differentiating Factors
 

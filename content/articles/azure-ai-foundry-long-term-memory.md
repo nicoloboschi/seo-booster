@@ -46,6 +46,11 @@ faq:
   answer: Azure AI Foundry agent memory refers to the capability of AI agents built on the Azure AI Foundry platform to store, retrieve, and utilize information from past interactions. This persistent memory
     is crucial for enabling agents to maintain context, learn over time, and provide more personalized and coherent responses, significantly enhancing their utility and intelligence.
 slug: azure-ai-foundry-long-term-memory
+aliases:
+- /articles/ai-foundry-agent-memory/
+- /articles/ai-foundry-agent-service-memory/
+- /articles/ai-foundry-memory/
+- /articles/azure-ai-agent-service-memory/
 ---
 
 **Azure AI Foundry long-term memory** empowers AI agents to store, retrieve, and apply information across extended interactions, providing persistent recall crucial for context, learning, and coherent, personalized responses. This capability transforms agents from stateless tools into intelligent, evolving partners by enabling effective **agent recall**.
@@ -84,7 +89,7 @@ When agents need to reference larger, unstructured data like documents, images, 
 
 #### Vector Databases and Embeddings
 
-To achieve semantic recall, text is converted into numerical representations called **vector embeddings**. These embeddings capture the semantic meaning of the text. Services like Azure AI Search or dedicated vector database integrations store these embeddings, enabling efficient similarity searches. This is a core technique for modern [LLM memory systems](/articles/llm-memory-system/) and **Azure AI Foundry long-term memory**.
+To achieve semantic recall, text is converted into numerical representations called **vector embeddings**. These embeddings capture the semantic meaning of the text. Services like Azure AI Search or dedicated vector database integrations store these embeddings, enabling efficient similarity searches. This is a core technique for modern [LLM memory systems](/articles/how-llm-memory-works/) and **Azure AI Foundry long-term memory**.
 
 #### Azure OpenAI Service: The Cognitive Engine
 

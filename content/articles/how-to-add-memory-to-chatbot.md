@@ -24,6 +24,24 @@ faq:
 - question: How does memory improve chatbot performance?
   answer: Memory allows chatbots to maintain context, personalize responses, avoid repetition, and perform complex tasks by remembering previous user inputs, preferences, and conversation history.
 slug: how-to-add-memory-to-chatbot
+aliases:
+- /articles/ai-agent-chat-memory/
+- /articles/chatbot-ai-memory/
+- /articles/chatbot-conversational-memory/
+- /articles/chatbot-improve-memory/
+- /articles/chatbot-memory-architecture/
+- /articles/how-does-chatbot-memory-work/
+- /articles/how-to-add-to-chatbot-memory/
+- /articles/how-to-build-a-chatbot-with-memory/
+- /articles/how-to-clean-up-chatbot-memory/
+- /articles/llm-chat-history-memory/
+- /articles/llm-chatbot-memory/
+- /articles/llm-history-memory/
+- /articles/llm-memory-buffer/
+- /articles/memory-based-chatbot/
+- /articles/memory-for-chatbot/
+- /articles/memory-in-chatbot/
+- /articles/what-is-chatbot-memory/
 ---
 
 

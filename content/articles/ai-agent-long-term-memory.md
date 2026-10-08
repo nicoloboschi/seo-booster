@@ -69,6 +69,29 @@ faq:
   answer: The core principles of an AI agent long-term memory architecture revolve around persistence, scalability, efficient retrieval, and intelligent management of knowledge. This involves selecting
     appropriate storage solutions, designing robust retrieval mechanisms, and implementing strategies for memory consolidation and pruning to ensure the agent can effectively learn and adapt over time.
 slug: ai-agent-long-term-memory
+aliases:
+- /articles/agentic-ai-long-term-memory/
+- /articles/ai-agent-chatbot-long-term-memory-note-storage-telegram/
+- /articles/ai-agent-long-memory/
+- /articles/ai-agent-that-remembers/
+- /articles/ai-and-long-term-memory/
+- /articles/building-long-term-memory-in-agentic-ai/
+- /articles/deepseek-ai-agent-telegram-long-term-memory/
+- /articles/does-ai-have-long-term-memory/
+- /articles/giving-a-long-term-memory/
+- /articles/helping-ai-have-long-term-memory/
+- /articles/how-does-long-term-memory-work-in-ai/
+- /articles/is-there-a-limit-to-long-term-memory/
+- /articles/llm-memory-long-term/
+- /articles/long-term-memory-ai-agent/
+- /articles/long-term-memory-ai-model/
+- /articles/long-term-memory-for-ai/
+- /articles/long-term-memory-for-ai-agents/
+- /articles/long-term-memory-in-ai/
+- /articles/long-term-memory-in-ai-agents/
+- /articles/long-term-memory-model-ai/
+- /articles/long-term-memory-the-foundation-of-ai-self-evolution/
+- /articles/when-will-ai-have-long-term-memory/
 ---
 
 **AI agent long term memory** is the crucial component that allows artificial intelligence agents to retain and access information beyond a single interaction or a limited context window, enabling persistent learning and more sophisticated, context-aware behavior over time. Unlike the fleeting nature of short-term or working memory, which is often bound by the immediate operational scope, long-term memory provides a durable **AI knowledge base**. This persistence is vital for **long running AI agents** that need to build upon past experiences, adapt to evolving environments, and maintain a consistent persona or understanding across extended operational lifecycles. Effectively managing this persistent knowledge is a cornerstone of advanced agent design.
@@ -113,7 +136,7 @@ Once information is stored, efficiently retrieving it is paramount. The **retrie
 
 Using **embedding models for memory**, semantic search allows agents to retrieve information based on conceptual meaning. An agent's current query or internal state is converted into a vector embedding, which is then used to find the most similar vectors in the memory store. This is a core capability of vector databases.
 
-This method is crucial for tasks where the exact phrasing of a past event or piece of information is unknown or unimportant, but the underlying concept is relevant. For a deeper dive into this, see [embedding-models-for-memory](/articles/embedding-models-for-memory/).
+This method is crucial for tasks where the exact phrasing of a past event or piece of information is unknown or unimportant, but the underlying concept is relevant. For a deeper dive into this, see [embedding-models-for-memory](/articles/embedding-models-for-rag/).
 
 #### Keyword and Structured Querying
 
@@ -171,7 +194,7 @@ External long-term memory acts as a persistent repository that can be selectivel
 
 **Retrieval Augmented Generation (RAG)** systems are a form of AI agent memory, primarily focused on improving the factual accuracy and relevance of generated text by retrieving relevant documents before generation. However, traditional RAG often lacks the continuous learning and statefulness of a dedicated **agent memory storage** system.
 
-More advanced agents combine RAG principles with persistent memory stores. This allows them to not only retrieve external documents but also recall past interactions, learned preferences, and established facts about their operational environment. This distinction is explored in [rag-vs-agent-memory](/articles/rag-vs-agent-memory/). The landscape of memory systems is evolving rapidly, with many options available, as highlighted in [best-ai-memory-systems](/articles/best-ai-memory-systems/).
+More advanced agents combine RAG principles with persistent memory stores. This allows them to not only retrieve external documents but also recall past interactions, learned preferences, and established facts about their operational environment. This distinction is explored in [rag-vs-agent-memory](/articles/rag-vs-agent-memory/). The landscape of memory systems is evolving rapidly, with many options available, as highlighted in [best-ai-memory-systems](/articles/best-ai-memory-framework/).
 
 ## Scaling AI Agent Long Term Memory
 

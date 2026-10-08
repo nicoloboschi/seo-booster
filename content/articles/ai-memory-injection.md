@@ -25,6 +25,9 @@ faq:
   answer: Key applications include personalized user experiences, targeted information delivery in chatbots, enhancing AI training with specific examples, and overcoming context window limitations by injecting
     relevant historical data or crucial facts.
 slug: ai-memory-injection
+aliases:
+- /articles/llm-memory-attack/
+- /articles/llm-memory-injection/
 ---
 
 
@@ -68,7 +71,7 @@ This targeted approach ensures the AI's responses are always relevant to the ind
 
 Developers can use **AI memory injection** to guide AI agents during training or for specific operational tasks. For example, injecting curated datasets or specific factual statements can help an AI learn a particular skill or adhere to certain guidelines more effectively. This is particularly useful in fine-tuning models for specialized applications.
 
-This method allows for precise calibration, ensuring the AI possesses the exact knowledge required for a task, rather than relying solely on its generalized training. It’s a way to provide AI with "cheat sheets" for complex problems. This topic is closely related to how [embedding models for memory](/articles/embedding-models-for-memory/) are used to represent and retrieve information.
+This method allows for precise calibration, ensuring the AI possesses the exact knowledge required for a task, rather than relying solely on its generalized training. It’s a way to provide AI with "cheat sheets" for complex problems. This topic is closely related to how [embedding models for memory](/articles/embedding-models-for-rag/) are used to represent and retrieve information.
 
 ### Overcoming Context Window Limitations
 

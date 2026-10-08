@@ -46,6 +46,19 @@ faq:
   answer: To find ChatGPT's memory for a specific past conversation, navigate to your chat history on the OpenAI platform. Each saved chat serves as a record of a past interaction, allowing you to revisit
     and review the dialogue. This is the most direct method for users to access their past ChatGPT interactions.
 slug: how-to-find-chatgpt-memory
+aliases:
+- /articles/how-to-clean-up-chatgpt-memory/
+- /articles/how-to-clear-up-chatgpt-memory/
+- /articles/how-to-delete-chatgpt-memory-on-phone/
+- /articles/how-to-free-up-chatgpt-memory/
+- /articles/how-to-give-chatgpt-memory/
+- /articles/how-to-see-chatgpt-memory/
+- /articles/how-to-turn-on-chatgpt-memory/
+- /articles/how-to-wipe-chatgpt-memory/
+- /articles/llm-memory-chatgpt/
+- /articles/llm-memory-openai/
+- /articles/llm-memory-prompt/
+- /articles/open-ai-long-term-memory/
 ---
 
 
@@ -108,7 +121,7 @@ For developers building AI agents that require true recall across sessions, seve
 
 A common method for enabling AI memory is using **vector databases**. Information is converted into **numerical representations called embeddings** using models like those from OpenAI or Sentence-BERT. These embeddings capture the semantic meaning of text. When an AI needs to recall information, it converts the query into an embedding and searches the vector database for semantically similar embeddings. This process is central to how you find ChatGPT memory in advanced systems and forms the backbone of persistent AI memory.
 
-This allows for efficient retrieval of relevant past data. [Embedding models for memory](/articles/embedding-models-for-memory/) are foundational to this. Python code can interact with these databases:
+This allows for efficient retrieval of relevant past data. [Embedding models for memory](/articles/embedding-models-for-rag/) are foundational to this. Python code can interact with these databases:
 
 ```python
 ## Conceptual example of storing and retrieving embeddings
@@ -181,7 +194,7 @@ Designing agents with both [AI agent memory types](/articles/ai-agents-memory-ty
 
 ## Comparing ChatGPT Memory to Dedicated AI Memory Systems
 
-It's important to distinguish ChatGPT's built-in conversational context from dedicated [AI agent persistent memory](/articles/ai-agent-persistent-memory/) solutions. While ChatGPT offers convenience for casual users, specialized systems provide the capabilities needed for applications requiring true, long-term recall. Finding ChatGPT memory within its native interface is limited; dedicated systems offer far more control over AI recall and conversational memory.
+It's important to distinguish ChatGPT's built-in conversational context from dedicated [AI agent persistent memory](/articles/persistent-memory-ai/) solutions. While ChatGPT offers convenience for casual users, specialized systems provide the capabilities needed for applications requiring true, long-term recall. Finding ChatGPT memory within its native interface is limited; dedicated systems offer far more control over AI recall and conversational memory.
 
 ### Key Differences in AI Recall Mechanisms
 

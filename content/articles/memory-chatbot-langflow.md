@@ -105,7 +105,7 @@ In this diagram, `User Input` goes into a `Prompt Template`. The `Prompt Templat
 
 Langflow's memory nodes act as intermediaries. When a user sends a message, Langflow retrieves the relevant history from the memory component. This history is then formatted by a prompt template and sent to the LLM. After the LLM generates a response, both the user's input and the AI's output are stored back into memory.
 
-This continuous loop is what gives the **chatbot with memory in Langflow** its ability to "remember." The specific method of storage and retrieval depends on the chosen memory type. For instance, `VectorStoreRetrieverMemory` converts conversational turns into embeddings, allowing for semantic searching of past interactions, a more sophisticated approach than simple chronological storage. This relates to the power of [embedding models for memory](/articles/embedding-models-for-memory/).
+This continuous loop is what gives the **chatbot with memory in Langflow** its ability to "remember." The specific method of storage and retrieval depends on the chosen memory type. For instance, `VectorStoreRetrieverMemory` converts conversational turns into embeddings, allowing for semantic searching of past interactions, a more sophisticated approach than simple chronological storage. This relates to the power of [embedding models for memory](/articles/embedding-models-for-rag/).
 
 ## Types of Memory for Langflow Chatbots
 
@@ -113,9 +113,9 @@ Choosing the right memory type is critical for balancing performance, cost, and 
 
 ### Short-Term vs. Long-Term Memory
 
-* **Short-Term Memory**: Typically involves storing recent conversational turns. This is useful for maintaining context within a single, ongoing dialogue. `ConversationBufferMemory` and `ConversationBufferWindowMemory` fall into this category. They are efficient but limited in their recall span. This is a common solution for [limited-memory AI](/articles/limited-memory-ai/).
+* **Short-Term Memory**: Typically involves storing recent conversational turns. This is useful for maintaining context within a single, ongoing dialogue. `ConversationBufferMemory` and `ConversationBufferWindowMemory` fall into this category. They are efficient but limited in their recall span. This is a common solution for limited-memory AI.
 
-* **Long-Term Memory**: Aims to retain information across extended periods or multiple conversations. This often involves more complex storage mechanisms, like summarization or vector databases. `ConversationSummaryMemory` begins to approach this, while integrating external vector stores with `VectorStoreRetrieverMemory` provides true **long-term memory capabilities for AI agents**. This is essential for building an [AI assistant that remembers everything](/articles/ai-assistant-remembers-everything/).
+* **Long-Term Memory**: Aims to retain information across extended periods or multiple conversations. This often involves more complex storage mechanisms, like summarization or vector databases. `ConversationSummaryMemory` begins to approach this, while integrating external vector stores with `VectorStoreRetrieverMemory` provides true **long-term memory capabilities for AI agents**. This is essential for building an [AI assistant that remembers everything](/articles/best-chatbot-for-memory/).
 
 ### Summary-Based Memory
 
@@ -127,7 +127,7 @@ While this reduces memory footprint and computational cost, it can lead to a los
 
 For robust, scalable memory, **vector store memory** is often the best choice. In Langflow, this is typically implemented using `VectorStoreRetrieverMemory`. Here, each conversational turn is converted into a numerical vector (embedding) and stored in a **vector database** (like Chroma, FAISS, or Pinecone).
 
-When the chatbot needs to recall information, it generates an embedding for the current query and searches the vector database for semantically similar past interactions. This allows for highly relevant retrieval, even from very long histories. This method is a key component of advanced [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) and is a core technique in many [best AI memory systems](/articles/best-ai-memory-systems/).
+When the chatbot needs to recall information, it generates an embedding for the current query and searches the vector database for semantically similar past interactions. This allows for highly relevant retrieval, even from very long histories. This method is a key component of advanced [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) and is a core technique in many [best AI memory systems](/articles/best-ai-memory-framework/).
 
 ## Advanced Memory Techniques and Considerations
 

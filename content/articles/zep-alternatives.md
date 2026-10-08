@@ -26,6 +26,9 @@ faq:
   answer: Yes. Mem0, Letta, Hindsight, Supermemory, and Cognee all offer open-source versions you can deploy on your own infrastructure at no licensing cost. Only Zep now requires a paid cloud plan after
     removing its Community Edition.
 slug: zep-alternatives
+aliases:
+- /articles/zep-memory-alternative/
+- /articles/zep-memory-open-source-alternative/
 ---
 
 

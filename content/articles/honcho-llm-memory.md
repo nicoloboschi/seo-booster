@@ -120,7 +120,7 @@ Implementing Honcho LLM memory typically involves selecting and configuring the 
 
 Developers often choose between managed vector database services (like Pinecone, Weaviate Cloud) or self-hosted options (like Chroma, FAISS). The selection of an **embedding model** is also critical, with options ranging from open-source models like Sentence-BERT to proprietary models from OpenAI or Cohere.
 
-The **LLM memory system** itself might be built using libraries that abstract these components, allowing for easier integration. For example, many [best AI memory systems](/articles/best-ai-memory-systems/) use these underlying technologies for **Honcho LLM memory**.
+The **LLM memory system** itself might be built using libraries that abstract these components, allowing for easier integration. For example, many [best AI memory systems](/articles/best-ai-memory-framework/) use these underlying technologies for **Honcho LLM memory**.
 
 ### Example: Basic RAG Integration
 

@@ -36,6 +36,8 @@ faq:
   answer: By reducing the amount of information an LLM needs to actively process at any given time, memory compression techniques effectively extend the LLM's usable context window, allowing it to "remember"
     and utilize information from much longer interactions or documents.
 slug: llm-memory-compression
+aliases:
+- /articles/llm-memory-compaction/
 ---
 
 

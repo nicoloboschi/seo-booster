@@ -40,6 +40,11 @@ faq:
   answer: Gemini AI's long term memory is a cornerstone of its advanced capabilities, enabling it to maintain context across extended interactions, learn user preferences, and perform complex tasks that
     require recalling past information. This persistent recall is crucial for applications like sophisticated AI agents and personalized assistants.
 slug: gemini-ai-long-term-memory
+aliases:
+- /articles/gemini-chatbot-memory/
+- /articles/google-ai-long-term-memory/
+- /articles/google-long-term-memory-ai/
+- /articles/llm-context-window-gemini/
 ---
 
 **Gemini AI long term memory** refers to the capability of Google's Gemini models to store, retrieve, and use information beyond the immediate conversational turn. This persistent recall is essential for agents needing to remember past events, user preferences, or complex situational details over extended periods. It enables more coherent and intelligent interactions, moving beyond the limitations of short-lived context.

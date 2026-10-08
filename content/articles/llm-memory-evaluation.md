@@ -60,6 +60,8 @@ faq:
   answer: Memory benchmarks are essential for comparing different LLM memory architectures by providing standardized tasks and datasets. This allows for objective assessment of recall accuracy, retention
     rates, and retrieval efficiency across various architectural designs, such as those with different vector database integrations or attention mechanisms.
 slug: llm-memory-evaluation
+aliases:
+- /articles/llm-memory-bench/
 ---
 
 ## LLM Memory Evaluation: Benchmarking Agent Recall and Retention
@@ -169,7 +171,7 @@ Frameworks like LangChain and LlamaIndex often include modules or examples for m
 
 ### Vector Databases and Embeddings in Memory Evaluation
 
-The effectiveness of memory systems often hinges on the underlying embedding models and vector databases used for storage and retrieval. Evaluating these components, as discussed in [embedding-models-for-memory](/articles/embedding-models-for-memory/), is a critical part of overall memory evaluation. A poorly performing embedding model can significantly degrade the perceived performance of the entire memory system.
+The effectiveness of memory systems often hinges on the underlying embedding models and vector databases used for storage and retrieval. Evaluating these components, as discussed in [embedding-models-for-memory](/articles/embedding-models-for-rag/), is a critical part of overall memory evaluation. A poorly performing embedding model can significantly degrade the perceived performance of the entire memory system.
 
 ### Code Example for Basic Recall Testing
 
@@ -295,13 +297,13 @@ Future evaluations will need to assess not just recall but also how agents learn
 
 ### Human-in-the-Loop Evaluation
 
-Incorporating human feedback directly into the evaluation loop can help capture subjective aspects of memory performance, such as naturalness and coherence in conversations. This aligns with efforts to build [AI assistants that remember everything](/articles/ai-assistant-remembers-everything/). Human judgment remains invaluable in the nuanced task of **AI memory evaluation**.
+Incorporating human feedback directly into the evaluation loop can help capture subjective aspects of memory performance, such as naturalness and coherence in conversations. This aligns with efforts to build [AI assistants that remember everything](/articles/best-chatbot-for-memory/). Human judgment remains invaluable in the nuanced task of **AI memory evaluation**.
 
 ### Standardized Memory Architectures
 
 As common [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/) emerge, so too will standardized evaluation methodologies tailored to these architectures. This will enable more direct comparisons between different implementations of similar memory concepts. A move towards standardized **memory benchmarks** is anticipated.
 
-The journey towards truly intelligent AI agents hinges on our ability to build and reliably evaluate their memory systems. As research progresses, expect more sophisticated benchmarks and evaluation techniques to emerge, pushing the boundaries of what AI can remember and achieve. This work is foundational for creating agents that exhibit persistent memory, as discussed in [AI agent persistent memory](/articles/ai-agent-persistent-memory/). The ongoing effort in **llm memory evaluation** is critical for this advancement.
+The journey towards truly intelligent AI agents hinges on our ability to build and reliably evaluate their memory systems. As research progresses, expect more sophisticated benchmarks and evaluation techniques to emerge, pushing the boundaries of what AI can remember and achieve. This work is foundational for creating agents that exhibit persistent memory, as discussed in [AI agent persistent memory](/articles/persistent-memory-ai/). The ongoing effort in **llm memory evaluation** is critical for this advancement.
 
 ## FAQ
 

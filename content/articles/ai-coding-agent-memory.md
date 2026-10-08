@@ -43,6 +43,8 @@ faq:
   answer: AI recall, powered by agent memory, allows AI coding agents to access and reuse previously written code snippets, understand project-specific patterns, and adhere to established conventions, leading
     to faster and more consistent code generation.
 slug: ai-coding-agent-memory
+aliases:
+- /articles/persistent-memory-system-for-ai-coding-agents/
 ---
 
 

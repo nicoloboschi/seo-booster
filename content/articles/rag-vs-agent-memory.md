@@ -41,6 +41,13 @@ faq:
     and learn from each other's experiences. Conversely, private agent memory allows for specialized learning and independent decision-making, with the potential for agents to share synthesized insights
     rather than raw data. This dynamic interplay between shared and private memory is crucial for complex collaborative tasks.
 slug: rag-vs-agent-memory
+aliases:
+- /articles/agent-memory-vs-rag/
+- /articles/rag-vs-ai-memory/
+- /articles/rag-vs-long-term-memory/
+- /articles/rag-vs-memory-bank/
+- /articles/retrieval-augmented-generation/
+- /articles/what-is-rag-memory/
 ---
 
 ## Understanding RAG vs. Agent Memory in AI Systems

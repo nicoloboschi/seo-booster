@@ -23,6 +23,14 @@ faq:
   answer: Yes, while foundational LLMs primarily rely on their pre-training data (akin to semantic memory), techniques like context windows, external memory modules, and specialized architectures are being
     developed to imbue LLMs with episodic memory capabilities for better conversational recall.
 slug: episodic-memory-in-ai-agents
+aliases:
+- /articles/ai-agent-episodic-memory/
+- /articles/ai-episodic-memory/
+- /articles/ai-episodic-memory-faiss/
+- /articles/llm-episodic-memory/
+- /articles/llm-memory-episodic/
+- /articles/what-is-episodic-memory-in-llm/
+- /articles/what-is-episodic-memory-llm/
 ---
 
 ## Episodic Memory in AI Agents: Remembering Past Interactions

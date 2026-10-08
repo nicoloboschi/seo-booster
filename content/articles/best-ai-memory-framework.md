@@ -55,6 +55,22 @@ faq:
   answer: AI memory frameworks provide LLM agents with the ability to retain information beyond their limited context window, enabling them to learn from past interactions, maintain context across extended
     conversations, and perform more complex, stateful tasks. This leads to more coherent and intelligent agent behavior.
 slug: best-ai-memory-framework
+aliases:
+- /articles/agent-framework-agent-memory/
+- /articles/best-agent-memory-framework/
+- /articles/best-ai-memory-provider/
+- /articles/best-ai-memory-reddit/
+- /articles/best-ai-memory-systems/
+- /articles/best-ai-memory-tool/
+- /articles/best-memory-for-ai-agents/
+- /articles/best-memory-layer-for-ai-agents/
+- /articles/best-memory-system-for-ai/
+- /articles/llm-memory-api/
+- /articles/llm-memory-framework/
+- /articles/llm-memory-layer/
+- /articles/llm-memory-provider/
+- /articles/llm-memory-tools/
+- /articles/what-is-the-best-ai-memory/
 ---
 
 
@@ -117,7 +133,7 @@ When selecting or designing an AI memory framework, several factors are critical
 
 ### Benchmarking Memory Performance
 
-Quantifying the effectiveness of **AI memory systems** is challenging but crucial for progress. [AI memory benchmarks](/articles/ai-memory-benchmarks/) are emerging to standardize evaluation. These benchmarks often assess metrics like recall accuracy, retrieval latency, and the impact of memory on task completion rates. According to a 2024 study published on arXiv, agents using advanced memory retrieval mechanisms showed a 25% improvement in complex problem-solving tasks compared to those relying solely on LLM context. Another analysis from Gartner projected the market for AI-powered data management, including memory systems, to reach $10 billion by 2027. The **ideal AI memory framework** will excel across these metrics.
+Quantifying the effectiveness of **AI memory systems** is challenging but crucial for progress. AI memory benchmarks are emerging to standardize evaluation. These benchmarks often assess metrics like recall accuracy, retrieval latency, and the impact of memory on task completion rates. According to a 2024 study published on arXiv, agents using advanced memory retrieval mechanisms showed a 25% improvement in complex problem-solving tasks compared to those relying solely on LLM context. Another analysis from Gartner projected the market for AI-powered data management, including memory systems, to reach $10 billion by 2027. The **ideal AI memory framework** will excel across these metrics.
 
 ## Popular AI Memory Frameworks and Systems
 
@@ -141,7 +157,7 @@ These systems offer more integrated solutions, often combining vector storage wi
 * **LangChain Memory:** LangChain provides various memory modules that can be plugged into agent setups. These modules handle storing and retrieving conversation history or other contextual data, offering flexibility for developers.
 * **LlamaIndex:** Primarily focused on data indexing and retrieval for LLMs, LlamaIndex can be used to build sophisticated memory systems by indexing external data sources and enabling efficient querying.
 * **Hindsight:** An open-source AI memory system designed for building persistent, stateful AI agents. It simplifies the process of giving AI agents long-term memory, offering a flexible backend for various agentic applications. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
-* **Zep:** Zep is an open-source platform for building LLM applications with long-term memory and cognitive capabilities. It aims to provide a "brain" for LLM applications, storing and retrieving context, summaries, and memories. [Learn more about Zep Memory AI](/articles/zep-memory-ai-guide/).
+* **Zep:** Zep is an open-source platform for building LLM applications with long-term memory and cognitive capabilities. It aims to provide a "brain" for LLM applications, storing and retrieving context, summaries, and memories. [Learn more about Zep Memory AI](/articles/what-is-zep-memory/).
 * **Letta AI:** Letta AI focuses on providing persistent memory for LLM applications, enabling agents to remember past interactions and information. It offers a managed solution for developers seeking simplified integration. [Compare Letta AI with other options](/articles/letta-ai-guide/).
 
 ### Comparison of Approaches to AI Memory

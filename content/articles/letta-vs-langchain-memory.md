@@ -157,7 +157,7 @@ It's helpful to contextualize **Letta vs LangChain memory** within the broader l
 
 ### Zep: Temporal Reasoning and Graph Capabilities
 
-**Zep** offers a more advanced memory solution, focusing on temporal reasoning and knowledge graph capabilities. While Letta and **LangChain memory** have different strengths, Zep aims to provide a more structured understanding of memory over time and across relationships. For complex applications requiring deep temporal analysis, Zep is a noteworthy option. Explore more in our [guide to Zep AI memory](/articles/zep-memory-ai-guide/).
+**Zep** offers a more advanced memory solution, focusing on temporal reasoning and knowledge graph capabilities. While Letta and **LangChain memory** have different strengths, Zep aims to provide a more structured understanding of memory over time and across relationships. For complex applications requiring deep temporal analysis, Zep is a noteworthy option. Explore more in our [guide to Zep AI memory](/articles/what-is-zep-memory/).
 
 ### Hindsight vs. Letta: A Deeper Dive
 
@@ -167,7 +167,7 @@ The comparison between **Hindsight** and **Letta** highlights the runtime vs. me
 
 **Letta vs LangChain memory** represents two distinct philosophies in AI agent memory. Letta champions a unified, OS-like runtime for deep integration and advanced memory management. LangChain memory (LangMem) offers a modular, component-based solution specifically tailored for the LangGraph ecosystem.
 
-Your choice should align with your project's existing architecture, development team's familiarity with specific frameworks, and the desired level of control and flexibility. Understanding these trade-offs is crucial for building AI agents that can effectively learn, adapt, and remember over time. For a broader overview of agent memory solutions, consult our [comprehensive guide to memory frameworks](/articles/best-ai-memory-systems/). This detailed comparison of **Letta vs LangChain memory** should guide your decision.
+Your choice should align with your project's existing architecture, development team's familiarity with specific frameworks, and the desired level of control and flexibility. Understanding these trade-offs is crucial for building AI agents that can effectively learn, adapt, and remember over time. For a broader overview of agent memory solutions, consult our [comprehensive guide to memory frameworks](/articles/best-ai-memory-framework/). This detailed comparison of **Letta vs LangChain memory** should guide your decision.
 
 ## FAQ
 

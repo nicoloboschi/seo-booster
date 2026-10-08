@@ -59,6 +59,8 @@ faq:
     to process and store information, whereas human memory consolidation involves complex neurobiological mechanisms of synaptic plasticity and systems consolidation. The goal of creating stable, retrievable
     knowledge is shared.
 slug: memory-consolidation-ai-agents
+aliases:
+- /articles/llm-memory-consolidation/
 ---
 ---
 

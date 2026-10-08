@@ -25,6 +25,9 @@ faq:
   answer: Updating parametric memory typically requires retraining or fine-tuning the LLM, which is computationally expensive. It's not a dynamic, real-time update mechanism like adding entries to an external
     knowledge base.
 slug: llm-parametric-memory
+aliases:
+- /articles/llm-latent-memory/
+- /articles/what-is-memory-tuning-in-llm/
 ---
 Imagine an AI that "knows" everything it's ever learned, not from a database, but from its very core. This is the essence of **LLM parametric memory**, where vast knowledge is etched directly into the model's weights. This internal storage mechanism is the result of extensive training, where the model learns patterns, facts, and relationships from vast datasets. It's the primary way most LLMs store acquired information, making it intrinsically part of the model itself.
 

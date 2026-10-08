@@ -47,6 +47,19 @@ faq:
   answer: Vector embeddings capture the semantic meaning of data, allowing vector databases to perform similarity searches based on meaning rather than keywords. This enables LLMs to retrieve contextually
     relevant past information, forming the basis of persistent LLM memory.
 slug: vector-database-for-llm-memory
+aliases:
+- /articles/best-database-for-ai-memory/
+- /articles/kernel-memory-vector-database/
+- /articles/llm-memory-database/
+- /articles/llm-memory-db/
+- /articles/llm-memory-vector-database/
+- /articles/memorydb-vector-database/
+- /articles/vector-database-for-memory/
+- /articles/vector-database-llm-long-term-memory/
+- /articles/vector-database-llm-memory/
+- /articles/vector-database-long-term-memory/
+- /articles/vector-databases-for-ai/
+- /articles/vector-databases-for-semantic-search/
 ---
 
 A **vector database for LLM memory** is a specialized database that stores information as high-dimensional vectors (embeddings), enabling AI agents to perform efficient semantic searches and retrieve relevant past experiences or knowledge for persistent recall. It provides an external, scalable memory beyond an LLM's immediate processing capacity.

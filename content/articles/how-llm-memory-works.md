@@ -70,6 +70,13 @@ faq:
   answer: LlamaIndex provides tools and abstractions to manage conversation history and integrate with external memory stores, making it easier to implement effective short-term recall mechanisms for LLMs.
     It simplifies the process of feeding relevant context into the LLM's window.
 slug: how-llm-memory-works
+aliases:
+- /articles/does-llm-have-memory/
+- /articles/how-does-llm-memory-work/
+- /articles/llm-memory-mechanism/
+- /articles/llm-memory-system/
+- /articles/memory-of-llm/
+- /articles/what-is-llm-memory/
 ---
 
 LLM memory refers to how large language models store, access, and use information beyond their immediate input. This involves a limited context window for **short-term recall** and external systems like vector databases or knowledge graphs for **long-term memory AI**. Understanding these mechanisms is crucial for AI agents to maintain coherence and learn from interactions.
@@ -100,7 +107,7 @@ To address the context window's limitations and enhance **AI recall**, developer
 
 **Retrieval-Augmented Generation (RAG)** is a prominent approach that combines LLMs with an external knowledge retrieval system. This system typically involves a **vector database** storing information as embeddings. When a query is made, relevant information is retrieved from the database and then fed into the LLM's context window.
 
-This method allows LLMs to access information far beyond their inherent context, significantly improving **AI recall**. It's particularly effective for grounding responses in factual data and providing up-to-date information. Understanding [embedding-models-for-memory](/articles/embedding-models-for-memory/) is key to building efficient RAG systems.
+This method allows LLMs to access information far beyond their inherent context, significantly improving **AI recall**. It's particularly effective for grounding responses in factual data and providing up-to-date information. Understanding [embedding-models-for-memory](/articles/embedding-models-for-rag/) is key to building efficient RAG systems.
 
 ### Vector Databases and Semantic Search for AI Recall
 
@@ -148,7 +155,7 @@ Implementing effective LLM memory often involves combining LLM capabilities with
 
 Several open-source projects provide building blocks for LLM memory. These include libraries for managing conversation history, integrating with vector databases, and building agentic loops, all aimed at enhancing **AI recall**.
 
-For instance, tools like **Hindsight** offer a framework for managing and querying LLM memories, enabling agents to retain context and learn from interactions. You can explore Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight). These systems are vital for developing [ai-agent-persistent-memory](/articles/ai-agent-persistent-memory/).
+For instance, tools like **Hindsight** offer a framework for managing and querying LLM memories, enabling agents to retain context and learn from interactions. You can explore Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight). These systems are vital for developing [ai-agent-persistent-memory](/articles/persistent-memory-ai/).
 
 ### Frameworks and Libraries for LLM Memory and AI Recall
 
@@ -233,7 +240,7 @@ When designing an LLM memory system, several factors are critical for effective 
 4. **Cost**: Storing and querying large amounts of data can incur significant costs.
 5. **Privacy and Security**: Sensitive information stored in memory must be protected.
 
-Choosing the right memory architecture, whether it's RAG, knowledge graphs, or a hybrid approach, depends heavily on the specific application requirements for **AI recall**. The field is rapidly evolving, with new techniques constantly emerging for [how-to-give-ai-memory](/articles/how-to-give-ai-memory/) capabilities.
+Choosing the right memory architecture, whether it's RAG, knowledge graphs, or a hybrid approach, depends heavily on the specific application requirements for **AI recall**. The field is rapidly evolving, with new techniques constantly emerging for [how-to-give-ai-memory](/articles/how-to-give-ai-agents-memory/) capabilities.
 
 ## The Future of LLM Memory and AI Recall
 

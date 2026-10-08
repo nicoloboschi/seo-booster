@@ -26,6 +26,40 @@ faq:
   answer: Zep Memory typically involves an embedded vector database for storing and indexing memories as embeddings, a retrieval mechanism to find relevant past information, and an integration layer to
     feed this recalled context back into the LLM.
 slug: what-is-zep-memory
+aliases:
+- /articles/graphiti-zep-memory/
+- /articles/is-zep-memory-free/
+- /articles/is-zep-memory-open-source/
+- /articles/zep-agent-memory-github/
+- /articles/zep-chat-memory/
+- /articles/zep-cloud-memory/
+- /articles/zep-for-memory/
+- /articles/zep-graffiti-memory/
+- /articles/zep-memory-agent/
+- /articles/zep-memory-ai-guide/
+- /articles/zep-memory-api/
+- /articles/zep-memory-api-key/
+- /articles/zep-memory-architecture/
+- /articles/zep-memory-arxiv/
+- /articles/zep-memory-assistant/
+- /articles/zep-memory-assistant-github/
+- /articles/zep-memory-cloud/
+- /articles/zep-memory-docs/
+- /articles/zep-memory-funding/
+- /articles/zep-memory-github/
+- /articles/zep-memory-graph/
+- /articles/zep-memory-in-langgraph/
+- /articles/zep-memory-in-n8n/
+- /articles/zep-memory-langchain/
+- /articles/zep-memory-langgraph/
+- /articles/zep-memory-layer/
+- /articles/zep-memory-llm/
+- /articles/zep-memory-mcp/
+- /articles/zep-memory-n8n/
+- /articles/zep-memory-paper/
+- /articles/zep-memory-pricing/
+- /articles/zep-memory-system/
+- /articles/zep-the-memory-foundation-for-your-ai-stack/
 ---
 
 
@@ -69,13 +103,13 @@ Popular choices for vector databases include Chroma, FAISS, and Pinecone. Zep Me
 
 When an AI agent needs to access its memory, the retrieval mechanism in Zep Memory comes into play. It takes the current query or context, converts it into an embedding, and then searches the vector database for the most semantically similar embeddings.
 
-This process is often referred to as **similarity search**. Algorithms like Approximate Nearest Neighbor (ANN) are commonly used to speed up this search across millions of potential memories. The retrieved memories provide the agent with relevant historical context. This capability is vital for [AI agents remembering conversations](/articles/ai-that-remembers-conversations/).
+This process is often referred to as **similarity search**. Algorithms like Approximate Nearest Neighbor (ANN) are commonly used to speed up this search across millions of potential memories. The retrieved memories provide the agent with relevant historical context. This capability is vital for [AI agents remembering conversations](/articles/best-chatbot-for-memory/).
 
 #### Integration Layer Functionality
 
 The integration layer acts as the bridge between Zep Memory and the LLM. It formats the retrieved memories into a prompt that the LLM can understand and process. This might involve prepending the retrieved context to the user's latest query.
 
-This layer ensures that the LLM receives the necessary historical information to generate a contextually appropriate and informed response. It's how the agent's **long-term memory** influences its immediate output. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-memory/).
+This layer ensures that the LLM receives the necessary historical information to generate a contextually appropriate and informed response. It's how the agent's **long-term memory** influences its immediate output. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-agents-memory/).
 
 ## How Zep Memory Enhances AI Agents
 
@@ -85,7 +119,7 @@ By providing a sophisticated memory system, **Zep Memory** significantly boosts 
 
 One of the most direct benefits is the creation of truly **persistent conversation history**. Unlike standard LLMs that lose track after a few turns, Zep Memory allows agents to recall details from earlier in a long conversation, or even from previous sessions entirely. This is crucial for applications like customer support bots, personal assistants, and ongoing collaborative tools.
 
-This persistent recall capability is what distinguishes advanced [agentic AI long-term memory](/articles/agentic-ai-long-term-memory/) solutions.
+This persistent recall capability is what distinguishes advanced [agentic AI long-term memory](/articles/ai-agent-long-term-memory/) solutions.
 
 ### Contextual Awareness and Personalization
 
@@ -97,7 +131,7 @@ For example, an AI tutor using Zep Memory could recall a student's previous stru
 
 For agents designed to perform complex, multi-step tasks, **long-term memory** is indispensable. Zep Memory allows agents to keep track of progress, store intermediate results, and recall instructions given earlier. This prevents errors caused by forgetting crucial steps or information.
 
-Consider an AI agent tasked with managing a complex project. It needs to remember deadlines, stakeholder communications, and project milestones. Zep Memory provides the necessary recall functionality for such demanding applications, contributing to [AI agent persistent memory](/articles/ai-agent-persistent-memory/).
+Consider an AI agent tasked with managing a complex project. It needs to remember deadlines, stakeholder communications, and project milestones. Zep Memory provides the necessary recall functionality for such demanding applications, contributing to [AI agent persistent memory](/articles/persistent-memory-ai/).
 
 ## Implementing Zep Memory
 

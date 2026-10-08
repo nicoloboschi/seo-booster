@@ -30,6 +30,18 @@ faq:
   answer: Vector databases store information as high-dimensional vectors, enabling efficient similarity searches. This allows AI agents to quickly retrieve semantically related information, which is crucial
     for tasks like retrieval-augmented generation (RAG).
 slug: ai-memory-architecture
+aliases:
+- /articles/ai-external-memory/
+- /articles/llm-external-memory/
+- /articles/llm-memory-approaches/
+- /articles/llm-memory-architecture/
+- /articles/llm-memory-augmentation/
+- /articles/llm-memory-design/
+- /articles/llm-memory-engineering/
+- /articles/llm-memory-expansion-strategies/
+- /articles/llm-memory-extraction/
+- /articles/memory-architectures-in-long-term-ai-agents-beyond-simple-state-representation/
+- /articles/self-organizing-ai-memory-system/
 ---
 
 An effective **AI memory architecture** is crucial for developing agents that can learn, adapt, and perform complex tasks. It defines how an AI system stores, retrieves, and uses information, moving beyond static responses to dynamic, context-aware interactions. This architecture underpins an agent's ability to recall past experiences and apply them to current situations, forming the basis of intelligent recall.
@@ -87,7 +99,7 @@ The choice of storage and retrieval mechanisms profoundly impacts an AI's abilit
 
 **Long-term memory in AI agents** requires mechanisms to store information over extended periods. This is where challenges arise, as the sheer volume of data can become unmanageable. Techniques like **memory consolidation** are used to distill important information and discard irrelevant details.
 
-[Agentic AI long-term memory](/articles/agentic-ai-long-term-memory/) systems aim to provide persistent, evolving knowledge. This allows agents to learn from a vast history of interactions, rather than just the immediate context. Tools like Hindsight, an open-source AI memory system, offer structured ways to implement and manage this long-term recall.
+[Agentic AI long-term memory](/articles/ai-agent-long-term-memory/) systems aim to provide persistent, evolving knowledge. This allows agents to learn from a vast history of interactions, rather than just the immediate context. Tools like Hindsight, an open-source AI memory system, offer structured ways to implement and manage this long-term recall.
 
 ### Handling Temporal Reasoning
 

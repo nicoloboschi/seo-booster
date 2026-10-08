@@ -39,6 +39,19 @@ faq:
   answer: An LLM context window is a fixed-size buffer of recent tokens, similar to short-term working memory. Agent memory systems add persistent, external storage that survives beyond a single conversation,
     enabling long-term learning and recall.
 slug: ai-agent-memory-explained
+aliases:
+- /articles/agent-memory-in-ai/
+- /articles/ai-agent-and-memory/
+- /articles/do-ai-agents-have-memory/
+- /articles/does-ai-agent-has-memory/
+- /articles/does-ai-agent-have-memory/
+- /articles/does-ai-agents-have-memory/
+- /articles/llm-agent-memory-systems/
+- /articles/llm-memory-agent/
+- /articles/memory-of-ai-agent/
+- /articles/memory-system-for-ai-agents/
+- /articles/what-is-memory-in-agentic-ai-system/
+- /articles/what-is-role-of-memory-in-agentic-ai-system/
 ---
 
 
@@ -85,7 +98,7 @@ Episodic memory stores specific events, interactions, and their outcomes. Think 
 
 When a similar deployment comes up, the agent can retrieve this episode and check for the same misconfiguration. This is the memory type that makes agents genuinely learn from experience rather than repeating mistakes.
 
-For practical implementations, see our guide to [episodic memory in AI agents](/articles/ai-episodic-memory/).
+For practical implementations, see our guide to [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
 
 ### Semantic Memory: What the Agent Knows
 

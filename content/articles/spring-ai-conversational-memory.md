@@ -25,6 +25,8 @@ faq:
   answer: Benefits include seamless integration with the Spring ecosystem, simplified development for Java developers, and the ability to build stateful conversational agents that remember context across
     multiple turns, improving user experience.
 slug: spring-ai-conversational-memory
+aliases:
+- /articles/spring-ai-conversation-memory/
 ---
 
 Has an AI ever forgotten what you just told it mid-conversation? This frustrating experience highlights the critical need for **conversational memory** in AI agents. Without it, AI interactions feel stateless, disjointed, and ultimately, unhelpful.

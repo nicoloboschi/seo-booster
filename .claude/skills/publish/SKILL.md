@@ -7,7 +7,7 @@ description: Build aiagentmemory.org, deploy it to GitHub Pages, and tell search
 
 1. Build and check:
    ```bash
-   hugo --minify            # must print no ERROR
+   hugo --minify --cleanDestinationDir   # must print no ERROR
    ```
    Check `public/llms.txt` lists the pages you expect.
 2. Commit content on `main` and push: `git push origin main`.

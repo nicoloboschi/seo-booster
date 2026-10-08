@@ -47,7 +47,7 @@ Building effective long-term memory for AI agents requires sophisticated archite
 
 AI memory systems benefit from structured representations beyond raw text. This includes:
 
-* **Vector Embeddings:** Numerical representations capturing semantic meaning, crucial for efficient similarity searches. [Embedding models for AI memory](/articles/embedding-models-for-memory/) are vital for this process.
+* **Vector Embeddings:** Numerical representations capturing semantic meaning, crucial for efficient similarity searches. [Embedding models for AI memory](/articles/embedding-models-for-rag/) are vital for this process.
 * **Knowledge Graphs:** Representing relationships between entities, enabling more complex reasoning.
 * **Timestamps and Metadata:** Essential for temporal reasoning and understanding information recency.
 

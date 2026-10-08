@@ -39,6 +39,9 @@ faq:
   answer: llm agent memory management refers to the techniques and systems described in this article. See the full article for detailed explanations and examples.
 - question: Why does llm agent memory management matter for AI agents?
   answer: Understanding llm agent memory management is essential for building production AI systems that maintain context, learn from interactions, and provide reliable results.
+aliases:
+- /articles/how-to-manage-ai-memory/
+- /articles/how-to-manage-llm-memory/
 ---
 
 faq:

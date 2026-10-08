@@ -27,6 +27,28 @@ faq:
   answer: Current AI memory systems are sophisticated simulations. While they can store and retrieve vast amounts of data, they don't possess consciousness or subjective experience like human memory. The
     goal is functional recall and learning.
 slug: how-to-give-ai-agents-memory
+aliases:
+- /articles/building-an-ai-agent-with-memory-and-adaptability/
+- /articles/building-llm-memory-from-scratch/
+- /articles/custom-ai-agent-with-memory/
+- /articles/custom-ai-agent-with-memory-github/
+- /articles/how-to-add-memory-to-llm/
+- /articles/how-to-build-llm-memory/
+- /articles/how-to-expand-ai-agents-memory/
+- /articles/how-to-give-a-long-term-memory/
+- /articles/how-to-give-ai-long-term-memory/
+- /articles/how-to-give-ai-memory/
+- /articles/how-to-give-llm-long-term-memory/
+- /articles/how-to-give-llm-memory/
+- /articles/how-to-implement-llm-memory/
+- /articles/how-to-improve-llm-memory/
+- /articles/how-to-increase-llm-memory/
+- /articles/how-to-make-ai-have-memory/
+- /articles/how-to-make-llm-have-memory/
+- /articles/llm-memory-golang/
+- /articles/llm-memory-implementation/
+- /articles/llm-memory-python/
+- /articles/pydantic-ai-long-term-memory/
 ---
 
 
@@ -72,7 +94,7 @@ RAG effectively gives agents access to a vast, external memory. Understanding th
 
 **Vector databases** are central to modern AI memory systems. They store data as high-dimensional vectors, where similar concepts are represented by vectors that are close to each other in the vector space. This allows for efficient similarity searches.
 
-**Embedding models** (like those from OpenAI, Cohere, or open-source options) convert text, images, or other data into these numerical vectors. By embedding past interactions, documents, or observations, AI agents can query their vector database to find relevant past information. This forms the backbone of many RAG systems and persistent memory solutions for how to give AI agents memory. Research into [embedding models for memory](/articles/embedding-models-for-memory/) and [embedding models for RAG](/articles/embedding-models-for-rag/) highlights their importance.
+**Embedding models** (like those from OpenAI, Cohere, or open-source options) convert text, images, or other data into these numerical vectors. By embedding past interactions, documents, or observations, AI agents can query their vector database to find relevant past information. This forms the backbone of many RAG systems and persistent memory solutions for how to give AI agents memory. Research into [embedding models for memory](/articles/embedding-models-for-rag/) and [embedding models for RAG](/articles/embedding-models-for-rag/) highlights their importance.
 
 #### Example: Storing and Retrieving Memories with a Vector Database
 

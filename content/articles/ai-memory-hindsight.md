@@ -28,6 +28,8 @@ faq:
 - question: Where can I find Hindsight?
   answer: Hindsight is an open-source project. You can typically find its repository and documentation on platforms like GitHub, such as the [Hindsight GitHub repository](https://github.com/vectorize-io/hindsight).
 slug: ai-memory-hindsight
+aliases:
+- /articles/hindsight-llm-memory/
 ---
 
 

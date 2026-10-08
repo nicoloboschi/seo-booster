@@ -26,6 +26,14 @@ faq:
   answer: Standard LLMs have fixed token limits for their context window, meaning they forget older information. An infinite context window LLM, in theory, has no such limit, allowing it to remember everything
     it has processed, thus overcoming context window limits.
 slug: infinite-context-window-llm
+aliases:
+- /articles/ai-chat-infinite-memory/
+- /articles/ai-chatbot-infinite-memory/
+- /articles/ai-infinite-memory/
+- /articles/chatbot-with-infinite-memory/
+- /articles/infinite-memory-ai-agent/
+- /articles/infinite-memory-chatbot/
+- /articles/llm-infinite-memory/
 ---
 
 Could an AI truly remember everything you've ever told it? An **infinite context window LLM** aims to achieve precisely that, processing and retaining an unbounded amount of input data. This capability removes major barriers for advanced AI, enabling perfect recall of all past interactions for sophisticated applications and **long-term memory AI agents**.

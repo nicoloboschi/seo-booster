@@ -21,6 +21,19 @@ faq:
 - question: What are the advantages of using an open source memory system?
   answer: Advantages include cost-effectiveness, transparency, flexibility, community support, and the ability to customize and extend the system to meet specific AI agent needs.
 slug: open-source-memory-systems-compared
+aliases:
+- /articles/agent-memory-framework-github/
+- /articles/ai-long-term-memory-github/
+- /articles/best-open-source-ai-memory/
+- /articles/best-open-source-llm-memory/
+- /articles/github-llm-persistent-memory/
+- /articles/llm-memory-awesome/
+- /articles/llm-memory-bank/
+- /articles/llm-memory-bank-github/
+- /articles/llm-memory-github/
+- /articles/llm-memory-open-source/
+- /articles/open-source-agent-memory-framework/
+- /articles/open-source-ai-memory-system/
 ---
 
 
@@ -64,7 +77,7 @@ The first step for any memory system is acquiring and storing information. Open 
 
 Efficiently retrieving relevant information is paramount. Common retrieval methods include:
 
-* **Semantic Search:** Using embedding models to find information semantically similar to a query, regardless of exact keywords. This is a cornerstone of many modern AI memory systems. [Embedding Models for Memory](/articles/embedding-models-for-memory/) discusses this in detail.
+* **Semantic Search:** Using embedding models to find information semantically similar to a query, regardless of exact keywords. This is a cornerstone of many modern AI memory systems. [Embedding Models for Memory](/articles/embedding-models-for-rag/) discusses this in detail.
 * **Keyword Search:** Traditional text-based search, often augmented with techniques like TF-IDF or BM25.
 * **Hybrid Search:** Combining semantic and keyword search for more comprehensive results.
 * **Graph Traversal:** For systems using knowledge graphs, retrieving information by navigating relationships between entities.

@@ -22,6 +22,12 @@ faq:
 - question: Can AI agents forget information?
   answer: Yes, AI agents can forget information. This can be intentional (forgetting irrelevant data) or unintentional due to memory decay, capacity limits, or overwriting, depending on the memory architecture.
 slug: how-ai-memory-works
+aliases:
+- /articles/how-does-ai-memory-work/
+- /articles/memory-system-in-ai/
+- /articles/what-is-ai-memory/
+- /articles/what-is-ai-memory-called/
+- /articles/what-s-an-ai-memory-system/
 ---
 
 Imagine an AI assistant that doesn't just respond to your current command but remembers your preferences from last week, your past mistakes, and even the context of a conversation from yesterday. This ability to retain and recall information is the core of **how AI memory works**, moving AI from stateless tools to more capable, context-aware agents. Understanding AI memory is crucial for building sophisticated artificial intelligence.
@@ -50,7 +56,7 @@ For instance, during a conversation, STM holds the recent turns of dialogue, all
 
 **Long-term memory** (LTM) is where AI agents store information persistently for extended periods, enabling them to recall past experiences, learned knowledge, and previously encountered data. This component is vital for learning, adaptation, and maintaining a consistent persona or knowledge base across multiple interactions.
 
-Unlike STM, LTM has a much larger capacity and retains information more durably. This allows AI to draw upon a vast repository of knowledge, much like human long-term memory. Building effective [long-term memory AI agents](/articles/long-term-memory-ai-agent/) is a significant area of research.
+Unlike STM, LTM has a much larger capacity and retains information more durably. This allows AI to draw upon a vast repository of knowledge, much like human long-term memory. Building effective [long-term memory AI agents](/articles/ai-agent-long-term-memory/) is a significant area of research.
 
 ## Types of Memory in AI Agents
 
@@ -137,9 +143,9 @@ Tools like Hindsights, an open-source AI memory system, offer structured ways to
 
 **Embedding models** are fundamental to modern AI memory systems, especially those using vector databases. They convert text, images, or other data into dense numerical vectors that capture semantic meaning. This allows for efficient similarity searches.
 
-When an AI agent needs to recall information, it converts the query into an embedding and then searches its memory (often stored as vectors) for the most semantically similar pieces of information. This is the backbone of many RAG systems and enables sophisticated [embedding models for memory](/articles/embedding-models-for-memory/).
+When an AI agent needs to recall information, it converts the query into an embedding and then searches its memory (often stored as vectors) for the most semantically similar pieces of information. This is the backbone of many RAG systems and enables sophisticated [embedding models for memory](/articles/embedding-models-for-rag/).
 
-A 2024 study on [AI memory benchmarks](/articles/ai-memory-benchmarks/) showed that using advanced embedding models improved retrieval accuracy by up to 25% compared to simpler methods.
+A 2024 study on AI memory benchmarks showed that using advanced embedding models improved retrieval accuracy by up to 25% compared to simpler methods.
 
 ## Challenges and Future Directions
 
@@ -155,7 +161,7 @@ Just like biological memory, AI memory can suffer from **memory decay** or be in
 
 ### Scalability and Efficiency
 
-As AI agents interact with more data and perform more tasks, their memory stores can grow exponentially. Ensuring these systems are **scalable** and **efficient** in terms of storage, retrieval speed, and computational cost is a major engineering challenge. Exploring [best AI memory systems](/articles/best-ai-memory-systems/) often involves evaluating their scalability.
+As AI agents interact with more data and perform more tasks, their memory stores can grow exponentially. Ensuring these systems are **scalable** and **efficient** in terms of storage, retrieval speed, and computational cost is a major engineering challenge. Exploring [best AI memory systems](/articles/best-ai-memory-framework/) often involves evaluating their scalability.
 
 ### The Future of AI Memory
 
@@ -173,4 +179,4 @@ RAG enhances AI memory by enabling LLMs to retrieve relevant information from an
 
 ### What are some popular tools for implementing AI memory?
 
-Popular approaches include building custom solutions using vector databases and embedding models, or using frameworks and libraries that abstract memory management. Open-source systems like Hindsights and managed services from providers like Vectorize.io offer structured ways to implement [agent memory vs. RAG](/articles/agent-memory-vs-rag/) strategies.
+Popular approaches include building custom solutions using vector databases and embedding models, or using frameworks and libraries that abstract memory management. Open-source systems like Hindsights and managed services from providers like Vectorize.io offer structured ways to implement [agent memory vs. RAG](/articles/rag-vs-agent-memory/) strategies.

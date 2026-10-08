@@ -24,6 +24,9 @@ faq:
 - question: Are there specific technologies that form an AI memory MCP server?
   answer: Yes, common components include vector databases (for semantic search), LLMs (for processing), and potentially relational or key-value stores for structured data.
 slug: ai-memory-mcp-server
+aliases:
+- /articles/llm-memory-mcp/
+- /articles/llm-memory-mcp-server/
 ---
 
 
