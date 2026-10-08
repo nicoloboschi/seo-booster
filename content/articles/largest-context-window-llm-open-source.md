@@ -1,53 +1,19 @@
 ---
-title: 'Largest Context Window LLM Open Source: Pushing AI''s Memory Limits'
-description: Explore open-source LLMs with the largest context windows, enhancing AI memory and understanding complex information beyond current limitations. Discover key mode...
+title: "Largest Context Window Open-Source LLMs (Local, 2026)"
+description: "Open-weight LLMs with the largest context windows as of October 2026, how to run long context in Ollama and llama.cpp, and how much VRAM the KV cache needs."
 date: 2026-04-04
-lastmod: 2026-04-04
-tags:
-- LLM
-- Open Source
-- Context Window
-- AI Memory
-keywords:
-- largest context window llm open source
-- open source LLM context window
-- large context LLM
-- AI memory
-- long context LLM
-- AI agent memory
-- context window limitations
-- RAG vs agent memory
-- LLM context window
-- large context window
-- largest context window llm
-- largest context window llm 2024
-- llm context window
-- 1 million context window LLM
-- 1m context window local LLM
-faq:
-- question: What are the practical implications of an LLM having a 1 million token context window?
-  answer: A 1 million token context window allows an LLM to process and understand entire novels, extensive code repositories, or lengthy legal documents in a single pass. This dramatically improves its
-    ability to maintain coherence, recall specific details, and perform complex reasoning tasks that require grasping vast amounts of information simultaneously.
-- question: How does RAG complement LLMs with large context windows?
-  answer: RAG enhances LLMs with large context windows by providing a mechanism to efficiently retrieve relevant information from external knowledge bases. While the LLM can ingest a lot of data, RAG ensures
-    that the *most pertinent* data is identified and fed into the LLM's context, leading to more accurate and focused responses, especially for specialized domains.
-- question: Will LLMs eventually have unlimited context windows?
-  answer: While 'unlimited' is a strong word, research is pushing towards context windows that are practically sufficient for most real-world applications. The computational cost and efficiency of processing
-    extremely long contexts remain significant challenges, but future architectural and algorithmic breakthroughs may lead to models that can handle nearly any amount of information required.
-- question: What are the key challenges in implementing LLMs with large context windows?
-  answer: The primary challenges include significant computational costs for processing and inference, efficient memory management for retrieving relevant information from vast contexts, and the need for
-    specialized training strategies. Overcoming these is crucial for practical deployment.
-- question: What is the significance of the largest context window LLM open source for AI development?
-  answer: The largest context window LLM open source democratizes access to advanced AI capabilities. It allows developers to build more sophisticated AI agents that can understand and process vast amounts
-    of information, leading to more coherent, context-aware, and powerful applications without proprietary restrictions.
-- question: What is the difference between a large context window and traditional LLM memory?
-  answer: A large context window allows an LLM to process a vast amount of information *simultaneously* within a single input. Traditional LLM memory often refers to techniques like RAG or external databases
-    that store and retrieve information over time. A large context window enhances the LLM's ability to utilize information provided directly in its prompt or conversation history, complementing external
-    memory systems.
-- question: What is a "context window" in the context of LLMs?
-  answer: A context window refers to the maximum amount of text (measured in tokens) that an LLM can consider at any one time when processing input and generating output. A larger context window allows
-    the LLM to "remember" and process more information from the ongoing conversation or provided documents.
+lastmod: 2026-10-08
 slug: largest-context-window-llm-open-source
+cluster: context-windows
+tags: ["open source LLM", "context window", "local LLM", "Ollama", "llama.cpp", "KV cache"]
+keywords: ["largest context window llm open source", "largest context window local llm", "1m context window local llm", "ollama context length", "open source llm context window", "kv cache vram"]
+faq:
+  - question: "Which open-source LLM has the largest context window?"
+    answer: "As of October 2026, Llama 4 Scout has the largest advertised window among open-weight models at 10M tokens. Llama 4 Maverick, Kimi K3, DeepSeek V4, GLM-5.3 and MiniMax-M3 support about 1M tokens. Qwen3.6 and Qwen3.8 run 262,144 tokens natively and about 1M with YaRN."
+  - question: "Why does Ollama use a small context window by default?"
+    answer: "Ollama picks the default from your GPU memory: 4K tokens under 24 GiB of VRAM, 32K between 24 and 48 GiB, and 256K at 48 GiB or more. Raise it with the OLLAMA_CONTEXT_LENGTH environment variable or the num_ctx option, and check the result with ollama ps."
+  - question: "How much VRAM does a long context window need?"
+    answer: "The KV cache grows linearly with context. For Qwen3-8B at 16-bit precision it's about 144 KiB per token, so 131,072 tokens need about 18 GiB on top of the model weights. Qwen's model card says Qwen2.5-7B-Instruct-1M needs at least 120 GB of VRAM for 1M-token sequences."
 aliases:
 - /articles/1m-context-window-local-llm/
 - /articles/anything-llm-context-window/
@@ -61,148 +27,142 @@ aliases:
 - /articles/largest-context-window-local-llm/
 ---
 
+The **largest context window open-source LLM** as of October 2026 is **Llama 4 Scout**, with 10M tokens. A wider group supports about 1M: Llama 4 Maverick, Kimi K3, DeepSeek V4, GLM-5.3 and MiniMax-M3. Qwen3.6 and Qwen3.8 run 262,144 tokens natively. Running any of them at full length locally is limited by GPU memory, not the model card.
 
-Imagine an AI that can read an entire novel and recall every detail; this is the promise of open-source LLMs with the largest context windows. The **largest context window LLM open source** refers to publicly available AI models that can process and retain the most information in a single input, significantly boosting their understanding of complex data and extended dialogues. These models are crucial for AI agents requiring coherent, context-aware interactions across vast datasets.
+This page lists the open-weight models with the most context, explains why long context eats VRAM, and shows the exact settings for Ollama and llama.cpp. For hosted models, see the [LLM context window comparison](/articles/context-window-llm-ranking/).
 
-## What is the Largest Context Window LLM Open Source?
+## What is the largest context window open-source LLM?
 
-The **largest context window LLM open source** refers to publicly available Large Language Models that can process and retain the greatest amount of information within a single input. This capability significantly enhances an AI's ability to understand complex narratives, recall details from lengthy documents, and maintain conversational coherence across extended interactions. Understanding the **open source LLM context window** is key to using these advanced capabilities.
+**Llama 4 Scout is the open-weight model with the largest context window, at 10M tokens, according to Meta's model card.** It's a mixture-of-experts model with 109B total and 17B active parameters, released under the Llama 4 Community License. Its sibling Llama 4 Maverick (400B total, 17B active) supports 1M tokens.
 
-### The Significance of Context Windows in AI Memory
+A note on terms: most of these are **open-weight** models. You can download and run the weights, but the licenses differ. Qwen's 27B models, Gemma 4, Mistral Small 4 and gpt-oss use Apache 2.0; DeepSeek uses MIT; Llama, Kimi, GLM and MiniMax use their own licenses with extra conditions. Read the license before you ship.
 
-The **context window** is a fundamental constraint for Large Language Models (LLMs). It dictates how much data the model can "see" and process at any given moment. A larger context window means an AI can consider more information from a prompt, document, or conversation history. This is directly related to how well an AI can remember and use information, a core aspect of [AI agent memory explained](/articles/ai-agent-memory-explained/). The **LLM context window** size is a critical metric for evaluating an AI's potential.
+## Open-weight LLM context window table
 
-For AI agents, this translates to a more informed and capable system. Imagine an AI assistant trying to summarize a novel; a small context window would force it to process the book in small chunks, potentially losing the overarching plot. A large context window allows it to ingest more of the narrative at once, leading to a more accurate and nuanced summary. This is a key differentiator when comparing [RAG vs. agent memory](/articles/rag-vs-agent-memory/).
+| Model | Parameters (total / active) | Context window | License | In Ollama library |
+|---|---|---|---|---|
+| Llama 4 Scout | 109B / 17B | 10M | Llama 4 Community | `llama4` |
+| Llama 4 Maverick | 400B / 17B | 1M | Llama 4 Community | `llama4` |
+| Kimi K3 | 2.8T / 104B | 1M | Kimi K3 License | `kimi-k3` (cloud) |
+| DeepSeek-V4.1-Flash | 552B backbone | up to 1M | MIT | not checked |
+| DeepSeek-V4-Pro-0813 | not stated in card | 1,048,576 (config) | MIT | not checked |
+| GLM-5.3 | not checked | 1,048,576 (config) | GLM-5.3 license | `glm-5.3` |
+| MiniMax-M3 | ~428B / ~23B | 1M | MiniMax community | not checked |
+| Qwen3.8-27B | 27B dense | 262,144 native, 1M with YaRN | Apache 2.0 | `qwen3.8` |
+| Qwen3.6-35B-A3B | 35B / 3B | 262,144 native, 1,010,000 with YaRN | Apache 2.0 | `qwen3.6` |
+| Qwen3.6-27B | 27B dense | 262,144 native, 1,010,000 with YaRN | Apache 2.0 | `qwen3.6` |
+| Mistral Small 4 | 119B / 6.5B | 256K | Apache 2.0 | not checked |
+| Mistral Medium 3.5 | 128B dense | 256K | Modified MIT | not checked |
+| Mistral Large 3 | 675B / 41B | 256K | Apache 2.0 | not checked |
+| Gemma 4 12B, 31B, 26B MoE | 12B / 31B / 25.2B | 256K | Apache 2.0 | `gemma4` |
+| Gemma 4 E2B, E4B | small | 128K | Apache 2.0 | `gemma4` |
+| gpt-oss-120b, gpt-oss-20b | 117B / 5.1B; 21B / 3.6B | 131,072 | Apache 2.0 | `gpt-oss` |
 
-### Breaking the Token Barrier: Recent Advances in Large Context LLMs
+*As of October 2026. Sources: each model's official Hugging Face card and config (for example [Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B), [DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash), [Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)) and the [Ollama library](https://ollama.com/library).*
 
-Historically, LLMs were limited to a few thousand tokens. However, breakthroughs in architecture and training techniques have dramatically expanded this. Models now exist with context windows in the hundreds of thousands, even millions, of tokens. This leap is critical for applications needing to process entire books, codebases, or extensive research papers. The quest for the **largest context window LLM** is a rapidly evolving field.
+The models that fit on one consumer GPU are the small and mid-size ones: Gemma 4, Qwen3.6, Qwen3.8-27B, gpt-oss-20b. The 1M-token giants (Kimi K3, DeepSeek V4, GLM-5.3, MiniMax-M3) need multi-GPU servers, and in Ollama some are offered as cloud models rather than local downloads.
 
-This expansion directly addresses the [context window limitations and solutions](/articles/context-window-limitations-solutions/) that previously hampered AI development. The availability of these powerful models in open-source formats democratizes access to advanced AI capabilities, making the **largest context window LLM open source** accessible to more developers.
+## The real cost of long context: KV cache VRAM
 
-## Open Source LLMs Pushing Context Window Boundaries
+The model weights are a fixed cost. The **KV cache** is the cost that grows with context. For every token in the window, each attention layer stores a key vector and a value vector so it doesn't have to recompute them.
 
-Several open-source LLMs are leading the charge in expanding context windows, offering developers powerful tools without proprietary restrictions. These models are often built upon innovative architectural modifications or training methodologies, pushing the boundaries of what's possible with the **largest context window LLM open source**.
+The formula for a standard attention model is:
 
-### Key Models Leading the Charge for Large Context LLMs
+**KV cache bytes = 2 × layers × KV heads × head size × bytes per value × tokens**
 
-The race for larger context windows has seen models achieve and surpass the one million token mark. Projects like **Mistral AI's models** (often fine-tuned for longer contexts) and research initiatives demonstrate the feasibility of handling vast amounts of data. The pursuit of the **largest context window LLM 2024** has yielded impressive results.
+### A worked example with Qwen3-8B
 
-For instance, fine-tuned versions of models like Llama have been shown to support contexts exceeding 100,000 tokens, and experimental versions push this even further. These efforts are vital for applications needing to understand extensive legal documents or complex scientific literature. The development of models like the [1 million context window LLM](/articles/context-window-llm-ranking/) is a significant milestone for the **largest context window LLM open source** community.
-
-### Architectural Innovations Enabling Scale for Open Source LLM Context Window
-
-Innovations like **Ring Attention** and **Sliding Window Attention** are crucial for enabling these massive context windows efficiently. Traditional attention mechanisms become computationally prohibitive with very long sequences. These new methods optimize the attention calculation, making it feasible to process more tokens without an exponential increase in computation. The **large context window** is a direct result of these advancements.
-
-* **Ring Attention** distributes the attention computation across multiple devices, allowing for larger effective context windows than a single device could handle.
-* **Sliding Window Attention** limits the attention scope to a local window, but with mechanisms to incorporate global information, striking a balance between efficiency and thorough understanding.
-
-These architectural improvements are key to unlocking the potential of models like those discussed in 1m context window local LLM discussions. The Transformer architecture, introduced in the paper "[Attention Is All You Need](https://arxiv.org/abs/1706.03762)", laid the groundwork for these advancements in **open source LLM context window** research.
-
-### Training Strategies for Long Context
-
-Beyond architecture, specialized training strategies are employed. This includes **curriculum learning**, where models are first trained on shorter sequences and gradually exposed to longer ones. Techniques like **positional encoding** adaptations are also vital to ensure the model can effectively differentiate token positions in extremely long sequences.
-
-According to a 2024 paper on arXiv, specialized training regimes focusing on long-context retrieval demonstrated up to a **40% improvement in recall accuracy** on tasks requiring understanding of lengthy, complex documents compared to models trained with standard methods. This highlights the importance of training for **large context LLM** performance.
-
-## Impact on AI Agent Capabilities with Large Context LLMs
-
-The availability of **open-source LLMs with large context windows** has a profound impact on the development of sophisticated AI agents. These agents can now engage in more meaningful, extended interactions and perform complex reasoning tasks that were previously impossible, making the **largest context window LLM open source** a critical component.
-
-### Enhanced Conversational AI and AI Memory
-
-For AI assistants and chatbots, a larger context window means they can remember more of the conversation. This leads to a more natural and less repetitive user experience. An AI that remembers previous turns in a conversation can provide more relevant and personalized responses, akin to what's discussed in [AI that remembers conversations](/articles/best-chatbot-for-memory/).
-
-This capability is crucial for building AI agents that exhibit **persistent memory**, allowing them to learn and adapt over time without constant retraining. This is a key benefit of the **largest open source LLM context**.
-
-### Advanced Information Retrieval and Analysis with Long Context LLMs
-
-In fields like legal tech, finance, or scientific research, agents can now ingest entire reports, case files, or research papers. This enables them to perform advanced **semantic search**, identify intricate relationships between data points, and generate detailed analyses. This aligns with the principles of [embedding models for memory](/articles/embedding-models-for-rag/) and their application in understanding large datasets.
-
-The ability to process such extensive information is a significant step towards realizing AI agents with true **long-term memory** and the capacity for deep, contextual understanding, a hallmark of the **largest context window LLM open source**.
-
-### Complex Task Execution with Open Source LLM Context Window
-
-Agents designed for complex tasks, such as software development, strategic planning, or scientific discovery, benefit immensely. They can maintain a broader understanding of the project scope, dependencies, and historical context, leading to more effective problem-solving and decision-making. This is a core component of [agentic AI long-term memory](/articles/ai-agent-long-term-memory/).
-
-## Challenges and Future Directions for Large Context LLMs
-
-Despite the exciting progress, challenges remain in scaling and efficiently using these massive context windows, even for the **largest context window LLM open source**.
-
-### Computational Costs for Large Context LLMs
-
-Processing millions of tokens is computationally intensive. While architectural innovations help, the sheer scale of computation and memory required can still be a barrier, especially for real-time applications. Efficient inference is a major area of ongoing research for **large context LLM** development.
-
-### Memory Management and Retrieval in Open Source LLM Context Window
-
-Even with a large context window, effectively retrieving the *right* information from that vast context is crucial. This is where techniques like **Retrieval-Augmented Generation (RAG)** become even more important, often working in conjunction with the LLM's inherent context window. For a deeper dive, explore our guide to RAG and retrieval.
-
-While RAG typically operates by retrieving chunks from an external database, the LLM's large context window can then ingest these chunks along with the query, allowing for richer synthesis. This interplay is key to developing sophisticated [LLM memory systems](/articles/how-llm-memory-works/).
-
-Here's a Python example demonstrating how you might load a model that supports a large context window, assuming you're using a library like `transformers`:
+Qwen3-8B's config lists 36 layers, 8 KV heads and a head size of 128, stored at 16 bits (2 bytes):
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+def kv_cache_gib(layers, kv_heads, head_dim, tokens, bytes_per_value=2):
+    # 2 = one key and one value vector per layer, per KV head, per token
+    return 2 * layers * kv_heads * head_dim * bytes_per_value * tokens / 1024**3
 
-## Replace with a specific model known for large context windows
-model_name = "mistralai/Mistral-7B-Instruct-v0.1" # Example, actual large context models may vary
-
-try:
- tokenizer = AutoTokenizer.from_pretrained(model_name)
- # Specify a larger max_position_embeddings if the model config allows
- # This often requires model-specific configuration or fine-tuning
- model = AutoModelForCausalLM.from_pretrained(
- model_name,
- # Example of how one might attempt to set a larger context,
- # but this is highly model-dependent and might not work directly.
- # Actual large context models often have this built-in or require specific loading args.
- # max_position_embeddings=8192 # Example value, adjust as needed for the model
- )
- print(f"Model {model_name} loaded successfully.")
- print(f"Tokenizer max length: {tokenizer.model_max_length}")
-
- # Example of preparing a long input
- long_text = "This is the beginning of a very long text..." * 1000
- inputs = tokenizer(long_text, return_tensors="pt", max_length=tokenizer.model_max_length, truncation=True)
- print(f"Input token count: {inputs['input_ids'].shape[1]}")
-
-except Exception as e:
- print(f"Error loading model or tokenizer: {e}")
- print("Please ensure the model name is correct and you have the necessary libraries installed.")
-
+for ctx in (4_096, 32_768, 131_072):
+    print(ctx, round(kv_cache_gib(36, 8, 128, ctx), 2), "GiB")
+# 4096 0.56 GiB
+# 32768 4.5 GiB
+# 131072 18.0 GiB
 ```
 
-### Open Source Memory Systems for Large Context LLMs
+That's 144 KiB per token. At 131,072 tokens (Qwen3-8B's maximum with YaRN, per its card), the cache alone needs 18 GiB. The weights add about 16 GB more at 16-bit precision (8B parameters × 2 bytes), less when quantized.
 
-Tools like Hindsight are emerging to help manage and query memory for AI agents, complementing the capabilities of LLMs with large context windows. Hindsight provides a framework for organizing and retrieving memories, which can be particularly useful when dealing with the vast amount of information an LLM can process. You can explore Hindsight on GitHub: [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight).
+At 1M tokens it gets much worse. Qwen's own card for Qwen2.5-7B-Instruct-1M says it needs "at least 120GB VRAM (total across GPUs)" for 1M-token sequences, and the 14B version needs at least 320 GB ([Qwen2.5-1M card](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-1M)).
 
-Further research is focused on optimizing inference speed, developing more efficient memory consolidation techniques, and creating benchmarks to accurately measure the performance of LLMs with extended context. According to estimates from Wikipedia, the growth of large language models is driving significant advancements in natural language processing, especially for **open source LLM context window** development.
+### How newer models cut the cost
 
-## Conclusion
+Model makers attack this with attention designs that store less per token:
 
-The development of **open-source LLMs with the largest context windows** marks a significant advancement in artificial intelligence. These models are breaking down previous barriers to AI comprehension and memory, enabling more sophisticated and capable AI agents. As research continues, we can expect even larger context windows and more efficient processing, further blurring the lines between AI and human-like understanding.
+- **Sliding window layers.** Gemma 4 interleaves local attention over a 512- or 1,024-token window with full global layers, per its model card. Local layers only cache the window, not the whole context.
+- **Sparse attention.** MiniMax-M3 uses MiniMax Sparse Attention; its card reports 9× faster prefill and 15× faster decode than MiniMax-M2 at 1M context. DeepSeek-V4.1-Flash uses a compressed sparse attention scheme.
+- **Grouped KV heads.** Most current models share KV heads across query heads (Qwen3-8B has 32 query heads but 8 KV heads), which cuts the cache 4×.
 
-The ongoing evolution of these models, particularly in the open-source community, promises to accelerate innovation across a wide range of AI applications, from advanced conversational agents to powerful analytical tools, solidifying the importance of the **largest context window LLM open source**.
+Because of these designs, the simple formula overstates the cache for hybrid models. Use it for standard attention models and as an upper bound for the rest.
 
-## FAQ
+## How to run a long context window in Ollama
 
-### What are the practical implications of an LLM having a 1 million token context window?
-A 1 million token context window allows an LLM to process and understand entire novels, extensive code repositories, or lengthy legal documents in a single pass. This dramatically improves its ability to maintain coherence, recall specific details, and perform complex reasoning tasks that require grasping vast amounts of information simultaneously.
+[Ollama](https://docs.ollama.com/context-length) doesn't load a model's full context by default. It picks the default from your VRAM: 4K tokens under 24 GiB, 32K from 24 to 48 GiB, and 256K at 48 GiB or more. Cloud models default to their maximum.
 
-### How does RAG complement LLMs with large context windows?
-RAG enhances LLMs with large context windows by providing a mechanism to efficiently retrieve relevant information from external knowledge bases. While the LLM can ingest a lot of data, RAG ensures that the *most pertinent* data is identified and fed into the LLM's context, leading to more accurate and focused responses, especially for specialized domains.
+Steps to raise it:
 
-### Will LLMs eventually have unlimited context windows?
-While "unlimited" is a strong word, research is pushing towards context windows that are practically sufficient for most real-world applications. The computational cost and efficiency of processing extremely long contexts remain significant challenges, but future architectural and algorithmic breakthroughs may lead to models that can handle nearly any amount of information required.
+1. **Check your VRAM** and estimate the KV cache with the formula above.
+2. **Set a server-wide default:** `OLLAMA_CONTEXT_LENGTH=64000 ollama serve`.
+3. **Or set it per session** in `ollama run` with `/set parameter num_ctx 64000`.
+4. **Or set it per request** with the `num_ctx` option in the API.
+5. **Turn on flash attention** if it isn't automatic: `OLLAMA_FLASH_ATTENTION=1`. Ollama's FAQ says it "can significantly reduce memory usage as the context size grows."
+6. **Quantize the KV cache** with `OLLAMA_KV_CACHE_TYPE=q8_0` (about half the memory of `f16`) or `q4_0` (about a quarter, with more precision loss at long context). This needs flash attention and applies to all models.
+7. **Confirm with `ollama ps`.** The `CONTEXT` column shows what was allocated, and `PROCESSOR` shows whether part of the model spilled to CPU.
 
-### What are the key challenges in implementing LLMs with large context windows?
-The primary challenges include significant computational costs for processing and inference, efficient memory management for retrieving relevant information from vast contexts, and the need for specialized training strategies. Overcoming these is crucial for practical deployment.
+Per-request context from Python, using the official `ollama` package:
 
-### What is the significance of the largest context window LLM open source for AI development?
-The largest context window LLM open source democratizes access to advanced AI capabilities. It allows developers to build more sophisticated AI agents that can understand and process vast amounts of information, leading to more coherent, context-aware, and powerful applications without proprietary restrictions.
+```python
+import ollama
 
-### What is the difference between a large context window and traditional LLM memory?
-A large context window allows an LLM to process a vast amount of information *simultaneously* within a single input. Traditional LLM memory often refers to techniques like RAG or external databases that store and retrieve information over time. A large context window enhances the LLM's ability to use information provided directly in its prompt or conversation history, complementing external memory systems.
+with open("contract.txt") as f:
+    contract = f.read()
 
-### What is a "context window" in the context of LLMs?
-A context window refers to the maximum amount of text (measured in tokens) that an LLM can consider at any one time when processing input and generating output. A larger context window allows the LLM to "remember" and process more information from the ongoing conversation or provided documents.
+response = ollama.chat(
+    model="qwen3.6",
+    messages=[{"role": "user", "content": contract + "\n\nList every termination clause."}],
+    options={"num_ctx": 65536},  # tokens to allocate for this request
+)
+print(response.message.content)
+```
+
+If the prompt is longer than `num_ctx`, it won't fit in full, so set it above your longest expected input plus output. Ollama's docs recommend using the model's maximum context when you can and avoiding CPU offloading, since layers that spill to system RAM run much slower than on the GPU.
+
+## How to run a long context window in llama.cpp
+
+[llama.cpp's server](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md) exposes the same controls as flags:
+
+- `-c, --ctx-size N`: context size. The default `0` loads the value from the model.
+- `-fa, --flash-attn on|off|auto`: flash attention, `auto` by default.
+- `-ctk` and `-ctv`: KV cache type for keys and values (`f16` default; `q8_0`, `q4_0` and others allowed).
+- `-np, --parallel N`: number of slots. Each slot needs its own share of the context.
+- `--rope-scaling yarn`, `--rope-scale N`, `--yarn-orig-ctx N`: extend a model past its native length.
+
+Qwen's card for Qwen3-8B gives the exact command to reach 131,072 tokens with YaRN:
+
+```bash
+llama-server -m qwen3-8b.gguf -c 131072 -fa on -ctk q8_0 -ctv q8_0 \
+  --rope-scaling yarn --rope-scale 4 --yarn-orig-ctx 32768
+```
+
+The `--rope-scaling` part comes from the Qwen card; the cache flags are optional. Qwen warns that the static YaRN in common frameworks keeps the scaling factor fixed regardless of input length, "potentially impacting performance on shorter texts," so only enable it when you need the extra length.
+
+## Free and local options for the largest context
+
+The open-weight models above cost nothing to download, so the "free" largest context window is really a hardware question:
+
+- **Under 24 GiB of VRAM:** Ollama defaults to 4K tokens. By the formula above, a quantized 8B model plus a 64K-token `q8_0` cache (about 4.5 GiB for Qwen3-8B) can fit, but measure with `ollama ps`.
+- **48 GiB or more:** Ollama's default rises to 256K tokens, which matches the native windows of Gemma 4 and Qwen3.6.
+- **1M tokens and up:** multi-GPU servers. Qwen2.5-7B-Instruct-1M alone needs at least 120 GB at full length.
+
+Front ends that sit on top of Ollama or llama.cpp work within whatever context the backend allocates. If a chat app "forgets" early messages, check `ollama ps` before blaming the model.
+
+## When long context isn't the answer locally
+
+Long context on a local GPU is slow to fill and expensive in memory. For most local agents, it's cheaper to keep a short window and store history outside the model. Our guide on [how to give a local LLM memory](/articles/how-to-give-local-llm-memory/) covers that route, and [context window limitations and solutions](/articles/context-window-limitations-solutions/) explains why accuracy also falls as the window fills.
+
+For the basics of tokens, input and output, start with [what the context window of an LLM is](/articles/context-window-of-an-llm/).

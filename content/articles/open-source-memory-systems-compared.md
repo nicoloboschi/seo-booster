@@ -1,25 +1,8 @@
 ---
-title: A Comparative Analysis of Open Source AI Memory Systems
-description: A Comparative Analysis of Open Source AI Memory Systems. Learn about open source memory systems, mem0 alternative with practical examples, code snippets, and arch...
+title: "Open Source AI Memory Systems Compared: GitHub Repos"
+description: "Open-source AI memory systems compared: GitHub repos, licenses, stars (Oct 2026), languages and what each is good at. Mem0, Graphiti, Cognee, Hindsight."
 date: 2026-03-24
-tags:
-- AI Memory
-- Open Source
-- Agent Architectures
-keywords:
-- open source memory systems
-- mem0 alternative
-- letta alternative
-- zep alternative
-- memory framework comparison
-faq:
-- question: What are the key components of an open source AI memory system?
-  answer: Key components typically include data ingestion and storage, retrieval mechanisms (e.g., semantic search, keyword search), memory management (e.g., forgetting, consolidation), and integration
-    APIs for AI agents.
-- question: How do open source memory systems differ in their approach to memory?
-  answer: Differences lie in their underlying data structures, retrieval algorithms, memory consolidation strategies, and the specific types of memory they aim to represent (e.g., episodic, semantic, procedural).
-- question: What are the advantages of using an open source memory system?
-  answer: Advantages include cost-effectiveness, transparency, flexibility, community support, and the ability to customize and extend the system to meet specific AI agent needs.
+lastmod: 2026-10-08
 slug: open-source-memory-systems-compared
 aliases:
 - /articles/agent-memory-framework-github/
@@ -34,219 +17,149 @@ aliases:
 - /articles/llm-memory-open-source/
 - /articles/open-source-agent-memory-framework/
 - /articles/open-source-ai-memory-system/
+tags:
+- Open Source
+- AI Agent Memory
+- LLM Memory
+- GitHub
+keywords:
+- open source memory systems
+- open source ai memory
+- open source agent memory framework
+- llm memory github
+- best open source llm memory
+- llm memory bank github
+cluster: agent-memory
+faq:
+- question: "What is the most popular open-source AI memory system on GitHub?"
+  answer: "As of 8 October 2026, Mem0 (mem0ai/mem0) has the most GitHub stars of the dedicated memory projects at about 66,800, followed by Hindsight (about 47,000), Cognee and Graphiti (about 31,500 each) and Supermemory (about 31,200). Stars measure attention, not quality or fit."
+- question: "Which open-source memory systems are fully open, with no paid-only core?"
+  answer: "Graphiti, Hindsight, LangMem, Letta Code and Cognee's core can all be self-hosted from source under Apache-2.0 or MIT. Watch for open-core limits: Mem0 moved graph memory to its paid platform, Cognee's Postgres graph backend is a demo with a licensed production version, and Supermemory's local server is a free binary whose source isn't public."
+- question: "What is an LLM memory bank?"
+  answer: "A memory bank is an isolated store of memories for one user, agent or project. The term comes from the MemoryBank paper (Zhong et al., 2023) and is used by Hindsight (memory banks), Google's Vertex AI Agent Engine (Memory Bank) and several coding-agent setups that keep project notes in markdown files."
 ---
 
+The leading **open-source AI memory systems** on GitHub are Mem0, Hindsight, Graphiti, Cognee, Letta, LangMem, MemOS, Memori, Honcho, Basic Memory and Memobase. Most are Apache-2.0 or MIT, written in Python, and self-hostable with Docker. They differ in storage (vectors, graphs, files), in how much is truly open versus paid, and in what they're built for.
 
-The development of sophisticated AI agents hinges on their ability to effectively perceive, process, and retain information. This capacity for memory is not merely a storage function; it encompasses understanding context, recalling relevant past experiences, and using this information to inform future actions. As AI systems become more complex, so too does the need for robust and adaptable memory architectures. In this landscape, **open source memory systems** are emerging as critical enablers, offering transparency, flexibility, and community-driven innovation.
+This page covers only open-source projects: repos, licenses, stars, languages and strengths. Star counts and licenses come from the GitHub API on **8 October 2026**. For hosted options and benchmarks, see the [LLM memory comparison](/articles/llm-memory-comparison/). For background, see [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-This article provides a comparative analysis of various open source memory systems, exploring their underlying philosophies, architectural patterns, and functional capabilities. We will delve into how these systems address the challenges of managing vast amounts of data, enabling efficient retrieval, and supporting nuanced reasoning for AI agents. While examining the broader ecosystem, we will also highlight specific approaches, such as that taken by Hindsight, as one example within this diverse field.
+## What is an open-source AI memory system?
 
-## The Imperative for AI Memory
+**An open-source AI memory system is a library or server, published under an open license, that stores what an LLM agent learns from conversations and work, then retrieves relevant memories into later prompts.** You can read the code, run it on your own infrastructure, and keep memory data under your control. Most also offer a paid hosted version.
 
-Before diving into specific systems, it's crucial to understand why memory is fundamental to AI agents. As discussed in [AI Agent Memory Explained](/articles/ai-agent-memory-explained/), memory allows agents to:
+## Open-source memory systems on GitHub: the table
 
-* **Maintain State:** Track ongoing conversations, task progress, and environmental changes.
-* **Learn and Adapt:** Incorporate new information and experiences to refine behavior.
-* **Reason and Plan:** Access past events and knowledge to make informed decisions.
-* **Provide Context:** Understand the current situation based on historical data.
-* **Personalize Interactions:** Tailor responses and actions based on individual user history or agent experiences.
+| Project | Repo | License | Stars (8 Oct 2026) | Main language | Good at |
+|---|---|---|---|---|---|
+| Mem0 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | Apache-2.0 | 66,802 | Python | Drop-in user, session and agent memory for chat apps |
+| Hindsight | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | MIT | 47,001 | Python | Agents that learn over time; fact vs experience separation, `reflect` |
+| Cognee | [topoteretes/cognee](https://github.com/topoteretes/cognee) | Apache-2.0 | 31,588 | Python | Knowledge graphs from docs, code and conversations; runs without an LLM key |
+| Graphiti | [getzep/graphiti](https://github.com/getzep/graphiti) | Apache-2.0 | 31,541 | Python | Temporal knowledge graphs where facts have validity windows |
+| Supermemory | [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | MIT (see note) | 31,155 | TypeScript | Memory + RAG + connectors behind one API; coding-agent plugins |
+| Letta | [letta-ai/letta](https://github.com/letta-ai/letta) / [letta-code](https://github.com/letta-ai/letta-code) | Apache-2.0 | 25,073 / 3,543 | TypeScript (letta-code) | Stateful agents that edit their own memory, skills and prompts |
+| Memori | [MemoriLabs/Memori](https://github.com/MemoriLabs/Memori) | Apache-2.0 | 17,103 | Python | Memory on your existing SQL database through a wrapped LLM client |
+| MemOS | [MemTensor/MemOS](https://github.com/MemTensor/MemOS) | Apache-2.0 | 11,754 | TypeScript (per GitHub) | Memory "operating system" with memory cubes, skill reuse, OpenClaw/Hermes plugins |
+| Honcho | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) | AGPL-3.0 | 7,519 | Python | Modeling users, agents and groups ("peers") over time |
+| Basic Memory | [basicmachines-co/basic-memory](https://github.com/basicmachines-co/basic-memory) | AGPL-3.0 | 4,115 | Python | Local markdown knowledge base shared by you and your AI over MCP |
+| Memobase | [memodb-io/memobase](https://github.com/memodb-io/memobase) | Apache-2.0 | 2,925 | Python | User profiles and event timelines for chatbots, low-latency reads |
+| Microsoft Kernel Memory | [microsoft/kernel-memory](https://github.com/microsoft/kernel-memory) | MIT | 2,233 | C# | .NET memory and RAG; labeled a research project |
+| LangMem | [langchain-ai/langmem](https://github.com/langchain-ai/langmem) | MIT | 1,697 | Python | Memory tools and background manager for LangGraph agents |
+| MemoryOS | [BAI-LAB/MemoryOS](https://github.com/BAI-LAB/MemoryOS) | Apache-2.0 | 1,594 | Python | Research system (EMNLP 2025 Oral) for personalized agent memory |
 
-The types of memory relevant to AI agents are varied and often mirror human cognitive functions, including:
+Stars measure attention, not quality. LangMem has few stars because it ships as part of the LangChain ecosystem; Letta's older `letta` repo holds most of its stars while new work happens in `letta-code`. One project with a familiar name, [Memary](https://github.com/kingjulio8238/Memary), hasn't had a commit since October 2024.
 
-* **Episodic Memory:** Recalling specific events and experiences with temporal and contextual details.
-* **Semantic Memory:** Storing general knowledge, facts, and concepts.
-* **Procedural Memory:** Encoding skills and how to perform tasks.
-* **Working Memory:** Holding and manipulating information actively for immediate use.
+## How open is "open source"? Read the fine print
 
-The design of an AI memory system directly impacts an agent's ability to use these memory types.
+Several projects are **open core**: the repo is open, but some features or the best-performing version are paid. Check these before you build on one.
 
-## Architectural Considerations in Open Source Memory Systems
+- **Mem0:** graph memory was removed from the open-source SDK in v3 and "is not being replaced by an OSS equivalent." Mem0 also says its April 2026 benchmark scores come from the managed platform with "proprietary optimizations not available in the open-source SDK."
+- **Zep:** Zep Community Edition is deprecated and moved to a `legacy/` folder. **Graphiti** is the open-source part; Zep itself is a managed service.
+- **Supermemory:** the repo is MIT, but its self-hosting docs say the local server's "source is not in the public repository." It's a free binary under a "lite license," not code you can build.
+- **Cognee:** the core is Apache-2.0, but running the graph store on Postgres is a demo; "the production-ready version is available as a licensed product."
+- **Letta:** the Letta V1 API server is retired to an `archive` branch. Current development is the Letta Code harness, which defaults to Letta Cloud but has a local backend.
+- **Hindsight:** MIT; its pricing page lists self-hosting as free with no usage limits. The paid part is the managed cloud.
+- **AGPL projects (Honcho, Basic Memory):** free to self-host, but if you modify them and offer them as a network service, AGPL-3.0 requires you to publish your changes. Many companies' legal teams treat AGPL differently from MIT or Apache.
 
-Open source memory systems, like proprietary solutions, are built upon core architectural principles. Understanding these principles is key to comparing different frameworks.
+## What each open-source memory system is built for
 
-### Data Ingestion and Storage
+### Mem0
 
-The first step for any memory system is acquiring and storing information. Open source systems employ diverse strategies:
+Extracts facts from conversations and stores them per user, session or agent. Runs as a library (local Qdrant and SQLite by default), a Docker server (Postgres + pgvector), or Mem0's cloud. Hybrid BM25 and entity search need the `[nlp]` extra. Good first choice for chat personalization. More in [what is Mem0](/articles/what-is-mem0-ai/) and [Mem0 alternatives](/articles/mem0-alternatives-compared/).
 
-* **Vector Databases:** Many modern systems use vector embeddings to represent information semantically. These databases are optimized for storing and querying high-dimensional vectors, enabling efficient similarity searches. Examples include Pinecone (though not open source, it's a common comparison point), Weaviate, and Milvus.
-* **Relational Databases:** For structured or semi-structured data, traditional relational databases (e.g., PostgreSQL, SQLite) or NoSQL databases (e.g., MongoDB) can be used, often in conjunction with embedding stores.
-* **Graph Databases:** Representing relationships between entities can be crucial for complex reasoning. Graph databases (e.g., Neo4j) can be integrated for storing and querying knowledge graphs.
-* **Key-Value Stores:** Simple and fast for storing discrete pieces of information.
+### Hindsight
 
-### Retrieval Mechanisms
+Built by Vectorize. Organizes memory into world facts, the agent's experiences, consolidated observations and mental models, with `retain`, `recall` and `reflect` operations. Recall runs semantic, BM25, graph and temporal search in parallel. Ships as Docker, pip, Helm or an embedded Python package, with clients for Python, Node.js, Go and a CLI, and a built-in MCP endpoint per bank. Its own README says it may be overkill for simple workflows. Described in the paper [Hindsight is 20/20](https://arxiv.org/abs/2512.12818).
 
-Efficiently retrieving relevant information is paramount. Common retrieval methods include:
+### Graphiti
 
-* **Semantic Search:** Using embedding models to find information semantically similar to a query, regardless of exact keywords. This is a cornerstone of many modern AI memory systems. [Embedding Models for Memory](/articles/embedding-models-for-rag/) discusses this in detail.
-* **Keyword Search:** Traditional text-based search, often augmented with techniques like TF-IDF or BM25.
-* **Hybrid Search:** Combining semantic and keyword search for more comprehensive results.
-* **Graph Traversal:** For systems using knowledge graphs, retrieving information by navigating relationships between entities.
+Builds temporal knowledge graphs: entities, facts with validity windows, and the raw episodes they came from. Old facts are invalidated, not deleted, so you can query past states. Needs a graph database (Neo4j, FalkorDB or Amazon Neptune; Kuzu support is deprecated). Includes an MCP server. See [Zep alternatives](/articles/zep-alternatives/) and [knowledge graphs for AI memory](/articles/ai-memory-knowledge-graph/).
 
-### Memory Management and Dynamics
+### Cognee
 
-A static repository of information is insufficient. Effective memory systems must manage the lifecycle of information:
+Turns text, code and conversations into a graph plus vector index, with file-based defaults (SQLite, LanceDB, Kuzu) so it runs with no setup. Version 1.6.0 (September 2026) added keyless workflows using local models. It has plugins for Claude Code, Codex and OpenClaw. See [Mem0 vs Cognee](/articles/mem0-vs-cognee/) and [Cognee alternatives](/articles/cognee-alternatives/).
 
-* **Forgetting Mechanisms:** Implementing strategies to discard outdated, irrelevant, or redundant information to maintain efficiency and focus. This can be based on recency, relevance scores, or explicit user/agent commands.
-* **Memory Consolidation:** Processes that refine, summarize, or integrate new information with existing knowledge. This can involve techniques like summarization or clustering of similar memories. [Memory Consolidation in AI Agents](/articles/memory-consolidation-ai-agents/) explores this further.
-* **Contextualization:** Associating memories with their temporal, spatial, or conversational context to aid retrieval and understanding. [Temporal Reasoning in AI Memory](/articles/temporal-reasoning-ai-memory/) is relevant here.
+### Supermemory
 
-### Integration and API Design
+The main repo is TypeScript and MIT licensed, and its plugins for Claude Code, Cursor, Codex, OpenCode and OpenClaw are separate open-source repos. The memory engine you self-host is the free local binary noted above, not code from the repo. See [Supermemory explained](/articles/supermemory-long-term-ai-memory-as-a-service/).
 
-The usability of a memory system is heavily dependent on how easily AI agents can interact with it. Well-designed APIs, SDKs, and clear integration patterns are essential. This often involves:
+### Letta
 
-* **Python Libraries:** Providing intuitive Python interfaces for common operations.
-* **REST APIs:** Enabling integration with agents developed in various languages.
-* **Standardized Data Formats:** Facilitating interoperability between different components.
+From the authors of [MemGPT](https://arxiv.org/abs/2310.08560). Letta Code agents keep memory in MemFS, a git-backed filesystem, and rewrite their own memory, skills and prompts. Best when you want the whole agent runtime, not just a memory layer. See [Letta alternatives](/articles/letta-alternatives/).
 
-## A Comparative Look at Open Source Memory Systems
+### LangMem
 
-The open source landscape for AI memory is dynamic, with several projects offering distinct approaches. Below, we compare some prominent types and discuss their characteristics, touching upon alternatives to systems like Mem0, LLaMA Index (which is more of a framework that *uses* memory), and Zep.
+Memory tools an agent calls during a conversation, plus a background manager that extracts and consolidates memories, on top of LangGraph's store. Least effort if you already run LangGraph. See [LLM memory with LangChain](/articles/llm-memory-langchain/).
 
-### Memory Frameworks vs. Dedicated Memory Stores
+### Smaller and specialized projects
 
-It's important to distinguish between frameworks that *facilitate* memory integration and dedicated memory *stores*.
+- **Honcho**: peer-centric memory with background reasoning, on Postgres + pgvector. See [Honcho LLM memory](/articles/honcho-llm-memory/).
+- **MemOS**: memory cubes, async ingestion, local SQLite plugins for OpenClaw and Hermes Agent.
+- **Memori**: stores agent state in your own database ("BYODB"); its older home was GibsonAI. See [Memori by GibsonAI](/articles/ai-agents-memory-storage-memori-gibsonai/).
+- **Basic Memory**: plain markdown files plus a local SQLite index, exposed over MCP.
+- **Memobase**: a profile and event timeline per user, built on FastAPI, Postgres and Redis.
 
-* **Frameworks (e.g., LlamaIndex, LangChain Memory Modules):** These provide abstractions and tools to connect language models with various data sources and memory backends. They offer higher-level interfaces for common memory tasks like conversation history management or document retrieval. They are not typically standalone memory databases but rather orchestrators.
-* **Dedicated Memory Stores:** These are specialized databases or systems designed from the ground up for storing and retrieving AI-generated or AI-relevant data, often with a focus on vector embeddings.
+## What is an LLM memory bank?
 
-When considering alternatives to systems like Mem0 (which aims for a simple, efficient, vector-based memory), LlamaIndex (now LlamaHub for data connectors), or Zep (focused on conversational memory), we are often looking at the underlying storage and retrieval mechanisms.
+**A memory bank is an isolated store of memories for one user, agent or project.** The idea goes back to [MemoryBank](https://arxiv.org/abs/2305.10250) (Zhong et al., 2023), which added long-term memory to chatbots and used a forgetting mechanism inspired by the Ebbinghaus forgetting curve. Today the word shows up in three places:
 
-### Examining Different Approaches
+- **Hindsight** calls each isolated store a bank, with strict isolation between banks.
+- **Google's Vertex AI Agent Engine** has a managed Memory Bank; see [Vertex AI Agent Engine Memory Bank](/articles/vertex-ai-agent-engine-memory-bank/).
+- **Coding-agent "memory bank" setups** keep project notes in markdown files that the agent reads at the start of each session.
 
-Let's consider some conceptual approaches and how they manifest in open source projects:
+People searching GitHub for "awesome LLM memory" lists will find several, but as of October 2026 the ones we checked were small (under 10 stars). The repos in the table above are a better starting point.
 
-#### 1. Vector-Centric Memory Stores
+## How to try an open-source memory system in ten minutes
 
-These systems prioritize semantic similarity as the primary retrieval mechanism. They typically store data as vector embeddings, alongside optional metadata.
-
-* **Core Idea:** Represent memories as points in a high-dimensional space. Retrieval involves finding the nearest neighbors to a query vector.
-* **Strengths:** Excellent for capturing nuanced semantic relationships, enabling "recall" based on meaning rather than exact keywords. Scales well with large datasets if optimized.
-* **Weaknesses:** Can be computationally intensive for indexing and searching. Requires robust embedding models. May struggle with highly structured or temporal queries without additional indexing.
-* **Examples/Concepts:** While not a single named system, many open source projects build around vector databases like **Milvus** or **Weaviate** as their backend. The conceptual approach is to store agent experiences, retrieved documents, or generated knowledge as embeddings. When an agent needs context, it queries this store with a vector representation of its current thought or observation.
-
-**Hindsight's Approach:** Systems like Hindsight often adopt a modular design, allowing for different memory backends. In its vector-centric configurations, it would interface with such vector databases. Hindsight's emphasis is on providing a framework for managing these memories, including their lifecycle and contextualization, rather than being solely a database. It can integrate with various vector stores, offering flexibility in choosing the underlying technology.
-
-#### 2. Chronological and Contextual Memory
-
-This approach emphasizes the temporal and conversational aspects of memory.
-
-* **Core Idea:** Store memories in the order they occur, preserving the sequence and context of interactions. Retrieval often involves looking at recent events or events within a specific timeframe or conversational turn.
-* **Strengths:** Crucial for maintaining coherent conversations and understanding the flow of events. Relatively straightforward to implement for basic chat history.
-* **Weaknesses:** Can become inefficient with very long histories. Semantic understanding might be limited without supplementary mechanisms.
-* **Examples/Concepts:** Many chatbot frameworks include built-in mechanisms for managing conversation history. Open source projects might expose this via simple list structures or by using time-series databases. This is an area where a system like **Zep** historically focused, aiming to provide structured conversational memory.
-
-#### 3. Hybrid Memory Architectures
-
-The most robust systems often combine multiple approaches to use the strengths of each.
-
-* **Core Idea:** Integrate vector search for semantic recall with chronological or structured storage for context and specific facts.
-* **Strengths:** Offers a more comprehensive and nuanced memory capability, addressing different types of information and retrieval needs.
-* **Weaknesses:** Increased complexity in design and implementation. Requires careful orchestration of different storage and retrieval components.
-* **Examples/Concepts:** A sophisticated agent might use a vector database for general knowledge retrieval and long-term episodic recall, while a simpler in-memory cache or a time-series store holds the immediate conversation history. **LangChain's** memory modules exemplify this by offering various memory types that can be chained or combined.
-
-### Memory Framework Comparison
-
-When users look for a **memory framework comparison**, they are often evaluating how well a system integrates with their existing AI agent stack and how it handles different memory paradigms.
-
-* **Mem0 Alternative:** If a user finds Mem0 too simplistic or lacking in features, they might look for systems offering more advanced retrieval, memory management, or integration capabilities. This could involve moving to a more feature-rich vector database or a framework that orchestrates multiple memory types.
-* **LLeMMA Alternative:** LlamaIndex (now part of LlamaHub) is a data framework for LLM applications, providing tools for data ingestion, indexing, and querying. An "LLeMMA alternative" might refer to other frameworks that offer similar data connectors and indexing capabilities for LLM applications, potentially with different approaches to memory persistence or retrieval.
-* **LETTa Alternative:** LETTa (Language-Enhanced Temporal-contextual Agent) is a more specific agent architecture focusing on temporal reasoning. An alternative would be another agent framework or memory system that explicitly addresses temporal dynamics and contextual understanding, perhaps using different techniques for temporal indexing or reasoning.
-* **ZEP Alternative:** Zep was known for its focus on conversational memory. Alternatives would be systems that provide structured storage and retrieval for chat histories, potentially with enhanced semantic understanding or longer context windows.
-
-**Hindsight as a Framework:** Hindsight positions itself as a framework for building AI agents with sophisticated memory capabilities. It aims to provide the underlying infrastructure for agents to manage their memories, learn from experiences, and reason over time. Its open-source nature allows developers to plug in various components, including different vector databases or custom storage solutions. This makes it a potential alternative or complementary system to specific memory components or simpler frameworks. For instance, an agent using Hindsight might use a robust vector store for long-term memory while managing short-term conversational context through a simpler, integrated mechanism.
-
-### Implementing a Basic Vector Memory in Python
-
-To illustrate the core concept of vector-based memory, let's consider a simplified Python example using a hypothetical vector store. In a real-world scenario, this would interface with a dedicated vector database like Milvus or a library that abstracts over them.
+Cognee's quickstart runs fully local, with no API key:
 
 ```python
-import uuid
-from typing import List, Dict, Any
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+# pip install "cognee[gliner]"
+import asyncio
+import cognee
 
-class SimpleVectorMemory:
- """
- A simplified in-memory vector store for demonstration purposes.
- In a real application, this would interface with a dedicated vector database.
- """
- def __init__(self, embedding_model=None):
- # In a real scenario, embedding_model would be a pre-trained model
- # like Sentence-BERT or OpenAI's embedding API.
- # For this example, we'll use TF-IDF as a proxy for embeddings.
- self.vector_store: Dict[str, Dict[str, Any]] = {}
- self.tfidf_vectorizer = TfidfVectorizer()
- self.documents = [] # To train TF-IDF
+async def main():
+    # Extracts a small graph and embeds the text with local models
+    await cognee.remember(
+        "Marie Curie was born in Warsaw and worked at the University of Paris.",
+        dataset_name="local_quickstart",
+    )
+    results = await cognee.recall(
+        "Where was Marie Curie born?",
+        datasets=["local_quickstart"],
+    )
+    for result in results:
+        print(result)
 
- def _get_embedding(self, text: str) -> np.ndarray:
- """
- Generates a TF-IDF vector as a proxy for an embedding.
- In a real system, this would use a proper embedding model.
- """
- if not self.documents:
- # Train TF-IDF on initial documents if none exist
- self.documents.append(text)
- self.tfidf_vectorizer.fit(self.documents)
- else:
- # Update vocabulary if new text introduces new terms
- self.documents.append(text)
- self.tfidf_vectorizer.fit(self.documents) # Re-fit to include new terms
+asyncio.run(main())
+```
 
- vector = self.tfidf_vectorizer.transform([text])
- return vector.toarray().flatten()
+To pick a repo for production, run through this list:
 
- def add_memory(self, content: str, metadata: Dict[str, Any] = None) -> str:
- """Adds a memory item to the store."""
- memory_id = str(uuid.uuid4())
- embedding = self._get_embedding(content)
- self.vector_store[memory_id] = {
- "content": content,
- "embedding": embedding,
- "metadata": metadata or {}
- }
- return memory_id
+1. **Check the license** against how you'll ship (internal tool, SaaS, on-prem product).
+2. **Check what's gated**: read the pricing page for features that are cloud-only.
+3. **Check activity**: recent commits, open issues and release notes in the last 90 days.
+4. **Check dependencies**: Postgres only, or also a graph DB, Redis and a vector DB?
+5. **Check the LLM cost per write**: most systems call an LLM on every memory add.
+6. **Run your own test**: 20-50 real questions on your data, with two candidates.
 
- def search(self, query_text: str, k: int = 5) -> List[Dict[str, Any]]:
- """
- Searches the memory store for the most similar items to the query text.
- """
- if not self.vector_store:
- return []
-
- query_embedding = self._get_embedding(query_text)
-
- # Calculate similarity scores
- similarities = []
- for mem_id, data in self.vector_store.items():
- mem_embedding = data["embedding"]
- # Ensure embeddings are compatible for cosine_similarity
- # TF-IDF vectors can have different dimensions if vocabulary changes
- # For simplicity here, we assume they are compatible or re-train
-
- # To handle potential dimension mismatches from TF-IDF re-fitting:
- # A more robust approach would be to ensure consistent vector dimensions
- # or use a fixed vocabulary. For this demo, we'll pad/truncate.
-
- max_len = max(len(query_embedding), len(mem_embedding))
- padded_query = np.pad(query_embedding, (0, max_len - len(query_embedding)))
- padded_mem = np.pad(mem_embedding, (0, max_len - len(mem_embedding)))
-
- sim_score = cosine_similarity([padded_query], [padded_mem])[0][0]
- similarities.append((mem_id, sim_score))
-
- # Sort by similarity score in descending order
- similarities.sort(key=lambda item: item[1], reverse=True)
-
- # Return top k results
- results = []
- for mem_id, score in similarities[:k]:
- results.append({
- "id": mem_id,
- "score": score,
- "content": self.vector_store[mem_id]["content"],
- "metadata": self.vector_store[mem_id]["metadata"]
- })
- return results
-
-## 
+For a decision guide by use case, see [the best AI memory framework for your agent](/articles/best-ai-memory-framework/).

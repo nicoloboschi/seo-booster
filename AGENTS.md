@@ -19,6 +19,7 @@ steps and the reasons. Read the skill before doing the operation.
 | Build, deploy, notify search engines | `.claude/skills/publish/SKILL.md` | After any content change |
 
 ## Layout
+- `CURATION_LOG.md`: what each session found and changed. Read the top entry first.
 - `content/articles/*.md`: one article per file. Front matter: title, description, date, lastmod,
   tags, keywords, slug, faq, optional `role: pillar|supporting`, `cluster`, `aliases`.
 - `layouts/`: templates. JSON-LD, FAQ schema, breadcrumbs, sitemap, `llms.txt` are generated here.

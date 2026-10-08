@@ -1,68 +1,136 @@
 ---
-title: 'Zep Alternatives: 6 AI Agent Memory Systems Compared (2026)'
-description: Looking for Zep alternatives? Compare Hindsight, Mem0, Letta, Supermemory, and Cognee side by side. Features, pricing, retrieval methods, and GitHub stars.
+title: "Zep Alternatives: Open-Source and Hosted Options"
+description: "Zep alternatives compared, including open-source options after Zep Community Edition: Graphiti, Mem0, Letta, Cognee, Hindsight and Supermemory (Oct 2026)."
 date: 2026-05-06
-lastmod: 2026-05-06
-tags:
-- AI memory
-- Zep alternatives
-- AI agents
-- LLM memory
-- open source
-keywords:
-- zep alternatives
-- zep vs hindsight
-- zep vs mem0
-- zep memory alternative
-- zep alternative open source
-- AI agent memory comparison 2026
-faq:
-- question: Why are developers leaving Zep in 2026?
-  answer: Zep dropped its open-source Community Edition in late 2025, forcing all users onto a credit-based pricing model. Many teams cite the steep learning curve, unpredictable costs at scale, and loss
-    of self-hosting control as primary reasons for switching.
-- question: Which Zep alternative has the most GitHub stars?
-  answer: Mem0 leads with roughly 55,000 GitHub stars as of early 2026. Letta and Supermemory follow with about 22,500 and 22,400 stars respectively. Hindsight holds 12,500 and Cognee has 17,000.
-- question: Can I self-host a Zep alternative for free?
-  answer: Yes. Mem0, Letta, Hindsight, Supermemory, and Cognee all offer open-source versions you can deploy on your own infrastructure at no licensing cost. Only Zep now requires a paid cloud plan after
-    removing its Community Edition.
+lastmod: 2026-10-08
 slug: zep-alternatives
 aliases:
-- /articles/zep-memory-alternative/
-- /articles/zep-memory-open-source-alternative/
+  - /articles/zep-memory-alternative/
+  - /articles/zep-memory-open-source-alternative/
+tags:
+  - Zep
+  - agent memory
+  - alternatives
+  - open source
+keywords:
+  - "zep alternatives"
+  - "zep open source alternative"
+  - "zep community edition alternative"
+  - "zep vs mem0"
+  - "zep vs graphiti"
+  - "self-hosted zep"
+faq:
+  - question: "Is Zep still open source?"
+    answer: "Zep's memory service is not. In April 2025 Zep announced it would stop maintaining and releasing Zep Community Edition; the code sits in a legacy folder, unsupported. Zep's open-source work now goes into Graphiti, its Apache 2.0 temporal knowledge graph framework."
+  - question: "What is the best open-source alternative to Zep?"
+    answer: "Graphiti is the closest, since it is the graph framework inside Zep, but you run the graph database and build user and thread management yourself. Mem0 and Cognee (Apache 2.0) and Hindsight (MIT) are full self-hostable memory servers with different memory models."
+  - question: "How much does Zep cost?"
+    answer: "As of October 2026, Zep has a free tier with 10,000 credits a month, Flex at $125/month (50,000 credits) and Flex Plus at $375/month (200,000 credits), plus custom Enterprise. A credit covers ingesting up to 350 bytes; retrieval and storage are unmetered."
 ---
 
+**Zep alternatives** are other ways to give AI agents long-term memory: Graphiti (Zep's own open-source core), Mem0, Letta, Cognee, Hindsight and Supermemory. Most people searching for one want a **self-hosted, open-source** option, because Zep stopped maintaining its Community Edition in 2025 and is now a managed, credit-priced service.
 
-When Zep killed its open-source Community Edition in late 2025, thousands of developers found themselves locked into a credit-based pricing model they didn't sign up for. If you're one of them, or if you're evaluating memory layers for a new AI agent project, the **zep alternatives** landscape in 2026 looks very different from a year ago. Six serious contenders now compete for the role of default memory backend, and each takes a distinct approach to persistence, retrieval, and cost.
+This page covers what Zep does today, a comparison table, a short section per alternative, and how to choose. Facts come from each project's README, docs and pricing page, checked in October 2026.
 
-According to a [2025 survey by LangChain](https://blog.langchain.dev/), over 68% of production AI agent deployments now include some form of persistent memory beyond simple context windows. The question isn't whether your agent needs memory. It's which system fits your architecture.
+## What Zep does, and why people look for Zep alternatives
 
-## What Are Zep Alternatives?
+**Zep is a managed memory and context service for AI agents. It builds a temporal context graph for each user, customer or account, where facts carry dates and get updated as data changes, and returns the relevant facts to your agent in one call.** It offers SDKs for Python, TypeScript and Go.
 
-**Zep alternatives** are AI agent memory systems that replace Zep's managed memory service with different retrieval strategies, pricing models, or deployment options. These tools handle the core problem Zep addresses: giving LLM-based agents persistent recall across conversations, sessions, and tasks.
+Zep's homepage describes it as a "unified context layer for enterprise data" and claims retrieval "in under 200 milliseconds, regardless of graph size or count." The design is described in the paper [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](https://arxiv.org/abs/2501.13956) (Rasmussen et al., 2025).
 
-A good Zep alternative provides three things: a **storage layer** for facts, episodes, and embeddings; a **retrieval mechanism** that surfaces relevant memories at inference time; and an **integration path** that works with popular agent frameworks like LangChain, CrewAI, or custom Python stacks. The best options also let you self-host, avoiding the vendor lock-in that's now a central complaint about Zep.
+Three changes drive most searches for alternatives:
 
-For a deeper look at how memory fits into agent design, see our guide on [AI agent memory explained](/articles/ai-agent-memory-explained/).
+1. **Community Edition is gone.** In an April 2025 post, Zep said "we've decided to stop maintaining and releasing Zep Community Edition." The [getzep/zep README](https://github.com/getzep/zep) now says it is "not Zep's product" and holds examples, integrations and an unsupported `legacy/` folder. Old guides to [running Zep with Docker](/articles/zep-memory-docker/) describe that deprecated edition.
+2. **Self-hosting means Enterprise.** Zep's [pricing page](https://www.getzep.com/pricing) lists "Bring Your Own Cloud" (deployment in your VPC) as Enterprise only.
+3. **Pricing is credit-based.** Free gives 10,000 credits a month. Flex costs $125/month for 50,000 credits; Flex Plus is $375/month for 200,000. Each data object you send costs 1 credit per 350 bytes. Retrieval, storage and users are unmetered, so cost tracks how much you ingest.
 
-## Why Developers Are Leaving Zep
+If you're happy with a managed service and those numbers, Zep is a strong temporal memory option. If not, read on.
 
-Zep built a strong early following by offering a free, self-hostable Community Edition alongside its cloud product. That changed when the team removed the open-source tier, pushing everyone toward credit-based billing.
+## Zep alternatives at a glance
 
-### Credit-Based Pricing Frustrations
+| Tool | What it is | License | Self-host | Temporal facts | Hosted pricing (Oct 2026) |
+|---|---|---|---|---|---|
+| **Graphiti** | Open-source temporal graph framework (Zep's core) | Apache 2.0 | Yes, bring Neo4j, FalkorDB or Neptune | Yes, bi-temporal with validity windows | None (library) |
+| **Mem0** | Memory layer for user, session and agent facts | Apache 2.0 | Yes, library or Docker server | Time-aware ranking; facts appended, not invalidated | Free tier; Starter $19/mo; Pro $249/mo |
+| **Letta** | Stateful agent harness | Apache 2.0 | Yes, local or App Server | No explicit fact timeline | Free; Pro $20/mo |
+| **Cognee** | Knowledge graph memory engine | Apache 2.0 | Yes, pip or Docker | Bi-temporal memory listed for Enterprise | Free 1M tokens; $1 per 1M tokens |
+| **Hindsight** | Memory server with retain/recall/reflect | MIT | Yes, Docker, pip, Helm or embedded | Yes, time data extracted; time-range recall | Pay as you go (retain $10 per 1M tokens) |
+| **Supermemory** | Memory, RAG and user-profile API | MIT (repo) | Local server; self-hosting listed on Scale plan | Handles temporal changes and expiry | Free $5 credits; Pro $19/mo |
 
-Zep's current pricing charges per API call using a credit system. For teams running agents that make frequent memory reads and writes, costs can spike unpredictably. A single agent handling 500 conversations per day might consume credits far faster than initial estimates suggest. Several teams on Reddit and Hacker News have reported 3x to 5x cost overruns compared to their original projections.
+Prices are published list prices and change often. Check each vendor's page before deciding.
 
-### Steep Learning Curve
+## Graphiti: the open-source core of Zep
 
-Zep's API surface is broad. It covers facts, messages, sessions, users, and graph-based memory, but the documentation assumes familiarity with concepts that aren't standard across the industry. New developers often spend days configuring memory types before getting a working prototype.
+**[Graphiti](https://github.com/getzep/graphiti)** is the framework Zep uses under its service, released under Apache 2.0. It's the most direct open-source answer to "self-hosted Zep."
 
-### Loss of Self-Hosting
+It builds a **context graph**: entities as nodes, facts as edges, and **episodes** (the raw ingested data) as provenance. Each fact has a validity window. When something changes, the old fact is invalidated, not deleted, so you can query what's true now or what was true last March. Retrieval is hybrid: embeddings, BM25 and graph traversal. You can define custom entity and edge types with Pydantic models.
 
-For teams in regulated industries (healthcare, finance, government), self-hosting isn't optional. It's a hard requirement. Zep's move to cloud-only means these teams **must** find alternatives. According to a [2024 arxiv paper on AI agent architectures](https://arxiv.org/abs/2401.02777), data sovereignty concerns rank among the top three barriers to agent deployment in enterprise settings.
+The tradeoff is scope. Graphiti's own README compares it to Zep: with Graphiti you bring your own graph database (Neo4j, FalkorDB or Amazon Neptune), build your own user and conversation management, and tune retrieval performance yourself. It defaults to OpenAI for LLM extraction and embeddings, and works best with models that support structured output.
 
-## Zep Alternatives Comparison Table
+- **Pick Graphiti** if you liked Zep's temporal model and can operate a graph database.
+- **Look elsewhere** if you wanted Zep's turnkey users, threads and dashboard without building them.
 
-Here's how the six major options stack up across the features that matter most:
+## Mem0
 
-| Feature | Zep | Mem0 | Letta | Hindsight | Supermemory | Cognee |
-|
+**Mem0** extracts facts from conversations with an LLM and stores them for user, session and agent scopes. It runs as a library, a self-hosted Docker server with dashboard and API keys, or the managed Mem0 Platform.
+
+Its April 2026 algorithm is ADD-only: new facts are stored next to old ones instead of overwriting them, and time-aware retrieval ranks the current one higher. Graph memory was removed from the open-source SDK in that release and is now a Platform feature on the Pro plan.
+
+- **Pick Mem0** for a simple, widely integrated user-memory API you can self-host.
+- **Look elsewhere** if you need explicit fact validity windows or graph memory in open source.
+
+More in our [Mem0 alternatives comparison](/articles/mem0-alternatives-compared/).
+
+## Letta
+
+**Letta** (formerly MemGPT) is an agent runtime, not a memory service. Letta Code agents store memory as Markdown files in a git-backed store (MemFS), search their own conversation history, and consolidate lessons in the background ("dreaming"). It's Apache 2.0 and runs locally, on a self-hosted App Server, or on Letta Cloud.
+
+- **Pick Letta** if you're building the agent itself and want it to own and edit its memory.
+- **Look elsewhere** if you need memory for an agent built in another framework, or a Python SDK. Letta's Agent SDK is TypeScript only.
+
+See the [Letta guide](/articles/letta-ai-guide/) for how its memory works and what it costs.
+
+## Cognee
+
+**Cognee** builds a knowledge graph and vector index from documents, code and conversations, with `remember`, `recall`, `improve` and `forget` operations. It's Apache 2.0, self-hostable with pip or Docker, and since v1.6 can run text memory on local models without an LLM key.
+
+Cognee's docs include a guide to importing memory from Mem0, Letta, Zep and Graphiti, which helps if you're migrating off Zep. Bi-temporal memory with conflict resolution appears on its pricing page as an Enterprise feature, not in the free tier list.
+
+- **Pick Cognee** if your memory is mostly company knowledge, documents and code.
+- **Look elsewhere** if the main job is per-user facts that change over time.
+
+Compare it further on our [Cognee alternatives page](/articles/cognee-alternatives/).
+
+## Hindsight
+
+**[Hindsight](https://github.com/vectorize-io/hindsight)** is an MIT-licensed memory server. `retain` extracts facts, entities, relationships and time data with an LLM. `recall` runs semantic, BM25, graph and time-range searches in parallel and merges them with rank fusion and reranking, so a query like "what happened in June?" works. `reflect` reasons over the stored memories.
+
+It also consolidates facts into **observations**, beliefs that keep their supporting evidence and get refined rather than overwritten when new facts arrive. That's a different answer to the problem Zep solves with fact invalidation. Storage is PostgreSQL with pgvector, so there's no separate graph database to run. It deploys with Docker, pip, Helm or embedded in Python, and each memory bank gets a built-in MCP endpoint.
+
+- **Pick Hindsight** if you want self-hosted, time-aware memory with no graph DB and an MIT license, or a hosted option priced per token with no monthly fee.
+- **Look elsewhere** if you need Zep's strict per-fact validity windows, or a document knowledge graph. Every retain makes LLM calls, and the README says it "may be overkill" for simple automation workflows.
+
+## Supermemory
+
+**Supermemory** is a hosted memory and context API with fact extraction, auto-maintained user profiles, hybrid RAG plus memory search, and connectors for Google Drive, Gmail, Notion, OneDrive and GitHub. Its README says it handles temporal changes, contradictions and forgetting of expired information.
+
+- **Pick Supermemory** if you want memory and RAG behind one API with little setup.
+- **Look elsewhere** if open, self-run infrastructure is the whole point of leaving Zep. A local server exists, but self-hosting is listed under the $399/month Scale plan.
+
+## How to choose a Zep alternative
+
+Start with the reason you're leaving.
+
+| If you're leaving Zep because... | Look at |
+|---|---|
+| You need open source and self-hosting with the same temporal graph model | Graphiti |
+| You need a self-hosted memory server without running a graph DB | Hindsight, Mem0 |
+| You want a simple user-memory API | Mem0, Supermemory |
+| Your data is mostly documents and code | Cognee |
+| You want the agent itself to manage memory | Letta |
+| Credit costs grow with ingestion volume | Any self-hosted option; you pay for LLM extraction instead |
+
+Two checks before you migrate:
+
+1. **Do you rely on fact history?** If your agent answers "what was true before?", you need explicit time handling. Graphiti does it with validity windows; Hindsight with time-aware recall and evidence-backed observations. Read more on [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
+2. **Who pays for extraction?** Self-hosting removes Zep's credits but not the LLM calls. Graphiti, Mem0 and Hindsight all call an LLM on writes, so estimate tokens per message before you compare bills.

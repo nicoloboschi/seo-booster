@@ -1,30 +1,8 @@
 ---
-title: 'Understanding Zep Memory: AI Agent Recall Explained'
-description: Explore what Zep memory is, a novel system designed to give AI agents persistent, context-aware recall capabilities beyond traditional LLM limits.
+title: "What Is Zep Memory? Zep Cloud, Graphiti and Pricing"
+description: "What Zep memory is in 2026: the Zep Cloud temporal context graph, open-source Graphiti, how it stores and retrieves memory, pricing, self-hosting, integrations."
 date: 2026-04-10
-lastmod: 2026-04-10
-tags:
-- Zep Memory
-- AI Memory
-- Agent Architecture
-- LLM Memory
-keywords:
-- what is zep memory
-- Zep Memory
-- AI agent memory
-- LLM memory
-- persistent memory
-- contextual recall
-faq:
-- question: How does Zep Memory differ from traditional LLM context windows?
-  answer: Zep Memory stores and retrieves past interactions and relevant data as embeddings, allowing agents to access information beyond the limited context window of a single LLM prompt. It provides a
-    persistent, searchable memory.
-- question: Can Zep Memory be used for long-term memory in AI agents?
-  answer: Yes, Zep Memory is specifically designed to enable long-term memory capabilities for AI agents. It allows agents to retain and recall information across extended interactions and multiple sessions,
-    crucial for complex tasks.
-- question: What are the main components of Zep Memory?
-  answer: Zep Memory typically involves an embedded vector database for storing and indexing memories as embeddings, a retrieval mechanism to find relevant past information, and an integration layer to
-    feed this recalled context back into the LLM.
+lastmod: 2026-10-08
 slug: what-is-zep-memory
 aliases:
 - /articles/graphiti-zep-memory/
@@ -58,154 +36,160 @@ aliases:
 - /articles/zep-memory-n8n/
 - /articles/zep-memory-paper/
 - /articles/zep-memory-pricing/
-- /articles/zep-memory-system/
-- /articles/zep-the-memory-foundation-for-your-ai-stack/
+tags:
+- Zep
+- Graphiti
+- Agent Memory
+- Knowledge Graph
+- Temporal Memory
+keywords:
+- what is zep memory
+- zep memory
+- zep cloud
+- graphiti zep
+- zep memory pricing
+- is zep open source
+- zep memory langgraph
+- zep memory n8n
+- zep memory paper
+faq:
+- question: "Is Zep memory open source?"
+  answer: "Zep Cloud, the managed memory service, is not open source. Zep's open-source project is Graphiti, an Apache 2.0 temporal knowledge graph framework. The old Zep Community Edition is deprecated and unsupported; its code sits in the legacy folder of the getzep/zep repo."
+- question: "Is Zep free?"
+  answer: "Zep Cloud has a free tier for prototyping with 10,000 credits per month. Paid plans start with Flex at $125 per month for 50,000 credits. Graphiti, the open-source framework, is free to run on your own graph database, but you pay for the LLM and embedding calls it makes."
+- question: "Does Zep work with n8n and LangGraph?"
+  answer: "Zep maintains a zep-langgraph package for LangGraph. In n8n, the built-in Zep memory node is deprecated from n8n 1.108.0, so new n8n workflows reach Zep through its REST API with the HTTP Request node."
 ---
 
+**Zep memory** is Zep Cloud, a managed service that stores what an agent learns from users and data in a **temporal context graph**, then returns a prompt-ready block of relevant facts. Its open-source core is **Graphiti**, a framework for knowledge graphs that track when facts change. The old self-hosted Zep Community Edition is deprecated.
 
-**Zep Memory** provides AI agents with persistent, contextual recall capabilities, enabling them to remember past interactions beyond traditional Large Language Model (LLM) limits. It offers a powerful mechanism for agents to store and retrieve information semantically, fostering more coherent and intelligent behavior over extended periods.
+This page covers what Zep is now, how Zep memory stores and retrieves data, the Zep paper, pricing, self-hosting, and integrations. Sources are Zep's [docs](https://help.getzep.com/concepts), the [Graphiti repo](https://github.com/getzep/graphiti) and the [Zep pricing page](https://www.getzep.com/pricing).
 
-Imagine an AI that forgets your name mid-sentence. This frustrating reality is precisely what **Zep Memory** aims to eliminate by giving AI agents true, persistent recall. It's a system built to move beyond the fleeting memory of standard LLMs, directly answering the fundamental question of **what is Zep memory**.
+## What is Zep memory?
 
-## What is Zep Memory?
+**Zep is a context and memory platform for AI agents that turns conversations and business data into a temporal knowledge graph, called a Context Graph, and retrieves relevant facts for each model call.** Each fact carries a validity window, so Zep can tell what's true now from what used to be true. Zep runs as a managed cloud service with Python, TypeScript and Go SDKs.
 
-**Zep Memory** is an open-source project dedicated to equipping AI agents with effective, long-term memory. It allows agents to store, retrieve, and use past interactions and relevant data in a structured, context-aware manner, effectively overcoming the inherent limitations of LLM context windows. This capability enables more coherent, personalized, and intelligent agent behavior over time.
+Zep's docs now describe the product as "the unified context layer for enterprise data." Agent memory is one of three use cases, next to enterprise context graphs and customer or account context. The memory part is what most developers mean by "Zep memory": per-user graphs built from chat messages and app events.
 
-Zep Memory addresses a critical gap in current AI agent development. While LLMs excel at processing information within their immediate context window, they lack true memory. Without a dedicated memory system, agents forget previous conversational turns, user preferences, and learned information. Zep Memory provides this essential recall capability, defining **what is Zep memory** at its core.
+### Zep vs Graphiti
 
-### The Imperative for Persistent AI Memory
+The two names cause confusion, so here's the split as the Graphiti README describes it:
 
-Standard LLMs operate with a fixed **context window**. This window holds the most recent text in a conversation or prompt. Once information falls outside this window, it's effectively forgotten by the model for that specific interaction. This severely limits an agent's ability to maintain long-term conversational coherence or learn from past experiences.
+| | Zep | Graphiti |
+|---|---|---|
+| What it is | Managed context graph service | Open-source temporal knowledge graph framework |
+| License | Commercial | Apache 2.0 |
+| Graph database | Zep's own engine, no third-party graph DB needed | Bring your own: Neo4j, FalkorDB, Amazon Neptune (Kuzu deprecated) |
+| Users and threads | Built in | Build your own |
+| Deployment | Fully managed, or in your cloud (Enterprise) | Self-hosted only |
+| Tooling | Dashboard, graph view, API logs, SDKs | MCP server and REST service in the repo |
 
-Imagine an AI assistant helping you plan a trip. Without persistent memory, you'd have to re-explain your destination, dates, and preferences every time you interacted with it. This is inefficient and frustrating, hindering the agent's utility. **Zep Memory** provides the solution by creating a retrievable history.
+Pick Zep if you want the hosted system with users, threads and retrieval done. Pick Graphiti if you want the graph engine and are fine running the rest yourself.
 
-A 2023 survey by AI research firm "Cognitive Insights" found that 78% of users reported frustration with AI agents forgetting previous conversation details, highlighting the demand for better memory systems. Also, a 2024 study published on arxiv indicated that retrieval-augmented agents showed a 34% improvement in task completion rates compared to agents without external memory.
+## How Zep stores memory
 
-## Zep Memory Architecture and Functionality
+Zep's data model has a few parts:
 
-At its heart, **Zep Memory** functions as a specialized database for conversational data and agent experiences. It typically stores memories as **vector embeddings**, which are numerical representations of text. This representation allows for efficient semantic searching, a key feature in understanding **what is Zep memory** and how it works.
+- **Users.** One Zep user per application user. Each user gets a **user graph**.
+- **Threads.** Conversations of a user. By default, every message added to any of the user's threads is ingested into that user's graph.
+- **Episodes.** Any single piece of data sent to Zep: a chat message, a JSON payload or a block of text. Episodes are the raw source that facts trace back to.
+- **Entities and facts.** Zep extracts entities (nodes) and facts (edges) from episodes. A fact is a relation between two entities, like "Jane prefers window seats."
+- **Fact invalidation.** When new data contradicts an old fact, Zep stores the time the old fact became invalid on its edge, instead of deleting it.
 
-When an agent needs to recall information, Zep Memory doesn't just look for exact keyword matches. Instead, it uses the semantic meaning of the current query to find the most relevant past memories from its **vector store**. This ensures that even if the exact phrasing isn't repeated, the agent can still access pertinent information. This retrieval process is a key aspect of how **Zep Memory** empowers AI recall.
+Graphiti works the same way at its core. Its README calls these **bi-temporal** graphs: facts have validity windows, entities have summaries that evolve, and everything links back to episodes. Ingestion is incremental, so new data joins the graph without recomputing it. That's what separates Zep from a plain vector store, which stores chunks with no notion of when a fact stopped being true. For background on why time matters, see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-The system is designed to integrate seamlessly with existing LLM frameworks. Developers can use Zep Memory to augment their agent's capabilities, providing it with a **long-term memory** that grows and evolves with each interaction. This forms a crucial part of advanced [patterns for AI agent architecture with memory](/articles/ai-agent-architecture-patterns/).
+## How Zep retrieves memory
 
-### Core Components of Zep Memory
+Zep has two retrieval paths:
 
-Zep Memory's effectiveness stems from its modular design, focusing on efficient storage, intelligent retrieval, and seamless integration. Core components remain consistent across implementations, defining the practical answer to **what is Zep memory** in a technical sense.
+1. **`thread.get_user_context()`** returns the **Context Block**, a prompt-ready string Zep assembles from the user's graph. It can include a user summary, facts, entities, episodes and thread summaries. Zep uses the four most recent messages of the thread to decide what's relevant.
+2. **`graph.search()`** is the low-level path. You send a query and pick a scope (edges, nodes, episodes and others) and a reranker such as RRF, MMR or cross-encoder.
 
-#### Data Storage: The Vector Database
+**Context templates** sit between the two: you define the block's format once (for example, a user summary plus the top 10 facts) and Zep fills it in.
 
-The foundation of Zep Memory is its **vector database**. This specialized database stores **text chunks** as high-dimensional vectors (embeddings). These embeddings capture the semantic meaning of the text. When new information is added, it's converted into an embedding and stored.
-
-Popular choices for vector databases include Chroma, FAISS, and Pinecone. Zep Memory often uses these under the hood to manage its vast memory stores. The ability to efficiently store and index these embeddings is critical for fast retrieval.
-
-#### The Retrieval Process
-
-When an AI agent needs to access its memory, the retrieval mechanism in Zep Memory comes into play. It takes the current query or context, converts it into an embedding, and then searches the vector database for the most semantically similar embeddings.
-
-This process is often referred to as **similarity search**. Algorithms like Approximate Nearest Neighbor (ANN) are commonly used to speed up this search across millions of potential memories. The retrieved memories provide the agent with relevant historical context. This capability is vital for [AI agents remembering conversations](/articles/best-chatbot-for-memory/).
-
-#### Integration Layer Functionality
-
-The integration layer acts as the bridge between Zep Memory and the LLM. It formats the retrieved memories into a prompt that the LLM can understand and process. This might involve prepending the retrieved context to the user's latest query.
-
-This layer ensures that the LLM receives the necessary historical information to generate a contextually appropriate and informed response. It's how the agent's **long-term memory** influences its immediate output. This is a core aspect of [how to give AI memory](/articles/how-to-give-ai-agents-memory/).
-
-## How Zep Memory Enhances AI Agents
-
-By providing a sophisticated memory system, **Zep Memory** significantly boosts the capabilities of AI agents. It moves them from stateless conversationalists to agents that can learn, adapt, and maintain continuity, truly embodying the concept of **what is Zep memory** in action.
-
-### Persistent Conversation History
-
-One of the most direct benefits is the creation of truly **persistent conversation history**. Unlike standard LLMs that lose track after a few turns, Zep Memory allows agents to recall details from earlier in a long conversation, or even from previous sessions entirely. This is crucial for applications like customer support bots, personal assistants, and ongoing collaborative tools.
-
-This persistent recall capability is what distinguishes advanced [agentic AI long-term memory](/articles/ai-agent-long-term-memory/) solutions.
-
-### Contextual Awareness and Personalization
-
-Zep Memory enables deeper **contextual awareness**. By retrieving relevant past interactions, user preferences, or learned facts, the agent can tailor its responses more precisely. This leads to a more personalized and helpful user experience.
-
-For example, an AI tutor using Zep Memory could recall a student's previous struggles with a specific concept and adjust its teaching approach accordingly. This level of personalization is difficult to achieve with stateless LLMs.
-
-### Complex Task Management
-
-For agents designed to perform complex, multi-step tasks, **long-term memory** is indispensable. Zep Memory allows agents to keep track of progress, store intermediate results, and recall instructions given earlier. This prevents errors caused by forgetting crucial steps or information.
-
-Consider an AI agent tasked with managing a complex project. It needs to remember deadlines, stakeholder communications, and project milestones. Zep Memory provides the necessary recall functionality for such demanding applications, contributing to [AI agent persistent memory](/articles/persistent-memory-ai/).
-
-## Implementing Zep Memory
-
-Integrating Zep Memory into an AI agent typically involves setting up the Zep server, defining how data is stored, and modifying the agent's interaction loop to include memory retrieval and storage steps. Understanding the implementation is key to grasping **what is Zep memory** from a developer's perspective.
-
-### Setting up the Zep Server
-
-First, you'll need to install and run the Zep Memory server. This often involves using Docker or installing the Zep binary directly. The server will manage the vector database and the API endpoints for memory operations.
-
-### Storing Memories
-
-When an agent has a significant interaction or completes a step, the relevant information (e.g., user query, agent response, system state) is sent to Zep Memory. This data is processed, embedded, and stored in the vector database.
-
-Here's a basic Python example demonstrating how you might store a memory:
-
-This Python code example shows how to store a memory using the Zep client.
+This Python example uses the current `zep-cloud` SDK (v3) to add a message and fetch context:
 
 ```python
-from zep_cloud import ZepClient
-from zep_cloud.document import Document
+import os
+import uuid
+from datetime import datetime, timezone
 
-## Initialize the Zep client
-## Replace with your Zep API key and endpoint
-client = ZepClient(api_key="YOUR_API_KEY", base_url="YOUR_ZEP_URL")
+from zep_cloud.client import Zep
+from zep_cloud.types import Message
 
-## Define the content and metadata for the memory
-memory_content = "The user asked about the project deadline for phase 2."
-memory_metadata = {
- "user_id": "user123",
- "session_id": "sessionABC",
- "timestamp": "2024-07-26T10:00:00Z"
-}
+client = Zep(api_key=os.environ["ZEP_API_KEY"])
 
-## Create a Document object
-document = Document(
- text=memory_content,
- metadata=memory_metadata
+client.user.add(user_id="user-42", first_name="Jane", last_name="Smith")
+thread_id = uuid.uuid4().hex
+client.thread.create(thread_id=thread_id, user_id="user-42")
+
+client.thread.add_messages(
+    thread_id,
+    messages=[
+        Message(
+            role="user",
+            name="Jane Smith",
+            content="I'm moving to Lisbon next month, so update my delivery address.",
+            created_at=datetime.now(timezone.utc).isoformat(),
+        )
+    ],
 )
 
-## Store the document in Zep Memory
-try:
- response = client.memory.add_documents(
- collection_name="agent_memories", # Name of your memory collection
- documents=[document]
- )
- print("Memory stored successfully:", response)
-except Exception as e:
- print(f"Error storing memory: {e}")
+# Prompt-ready context assembled from the user's graph
+context = client.thread.get_user_context(thread_id=thread_id)
+print(context.context)
 
+# Low-level search over facts (edges)
+results = client.graph.search(user_id="user-42", query="where does Jane live?", scope="edges")
+for edge in results.edges or []:
+    print(edge.fact, edge.valid_at, edge.invalid_at)
 ```
 
-### Retrieving and Using Memories
+Ingestion runs in the background, so a fact may take a moment to show up in search after you add the message. Zep's docs say to treat the Context Block as untrusted model input.
 
-Before generating a response, the agent's logic queries Zep Memory. The query is used to retrieve the most relevant past memories. These memories are then incorporated into the prompt sent to the LLM, providing it with the necessary context to generate an informed response. This ensures the agent "remembers" what's important.
+## The Zep paper
 
-This process is fundamental to building agents with [AI agent long-term memory](/articles/ai-agent-long-term-memory/) capabilities.
+Zep's architecture is described in [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](https://arxiv.org/abs/2501.13956) (Rasmussen et al., January 2025). The paper presents Graphiti as the engine behind Zep and reports:
 
-## Zep Memory vs. Other Memory Solutions
+- **94.8% on Deep Memory Retrieval (DMR)**, against 93.4% for MemGPT.
+- **Up to 18.5% higher accuracy on LongMemEval** than baseline implementations.
+- **About 90% lower response latency** than those baselines.
 
-While Zep Memory is a prominent solution, it exists within a growing ecosystem of AI memory systems. Understanding its place helps in choosing the right tool for a specific application. Comparing it to alternatives clarifies **what is Zep memory** by contrast.
+These are the authors' own numbers. Benchmark setups differ across vendors, so read memory benchmark claims with care.
 
-### Zep Memory vs. Traditional Databases
+## Zep pricing and the free tier
 
-Traditional databases (SQL, NoSQL) store structured data. While useful for storing facts, they aren't designed for the nuanced, semantic retrieval of conversational context. **Zep Memory**, with its reliance on vector embeddings, excels at finding "conceptually similar" information, which is vital for natural language interactions.
+Zep Cloud bills in **credits**. Per the pricing page, an episode up to 350 bytes costs 1 credit, plus 1 credit per extra 350 bytes. Retrieval, storage, users and threads don't use credits.
 
-### Zep Memory vs. Simple Context Window Management
+| Plan | Price | Credits per month | Notable limits |
+|---|---|---|---|
+| **Free** | $0 | 10,000 | 2 projects, variable rate limits, no rollover |
+| **Flex** | $125/month | 50,000 | 5 projects, 600 requests/min, $25 per extra 10,000 credits |
+| **Flex Plus** | $375/month | 200,000 | 10 projects, 1,000 requests/min, $75 per extra 40,000 credits |
+| **Enterprise** | Custom | Custom | SLA, BYOK, BYOC (deploy in your VPC) |
 
-Some approaches try to manage memory by simply stuffing more text into the LLM's context window. However, context windows are finite and expensive. Zep Memory offers a more scalable and efficient solution by intelligently retrieving only the most relevant information, rather than overwhelming the LLM. This directly addresses [context window limitations and their solutions](/articles/context-window-limitations-solutions/).
+Prices are as listed on getzep.com/pricing in October 2026. The page also mentions an annual option that saves 17%. Some features, such as Observations, are only on Flex Plus and Enterprise.
 
-### Zep Memory and Open-Source Alternatives
+## Can you self-host Zep?
 
-Zep Memory is an open-source project, making it accessible and customizable. Other open-source solutions like [Hindsight](https://github.com/vectorize-io/hindsight), Letta, and Mem0 offer similar functionalities but may differ in their specific architectures, features, or ease of integration. Comparing these [open-source memory systems](/articles/open-source-memory-systems-compared/) is crucial for developers. For instance, [Letta AI](/articles/letta-ai-guide/) offers a different approach to managing conversational state.
+Not the current product, unless you're on Enterprise. Your options:
 
-Here's a brief comparison:
+- **Zep Community Edition** is deprecated. In April 2025 Zep [announced](https://www.getzep.com/blog/announcing-a-new-direction-for-zeps-open-source-strategy/) it would stop maintaining and releasing it. The code is still in the `legacy/` folder of [getzep/zep](https://github.com/getzep/zep), unsupported. Older Docker guides, including [running Zep with Docker](/articles/zep-memory-docker/), refer to this edition.
+- **Graphiti** is the supported open-source path. Install `graphiti-core`, run Neo4j or FalkorDB (the repo has a Docker Compose setup), and supply an LLM key. Graphiti defaults to OpenAI and works best with models that support structured output.
+- **BYOC** on the Enterprise plan deploys Zep inside your own cloud.
 
-| Feature | Zep Memory | Hindsight (Example) | Letta AI (Example) |
-| :
+## Zep integrations: LangChain, LangGraph, n8n, MCP
+
+**LangGraph.** Zep maintains `zep-langgraph`, which adds helpers to persist messages, inject context before the model call, and give the agent a graph search tool. The getzep/zep repo also has packages for CrewAI, AutoGen, AG2, Google ADK, Pydantic AI, Strands, LiveKit, Microsoft Agent Framework, Mastra and the Vercel AI SDK.
+
+**LangChain.** `langchain-community` still ships `ZepCloudChatMessageHistory`, but it calls the session-based `memory` API from Zep's v2 SDK. The v3 API organizes conversations as threads instead, so for new LangChain-family projects, Zep's own LangGraph package is the maintained route.
+
+**n8n.** n8n's built-in Zep memory node and Zep vector store nodes are deprecated from n8n 1.108.0. New workflows can call the Zep REST API with the HTTP Request node. See [n8n AI Agent memory options](/articles/best-memory-for-ai-agent-n8n/) for the supported nodes.
+
+**MCP.** Zep offers a Context MCP Server so off-the-shelf clients can use the same memory, with sign-in through your identity provider. Graphiti has its own MCP server for self-hosted graphs.
+
+## Is Zep the right memory layer?
+
+Zep fits when facts change over time and you need to know which version is current: customer records, preferences, account state. It's a managed service, so you trade control for less operations work. If you need open source end to end, Graphiti gives you the engine but not the user, thread and retrieval layer.
+
+For other options, see [Zep alternatives](/articles/zep-alternatives/) and the head-to-head [Zep vs Mem0 comparison](/articles/zep-memory-vs-mem0/).

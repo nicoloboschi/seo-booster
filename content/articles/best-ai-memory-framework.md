@@ -1,59 +1,8 @@
 ---
-title: 'The Best AI Memory Framework: A Developer''s Guide to Persistent Recall'
-description: Explore the best AI memory frameworks for agents, understanding their architectures, types of memory, and how they enable persistent recall and advanced reasoning...
+title: "Best AI Memory Framework: How to Choose by Use Case"
+description: "Which AI memory framework should you pick? A decision guide by use case: Mem0, Zep, Letta, Cognee, LangMem, Supermemory, Hindsight and Honcho, with prices."
 date: 2026-04-02
-lastmod: 2026-04-02
-tags:
-- AI memory
-- AI frameworks
-- agent memory
-- LLMs
-- persistent memory
-- AI memory systems
-- LLM memory
-- best ai memory framework
-- optimal AI memory framework
-- ideal AI memory framework
-- AI agent memory
-- AI recall mechanisms
-- episodic memory AI
-- semantic memory AI
-keywords:
-- best ai memory framework
-- AI memory systems
-- agent memory frameworks
-- LLM memory
-- persistent memory AI
-- episodic memory AI
-- semantic memory AI
-- optimal AI memory framework
-- ideal AI memory framework
-- AI agent memory
-- AI recall mechanisms
-faq:
-- question: What are the key components of an AI memory framework?
-  answer: Key components include short-term memory (working memory), long-term memory (episodic and semantic), retrieval mechanisms, and consolidation processes that manage information flow and recall.
-- question: How do AI memory frameworks differ from simple context windows?
-  answer: Context windows are temporary and limited, holding only recent interactions. Frameworks provide persistent, structured storage and sophisticated retrieval, allowing AI agents to retain and recall
-    information across extended periods and tasks.
-- question: What is the role of embeddings in AI memory frameworks?
-  answer: Embeddings represent information as numerical vectors, enabling semantic search and efficient retrieval. They allow frameworks to find relevant memories based on meaning, not just keywords, which
-    is crucial for complex recall.
-- question: What makes an AI memory framework "optimal" for an agent?
-  answer: An optimal AI memory framework balances scalability, retrieval speed and accuracy, integration ease, support for necessary memory types, and persistence, ensuring it effectively supports the agent's
-    specific tasks and long-term coherence.
-- question: How can I choose the best AI memory framework for my project?
-  answer: To choose the best AI memory framework, evaluate your project's specific needs regarding scalability, retrieval speed, integration complexity, required memory types (episodic, semantic), and persistence.
-    Consider dedicated frameworks like Hindsight or Zep, or leverage vector databases with orchestration tools like LangChain or LlamaIndex.
-- question: What is the difference between episodic and semantic memory in AI?
-  answer: Episodic memory AI stores specific events and personal experiences with temporal context, like recalling a particular conversation. Semantic memory AI stores general knowledge, facts, and concepts,
-    like knowing the capital of France. Both are crucial for a comprehensive AI memory system.
-- question: How does an AI memory framework contribute to an agent's long-term coherence?
-  answer: By providing persistent storage and efficient retrieval of past interactions, knowledge, and experiences, an AI memory framework allows agents to maintain context, learn from past actions, and
-    exhibit consistent behavior over time, leading to improved long-term coherence.
-- question: What are the benefits of using an AI memory framework for LLM agents?
-  answer: AI memory frameworks provide LLM agents with the ability to retain information beyond their limited context window, enabling them to learn from past interactions, maintain context across extended
-    conversations, and perform more complex, stateful tasks. This leads to more coherent and intelligent agent behavior.
+lastmod: 2026-10-08
 slug: best-ai-memory-framework
 aliases:
 - /articles/agent-framework-agent-memory/
@@ -71,96 +20,133 @@ aliases:
 - /articles/llm-memory-provider/
 - /articles/llm-memory-tools/
 - /articles/what-is-the-best-ai-memory/
+tags:
+- AI Agent Memory
+- Memory Frameworks
+- LLM Memory Layer
+- Agent Architectures
+keywords:
+- best ai memory framework
+- best agent memory framework
+- best memory layer for ai agents
+- llm memory framework
+- llm memory api
+- best ai memory tool
+- best memory for ai agents
+cluster: agent-memory
+faq:
+- question: "What is the best AI memory framework?"
+  answer: "There isn't one winner. Mem0 and Supermemory are quick to add for chat personalization, Zep and Graphiti fit data where facts change over time, LangMem fits LangGraph apps, Letta fits agents that manage their own memory, Cognee fits knowledge graphs built from documents, and Hindsight fits agents meant to learn from experience. Pick by use case, license and hosting needs, then test on your own data."
+- question: "Which AI memory frameworks can I self-host for free?"
+  answer: "Mem0, Graphiti, Letta Code, Cognee and MemOS are Apache-2.0. LangMem and Hindsight are MIT. Honcho and Basic Memory are AGPL-3.0, which has obligations if you offer a modified version as a network service. Zep's platform and Supermemory's local server are not open source."
+- question: "Do I need a memory framework, or is chat history enough?"
+  answer: "If sessions are short and you don't need anything to carry over between them, keeping recent messages in the prompt is enough. You need a memory framework once users return across sessions, conversations outgrow the context window, or the agent should apply facts and lessons from past work."
 ---
 
+The **best AI memory framework** depends on what your agent needs to remember and where you need it to run. For chat personalization, Mem0 or Supermemory are the quickest to add. For facts that change over time, Zep or Graphiti. For LangGraph apps, LangMem. For agents that learn from experience, Hindsight or Letta. Test two on your own data before you commit.
 
-The **best AI memory framework** provides AI agents with persistent, structured storage and sophisticated retrieval for information, enabling them to recall past experiences and knowledge effectively. This system architecture goes beyond temporary context windows, offering crucial capabilities for complex agentic tasks and long-term coherence. Selecting the **optimal AI memory framework** is key for advanced AI development.
+This page is the advice. For the raw facts on each system (license, storage, retrieval, benchmarks) see the [LLM memory comparison table](/articles/llm-memory-comparison/). For background on memory types, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).
 
-A well-designed memory framework allows AI agents to move beyond stateless interactions, offering persistent recall and contextual understanding essential for sophisticated applications. This article explores the core concepts, types, and leading approaches to AI memory frameworks, guiding you toward selecting the right solution for your needs.
+## What is the best AI memory framework for your agent?
 
-## What is the Best AI Memory Framework?
+**An AI memory framework is a library or service that stores what an agent learns from interactions and returns the relevant parts on later calls.** It's also called a **memory layer**, **memory API** or **memory provider**. The terms overlap: a "layer" sits between your app and the LLM, an "API" or "provider" is usually the hosted version of the same thing.
 
-The **best AI memory framework** is a system architecture that enables AI agents to store, retrieve, and use information effectively over time. It goes beyond the temporary context window of Large Language Models (LLMs), offering structured, persistent storage for experiences, knowledge, and learned behaviors, crucial for complex agentic tasks and long-term coherence. This **optimal AI memory framework** is essential for advanced AI.
+Here's the short answer by situation. All facts were checked against each project's README and docs on 8 October 2026.
 
-### Core Components of an AI Memory Framework
+| If you need... | Start with | Also consider |
+|---|---|---|
+| Per-user memory for a chatbot or assistant, fast | Mem0 | Supermemory, Memobase |
+| Facts that change, with "what was true when" | Zep (managed) or Graphiti (self-hosted) | Hindsight |
+| Memory inside a LangGraph agent | LangMem | Any provider with a LangGraph integration |
+| An agent that edits and manages its own memory | Letta | LangMem (hot-path tools) |
+| A knowledge graph built from docs, code and tickets | Cognee | Supermemory (connectors), Graphiti |
+| An agent that learns from past tasks and reflects | Hindsight | Letta, MemOS |
+| Memory for coding agents (Claude Code, Codex, Cursor) | Several options; see below | |
+| Modeling many people and agents in one app | Honcho | Zep |
+| Local, human-readable notes your AI shares with you | Basic Memory | Letta Code (MemFS) |
 
-Understanding the fundamental building blocks of any **AI memory system** is essential. A strong AI memory framework typically incorporates several key components that work in concert to manage information effectively.
+## Do you need a memory framework at all?
 
-#### Short-Term Memory (STM) / Working Memory
+Not always. A framework adds an LLM call per write, a database, and another thing to operate. Skip it if:
 
-This component holds information actively being processed or recently encountered. It's akin to human working memory, allowing the agent to focus on immediate tasks and context. Think of it as the agent's scratchpad for current operations.
+- Sessions are short and nothing needs to carry over.
+- The full conversation fits comfortably in the context window and cost isn't a concern.
+- What the agent needs is a fixed set of documents. That's RAG, not memory; see [RAG vs agent memory](/articles/rag-vs-agent-memory/).
 
-#### Long-Term Memory (LTM)
+You need one when users come back across sessions, when conversations outgrow the window, or when the agent should apply what it learned before. The [LongMemEval paper](https://arxiv.org/abs/2410.10813) found commercial chat assistants and long-context LLMs lost about 30% accuracy when recalling information across long interactions, which is the gap memory systems try to close.
 
-This is where information is stored persistently, allowing for recall across extended periods. LTM can be further categorized to support different types of recall.
+Also check what your agent framework already gives you. LangGraph has short-term (thread) and long-term (store) memory built in. CrewAI, the OpenAI Agents SDK and Microsoft Agent Framework each have their own memory options; see [CrewAI long-term memory](/articles/crewai-long-term-memory/), [OpenAI Agents SDK memory](/articles/openai-agents-sdk-memory/) and [Microsoft Agent Framework memory](/articles/microsoft-agent-framework-memory/). A dedicated framework is worth it when the built-in option can't extract facts, handle updates, or share memory across agents.
 
-##### Episodic Memory
+## Five questions that decide the choice
 
-**Episodic memory AI** stores specific events and experiences, often with temporal and contextual details. This allows agents to recall "what happened when." [Understanding episodic memory for recalling specific events](/articles/episodic-memory-in-ai-agents/) is vital for agents that need to track their own history.
+1. **Must it run on your infrastructure?** If yes, rule out hosted-only products and check the license (Apache-2.0 and MIT are permissive; AGPL-3.0 has network-use obligations).
+2. **What shape is the memory?** User preferences and facts suit extraction into a vector store. Relationships and changing facts suit a graph.
+3. **Who decides what to save?** Your code (automatic, predictable) or the agent through tool calls (flexible, adds latency and failure modes).
+4. **What framework are you on?** Native integrations save weeks. Many systems ship LangGraph and CrewAI integrations, but check the list for yours.
+5. **What does a wrong memory cost you?** In support or health use cases, provenance and the ability to delete matter more than benchmark points.
 
-##### Semantic Memory
+## Best memory framework by use case
 
-**Semantic memory AI** stores general knowledge, facts, and concepts. This is the agent's understanding of the world, independent of specific personal experiences. [Exploring semantic memory in AI agents](/articles/semantic-memory-ai-agents/) helps in building agents with broad knowledge bases.
+### Personalized chat assistants and customer support
 
-#### Retrieval Mechanisms for AI Recall
+**Mem0** is built for this. Its README targets assistants, customer support and personalization, with user, session and agent scopes. You can use it as a Python/npm library, a self-hosted server (Postgres + pgvector), or the hosted platform. One caveat: graph memory was removed from the open-source SDK in v3 and is now a platform feature, and Mem0 says its published benchmark scores reflect platform-only optimizations.
 
-These are the processes by which the agent accesses relevant information from its memory. Effective retrieval often relies on sophisticated search techniques, like vector similarity search, to find the most pertinent data efficiently. This process is critical for grounding LLM responses and is a key aspect of **AI recall mechanisms**.
+**Supermemory** fits if you also want document search and connectors in the same API. Its `profile()` call returns a static and dynamic user profile, which you can drop into a system prompt. **Memobase** takes a profile-first approach too, with a user profile and event timeline kept per user. More on this setup in [how to add memory to a chatbot](/articles/how-to-add-memory-to-chatbot/).
 
-#### Memory Consolidation in AI Systems
+### Facts that change over time
 
-Memory consolidation involves processes that strengthen, organize, and potentially prune memories over time. It ensures that important information is retained while less relevant data is managed. [Understanding memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/) is vital for long-term performance and preventing memory overload.
+**Zep** and its open-source core **Graphiti** store facts in a temporal knowledge graph. Each fact has a validity window, so when a user changes jobs the old fact is marked superseded, not deleted. That supports questions like "where did she work in March?" Graphiti is self-hosted only and needs a graph database (Neo4j, FalkorDB or Amazon Neptune). Zep is the managed version with users, threads and a dashboard. Zep's own README puts it plainly: choose Graphiti "if you're comfortable building/operating the surrounding system." See [what is Zep memory](/articles/what-is-zep-memory/) and [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
 
-### The Role of LLMs and Embeddings in AI Agent Memory
+### Agents built on LangGraph
 
-Large Language Models (LLMs) form the computational engine for many modern AI agents. However, LLMs themselves have inherent limitations regarding memory, primarily due to their fixed context windows. This is where external memory frameworks become indispensable for providing agents with persistent recall.
+**LangMem** gives LangGraph agents memory tools (`create_manage_memory_tool`, `create_search_memory_tool`) and a background memory manager, and stores data in LangGraph's store. It's MIT licensed and adds no new service to run if you're already on LangGraph. It's the least work in that stack, though it's tied to LangGraph's storage model.
 
-LLMs process text, but storing and retrieving vast amounts of information efficiently requires a different approach. This is where **embedding models** come into play. They convert textual data into dense numerical vectors that capture semantic meaning. These embeddings allow for rapid, similarity-based retrieval.
+### Agents that manage their own memory
 
-For instance, an embedding model might represent the query "What was the main outcome of the last meeting?" by generating a vector. This vector is then used to search a vector database of past meeting notes, finding the embeddings closest in meaning to the query vector. This is a core mechanism in many [Retrieval-Augmented Generation (RAG) systems](/articles/rag-vs-agent-memory/). The ability to represent information semantically is a cornerstone of advanced AI reasoning, making the **best AI memory framework** a critical component.
+**Letta** (formerly MemGPT) is a full agent harness, not a plug-in library. Agents rewrite their own memory, skills and prompts, and memory lives in MemFS, a git-backed filesystem. Background "dreaming" reviews recent conversations to update memory. Choose it if you want the agent runtime and memory as one product. If you only want to add memory to an existing agent, a memory layer is a smaller change. Letta's current code is in `letta-ai/letta-code`; the older Letta V1 API server is archived. See [Letta AI guide](/articles/letta-ai-guide/) and [Mem0 vs Letta](/articles/mem0-vs-letta/).
 
-## Evaluating AI Memory Frameworks
+### Knowledge from documents, code and tickets
 
-When selecting or designing an AI memory framework, several factors are critical for ensuring it meets the agent's requirements. The **best AI memory framework** balances performance, scalability, and ease of integration, providing a reliable foundation for agentic behavior.
+**Cognee** turns documents, code and conversations into a knowledge graph with `remember`, `recall`, `improve` and `forget` operations. It runs locally on file-based defaults and can build memory with no LLM key, using small local models. It also imports memory from Mem0, Letta, Zep and Graphiti. Note that running the full graph on Postgres is labeled a demo feature, with the production version sold as a licensed product. **Supermemory** covers similar ground with managed connectors (Google Drive, Notion, Gmail, GitHub).
 
-### Key Considerations for Framework Selection
+### Agents that should learn from experience
 
-* **Scalability:** Can the framework handle a growing volume of memories without significant performance degradation? This is particularly important for agents that operate over long periods or process extensive data. High scalability ensures the memory system can grow with the agent's needs.
-* **Retrieval Speed and Accuracy:** How quickly and accurately can the agent retrieve relevant memories? Slow or inaccurate retrieval can cripple an agent's effectiveness, leading to irrelevant or outdated responses. This is a core aspect of effective **AI recall mechanisms**.
-* **Integration Complexity:** How easily can the framework be integrated with existing LLMs and agent architectures? Some frameworks offer more seamless integration than others, reducing development time.
-* **Memory Types Supported:** Does the framework support the necessary types of memory, such as episodic, semantic, or even procedural memory? The range of supported memory types dictates the agent's cognitive capabilities.
-* **Persistence:** Does the framework ensure memories are retained even when the agent restarts or the system is powered down? This is the core of **persistent memory AI**, enabling continuity of experience.
-* **Cost and Resource Requirements:** What are the computational and storage costs associated with running the framework? This practical consideration impacts deployment feasibility.
+**Hindsight** is aimed at agents that improve over time rather than only recalling chat history. It separates **world facts** from the agent's own **experiences**, consolidates them into **observations** (beliefs with supporting evidence), and offers a `reflect` call that reasons over memory to answer harder questions. It's MIT licensed, runs from one Docker command or embedded in Python, and has a usage-based cloud. Its README says it "may be overkill" for simple workflows like basic n8n automations, which is a fair warning: if you only need user preferences, Mem0 or Supermemory are simpler.
 
-### Benchmarking Memory Performance
+**Letta** is the other strong option here, through skill learning and self-edited prompts. **MemOS** also targets "cross-task skill reuse" and self-evolving memory.
 
-Quantifying the effectiveness of **AI memory systems** is challenging but crucial for progress. AI memory benchmarks are emerging to standardize evaluation. These benchmarks often assess metrics like recall accuracy, retrieval latency, and the impact of memory on task completion rates. According to a 2024 study published on arXiv, agents using advanced memory retrieval mechanisms showed a 25% improvement in complex problem-solving tasks compared to those relying solely on LLM context. Another analysis from Gartner projected the market for AI-powered data management, including memory systems, to reach $10 billion by 2027. The **ideal AI memory framework** will excel across these metrics.
+### Coding agents
 
-## Popular AI Memory Frameworks and Systems
+Most memory vendors now ship plugins for Claude Code, Codex and Cursor: Hindsight (a coding-agents package that builds a per-repo bank from git history), Supermemory (open-source plugins), Cognee (Claude Code and Codex plugins), Honcho, and Mem0 (agent skills). Letta Code is itself a coding-capable agent harness. The right pick here usually depends on whether you want local storage or a cloud account. See [AI coding agent memory](/articles/ai-coding-agent-memory/) and [AI memory MCP servers](/articles/ai-memory-mcp-server/).
 
-Several open-source and commercial solutions provide strong AI memory capabilities. Understanding these options can help identify the **best AI memory framework** for specific use cases. These systems often build upon core LLM capabilities, adding structured memory layers to enhance agent intelligence.
+### Many users, agents and groups
 
-### Vector Databases and Vector Stores for AI Memory
+**Honcho** models everything as "peers" (users, agents, groups) and builds a representation of each one in the background. It can model what one peer knows about another. It's AGPL-3.0, with a managed option. See [Honcho LLM memory](/articles/honcho-llm-memory/).
 
-Vector databases are foundational to many modern **AI memory systems**. They are optimized for storing and querying high-dimensional vectors generated by embedding models, enabling efficient semantic search.
+## Hosted pricing at a glance
 
-* **Pinecone:** A popular managed vector database service known for its scalability and ease of use in production environments.
-* **Weaviate:** An open-source vector database that supports hybrid search (keyword and vector search) and advanced querying capabilities.
-* **Milvus:** Another open-source vector database designed for large-scale similarity search, often used in enterprise applications. You can find its official documentation [here](https://milvus.io/docs).
-* **Chroma:** An open-source embedding database that is easy to integrate and run locally, making it suitable for development and smaller-scale projects.
+Prices from each vendor's pricing page on 8 October 2026. They change often.
 
-These are not full "frameworks" in the sense of agent orchestration, but they provide the critical backend for efficient memory retrieval, supporting an **optimal AI memory framework**.
+| Service | Free tier | Paid entry | Billing basis |
+|---|---|---|---|
+| [Mem0 Platform](https://mem0.ai/pricing) | Hobby: 10,000 adds, 1,000 retrievals/month | Starter $19/mo; Pro $249/mo (graph memory from Pro) | Requests per month |
+| [Zep Cloud](https://www.getzep.com/pricing) | 10,000 credits/month | Flex $125/mo (50,000 credits) | Credits (1 credit per 350-byte episode) |
+| [Supermemory](https://supermemory.ai/pricing) | $5 monthly credits | Pro $19/mo ($20 credits) | Credit balance |
+| [Letta](https://docs.letta.com/letta-code/pricing) | Up to 3 stateful agents, bring your own keys | Pro $20/mo; API plan $20/mo + $0.10 per active agent | Plan + usage |
+| [Hindsight Cloud](https://vectorize.io/pricing) | Free starting credits | Pay as you go: retain $10/M tokens, recall $0.75/M tokens, reflect $0.05/call | Tokens and calls |
 
-### Dedicated AI Memory Systems for Agents
+All of these except Zep's platform also have a free self-hosted route (Graphiti covers Zep's open-source side; Supermemory's local binary is free but not open source).
 
-These systems offer more integrated solutions, often combining vector storage with agent orchestration capabilities or specialized memory management features.
+## How to test a memory framework before you commit
 
-* **LangChain Memory:** LangChain provides various memory modules that can be plugged into agent setups. These modules handle storing and retrieving conversation history or other contextual data, offering flexibility for developers.
-* **LlamaIndex:** Primarily focused on data indexing and retrieval for LLMs, LlamaIndex can be used to build sophisticated memory systems by indexing external data sources and enabling efficient querying.
-* **Hindsight:** An open-source AI memory system designed for building persistent, stateful AI agents. It simplifies the process of giving AI agents long-term memory, offering a flexible backend for various agentic applications. You can explore Hindsight on [GitHub](https://github.com/vectorize-io/hindsight).
-* **Zep:** Zep is an open-source platform for building LLM applications with long-term memory and cognitive capabilities. It aims to provide a "brain" for LLM applications, storing and retrieving context, summaries, and memories. [Learn more about Zep Memory AI](/articles/what-is-zep-memory/).
-* **Letta AI:** Letta AI focuses on providing persistent memory for LLM applications, enabling agents to remember past interactions and information. It offers a managed solution for developers seeking simplified integration. [Compare Letta AI with other options](/articles/letta-ai-guide/).
+Benchmark tables in READMEs are mostly self-reported and run with different models and judges, so they won't tell you which system works best on your data. A one-day test will:
 
-### Comparison of Approaches to AI Memory
+1. **Collect 20-50 real conversations** or tasks from your app (or write realistic ones).
+2. **Write questions with known answers**, including some where facts changed and some where the right answer is "I don't know."
+3. **Ingest the same data into two candidates** with the same LLM and embedding model where possible.
+4. **Run the questions** and score answers by hand or with an LLM judge.
+5. **Measure tokens and latency** for both writes and reads, not just accuracy.
+6. **Test deletion**: remove a user's data and confirm it's gone from results.
+7. **Check operations**: how hard is it to back up, upgrade and monitor?
 
-| Feature | Simple Context Window | Vector Database + Retrieval | Dedicated Memory Framework (e.g., Hindsight, Zep) |
-| :
+For benchmark details and pitfalls, see [LLM memory evaluation](/articles/llm-memory-evaluation/). For repos, licenses and GitHub activity, see [open-source memory systems compared](/articles/open-source-memory-systems-compared/). Vectorize, the company behind Hindsight, also publishes a vendor comparison of [AI agent memory systems](https://vectorize.io/articles/best-ai-agent-memory-systems); read it as one vendor's view.

@@ -1,117 +1,150 @@
 ---
-title: 'Leita AI: A Deep Dive into its Memory Architecture and Alternatives'
-description: Explore Leita AI (formerly MemGPT), understanding its memory system, architecture, and comparing it with alternatives like Hindsight and Mem0.
+title: "Letta (formerly MemGPT): Memory, Setup and Pricing"
+description: "What Letta is today: the MemGPT successor, how its memory works (MemFS, memory blocks, dreaming, archival memory), how to use it from Python, and its pricing."
 date: 2026-03-25
-lastmod: 2026-03-25
-tags:
-- AI
-- agents
-- memory
-- Leita AI
-- MemGPT
-- LLM
-keywords:
-- Leita AI
-- MemGPT
-- AI memory
-- agent architecture
-- Leita alternative
-- Mem0
-- Hindsight
-faq:
-- question: What is Leita AI and what was it previously known as?
-  answer: Leita AI, formerly known as MemGPT, is an open-source system designed to give Large Language Models (LLMs) access to an unlimited context window by managing their memory.
-- question: How does Leita AI's memory architecture differ from standard RAG?
-  answer: Unlike standard Retrieval-Augmented Generation (RAG) which retrieves and presents all context equally, Leita AI employs a more sophisticated memory management system that prioritizes and structures
-    information, allowing LLMs to access relevant data efficiently without being overwhelmed.
-- question: What are some key alternatives to Leita AI for AI memory systems?
-  answer: Prominent alternatives to Leita AI include Hindsight, an open-source AI memory system focusing on hierarchical memory, and Mem0, another system aiming to provide persistent memory for AI agents.
-    Each offers different approaches to managing and accessing long-term memory.
+lastmod: 2026-10-08
 slug: letta-ai-guide
+tags:
+  - Letta
+  - MemGPT
+  - agent memory
+  - stateful agents
+keywords:
+  - "letta ai"
+  - "letta memgpt"
+  - "letta memory blocks"
+  - "letta python"
+  - "letta pricing"
+  - "letta sleep-time agents"
+faq:
+  - question: "Is Letta the same as MemGPT?"
+    answer: "Yes. Letta is the company and project built by the MemGPT researchers, and the GitHub README calls it 'Letta (f.k.a. MemGPT)'. The MemGPT paper (Packer et al., 2023) introduced the idea of an LLM that manages its own memory tiers, and Letta is the product that grew from it."
+  - question: "Does Letta have a Python SDK?"
+    answer: "Not for new projects. Letta's FAQ says the Agent SDK is TypeScript only. The generated Python package, letta-client, still talks to the Letta REST API, but its docs page marks it as deprecated and unmaintained. For Python, Letta suggests running the App Server and talking to its WebSocket protocol."
+  - question: "How much does Letta cost?"
+    answer: "Letta Code is open source (Apache 2.0) and free to run locally with your own model keys. Letta's hosted plans, as of October 2026, are Free ($0), Pro ($20/month), an API plan ($20/month plus $0.10 per active agent per month and tool execution time), Teams Pro ($20 per seat per month) and custom Enterprise pricing."
 ---
 
+**Letta** is the open-source platform for stateful agents built by the team behind **MemGPT**. A Letta agent keeps its memory, identity and conversation history across sessions, and rewrites its own memory as it learns. In 2026 the main product is **Letta Code**, an agent harness with a CLI, desktop app and TypeScript SDK, backed by optional Letta Cloud hosting.
 
-**Leita AI**, formerly known as **MemGPT**, is an advanced system designed to equip Large Language Models (LLMs) with a persistent and expandable memory, effectively overcoming the limitations of fixed context windows. It allows AI agents to retain and recall information over extended interactions, enabling more coherent and contextually aware conversations and tasks. This is achieved through a sophisticated memory management architecture that goes beyond simple retrieval, allowing LLMs to access and use vast amounts of information dynamically. Understanding Leita AI is crucial for developing sophisticated **AI agents** capable of long-term interaction and complex task execution.
+That's a big change from the Letta most tutorials describe. The old Python API server is retired, and a lot of guides online now point at code paths Letta no longer supports. This page sticks to what the current [Letta Code repository](https://github.com/letta-ai/letta-code) and [docs](https://docs.letta.com) say as of October 2026.
 
-## Understanding Leita AI's Memory Architecture
+## What is Letta AI?
 
-Leita AI's core innovation lies in its ability to manage a virtually unlimited memory for LLMs. Unlike traditional **Retrieval-Augmented Generation (RAG)** systems that retrieve a fixed set of relevant documents for each query, Leita AI implements a tiered memory system. This system includes a **main memory** (akin to an LLM's context window) and an **external memory** (a database of past interactions and information). The agent intelligently decides what information to move between these memory tiers, creating a dynamic and scalable memory.
+**Letta is a harness for stateful AI agents: the runtime that connects an LLM to persisted context, manages turns, and runs tools.** Each agent has long-lived memory stored as files it can read and edit, a searchable message history, and background "dreaming" that consolidates lessons. It grew out of the 2023 MemGPT research paper.
 
-### The Role of the LLM as an Agent
+The [MemGPT paper](https://arxiv.org/abs/2310.08560) (Packer et al., 2023) framed the LLM as an operating system. A small, fast "main context" sits in the prompt. Larger external stores sit outside it. The model itself decides what to page in and out, using function calls. That idea, an agent that manages its own memory, is still the core of Letta.
 
-In the Leita AI framework, the LLM acts as an agent that can perceive its environment, process information, and take actions. Its "thoughts" are directly tied to its memory. When an LLM needs information beyond its immediate context window, it queries its memory system. Leita AI then retrieves the most relevant pieces of information from the external memory and inserts them into the LLM's main memory for processing. This process ensures that the LLM always has access to the necessary context, even if the interaction spans hundreds of thousands of tokens.
+The project has changed form several times:
 
-### Memory Tiers and Management
+| Period | What "Letta" meant |
+|---|---|
+| 2023 | MemGPT, a research project and Python library |
+| 2024 to 2026 | Letta, a Python API server (`letta-ai/letta`) with a REST API and Python/TypeScript clients |
+| 2026 | Letta Code (`letta-ai/letta-code`): CLI, desktop app, App Server, TypeScript Agent SDK, Letta Cloud |
 
-Leita AI differentiates itself by actively managing memory. It doesn't just store raw data; it processes and organizes it. This involves:
+The `letta-ai/letta` README now says the current source lives in `letta-code`, and that the `archive` branch holds "the retired Letta V1 API server." Old tags still exist for reproducibility. The last release on that repository was 0.16.8, in May 2026.
 
-* **Short-Term Memory (Context Window):** The immediate information the LLM is actively processing. This is limited by the LLM's inherent context window size.
-* **Long-Term Memory (External Database):** A persistent storage for all past interactions, facts, and learned information. This can be a vector database or a structured database.
-* **Memory Management Functions:** Leita AI employs functions to save memories, retrieve relevant memories, and manage the overall memory space. This includes deciding what information is important enough to be saved and how it should be indexed for efficient retrieval.
+## How Letta memory works
 
-This architecture allows for more consistent and informed responses, as the agent can recall past decisions, user preferences, and domain-specific knowledge. This is a significant advancement over systems that rely solely on the LLM's fixed context. For a deeper understanding of memory types in AI agents, explore [AI agents' memory types](/articles/ai-agents-memory-types/).
+Letta's memory model has three layers: memory the agent always sees, memory it searches, and background processes that clean it up. The names changed between versions, so it helps to map old terms to new ones.
 
-## Leita AI vs. Other Memory Systems
+### Core memory: memory blocks, now memory files
 
-While Leita AI offers a powerful solution for LLM memory, it's important to compare it with other approaches to understand its strengths and potential trade-offs.
+In the classic Letta API, **core memory** was a set of **memory blocks**. Each block had a label (like `persona` or `human`), a value, and a size limit. Blocks were pinned into the context window on every turn, and the agent edited them with built-in memory tools. Blocks could also be shared between agents.
 
-### Leita AI vs. Standard RAG
+Letta Code keeps the idea but stores it differently. Memory lives in **MemFS**, which the [MemFS docs](https://docs.letta.com/concepts/memfs) call "a git-backed memory filesystem." Each memory is a Markdown file with YAML front matter, and its label maps to a path: a memory labeled `persona` is `persona.md`. Root-level files load into the system prompt on every turn. Subdirectories with their own `MEMORY.md` index stay out of context until the agent needs them.
 
-The primary distinction between Leita AI and standard RAG lies in memory management and consistency. Standard RAG often struggles with the **context window limitations** and the inconsistency arising from re-synthesizing information from raw retrieved chunks. The LLM has to "re-learn" or re-interpret the context for every new query, leading to variations in responses. Leita AI, by actively managing and prioritizing information in its memory, aims to provide more stable and predictable outputs. This addresses the core problem of RAG's consistency, as highlighted in discussions about [RAG vs. Agent Memory](/articles/rag-vs-agent-memory/).
+Every memory edit is a git commit. That gives you version history, and you can sync an agent's memory to your own GitHub repository with `/memory-repository set`.
 
-### Leita AI and Mem0
+### Archival memory and recall memory
 
-**Mem0** is another system focused on providing LLMs with persistent memory, enabling them to remember information across sessions. Like Leita AI, Mem0 aims to overcome the stateless nature of many LLM interactions. However, the specific architectures and management strategies can differ. Mem0 often emphasizes a seamless integration into existing LLM workflows, providing a robust layer for **long-term memory in AI agents**. Comparing these systems is crucial for choosing the right tool for a specific application. For a detailed comparison, see [Mem0 alternatives compared](/articles/mem0-alternatives-compared/).
+The MemGPT design had two out-of-context stores:
 
-### Leita AI and Hindsight
+- **Recall memory**: the full message history, searchable by the agent.
+- **Archival memory**: a vector-indexed store of passages the agent (or your code) inserts and searches later.
 
-**Hindsight** is an open-source AI memory system that introduces a hierarchical memory structure. It categorizes memories into tiers like mental models, observations, and raw facts. This hierarchy ensures that an agent prioritizes canonical knowledge (like company policies) over less critical information (like casual chat messages). This approach is particularly effective for maintaining consistency in internal tools where factual accuracy and adherence to established guidelines are paramount. While Leita AI focuses on expanding the usable context window, Hindsight focuses on the structured prioritization of information within memory. Exploring [open-source memory systems compared](/articles/open-source-memory-systems-compared/) can provide further context.
+Both still exist in the Letta REST API. The Python client exposes `agents.passages.create` and `agents.passages.search` on the `/archival-memory` endpoints. In Letta Code, message search is a first-class command (`/search`, `letta messages search`). On Letta Cloud it supports full-text, vector and hybrid search; local backends use full-text matching only, according to the MemFS docs.
 
-### Leita AI and LangChain/LlamaIndex
+### Sleep-time agents, now called dreaming
 
-Frameworks like LangChain and LlamaIndex also offer tools for memory management. LangChain provides concepts like multi-factor prioritization, combining semantic relevance, recency, and importance flags. LlamaIndex offers hierarchical retrieval with auto-merging, which helps in chunking and organizing documents. However, these are often more about managing the retrieval process from a static knowledge base rather than an agent actively managing its own evolving internal memory state like Leita AI. The distinction lies in the level of dynamic memory interaction and the agent's autonomy in memory management.
+**Sleep-time compute** comes from a 2025 Letta paper ([Lin et al., arXiv 2504.13171](https://arxiv.org/abs/2504.13171)). The model does work between queries, so less work is needed when a question arrives. The paper reports about 5x less test-time compute for the same accuracy on its stateful math benchmarks.
 
-## Implementing Leita AI
+In the old API this was the `enable_sleeptime` flag, which moved memory management to a background agent. In Letta Code it's called **dreaming**. Background subagents "review recent conversations, consolidate useful lessons, and update memory" (Letta memory docs). You configure it with `/sleeptime`, and it can run after a set number of agent steps or when the context window is compacted. There's an optional second review pass before updates apply, which costs more tokens.
 
-Integrating Leita AI into an AI agent typically involves defining the agent's persona, its capabilities, and its memory configuration. This includes setting up the external memory storage, which can be a vector database like Pinecone, Chroma, or even a simple file-based system for smaller applications.
+### Skills and self-editing
 
-### Core Components
+Letta Code agents also learn **skills**: reusable instruction files stored in MemFS, in a project's `.agents/skills`, or globally in `~/.letta`. Commands like `/remember` tell the agent to file a lesson where it belongs, and `/doctor` audits memory for duplication and prompt bloat.
 
-* **LLM Interface:** Connecting to a chosen LLM (e.g., GPT-4, Claude).
-* **Memory Backend:** Configuring the database for long-term storage.
-* **Agent Logic:** Defining how the agent perceives its environment, processes memory, and decides on actions.
+## How to get started with Letta
 
-A simplified conceptual example of how an agent might save a memory using a Leita-like approach in Python could look like this:
+The supported path is the Letta Code CLI. Here's the shortest route from the README:
+
+1. Install it: `npm install -g @letta-ai/letta-code`, or `uv tool install letta` (the PyPI `letta` package now ships the Letta Code CLI with a bundled Node runtime).
+2. Run `letta` in your project directory.
+3. Choose Letta Cloud or local mode on first launch. Change later with `letta backend cloud` or `letta backend local`.
+4. Run `/connect` to add your own model keys (OpenAI, Anthropic and others) and `/model` to switch models.
+5. Run `/init` so the agent inspects the repo and builds its first memory.
+6. Use `letta server` to run the App Server for self-hosted or always-on agents.
+
+### Using Letta from Python
+
+This is where older guides go wrong. Letta's FAQ answers "Is there a Python version of the SDK?" with: "No. The Letta Agent SDK is currently available only for TypeScript." When Python is a hard requirement, Letta suggests running the App Server and connecting to its WebSocket protocol from Python.
+
+The generated REST client, `letta-client` on PyPI (version 1.12.1, June 2026), still works against agents hosted in Letta Cloud with a `LETTA_API_KEY`. Its docs page says the package "is deprecated" and "receives no new features," so treat it as a bridge for existing code, not a base for new projects. With that caveat, this is what the classic memory model looks like through it:
 
 ```python
-from datetime import datetime
+import os
+from letta_client import Letta
 
-class AIAgent:
- def __init__(self, llm, memory_backend):
- self.llm = llm
- self.memory_backend = memory_backend # e.g., a class managing vector DB operations
- self.current_context = []
+client = Letta(api_key=os.environ["LETTA_API_KEY"])  # Letta Cloud
 
- def process_input(self, user_input):
- # Simulate retrieving relevant memories
- relevant_memories = self.memory_backend.retrieve(user_input)
+# Core memory: blocks pinned into the context window on every turn
+agent = client.agents.create(
+    name="support-agent",
+    model="openai/gpt-4o-mini",  # handle format: provider/model-name
+    memory_blocks=[
+        {"label": "human", "value": "Name: Dana. Plan: Pro. Prefers short answers."},
+        {"label": "persona", "value": "You are a concise support agent."},
+    ],
+)
 
- # Update current context with retrieved memories and new input
- self.current_context.extend(relevant_memories)
- self.current_context.append({"role": "user", "content": user_input, "timestamp": datetime.now()})
+# Archival memory: passages stored outside the context, searched on demand
+client.agents.passages.create(agent.id, text="Refunds are processed within 5 business days.")
 
- # Simulate LLM call with expanded context
- response = self.llm.generate(self.current_context)
+response = client.agents.messages.create(agent.id, input="How long do refunds take?")
+for message in response.messages:
+    if message.message_type == "assistant_message":
+        print(message.content)
 
- # Save the interaction to memory
- self.memory_backend.save(user_input, response, self.current_context)
+# Read back what the agent now holds in core memory
+print(client.agents.blocks.retrieve("human", agent_id=agent.id).value)
+```
 
- # Update current context with LLM's response
- self.current_context.append({"role": "assistant", "content": response, "timestamp": datetime.now()})
+The method names and parameters above match `letta-client` 1.12.1. Check the package changelog before relying on it, since no new features are planned.
 
- # In a real system, memory management would prune or consolidate context
- # to stay within LLM's effective window.
+## Letta pricing and hosting
 
- return response
+Letta Code itself is Apache 2.0 and free to run. You pay your model provider. Hosted plans, from the [Letta pricing page](https://docs.letta.com/letta-code/pricing) as of October 2026:
 
-## 
+| Plan | Price | What you get |
+|---|---|---|
+| Free | $0/month | Limited agents and Letta Auto usage; bring your own API keys |
+| Pro | $20/month | Letta Auto weekly and monthly quotas, pay-as-you-go overage, up to 20 stateful agents |
+| API | $20/month | Unlimited agents, $0.10 per active agent per month, $0.00015 per second of tool execution, API keys, pay-as-you-go LLM usage |
+| Teams Pro | $20/seat/month | Shared agents with access control |
+| Enterprise | Custom | RBAC, SAML/OIDC SSO, dedicated support |
+
+Hosting choices:
+
+- **Local backend**: agents and MemFS stay on your disk. Letta's docs warn you're responsible for backing them up.
+- **Letta Cloud**: agent state, memory and conversations live in Letta's cloud, while tools run on your laptop, a remote computer or a managed sandbox.
+- **Self-hosted App Server**: `letta server` runs the full runtime on your own machine.
+
+One thing to know if you're migrating: the open-source Docker image "is no longer supported as a backend for Letta Code" (Letta deprecated docs). AgentFile (`.af`) import and export were also removed.
+
+## When Letta fits, and when something else does
+
+Letta fits when the agent itself is the product: a long-lived assistant or coding agent that edits its own memory, learns skills and runs on a schedule. Its memory is readable Markdown under git, which makes it easy to inspect and diff.
+
+It fits less well when you want a memory layer to bolt onto an agent you already built in another framework, or a Python-first SDK. Tools like Mem0, Zep, Cognee and [Hindsight](https://github.com/vectorize-io/hindsight) are built as memory services that sit beside your agent rather than as the agent runtime. Those tradeoffs are covered in our guides to [Letta alternatives](/articles/letta-alternatives/), [Mem0 alternatives](/articles/mem0-alternatives-compared/), [Zep alternatives](/articles/zep-alternatives/) and [Cognee alternatives](/articles/cognee-alternatives/). For the idea Letta started from, see [hierarchical memory for LLMs](/articles/llm-hierarchical-memory/).

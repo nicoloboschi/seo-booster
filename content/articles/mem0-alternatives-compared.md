@@ -1,109 +1,140 @@
 ---
-title: 'Mem0 Alternatives Compared: Exploring Advanced AI Memory Systems'
-description: 'Mem0 Alternatives Compared: Exploring Advanced AI Memory Systems. Learn about mem0 alternative, mem0 vs with practical examples, code snippets, and architectural ...'
+title: "Mem0 Alternatives: 7 Agent Memory Tools Compared"
+description: "Mem0 alternatives compared: Zep, Graphiti, Letta, Cognee, Hindsight, Supermemory and LangMem: licenses, self-hosting, memory models and pricing (Oct 2026)."
 date: 2026-03-24
-tags:
-- AI memory
-- agent architecture
-- alternatives
-keywords:
-- mem0 alternative
-- mem0 vs
-- mem0 review
-- best mem0 alternative
-faq:
-- question: What are the key differences between Mem0 and other AI memory systems?
-  answer: Key differences lie in their architecture, focus (e.g., episodic vs. semantic), integration capabilities, and the underlying technologies used for storage and retrieval. Some alternatives offer
-    more flexibility or specialized features.
-- question: How do vector databases compare to traditional memory systems for AI agents?
-  answer: Vector databases are crucial for modern AI memory systems, enabling efficient semantic search and retrieval of information based on vector embeddings. They are often a core component of advanced
-    memory solutions, complementing other storage and reasoning mechanisms.
-- question: What factors should I consider when choosing a Mem0 alternative?
-  answer: Consider your specific use case, the type of memory required (episodic, semantic, etc.), scalability needs, integration with your existing agent architecture, and the availability of community
-    support or managed services.
+lastmod: 2026-10-08
 slug: mem0-alternatives-compared
 aliases:
-- /articles/mem0-alternatives/
+  - /articles/mem0-alternatives/
+tags:
+  - Mem0
+  - agent memory
+  - alternatives
+  - open source
+keywords:
+  - "mem0 alternatives"
+  - "mem0 alternative open source"
+  - "best mem0 alternative"
+  - "mem0 vs zep"
+  - "mem0 vs letta"
+  - "mem0 graph memory"
+faq:
+  - question: "What is the best open-source alternative to Mem0?"
+    answer: "It depends on what you need. For self-hosted graph or temporal memory, Graphiti (Apache 2.0) and Cognee (Apache 2.0) are the closest fits. For an agent that manages its own memory, Letta. For a memory API with retain, recall and reflect plus background consolidation, Hindsight (MIT). LangMem fits teams already on LangGraph."
+  - question: "Does open-source Mem0 still have graph memory?"
+    answer: "No. Mem0's v2-to-v3 migration guide says 'Graph memory is removed from the open-source SDK' and that OSS has no replacement. Graph memory (entity linking) is now a Mem0 Platform feature, listed on the Pro ($249/month) and Enterprise plans."
+  - question: "Is Mem0 free?"
+    answer: "The Mem0 library and self-hosted server are Apache 2.0 and free to run. The hosted Mem0 Platform has a free Hobby tier with 10,000 add requests and 1,000 retrieval requests per month, then Starter at $19/month and Pro at $249/month (pricing as of October 2026)."
 ---
 
+**Mem0 alternatives** are other memory layers that give AI agents long-term memory: Zep, Graphiti, Letta, Cognee, Hindsight, Supermemory and LangMem. Teams usually look for one when they need self-hosted graph memory (removed from open-source Mem0 in v3), temporal facts, an agent that edits its own memory, or different pricing.
 
-The field of Artificial Intelligence (AI) is rapidly advancing, with a significant focus on enabling agents to possess and effectively use memory. This capability is fundamental to building more sophisticated, context-aware, and autonomous AI systems. Mem0 has emerged as one notable solution in this domain, offering a specific approach to AI memory. However, the landscape of AI memory systems is diverse and dynamic, with numerous alternatives offering different functionalities, architectures, and trade-offs. This article provides a comparative overview of Mem0 alternatives, examining their strengths and weaknesses within the broader context of AI agent memory.
+Below: what Mem0 does today, a comparison table, a short honest section on each alternative, and a way to choose. Every fact comes from the project's own README, docs or pricing page, checked in October 2026.
 
-## Understanding AI Memory Systems
+## What Mem0 does, and why people look for Mem0 alternatives
 
-Before delving into specific alternatives, it's crucial to understand the fundamental concepts of AI memory. At its core, AI memory refers to the mechanisms by which an AI agent stores, retrieves, and uses information over time. This is not a monolithic concept; rather, it encompasses various types of memory, each serving distinct purposes:
+**Mem0 is an Apache 2.0 memory layer for AI agents. It extracts facts from conversations with an LLM, stores them with embeddings, and returns the relevant ones on search.** It runs as a Python or Node library, a self-hosted Docker server, or the managed Mem0 Platform. Memories are scoped to users, sessions and agents.
 
-* **Episodic Memory:** This refers to the memory of specific events or experiences, often associated with a particular time and place. For AI agents, this could be remembering a specific conversation turn or a past interaction. [Episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/) is critical for maintaining conversational context and personalizing interactions.
-* **Semantic Memory:** This type of memory stores general knowledge about the world, facts, concepts, and their relationships. For AI agents, semantic memory provides the background knowledge necessary to understand and reason about complex situations. [Semantic memory in AI agents](/articles/semantic-memory-ai-agents/) is vital for tasks requiring factual recall and understanding.
-* **Working Memory:** Analogous to human short-term memory, working memory holds information that is actively being processed or used for immediate tasks. This is often limited in capacity and transient.
-* **Long-Term Memory:** This encompasses information that is stored for extended periods, accessible for later retrieval. This can include both episodic and semantic knowledge that has been consolidated. [Long-term memory in AI agents](/articles/ai-agent-long-term-memory/) is essential for agents that need to learn and adapt over time.
+In April 2026 Mem0 shipped a new algorithm, described in its [README](https://github.com/mem0ai/mem0):
 
-The architecture of AI memory systems often involves several components, including data storage (e.g., vector databases, traditional databases), retrieval mechanisms (e.g., semantic search, keyword search), and integration layers that allow the agent's reasoning engine to access and update memory. A comprehensive understanding of these aspects is detailed in [AI agent memory explained](/articles/ai-agent-memory-explained/).
+- **Single-pass, ADD-only extraction.** One LLM call per add. Old facts are no longer updated or deleted; new ones are stored beside them, and retrieval ranks the most current higher.
+- **Multi-signal retrieval.** Semantic, BM25 keyword and entity matching, scored in parallel and fused.
+- **Entity linking** across memories to boost retrieval.
 
-## The Role of Vector Databases in AI Memory
+The same release changed the open-source SDK in ways that push some users to look elsewhere. The [v2-to-v3 migration guide](https://docs.mem0.ai/migration/oss-v2-to-v3) states "Graph memory is removed from the open-source SDK," the `enable_graph` and `graph_store` options are gone, and "OSS has no graph memory replacement." Graph memory now lives on the Platform, where the [pricing page](https://mem0.ai/pricing) lists it on Pro ($249/month) and Enterprise.
 
-A significant technological enabler for modern AI memory systems is the rise of vector databases. These databases are designed to store and query high-dimensional vectors, which are numerical representations of data (text, images, audio) generated by embedding models.
+Mem0 is still a solid default for user-preference memory in chat apps. The common reasons to switch are:
 
-* **Embedding Models:** These models (e.g., Sentence-BERT, OpenAI embeddings) convert raw data into dense vector representations where semantically similar items are closer in the vector space. The choice of embedding model significantly impacts the quality of memory retrieval. [Embedding models for memory](/articles/embedding-models-for-rag/) are a critical consideration.
-* **Vector Search:** Vector databases facilitate efficient similarity search, allowing an AI agent to find the most relevant pieces of information from its memory based on a query's vector representation. This is foundational for semantic recall.
+1. You need **graph or temporal memory you can self-host**.
+2. You want facts that are **invalidated over time**, not only appended.
+3. You want the **agent itself** to manage memory, not a side service.
+4. You need **document and code ingestion** into a knowledge graph, not only chat facts.
+5. The hosted **request limits** (Starter: 50,000 adds and 5,000 retrievals per month) don't match your traffic.
 
-While Mem0, like many modern systems, likely uses vector embeddings, the specific implementation and integration with other memory types can vary greatly among alternatives.
+## Mem0 alternatives at a glance
 
-## Mem0: A Snapshot
+| Tool | What it is | License | Self-host | Memory model | Hosted pricing (Oct 2026) |
+|---|---|---|---|---|---|
+| **Zep** | Managed context graph service | Proprietary service | Enterprise BYOC only | Temporal context graph per user or account | Free 10,000 credits/mo; Flex $125/mo |
+| **Graphiti** | Zep's open-source graph framework | Apache 2.0 | Yes, with Neo4j, FalkorDB or Neptune | Bi-temporal knowledge graph with episodes | None (library) |
+| **Letta** | Stateful agent harness | Apache 2.0 | Yes, local or App Server | Agent-edited memory files (MemFS), message search, dreaming | Free; Pro $20/mo |
+| **Cognee** | Knowledge graph memory engine | Apache 2.0 | Yes, pip or Docker | Graph + vector + relational stores | Free 1M tokens; $1 per 1M tokens |
+| **Hindsight** | Memory server with retain/recall/reflect | MIT | Yes, Docker, pip, Helm or embedded | Facts, experiences, observations, mental models | Pay as you go (retain $10 per 1M tokens) |
+| **Supermemory** | Memory, RAG and user-profile API | MIT (repo) | Local server; self-hosting listed on Scale plan | Extracted facts, user profiles, hybrid search | Free $5 credits; Pro $19/mo |
+| **LangMem** | Memory library for LangGraph | MIT | Yes (library) | Extracted memories in LangGraph's store | None (library) |
 
-Mem0 positions itself as a powerful tool for building AI agents with memory. It typically aims to provide a structured way to manage an agent's interaction history and knowledge, often using vector embeddings for efficient retrieval. The specifics of Mem0's architecture and feature set are subject to its ongoing development. However, for the purpose of comparison, we can consider its general approach: managing conversational context, enabling recall of past interactions, and potentially integrating external knowledge.
+Prices are the vendors' published list prices and change often. Check the linked pricing pages before you commit.
 
-When evaluating Mem0, users often look for its ease of integration, the quality of its retrieval, its scalability, and how well it fits into different [AI agent architecture patterns](/articles/ai-agent-architecture-patterns/). A detailed Mem0 review would typically cover these aspects.
+## Zep and Graphiti
 
-## Exploring Mem0 Alternatives
+**Zep** is now a managed service. Its homepage calls it a "unified context layer for enterprise data" that builds a context graph per user, customer or account, with dated facts that update as data changes. Zep claims retrieval under 200 ms. SDKs exist for Python, TypeScript and Go.
 
-The search for a "Mem0 alternative" or the "best Mem0 alternative" stems from the need for solutions that might offer different strengths, cater to specific use cases, or provide a more flexible or open-source approach. Here, we explore several categories and specific examples of systems that serve as Mem0 alternatives.
+Zep stopped maintaining its open-source Community Edition in April 2025. Its open-source work now goes into **Graphiti**, the temporal knowledge graph framework inside Zep. In [Graphiti](https://github.com/getzep/graphiti), every fact has a validity window. When information changes, the old fact is invalidated rather than deleted, so you can ask what was true at any point. Every fact traces back to the raw "episode" that produced it.
 
-### 1. Comprehensive Open-Source Memory Frameworks
+- **Pick Zep** if you want managed temporal memory with SLAs and don't need to self-host. Credits are spent on ingestion (1 credit per 350 bytes); retrieval and storage are unmetered.
+- **Pick Graphiti** if you want the same graph model on your own infrastructure and can run a graph database.
+- **Look elsewhere** if you don't want to operate a graph DB, or want a simple user-memory API.
 
-These frameworks aim to provide a more holistic and customizable approach to AI memory, often offering modular components that can be adapted to specific agent needs.
+See our [Zep alternatives guide](/articles/zep-alternatives/) for more on this split.
 
-* **[Hindsight](https://github.com/vectorize-io/hindsight):** Hindsight is an open-source AI memory system designed to be flexible and modular. It focuses on providing a strong foundation for building memory capabilities into AI agents. For a detailed comparison, see the [Mem0 alternatives guide on Vectorize.io](https://vectorize.io/articles/mem0-alternatives). Key features include:
- * **Multi-modal Memory Storage:** The ability to store and retrieve various types of information, not just text.
- * **Hierarchical Memory Structures:** Organizing memories in a way that reflects their importance, recency, or thematic relevance.
- * **Integration with LLMs:** Seamless connection with Large Language Models for memory encoding, retrieval, and reasoning.
- * **Extensibility:** Designed to be easily extended with custom memory modules, retrieval strategies, and storage backends.
+## Letta
 
- Hindsight's strength lies in its adaptability. For developers building complex agents that require nuanced memory management, Hindsight offers a powerful toolkit. It allows for fine-grained control over how memories are stored, indexed, and retrieved, supporting diverse [AI agent memory explained](/articles/ai-agent-memory-explained/) paradigms. When comparing [open-source memory systems](/articles/open-source-memory-systems-compared/), Hindsight often stands out for its comprehensive feature set and developer-centric design.
+**Letta** (formerly MemGPT) is not a memory layer you call from your agent. It is the agent runtime. Letta Code agents keep memory as Markdown files in a git-backed store called MemFS, search their own message history, and run background "dreaming" to consolidate lessons. It's Apache 2.0.
 
-* **LangChain Memory Modules:** While LangChain is primarily an orchestration framework, its built-in memory modules serve as direct alternatives for managing conversational state and short-to-medium term memory. Examples include:
- * `ConversationBufferMemory`: Stores raw messages.
- * `ConversationBufferWindowMemory`: Stores a fixed number of recent messages.
- * `ConversationSummaryMemory`: Uses an LLM to summarize the conversation.
- * `VectorStoreRetrieverMemory`: Uses a vector store for retrieving relevant past interactions.
+- **Pick Letta** if you're building a long-lived agent from scratch and want it to edit its own memory and skills.
+- **Look elsewhere** if you need memory inside an existing LangGraph, CrewAI or custom Python agent. Letta's Agent SDK is TypeScript only, and its Python client is deprecated.
 
- These are excellent for simpler use cases or when integrating memory directly into a LangChain-based agent. However, they might lack the depth and flexibility of dedicated memory systems for highly complex, long-term memory requirements.
+Details, setup and pricing are in our [Letta guide](/articles/letta-ai-guide/).
 
-* **LlamaIndex Data Structures:** LlamaIndex, another popular data framework for LLM applications, provides various data structures and indexing mechanisms that can be used to build memory systems. Its focus is on making external data accessible to LLMs, which directly translates to building memory.
+## Cognee
 
-### 2. Specialized Vector Databases with Memory Capabilities
+**Cognee** turns documents, code and conversations into a self-hosted knowledge graph plus vector index. Its API is four verbs: `remember`, `recall`, `improve` and `forget`. Since v1.6 (September 2026) it can build and search text memory with local models and no LLM key, per the [Cognee README](https://github.com/topoteretes/cognee).
 
-Many vector databases, while not exclusively AI memory systems, offer features that make them suitable as the core component of a custom memory solution.
+- **Pick Cognee** if your memory is mostly documents and code, you want graph retrieval, and you want it open source and self-hosted. It can also import memory from Mem0, Letta, Zep and Graphiti.
+- **Look elsewhere** if you only need per-user chat facts. A graph pipeline is more machinery than that job needs.
 
-* **Pinecone:** A managed vector database service known for its scalability and performance. It can be used to store embeddings of agent experiences, enabling rapid semantic search for relevant past information.
-* **Weaviate:** An open-source vector database that supports rich data structures and graph-based querying alongside vector search. This allows for more complex relationships between memory items.
-* **Chroma:** An open-source embedding database that is easy to set up and use, making it a good choice for rapid prototyping of memory-enhanced agents.
-* **Milvus:** A powerful, open-source vector database designed for massive-scale similarity search.
+Our [Cognee alternatives page](/articles/cognee-alternatives/) compares it in depth, and [Mem0 vs Cognee](/articles/mem0-vs-cognee/) covers the head-to-head.
 
-When considering these, the primary difference from a dedicated system like Mem0 or Hindsight is that these are primarily *storage and retrieval engines*. They require additional logic for encoding, decoding, and integrating memory into the agent's reasoning loop. However, their flexibility is unparalleled. For instance, Mem0 vs. Cognee or Mem0 vs. Zep reviews often highlight how dedicated systems abstract away some of the complexities of managing underlying vector stores.
+## Hindsight
 
-### 3. Agent-Specific Memory Solutions
+**[Hindsight](https://github.com/vectorize-io/hindsight)** is an MIT-licensed memory server built around three operations. `retain` uses an LLM to extract facts, entities, time data and relationships. `recall` runs four searches in parallel (semantic, BM25, graph and time range) and merges them with rank fusion and a cross-encoder reranker. `reflect` reasons over stored memories to answer harder questions.
 
-Some platforms and tools are designed with AI agents as a primary use case and include memory as a core feature.
+In the background it consolidates facts into **observations** that keep their supporting evidence and get refined, not overwritten, when new facts arrive. It stores data in PostgreSQL with pgvector, ships a built-in MCP endpoint per memory bank, and runs as Docker, pip, Helm or embedded in a Python process.
 
-* **AutoGen (Microsoft):** While AutoGen is an agent framework for multi-agent conversations, it has built-in mechanisms for managing conversation history and state, which can be considered a form of memory. Its strength lies in orchestrating complex agent interactions.
-* **CrewAI:** Similar to AutoGen, CrewAI focuses on orchestrating AI agents to perform tasks collaboratively. Its memory management is geared towards ensuring agents can share context and recall relevant parts of their ongoing collaboration.
+- **Pick Hindsight** if you want temporal and entity-aware recall plus consolidated beliefs, fully self-hosted under MIT, without running a separate graph database.
+- **Look elsewhere** if you need a turnkey agent runtime (Letta) or a document knowledge graph (Cognee). Every retain makes LLM calls, and the README itself says it "may be overkill" for simple n8n-style workflows.
 
-These solutions are often more opinionated about how memory should be managed, integrating it tightly with their agent orchestration capabilities.
+## Supermemory
 
-## Comparing Key Features and Trade-offs
+**Supermemory** is a hosted memory and context API. It extracts facts, keeps auto-maintained user profiles, and combines RAG over your files with personal memory in one query. It ships connectors (Google Drive, Gmail, Notion, OneDrive, GitHub) and plugins for Claude Code, Cursor, Codex and others.
 
-When evaluating a "Mem0 alternative," several factors come into play. A balanced Mem0 review would consider these alongside the strengths of its competitors.
+- **Pick Supermemory** if you want memory, RAG and connectors from one API with little setup.
+- **Look elsewhere** if fully open, self-run infrastructure is a hard requirement. A local server exists, but the pricing page lists self-hosting under the $399/month Scale plan.
 
-| Feature | Mem0 (General Approach) | Hindsight (Open-Source Framework) | LangChain Memory Modules | Vector Databases (e.g., Pinecone, Weaviate) | Agent Frameworks (e.g., AutoGen) |
-| :
+See our [Supermemory alternatives](/articles/supermemory-alternatives/) for its own comparison.
+
+## LangMem
+
+**LangMem** from LangChain gives LangGraph agents tools to manage memory in the hot path (`create_manage_memory_tool`, `create_search_memory_tool`) and a background manager that extracts and consolidates memories. It stores data in LangGraph's long-term memory store.
+
+- **Pick LangMem** if you're already on LangGraph and want memory without a new service.
+- **Look elsewhere** if you're not on LangGraph. Also note the last PyPI release (0.0.30) was in October 2025, so check activity before you depend on it.
+
+## How to choose a Mem0 alternative
+
+Start from the shape of your memory, not from benchmark charts. Mem0, Supermemory, Zep and Hindsight all publish strong LongMemEval or LoCoMo scores, but with different models and setups. Mem0 itself notes its scores reflect the managed platform, not the open-source SDK. Test on your own conversations.
+
+| If you need... | Look at |
+|---|---|
+| Per-user preferences in a chat app, simple API | Mem0 (stay), Supermemory |
+| Facts that change over time, with history | Graphiti, Zep, Hindsight |
+| Self-hosted graph memory, open source | Graphiti, Cognee |
+| Memory over documents and code | Cognee, Supermemory |
+| An agent that edits its own memory | Letta |
+| Consolidated beliefs and reasoning over memory | Hindsight |
+| Memory inside LangGraph with no new service | LangMem |
+
+Two practical checks before you switch:
+
+1. **Who runs it?** A library (LangMem, Mem0 OSS), a server you deploy (Hindsight, Cognee, Graphiti plus a graph DB), or a hosted API (Zep, Supermemory, Mem0 Platform).
+2. **What does a write cost?** Mem0 v3 makes one LLM call per add. Graphiti and Hindsight's retain also use an LLM to extract facts. Cognee can extract with a small local model when no LLM key is set. At high message volume, extraction is usually the biggest bill.

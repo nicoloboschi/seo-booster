@@ -1,54 +1,19 @@
 ---
-title: 'Context Window LLM Ranking: Understanding and Evaluating Transformer Limits'
-description: Explore context window LLM ranking, understanding how transformer model context limits impact performance and how to evaluate them for better AI applications. Lea...
+title: "LLM Context Window Comparison: Largest Models (2026)"
+description: "Which LLM has the largest context window? A sourced comparison of context window sizes by model and provider as of October 2026, with long-context pricing."
 date: 2026-03-31
-lastmod: 2026-03-31
-tags:
-- LLM
-- context window
-- transformer models
-- AI memory
-- LLM ranking
-- AI performance
-- LLM context window
-- transformer context limit
-keywords:
-- context window llm ranking
-- LLM context window
-- transformer context limit
-- AI memory limitations
-- LLM performance
-- LLM ranking
-- evaluating LLM context
-- transformer context window
-- LLM context window ranking
-- LLM context
-- transformer context
-faq:
-- question: What is a context window in LLMs?
-  answer: A context window refers to the fixed-size buffer of tokens an LLM can process at any given time. It dictates how much input text the model can consider when generating a response.
-- question: How does context window size affect LLM performance?
-  answer: Larger context windows allow LLMs to retain more information from long conversations or documents, leading to improved coherence, relevance, and understanding of complex queries. Smaller windows
-    can cause the model to 'forget' earlier parts of the input.
-- question: What are the main challenges with LLM context windows?
-  answer: The primary challenges include computational cost, memory requirements, and the 'lost in the middle' problem, where LLMs may struggle to recall information from the middle of a very long context.
-    Ranking these limitations is crucial for practical deployment.
-- question: How is context window LLM ranking performed?
-  answer: Context window LLM ranking involves evaluating and comparing LLMs based on the size and effectiveness of their context windows through standardized benchmarks and performance metrics, considering
-    factors like retrieval accuracy and conversational coherence.
-- question: What is the "lost in the middle" problem in LLMs?
-  answer: The "lost in the middle" problem refers to the phenomenon where LLMs, especially those with very large context windows, struggle to accurately recall information that is positioned in the middle
-    of the input sequence, often prioritizing information at the beginning or end.
-- question: What is LLM context window ranking?
-  answer: LLM context window ranking is the process of evaluating and comparing large language models (LLMs) based on the size, effectiveness, and efficiency of their context windows. This ranking helps
-    users and developers choose models best suited for tasks requiring the processing of extensive text or long conversational histories.
-- question: How do transformer context limits impact LLM performance?
-  answer: Transformer context limits, defined by the context window size, directly affect an LLM's ability to retain information. A smaller context window means the model can process less input at once,
-    potentially leading to a loss of crucial details in longer interactions or documents, thus impacting overall LLM performance and the relevance of its outputs.
-- question: What is the importance of LLM context window ranking?
-  answer: LLM context window ranking is crucial because it helps users and developers understand and compare the memory capabilities of different LLMs. This allows for better selection of models for tasks
-    that require processing long texts or maintaining context in extended conversations, ultimately leading to improved AI application performance.
+lastmod: 2026-10-08
 slug: context-window-llm-ranking
+cluster: context-windows
+tags: ["context window", "LLM comparison", "long context", "GPT", "Claude", "Gemini", "Llama", "DeepSeek"]
+keywords: ["llm context window comparison", "largest context window llm", "context window size by model", "which llm has the largest context window", "1 million token context window", "10 million context window llm"]
+faq:
+  - question: "Which LLM has the largest context window?"
+    answer: "As of October 2026, Meta's Llama 4 Scout advertises the largest window at 10M tokens, but it's an open-weight model you run yourself. Among hosted APIs, the top is about 1M: OpenAI's GPT-6 models list 1.05M tokens, and current Claude, Gemini 3.x, DeepSeek V4 and Grok 4.3 models list 1M."
+  - question: "Is there an LLM with a 2 million token context window?"
+    answer: "None of the official model pages we checked in October 2026 lists a 2M-token window for a current model. The hosted ceiling is about 1M tokens, and only Llama 4 Scout (10M, self-hosted) goes higher."
+  - question: "Does a bigger context window mean a better model?"
+    answer: "No. Benchmarks such as RULER and NoLiMa show accuracy dropping well before models reach their advertised limits. Some providers also charge more per token once a prompt passes a threshold such as 200K or 272K tokens."
 aliases:
 - /articles/1-million-context-window-llm/
 - /articles/10-million-context-window-llm/
@@ -104,78 +69,135 @@ aliases:
 - /articles/which-llm-has-best-context-window/
 ---
 
+**Which LLM has the largest context window?** As of October 2026, Meta's open-weight **Llama 4 Scout** advertises the most, at 10M tokens. Among hosted APIs, the ceiling is about **1M tokens**: OpenAI's GPT-6 family lists 1.05M, and current Claude, Gemini 3.x, DeepSeek V4 and Grok 4.3 models list 1M. Max output ranges from 64K to 384K.
 
-**Context window LLM ranking** evaluates large language models (LLMs) based on their ability to process and retain information within a defined token limit. This ranking helps identify models best suited for tasks requiring extensive memory, directly impacting their performance on complex queries and long-form content analysis. It's a critical metric for understanding AI's memory capabilities and for effective **LLM ranking**.
+The rest of this page is a sourced LLM context window comparison: hosted models, open-weight models, what long prompts cost, and why the biggest number isn't always the one to pick. If you want the basics first, read [what the context window of an LLM is](/articles/context-window-of-an-llm/).
 
-A startling statistic reveals that over 60% of LLM users report issues with models "forgetting" information during extended interactions. This limitation stems directly from the **context window** size of transformer models. **Context window LLM ranking** is the process of evaluating and comparing LLMs based on how effectively they can process and recall information within these defined limits, directly influencing their practical utility and overall **LLM performance**.
+## Which LLM has the largest context window?
 
-## What is Context Window LLM Ranking?
+**The largest context window in October 2026 belongs to Llama 4 Scout at 10M tokens, followed by a large group of models at about 1M tokens.** The group at 1M includes the flagship models from OpenAI, Anthropic, Google, DeepSeek and xAI, plus several open-weight models such as Kimi K3, GLM-5.3 and MiniMax-M3.
 
-**Context window LLM ranking** refers to the evaluation and comparison of large language models (LLMs) based on the size and effectiveness of their context windows. This ranking helps identify models best suited for processing long inputs, crucial for tasks requiring extensive memory and understanding. It's a key aspect of **evaluating LLM context**.
+Two cautions apply to any context window ranking:
 
-The **context window** of a transformer-based LLM is a fundamental architectural constraint. It represents the maximum number of **tokens**, words or sub-word units, that the model can consider when processing input and generating output. A larger context window means the AI can "see" and understand more of the preceding text, crucial for maintaining coherence in extended dialogues or analyzing lengthy documents. Understanding the **LLM context window** is vital for selecting the right model.
+- **Advertised is not effective.** The listed size is the most the API accepts, not the most the model reads well. More on this below.
+- **Tokens aren't equal across models.** Each provider has its own tokenizer. Anthropic says 1M tokens is about 555K words on its current tokenizer, versus about 750K words on older Claude models.
 
-### Understanding the Transformer's Contextual Limit
+## Context window comparison table: hosted APIs
 
-Transformer models, the backbone of most modern LLMs, process input in parallel. However, this parallelism comes with a fixed-size processing buffer. This buffer, the context window, is a key differentiator when comparing different LLMs. Models with larger context windows generally perform better on tasks requiring a deep understanding of extended text. The **transformer context limit** is a primary factor in this.
+Every number below comes from the provider's own documentation, checked on October 8, 2026.
 
-The **self-attention mechanism** within transformers is what allows them to weigh the importance of different tokens within the context window. While powerful, its computational complexity increases quadratically with the sequence length. This inherent scaling issue is a primary driver behind the limitations and subsequent ranking of context window sizes, defining the **transformer context**.
+| Provider | Model (API ID) | Context window | Max output | Source |
+|---|---|---|---|---|
+| OpenAI | GPT-6 Astra (`gpt-6-astra`) | 1,050,000 | 128,000 | [OpenAI models](https://developers.openai.com/api/docs/models) |
+| OpenAI | GPT-6.1 Sol (`gpt-6.1-sol`) | 1,050,000 (922,000 max input) | 128,000 | [OpenAI model page](https://developers.openai.com/api/docs/models/gpt-6.1-sol) |
+| OpenAI | GPT-6 Luna (`gpt-6-luna`) | 1,050,000 | 128,000 | OpenAI models |
+| Anthropic | Claude Fable 5.1 (`claude-fable-5-1`) | 1M | 128K | [Anthropic models](https://platform.claude.com/docs/en/models/overview) |
+| Anthropic | Claude Opus 5.5 (`claude-opus-5-5`) | 1M | 128K | Anthropic models |
+| Anthropic | Claude Sonnet 5.5 (`claude-sonnet-5-5`) | 1M | 128K | Anthropic models |
+| Anthropic | Claude Haiku 5.5 (`claude-haiku-5-5`) | 1M | 128K | Anthropic models |
+| Google | Gemini 3.1 Pro (`gemini-3.1-pro-preview`) | 1,048,576 | 65,536 | [Gemini model page](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview) |
+| Google | Gemini 3.8 Flash (`gemini-3.8-flash`) | 1,048,576 | 65,536 | Gemini model page |
+| Google | Gemini 3.5 Flash-Lite (`gemini-3.5-flash-lite`) | 1,048,576 | 65,536 | Gemini model page |
+| DeepSeek | `deepseek-v4-pro` | 1M | 384K | [DeepSeek pricing](https://api-docs.deepseek.com/quick_start/pricing/) |
+| DeepSeek | `deepseek-flash` | 1M | 384K | DeepSeek pricing |
+| xAI | `grok-4.3` | 1M | not checked | [xAI models](https://docs.x.ai/docs/models) |
+| xAI | `grok-4.7` | 500K | not checked | xAI models |
 
-### Why Context Window Size Matters for LLM Performance
+*As of October 2026. Model lineups change every few months; confirm on the provider page before you depend on a number.*
 
-The size of an LLM's context window directly dictates its capacity for remembering information. For applications like customer support chatbots or complex document analysis, a larger context window is essential. Without it, the AI might fail to recall critical details from earlier in the conversation, leading to irrelevant responses or errors. This directly impacts **LLM performance**.
+A few things stand out:
 
-For example, an LLM with a 4,000-token context window might struggle to summarize a 10,000-word document effectively. It simply can't "see" the entire document at once. Ranking LLMs by their context window size helps identify models suited for specific use cases where long-term memory within a single interaction is paramount. This is a core consideration in any **LLM memory system**.
+- **1M is the new default.** Anthropic says 1M is the standard window on all its current models, with no beta header needed. Older Claude models, such as Claude Sonnet 4.5, stay at 200K.
+- **OpenAI's window includes output.** GPT-6.1 Sol's 1.05M window allows up to 922,000 input tokens, leaving room for its 128,000-token output.
+- **DeepSeek allows the longest output** in this list, at up to 384K tokens.
+- **xAI's newest model has a smaller window.** grok-4.7 lists 500K, half of the older grok-4.3.
 
-## Factors Influencing Context Window LLM Ranking
+## Open-weight models with the largest context windows
 
-Several factors contribute to how LLMs are ranked based on their context windows. These aren't just about raw token counts but also about the practical effectiveness of that window. Understanding these is key to accurate **LLM ranking**.
+Open-weight models publish their limits in the model card. These numbers come from the official Hugging Face cards and `config.json` files.
 
-### Token Count vs. Effective Context in LLM Ranking
+| Model | Context window | License | Source |
+|---|---|---|---|
+| Llama 4 Scout (109B total, 17B active) | 10M | Llama 4 Community License | [Hugging Face card](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) |
+| Llama 4 Maverick (400B total, 17B active) | 1M | Llama 4 Community License | same card |
+| Kimi K3 (2.8T total, 104B active) | 1M | Kimi K3 License | [Hugging Face card](https://huggingface.co/moonshotai/Kimi-K3) |
+| DeepSeek-V4.1-Flash | up to 1M | MIT | [Hugging Face card](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) |
+| GLM-5.3 | 1,048,576 (config) | GLM-5.3 license | [Hugging Face card](https://huggingface.co/zai-org/GLM-5.3) |
+| MiniMax-M3 (~428B total, ~23B active) | 1M | MiniMax community license | [Hugging Face card](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
+| Qwen3.6-27B, Qwen3.8-27B | 262,144 native, ~1M with YaRN | Apache 2.0 | [Hugging Face card](https://huggingface.co/Qwen/Qwen3.8-27B) |
+| Mistral Small 4, Medium 3.5, Large 3 | 256K | Apache 2.0 / modified MIT | [Hugging Face card](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
+| Gemma 4 (12B, 31B, 26B MoE) | 256K | Apache 2.0 | [Hugging Face card](https://huggingface.co/google/gemma-4-31B-it) |
+| gpt-oss-120b, gpt-oss-20b | 131,072 | Apache 2.0 | [Hugging Face card](https://huggingface.co/openai/gpt-oss-120b) |
 
-A model might advertise a large context window, say 100,000 tokens. However, research indicates that LLMs often struggle to recall information presented in the middle of very long contexts. This is known as the **"lost in the middle" problem**. Therefore, **context window LLM ranking** must consider not just the maximum token count but also how reliably the model can access and use information throughout its entire window.
+*As of October 2026.*
 
-A 2023 study published on [arXiv](https://arxiv.org/abs/2309.01758) demonstrated that while models can technically process vast amounts of text, their recall accuracy significantly drops for information placed in the middle of extremely long sequences. For instance, recall accuracy for middle-sequence information decreased by 40% when exceeding 16,000 tokens in some tested models. This highlights the need for more nuanced evaluation metrics beyond simple token capacity in **evaluating LLM context**.
+Running these at full length takes a lot of GPU memory, mostly for the KV cache. The details, plus Ollama and llama.cpp settings, are in our guide to the [largest context window open-source LLMs](/articles/largest-context-window-llm-open-source/).
 
-### Computational and Memory Costs of Transformer Context Limits
+## Long-context pricing: what a full window costs
 
-Larger context windows come with significant computational and memory overhead. The self-attention mechanism's quadratic complexity means that doubling the context window size can quadruple the computational cost and memory usage. According to a 2024 report by AI Research Labs, extending a model's context window from 4,000 to 32,000 tokens can increase memory requirements by up to 8x and computational load by 6x. This practical constraint is a major factor in **LLM development** and influences which context window sizes are feasible for deployment, impacting the **transformer context limit**.
+Some providers charge a higher rate once a prompt passes a size threshold. This changes the real cost of "using the whole window" more than the headline price does.
 
-Efficient architectural innovations, such as sparse attention mechanisms or recurrent memory structures, are being developed to mitigate these costs. These advancements can allow models to handle longer effective contexts without a proportional increase in resource demands. Understanding these trade-offs is vital for practical **context window LLM ranking**.
+| Provider and model | Standard price (input / output per 1M tokens) | Long-context rule |
+|---|---|---|
+| OpenAI GPT-6.1 Sol | $2 / $10 | Over 272K input tokens: 2x input and cache rates, 1.5x output, for the whole request |
+| OpenAI GPT-6 Astra | $10 / $50 | Same 272K rule |
+| Google Gemini 3.1 Pro (preview) | $2 / $12 | Over 200K tokens: $4 / $18 |
+| Google Gemini 3.8 Flash | $0.75 / $3.75 (through Dec 31, 2026) | No separate long-context tier listed |
+| Anthropic Claude Opus 5.5 | $4 / $20 | Standard pricing across the 1M window |
+| Anthropic Claude Haiku 5.5 | from $0.10 / from $0.50 | Prompts over 100,000 tokens cost more |
+| xAI grok-4.3 | $1.25 / $2.50 | At or above 200K tokens: $2.50 / $5.00 |
+| DeepSeek deepseek-v4-pro | $0.66 / $1.98 (off-peak, cache miss) | No length tier; peak hours cost double |
 
-### Architectural Innovations for Extended Context
+*As of October 2026. Sources: [OpenAI](https://developers.openai.com/api/docs/models/gpt-6.1-sol), [Gemini pricing](https://ai.google.dev/gemini-api/docs/pricing), [Anthropic](https://platform.claude.com/docs/en/build-with-claude/context-windows), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing/).*
 
-New architectures and techniques are constantly pushing the boundaries of context window sizes. For instance, models like those discussed in models with a 1 million token context window and models with a 10 million token context window represent significant leaps. These often involve modifications to the attention mechanism or the integration of external memory systems.
+A worked example: a single 500K-token prompt to GPT-6.1 Sol crosses the 272K line, so input costs $4 per million instead of $2. That's $2.00 of input for one call. An agent that resends that context on 20 turns spends $40 on input alone, before output. Prompt caching cuts this a lot, but cached tokens still fill the window.
 
-Techniques like **retrieval-augmented generation (RAG)**, which we explored in our [guide to RAG and agent memory](/articles/rag-vs-agent-memory/), offer a way to extend an LLM's effective knowledge base beyond its inherent context window. RAG systems retrieve relevant information from external documents and inject it into the LLM's prompt, effectively increasing the amount of information the model can act upon. This is a crucial strategy when dealing with **AI memory limitations**.
+## Bigger isn't always better: advertised vs effective context
 
-## Evaluating and Ranking Context Windows for LLMs
+A context window ranking by size says nothing about how well each model reads at that length. Independent benchmarks keep finding a gap:
 
-Ranking LLMs by context window involves more than just looking at technical specifications. It requires a deep understanding of how these windows are used and the challenges associated with them, crucial for effective **LLM ranking**.
+- **RULER** tested 17 models that all claimed at least 32K tokens; only half performed well at 32K ([Hsieh et al., 2024](https://arxiv.org/abs/2404.06654)).
+- **NoLiMa** tested 13 models that claim at least 128K tokens; at 32K, 11 of them fell below 50% of their short-context scores ([Modarressi et al., 2025](https://arxiv.org/abs/2502.05167)).
 
-### Benchmarking Performance for Context Window LLM Ranking
+Those studies predate the current 1M-token models, and newer models handle length better. Anthropic's own docs still warn that "as token count grows, accuracy and recall degrade." The research and the fixes are covered in [context window limitations and solutions](/articles/context-window-limitations-solutions/).
 
-Standardized benchmarks are essential for **context window LLM ranking**. These benchmarks test LLMs on tasks that specifically require processing long sequences, such as summarization of lengthy texts, question answering over large documents, or maintaining coherence in extended dialogues. Metrics like accuracy, relevance, and coherence are measured to assess **LLM performance**.
+The practical takeaway: pick a model by how it performs at the length you'll actually use, not by the ceiling.
 
-Here are key evaluation metrics for context window performance:
+## How to check a model's context window yourself
 
-1. **Retrieval Accuracy:** How precisely the LLM can find specific pieces of information within a long context.
-2. **Summarization Quality:** The coherence and completeness of summaries generated from extensive documents.
-3. **Conversational Coherence:** The model's ability to maintain consistent and relevant dialogue over many turns.
-4. **Task Completion Rate:** The success rate on complex tasks that inherently require processing large amounts of input data.
-5. **Latency:** The time taken to process long inputs and generate responses, especially critical for real-time applications.
+Lists like this one go stale. Here's where to find the current number:
 
-For example, the "Needle in a Haystack" test is a common benchmark. It involves hiding a specific piece of information (the "needle") within a large document (the "haystack") and asking the LLM to retrieve it. Performance on this test directly correlates with the model's ability to effectively use its context window.
+1. **Anthropic:** the Models API returns `max_input_tokens` and `max_tokens` for every model.
+2. **OpenAI:** each model page lists context window, max input and max output.
+3. **Google:** each Gemini model page lists the input and output token limits.
+4. **DeepSeek and xAI:** the pricing pages list context length next to price.
+5. **Open-weight models:** read the model card, then check `max_position_embeddings` in `config.json`.
 
-### The Role of Embeddings and Memory in LLM Context
+For open models, a short script reads the config straight from Hugging Face:
 
-The quality of **embedding models for memory** and retrieval plays a significant role in how effectively an LLM can use its context window. When using RAG or other external memory systems, the embeddings used to represent and search for information must be precise. Poor embeddings can lead to irrelevant information being retrieved, even with a large context window, exacerbating **AI memory limitations**.
+```python
+import json
+import urllib.request
 
-For more persistent memory needs, systems like **Hindsight**, an open-source AI memory system, can be integrated. Hindsight helps manage and retrieve information over longer periods than a single context window allows, complementing the LLM's immediate processing capabilities. You can explore it at [https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight). This aligns with the broader concept of [AI agent memory explained](/articles/ai-agent-memory-explained/).
+def context_length(repo: str):
+    url = f"https://huggingface.co/{repo}/raw/main/config.json"
+    with urllib.request.urlopen(url) as resp:
+        cfg = json.load(resp)
+    cfg = cfg.get("text_config", cfg)  # multimodal models nest the text settings
+    return cfg.get("max_position_embeddings"), cfg.get("rope_scaling")
 
-### Comparing Different Approaches to Transformer Context Limits
+for repo in ["Qwen/Qwen3.6-27B", "openai/gpt-oss-120b", "zai-org/GLM-5.3"]:
+    print(repo, context_length(repo))
+# Qwen/Qwen3.6-27B (262144, None)
+# openai/gpt-oss-120b (131072, {... 'rope_type': 'yarn' ...})
+# zai-org/GLM-5.3 (1048576, None)
+```
 
-Different LLMs and architectures offer varying context window sizes and effectiveness. Some models are optimized for extremely long contexts, while others focus on efficiency with moderate windows. Understanding these differences is crucial for effective **LLM ranking**.
+Treat the config value as a hint and the model card as the authority. Qwen3-8B's config says 40,960, while its card says 32,768 natively and 131,072 with YaRN. Gated models such as Llama 4 require a Hugging Face login to read the config.
 
-| Model/Approach | Typical Context Window | Key Strengths | Key Weaknesses |
-| :
+## Choosing a model by context needs
+
+- **Under 128K tokens** (most chat and RAG apps): almost any current model fits. Choose on quality and price.
+- **128K to 1M tokens** (whole codebases, long contracts, long agent runs): any current Claude, GPT-6, Gemini 3.x, DeepSeek V4 or Grok 4.3 model. Check the long-context price tier.
+- **Over 1M tokens:** only Llama 4 Scout advertises it, and you host it yourself. Usually it's cheaper and more accurate to retrieve the relevant parts instead; see [techniques for extending an LLM's context window](/articles/extending-llm-context-window/).
+- **Running locally:** the limit is your GPU memory, not the model card.

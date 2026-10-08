@@ -1,43 +1,8 @@
 ---
-title: 'AI Agent Memory Explained: How Agents Store, Recall, and Learn'
-description: AI agent memory is the system that lets agents retain context, learn from experience, and act on past interactions. This guide covers types, architectures, and re...
+title: "AI Agent Memory Explained: Types, Storage and Tools"
+description: "What AI agent memory is, the four memory types (working, episodic, semantic, procedural), how agents store and retrieve memories, and the main tools in 2026."
 date: 2026-03-24
-lastmod: 2026-05-06
-tags:
-- AI Memory
-- Agent Architectures
-- LLM
-- Vector Databases
-- RAG
-- AI Agent Memory Management
-- Memory in AI Agents
-- Persistent AI Memory
-keywords:
-- AI agent memory
-- agent memory systems
-- LLM memory
-- persistent memory AI
-- AI agent memory management
-- AI agent memory systems architecture
-- memory in AI agents
-- episodic memory AI
-- semantic memory AI agents
-- procedural memory AI
-- AI agent memory explained
-faq:
-- question: What is AI agent memory?
-  answer: AI agent memory is the set of mechanisms an AI agent uses to store, retrieve, and act on information from past interactions, learned knowledge, and environmental observations across sessions.
-- question: Why is persistent memory important for AI agents?
-  answer: Without persistent memory, agents reset after each session. They can't learn user preferences, recall task history, or build on prior work. Persistent memory turns a stateless tool into a system
-    that improves with use.
-- question: What are the three types of AI agent memory?
-  answer: The three main types are episodic memory (specific past events and interactions), semantic memory (general facts and knowledge), and procedural memory (learned skills and task execution patterns).
-- question: How do vector databases support AI agent memory?
-  answer: Vector databases store information as embeddings and retrieve it by semantic similarity rather than exact keyword match. This lets agents find contextually relevant memories even when the wording
-    differs from the original input.
-- question: What is the difference between LLM context windows and agent memory?
-  answer: An LLM context window is a fixed-size buffer of recent tokens, similar to short-term working memory. Agent memory systems add persistent, external storage that survives beyond a single conversation,
-    enabling long-term learning and recall.
+lastmod: 2026-10-08
 slug: ai-agent-memory-explained
 aliases:
 - /articles/agent-memory-in-ai/
@@ -52,79 +17,249 @@ aliases:
 - /articles/memory-system-for-ai-agents/
 - /articles/what-is-memory-in-agentic-ai-system/
 - /articles/what-is-role-of-memory-in-agentic-ai-system/
+tags:
+- AI Agent Memory
+- Agent Architectures
+- Memory Types
+- Long-Term Memory
+- LLM
+keywords:
+- AI agent memory
+- agent memory explained
+- memory in agentic AI
+- do AI agents have memory
+- memory system for AI agents
+- LLM agent memory systems
+- types of agent memory
+role: pillar
+cluster: agent-memory
+faq:
+- question: "Do AI agents have memory?"
+  answer: "Not by default. The language model behind an agent is stateless: it only sees what is in the current prompt. An agent has memory only when its code saves information outside the model and puts the relevant parts back into the prompt on later turns or sessions."
+- question: "What are the four types of AI agent memory?"
+  answer: "Working memory (the current context window and task state), episodic memory (records of past events and interactions), semantic memory (facts about the user and the world), and procedural memory (rules, skills and instructions that shape how the agent acts). The split comes from cognitive science and was applied to LLM agents in the CoALA paper (Sumers et al., 2023)."
+- question: "What is the role of memory in an agentic AI system?"
+  answer: "Memory lets an agent carry facts, preferences and lessons across turns and sessions, so it doesn't restart from zero each time. It also keeps prompts small: instead of resending the full history, the agent retrieves only the few memories that matter for the current step."
 ---
 
+**AI agent memory** is the part of an agent that saves information outside the language model and brings the right pieces back into the prompt later. The model itself forgets everything between calls. Memory is what lets an agent remember a user's preferences, recall what happened last week, and stop repeating the same mistakes.
 
-Can an AI agent that forgets everything after each conversation ever be truly useful? According to a 2024 arxiv survey on LLM-based agents, systems with persistent memory completed 41% more multi-step tasks than stateless baselines. **AI agent memory** is the difference between a tool you use once and a system that gets better every time you interact with it.
+This guide covers what agent memory is, the four memory types, how memory systems write and retrieve data, how they're evaluated, and the main tools you can use today.
 
-## What is AI Agent Memory?
+## What is AI agent memory?
 
-**AI agent memory** is the set of mechanisms an AI agent uses to store, retrieve, and act on information from past interactions, learned knowledge, and environmental observations. It's what allows an agent to recall that you prefer Python over JavaScript, remember that the last deployment failed on the auth service, or avoid repeating a strategy that didn't work three sessions ago.
+**AI agent memory is a system that stores information from an agent's interactions and work, then retrieves the relevant parts into the model's context when needed.** It sits outside the LLM. It usually has a write path (decide what to keep), a store (vectors, graphs, tables or files), and a read path (find what matters for the current step).
 
-Without memory, every agent interaction starts from zero. The agent can't learn, can't personalize, and can't maintain coherence across multi-step tasks. Memory transforms a stateless text predictor into something closer to a persistent collaborator.
+So, do AI agents have memory? Only if someone builds it. A large language model is a stateless function: text in, text out. Its weights hold general knowledge from training (sometimes called **parametric memory**), but nothing about your user or yesterday's session. Each API call starts fresh.
 
-### Why Memory Matters: Five Core Functions
+What most people experience as "the agent remembers" is one of three things:
 
-**AI agent memory** serves distinct functional roles, each critical for different use cases:
+1. **The context window.** The app resends earlier messages with each call. This works until the conversation outgrows the window or the cost per call gets too high.
+2. **Retrieval from an external store.** The app saves facts or messages to a database and searches it on each turn. This is what memory frameworks do.
+3. **Self-editing memory.** The agent itself calls tools to write, update and search its memory, as in the [MemGPT paper](https://arxiv.org/abs/2310.08560) (Packer et al., 2023), which framed the context window like RAM and external storage like disk.
 
-1. **Context maintenance** across turns and sessions, so the agent understands where it is in a conversation or workflow
-2. **Learning from outcomes**, storing what worked and what failed to inform future decisions
-3. **Planning and reasoning**, recalling environment state and constraints to formulate multi-step strategies
-4. **Efficiency through reuse**, avoiding redundant computation by retrieving previously solved subproblems
-5. **Personalization**, adapting behavior based on accumulated user preferences and interaction history
+The role of memory in an agentic system follows from this. It gives **continuity** (the agent knows who it's talking to), **personalization** (it applies past preferences), **learning** (it keeps lessons from past tasks), and **efficiency** (it sends a few relevant memories instead of a full transcript). For a deeper look at the limits of the window alone, see [context window limitations and solutions](/articles/context-window-limitations-solutions/).
 
-These functions map directly to the memory types described below. Understanding which function you need helps you choose the right **agent memory systems** architecture.
+### Agent memory vs RAG vs long context
 
-## The Three Types of AI Agent Memory
+These three get confused because they all put text into the prompt.
 
-Most **AI agent memory systems architecture** draws from cognitive science, organizing memory into three categories. Real systems often combine all three, but the distinctions matter for design decisions.
+| | Long context | RAG | Agent memory |
+|---|---|---|---|
+| Source | The full conversation or document | A fixed document corpus | The agent's own interactions and work |
+| Changes over time | Grows until it hits the limit | Updated when docs change | Updated on every interaction |
+| Per user | Yes, but resent each call | Usually the same for everyone | Yes, scoped per user or agent |
+| Handles changed facts | Both old and new versions are in the prompt | Not its job | Core requirement |
+| Cost per call | Grows with history | Fixed retrieval budget | Fixed retrieval budget, plus write cost |
 
-The open source [Hindsight](https://github.com/vectorize-io/hindsight) project takes a different approach here, using structured memory extraction to help agents retain and recall information across sessions.
+Long context alone isn't a substitute. The [LongMemEval paper](https://arxiv.org/abs/2410.10813) (Wu et al., ICLR 2025) found that commercial chat assistants and long-context LLMs showed "a 30% accuracy drop on memorizing information across sustained interactions." Memory and RAG often run together: the agent searches documents and its own memories in the same step. The full comparison is in [RAG vs agent memory](/articles/rag-vs-agent-memory/).
 
-### Episodic Memory: What Happened
+## The four types of agent memory
 
-Episodic memory stores specific events, interactions, and their outcomes. Think of it as a structured log with context. For an AI coding agent, an episodic memory might look like:
+The common split comes from cognitive psychology. The [CoALA paper](https://arxiv.org/abs/2309.02427) (Cognitive Architectures for Language Agents, Sumers et al., 2023) applied it to LLM agents: one **working memory** for the current step, plus three long-term stores, **episodic**, **semantic** and **procedural**. LangGraph's [memory documentation](https://docs.langchain.com/oss/python/langgraph/memory) uses the same three long-term types.
+
+| Memory type | What it holds | Typical agent example | Common storage |
+|---|---|---|---|
+| Working / short-term | Current conversation, task state, scratchpad | The last 20 messages and the current plan | The prompt itself, a checkpoint of agent state |
+| Episodic | Specific past events, with time and context | "On 3 May the user asked for a refund and was angry about the delay" | Timestamped records, vectors, event logs |
+| Semantic | Facts and concepts, detached from when they were learned | "The user is vegetarian", "Acme's API rate limit is 600/min" | Fact tables, user profiles, knowledge graphs |
+| Procedural | How to do things: rules, skills, instructions | "Always run the tests before opening a PR" | System prompt, skill files, learned prompt updates |
+
+### Working memory (short-term memory)
+
+**Working memory** is what the model can see right now: the system prompt, recent messages, tool results and any retrieved memories. In LangGraph terms this is **short-term memory**, which is thread-scoped and "tracks the ongoing conversation by maintaining message history within a session." It's limited by the context window, so long sessions need trimming or summarizing. More detail in [short-term memory in AI agents](/articles/short-term-memory-ai-agents/).
+
+### Episodic memory
+
+**Episodic memory** stores what happened: specific interactions and events, with when and in what context. It answers questions like "what did we decide in the last call?" or "has this error happened before?" LangGraph's docs note that for agents, episodic memory often takes the form of past examples of how a task was done. See [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
+
+### Semantic memory
+
+**Semantic memory** stores facts: who the user is, what they prefer, how entities relate. It's the most common kind of memory in chat assistants, often kept as a user profile or a set of extracted facts. The hard part is keeping facts current when they change ("I moved from NYC to SF"). See [semantic memory in AI agents](/articles/semantic-memory-ai-agents/).
+
+### Procedural memory
+
+**Procedural memory** stores how to act. For most agents this is the system prompt and a set of skills or rules. Some systems let the agent rewrite its own instructions after feedback; LangMem, for example, includes prompt optimization for this. See [procedural memory in AI agents](/articles/ai-agent-procedural-memory/).
+
+These categories overlap in practice. One stored item can be both an episode and a source of facts. The full taxonomy, with more examples, is in [types of AI agent memory](/articles/ai-agents-memory-types/), and the cross-session side is covered in [AI agent long-term memory](/articles/ai-agent-long-term-memory/).
+
+## How agent memory systems store information
+
+Every memory system answers three questions on the write path: **what to keep, when to write it, and in what shape**.
+
+### What to keep: raw logs vs extracted memories
+
+The simplest approach stores raw messages and searches them later. Most memory frameworks go further and use an LLM to **extract** facts, entities and events from each conversation. Mem0's [paper](https://arxiv.org/abs/2504.19413) describes this as "dynamically extracting, consolidating, and retrieving salient information." Hindsight's `retain` call uses an LLM to pull out facts, time data, entities and relationships before storing them. Extraction costs an LLM call per write, but it makes later retrieval far more precise.
+
+### When to write: hot path vs background
+
+LangGraph's docs name two patterns:
+
+- **Hot path:** the agent writes memory during the conversation, often through a tool call. Updates are immediate and visible, but "the process of reasoning about what to save to memory can impact agent latency."
+- **Background:** a separate job processes conversations after the fact. It adds no latency to the user's turn, but memory lags slightly behind.
+
+Many systems mix both. Letta Code's "dreaming" uses background subagents to review recent conversations and update memory. Hindsight consolidates retained facts into **observations** in the background. Honcho stores messages first and reasons over them from a background queue.
+
+### In what shape: storage models
+
+| Storage model | How it works | Good at | Weak at | Examples |
+|---|---|---|---|---|
+| Vector store | Embed text, search by similarity | Fuzzy recall of related content | Exact names, dates, multi-hop links | Mem0 (Qdrant by default in library mode), most RAG setups |
+| Knowledge graph | Store entities and relationships as nodes and edges | Multi-hop questions, how facts connect | Setup cost, extraction errors | Graphiti/Zep, Cognee |
+| Temporal graph | Graph where each fact has a validity window | "What was true in March?", changing facts | More complex ingestion | Graphiti/Zep |
+| Relational / profile | Structured fields or tables per user | Fast lookups of known attributes | Open-ended questions | Memobase, Supermemory profiles, Memori |
+| Files | Markdown or text files the agent reads and edits | Human-readable, versionable | Search at scale | Letta Code MemFS (git-backed), Basic Memory |
+
+Most production systems are hybrids. Hindsight stores memories as entities, relationships and time series with sparse and dense vectors, on PostgreSQL with pgvector. Cognee keeps relational, vector and graph stores side by side (SQLite, LanceDB and Kuzu by default). For the trade-offs of each store, see [vector databases for LLM memory](/articles/vector-database-for-llm-memory/) and [knowledge graphs for AI memory](/articles/ai-memory-knowledge-graph/).
+
+### Consolidation and forgetting
+
+A memory store that only grows gets noisy. Systems handle this in different ways:
+
+- **Update in place:** older Mem0 versions used an LLM to choose ADD, UPDATE or DELETE for each fact. Mem0's April 2026 algorithm switched to "ADD-only extraction" where "nothing is overwritten."
+- **Invalidate, don't delete:** Graphiti marks old facts as superseded with a validity window, so you can still query past states.
+- **Consolidate into beliefs:** Hindsight merges related facts into observations that keep their supporting evidence and are refined when new evidence arrives.
+- **Expire:** Supermemory says it forgets temporary facts ("I have an exam tomorrow") once the date passes.
+
+More on this in [memory consolidation in AI agents](/articles/memory-consolidation-ai-agents/).
+
+## How agents retrieve memories
+
+Retrieval decides what the model actually sees, so it matters as much as storage. Two design choices dominate.
+
+### Who triggers retrieval
+
+- **Automatic injection:** the app searches memory before every LLM call and adds results to the prompt. Simple and predictable. Mem0's basic example and Hindsight's LLM wrapper work this way.
+- **Agent-driven:** the agent gets memory tools (search, save, update) and decides when to use them. LangMem's `create_search_memory_tool` and `create_manage_memory_tool` follow this pattern, as does MemGPT/Letta.
+- **Preloaded summaries:** some systems keep a ready-made summary that loads at the start of a session with no search at all. Supermemory's user profiles and Hindsight's mental models are examples.
+
+### How results are found
+
+Pure vector similarity misses exact matches (product codes, names) and has no sense of time. That's why most current systems combine several signals:
+
+- **Semantic search** over embeddings.
+- **Keyword search** (BM25) for exact terms.
+- **Graph traversal** to follow links between entities.
+- **Temporal filtering** for questions like "what happened in June?"
+
+Hindsight runs all four in parallel, merges results with reciprocal rank fusion, then reranks with a cross-encoder. Graphiti combines semantic, BM25 and graph traversal. Mem0's 2026 algorithm scores semantic, BM25 and entity matching in parallel. Time-aware retrieval is its own topic; see [temporal reasoning in AI memory](/articles/temporal-reasoning-ai-memory/).
+
+## The main agent memory tools in 2026
+
+The table below lists the most used memory systems, checked against each project's GitHub README and docs on 8 October 2026. Licenses and features change often, so check the repo before you commit.
+
+| Tool | What it is | License | Storage approach | Self-host | Hosted |
+|---|---|---|---|---|---|
+| [Mem0](https://github.com/mem0ai/mem0) | Memory layer for user, session and agent memory | Apache-2.0 | Extracted facts in a vector store, plus entity linking | Yes | Mem0 Platform |
+| [Zep](https://www.getzep.com/) / [Graphiti](https://github.com/getzep/graphiti) | Temporal knowledge graph (Graphiti) and managed platform (Zep) | Graphiti Apache-2.0; Zep is commercial | Graph with fact validity windows | Graphiti only | Zep Cloud |
+| [Letta](https://github.com/letta-ai/letta-code) | Stateful agent harness (formerly MemGPT) | Apache-2.0 | Git-backed memory files (MemFS), memory blocks | Yes | Letta Cloud |
+| [Cognee](https://github.com/topoteretes/cognee) | Memory platform that builds a knowledge graph from data | Apache-2.0 | Graph + vector + relational | Yes | Cognee Cloud |
+| [LangMem](https://github.com/langchain-ai/langmem) | Memory tools for LangGraph agents | MIT | LangGraph store (any backend) | Yes | Via LangGraph Platform |
+| [Supermemory](https://github.com/supermemoryai/supermemory) | Memory and context API with connectors | Repo MIT; local server binary is not open source | Extracted memories, profiles, hybrid search | Free local binary | Supermemory API |
+| [Hindsight](https://github.com/vectorize-io/hindsight) | Agent memory focused on learning over time | MIT | Facts, experiences, observations on Postgres + pgvector | Yes | Hindsight Cloud |
+| [Honcho](https://github.com/plastic-labs/honcho) | Memory built around "peers" (users, agents, groups) | AGPL-3.0 | Postgres + pgvector, background reasoning | Yes | api.honcho.dev |
+
+A few short notes on where each one fits, based on what the projects say about themselves:
+
+- **Mem0** is the most starred project (66.8k GitHub stars as of 8 Oct 2026) and its README aims it at assistants, customer support and other personalization use cases. Note that graph memory was removed from the open-source SDK in v3 and is now a platform feature.
+- **Zep/Graphiti** fits data where facts change and you need to know what was true when. Zep's own README says to choose Graphiti if you're comfortable operating the surrounding system yourself.
+- **Letta** is a full agent runtime, not a plug-in memory library. Its current code lives in `letta-ai/letta-code`; the older Letta V1 API server is archived.
+- **Cognee** suits teams turning documents, code and conversations into a shared knowledge graph, and it can run locally without an LLM key.
+- **LangMem** is the natural choice if you already run LangGraph.
+- **Supermemory** bundles memory with RAG, file processing and connectors (Google Drive, Notion, Gmail).
+- **Hindsight** (built by Vectorize) adds a `reflect` operation that reasons over stored memories, aimed at agents that should learn from experience. Its README itself says it "may be overkill" for simple n8n-style workflows.
+
+Head-to-head pages: [Mem0 vs Letta](/articles/mem0-vs-letta/), [Mem0 vs Cognee](/articles/mem0-vs-cognee/), [Zep vs Mem0](/articles/zep-memory-vs-mem0/). For the full fact table see the [LLM memory comparison](/articles/llm-memory-comparison/), for advice by use case see [how to pick the best AI memory framework](/articles/best-ai-memory-framework/), and for repos and licenses see [open-source memory systems compared](/articles/open-source-memory-systems-compared/).
+
+### How agent memory is evaluated
+
+Three public benchmarks show up in most memory papers and READMEs:
+
+- **[LoCoMo](https://arxiv.org/abs/2402.17753)** (Maharana et al., 2024): very long conversations, about 300 turns and 9K tokens on average, over up to 35 sessions. Tests single-hop, multi-hop, temporal and open-domain recall.
+- **[LongMemEval](https://arxiv.org/abs/2410.10813)** (Wu et al., 2024): 500 questions testing information extraction, multi-session reasoning, temporal reasoning, knowledge updates and abstention.
+- **[BEAM](https://arxiv.org/abs/2510.27246)**: synthetic conversations up to 10M tokens, scored by an LLM judge across ten memory abilities.
+
+Treat vendor numbers with care. Almost all are **self-reported**, run with different answer models, judges and settings, so scores from different READMEs aren't directly comparable. Mem0, for instance, notes its April 2026 scores "reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK." Hindsight's README says its results were independently reproduced by researchers at Virginia Tech's Sanghani Center and The Washington Post, and that other vendors' scores are self-reported. The best test is still a small evaluation on your own data. More in [LLM memory evaluation](/articles/llm-memory-evaluation/).
+
+## Common problems with agent memory
+
+Adding memory fixes forgetting but creates new failure modes. These are the ones that show up most in practice.
+
+### Stale and conflicting facts
+
+A user says "I live in NYC" in January and "I just moved to SF" in June. If both facts sit in a vector store, retrieval may return either. Systems handle this with in-place updates, validity windows (Graphiti), consolidation into evolving beliefs (Hindsight), or time-aware ranking (Mem0). Test this case on any system you pick; it's where many setups fail quietly.
+
+### Bad extraction
+
+When an LLM decides what to remember, it can drop key details or record things that were never said. Every wrong fact then gets injected into future prompts. Keeping a link from each memory back to its source message helps you audit and fix this. Graphiti keeps episodes as provenance, and Hindsight's observations keep supporting quotes.
+
+### Leaks between users
+
+Memory is personal data. If scoping is wrong, one user's facts can surface in another user's session. Use a strict namespace per user or tenant (Mem0's `user_id`, Hindsight's banks, LangGraph store namespaces, Supermemory's container tags), and test deletion so you can honor "forget me" requests.
+
+### Memory poisoning
+
+Persistent memory gives attackers a way to plant instructions that fire in later sessions, long after the original message. The [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) (December 2025) lists memory and context poisoning as ASI06. Common mitigations: validate writes, scope memory per user and task, track provenance, and don't feed the agent's own outputs back into trusted memory without checks. Some systems now filter writes; Hindsight's opt-in Memory Defense, for example, scans each write for secrets and PII against 45 patterns and redacts or blocks matches.
+
+### Retrieval noise
+
+Too many memories in the prompt can hurt as much as too few. Irrelevant facts distract the model and cost tokens. Keep a token budget for memory, rerank results, and prefer a few precise facts over many loose matches.
+
+## How to add memory to an agent
+
+A minimal build follows the same steps no matter which tool you pick:
+
+1. **Decide the scope.** Per user, per agent, per project, or shared? This becomes your namespace, user ID or bank.
+2. **Pick what to remember.** Preferences and facts (semantic), past events (episodic), or rules (procedural).
+3. **Choose the write timing.** Hot path for instant updates, background for zero added latency.
+4. **Pick a storage model.** Vectors for fuzzy recall, a graph when relationships and time matter.
+5. **Retrieve before each LLM call** and keep the memory block small (a few hundred to a few thousand tokens).
+6. **Handle updates and deletes.** Users change their minds and ask to be forgotten.
+7. **Measure.** Build 20-50 real questions and check what the agent recalls.
+
+Here's the pattern with Mem0's open-source library, adapted from its README. It searches memories before the call and saves the exchange after:
 
 ```python
-{
- "event": "deployment_attempt",
- "timestamp": "2026-04-15T14:30:00Z",
- "context": "staging environment, auth-service v2.3",
- "action": "rolled back after 502 errors on /oauth/token",
- "outcome": "failure",
- "root_cause": "missing REDIS_URL env var in new config"
-}
+from openai import OpenAI
+from mem0 import Memory
+
+llm = OpenAI()
+memory = Memory()  # library mode: local Qdrant + SQLite history by default
+
+def chat(message: str, user_id: str) -> str:
+    hits = memory.search(query=message, filters={"user_id": user_id}, top_k=3)
+    known = "\n".join(f"- {h['memory']}" for h in hits["results"])
+
+    messages = [
+        {"role": "system", "content": f"Known facts about the user:\n{known}"},
+        {"role": "user", "content": message},
+    ]
+    reply = llm.chat.completions.create(model="gpt-5-mini", messages=messages)
+    text = reply.choices[0].message.content
+
+    messages.append({"role": "assistant", "content": text})
+    memory.add(messages, user_id=user_id)  # LLM extracts facts and stores them
+    return text
 ```
 
-When a similar deployment comes up, the agent can retrieve this episode and check for the same misconfiguration. This is the memory type that makes agents genuinely learn from experience rather than repeating mistakes.
-
-For practical implementations, see our guide to [episodic memory in AI agents](/articles/episodic-memory-in-ai-agents/).
-
-### Semantic Memory: What the Agent Knows
-
-Semantic memory holds general facts, domain knowledge, and conceptual relationships independent of when they were learned. In an LLM-based agent, this includes:
-
-* **Parametric knowledge** baked into model weights during training (e.g., "Python uses indentation for scope")
-* **Retrieved knowledge** pulled from external sources via [RAG pipelines](/articles/rag-vs-agent-memory/) (e.g., your company's API documentation)
-* **Extracted facts** distilled from past interactions (e.g., "the user's production database runs on PostgreSQL 15")
-
-The key property: semantic memories are reusable across contexts. The agent doesn't need to remember *when* it learned that PostgreSQL 15 supports MERGE statements; it just needs to know the fact.
-
-### Procedural Memory: How to Do Things
-
-Procedural memory captures learned skills, workflows, and task execution patterns. It's the "muscle memory" of AI agents. Examples include:
-
-* A debugging workflow: check logs first, then reproduce locally, then isolate the failing test
-* A code review pattern: scan for security issues, then check test coverage, then review naming
-* An optimized prompt chain that reliably extracts structured data from messy PDFs
-
-Some frameworks explicitly support procedural memory. [Hermes agents store reusable skill documents](/articles/hermes-agent-memory/) that refine themselves with each execution. Others encode procedures implicitly through [fine-tuned models or prompt templates](/articles/ai-agent-procedural-memory/).
-
-## How AI Agent Memory Systems Are Built
-
-The architecture of **agent memory systems** boils down to three decisions: where to store memories, how to retrieve them, and when to forget. Each choice has real trade-offs.
-
-### Storage: Where Memories Live
-
-| Storage type | Best for | Retrieval method | Scalability | Example tools |
-|
+The same loop works with any memory system; only the two calls change. With Hindsight they're `client.recall(bank_id=..., query=...)` and `client.retain(bank_id=..., content=...)`; with LangMem the agent calls memory tools itself. A step-by-step walkthrough with more options is in [how to give AI agents memory](/articles/how-to-give-ai-agents-memory/), and coding-agent setups are in [AI coding agent memory](/articles/ai-coding-agent-memory/).
