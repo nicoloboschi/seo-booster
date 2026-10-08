@@ -1,33 +1,30 @@
 {{ define "main" }}
 <section class="hero">
-  <h1>AI Memory Systems Explained</h1>
-  <p>Deep technical guides on memory for AI agents — episodic memory, semantic memory, RAG, embeddings, and retrieval. Written by engineers, for engineers.</p>
+  <h1>AI Agent Memory, Explained</h1>
+  <p>Sourced technical guides on how AI agents and LLMs remember: memory types, context windows, retrieval, and the tools that implement them (Mem0, Zep, Letta, Cognee, Hindsight and more).</p>
 </section>
 
 <section class="featured">
-  <h2>Latest Articles</h2>
+  <h2>Start here</h2>
   <div class="article-list">
-    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    {{ range where .Site.RegularPages "Params.role" "pillar" }}
     <article>
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <div class="meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        <span class="reading-time">{{ .ReadingTime }} min read</span>
-      </div>
-      <p>{{ .Description | default (.Summary | plainify | truncate 160) }}</p>
+      <p>{{ .Description }}</p>
     </article>
     {{ end }}
   </div>
 </section>
 
-<section class="topics">
-  <h2>Topics</h2>
-  <nav class="topic-grid" aria-label="Article topics">
-    {{ range .Site.Taxonomies.tags }}
-    <a href="{{ .Page.Permalink }}" class="topic-link">
-      {{ .Page.Title }} <span class="count">({{ .Count }})</span>
-    </a>
+<section class="featured">
+  <h2>All articles</h2>
+  <div class="article-list">
+    {{ range (where .Site.RegularPages "Params.role" "!=" "pillar").ByTitle }}
+    <article>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Description }}</p>
+    </article>
     {{ end }}
-  </nav>
+  </div>
 </section>
 {{ end }}

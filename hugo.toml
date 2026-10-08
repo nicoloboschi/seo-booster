@@ -1,6 +1,6 @@
 baseURL = 'https://aiagentmemory.org/'
 languageCode = 'en-us'
-title = 'Agent Memory — AI Memory Systems Explained'
+title = 'Agent Memory: AI Memory Systems Explained'
 
 enableRobotsTXT = true
 pagination.pagerSize = 20
@@ -39,7 +39,7 @@ changefreq = "weekly"
 priority = 0.5
 
 [params]
-description = "Deep technical guides on AI memory systems, agent architectures, RAG, embeddings, and retrieval. Built by engineers, for engineers."
+description = "Sourced technical guides on AI agent and LLM memory: memory types, context windows, retrieval, and the tools that implement them."
 dateFormat = "2006-01-02"
 generateSocialCard = true
 
