@@ -2,7 +2,7 @@
 title: "Supermemory Alternatives: 7 Agent Memory Tools Compared"
 description: "Supermemory alternatives compared (Oct 2026): Mem0, Zep, Graphiti, Letta, Cognee, Honcho and Hindsight. Licenses, self-hosting, memory models, RAG and pricing."
 date: 2026-05-06
-lastmod: 2026-10-08
+lastmod: 2026-10-09
 slug: supermemory-alternatives
 cluster: agent-memory
 tags:
@@ -13,7 +13,6 @@ tags:
 keywords:
 - supermemory alternatives
 - supermemory alternative open source
-- supermemory vs mem0
 - supermemory vs zep
 - self-hosted supermemory alternative
 faq:
@@ -64,7 +63,7 @@ Two caveats from Mem0's own docs: graph memory was removed from the open-source 
 - **Pick Mem0** if you want Supermemory-style user memory that you can run entirely yourself.
 - **Look elsewhere** if you want document RAG and connectors in the same API.
 
-More in what is Mem0 and [Mem0 alternatives](/articles/mem0-alternatives-compared/).
+More in [Mem0 vs Supermemory](/articles/mem0-vs-supermemory/), [what Mem0 is](/articles/what-is-mem0-ai/) and [Mem0 alternatives](/articles/mem0-alternatives-compared/).
 
 ## Zep and Graphiti
 

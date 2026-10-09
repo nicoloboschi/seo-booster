@@ -2,7 +2,7 @@
 title: "Supermemory: Long-Term AI Memory as a Service"
 description: "What Supermemory is: a hosted memory API with fact extraction, user profiles, hybrid RAG search and connectors. How it works, Python SDK, local mode, pricing."
 date: 2026-07-04
-lastmod: 2026-10-08
+lastmod: 2026-10-09
 slug: supermemory-long-term-ai-memory-as-a-service
 cluster: agent-memory
 tags:
@@ -120,4 +120,4 @@ Supermemory also maintains **MemoryBench**, an open-source harness for running S
 
 ## When Supermemory fits
 
-Supermemory fits when you want memory, document RAG and connectors from one API and don't want to run infrastructure: consumer assistants, support bots that need both a knowledge base and user history, or a personal memory across AI tools. It fits less well when open, self-built infrastructure or full control over extraction is a requirement. Those options are compared in [Supermemory alternatives](/articles/supermemory-alternatives/), and the concepts behind them in [AI agent memory explained](/articles/ai-agent-memory-explained/).
+Supermemory fits when you want memory, document RAG and connectors from one API and don't want to run infrastructure: consumer assistants, support bots that need both a knowledge base and user history, or a personal memory across AI tools. It fits less well when open, self-built infrastructure or full control over extraction is a requirement. Those options are compared in [Supermemory alternatives](/articles/supermemory-alternatives/) and, head to head, in [Mem0 vs Supermemory](/articles/mem0-vs-supermemory/), and the concepts behind them in [AI agent memory explained](/articles/ai-agent-memory-explained/).
