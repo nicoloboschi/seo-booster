@@ -2,6 +2,30 @@
 
 Newest first. One entry per session: numbers, what changed, why, what to check next.
 
+## 2026-10-09 (reps run 2): Mem0 vs Supermemory
+
+**Numbers** (GSC 2026-09-08..10-06): 1 click, 1,205 impressions, avg pos 44.5, 148 pages with
+impressions. Basically flat vs yesterday, as expected. GA4 28d: organic 577 sessions (283 engaged;
+Bing 184, DDG 70, Google 2), AI Assistant 6. Hindsight link clicks 8. No index sample (`--inspect 0`).
+Google autocomplete for "ai memory" returned HTTP 500 in hot.py; the other seeds worked.
+
+**Changed**
+- New: `mem0-vs-supermemory`. "mem0 vs supermemory" is the first "mem0 vs" autocomplete; no page
+  covered it. Sources: both READMEs (stars via GitHub API: 66,883 / 31,168), pricing pages, Mem0's
+  compare page (mem0.ai/compare/mem0-vs-supermemory: Mem0 94.4 vs Supermemory 85.2 LongMemEval) and
+  Supermemory's own LongMemEval report (85.2 = Gemini 3 Pro row; 84.6 with GPT-5; README says 95%
+  Recall@15). Page explains the metric mismatch rather than picking a winner.
+- Linked it from `supermemory-alternatives` (also turned plain-text "what is Mem0" into a link, and
+  dropped its "supermemory vs mem0" keyword so the pages don't compete) and the Supermemory explainer.
+
+**Other candidates seen**: mem0 vs honcho / graphiti / mempalace, "agent memory skill", "agent memory
+claude code", HN "Agents don't need memory, they need documentation" (384 pts), "Jevmem" (HN 62 pts).
+GSC: "n8n ai agent memory" + "ai agent memory n8n" ~26 impressions at pos ~40; the n8n page sits at
+pos 60. Watch it; rewrite if it doesn't climb after the rewrite settles.
+
+**Next**: index sample due ~2026-10-15. Pruned URLs (ai-memory-dram, ai-memory-chip-companies,
+/tags/character.ai/) still show in GSC top pages; check they drop out.
+
 ## 2026-10-08 (reps run 1): Mem0 vs Hindsight
 
 **Numbers** (GSC 2026-09-07..10-05, still mostly pre-prune data): 1 click, 1,199 impressions, avg pos
