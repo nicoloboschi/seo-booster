@@ -2,6 +2,30 @@
 
 Newest first. One entry per session: numbers, what changed, why, what to check next.
 
+## 2026-10-10 (reps run 3): Mem0 vs Honcho
+
+**Numbers** (GSC 2026-09-09..10-07): 1 click, 1,138 impressions, avg pos 43.2, 147 pages with
+impressions. Slight dip in impressions, likely the pruned URLs fading. GA4 28d: organic 565 sessions
+(282 engaged; Bing 184, DDG 69, Google 2), AI Assistant 6 (chatgpt.com 2). Hindsight link clicks 8.
+No index sample (`--inspect 0`). hot.py autocomplete worked for all seeds this time.
+
+**Changed**
+- New: `mem0-vs-honcho`. "mem0 vs honcho" is a "mem0 vs" autocomplete with no page. Sources: both
+  READMEs (stars via GitHub API: 66,930 / 7,550; Honcho server 3.3.0 in pyproject, honcho-ai 2.5.1),
+  honcho.dev/evals (LongMemEval-S 90.4, LoCoMo 89.9, BEAM 1M 0.618 / 10M 0.409), Mem0 README +
+  mem0.ai/research (94.4 / 92.5 / BEAM 64.1, 48.6). mem0.ai/compare/mem0-vs-honcho exists but has no
+  content, so no cross-vendor numbers. Page notes the BEAM scale mismatch (0-100 vs 0-1).
+- Linked it from `honcho-llm-memory` (also turned plain-text "Mem0 alternatives" into a link, dropped
+  its "honcho vs mem0" keyword) and `what-is-mem0-ai` (also added the missing Mem0 vs Supermemory link).
+
+**Other candidates seen**: mem0 vs graphiti / mempalace, "best memory for hermes agent", "agent memory
+skill", "agent memory claude code", HN "Agents don't need memory, they need documentation" (388 pts).
+GSC: n8n queries still ~24 impressions at pos ~40; "oracleagentmemory" 7 impressions at pos 37 (check
+if there's a real Oracle product worth a page).
+
+**Next**: index sample due ~2026-10-15. Pruned URLs (ai-memory-dram, ai-memory-chip-companies,
+/tags/character.ai/) still in GSC top pages.
+
 ## 2026-10-09 (reps run 2): Mem0 vs Supermemory
 
 **Numbers** (GSC 2026-09-08..10-06): 1 click, 1,205 impressions, avg pos 44.5, 148 pages with
