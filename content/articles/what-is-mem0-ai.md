@@ -2,7 +2,7 @@
 title: "What Is Mem0? How the Mem0 Memory Layer Works"
 description: "What Mem0 is in 2026: how it extracts and stores memories, the open-source library vs Mem0 Platform, graph memory, LLM and embedding setup, delete, pricing."
 date: 2026-04-09
-lastmod: 2026-10-08
+lastmod: 2026-10-10
 slug: what-is-mem0-ai
 cluster: agent-memory
 aliases:
@@ -203,4 +203,4 @@ Other vendors report similar scores with different models and judges, so the num
 
 Mem0 fits personalization: chat assistants and support agents that should remember a user's preferences, plans and history without replaying old transcripts. The API is small, it has the widest set of integrations, and you can start with the library and move to the server or Platform later.
 
-It fits less well when you need open-source graph memory, facts that are explicitly invalidated over time, or an agent that edits its own memory. Those cases point to Graphiti, Zep, Letta, Cognee or [Hindsight](https://github.com/vectorize-io/hindsight); head-to-heads are in [Mem0 vs Letta](/articles/mem0-vs-letta/), [Mem0 vs Hindsight](/articles/mem0-vs-hindsight/), [Mem0 vs Cognee](/articles/mem0-vs-cognee/) and [Zep vs Mem0](/articles/zep-memory-vs-mem0/). For the bigger picture of how memory layers fit into agents, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).
+It fits less well when you need open-source graph memory, facts that are explicitly invalidated over time, or an agent that edits its own memory. Those cases point to Graphiti, Zep, Letta, Cognee or [Hindsight](https://github.com/vectorize-io/hindsight); head-to-heads are in [Mem0 vs Letta](/articles/mem0-vs-letta/), [Mem0 vs Hindsight](/articles/mem0-vs-hindsight/), [Mem0 vs Cognee](/articles/mem0-vs-cognee/), [Mem0 vs Supermemory](/articles/mem0-vs-supermemory/), [Mem0 vs Honcho](/articles/mem0-vs-honcho/) and [Zep vs Mem0](/articles/zep-memory-vs-mem0/). For the bigger picture of how memory layers fit into agents, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).

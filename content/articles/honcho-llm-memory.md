@@ -2,7 +2,7 @@
 title: "Honcho LLM Memory: Peers, Reasoning and Setup"
 description: "What Honcho is: Plastic Labs' open-source memory for LLM agents. How peers, sessions and background reasoning work, Python SDK, self-hosting, pricing, evals."
 date: 2026-06-18
-lastmod: 2026-10-08
+lastmod: 2026-10-10
 slug: honcho-llm-memory
 cluster: agent-memory
 tags:
@@ -16,7 +16,6 @@ keywords:
 - plastic labs honcho
 - honcho peers
 - honcho self host
-- honcho vs mem0
 faq:
 - question: "What is Honcho?"
   answer: "Honcho is an open-source memory service for LLM agents from Plastic Labs. You store conversations as messages on sessions; Honcho reasons over them in the background and builds a representation of each participant (a peer), which you can query in natural language or pull as prompt-ready context."
@@ -158,4 +157,4 @@ The default setup used gemini-2.5-flash-lite for the deriver and claude-haiku-4.
 
 Honcho fits when understanding the person matters more than recalling a fact: tutors, coaches, companions, and support agents that should adapt to how each user thinks. It's also one of the few systems that models what one agent knows about another, which helps in multi-agent apps.
 
-It fits less well when you need document RAG, explicit fact validity windows, or a permissive license. Mem0 and Graphiti (Apache 2.0) and Hindsight (MIT) are alternatives with different memory models; see [Supermemory alternatives](/articles/supermemory-alternatives/) and Mem0 alternatives. For how user modeling fits into agent memory overall, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).
+It fits less well when you need document RAG, explicit fact validity windows, or a permissive license. Mem0 and Graphiti (Apache 2.0) and Hindsight (MIT) are alternatives with different memory models; see [Mem0 vs Honcho](/articles/mem0-vs-honcho/), [Supermemory alternatives](/articles/supermemory-alternatives/) and [Mem0 alternatives](/articles/mem0-alternatives-compared/). For how user modeling fits into agent memory overall, start with [AI agent memory explained](/articles/ai-agent-memory-explained/).
